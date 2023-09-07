@@ -10,3 +10,8 @@ body {
     place-content: center;
     min-height: 100%;
 }
+
+pie-divider {
+    display: block;
+    margin-block: 2em;
+}
