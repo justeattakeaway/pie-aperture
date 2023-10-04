@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "form";
 
 * {
     box-sizing: border-box;
@@ -39,8 +40,8 @@
 }
 .logo + * {
     margin-top: 16px;
-}
-
+  }
+  
 a {
     color: rgb(var(--foreground-rgb));
     text-decoration: underline;
