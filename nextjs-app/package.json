@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@justeattakeaway/pie-button": "0.28.0",
-    "@justeattakeaway/pie-css": "0.3.0",
+    "@justeattakeaway/pie-button": "latest",
+    "@justeattakeaway/pie-css": "latest",
     "@lit-labs/nextjs": "0.1.2",
     "@lit-labs/react": "1.1.1",
     "@types/node": "20.5.9",
