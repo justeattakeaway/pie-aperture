@@ -15,3 +15,42 @@ pie-divider {
     display: block;
     margin-block: 2em;
 }
+
+/* Form page */
+
+body:has(.c-testForm) {
+    display: block;
+    padding: 3em;
+}
+
+hr {
+    margin-block: 2em;
+}
+
+.c-testForm {
+    ul {
+        margin-top: 0;
+        list-style-type: none;
+    }
+
+    * + * {
+        margin-top: 1em;
+    }
+
+    section {
+        padding: 0.5em;
+    }
+
+    input[type="radio"] {
+        margin-right: 0.5em;
+    }
+
+    label + input,
+    label + select {
+        margin-left: 1em;
+    }
+
+    fieldset  {
+        padding: 1em;
+    }
+}

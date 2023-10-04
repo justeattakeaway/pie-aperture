@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIE Aperture - Form</title>
+    <link rel="preload" href="https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff2"
+        as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff2" as="font"
+        type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: JETSansDigital;
+            src: url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff2') format("woff2"),
+                url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff') format("woff");
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: JETSansDigital;
+            src: url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff2') format("woff2"),
+                url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff') format("woff");
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        body {
+            font-feature-settings: "tnum";
+            /* Enable tabular numbers */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PIE Form Integration Test Page</h1>
+    <p>This page is designed for testing our PIE web components inside of HTML forms.</p>
+
+    <hr />
+    <h2>Payment form</h2>
+    <form onsubmit="handleSubmit(event)" id="testForm" className="c-testForm">
+        <p>Required fields are followed by <strong><span aria-label="required">*</span></strong>.</p>
+        <section>
+            <h2>Contact information</h2>
+            <fieldset>
+                <legend>Title</legend>
+                <ul>
+                    <li>
+                        <label for="title_1">
+                            <input type="radio" id="title_1" name="title" value="A" />
+                            Ace
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_2">
+                            <input type="radio" id="title_2" name="title" value="K" />
+                            King
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_3">
+                            <input type="radio" id="title_3" name="title" value="Q" />
+                            Queen
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <p>
+                <label for="name">
+                    <span>Name: </span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="text" id="name" name="username" required />
+            </p>
+            <p>
+                <label for="mail">
+                    <span>E-mail: </span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="email" id="mail" name="usermail" required />
+            </p>
+            <p>
+                <label for="pwd">
+                    <span>Password: </span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="password" id="pwd" name="password" required />
+            </p>
+        </section>
+        <section>
+            <h2>Payment information</h2>
+            <p>
+                <label for="card">
+                    <span>Card type:</span>
+                </label>
+                <select id="card" name="usercard">
+                    <option value="visa">Visa</option>
+                    <option value="mc">Mastercard</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </p>
+            <p>
+                <label for="number">
+                    <span>Card number:</span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="tel" id="number" name="cardnumber" required />
+            </p>
+            <p>
+                <label for="expiration">
+                    <span>Expiration date:</span>
+                    <strong><span aria-label="required">*</span></strong>
+                </label>
+                <input type="text" id="expiration" required placeholder="MM/YY"
+                    pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
+            </p>
+        </section>
+        <section>
+            <pie-button type="submit" formId="testForm">Submit the payment</pie-button>
+        </section>
+    </form>
+    <script type="module" src="/form.js"></script>
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            console.log('Form submitted and inside vanilla app function')
+            const form = document.getElementById('testForm');
+            console.log(form)
+            const formData = new FormData(form);
+
+            // log all form data
+            for (const entry of formData.entries()) {
+                console.log(entry);
+            }
+        }
+    </script>
+</body>
+
+</html>

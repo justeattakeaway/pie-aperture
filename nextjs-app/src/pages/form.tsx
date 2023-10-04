@@ -1,6 +1,23 @@
 import { PieButton } from '@justeattakeaway/pie-button/dist/react';
+import { useEffect } from 'react';
 
 export default function Form() {
+    useEffect(() => {
+        console.log("React component mounted/rendered");
+    }, []);
+
+    function handleSubmit (e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        console.log('Form submitted and inside react function')
+        const form = document.getElementById('testForm') as HTMLFormElement;
+        console.log(form)
+        const formData = new FormData(form);
+
+        // log all form data
+        for (const entry of formData.entries()) {
+            console.log(entry);
+        }
+    }
     return (
         <>
             <h1>PIE Form Integration Test Page</h1>
@@ -8,7 +25,7 @@ export default function Form() {
 
             <hr />
             <h2>Payment form</h2>
-            <form method="post" className="c-testForm">
+            <form onSubmit={handleSubmit} id="testForm" className="c-testForm">
                 <p>Required fields are followed by <strong><span aria-label="required">*</span></strong>.</p>
                 <section>
                     <h2>Contact information</h2>
@@ -85,7 +102,8 @@ export default function Form() {
                     </p>
                 </section>
                 <section>
-                    <PieButton>Validate the payment</PieButton>
+                    {/* <button type="submit">submit</button> */}
+                    <PieButton type="submit" formId="testForm">Submit the payment</PieButton>
                 </section>
             </form>
         </>
