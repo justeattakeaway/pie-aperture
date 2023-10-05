@@ -1,0 +1,57 @@
+name: Build
+
+on:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened, "ready_for_review"]
+    paths-ignore:
+      - "**/README.md"
+      - "**/CONTRIBUTING.md"
+      - "**/CHANGELOG.md"
+      - "**/LICENSE"
+
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: CI-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the Repo
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "yarn"
+
+      - name: Install Dependencies & Build - Vanilla App
+        shell: bash
+        working-directory: ./vanilla-app
+        run: yarn && yarn build
+
+      - name: Install Dependencies & Build - Next App
+        shell: bash
+        working-directory: ./nextjs-app
+        run: yarn && yarn build
+
+#   deploy-vanilla-app:
+#     needs: build
+#     uses: ./.github/workflows/amplify-deploy.yml
+#     with:
+#       os: ubuntu-latest
+#       node-version: 18
+#       amplify-app-id: dvskdcoepjoyf
+#       package-name: 'pie-docs'
+#       package-dist-directory: ./apps/pie-docs/dist
+#       bucket-name-preview: 'pie-docs-preview'
+#       bucket-name-main: 'pie-docs'
+#     secrets: inherit
