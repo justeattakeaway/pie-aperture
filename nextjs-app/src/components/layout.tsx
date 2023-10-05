@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
-
+// @ts-ignore
 export default function Layout({ children }) {
   return (
     <>
