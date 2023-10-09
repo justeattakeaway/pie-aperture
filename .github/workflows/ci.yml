@@ -1,0 +1,42 @@
+name: Build & Deploy
+
+on:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened, "ready_for_review"]
+    paths-ignore:
+      - "**/README.md"
+      - "**/CONTRIBUTING.md"
+      - "**/CHANGELOG.md"
+      - "**/LICENSE"
+
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: CI-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+
+    build-deploy-vanilla-app:
+        name: Build & Deploy - vanilla-app
+        uses: ./.github/workflows/build-deploy.yml
+        with:
+            amplify-app-id: 'd2vb6sjgivffb3'
+            package-name: 'vanilla-app'
+            package-dist-directory: './vanilla-app/dist'
+            bucket-name-preview: 'pie-aperture-preview'
+            bucket-name-main: 'pie-aperture'
+        secrets: inherit
+
+    build-deploy-next-app:
+        name: Build & Deploy - nextjs-app
+        uses: ./.github/workflows/build-deploy.yml
+        with:
+            amplify-app-id: 'd1106vmj1ozg8d'
+            package-name: 'nextjs-app'
+            package-dist-directory: './nextjs-app/out'
+            bucket-name-preview: 'pie-aperture-preview'
+            bucket-name-main: 'pie-aperture'
+        secrets: inherit
