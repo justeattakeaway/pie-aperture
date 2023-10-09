@@ -1,4 +1,4 @@
-name: Build
+name: Build & Deploy
 
 on:
   pull_request:
@@ -19,26 +19,13 @@ concurrency:
 
 jobs:
 
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      # Checkout the Repo
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      # Setup Node
-      - name: Setup Node
-        uses: actions/setup-node@v3
+    build-deploy-vanilla-app:
+        name: Build & Deploy - vanilla-app
+        uses: ./.github/workflows/build-deploy.yml
         with:
-          node-version: 18
-          cache: "yarn"
-
-      - name: Install Dependencies & Build - Vanilla App
-        shell: bash
-        working-directory: ./vanilla-app
-        run: yarn && yarn build
-
-      - name: Install Dependencies & Build - Next App
-        shell: bash
-        working-directory: ./nextjs-app
-        run: yarn && yarn build
+            amplify-app-id: 'd2vb6sjgivffb3'
+            package-name: 'vanilla-app'
+            package-dist-directory: './vanilla-app/dist'
+            bucket-name-preview: 'pie-aperture-preview'
+            bucket-name-main: 'pie-aperture'
+        secrets: inherit
