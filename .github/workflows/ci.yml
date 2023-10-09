@@ -1,4 +1,4 @@
-name: Build & Deploy
+name: Build
 
 on:
   pull_request:
@@ -42,16 +42,3 @@ jobs:
         shell: bash
         working-directory: ./nextjs-app
         run: yarn && yarn build
-
-#   deploy-vanilla-app:
-#     needs: build
-#     uses: ./.github/workflows/amplify-deploy.yml
-#     with:
-#       os: ubuntu-latest
-#       node-version: 18
-#       amplify-app-id: dvskdcoepjoyf
-#       package-name: 'pie-docs'
-#       package-dist-directory: ./apps/pie-docs/dist
-#       bucket-name-preview: 'pie-docs-preview'
-#       bucket-name-main: 'pie-docs'
-#     secrets: inherit
