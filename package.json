@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "cz": "./node_modules/cz-customizable/standalone.js"
+    "cz": "./node_modules/cz-customizable/standalone.js",
+    "wdio:next": "wdio run ./nextjs-app/wdio.conf.js",
+    "wdio:vanilla": "wdio run ./vanilla-app/wdio.conf.js"
   },
   "dependencies": {
     "commitizen": "4.3.0",
@@ -16,5 +18,11 @@
     "cz-customizable": {
       "config": ".cz-config.js"
     }
+  },
+  "devDependencies": {
+    "@wdio/cli": "8.19.0",
+    "@wdio/local-runner": "8.19.0",
+    "@wdio/mocha-framework": "8.19.0",
+    "@wdio/spec-reporter": "8.19.0"
   }
 }
