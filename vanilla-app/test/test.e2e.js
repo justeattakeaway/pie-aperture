@@ -1,5 +1,3 @@
-import { expect, browser, $ } from '@wdio/globals';
-
 describe('Vanilla App', () => {
     it('should navigate to the deployed application', async () => {
         await browser.url('/')

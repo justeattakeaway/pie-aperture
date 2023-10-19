@@ -1,4 +1,3 @@
-require('@babel/register');
 const merge = require('deepmerge');
 const sharedConf = require('../wdio.conf.js');
 
@@ -8,10 +7,5 @@ exports.config = merge(sharedConf.config, {
 
     specs: [
         './test/*.js'
-    ],
-
-    mochaOpts: {
-        // Babel setup
-        require: ['@babel/register']
-    },
+    ]
 });
