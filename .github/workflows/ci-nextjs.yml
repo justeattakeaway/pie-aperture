@@ -3,8 +3,8 @@ name: Build & Deploy - Vanilla App
 on:
   pull_request:
     types: [assigned, opened, synchronize, reopened, "ready_for_review"]
-    paths:
-      ./nextjs-app/**
+    # paths:
+    #   nextjs-app/**
 
   push:
     branches:

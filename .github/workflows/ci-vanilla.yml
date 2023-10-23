@@ -3,12 +3,12 @@ name: Build & Deploy - Vanilla App
 on:
   pull_request:
     types: [assigned, opened, synchronize, reopened, "ready_for_review"]
-    paths:
-      ./github/**
-      ./vanilla-app/**
-      ./webdriver-helpers/**
-      ./package.json
-      ./yarn.lock
+    # paths:
+    #   ./github/**
+    #   ./vanilla-app/**
+    #   ./webdriver-helpers/**
+    #   ./package.json
+    #   ./yarn.lock
   push:
     branches:
       - main
