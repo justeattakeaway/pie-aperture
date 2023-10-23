@@ -1,0 +1,59 @@
+name: Build & Deploy - Vanilla App
+
+on:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened, "ready_for_review"]
+    paths:
+      ./github/**
+      ./vanilla-app/**
+      ./webdriver-helpers/**
+      ./package.json
+      ./yarn.lock
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: CI-Vanilla-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+
+  build-deploy-vanilla-app:
+      name: Build & Deploy - vanilla-app
+      uses: ./.github/workflows/build-deploy.yml
+      with:
+          amplify-app-id: 'd2vb6sjgivffb3'
+          package-name: 'vanilla-app'
+          package-dist-directory: './vanilla-app/dist'
+          bucket-name-preview: 'pie-aperture-preview'
+          bucket-name-main: 'pie-aperture'
+      secrets: inherit
+
+  browser-tests:
+    needs: 'build-deploy-vanilla-app'
+    name: Run WebDriverIO Tests
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the Repo
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "yarn"
+
+      - name: Install Dependencies
+        shell: bash
+        run: yarn
+
+      - name: Run WebDriverIO Tests
+        shell: bash
+        run: yarn wdio:vanilla
+    env:
+      PR_NUMBER: ${{ github.event.number }}
+      VANILLA_AMPLIFY_ID: d2vb6sjgivffb3
+
