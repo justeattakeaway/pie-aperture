@@ -1,9 +1,10 @@
 import merge from 'deepmerge';
 import sharedConf from '../wdio.conf.js';
+import { getEnvironmentBaseUrl } from '../webdriver-helpers/configuration-helper.js';
 
 const config = merge(sharedConf.config, {
 
-    baseUrl: 'https://main.d2vb6sjgivffb3.amplifyapp.com/',
+    baseUrl: getEnvironmentBaseUrl('vanilla-app'),
 
     specs: [
         './test/*.js'
