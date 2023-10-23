@@ -20,7 +20,7 @@ concurrency:
 jobs:
 
   build-deploy-vanilla-app:
-      name: Build & Deploy - vanilla-app
+      name: Build & Deploy
       uses: ./.github/workflows/build-deploy.yml
       with:
           amplify-app-id: 'd2vb6sjgivffb3'

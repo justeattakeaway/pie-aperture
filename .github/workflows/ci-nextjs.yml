@@ -17,7 +17,7 @@ concurrency:
 jobs:
 
   build-deploy-next-app:
-      name: Build & Deploy - nextjs-app
+      name: Build & Deploy
       uses: ./.github/workflows/build-deploy.yml
       with:
           amplify-app-id: 'd1106vmj1ozg8d'
