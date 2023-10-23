@@ -54,7 +54,7 @@ jobs:
 
       - name: Run WebDriverIO Tests
         shell: bash
-        run: yarn wdio:nextjs
+        run: yarn wdio:next
     env:
       PR_NUMBER: ${{ github.event.number }}
       NEXT_AMPLIFY_ID: d1106vmj1ozg8d
