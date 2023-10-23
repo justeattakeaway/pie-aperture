@@ -46,8 +46,13 @@ jobs:
           node-version: 18
           cache: "yarn"
 
-      - name: Install Dependencies
+      - name: Install Dependencies - Root
         shell: bash
+        run: yarn
+
+      - name: Install Dependencies - Vanilla App
+        shell: bash
+        working-directory: ./vanilla-app
         run: yarn
 
       - name: Run WebDriverIO Tests

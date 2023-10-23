@@ -1,4 +1,4 @@
-name: Build & Deploy - Vanilla App
+name: Build & Deploy - NextJS App
 
 on:
   pull_request:
@@ -43,8 +43,13 @@ jobs:
           node-version: 18
           cache: "yarn"
 
-      - name: Install Dependencies
+      - name: Install Dependencies - Root
         shell: bash
+        run: yarn
+  
+      - name: Install Dependencies - NextJS App
+        shell: bash
+        working-directory: ./nextjs-app
         run: yarn
 
       - name: Run WebDriverIO Tests
