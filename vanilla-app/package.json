@@ -6,24 +6,23 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "wdio:vanilla": "../node_modules/.bin/wdio run ./wdio.conf.js"
   },
   "devDependencies": {
+    "deepmerge": "4.3.1",
     "vite": "4.3.9"
   },
   "dependencies": {
     "@justeat/pie-design-tokens": "5.7.0",
-    "@justeattakeaway/pie-button": "^0.28.0",
-    "@justeattakeaway/pie-card-container": "^0.2.0",
-    "@justeattakeaway/pie-cookie-banner": "^0.3.0",
-    "@justeattakeaway/pie-css": "0.3.0",
-    "@justeattakeaway/pie-divider": "^0.4.0",
-    "@justeattakeaway/pie-icon-button": "0.14.0",
-    "@justeattakeaway/pie-icons-webc": "0.5.0",
-    "@justeattakeaway/pie-modal": "^0.19.0",
-    "@justeattakeaway/pie-toggle-switch": "^0.6.0"
-  },
-  "installConfig": {
-    "hoistingLimits": "workspaces"
+    "@justeattakeaway/pie-button": "0.34.0",
+    "@justeattakeaway/pie-card-container": "0.11.0",
+    "@justeattakeaway/pie-cookie-banner": "0.7.0",
+    "@justeattakeaway/pie-css": "0.6.0",
+    "@justeattakeaway/pie-divider": "0.8.0",
+    "@justeattakeaway/pie-icon-button": "0.18.0",
+    "@justeattakeaway/pie-icons-webc": "0.6.0",
+    "@justeattakeaway/pie-modal": "0.28.0",
+    "@justeattakeaway/pie-toggle-switch": "0.14.0"
   }
 }

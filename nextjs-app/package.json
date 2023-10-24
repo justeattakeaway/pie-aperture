@@ -6,11 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "wdio:next": "../node_modules/.bin/wdio run ./wdio.conf.js"
   },
   "dependencies": {
     "@justeattakeaway/pie-button": "0.28.0",
-    "@justeattakeaway/pie-css": "0.3.0",
+    "@justeattakeaway/pie-css": "0.6.0",
     "@lit-labs/nextjs": "0.1.2",
     "@lit-labs/react": "1.1.1",
     "@types/node": "20.5.9",
@@ -21,7 +22,16 @@
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.2.2",
-    "sass": "1.66.1"
+    "sass": "1.66.1",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "deepmerge": "4.3.1"
+  },
+  "resolutions": {
+    "@lit-labs/ssr-react": "0.2.0",
+    "@lit-labs/ssr": "3.1.0",
+    "@lit-labs/ssr-client": "1.1.0",
+    "lit": "2.7.0"
   }
 }
