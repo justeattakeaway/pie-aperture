@@ -3,12 +3,11 @@ name: Build & Deploy - Vanilla App
 on:
   pull_request:
     types: [assigned, opened, synchronize, reopened, "ready_for_review"]
-    # paths:
-    #   ./github/**
-    #   ./vanilla-app/**
-    #   ./webdriver-helpers/**
-    #   ./package.json
-    #   ./yarn.lock
+    paths:
+      -.github/workflows/**
+      - 'vanilla-app/**'
+      - webdriver-helpers/**
+      - wdio.conf.js
   push:
     branches:
       - main

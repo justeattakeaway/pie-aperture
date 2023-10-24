@@ -3,8 +3,12 @@ name: Build & Deploy - NextJS App
 on:
   pull_request:
     types: [assigned, opened, synchronize, reopened, "ready_for_review"]
-    # paths:
-    #   nextjs-app/**
+    paths:
+      -.github/workflows/**
+      - 'nextjs-app/**'
+      - webdriver-helpers/**
+      - wdio.conf.js
+
 
   push:
     branches:
