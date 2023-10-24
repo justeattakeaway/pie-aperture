@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "wdio:next": "wdio run ./wdio.conf.js"
+    "wdio:next": "../node_modules/.bin/wdio run ./wdio.conf.js"
   },
   "dependencies": {
     "@justeattakeaway/pie-button": "0.28.0",

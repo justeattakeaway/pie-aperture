@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "wdio:vanilla": "wdio run ./wdio.conf.js"
+    "wdio:vanilla": "../node_modules/.bin/wdio run ./wdio.conf.js"
   },
   "devDependencies": {
     "deepmerge": "4.3.1",
