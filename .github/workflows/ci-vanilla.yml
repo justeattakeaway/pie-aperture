@@ -56,8 +56,8 @@ jobs:
 
       - name: Run WebDriverIO Tests
         shell: bash
+        working-directory: ./vanilla-app
         run: yarn wdio:vanilla
     env:
       PR_NUMBER: ${{ github.event.number }}
       VANILLA_AMPLIFY_ID: d2vb6sjgivffb3
-

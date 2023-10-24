@@ -9,7 +9,6 @@ on:
       - 'webdriver-helpers/**'
       - 'wdio.conf.js'
 
-
   push:
     branches:
       - main
@@ -58,6 +57,7 @@ jobs:
 
       - name: Run WebDriverIO Tests
         shell: bash
+        working-directory: ./nextjs-app
         run: yarn wdio:next
     env:
       PR_NUMBER: ${{ github.event.number }}

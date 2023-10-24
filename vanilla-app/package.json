@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "wdio:vanilla": "wdio run ./wdio.conf.js"
   },
   "devDependencies": {
     "deepmerge": "4.3.1",

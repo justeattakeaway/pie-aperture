@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "cz": "./node_modules/cz-customizable/standalone.js",
-    "wdio:next": "wdio run ./nextjs-app/wdio.conf.js",
-    "wdio:vanilla": "wdio run ./vanilla-app/wdio.conf.js"
+    "cz": "./node_modules/cz-customizable/standalone.js"
   },
   "dependencies": {
     "commitizen": "4.3.0",
