@@ -4,10 +4,10 @@ on:
   pull_request:
     types: [assigned, opened, synchronize, reopened, "ready_for_review"]
     paths:
-      -.github/workflows/**
+      - '.github/workflows/**'
       - 'vanilla-app/**'
-      - webdriver-helpers/**
-      - wdio.conf.js
+      - 'webdriver-helpers/**'
+      - 'wdio.conf.js'
   push:
     branches:
       - main
