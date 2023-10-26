@@ -3,9 +3,14 @@ const { createCapability } = require('./webdriver-helpers/configuration-helper')
 const capabilities = [
     createCapability("OS X", "Big Sur", "Safari", "14.1"),
     createCapability("OS X", "Ventura", "Safari", "16.0"),
+    createCapability("Windows", "11", "Chrome", "latest"),
+    createCapability("Windows", "11", "Chrome", "115"),
     createCapability("Windows", "11", "Edge", "latest"),
+    createCapability("Windows", "11", "Edge", "115"),
+    createCapability("Windows", "11", "Firefox", "latest"),
+    createCapability("Windows", "11", "Firefox", "115"),
     createCapability(null, "17", "Safari", null, "iPhone 15"),
-    createCapability(null, "14", "Safari", null, "iPhone 12"),
+    createCapability(null, "15", "Safari", null, "iPhone XS"),
 ];
 
 exports.config = {
