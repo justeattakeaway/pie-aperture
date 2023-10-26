@@ -22,7 +22,8 @@ exports.config = {
 
     services: [
         ['browserstack', {
-            browserstackLocal: !process.env.CI
+            browserstackLocal: !process.env.CI, // Only use BrowserStack local when not running on CI.
+            forcedStop: true // Kill the BrowserStack Local process on complete.
         }]
     ],
     //
