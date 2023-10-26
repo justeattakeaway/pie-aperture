@@ -18,9 +18,13 @@
     }
   },
   "devDependencies": {
+    "@percy/cli": "1.27.3",
+    "@percy/selenium-webdriver": "2.0.0",
+    "@wdio/browserstack-service": "8.20.5",
     "@wdio/cli": "8.19.0",
     "@wdio/local-runner": "8.19.0",
     "@wdio/mocha-framework": "8.19.0",
-    "@wdio/spec-reporter": "8.19.0"
+    "@wdio/spec-reporter": "8.19.0",
+    "selenium-webdriver": "4.14.0"
   }
 }
