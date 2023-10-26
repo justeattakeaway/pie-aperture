@@ -15,7 +15,7 @@ exports.config = {
 
     services: [
         ['browserstack', {
-            browserstackLocal: true
+            browserstackLocal: !process.env.CI
         }]
     ],
     //

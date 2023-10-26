@@ -25,13 +25,15 @@ exports.getEnvironmentBaseUrl = (appName) => {
 
 exports.createBrowserstackBuildName = () => {
 
-    const branchName = execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
+    let branchName;
     let runId;
 
     if (CI) {
+        branchName = GITHUB_REF_NAME;
         runId = GITHUB_RUN_ID;
     }
     else {
+        branchName = execSync('git rev-parse --abbrev-ref HEAD').toString().trim();
         var date = new Date();
         var currentTime = date.toLocaleTimeString();
 
