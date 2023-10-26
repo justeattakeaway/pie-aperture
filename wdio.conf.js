@@ -11,6 +11,8 @@ const capabilities = [
     createCapability("Windows", "11", "Firefox", "115"),
     createCapability(null, "17", "Safari", null, "iPhone 15"),
     createCapability(null, "15", "Safari", null, "iPhone XS"),
+    createCapability(null, "14.0", "Chrome", null, "Google Pixel 8"),
+    createCapability(null, "11.0", "Chrome", null, "Google Pixel 5")
 ];
 
 exports.config = {
