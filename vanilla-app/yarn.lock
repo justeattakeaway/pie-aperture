@@ -214,10 +214,10 @@
   resolved "https://registry.yarnpkg.com/@justeattakeaway/pie-icon-button/-/pie-icon-button-0.18.0.tgz#9f5346399452a10059ae83717011a4631c21b6ae"
   integrity sha512-E3EMJMFzAX3rl10gq2Z/zQFpihxaNFYzNeMboFzfMtmb7XMVpFNEUH1SJ2CgLdQGEuzfJJhTMUIAj1neLtYV1w==
 
-"@justeattakeaway/pie-icons-webc@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@justeattakeaway/pie-icons-webc/-/pie-icons-webc-0.7.0.tgz#834d6bf70a38bc915945257fe01797934029d417"
-  integrity sha512-SF5ZkAhjSA9apyYqaXClkjr04J8oDt3gt+v2miMY2tUEYv1S6RPn3wKNFf0sKdbNhqBipoy6Nt8yknXg+wCe2Q==
+"@justeattakeaway/pie-icons-webc@0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@justeattakeaway/pie-icons-webc/-/pie-icons-webc-0.6.0.tgz#70e3a3c6f3d4bedf99f17bbd4b7dc589c6665337"
+  integrity sha512-p2OponZyD4wzlKYaVGiW62lyInE/IeEyV2jDTFkLF8EmRLpDYgjX1Y+bMyQBYQYulWxzBRF3D4RTijPQ/VgX5w==
   dependencies:
     "@open-wc/testing" "3.2.0"
     "@web/test-runner" "0.16.1"

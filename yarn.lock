@@ -309,7 +309,7 @@
   resolved "https://registry.yarnpkg.com/@percy/sdk-utils/-/sdk-utils-1.27.3.tgz#2ac9dcfd3d4f314f4f8715cb84297085c97a4259"
   integrity sha512-IhNx5VaYsKiHaFYFbX6BsVb4bNWojNrKyDa9aRF1afAWAeVWHd1Jq/XeVfMDNCrYcsrA+pYDPSXfb+N5cpAeGQ==
 
-"@percy/selenium-webdriver@^2.0.0":
+"@percy/selenium-webdriver@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@percy/selenium-webdriver/-/selenium-webdriver-2.0.0.tgz#7584b5385f93d2e519abda8aa8be235b31020258"
   integrity sha512-H0g12oImSO0QwIcYyMHZiTJFe5Dr2LLIRM+Q/k8T4VnawqbA+yX7dARH9rohYIFaMEtqP7QawD6zV7tvT72k1Q==
@@ -489,7 +489,7 @@
   dependencies:
     "@types/node" "*"
 
-"@wdio/browserstack-service@^8.20.5":
+"@wdio/browserstack-service@8.20.5":
   version "8.20.5"
   resolved "https://registry.yarnpkg.com/@wdio/browserstack-service/-/browserstack-service-8.20.5.tgz#4d274056d0496d996cdb98ac45f44eaa115fde6c"
   integrity sha512-85dhNUoAD1NnDDf/CfV+Fbbc+y+7NJ5JM3yBFoKpLVBLKAHy0ZYlTSEl/udAxwpGjRd4Fv4m6gwNfGiEWa76eA==
@@ -3853,7 +3853,7 @@ safe-stable-stringify@^2.3.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-selenium-webdriver@^4.14.0:
+selenium-webdriver@4.14.0:
   version "4.14.0"
   resolved "https://registry.yarnpkg.com/selenium-webdriver/-/selenium-webdriver-4.14.0.tgz#d39917cd7c1bb30f753c1f668158f37d1905fafc"
   integrity sha512-637rs8anqMKHbWxcBZpyG3Gcs+rBUtAUiqk0O/knUqH4Paj3MFUZrz88/pVGOLNryEVy2z92fZomT8p1ENl1gA==
