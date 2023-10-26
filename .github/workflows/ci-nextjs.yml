@@ -60,6 +60,8 @@ jobs:
         working-directory: ./nextjs-app
         run: yarn test:visual
     env:
-      PR_NUMBER: ${{ github.event.number }}
+      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
       NEXT_AMPLIFY_ID: d1106vmj1ozg8d
       PERCY_TOKEN_PIE_APERTURE_NEXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NEXT }}
+      PR_NUMBER: ${{ github.event.number }}
