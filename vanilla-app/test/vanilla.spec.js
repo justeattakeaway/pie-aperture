@@ -6,7 +6,7 @@ describe('Vanilla App', () => {
         await browser.url('/');
         await waitUntilPageLoad();
         await expect(await browser.getTitle()).toBe('Vite App');
-        // await percyScreenshot('Vanilla App - Component Overview');
+        await percyScreenshot('Vanilla App - Component Overview');
     })
 })
 
