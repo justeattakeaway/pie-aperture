@@ -49,7 +49,9 @@ exports.createCapability = (os, osVersion, browserName, browserVersion, deviceNa
         'bstack:options': {
             "projectName": "PIE Aperture",
             "buildName": this.createBrowserstackBuildName(),
-            "local": !CI
+            "local": !CI,
+            "debug": true,
+            "networkLogs": true
         }
     };
 
