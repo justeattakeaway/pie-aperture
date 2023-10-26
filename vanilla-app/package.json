@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 3001",
     "build": "vite build",
     "preview": "vite preview",
-    "wdio:vanilla": "../node_modules/.bin/wdio run ./wdio.conf.js"
+    "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_VANILLA} npx percy exec -- ../node_modules/.bin/wdio run ./wdio.conf.js"
   },
   "devDependencies": {
     "deepmerge": "4.3.1",
@@ -21,7 +21,7 @@
     "@justeattakeaway/pie-css": "0.6.0",
     "@justeattakeaway/pie-divider": "0.8.0",
     "@justeattakeaway/pie-icon-button": "0.18.0",
-    "@justeattakeaway/pie-icons-webc": "0.6.0",
+    "@justeattakeaway/pie-icons-webc": "0.7.0",
     "@justeattakeaway/pie-modal": "0.28.0",
     "@justeattakeaway/pie-toggle-switch": "0.14.0"
   }

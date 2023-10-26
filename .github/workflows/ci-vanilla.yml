@@ -54,10 +54,11 @@ jobs:
         working-directory: ./vanilla-app
         run: yarn
 
-      - name: Run WebDriverIO Tests
+      - name: Run Percy Tests
         shell: bash
         working-directory: ./vanilla-app
-        run: yarn wdio:vanilla
+        run: yarn test:visual
     env:
       PR_NUMBER: ${{ github.event.number }}
       VANILLA_AMPLIFY_ID: d2vb6sjgivffb3
+      PERCY_TOKEN_PIE_APERTURE_VANILLA: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_VANILLA }}

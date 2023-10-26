@@ -55,10 +55,11 @@ jobs:
         working-directory: ./nextjs-app
         run: yarn
 
-      - name: Run WebDriverIO Tests
+      - name: Run Percy Tests
         shell: bash
         working-directory: ./nextjs-app
-        run: yarn wdio:next
+        run: yarn test:visual
     env:
       PR_NUMBER: ${{ github.event.number }}
       NEXT_AMPLIFY_ID: d1106vmj1ozg8d
+      PERCY_TOKEN_PIE_APERTURE_NEXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NEXT }}

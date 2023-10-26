@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "wdio:next": "../node_modules/.bin/wdio run ./wdio.conf.js"
+    "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NEXT} npx percy exec -- ../node_modules/.bin/wdio run ./wdio.conf.js"
   },
   "dependencies": {
     "@justeattakeaway/pie-button": "0.28.0",
