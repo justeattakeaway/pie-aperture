@@ -18,18 +18,8 @@ concurrency:
 
 jobs:
 
-  build-vanilla-app-windows-node16:
-    name: Build & Deploy
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 16
-        os: 'windows-latest'
-        package-name: 'vanilla-app'
-    secrets: inherit
-
   build-vanilla-app-windows-node18:
-    name: Build & Deploy
+    name: Build - Windows - Node 18
     uses: ./.github/workflows/build.yml
     with:
         deploy: false
@@ -39,7 +29,7 @@ jobs:
     secrets: inherit
 
   build-vanilla-app-windows-node20:
-    name: Build & Deploy
+    name: Build - Windows - Node 20
     uses: ./.github/workflows/build.yml
     with:
         deploy: false
@@ -48,18 +38,8 @@ jobs:
         package-name: 'vanilla-app'
     secrets: inherit
 
-  build-vanilla-app-ubuntu-node16:
-    name: Build & Deploy
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 16
-        os: 'ubuntu-latest'
-        package-name: 'vanilla-app'
-    secrets: inherit
-
   build-vanilla-app-ubuntu-node18:
-    name: Build & Deploy
+    name: Build - Ubuntu - Node 18
     uses: ./.github/workflows/build.yml
     with:
         deploy: false
@@ -69,7 +49,7 @@ jobs:
     secrets: inherit
 
   build-deploy-vanilla-app-node20:
-      name: Build & Deploy
+      name: Build & Deploy - Ubuntu - Node 20
       uses: ./.github/workflows/build.yml
       with:
           deploy: true
