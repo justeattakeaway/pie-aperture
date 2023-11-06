@@ -19,10 +19,63 @@ concurrency:
 
 jobs:
 
-  build-deploy-next-app:
+  build-next-app-windows-node16:
+    name: Build & Deploy
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        node-version: 16
+        os: 'windows-latest'
+        package-name: 'nextjs-app'
+    secrets: inherit
+
+  build-next-app-windows-node18:
+    name: Build & Deploy
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        node-version: 18
+        os: 'windows-latest'
+        package-name: 'nextjs-app'
+    secrets: inherit
+
+  build-next-app-windows-node20:
+    name: Build & Deploy
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        node-version: 20
+        os: 'windows-latest'
+        package-name: 'nextjs-app'
+    secrets: inherit
+
+  build-next-app-ubuntu-node16:
+    name: Build & Deploy
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        node-version: 16
+        os: 'ubuntu-latest'
+        package-name: 'nextjs-app'
+    secrets: inherit
+
+  build-next-app-ubuntu-node18:
+    name: Build & Deploy
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        node-version: 18
+        os: 'ubuntu-latest'
+        package-name: 'nextjs-app'
+    secrets: inherit
+
+  build-deploy-next-app-ubuntu-node20:
       name: Build & Deploy
-      uses: ./.github/workflows/build-deploy.yml
+      uses: ./.github/workflows/build.yml
       with:
+          deploy: true
+          node-version: 20
+          os: 'ubuntu-latest'
           amplify-app-id: 'd1106vmj1ozg8d'
           package-name: 'nextjs-app'
           package-dist-directory: './nextjs-app/out'
@@ -31,7 +84,7 @@ jobs:
       secrets: inherit
 
   browser-tests:
-    needs: 'build-deploy-next-app'
+    needs: 'build-deploy-next-app-ubuntu-node20'
     name: Run WebDriverIO Tests
     runs-on: ubuntu-latest
     steps:
@@ -41,9 +94,9 @@ jobs:
 
       # Setup Node
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: "yarn"
 
       - name: Install Dependencies - Root
