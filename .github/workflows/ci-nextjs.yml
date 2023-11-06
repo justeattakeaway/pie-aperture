@@ -19,6 +19,16 @@ concurrency:
 
 jobs:
 
+  build-next-app-windows-node16:
+    name: Build - Windows - Node 16
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        node-version: 16
+        os: 'windows-latest'
+        package-name: 'nextjs-app'
+    secrets: inherit
+
   build-next-app-windows-node18:
     name: Build - Windows - Node 18
     uses: ./.github/workflows/build.yml
@@ -36,6 +46,16 @@ jobs:
         deploy: false
         node-version: 20
         os: 'windows-latest'
+        package-name: 'nextjs-app'
+    secrets: inherit
+
+  build-next-app-ubuntu-node16:
+    name: Build - Ubuntu - Node 16
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        node-version: 16
+        os: 'ubuntu-latest'
         package-name: 'nextjs-app'
     secrets: inherit
 
