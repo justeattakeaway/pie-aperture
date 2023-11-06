@@ -19,7 +19,7 @@ concurrency:
 jobs:
 
   build-vanilla-app-windows-node16:
-    name: Build - Windows - Node 16
+    name: Windows - Node 16
     uses: ./.github/workflows/build.yml
     with:
         deploy: false
@@ -29,7 +29,7 @@ jobs:
     secrets: inherit
 
   build-vanilla-app-windows-node18:
-    name: Build - Windows - Node 18
+    name: Windows - Node 18
     uses: ./.github/workflows/build.yml
     with:
         deploy: false
@@ -39,7 +39,7 @@ jobs:
     secrets: inherit
 
   build-vanilla-app-windows-node20:
-    name: Build - Windows - Node 20
+    name: Windows - Node 20
     uses: ./.github/workflows/build.yml
     with:
         deploy: false
@@ -49,7 +49,7 @@ jobs:
     secrets: inherit
 
   build-vanilla-app-ubuntu-node16:
-    name: Build - Ubuntu - Node 16
+    name: Ubuntu - Node 16
     uses: ./.github/workflows/build.yml
     with:
         deploy: false
@@ -59,7 +59,7 @@ jobs:
     secrets: inherit
 
   build-vanilla-app-ubuntu-node18:
-    name: Build - Ubuntu - Node 18
+    name: Ubuntu - Node 18
     uses: ./.github/workflows/build.yml
     with:
         deploy: false
@@ -69,7 +69,7 @@ jobs:
     secrets: inherit
 
   build-deploy-vanilla-app-node20:
-      name: Build & Deploy - Ubuntu - Node 20
+      name: Ubuntu - Node 20
       uses: ./.github/workflows/build.yml
       with:
           deploy: true
@@ -93,7 +93,7 @@ jobs:
 
       # Setup Node
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v3
         with:
           node-version: 20
           cache: "yarn"
