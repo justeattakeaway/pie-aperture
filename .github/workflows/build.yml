@@ -30,7 +30,7 @@ on:
           required: false
           type: string
         deploy:
-          description: "Boolean flag on whether to deploy the application with the given node verison"
+          description: "Boolean flag on whether to deploy the application with the given node version"
           required: true
           type: boolean
 
