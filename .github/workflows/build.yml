@@ -3,6 +3,14 @@ on:
       inputs:
         amplify-app-id:
           description: "The ID for your Amplify app (which you can get from the end of its ARN)"
+          required: false
+          type: string
+        node-version:
+          description: "The node version to use when building the application"
+          required: true
+          type: number
+        os:
+          description: "The operating system to use when building the application"
           required: true
           type: string
         package-name:
@@ -11,7 +19,7 @@ on:
           type: string
         package-dist-directory:
           description: "The directory where the package dist is located"
-          required: true
+          required: false
           type: string
         bucket-name-preview:
           description: "Name of the preview bucket being deployed to"
@@ -19,8 +27,12 @@ on:
           type: string
         bucket-name-main:
           description: "Name of the main bucket being deployed to"
-          required: true
+          required: false
           type: string
+        deploy:
+          description: "Boolean flag on whether to deploy the application with the given node version"
+          required: true
+          type: boolean
 
 env:
   AMPLIFY_ID: ${{ inputs.amplify-app-id }}
@@ -33,7 +45,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ inputs.os  }}
     steps:
       # Checkout the Repo
       - name: Checkout
@@ -41,10 +53,9 @@ jobs:
 
       # Setup Node
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
-          cache: "yarn"
+          node-version: ${{ inputs.node-version }}
 
       - name: Install Dependencies & Build - ${{ inputs.package-name }}
         shell: bash
@@ -54,7 +65,7 @@ jobs:
       # This is a slightly modified version of the following workflow - https://github.com/justeattakeaway/pie/blob/main/.github/workflows/amplify-deploy.yml
       # Create Github Deployment
       - name: Create Docs GitHub deployment
-        if: ${{ github.event_name == 'pull_request' }}
+        if: github.event_name == 'pull_request' && inputs.deploy == true
         uses: chrnorm/deployment-action@v2
         id: deploy
         with:
@@ -63,6 +74,7 @@ jobs:
 
       # Zip dist folder
       - name: Zip build output
+        if: github.event_name == 'pull_request' && inputs.deploy == true
         shell: bash
         run: |
             cd ${{ inputs.package-dist-directory }}
@@ -70,6 +82,7 @@ jobs:
 
       # Upload zip to S3
       - name: Upload to S3
+        if: github.event_name == 'pull_request' && inputs.deploy == true
         id: upload-s3
         uses: hkusu/s3-upload-action@v2
         with:
@@ -85,6 +98,7 @@ jobs:
 
       # Create branch on Amplify
       - name: Create Amplify branch
+        if: github.event_name == 'pull_request' && inputs.deploy == true
         shell: bash
         # We return true to prevent the step from failing if the branch already exists
         run: |
@@ -95,6 +109,7 @@ jobs:
 
       # Deploy Amplify from S3
       - name: Deploy Amplify from S3
+        if: github.event_name == 'pull_request' && inputs.deploy == true
         shell: bash
         run: |
             aws amplify start-deployment \
@@ -104,7 +119,7 @@ jobs:
 
       # If successful
       - name: Update deployment status (success)
-        if: ${{ github.event_name == 'pull_request' && success() }}
+        if: github.event_name == 'pull_request' && inputs.deploy && success()
         uses: chrnorm/deployment-status@v2
         with:
             token: ${{ secrets.GITHUB_TOKEN }}
@@ -114,7 +129,7 @@ jobs:
 
       # If it failed
       - name: Update deployment status (failure)
-        if: ${{ github.event_name == 'pull_request' && failure() }}
+        if: github.event_name == 'pull_request' && inputs.deploy && failure()
         uses: chrnorm/deployment-status@v2
         with:
             token: ${{ secrets.GITHUB_TOKEN }}
