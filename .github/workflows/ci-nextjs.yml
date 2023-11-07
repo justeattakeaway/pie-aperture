@@ -19,36 +19,35 @@ concurrency:
 
 jobs:
 
-  # Commenting these out for now as there's currently an issue with NextJS.
-  # build-next-app-windows-node16:
-  #   name: Windows - Node 16
-  #   uses: ./.github/workflows/build.yml
-  #   with:
-  #       deploy: false
-  #       node-version: 16
-  #       os: 'windows-latest'
-  #       package-name: 'nextjs-app'
-  #   secrets: inherit
+  build-next-app-windows-node16:
+    name: Windows - Node 16
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        node-version: 16
+        os: 'windows-latest'
+        package-name: 'nextjs-app'
+    secrets: inherit
 
-  # build-next-app-windows-node18:
-  #   name: Windows - Node 18
-  #   uses: ./.github/workflows/build.yml
-  #   with:
-  #       deploy: false
-  #       node-version: 18
-  #       os: 'windows-latest'
-  #       package-name: 'nextjs-app'
-  #   secrets: inherit
+  build-next-app-windows-node18:
+    name: Windows - Node 18
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        node-version: 18
+        os: 'windows-latest'
+        package-name: 'nextjs-app'
+    secrets: inherit
 
-  # build-next-app-windows-node20:
-  #   name: Windows - Node 20
-  #   uses: ./.github/workflows/build.yml
-  #   with:
-  #       deploy: false
-  #       node-version: 20
-  #       os: 'windows-latest'
-  #       package-name: 'nextjs-app'
-  #   secrets: inherit
+  build-next-app-windows-node20:
+    name: Windows - Node 20
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        node-version: 20
+        os: 'windows-latest'
+        package-name: 'nextjs-app'
+    secrets: inherit
 
   build-next-app-ubuntu-node16:
     name: Ubuntu - Node 16

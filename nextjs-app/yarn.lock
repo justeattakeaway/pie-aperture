@@ -102,17 +102,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-button@npm:0.28.0":
-  version: 0.28.0
-  resolution: "@justeattakeaway/pie-button@npm:0.28.0"
-  checksum: 5c4bf4e8ac532c4016f3b277b22a42be7ab19a08b151c373d3f1a495a80adcfd6fc8f8bfb5e5f955c5be7f11a1c2f9680d277fe5915e53509e663618edf6f499
+"@justeattakeaway/pie-button@npm:latest":
+  version: 0.36.1
+  resolution: "@justeattakeaway/pie-button@npm:0.36.1"
+  dependencies:
+    element-internals-polyfill: 1.3.8
+  checksum: 9c08ede24b9a2a2275ea8f8ef993c76a403ae0ad68513feedc85f07bcecfb019f33b4a6b983441f6abed99f027661d9ef835843424067a3c3ea048edcb91f592
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-css@npm:0.6.0":
-  version: 0.6.0
-  resolution: "@justeattakeaway/pie-css@npm:0.6.0"
-  checksum: 56195b058b5b765367f2866a3e06f5bb3f0202ebb27114c3e5ce7c3ee469c4fe0e72c161251f59c482c35a7cc623f0fe8c8bf34cd0103fa55274cb6e5fc93967
+"@justeattakeaway/pie-css@npm:latest":
+  version: 0.7.0
+  resolution: "@justeattakeaway/pie-css@npm:0.7.0"
+  checksum: a41f4dd39fdc4ca424b50ea8b69fdb3f4d7fd7874d3836c5a188ce93efea502158e52fe0e5462e741346fa59d528ad83884acbac920f8e6aff3a196621953bce
   languageName: node
   linkType: hard
 
@@ -128,65 +130,75 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit-labs/react@npm:1.1.1":
-  version: 1.1.1
-  resolution: "@lit-labs/react@npm:1.1.1"
-  checksum: e46b87a3e04b329b62e67360a7a1b21c55abf91c17d3059b550654565b53c73a25832e95426698e9b78488cc4ebaeb20b8a8ca64a220325e31633355a245710d
-  languageName: node
-  linkType: hard
-
-"@lit-labs/ssr-client@npm:1.1.0":
-  version: 1.1.0
-  resolution: "@lit-labs/ssr-client@npm:1.1.0"
+"@lit-labs/react@npm:2.1.2":
+  version: 2.1.2
+  resolution: "@lit-labs/react@npm:2.1.2"
   dependencies:
-    "@lit/reactive-element": ^1.0.0
-    lit: ^2.0.0
-    lit-html: ^2.0.0
-  checksum: da4031c07a401af46949cac78f85fe7dab72c32513fd69d75459d9c300dd71e089cbccbb557fb5a483c4675f07c96264ca64aa6c1ba72d07d01e8db609bb72af
+    "@lit/react": ^1.0.0
+  checksum: 47214d6659290241899914a65987438e95fb6f4f01116c8186578f0193a54cdb2f3ece510c439823a2b512ecadbf5b2fc2dbd14991fc52d439429e0b16007265
   languageName: node
   linkType: hard
 
-"@lit-labs/ssr-dom-shim@npm:^1.0.0, @lit-labs/ssr-dom-shim@npm:^1.1.0":
+"@lit-labs/ssr-client@npm:1.1.5":
+  version: 1.1.5
+  resolution: "@lit-labs/ssr-client@npm:1.1.5"
+  dependencies:
+    "@lit/reactive-element": ^1.6.1 || ^2.0.0
+    lit: ^2.7.0 || ^3.0.0
+    lit-html: ^2.7.0 || ^3.0.0
+  checksum: 8be06fc920cd8d23dc926d80818d24bfcb890e618e34c263377c3d31ae175a166dda811f053e890618462ffd235161543164b36c21734bf05f69b2490f12d8a6
+  languageName: node
+  linkType: hard
+
+"@lit-labs/ssr-dom-shim@npm:^1.0.0, @lit-labs/ssr-dom-shim@npm:^1.1.0, @lit-labs/ssr-dom-shim@npm:^1.1.2":
   version: 1.1.2
   resolution: "@lit-labs/ssr-dom-shim@npm:1.1.2"
   checksum: 73fd787893851d4ec4aaa5c775405ed2aae4ca0891b2dd3c973b32c2f4bf70ada5481dd0224e52b786d037aa8a00052186ad1623c44551affd66f6409cca8da6
   languageName: node
   linkType: hard
 
-"@lit-labs/ssr-react@npm:0.2.0":
-  version: 0.2.0
-  resolution: "@lit-labs/ssr-react@npm:0.2.0"
+"@lit-labs/ssr-react@npm:0.2.2":
+  version: 0.2.2
+  resolution: "@lit-labs/ssr-react@npm:0.2.2"
   dependencies:
-    "@lit-labs/ssr": ^3.1.0
-    "@lit-labs/ssr-client": ^1.1.0
-    lit: ^2.7.0
+    "@lit-labs/ssr": ^3.1.8
+    "@lit-labs/ssr-client": ^1.1.4
   peerDependencies:
     "@types/react": 17 || 18
     react: 17 || 18
-  checksum: 08574ed6a124408660154a30deca744db7eafc332c5238f5ae26c32f2a2bfdcda9aa736aa8fd577c724e6b399fc377d2a8a9eeeccad9c135440d09a545233bd7
+  checksum: 333643fbbcafa2f74aec4254bb8c1764fed28ce85d40f4004fca358c5d3a7f9e41e3588b636c236a313b07d1d8214fbc6fbd2c7edfa639365c8384fc2d88c6bc
   languageName: node
   linkType: hard
 
-"@lit-labs/ssr@npm:3.1.0":
-  version: 3.1.0
-  resolution: "@lit-labs/ssr@npm:3.1.0"
+"@lit-labs/ssr@npm:3.1.9":
+  version: 3.1.9
+  resolution: "@lit-labs/ssr@npm:3.1.9"
   dependencies:
-    "@lit-labs/ssr-client": ^1.0.0
-    "@lit-labs/ssr-dom-shim": ^1.1.0
-    "@lit/reactive-element": ^1.6.0
-    "@parse5/tools": ^0.1.0
+    "@lit-labs/ssr-client": ^1.1.4
+    "@lit-labs/ssr-dom-shim": ^1.1.2
+    "@lit/reactive-element": ^1.6.1 || ^2.0.0
+    "@parse5/tools": ^0.3.0
     "@types/node": ^16.0.0
     enhanced-resolve: ^5.10.0
-    lit: ^2.7.0
-    lit-element: ^3.3.0
-    lit-html: ^2.7.0
+    lit: ^2.7.0 || ^3.0.0
+    lit-element: ^3.3.0 || ^4.0.0
+    lit-html: ^2.7.0 || ^3.0.0
     node-fetch: ^3.2.8
     parse5: ^7.1.1
-  checksum: 09931ec70ca63f52db6cfcb46ad5fa839a70acfd74463cb56b8237ae22f926bb97834070e253a284c6d8885d3b705b5197ecea6e21276d495a9ef83a3644dbb6
+  checksum: 2a532313b7422ea81d21f64bea5e5d63cdbb12edd13c0902d803096762cc18357ada48fc24394340f1cf259475bae04fb2dc16b05fd11f4775ebc4d8ae4b55fb
   languageName: node
   linkType: hard
 
-"@lit/reactive-element@npm:^1.0.0, @lit/reactive-element@npm:^1.3.0, @lit/reactive-element@npm:^1.6.0":
+"@lit/react@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "@lit/react@npm:1.0.1"
+  peerDependencies:
+    "@types/react": 17 || 18
+  checksum: a81dd202b9e0a379c77ea73c3822cec2a17730347767d12c090b1519d2ed602f34900a913347f17cd839c2eb8cc284d8816367d90dec4431cd78da5d477b74bd
+  languageName: node
+  linkType: hard
+
+"@lit/reactive-element@npm:^1.3.0, @lit/reactive-element@npm:^1.6.0":
   version: 1.6.3
   resolution: "@lit/reactive-element@npm:1.6.3"
   dependencies:
@@ -195,10 +207,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@next/env@npm:14.0.1"
-  checksum: 1fab6732f877c3702fce12396f16046f9b7a59c70b0d0b3db713995eed431706d12175530709d21c613682865ce82ef965a5719a43d6bc84142462a8ed558cda
+"@lit/reactive-element@npm:^1.6.1 || ^2.0.0, @lit/reactive-element@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "@lit/reactive-element@npm:2.0.1"
+  dependencies:
+    "@lit-labs/ssr-dom-shim": ^1.1.2
+  checksum: e9cacc3743c28b7b417739ffb292288076df115d08d9e9a895e2879c7087938d50c6b8141986743535e06156efd1ca505c8cf6ef8702db99966d190df9f8e869
+  languageName: node
+  linkType: hard
+
+"@next/env@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/env@npm:13.5.6"
+  checksum: 5e8f3f6f987a15dad3cd7b2bcac64a6382c2ec372d95d0ce6ab295eb59c9731222017eebf71ff3005932de2571f7543bce7e5c6a8c90030207fb819404138dc2
   languageName: node
   linkType: hard
 
@@ -211,65 +232,65 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@next/swc-darwin-arm64@npm:14.0.1"
+"@next/swc-darwin-arm64@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-darwin-arm64@npm:13.5.6"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@next/swc-darwin-x64@npm:14.0.1"
+"@next/swc-darwin-x64@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-darwin-x64@npm:13.5.6"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@next/swc-linux-arm64-gnu@npm:14.0.1"
+"@next/swc-linux-arm64-gnu@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-linux-arm64-gnu@npm:13.5.6"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@next/swc-linux-arm64-musl@npm:14.0.1"
+"@next/swc-linux-arm64-musl@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-linux-arm64-musl@npm:13.5.6"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@next/swc-linux-x64-gnu@npm:14.0.1"
+"@next/swc-linux-x64-gnu@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-linux-x64-gnu@npm:13.5.6"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@next/swc-linux-x64-musl@npm:14.0.1"
+"@next/swc-linux-x64-musl@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-linux-x64-musl@npm:13.5.6"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@next/swc-win32-arm64-msvc@npm:14.0.1"
+"@next/swc-win32-arm64-msvc@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-win32-arm64-msvc@npm:13.5.6"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@next/swc-win32-ia32-msvc@npm:14.0.1"
+"@next/swc-win32-ia32-msvc@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-win32-ia32-msvc@npm:13.5.6"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:14.0.1":
-  version: 14.0.1
-  resolution: "@next/swc-win32-x64-msvc@npm:14.0.1"
+"@next/swc-win32-x64-msvc@npm:13.5.6":
+  version: 13.5.6
+  resolution: "@next/swc-win32-x64-msvc@npm:13.5.6"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -323,12 +344,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parse5/tools@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "@parse5/tools@npm:0.1.0"
+"@parse5/tools@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "@parse5/tools@npm:0.3.0"
   dependencies:
     parse5: ^7.0.0
-  checksum: bdb0be933bcc3c08d254b7272bed1e9c52848aaa164b45a7eda8d5fecc287075a95dd7bffa2af9561576a017a3768537195532e977275dbad83e986b3ff32112
+  checksum: 11cdf896fe798c9bf80648a87920f1332047f1d1bcac413ddc0ac6dd457df53d435208c18ddf19150a596af2dab17b4db2c446ba27a64dc1c0bcf5b5b9b3313d
   languageName: node
   linkType: hard
 
@@ -1033,6 +1054,13 @@ __metadata:
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
   checksum: 7d00d7cd8e49b9afa762a813faac332dee781932d6f2c848dc348939c4253f1d4564341b7af1d041853bc3f32c2ef141b58e0a4d9862c17a7f08f68df1e0f1ed
+  languageName: node
+  linkType: hard
+
+"element-internals-polyfill@npm:1.3.8":
+  version: 1.3.8
+  resolution: "element-internals-polyfill@npm:1.3.8"
+  checksum: 920cf4c839d7dac0e72ff61a1a14c07161acc901274820fc94bd131fb2bde32520e123e69e95379dc849eadcfb4ae05d33c829614bed2ef518aafb557e98f2ff
   languageName: node
   linkType: hard
 
@@ -2389,7 +2417,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit-html@npm:^2.0.0, lit-html@npm:^2.7.0, lit-html@npm:^2.8.0":
+"lit-element@npm:^3.3.0 || ^4.0.0":
+  version: 4.0.1
+  resolution: "lit-element@npm:4.0.1"
+  dependencies:
+    "@lit-labs/ssr-dom-shim": ^1.1.2
+    "@lit/reactive-element": ^2.0.0
+    lit-html: ^3.0.0
+  checksum: f5915ecc6d56f2a3c822cd58567b5faadb4977ee8b66492beef6ef319ed94a5157ff59b957f581a3ae1708d6f5ca5d7ffa1c8a0d1027d087111ef93855c40499
+  languageName: node
+  linkType: hard
+
+"lit-html@npm:^2.7.0 || ^3.0.0, lit-html@npm:^3.0.0":
+  version: 3.0.2
+  resolution: "lit-html@npm:3.0.2"
+  dependencies:
+    "@types/trusted-types": ^2.0.2
+  checksum: 269ee6848a253db205a5402b11ae2a78086ed67766551d6ea266e757894f2de8e29c9db118a5a7f37806f6246fdffa40d53a3c306058d1a66f457f74c94b2c01
+  languageName: node
+  linkType: hard
+
+"lit-html@npm:^2.7.0, lit-html@npm:^2.8.0":
   version: 2.8.0
   resolution: "lit-html@npm:2.8.0"
   dependencies:
@@ -2643,20 +2691,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:14.0.1":
-  version: 14.0.1
-  resolution: "next@npm:14.0.1"
+"next@npm:13.5.6":
+  version: 13.5.6
+  resolution: "next@npm:13.5.6"
   dependencies:
-    "@next/env": 14.0.1
-    "@next/swc-darwin-arm64": 14.0.1
-    "@next/swc-darwin-x64": 14.0.1
-    "@next/swc-linux-arm64-gnu": 14.0.1
-    "@next/swc-linux-arm64-musl": 14.0.1
-    "@next/swc-linux-x64-gnu": 14.0.1
-    "@next/swc-linux-x64-musl": 14.0.1
-    "@next/swc-win32-arm64-msvc": 14.0.1
-    "@next/swc-win32-ia32-msvc": 14.0.1
-    "@next/swc-win32-x64-msvc": 14.0.1
+    "@next/env": 13.5.6
+    "@next/swc-darwin-arm64": 13.5.6
+    "@next/swc-darwin-x64": 13.5.6
+    "@next/swc-linux-arm64-gnu": 13.5.6
+    "@next/swc-linux-arm64-musl": 13.5.6
+    "@next/swc-linux-x64-gnu": 13.5.6
+    "@next/swc-linux-x64-musl": 13.5.6
+    "@next/swc-win32-arm64-msvc": 13.5.6
+    "@next/swc-win32-ia32-msvc": 13.5.6
+    "@next/swc-win32-x64-msvc": 13.5.6
     "@swc/helpers": 0.5.2
     busboy: 1.6.0
     caniuse-lite: ^1.0.30001406
@@ -2694,7 +2742,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: d142407f47012eb57ba3932f91453960c79d7df2fef03ded581f32195b98a4378e13c49709f498a112d142109a8edd73f40357ee102a6bd4d7b1f76de9f0877a
+  checksum: c869b0014ae921ada3bf22301985027ec320aebcd6aa9c16e8afbded68bb8def5874cca034c680e8c351a79578f1e514971d02777f6f0a5a1d7290f25970ac0d
   languageName: node
   linkType: hard
 
@@ -2973,17 +3021,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pie-aperture-nextjs@workspace:."
   dependencies:
-    "@justeattakeaway/pie-button": 0.28.0
-    "@justeattakeaway/pie-css": 0.6.0
+    "@justeattakeaway/pie-button": latest
+    "@justeattakeaway/pie-css": latest
     "@lit-labs/nextjs": 0.1.3
-    "@lit-labs/react": 1.1.1
+    "@lit-labs/react": 2.1.2
     "@types/node": 20.5.9
     "@types/react": 18.2.21
     "@types/react-dom": 18.2.7
     deepmerge: 4.3.1
     eslint: 8.48.0
     eslint-config-next: 13.4.19
-    next: 14.0.1
+    next: 13.5.6
     react: 18.2.0
     react-dom: 18.2.0
     sass: 1.66.1
