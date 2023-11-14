@@ -1,6 +1,33 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    ":dependencyDashboard",
+    ":rebaseStalePrs"
+  ],
+  "prConcurrentLimit": 3,
+  "commitMessageAction": "DSW-000 update",
+  "packageRules": [
+    {
+      "commitMessagePrefix": "chore(vanilla-app)",
+      "description": "Group JET devDependencies / dependencies from package.json within the vanilla app",
+      "matchFiles": ["./vanilla-app/package.json"],
+      "matchDepTypes": ["devDependencies", "dependencies"],
+      "matchPackagePatterns": ["@justeat/*", "@justeattakeaway/*"],
+      "matchUpdateTypes": ["minor", "patch", "major"],
+      "groupName": "justeattakeaway",
+      "groupSlug": "root-just-eat-deps",
+      "enabled": true
+    },
+    {
+      "commitMessagePrefix": "chore(nextjs-app)",
+      "description": "Group JET devDependencies / dependencies from package.json within the nextjs app",
+      "matchFiles": ["./nextjs-app/package.json"],
+      "matchDepTypes": ["devDependencies", "dependencies"],
+      "matchPackagePatterns": ["@justeat/*", "@justeattakeaway/*"],
+      "matchUpdateTypes": ["minor", "patch", "major"],
+      "groupName": "justeattakeaway",
+      "groupSlug": "root-just-eat-deps",
+      "enabled": true
+    }
   ]
 }
