@@ -8,9 +8,9 @@
   "commitMessageAction": "DSW-000 update",
   "packageRules": [
     {
-			"packagePatterns": ["*"],
-			"enabled": false
-		},
+      "packagePatterns": ["*"],
+      "enabled": false
+    },
     {
       "commitMessagePrefix": "chore(vanilla-app)",
       "description": "Group JET devDependencies / dependencies from package.json within the vanilla app",
