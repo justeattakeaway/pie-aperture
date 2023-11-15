@@ -10,7 +10,7 @@
     {
       "commitMessagePrefix": "chore(vanilla-app)",
       "description": "Group JET devDependencies / dependencies from package.json within the vanilla app",
-      "matchFiles": ["./vanilla-app/package.json"],
+      "matchFiles": ["vanilla-app/package.json"],
       "matchDepTypes": ["devDependencies", "dependencies"],
       "matchPackagePatterns": ["@justeat/*", "@justeattakeaway/*"],
       "matchUpdateTypes": ["minor", "patch", "major"],
@@ -21,7 +21,7 @@
     {
       "commitMessagePrefix": "chore(nextjs-app)",
       "description": "Group JET devDependencies / dependencies from package.json within the nextjs app",
-      "matchFiles": ["./nextjs-app/package.json"],
+      "matchFiles": ["nextjs-app/package.json"],
       "matchDepTypes": ["devDependencies", "dependencies"],
       "matchPackagePatterns": ["@justeat/*", "@justeattakeaway/*"],
       "matchUpdateTypes": ["minor", "patch", "major"],
