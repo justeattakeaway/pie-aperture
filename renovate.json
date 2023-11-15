@@ -15,7 +15,7 @@
       "matchPackagePatterns": ["@justeat/*", "@justeattakeaway/*"],
       "matchUpdateTypes": ["minor", "patch", "major"],
       "groupName": "justeattakeaway",
-      "groupSlug": "root-just-eat-deps",
+      "groupSlug": "vanilla-app-just-eat-deps",
       "enabled": true
     },
     {
@@ -26,7 +26,7 @@
       "matchPackagePatterns": ["@justeat/*", "@justeattakeaway/*"],
       "matchUpdateTypes": ["minor", "patch", "major"],
       "groupName": "justeattakeaway",
-      "groupSlug": "root-just-eat-deps",
+      "groupSlug": "nextjs-app-just-eat-deps",
       "enabled": true
     }
   ]
