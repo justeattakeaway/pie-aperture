@@ -8,11 +8,6 @@
   "commitMessageAction": "DSW-000 update",
   "packageRules": [
     {
-      "description": "Exclude all packages in root package.json",
-      "matchFiles": ["package.json"],
-      "excludePackagePatterns": ["*"]
-    },
-    {
       "commitMessagePrefix": "chore(vanilla-app)",
       "description": "Group JET devDependencies / dependencies from package.json within the vanilla app",
       "matchFiles": ["vanilla-app/package.json"],
