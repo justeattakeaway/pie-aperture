@@ -6,8 +6,8 @@ import '@justeattakeaway/pie-icon-button';
 import '@justeattakeaway/pie-cookie-banner';
 import '@justeattakeaway/pie-card-container';
 import '@justeattakeaway/pie-toggle-switch';
-import '@justeattakeaway/pie-icons-webc/dist/icons/IconClose';
-import '@justeattakeaway/pie-icons-webc/dist/icons/IconSearch';
+import '@justeattakeaway/pie-icons-webc/IconClose';
+import '@justeattakeaway/pie-icons-webc/IconSearch';
 import './style.css';
 import { setupCounter } from './counter';
 
