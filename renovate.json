@@ -8,10 +8,6 @@
   "commitMessageAction": "DSW-000 update",
   "packageRules": [
     {
-			"packagePatterns": ["*"],
-			"enabled": false
-		},
-    {
       "commitMessagePrefix": "chore(vanilla-app)",
       "description": "Group JET devDependencies / dependencies from package.json within the vanilla app",
       "matchFiles": ["vanilla-app/package.json"],
@@ -32,6 +28,9 @@
       "groupName": "justeattakeaway",
       "groupSlug": "nextjs-app-just-eat-deps",
       "enabled": true
+    },
+    {
+      "excludePackagePatterns": ["*"]
     }
   ]
 }
