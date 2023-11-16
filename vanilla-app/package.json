@@ -23,7 +23,8 @@
     "@justeattakeaway/pie-icon-button": "0.21.2",
     "@justeattakeaway/pie-icons-webc": "0.11.1",
     "@justeattakeaway/pie-modal": "0.32.2",
-    "@justeattakeaway/pie-toggle-switch": "0.15.0"
+    "@justeattakeaway/pie-toggle-switch": "0.15.0",
+    "lit": "2.7.0"
   },
   "volta": {
     "extends": "../package.json"
