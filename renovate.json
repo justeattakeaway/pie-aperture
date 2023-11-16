@@ -1,10 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
+    "schedule:daily",
     ":dependencyDashboard",
     ":rebaseStalePrs"
   ],
-  "prConcurrentLimit": 3,
   "commitMessageAction": "DSW-000 update",
   "packageRules": [
     {
