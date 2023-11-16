@@ -10,8 +10,8 @@
     "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NEXT} npx percy exec -- ../node_modules/.bin/wdio run ./wdio.conf.js"
   },
   "dependencies": {
-    "@justeattakeaway/pie-button": "latest",
-    "@justeattakeaway/pie-css": "latest",
+    "@justeattakeaway/pie-button": "0.38.0",
+    "@justeattakeaway/pie-css": "0.8.0",
     "@lit-labs/nextjs": "0.1.3",
     "@lit-labs/react": "2.1.2",
     "@types/node": "20.5.9",
