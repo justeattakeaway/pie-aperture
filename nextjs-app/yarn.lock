@@ -188,9 +188,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit-labs/ssr@npm:3.1.9":
-  version: 3.1.9
-  resolution: "@lit-labs/ssr@npm:3.1.9"
+"@lit-labs/ssr@npm:3.2.0":
+  version: 3.2.0
+  resolution: "@lit-labs/ssr@npm:3.2.0"
   dependencies:
     "@lit-labs/ssr-client": ^1.1.4
     "@lit-labs/ssr-dom-shim": ^1.1.2
@@ -198,12 +198,12 @@ __metadata:
     "@parse5/tools": ^0.3.0
     "@types/node": ^16.0.0
     enhanced-resolve: ^5.10.0
-    lit: ^2.7.0 || ^3.0.0
+    lit: ^3.1.0
     lit-element: ^3.3.0 || ^4.0.0
-    lit-html: ^2.7.0 || ^3.0.0
+    lit-html: ^3.1.0
     node-fetch: ^3.2.8
     parse5: ^7.1.1
-  checksum: 2a532313b7422ea81d21f64bea5e5d63cdbb12edd13c0902d803096762cc18357ada48fc24394340f1cf259475bae04fb2dc16b05fd11f4775ebc4d8ae4b55fb
+  checksum: 6e887150b29a8052660fd17180b37b4cb0e175efc51cd9cced5ad092f0326d9de733ceb1b8e51d00839336fc3b8cad7cc1ed5bc489aa0d696ba0bf2acb8eb4c3
   languageName: node
   linkType: hard
 
