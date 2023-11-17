@@ -175,16 +175,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit-labs/ssr-react@npm:0.2.2":
-  version: 0.2.2
-  resolution: "@lit-labs/ssr-react@npm:0.2.2"
+"@lit-labs/ssr-react@npm:0.2.3":
+  version: 0.2.3
+  resolution: "@lit-labs/ssr-react@npm:0.2.3"
   dependencies:
-    "@lit-labs/ssr": ^3.1.8
+    "@lit-labs/ssr": ^3.2.0
     "@lit-labs/ssr-client": ^1.1.4
   peerDependencies:
     "@types/react": 17 || 18
     react: 17 || 18
-  checksum: 333643fbbcafa2f74aec4254bb8c1764fed28ce85d40f4004fca358c5d3a7f9e41e3588b636c236a313b07d1d8214fbc6fbd2c7edfa639365c8384fc2d88c6bc
+  checksum: bf0d20438f7d864e4edc6b50f50dd1f4d987da7a2374a49bf2428ddba533957d28045dda42c2ddf56ea433f775da5ac731557efc622ddaa4eb11ebe02910afd9
   languageName: node
   linkType: hard
 
