@@ -7,7 +7,6 @@
   ],
   "commitMessageAction": "DSW-000 update",
   "prConcurrentLimit": 1,
-  "ignorePaths": ["./package.json"],
   "packageRules": [
     {
       "commitMessagePrefix": "chore(vanilla-app)",
