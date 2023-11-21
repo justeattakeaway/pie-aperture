@@ -102,14 +102,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-button@npm:0.38.0":
-  version: 0.38.0
-  resolution: "@justeattakeaway/pie-button@npm:0.38.0"
+"@justeattakeaway/pie-button@npm:0.39.1-next.0":
+  version: 0.39.1-next.0
+  resolution: "@justeattakeaway/pie-button@npm:0.39.1-next.0"
   dependencies:
-    "@justeattakeaway/pie-spinner": 0.2.1
-    "@justeattakeaway/pie-webc-core": 0.11.0
+    "@justeattakeaway/pie-spinner": 0.2.2-next.0
+    "@justeattakeaway/pie-webc-core": 0.12.0-next.0
     element-internals-polyfill: 1.3.8
-  checksum: d2bb5b6d5c480f07e6d9ed379dc3aeb427cacf00c4680bd2356587d06ac66cf80f6426f643579bf74508b3a5d626a3ec39a4211f65d31abe650daffb25a710ab
+  checksum: 26f0754e635e2ea2b88a7bf1692015608a0d7589aba403b79d84c0d2992b5844bffd42d480da53271ea37de9c1317458051265a95570150dbdadb56eaca0d23d
   languageName: node
   linkType: hard
 
@@ -120,44 +120,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-spinner@npm:0.2.1":
-  version: 0.2.1
-  resolution: "@justeattakeaway/pie-spinner@npm:0.2.1"
+"@justeattakeaway/pie-spinner@npm:0.2.2-next.0":
+  version: 0.2.2-next.0
+  resolution: "@justeattakeaway/pie-spinner@npm:0.2.2-next.0"
   dependencies:
-    "@justeattakeaway/pie-webc-core": 0.11.0
-  checksum: cbd95f3d34673d5d9215f766d005e8d6e28c7eb53a89e7593d87f51978b506641da344535333e94aecb7861fdfc8252d3c376d316f302f75760e9537fcc4a6c5
+    "@justeattakeaway/pie-webc-core": 0.12.0-next.0
+  checksum: f256f58b5b1b95c84f99cbd44cc2cc2f2e773677bff03b443c7b8d2dd9409b68ac736b7fd38a6e39cecfbe781c6d943ee5a1e81d5457d332d794f73da277b0d9
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-webc-core@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@justeattakeaway/pie-webc-core@npm:0.11.0"
-  checksum: 42bef6f725ab578f237cf99733b1606883f844a1b92f85826d8ed7b7ef2fefbf203b88426fa165675c4a5e3cdf4abfe9dd5e25db238cf13977b0817865cc966b
+"@justeattakeaway/pie-webc-core@npm:0.12.0-next.0":
+  version: 0.12.0-next.0
+  resolution: "@justeattakeaway/pie-webc-core@npm:0.12.0-next.0"
+  checksum: ff01a3cda6d37bf6243dcc324f225f19bcb1416c6e1322e3087db34e470349f38a2634f298c4d8aafaa2ec3e646a31e2ef76c66b3ee7efaf55258276f394f184
   languageName: node
   linkType: hard
 
-"@lit-labs/nextjs@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@lit-labs/nextjs@npm:0.1.3"
+"@lit-labs/nextjs@npm:0.1.4":
+  version: 0.1.4
+  resolution: "@lit-labs/nextjs@npm:0.1.4"
   dependencies:
     "@lit-labs/ssr-react": ^0.2.1
+    "@webcomponents/template-shadowroot": ^0.2.1
     imports-loader: ^4.0.1
   peerDependencies:
     next: 12 || 13
-  checksum: 9e5b8684fb5f1db303239369506187e73f23d1be456c37f34615f67b3a4c0b98f2c0317888ad8066b07bc9709c711f5fd925a7422416d72b10941347e895e52e
+  checksum: 2c66319277cca665b912838c932c0481def25e97a193c2f5e2f39dc37c19620111fbb7bc68d82c9f258270283764b607624144e01d9fc63beba30cb91424defc
   languageName: node
   linkType: hard
 
-"@lit-labs/react@npm:2.1.2":
-  version: 2.1.2
-  resolution: "@lit-labs/react@npm:2.1.2"
-  dependencies:
-    "@lit/react": ^1.0.0
-  checksum: 47214d6659290241899914a65987438e95fb6f4f01116c8186578f0193a54cdb2f3ece510c439823a2b512ecadbf5b2fc2dbd14991fc52d439429e0b16007265
-  languageName: node
-  linkType: hard
-
-"@lit-labs/ssr-client@npm:1.1.5":
+"@lit-labs/ssr-client@npm:^1.1.4":
   version: 1.1.5
   resolution: "@lit-labs/ssr-client@npm:1.1.5"
   dependencies:
@@ -168,14 +160,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit-labs/ssr-dom-shim@npm:^1.0.0, @lit-labs/ssr-dom-shim@npm:^1.1.0, @lit-labs/ssr-dom-shim@npm:^1.1.2":
+"@lit-labs/ssr-dom-shim@npm:^1.1.2":
   version: 1.1.2
   resolution: "@lit-labs/ssr-dom-shim@npm:1.1.2"
   checksum: 73fd787893851d4ec4aaa5c775405ed2aae4ca0891b2dd3c973b32c2f4bf70ada5481dd0224e52b786d037aa8a00052186ad1623c44551affd66f6409cca8da6
   languageName: node
   linkType: hard
 
-"@lit-labs/ssr-react@npm:0.2.3":
+"@lit-labs/ssr-react@npm:^0.2.1":
   version: 0.2.3
   resolution: "@lit-labs/ssr-react@npm:0.2.3"
   dependencies:
@@ -188,7 +180,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit-labs/ssr@npm:3.2.0":
+"@lit-labs/ssr@npm:^3.2.0":
   version: 3.2.0
   resolution: "@lit-labs/ssr@npm:3.2.0"
   dependencies:
@@ -207,21 +199,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit/react@npm:^1.0.0":
+"@lit/react@npm:1.0.2":
   version: 1.0.2
   resolution: "@lit/react@npm:1.0.2"
   peerDependencies:
     "@types/react": 17 || 18
   checksum: 6a5c2be97d53e75b714fd6831629366e7d9d296a8756132289a49e4e4474f26b5a4bb3ef44d5d4f89a0cacfc75b305845bbbf45b0bdc356ce4a6eda0c488b7e8
-  languageName: node
-  linkType: hard
-
-"@lit/reactive-element@npm:^1.3.0, @lit/reactive-element@npm:^1.6.0":
-  version: 1.6.3
-  resolution: "@lit/reactive-element@npm:1.6.3"
-  dependencies:
-    "@lit-labs/ssr-dom-shim": ^1.0.0
-  checksum: 79b58631c38effeabad090070324431da8a22cf0ff665f5e4de35e4d791f984742b3d340c9c7fce996d1124a8da95febc582471b4c237236c770b1300b56ef6e
   languageName: node
   linkType: hard
 
@@ -518,6 +501,13 @@ __metadata:
     "@typescript-eslint/types": 6.11.0
     eslint-visitor-keys: ^3.4.1
   checksum: 6aae9dd79963bbefbf2e310015b909627da541a13ab4d8359eea3c86c34fdbb91e583f65b5a99dee1959f7c5d67b21b45e5a05c63ddb4b82dacd60c890ce8b25
+  languageName: node
+  linkType: hard
+
+"@webcomponents/template-shadowroot@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "@webcomponents/template-shadowroot@npm:0.2.1"
+  checksum: c9a0ac8524e8923ee2d62f904769be6a59185b99ee42f36b11b84f0520f3e19803d7fcda90d2f95bfc8470e926ea469f04e728f8cd1724c78618154d7c423775
   languageName: node
   linkType: hard
 
@@ -2408,18 +2398,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit-element@npm:^3.3.0":
-  version: 3.3.3
-  resolution: "lit-element@npm:3.3.3"
-  dependencies:
-    "@lit-labs/ssr-dom-shim": ^1.1.0
-    "@lit/reactive-element": ^1.3.0
-    lit-html: ^2.8.0
-  checksum: 29a596fa556e231cce7246ca3e5687ad238f299b0cb374a0934d5e6fe9adf1436e031d4fbd21b280aabfc0e21a66e6c4b52da558a908df2566d09d960f3ca93d
-  languageName: node
-  linkType: hard
-
-"lit-element@npm:^3.3.0 || ^4.0.0":
+"lit-element@npm:^3.3.0 || ^4.0.0, lit-element@npm:^4.0.0":
   version: 4.0.2
   resolution: "lit-element@npm:4.0.2"
   dependencies:
@@ -2439,23 +2418,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lit-html@npm:^2.7.0, lit-html@npm:^2.8.0":
-  version: 2.8.0
-  resolution: "lit-html@npm:2.8.0"
+"lit@npm:3.1.0, lit@npm:^2.7.0 || ^3.0.0, lit@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "lit@npm:3.1.0"
   dependencies:
-    "@types/trusted-types": ^2.0.2
-  checksum: 2d70df07248bcb2f502a3afb1e91d260735024fa669669ffb1417575aa39c3092779725ac1b90f5f39e4ce78c63f431f51176bc67f532389f0285a6991573255
-  languageName: node
-  linkType: hard
-
-"lit@npm:2.7.0":
-  version: 2.7.0
-  resolution: "lit@npm:2.7.0"
-  dependencies:
-    "@lit/reactive-element": ^1.6.0
-    lit-element: ^3.3.0
-    lit-html: ^2.7.0
-  checksum: 916f459ded2e9700fe695070963dcb2edcea2dd1d127db6885cf10e94766d5ca9f438ebf659dca264c6402708254927b0ffed6595b6bcaac422e6f203dbbf6ee
+    "@lit/reactive-element": ^2.0.0
+    lit-element: ^4.0.0
+    lit-html: ^3.1.0
+  checksum: 4202f41394707d0d83466c3f1b355f21dbe21fe17f042bb3a98108d79483a4bc5515c2e9c93b4a1665bf8fd1e01e94eeab7635fbed387c1a055a94f3689a9338
   languageName: node
   linkType: hard
 
@@ -3025,16 +2995,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pie-aperture-nextjs@workspace:."
   dependencies:
-    "@justeattakeaway/pie-button": 0.38.0
+    "@justeattakeaway/pie-button": 0.39.1-next.0
     "@justeattakeaway/pie-css": 0.8.0
-    "@lit-labs/nextjs": 0.1.3
-    "@lit-labs/react": 2.1.2
+    "@lit-labs/nextjs": 0.1.4
+    "@lit/react": 1.0.2
     "@types/node": 20.9.1
     "@types/react": 18.2.37
     "@types/react-dom": 18.2.7
     deepmerge: 4.3.1
     eslint: 8.48.0
     eslint-config-next: 13.4.19
+    lit: 3.1.0
     next: 13.5.6
     react: 18.2.0
     react-dom: 18.2.0
