@@ -6,6 +6,8 @@ import '@justeattakeaway/pie-divider';
 import '@justeattakeaway/pie-icon-button';
 import '@justeattakeaway/pie-modal';
 import '@justeattakeaway/pie-switch';
+import '@justeattakeaway/pie-spinner';
+import '@justeattakeaway/pie-link';
 import '@justeattakeaway/pie-icons-webc/IconClose';
 import '@justeattakeaway/pie-icons-webc/IconSearch';
 
@@ -39,14 +41,14 @@ document.querySelector('#app').innerHTML = `
 
     <pie-divider></pie-divider>
 
-    <h2>pie-icon-button Component</h2>
-    <pie-icon-button size="medium" type="button" variant="primary"><icon-close></icon-close></pie-icon-button>
+    <h2>pie-icon-button</h2>
+    <pie-icon-button onclick="alert('clicked')"><icon-close></icon-close></pie-icon-button>
 
     <pie-divider></pie-divider>
     <pie-cookie-banner></pie-cookie-banner>
 
     <h2>pie-card</h2>
-    <pie-card>
+    <pie-card padding="a">
         <h2>pie-card</h2>
         <p>Some content</p>
     </pie-card>
@@ -55,6 +57,16 @@ document.querySelector('#app').innerHTML = `
 
     <h2>pie-switch</h2>
     <pie-switch></pie-switch>
+
+    <pie-divider></pie-divider>
+
+    <h2>pie-link</h2>
+    <pie-link href="http://www.pie.design" target="_blank">Visit pie.design</pie-link>
+
+    <pie-divider></pie-divider>
+
+    <h2>pie-spinner</h2>
+    <pie-spinner></pie-spinner>
 `;
 
 setupCounter(document.querySelector('#counter'));
