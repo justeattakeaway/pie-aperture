@@ -4,7 +4,7 @@ html {
   @font-face {
     font-family: JETSansDigital;
     src: url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff2') format("woff2"),
-    url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff') format("woff");
+      url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff') format("woff");
     font-weight: 400;
     font-display: swap;
   }
@@ -12,21 +12,21 @@ html {
   @font-face {
     font-family: JETSansDigital;
     src: url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff2') format("woff2"),
-    url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff') format("woff");
-      font-weight: 700;
-      font-display: swap;
-    }
+      url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff') format("woff");
+    font-weight: 700;
+    font-display: swap;
+  }
 }
 
 body {
-    font-family: JetSansDigital;
-    margin: auto;
-    min-height: 100%;
-    padding: 16px;
-    max-width: 720px;
+  font-family: JetSansDigital;
+  margin: auto;
+  min-height: 100%;
+  padding: 16px;
+  max-width: 720px;
 }
 
 pie-divider {
-    display: block;
-    margin-block: 2em;
+  display: block;
+  margin-block: 2em;
 }
