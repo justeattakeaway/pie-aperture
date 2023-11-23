@@ -4,17 +4,18 @@ import '@justeattakeaway/pie-modal';
 import '@justeattakeaway/pie-divider';
 import '@justeattakeaway/pie-icon-button';
 import '@justeattakeaway/pie-cookie-banner';
-import '@justeattakeaway/pie-card-container';
-import '@justeattakeaway/pie-toggle-switch';
-import '@justeattakeaway/pie-icons-webc/dist/icons/IconClose';
-import '@justeattakeaway/pie-icons-webc/dist/icons/IconSearch';
+import '@justeattakeaway/pie-card';
+import '@justeattakeaway/pie-switch';
+import '@justeattakeaway/pie-icons-webc/IconClose';
+import '@justeattakeaway/pie-icons-webc/IconSearch';
+
 import './style.css';
 import { setupCounter } from './counter';
 
 document.querySelector('#app').innerHTML = `
     <h2>pie-modal</h2>
-    <pie-button id="modal-trigger" type="button">open modal</pie-button>
-    <pie-modal id="modal" heading='My Awesome Heading' headingLevel='h3' isDismissible>
+    <pie-button id="modal-trigger" type="button">Open modal</pie-button>
+    <pie-modal id="modal" heading="My Awesome Heading" headingLevel="h3" isDismissible>
         Modal content
     </pie-modal>
 
@@ -40,16 +41,16 @@ document.querySelector('#app').innerHTML = `
     <pie-divider></pie-divider>
     <pie-cookie-banner></pie-cookie-banner>
 
-    <h2>pie-card-container</h2>
-    <pie-card-container>
+    <h2>pie-card</h2>
+    <pie-card>
         <h2>pie-card</h2>
         <p>Some content</p>
-    </pie-card-container>
+    </pie-card>
 
     <pie-divider></pie-divider>
 
-    <h2>pie-toggle-switch</h2>
-    <pie-toggle-switch></pie-toggle-switch>
+    <h2>pie-switch</h2>
+    <pie-switch></pie-switch>
 `;
 
 setupCounter(document.querySelector('#counter'));
