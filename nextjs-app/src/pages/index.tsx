@@ -14,6 +14,7 @@ export default function Home() {
             />
         <h1>Welcome to PIE Aperture</h1>
         <p><Link href="/components">PIE Component Test Page</Link></p>
+        <p><Link href="/icons">PIE Icons Test Page</Link></p>
     </>
   )
 }

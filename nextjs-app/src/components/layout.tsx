@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
-import { PieButton } from '@justeattakeaway/pie-button/dist/react';
 
 const inter = Inter({ subsets: ['latin'] })
 // @ts-ignore
