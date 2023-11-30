@@ -6,7 +6,7 @@ import { PieSpinner } from "@justeattakeaway/pie-spinner/dist/react"
 import { PieModal } from "@justeattakeaway/pie-modal/dist/react"
 import { PieCookieBanner } from "@justeattakeaway/pie-cookie-banner/dist/react"
 import { PieIconButton } from "@justeattakeaway/pie-icon-button/dist/react"
-import '@justeattakeaway/pie-icons-webc/IconClose';
+import { IconClose } from '@justeattakeaway/pie-icons-webc/react/IconClose';
 import { PieSwitch } from "@justeattakeaway/pie-switch/dist/react"
 import { PieCard } from "@justeattakeaway/pie-card/dist/react"
 import Link from 'next/link'
@@ -25,9 +25,7 @@ export default function Home() {
 
       <h2>Pie Icon Button</h2>
       <PieIconButton onClick={() => alert('clicked')}>
-        {/* TODO use the react wrapper of webc icons once added (DSW-1281)*/}
-        {/* @ts-ignore*/}
-        <icon-close></icon-close>
+        <IconClose></IconClose>
       </PieIconButton>
       <PieDivider />
 
