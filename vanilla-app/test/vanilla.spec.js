@@ -12,7 +12,7 @@ describe('Vanilla App', () => {
     it('should navigate to the component overview page.', async () => {
         await browser.url('/icons.html');
         await waitUntilPageLoad();
-        await expect(await browser.getTitle()).toBe('PIE Aperture');
+        await expect(await browser.getTitle()).toBe('PIE Aperture | Icons');
         await percyScreenshot('Vanilla App - Icons Page');
     })
 })
