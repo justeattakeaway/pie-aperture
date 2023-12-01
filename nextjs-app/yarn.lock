@@ -164,12 +164,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-icons-webc@npm:0.0.0-snapshot-release-20231201131015":
-  version: 0.0.0-snapshot-release-20231201131015
-  resolution: "@justeattakeaway/pie-icons-webc@npm:0.0.0-snapshot-release-20231201131015"
+"@justeattakeaway/pie-icons-webc@npm:0.0.0-snapshot-release-20231201144021":
+  version: 0.0.0-snapshot-release-20231201144021
+  resolution: "@justeattakeaway/pie-icons-webc@npm:0.0.0-snapshot-release-20231201144021"
   dependencies:
     "@justeattakeaway/pie-webc-core": 0.13.0
-  checksum: 72fd9345c9259763520d427baa0dabc4947248a1d7ef80473fe51a0201d5f953f9fa832b2a09d90dbd6f79fe98f73e7fd5686c6fafd15a2a0f4337898fd179d1
+  checksum: 1f79ed566165c19a58e63e11eaecf7f28762c8e4fdf60572cdc209faae07ccbb3f4c81907dc6a1df4517ac8a3b6cb3d54bc92374ec507f3553a99a71912ea76a
   languageName: node
   linkType: hard
 
@@ -3127,7 +3127,7 @@ __metadata:
     "@justeattakeaway/pie-css": 0.8.0
     "@justeattakeaway/pie-divider": 0.9.2
     "@justeattakeaway/pie-icon-button": 0.22.0
-    "@justeattakeaway/pie-icons-webc": 0.0.0-snapshot-release-20231201131015
+    "@justeattakeaway/pie-icons-webc": 0.0.0-snapshot-release-20231201144021
     "@justeattakeaway/pie-link": 0.11.2
     "@justeattakeaway/pie-modal": 0.34.0
     "@justeattakeaway/pie-spinner": 0.3.0
