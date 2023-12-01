@@ -6,7 +6,7 @@ import { PieSpinner } from "@justeattakeaway/pie-spinner/dist/react"
 import { PieModal } from "@justeattakeaway/pie-modal/dist/react"
 import { PieCookieBanner } from "@justeattakeaway/pie-cookie-banner/dist/react"
 import { PieIconButton } from "@justeattakeaway/pie-icon-button/dist/react"
-import { IconClose } from "@justeattakeaway/pie-icons-webc/react/IconClose";
+import { IconClose } from "@justeattakeaway/pie-icons-webc/dist/react/IconClose";
 import { PieSwitch } from "@justeattakeaway/pie-switch/dist/react"
 import { PieCard } from "@justeattakeaway/pie-card/dist/react"
 import Link from 'next/link'

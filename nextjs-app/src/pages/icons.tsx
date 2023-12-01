@@ -1,4 +1,4 @@
-import * as icons from '@justeattakeaway/pie-icons-webc/react';
+import * as icons from '@justeattakeaway/pie-icons-webc/dist/react';
 
 export default function Icons() {
     return (

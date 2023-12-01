@@ -164,21 +164,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justeattakeaway/pie-icons-webc@npm:0.0.0-snapshot-release-20231201131015":
+  version: 0.0.0-snapshot-release-20231201131015
+  resolution: "@justeattakeaway/pie-icons-webc@npm:0.0.0-snapshot-release-20231201131015"
+  dependencies:
+    "@justeattakeaway/pie-webc-core": 0.13.0
+  checksum: 72fd9345c9259763520d427baa0dabc4947248a1d7ef80473fe51a0201d5f953f9fa832b2a09d90dbd6f79fe98f73e7fd5686c6fafd15a2a0f4337898fd179d1
+  languageName: node
+  linkType: hard
+
 "@justeattakeaway/pie-icons-webc@npm:0.11.1":
   version: 0.11.1
   resolution: "@justeattakeaway/pie-icons-webc@npm:0.11.1"
   peerDependencies:
     lit: 2.7.5
   checksum: 2313b6a159a4fcaf9a0451936db2dfdc8de3cde444b8f710fcd5233e191b270d80363ee32531b51b8e4123682fccc3bf46b75c4e11a268822f96210614cfdf20
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-icons-webc@npm:0.13.0":
-  version: 0.13.0
-  resolution: "@justeattakeaway/pie-icons-webc@npm:0.13.0"
-  dependencies:
-    "@justeattakeaway/pie-webc-core": 0.13.0
-  checksum: e15d6acc26c1b7cb75c76a4ad165b87b0473044dfb253e76d7fc8076861f78eba78f6c13661d1b8a7b141eae9ae5a499a134ad24bb122de98cc91ed32fc197d2
   languageName: node
   linkType: hard
 
@@ -638,6 +638,13 @@ __metadata:
   bin:
     acorn: bin/acorn
   checksum: 818450408684da89423e3daae24e4dc9b68692db8ab49ea4569c7c5abb7a3f23669438bf129cc81dfdada95e1c9b944ee1bfca2c57a05a4dc73834a612fbf6a7
+  languageName: node
+  linkType: hard
+
+"add@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "add@npm:2.0.6"
+  checksum: e2d23d40494565dfed4acd65e478570c444db5ac6c053551ed429c39ea0f2c99d83df63e7befec936df601827d2254d06a2fb6f7dcfd2022e810b25eab818b8c
   languageName: node
   linkType: hard
 
@@ -3120,7 +3127,7 @@ __metadata:
     "@justeattakeaway/pie-css": 0.8.0
     "@justeattakeaway/pie-divider": 0.9.2
     "@justeattakeaway/pie-icon-button": 0.22.0
-    "@justeattakeaway/pie-icons-webc": 0.13.0
+    "@justeattakeaway/pie-icons-webc": 0.0.0-snapshot-release-20231201131015
     "@justeattakeaway/pie-link": 0.11.2
     "@justeattakeaway/pie-modal": 0.34.0
     "@justeattakeaway/pie-spinner": 0.3.0
@@ -3130,6 +3137,7 @@ __metadata:
     "@types/node": 20.9.1
     "@types/react": 18.2.37
     "@types/react-dom": 18.2.7
+    add: ^2.0.6
     deepmerge: 4.3.1
     eslint: 8.48.0
     eslint-config-next: 13.4.19
@@ -3139,6 +3147,7 @@ __metadata:
     react-dom: 18.2.0
     sass: 1.69.5
     typescript: 5.2.2
+    yarn: ^1.22.21
   languageName: unknown
   linkType: soft
 
@@ -4032,6 +4041,16 @@ __metadata:
   version: 4.0.0
   resolution: "yallist@npm:4.0.0"
   checksum: 343617202af32df2a15a3be36a5a8c0c8545208f3d3dfbc6bb7c3e3b7e8c6f8e7485432e4f3b88da3031a6e20afa7c711eded32ddfb122896ac5d914e75848d5
+  languageName: node
+  linkType: hard
+
+"yarn@npm:^1.22.21":
+  version: 1.22.21
+  resolution: "yarn@npm:1.22.21"
+  bin:
+    yarn: bin/yarn.js
+    yarnpkg: bin/yarn.js
+  checksum: 791fab07ad55351049361686bcdd25c64a46e2afe2f2fc7587e666aa4f758d7eef80235b921aa09415557ac580ab23305c0181c1b43fed45f357a0c7a77322a1
   languageName: node
   linkType: hard
 
