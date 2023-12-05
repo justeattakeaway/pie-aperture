@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { PieButton } from "@justeattakeaway/pie-button/dist/react"
 import { PieDivider } from "@justeattakeaway/pie-divider/dist/react"
+import { PieFormLabel } from "@justeattakeaway/pie-form-label/dist/react"
 import { PieLink } from "@justeattakeaway/pie-link/dist/react"
 import { PieSpinner } from "@justeattakeaway/pie-spinner/dist/react"
 import { PieModal } from "@justeattakeaway/pie-modal/dist/react"
@@ -56,6 +57,10 @@ export default function Home() {
       <PieDivider />
 
       <PieCookieBanner />
+      <PieDivider />
+
+      <h2>Pie Form Label</h2>
+      <PieFormLabel>Label</PieFormLabel>
     </>
   );
 }
