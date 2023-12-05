@@ -173,6 +173,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justeattakeaway/pie-icons-webc@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@justeattakeaway/pie-icons-webc@npm:0.15.0"
+  dependencies:
+    "@justeattakeaway/pie-webc-core": 0.13.0
+  checksum: 54a5eede0fcc0b208dbf8020053ebf1ec6760d10f0f0175ac9c9967e11201d23bb1b1bdc397bc4110203d59f642a88ba7f379b2911eb4f6dd4891c58c6a67907
+  languageName: node
+  linkType: hard
+
 "@justeattakeaway/pie-link@npm:0.11.2":
   version: 0.11.2
   resolution: "@justeattakeaway/pie-link@npm:0.11.2"
@@ -220,6 +229,15 @@ __metadata:
   version: 0.12.0
   resolution: "@justeattakeaway/pie-webc-core@npm:0.12.0"
   checksum: 86cf97c992ac4eaa914637ceb91ba0452d174417f17e14ecc74ef12dfe78d00f04bb9c3d54ab6a490261c7076f56cc78fe041ecfb3da72641c2da829e2c0e0ef
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-webc-core@npm:0.13.0":
+  version: 0.13.0
+  resolution: "@justeattakeaway/pie-webc-core@npm:0.13.0"
+  dependencies:
+    lit: 3.1.0
+  checksum: 7831f9d759d1cd523f5eef1ad500a3642adbc7c4cf9209963ed88a886c41e413f9a2ae15471a54c257136e35b3fa73692b9381cc2e659d2223fd9297620fa477
   languageName: node
   linkType: hard
 
@@ -3102,7 +3120,7 @@ __metadata:
     "@justeattakeaway/pie-css": 0.8.0
     "@justeattakeaway/pie-divider": 0.9.2
     "@justeattakeaway/pie-icon-button": 0.22.0
-    "@justeattakeaway/pie-icons-webc": 0.11.1
+    "@justeattakeaway/pie-icons-webc": 0.15.0
     "@justeattakeaway/pie-link": 0.11.2
     "@justeattakeaway/pie-modal": 0.34.0
     "@justeattakeaway/pie-spinner": 0.3.0

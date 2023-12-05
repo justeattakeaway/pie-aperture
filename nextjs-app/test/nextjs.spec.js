@@ -8,5 +8,12 @@ describe('NextJS App', () => {
         await expect(await browser.getTitle()).toBe('PIE Aperture');
         await percyScreenshot('Next JS - Component Overview Page');
     })
+
+    it('should navigate to the overview page.', async () => {
+        await browser.url('/icons');
+        await waitUntilPageLoad();
+        await expect(await browser.getTitle()).toBe('PIE Aperture');
+        await percyScreenshot('Next JS - Icons Page');
+    })
 })
 
