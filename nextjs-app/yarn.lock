@@ -3147,7 +3147,6 @@ __metadata:
     react-dom: 18.2.0
     sass: 1.69.5
     typescript: 5.2.2
-    yarn: ^1.22.21
   languageName: unknown
   linkType: soft
 
@@ -4041,16 +4040,6 @@ __metadata:
   version: 4.0.0
   resolution: "yallist@npm:4.0.0"
   checksum: 343617202af32df2a15a3be36a5a8c0c8545208f3d3dfbc6bb7c3e3b7e8c6f8e7485432e4f3b88da3031a6e20afa7c711eded32ddfb122896ac5d914e75848d5
-  languageName: node
-  linkType: hard
-
-"yarn@npm:^1.22.21":
-  version: 1.22.21
-  resolution: "yarn@npm:1.22.21"
-  bin:
-    yarn: bin/yarn.js
-    yarnpkg: bin/yarn.js
-  checksum: 791fab07ad55351049361686bcdd25c64a46e2afe2f2fc7587e666aa4f758d7eef80235b921aa09415557ac580ab23305c0181c1b43fed45f357a0c7a77322a1
   languageName: node
   linkType: hard
 
