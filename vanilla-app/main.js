@@ -3,6 +3,7 @@ import '@justeattakeaway/pie-button';
 import '@justeattakeaway/pie-card';
 import '@justeattakeaway/pie-cookie-banner';
 import '@justeattakeaway/pie-divider';
+import '@justeattakeaway/pie-form-label';
 import '@justeattakeaway/pie-icon-button';
 import '@justeattakeaway/pie-modal';
 import '@justeattakeaway/pie-switch';
@@ -67,6 +68,11 @@ document.querySelector('#app').innerHTML = `
 
     <h2>pie-spinner</h2>
     <pie-spinner></pie-spinner>
+    
+    <pie-divider></pie-divider>
+    
+    <h2>pie-form-label</h2>
+    <pie-form-label>Label</pie-form-label>
 `;
 
 setupCounter(document.querySelector('#counter'));
