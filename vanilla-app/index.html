@@ -28,8 +28,30 @@
         </style>
     </head>
     <body>
-        <a href="/icons.html">PIE Icons Test Page</a>
+        <!-- <a href="/icons.html">PIE Icons Test Page</a> -->
         <div id="app"></div>
+
+        <pie-divider></pie-divider>
+
+        <form id="switchForm">
+            <fieldset>
+                <label for="switchy">Switch</label>
+                <pie-switch name="switchy" value="foo" required></pie-switch>
+            </fieldset>
+            <pie-button type="submit">Submit</pie-button>
+        </form>
         <script type="module" src="/main.js"></script>
+        <script>
+            const form = document.querySelector('#switchForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                console.log(data);
+                const p = document.createElement('p');
+                p.textContent = JSON.stringify(data);
+                document.body.appendChild(p);
+            });
+        </script>
     </body>
 </html>
