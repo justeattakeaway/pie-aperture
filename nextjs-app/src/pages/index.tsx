@@ -31,7 +31,7 @@ export default function Home() {
       <PieDivider />
 
       <h2>Pie Switch</h2>
-      <PieSwitch onPieSwitchChanged={(e) => setIsSwitchCheck(e.detail)} label={`checked: ${isSwitchChecked}`} />
+      <PieSwitch onChange={(e) => setIsSwitchCheck((e as { detail: any }).detail)} label={`checked: ${isSwitchChecked}`} />
       <PieDivider />
 
       <h2>Pie Link</h2>
