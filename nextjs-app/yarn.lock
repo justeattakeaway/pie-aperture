@@ -224,6 +224,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justeattakeaway/pie-switch@npm:0.0.0-snapshot-release-20231212153807":
+  version: 0.0.0-snapshot-release-20231212153807
+  resolution: "@justeattakeaway/pie-switch@npm:0.0.0-snapshot-release-20231212153807"
+  dependencies:
+    "@justeattakeaway/pie-icons-webc": 0.15.0
+    "@justeattakeaway/pie-webc-core": 0.13.0
+    element-internals-polyfill: 1.3.9
+  checksum: 8de8688bf0336223fd3a82d0c0fbd1216922b77044251e25f608d0ec3df515d118624d3c2df0526fd20022baba7065ef6e65c71e51ae5cd9468149336bbfc85b
+  languageName: node
+  linkType: hard
+
 "@justeattakeaway/pie-switch@npm:0.18.0":
   version: 0.18.0
   resolution: "@justeattakeaway/pie-switch@npm:0.18.0"
@@ -1188,6 +1199,13 @@ __metadata:
   version: 1.3.8
   resolution: "element-internals-polyfill@npm:1.3.8"
   checksum: 920cf4c839d7dac0e72ff61a1a14c07161acc901274820fc94bd131fb2bde32520e123e69e95379dc849eadcfb4ae05d33c829614bed2ef518aafb557e98f2ff
+  languageName: node
+  linkType: hard
+
+"element-internals-polyfill@npm:1.3.9":
+  version: 1.3.9
+  resolution: "element-internals-polyfill@npm:1.3.9"
+  checksum: e37b4e1bd1fa3070e59b6a89152ff596745e3151018979b25cb02d3d113a43b8cdf80aed7940a8f2d041b46d7d4c592d941f8ebbc614b972dc15999a3697361b
   languageName: node
   linkType: hard
 
@@ -3134,7 +3152,7 @@ __metadata:
     "@justeattakeaway/pie-link": 0.11.2
     "@justeattakeaway/pie-modal": 0.34.0
     "@justeattakeaway/pie-spinner": 0.3.0
-    "@justeattakeaway/pie-switch": 0.18.0
+    "@justeattakeaway/pie-switch": 0.0.0-snapshot-release-20231212153807
     "@lit-labs/nextjs": 0.1.4
     "@lit/react": 1.0.2
     "@types/node": 20.9.1
