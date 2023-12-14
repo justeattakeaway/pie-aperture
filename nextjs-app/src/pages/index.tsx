@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import { PieButton } from "@justeattakeaway/pie-button/dist/react"
 import { PieDivider } from "@justeattakeaway/pie-divider/dist/react"
 import { PieFormLabel } from "@justeattakeaway/pie-form-label/dist/react"
@@ -16,10 +16,16 @@ export default function Home() {
   const [counter, setCounter] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isSwitchChecked, setIsSwitchCheck] = useState(false)
+  
+  const handleSwitchChange = () => {
+    setIsSwitchCheck(current => !current);
+    console.log(isSwitchChecked);
+  };  
 
   return (
     <>
       <p><Link href="/icons">PIE Icons Test Page</Link></p>
+      <p><Link href="/form">PIE Form Test Page</Link></p>
       <h2>Pie Button</h2>
       <PieButton onClick={() => setCounter(counter + 1)}>Counter: {counter}</PieButton>
       <PieDivider />
@@ -31,7 +37,10 @@ export default function Home() {
       <PieDivider />
 
       <h2>Pie Switch</h2>
-      <PieSwitch onPieSwitchChanged={(e) => setIsSwitchCheck(e.detail)} label={`checked: ${isSwitchChecked}`} />
+      <PieSwitch 
+        label={`checked: ${isSwitchChecked}`} 
+        checked={isSwitchChecked}
+        onChange={handleSwitchChange}></PieSwitch>
       <PieDivider />
 
       <h2>Pie Link</h2>

@@ -5,7 +5,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: './index.html',
-                icons: './icons.html'
+                icons: './icons.html',
+                form: './form.html'
             }
         }
     }

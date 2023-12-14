@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PIE Aperture</title>
+        <title>PIE Aperture | Form Integration</title>
         <link rel="preload" href="https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff2" as="font" type="font/woff2" crossorigin>
         <style>
@@ -28,9 +28,14 @@
         </style>
     </head>
     <body>
-        <a href="/icons.html">PIE Icons Test Page</a>
-        <a href="/form.html">PIE Form Test Page</a>
-        <div id="app"></div>
-        <script type="module" src="/main.js"></script>
+        <h1>PIE Form Test Page</h1>
+        <form id="testForm">
+            <pie-switch label="Approve settings" id="approveSettings" name="approveSettings" value="foo" required></pie-switch>
+            <pie-switch label="Enable Notifications" id="notifications" name="notifications"></pie-switch>
+            <pie-divider style="margin-block: 1em; display: block;"></pie-divider>
+            <pie-button type="submit">Submit</pie-button>
+        </form>
+        <div id="output"></div>
+        <script type="module" src="/form.js"></script>
     </body>
 </html>
