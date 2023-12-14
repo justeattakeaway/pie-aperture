@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { PieButton } from "@justeattakeaway/pie-button/dist/react"
 import { PieDivider } from "@justeattakeaway/pie-divider/dist/react"
 import { PieFormLabel } from "@justeattakeaway/pie-form-label/dist/react"
@@ -20,12 +20,7 @@ export default function Home() {
   const handleSwitchChange = () => {
     setIsSwitchCheck(current => !current);
     console.log(isSwitchChecked);
-  };
-
-  useEffect(() => {
-    console.log('Switch state changed:', isSwitchChecked);
-  }, [isSwitchChecked]);
-  
+  };  
 
   return (
     <>
