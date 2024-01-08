@@ -25,58 +25,58 @@ export default function Home() {
   };
 
   return (
-      <>
-          <p><Link href="/icons">PIE Icons Test Page</Link></p>
-          <p><Link href="/form">PIE Form Test Page</Link></p>
-          <h2>Pie Button</h2>
-          <PieButton onClick={() => setCounter(counter + 1)}>Counter: {counter}</PieButton>
-          <PieDivider/>
+    <>
+      <p><Link href="/icons">PIE Icons Test Page</Link></p>
+      <p><Link href="/form">PIE Form Test Page</Link></p>
+      <h2>Pie Button</h2>
+      <PieButton onClick={() => setCounter(counter + 1)}>Counter: {counter}</PieButton>
+      <PieDivider />
 
-          <h2>Pie Icon Button</h2>
-          <PieIconButton onClick={() => alert('clicked')}>
-              <IconClose></IconClose>
-          </PieIconButton>
-          <PieDivider/>
+      <h2>Pie Icon Button</h2>
+      <PieIconButton onClick={() => alert('clicked')}>
+        <IconClose></IconClose>
+      </PieIconButton>
+      <PieDivider />
 
-          <h2>Pie Switch</h2>
-          <PieSwitch
-              label={`checked: ${isSwitchChecked}`}
-              checked={isSwitchChecked}
-              onChange={handleSwitchChange}></PieSwitch>
-          <PieDivider/>
+      <h2>Pie Switch</h2>
+      <PieSwitch
+        label={`checked: ${isSwitchChecked}`}
+        checked={isSwitchChecked}
+        onChange={handleSwitchChange}></PieSwitch>
+      <PieDivider />
 
-          <h2>Pie Link</h2>
-          <PieLink href="https://www.pie.design" target="_blank">Visit pie.design</PieLink>
-          <PieDivider/>
+      <h2>Pie Link</h2>
+      <PieLink href="https://www.pie.design" target="_blank">Visit pie.design</PieLink>
+      <PieDivider />
 
-          <h2>Pie Spinner</h2>
-          <PieSpinner/>
-          <PieDivider/>
+      <h2>Pie Spinner</h2>
+      <PieSpinner />
+      <PieDivider />
 
-          <h2>Pie Card</h2>
-          <PieCard padding="a" onClick={() => alert('Card clicked')}>
-              <h2>Title</h2>
-              <p>Test card</p>
-          </PieCard>
-          <PieDivider/>
+      <h2>Pie Card</h2>
+      <PieCard padding="a" onClick={() => alert('Card clicked')}>
+        <h2>Title</h2>
+        <p>Test card</p>
+      </PieCard>
+      <PieDivider />
 
-          <h2>Pie Modal</h2>
-          <PieButton onClick={() => setIsModalOpen(true)}>Open Modal</PieButton>
-          <PieModal isOpen={isModalOpen} heading="Modal Header" onPieModalClose={() => setIsModalOpen(false)}
-                    isDismissible hasBackButton>
-              <p>Modal</p>
-          </PieModal>
-          <PieDivider/>
+      <h2>Pie Modal</h2>
+      <PieButton onClick={() => setIsModalOpen(true)}>Open Modal</PieButton>
+      <PieModal isOpen={isModalOpen} heading="Modal Header" onPieModalClose={() => setIsModalOpen(false)} isDismissible hasBackButton>
+        <p>Modal</p>
+      </PieModal>
+      <PieDivider />
 
-          <PieCookieBanner/>
-          <PieDivider/>
+      <PieCookieBanner />
+      <PieDivider />
 
-          <h2>Pie Form Label</h2>
-          <PieFormLabel>Label</PieFormLabel>
-          <PieDivider/>
+      <h2>Pie Form Label</h2>
+      <PieFormLabel>Label</PieFormLabel>
 
-          <h2>Pie Tag</h2>
-          <PieTag>Pie Tag</PieTag>
-      </>
+      <PieDivider />
+
+      <h2>Pie Tag</h2>
+      <PieTag>Pie Tag</PieTag>
+    </>
   );
 }
