@@ -7,20 +7,22 @@ import { PieSpinner } from "@justeattakeaway/pie-spinner/dist/react"
 import { PieModal } from "@justeattakeaway/pie-modal/dist/react"
 import { PieCookieBanner } from "@justeattakeaway/pie-cookie-banner/dist/react"
 import { PieIconButton } from "@justeattakeaway/pie-icon-button/dist/react"
-import { IconClose } from "@justeattakeaway/pie-icons-webc/dist/react/IconClose";
+import { IconClose } from "@justeattakeaway/pie-icons-webc/dist/react/IconClose"
 import { PieSwitch } from "@justeattakeaway/pie-switch/dist/react"
 import { PieCard } from "@justeattakeaway/pie-card/dist/react"
+import { PieTag } from "@justeattakeaway/pie-tag/dist/react"
+
 import Link from 'next/link'
 
 export default function Home() {
   const [counter, setCounter] = useState(0)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isSwitchChecked, setIsSwitchCheck] = useState(false)
-  
+
   const handleSwitchChange = () => {
     setIsSwitchCheck(current => !current);
     console.log(isSwitchChecked);
-  };  
+  };
 
   return (
     <>
@@ -37,8 +39,8 @@ export default function Home() {
       <PieDivider />
 
       <h2>Pie Switch</h2>
-      <PieSwitch 
-        label={`checked: ${isSwitchChecked}`} 
+      <PieSwitch
+        label={`checked: ${isSwitchChecked}`}
         checked={isSwitchChecked}
         onChange={handleSwitchChange}></PieSwitch>
       <PieDivider />
@@ -70,6 +72,11 @@ export default function Home() {
 
       <h2>Pie Form Label</h2>
       <PieFormLabel>Label</PieFormLabel>
+
+      <PieDivider />
+
+      <h2>Pie Tag</h2>
+      <PieTag>Pie Tag</PieTag>
     </>
   );
 }

@@ -9,6 +9,7 @@ import '@justeattakeaway/pie-modal';
 import '@justeattakeaway/pie-switch';
 import '@justeattakeaway/pie-spinner';
 import '@justeattakeaway/pie-link';
+import '@justeattakeaway/pie-tag';
 import '@justeattakeaway/pie-icons-webc/IconClose';
 import '@justeattakeaway/pie-icons-webc/IconSearch';
 
@@ -73,6 +74,11 @@ document.querySelector('#app').innerHTML = `
     
     <h2>pie-form-label</h2>
     <pie-form-label>Label</pie-form-label>
+    
+    <pie-divider></pie-divider>
+    
+    <h2>pie-tag</h2>
+    <pie-tag>Pie Tag</pie-tag>
 `;
 
 setupCounter(document.querySelector('#counter'));

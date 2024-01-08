@@ -370,6 +370,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justeattakeaway/pie-tag@npm:0.3.0":
+  version: 0.3.0
+  resolution: "@justeattakeaway/pie-tag@npm:0.3.0"
+  dependencies:
+    "@justeattakeaway/pie-webc-core": 0.16.0
+  checksum: 96c5c8d8593cda49ae4d9b5b45470a600e96376e370d45a10a5a18a06364ca662cac691b5f28407ed977dd7287dd318b0300d2229b4ce89e6971cd8fbc657e0a
+  languageName: node
+  linkType: hard
+
 "@justeattakeaway/pie-webc-core@npm:0.12.0":
   version: 0.12.0
   resolution: "@justeattakeaway/pie-webc-core@npm:0.12.0"
@@ -383,6 +392,15 @@ __metadata:
   dependencies:
     lit: 3.1.0
   checksum: 7831f9d759d1cd523f5eef1ad500a3642adbc7c4cf9209963ed88a886c41e413f9a2ae15471a54c257136e35b3fa73692b9381cc2e659d2223fd9297620fa477
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-webc-core@npm:0.16.0":
+  version: 0.16.0
+  resolution: "@justeattakeaway/pie-webc-core@npm:0.16.0"
+  dependencies:
+    lit: 3.1.0
+  checksum: 663cd47a424f56d5bb4c2478873771da3be51b2c91d1e1bb0e1abcebed46bde5cbdc656b8d6159644130397adfbde915e44b9a426fc67926e9a100703ffd93be
   languageName: node
   linkType: hard
 
@@ -1184,6 +1202,7 @@ __metadata:
     "@justeattakeaway/pie-modal": 0.34.0
     "@justeattakeaway/pie-spinner": 0.3.0
     "@justeattakeaway/pie-switch": 0.20.0
+    "@justeattakeaway/pie-tag": 0.3.0
     deepmerge: 4.3.1
     lit: 3.1.0
     vite: 4.5.0
