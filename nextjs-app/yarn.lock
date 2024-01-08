@@ -299,7 +299,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-tag@npm:^0.3.0":
+"@justeattakeaway/pie-tag@npm:0.3.0":
   version: 0.3.0
   resolution: "@justeattakeaway/pie-tag@npm:0.3.0"
   dependencies:
@@ -3225,7 +3225,7 @@ __metadata:
     "@justeattakeaway/pie-modal": 0.34.0
     "@justeattakeaway/pie-spinner": 0.3.0
     "@justeattakeaway/pie-switch": 0.20.0
-    "@justeattakeaway/pie-tag": ^0.3.0
+    "@justeattakeaway/pie-tag": 0.3.0
     "@lit-labs/nextjs": 0.1.4
     "@lit/react": 1.0.2
     "@types/node": 20.9.1
