@@ -74,7 +74,7 @@ jobs:
 
       # Zip dist folder
       - name: Zip build output
-        if: github.event_name == 'pull_request' && inputs.deploy == true
+        if: inputs.deploy == true
         shell: bash
         run: |
             cd ${{ inputs.package-dist-directory }}
@@ -82,7 +82,7 @@ jobs:
 
       # Upload zip to S3
       - name: Upload to S3
-        if: github.event_name == 'pull_request' && inputs.deploy == true
+        if: inputs.deploy == true
         id: upload-s3
         uses: hkusu/s3-upload-action@v2
         with:
@@ -98,7 +98,7 @@ jobs:
 
       # Create branch on Amplify
       - name: Create Amplify branch
-        if: github.event_name == 'pull_request' && inputs.deploy == true
+        if: inputs.deploy == true
         shell: bash
         # We return true to prevent the step from failing if the branch already exists
         run: |
@@ -109,7 +109,7 @@ jobs:
 
       # Deploy Amplify from S3
       - name: Deploy Amplify from S3
-        if: github.event_name == 'pull_request' && inputs.deploy == true
+        if: inputs.deploy == true
         shell: bash
         run: |
             aws amplify start-deployment \
