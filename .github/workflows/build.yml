@@ -83,7 +83,6 @@ jobs:
       # Upload zip to S3
       - name: Upload to S3
         if: inputs.deploy == true
-
         id: upload-s3
         uses: hkusu/s3-upload-action@v2
         with:
@@ -155,7 +154,7 @@ jobs:
           LATEST_JOB_ID=$(aws amplify list-jobs \
             --app-id ${{ env.AMPLIFY_ID }} \
             --branch-name ${{ env.BRANCH_NAME }} \
-            --region ${{ env.AWS_REGION }} --query jobSummaries[0].jobId \
+            --region ${{ env.AWS_REGION }} \
             --output text)
           MAX_ATTEMPTS=12
           SLEEP_SECONDS=10
