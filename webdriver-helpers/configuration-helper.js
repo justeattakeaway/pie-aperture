@@ -1,14 +1,34 @@
-const { CI, GITHUB_REF_NAME, GITHUB_RUN_ID, PR_NUMBER, VANILLA_AMPLIFY_ID, NEXT_AMPLIFY_ID } = process.env;
+const { CI, GITHUB_REF_NAME, GITHUB_RUN_ID, PR_NUMBER, VANILLA_AMPLIFY_ID, NEXT_AMPLIFY_ID, NUXT_AMPLIFY_ID } = process.env;
 const { execSync } = require('child_process');
+
+exports.getAppConfig = (appName) => {
+    const config = {};
+
+    switch (appName) {
+        case 'vanilla-app':
+            config.amplifyId = VANILLA_AMPLIFY_ID;
+            config.port = '3001';
+            break;
+        case 'nextjs-app':
+            config.amplifyId = NEXT_AMPLIFY_ID;
+            config.port = '3000';
+            break;
+        case 'nuxt-app':
+            config.amplifyId = NUXT_AMPLIFY_ID;
+            config.port = '3002';
+            break;
+        default:
+            throw new Error(`appName: '${appName}' is invalid. Please use either 'vanilla-app', 'nextjs-app' or 'nuxt-app'.`);
+    }
+    return config;
+}
 
 exports.getEnvironmentBaseUrl = (appName) => {
 
-    if (appName !== 'vanilla-app' && appName !== 'nextjs-app') {
-        throw new Error(`appName: '${appName}' is invalid. Please use either 'vanilla-app' or 'nextjs-app'.`);
-    }
+    const appConfig = this.getAppConfig(appName);
 
     if (CI) {
-        const amplifyId = appName === 'vanilla-app' ? VANILLA_AMPLIFY_ID : NEXT_AMPLIFY_ID;
+        const amplifyId = appConfig.amplifyId;
 
         if (GITHUB_REF_NAME === 'main') {
             return `https://main.${amplifyId}.amplifyapp.com`;
@@ -17,9 +37,7 @@ exports.getEnvironmentBaseUrl = (appName) => {
         return `https://pr${PR_NUMBER}.${amplifyId}.amplifyapp.com`;
     }
     else {
-        const port = appName === 'vanilla-app' ? '3001' : '3000';
-
-        return `http://localhost:${port}`;
+        return `http://localhost:${appConfig.port}`;
     }
 }
 

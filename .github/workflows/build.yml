@@ -5,6 +5,11 @@ on:
         description: "The ID for your Amplify app (which you can get from the end of its ARN)"
         required: false
         type: string
+      build-script:
+        description: "The build script used to build the application for Amplify"
+        required: false
+        default: build
+        type: string
       node-version:
         description: "The node version to use when building the application"
         required: true
@@ -60,7 +65,7 @@ jobs:
       - name: Install Dependencies & Build - ${{ inputs.package-name }}
         shell: bash
         working-directory: ./${{ inputs.package-name }}
-        run: yarn && yarn build
+        run: yarn && yarn ${{ inputs.build-script }}
 
       # This is a slightly modified version of the following workflow - https://github.com/justeattakeaway/pie/blob/main/.github/workflows/amplify-deploy.yml
       # Create Github Deployment
