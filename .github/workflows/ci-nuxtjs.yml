@@ -23,6 +23,7 @@ jobs:
     name: Windows - Node 16
     uses: ./.github/workflows/build.yml
     with:
+        build-script: 'generate'
         deploy: false
         node-version: 16
         os: 'windows-latest'
@@ -33,6 +34,7 @@ jobs:
     name: Windows - Node 18
     uses: ./.github/workflows/build.yml
     with:
+        build-script: 'generate'
         deploy: false
         node-version: 18
         os: 'windows-latest'
@@ -43,6 +45,7 @@ jobs:
     name: Windows - Node 20
     uses: ./.github/workflows/build.yml
     with:
+        build-script: 'generate'
         deploy: false
         node-version: 20
         os: 'windows-latest'
@@ -53,6 +56,7 @@ jobs:
     name: Ubuntu - Node 16
     uses: ./.github/workflows/build.yml
     with:
+        build-script: 'generate'
         deploy: false
         node-version: 16
         os: 'ubuntu-latest'
@@ -63,6 +67,7 @@ jobs:
     name: Ubuntu - Node 18
     uses: ./.github/workflows/build.yml
     with:
+        build-script: 'generate'
         deploy: false
         node-version: 18
         os: 'ubuntu-latest'
@@ -73,10 +78,11 @@ jobs:
       name: Ubuntu - Node 20
       uses: ./.github/workflows/build.yml
       with:
+          build-script: 'generate'
           deploy: true
           node-version: 20
           os: 'ubuntu-latest'
-          amplify-app-id: 'd1106vmj1ozg8d'
+          amplify-app-id: 'd36dan3bxjue8c'
           package-name: 'nuxt-app'
           package-dist-directory: './nuxt-app/dist'
           bucket-name-preview: 'pie-aperture-preview'
