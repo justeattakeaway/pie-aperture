@@ -25,6 +25,18 @@ document.querySelector('#app').innerHTML = `
         headingLevel="h3"
         leadingAction='${JSON.stringify({ text: 'Leading action' })}'
         isDismissible>
+        <pie-button type="button" onclick="document.querySelector('ul').innerHTML = ''">
+            Remove list
+        </pie-button>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
         Modal content
     </pie-modal>
 
@@ -69,14 +81,14 @@ document.querySelector('#app').innerHTML = `
 
     <h2>pie-spinner</h2>
     <pie-spinner></pie-spinner>
-    
+
     <pie-divider></pie-divider>
-    
+
     <h2>pie-form-label</h2>
     <pie-form-label>Label</pie-form-label>
-    
+
     <pie-divider></pie-divider>
-    
+
     <h2>pie-tag</h2>
     <pie-tag>Pie Tag</pie-tag>
 `;
