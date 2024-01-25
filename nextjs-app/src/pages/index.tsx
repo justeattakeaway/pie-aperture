@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { PieIconButton } from "@justeattakeaway/pie-icon-button/dist/react";
 import { IconClose } from "@justeattakeaway/pie-icons-webc2/dist/react";
 
