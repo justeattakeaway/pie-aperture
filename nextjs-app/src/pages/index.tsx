@@ -28,6 +28,7 @@ export default function Home() {
     <>
       <p><Link href="/icons">PIE Icons Test Page</Link></p>
       <p><Link href="/form">PIE Form Test Page</Link></p>
+      <p><Link href="/modal-cookie-banner">Modal & Cookie Banner Test Page</Link></p>
       <h2>Pie Button</h2>
       <PieButton onClick={() => setCounter(counter + 1)}>Counter: {counter}</PieButton>
       <PieDivider />
