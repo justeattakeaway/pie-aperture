@@ -6,6 +6,7 @@ import { PieLink } from "@justeattakeaway/pie-link/dist/react"
 import { PieSpinner } from "@justeattakeaway/pie-spinner/dist/react"
 import { PieModal } from "@justeattakeaway/pie-modal/dist/react"
 import { PieCookieBanner } from "@justeattakeaway/pie-cookie-banner/dist/react"
+// TODO: Remove this comment as soon as we provide the TS declaration for locales
 // @ts-ignore: missing declaration for locales
 import locales from "@justeattakeaway/pie-cookie-banner/locales"
 import { PieIconButton } from "@justeattakeaway/pie-icon-button/dist/react"
