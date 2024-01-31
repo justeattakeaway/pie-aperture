@@ -1,111 +1,65 @@
 <template>
     <div>
         <h1>PIE Form Test Page</h1>
-        <form class="form" id="testForm" @submit="handleSubmit">
+        <form class="form" id="testForm">
             <label for="username">
                 Username:
             </label>
             <input
-                class="form-field"
+                class="form__field"
                 id="username"
                 name="username"
-                v-model="username"
                 type="text" />
         
             <label for="email">
                 Email:
             </label>
             <input
-                class="form-field"
+                class="form__field"
                 id="email"
                 name="email"
-                v-model="email"
                 type="email" />
             
             <label for="password">
                 Password:
             </label>
             <input
-                class="form-field"
+                class="form__field"
                 id="password"
                 name="password"
-                v-model="password"
                 type="password" />
         
             <label for="passwordConfirmation">
                 Confirm Password:
             </label>
             <input
-                class="form-field"
+                class="form__field"
                 id="passwordConfirmation"
                 name="passwordConfirmation"
-                v-model="passwordConfirmation"
                 type="password" />
         
-            <div class="form-controls">
+            <div class="form__controls">
                 <pie-switch
                     label="Approve settings"
                     id="approveSettings"
                     name="approveSettings"
-                    @change="handleApproveSettingsChange"
-                    :checked="approveSettings"
                     required></pie-switch>
                 <pie-switch
                     label="Enable Notifications"
                     id="notifications"
-                    name="notifications"
-                    @change="handleNotificationsChange"
-                    :checked="notifications"></pie-switch>
+                    name="notifications"></pie-switch>
             </div>
-            <div class="form-btns">
-                <pie-button class="form-btn" variant="secondary" type="reset">Reset</pie-button>
-                <pie-button class="form-btn" type="submit">Submit</pie-button>
+            <div class="form__btns">
+                <pie-button class="form__btn" variant="secondary" type="reset">Reset</pie-button>
+                <pie-button class="form__btn" type="submit">Submit</pie-button>
             </div>
         </form>
-        <div id="output">
-            <h2>Form Data</h2>
-            <pre>
-                {{ formDataDisplay }}
-            </pre>
-        </div>
     </div>
 </template>
 
 <script setup>
-import { PieButton } from '@justeattakeaway/pie-button';
-import { PieSwitch } from '@justeattakeaway/pie-switch';
-
-import { defineModel } from 'vue';
-
-const username = defineModel('username');
-const email = defineModel('email');
-const password = defineModel('password');
-const passwordConfirmation = defineModel('passwordConfirmation');
-const approveSettings = defineModel('approveSettings', { default: true });
-const notifications = defineModel('notifications', { default: false });
-
-const formDataDisplay = defineModel('formDataDisplay');
-
-function handleSubmit(event) {
-    event.preventDefault();
-    formDataDisplay.value = JSON.stringify({
-        username: username.value,
-        email: email.value,
-        password: password.value,
-        passwordConfirmation: passwordConfirmation.value,
-        approveSettings: approveSettings.value,
-        notifications: notifications.value
-    }, null, 2);
-}
-
-function handleNotificationsChange(event) {
-    notifications.value = event.target.checked;
-}
-
-function handleApproveSettingsChange(event) {
-    approveSettings.value = event.target.checked;
-}
-
+import { PieButton } from '@justeattakeaway/pie-button'
+import { PieSwitch } from '@justeattakeaway/pie-switch'
 </script>
 
 <style scoped>
@@ -115,11 +69,11 @@ function handleApproveSettingsChange(event) {
         flex-direction: column;
     }
 
-    .form-field {
+    .form__field {
         margin-bottom: var(--dt-spacing-b);
     }
 
-    .form-controls {
+    .form__controls {
         margin-top: var(--dt-spacing-e);
         > * {
             display: block;
@@ -130,13 +84,13 @@ function handleApproveSettingsChange(event) {
         }
     }
 
-    .form-btns {
+    .form__btns {
         margin-top: var(--dt-spacing-c);
         display: flex;
         gap: var(--dt-spacing-a)
     }
 
-    .form-btns > .form-btn:first-of-type {
+    .form__btns > .form__btn:first-of-type {
         margin-left: auto;
     }
 </style>
