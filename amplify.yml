@@ -1,0 +1,35 @@
+version: 1
+applications:
+  - appRoot: nuxt-app
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - yarn install
+        build:
+          commands:
+            - yarn build
+      artifacts:
+        baseDirectory: .nuxt
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - node_modules/**/*
+
+  - appRoot: nextjs-app
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - yarn install
+        build:
+          commands:
+            - yarn build
+      artifacts:
+        baseDirectory: .next
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - node_modules/**/*
