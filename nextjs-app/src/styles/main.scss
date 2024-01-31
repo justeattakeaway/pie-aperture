@@ -30,3 +30,34 @@ pie-divider {
   display: block;
   margin-block: 2em;
 }
+
+// Form Styles
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__field {
+  margin-bottom: var(--dt-spacing-b);
+}
+
+.form__controls {
+  margin-top: var(--dt-spacing-e);
+  > * {
+    display: block;
+  }
+
+  > * + * {
+    margin-top: var(--dt-spacing-b);
+  }
+}
+
+.form__btns {
+  margin-top: var(--dt-spacing-c);
+  display: flex;
+  gap: var(--dt-spacing-a)
+}
+
+.form__btns > .form__btn:first-of-type {
+  margin-left: auto;
+}
