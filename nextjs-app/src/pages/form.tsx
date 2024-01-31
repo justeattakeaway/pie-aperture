@@ -58,7 +58,11 @@ export default function Form() {
                     Username:
                 </label>
                 <input
+<<<<<<< HEAD
                     className="form-field"
+=======
+                    className="form__field"
+>>>>>>> fa6dec8 (update vanilla and nextjs forms)
                     id="username"
                     name="username"
                     value={username}
@@ -69,7 +73,11 @@ export default function Form() {
                     Email:
                 </label>
                 <input
+<<<<<<< HEAD
                     className="form-field"
+=======
+                    className="form__field"
+>>>>>>> fa6dec8 (update vanilla and nextjs forms)
                     id="email"
                     name="email"
                     onChange={handleEmailChange}
@@ -79,7 +87,11 @@ export default function Form() {
                     Password:
                 </label>
                 <input
+<<<<<<< HEAD
                     className="form-field"
+=======
+                    className="form__field"
+>>>>>>> fa6dec8 (update vanilla and nextjs forms)
                     id="password"
                     name="password"
                     onChange={handlePasswordChange}
@@ -89,13 +101,13 @@ export default function Form() {
                     Confirm Password:
                 </label>
                 <input
-                    className="form-field"
+                    className="form__field"
                     id="passwordConfirmation"
                     name="passwordConfirmation"
                     onChange={handlePasswordConfirmationChange}
                     type="password" />
 
-                <div className="form-controls">
+                <div className="form__controls">
                     <PieSwitch
                         label="Approve settings"
                         id="approveSettings"
@@ -112,9 +124,9 @@ export default function Form() {
                         onChange={handleNotificationsChange}
                     />
                 </div>
-                <div className='form-btns'>
-                    <PieButton className="form-btn" variant="secondary" type="reset">Reset</PieButton>
-                    <PieButton className="form-btn" type="submit">Submit</PieButton>
+                <div className='form__btns'>
+                    <PieButton className="form__btn" variant="secondary" type="reset">Reset</PieButton>
+                    <PieButton className="form__btn" type="submit">Submit</PieButton>
                 </div>
             </form>
             {formDataDisplay && (
