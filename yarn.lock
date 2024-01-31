@@ -1105,9 +1105,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@jridgewell/gen-mapping@npm:^0.3.0, @jridgewell/gen-mapping@npm:^0.3.2":
   version: 0.3.3
   resolution: "@jridgewell/gen-mapping@npm:0.3.3"
+=======
+"@justeattakeaway/pie-components-config@npm:^0.10.0":
+  version: 0.10.0
+  resolution: "@justeattakeaway/pie-components-config@npm:0.10.0"
+  dependencies:
+    deepmerge-ts: 5.1.0
+  peerDependencies:
+    cem-plugin-module-file-extensions: 0.0.5
+  checksum: ece4df9ede404d966231fd1537899280106da089043dc0d17bda94333801437472e34b897e902ca5b815996aaa937d1e6616d2fe83cf52f9dbca02f0e7f39623
+  languageName: node
+  linkType: hard
+
+"@ljharb/through@npm:^2.3.9":
+  version: 2.3.11
+  resolution: "@ljharb/through@npm:2.3.11"
+>>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
   dependencies:
     "@jridgewell/set-array": ^1.0.1
     "@jridgewell/sourcemap-codec": ^1.4.10
@@ -2248,6 +2265,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "@polka/url@npm:^1.0.0-next.24":
   version: 1.0.0-next.24
   resolution: "@polka/url@npm:1.0.0-next.24"
@@ -2255,6 +2273,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
 "@puppeteer/browsers@npm:1.4.6":
   version: 1.4.6
   resolution: "@puppeteer/browsers@npm:1.4.6"
@@ -2752,6 +2772,18 @@ __metadata:
 "@types/node@npm:20.11.13":
   version: 20.11.13
   resolution: "@types/node@npm:20.11.13"
+<<<<<<< HEAD
+=======
+  dependencies:
+    undici-types: ~5.26.4
+  checksum: 76fbe4dbcce9ecb602c1e0528124bb113e9ece58d417e96710b7ba96dd67cd0bb050272218dc796be36c0d8c29d7c55da44311be429daa4253c3a00f1b3840ff
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^18.11.9":
+  version: 18.18.8
+  resolution: "@types/node@npm:18.18.8"
+>>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
   dependencies:
     undici-types: ~5.26.4
   checksum: 76fbe4dbcce9ecb602c1e0528124bb113e9ece58d417e96710b7ba96dd67cd0bb050272218dc796be36c0d8c29d7c55da44311be429daa4253c3a00f1b3840ff
@@ -5318,6 +5350,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "deep-is@npm:^0.1.3":
   version: 0.1.4
   resolution: "deep-is@npm:0.1.4"
@@ -5326,6 +5359,9 @@ __metadata:
   linkType: hard
 
 "deepmerge-ts@npm:^5.0.0, deepmerge-ts@npm:^5.1.0":
+=======
+"deepmerge-ts@npm:5.1.0, deepmerge-ts@npm:^5.0.0, deepmerge-ts@npm:^5.1.0":
+>>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
   version: 5.1.0
   resolution: "deepmerge-ts@npm:5.1.0"
   checksum: 6b57db93c2985e4a35f24b2451db31715050d143988b7d6346f4049c9aec21a6c289514b88d3ee3d6e0697e72ef5d96ff0bbb7cb75422d56fee55ee85c7168e7
@@ -7048,7 +7084,11 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "fsevents@npm:~2.3.2, fsevents@npm:~2.3.3":
+=======
+"fsevents@npm:~2.3.2":
+>>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
   version: 2.3.3
   resolution: "fsevents@npm:2.3.3"
   dependencies:
@@ -7067,7 +7107,11 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.3#~builtin<compat/fsevents>":
+=======
+"fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
+>>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
   version: 2.3.3
   resolution: "fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"
   dependencies:
@@ -11036,6 +11080,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pie-aperture@workspace:."
   dependencies:
+    "@justeattakeaway/pie-components-config": ^0.10.0
     "@percy/cli": 1.27.4
     "@percy/selenium-webdriver": 2.0.2
     "@playwright/test": 1.41.1
@@ -11076,6 +11121,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "pkg-types@npm:^1.0.3":
   version: 1.0.3
   resolution: "pkg-types@npm:1.0.3"
@@ -11087,6 +11133,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
 "playwright-core@npm:1.41.1":
   version: 1.41.1
   resolution: "playwright-core@npm:1.41.1"
@@ -11111,6 +11159,7 @@ __metadata:
   languageName: node
   linkType: hard
 
+<<<<<<< HEAD
 "postcss-calc@npm:^9.0.1":
   version: 9.0.1
   resolution: "postcss-calc@npm:9.0.1"
@@ -11468,6 +11517,8 @@ __metadata:
   languageName: node
   linkType: hard
 
+=======
+>>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
 "pretty-format@npm:^29.7.0":
   version: 29.7.0
   resolution: "pretty-format@npm:29.7.0"

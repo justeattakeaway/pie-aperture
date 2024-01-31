@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import { devices } from '@playwright/test';
 import { getEnvironmentBaseUrl } from './playwright-helpers/configuration-helper';
 
 const baseUrl = getEnvironmentBaseUrl(process.env.APP_NAME);
+=======
+import { defineConfig, devices } from '@playwright/test';
+
+>>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -11,7 +16,11 @@ const baseUrl = getEnvironmentBaseUrl(process.env.APP_NAME);
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+<<<<<<< HEAD
 export default {
+=======
+export default defineConfig({
+>>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -24,30 +33,65 @@ export default {
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: baseUrl,
+    /* Base URL to use in actions like `await page.goto('/')`. */
+    // baseURL: 'http://127.0.0.1:3000',
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
+    trace: 'on-first-retry',
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'system:nuxt',
+      name: 'nextjs:system',
       use: { ...devices['Desktop Chrome'] },
-      grep: /@nuxt/,
-      testMatch: '**/*.spec.ts',
+      testMatch: 'nextjs-app/test/system/*.spec.ts',
+    }, 
+    {
+      name: 'nuxtjs:system',
+      use: { ...devices['Desktop Chrome'] },
+      testMatch: 'nuxt-app/test/system/*.spec.ts',
     },
     {
-        name: 'system:nextjs',
-        grep: /@nextjs/,
-        use: { ...devices['Desktop Chrome'] },
-        testMatch: '**/*.spec.ts',
-    },
-    {
-        name: 'system:vanilla',
-        grep: /@vanilla/,
-        use: { ...devices['Desktop Chrome'] },
-        testMatch: '**/*.spec.ts',
+      name: 'vanilla:system',
+      use: { ...devices['Desktop Chrome'] },
+      testMatch: 'vanilla-app/test/system/*.spec.ts',
     }
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
+
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
+
+    /* Test against mobile viewports. */
+    // {
+    //   name: 'Mobile Chrome',
+    //   use: { ...devices['Pixel 5'] },
+    // },
+    // {
+    //   name: 'Mobile Safari',
+    //   use: { ...devices['iPhone 12'] },
+    // },
+
+    /* Test against branded browsers. */
+    // {
+    //   name: 'Microsoft Edge',
+    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
+    // },
+    // {
+    //   name: 'Google Chrome',
+    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+    // },
   ],
-};
+
+  /* Run your local dev server before starting the tests */
+  // webServer: {
+  //   command: 'npm run start',
+  //   url: 'http://127.0.0.1:3000',
+  //   reuseExistingServer: !process.env.CI,
+  // },
+});

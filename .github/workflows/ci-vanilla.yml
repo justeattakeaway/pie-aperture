@@ -112,6 +112,11 @@ jobs:
         shell: bash
         run: yarn test:system --filter=vanilla-app
 
+      - name: Run System Tests
+        shell: bash
+        working-directory: ./vanilla-app
+        run: yarn test:system
+
       - name: Run Percy Tests
         shell: bash
         run: yarn test:visual --filter=vanilla-app

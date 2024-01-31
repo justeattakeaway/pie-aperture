@@ -169,7 +169,7 @@ dist/
 compiled/
 
 **/src/react.ts
-
-# Playwright
-**/playwright-report
-**/test-results
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

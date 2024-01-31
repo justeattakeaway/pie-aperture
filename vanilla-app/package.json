@@ -2,17 +2,17 @@
   "name": "vanilla-app",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "vite --port 3001",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
-    "test:system": "APP_NAME=vanilla-app npx playwright test --config=../playwright.config.ts --project=system:vanilla",
-    "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_VANILLA} npx percy exec -- wdio run ./wdio.conf.js",
-    "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
+    "test:system": "npx playwright test --config=../playwright.config.ts --project=vanilla:system",
+    "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_VANILLA} npx percy exec -- ../node_modules/.bin/wdio run ./wdio.conf.js",
+    "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u && yarn"
   },
   "devDependencies": {
     "deepmerge": "4.3.1",
+    "typescript": "5.2.2",
     "vite": "4.5.1"
   },
   "dependencies": {

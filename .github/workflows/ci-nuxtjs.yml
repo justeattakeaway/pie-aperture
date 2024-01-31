@@ -118,8 +118,15 @@ jobs:
   
   #     - name: Run System Tests
   #       shell: bash
+<<<<<<< HEAD
   #       run: yarn test:system --filter=nuxt-app
   
+=======
+  #       working-directory: ./nuxt-app
+  #       run: yarn
+
+<<<<<<< HEAD
+>>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
   #     - name: Run Percy Tests
   #       shell: bash
   #       run: yarn test:visual --filter=nuxt-app
@@ -129,3 +136,24 @@ jobs:
   #     NUXT_AMPLIFY_ID: d36dan3bxjue8c
   #     PERCY_TOKEN_PIE_APERTURE_NUXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NUXT }}
   #     PR_NUMBER: ${{ github.event.number }}
+<<<<<<< HEAD
+=======
+=======
+      - name: Run System Tests
+        shell: bash
+        working-directory: ./nuxt-app
+        run: yarn test:system
+
+
+      - name: Run Percy Tests
+        shell: bash
+        working-directory: ./nuxt-app
+        run: yarn test:visual
+    env:
+      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+      NUXT_AMPLIFY_ID: d36dan3bxjue8c
+      PERCY_TOKEN_PIE_APERTURE_NUXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NUXT }}
+      PR_NUMBER: ${{ github.event.number }}
+>>>>>>> 8f28813 (test: DSW-1581 add playwright to aperture)
+>>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
