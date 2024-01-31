@@ -10,7 +10,7 @@ applications:
           commands:
             - yarn build
       artifacts:
-        baseDirectory: nuxt-app/.amplify-hosting
+        baseDirectory: .amplify-hosting
         files:
           - '**/*'
       cache:
