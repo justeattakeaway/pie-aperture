@@ -176,5 +176,7 @@ lit-visual-report/
 compiled/
 
 **/src/react.ts
-
-
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

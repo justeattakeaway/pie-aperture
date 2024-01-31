@@ -111,7 +111,13 @@ jobs:
   #     - name: Install Dependencies - Root
   #       shell: bash
   #       run: yarn
-  #
+
+  #     - name: Install Dependencies - Nuxt App
+  #       shell: bash
+  #       working-directory: ./nuxt-app
+  #       run: yarn
+
+
   #     - name: Run Percy Tests
   #       shell: bash
   #       run: yarn test:visual --filter=nuxt-app
@@ -121,3 +127,20 @@ jobs:
   #     NUXT_AMPLIFY_ID: d36dan3bxjue8c
   #     PERCY_TOKEN_PIE_APERTURE_NUXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NUXT }}
   #     PR_NUMBER: ${{ github.event.number }}
+  
+      - name: Run System Tests
+        shell: bash
+        working-directory: ./nuxt-app
+        run: yarn test:system
+
+
+      - name: Run Percy Tests
+        shell: bash
+        working-directory: ./nuxt-app
+        run: yarn test:visual
+    env:
+      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+      NUXT_AMPLIFY_ID: d36dan3bxjue8c
+      PERCY_TOKEN_PIE_APERTURE_NUXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NUXT }}
+      PR_NUMBER: ${{ github.event.number }}

@@ -7,8 +7,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NUXT} npx percy exec -- wdio run ./wdio.conf.js",
-    "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
+    "test:system": "npx playwright test -c ../playwright.config.ts --project=nuxtjs:system",
+    "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NUXT} npx percy exec -- ../node_modules/.bin/wdio run ./wdio.conf.js",
+    "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u && yarn"
   },
   "devDependencies": {
     "deepmerge": "4.3.1",
