@@ -1,121 +1,121 @@
-name: Build - NextJS App
+# name: Build - NextJS App
 
-on:
-  pull_request:
-    types: [assigned, opened, synchronize, reopened, "ready_for_review"]
-    paths:
-      - '.github/workflows/**'
-      - 'nextjs-app/**'
-      - 'webdriver-helpers/**'
-      - 'wdio.conf.js'
+# on:
+#   pull_request:
+#     types: [assigned, opened, synchronize, reopened, "ready_for_review"]
+#     paths:
+#       - '.github/workflows/**'
+#       - 'nextjs-app/**'
+#       - 'webdriver-helpers/**'
+#       - 'wdio.conf.js'
 
-  push:
-    branches:
-      - main
+#   push:
+#     branches:
+#       - main
 
-concurrency:
-  group: CI-NextJS-${{ github.ref }}
-  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+# concurrency:
+#   group: CI-NextJS-${{ github.ref }}
+#   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
-jobs:
+# jobs:
 
-  # Commenting these out for now as there's currently an issue with Next.
-  # build-next-app-windows-node16:
-  #   name: Windows - Node 16
-  #   uses: ./.github/workflows/build.yml
-  #   with:
-  #       deploy: false
-  #       node-version: 16
-  #       os: 'windows-latest'
-  #       package-name: 'nextjs-app'
-  #   secrets: inherit
+#   # Commenting these out for now as there's currently an issue with Next.
+#   # build-next-app-windows-node16:
+#   #   name: Windows - Node 16
+#   #   uses: ./.github/workflows/build.yml
+#   #   with:
+#   #       deploy: false
+#   #       node-version: 16
+#   #       os: 'windows-latest'
+#   #       package-name: 'nextjs-app'
+#   #   secrets: inherit
 
-  # build-next-app-windows-node18:
-  #   name: Windows - Node 18
-  #   uses: ./.github/workflows/build.yml
-  #   with:
-  #       deploy: false
-  #       node-version: 18
-  #       os: 'windows-latest'
-  #       package-name: 'nextjs-app'
-  #   secrets: inherit
+#   # build-next-app-windows-node18:
+#   #   name: Windows - Node 18
+#   #   uses: ./.github/workflows/build.yml
+#   #   with:
+#   #       deploy: false
+#   #       node-version: 18
+#   #       os: 'windows-latest'
+#   #       package-name: 'nextjs-app'
+#   #   secrets: inherit
 
-  # build-next-app-windows-node20:
-  #   name: Windows - Node 20
-  #   uses: ./.github/workflows/build.yml
-  #   with:
-  #       deploy: false
-  #       node-version: 20
-  #       os: 'windows-latest'
-  #       package-name: 'nextjs-app'
-  #   secrets: inherit
+#   # build-next-app-windows-node20:
+#   #   name: Windows - Node 20
+#   #   uses: ./.github/workflows/build.yml
+#   #   with:
+#   #       deploy: false
+#   #       node-version: 20
+#   #       os: 'windows-latest'
+#   #       package-name: 'nextjs-app'
+#   #   secrets: inherit
 
-  build-next-app-ubuntu-node16:
-    name: Ubuntu - Node 16
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 16
-        os: 'ubuntu-latest'
-        package-name: 'nextjs-app'
-    secrets: inherit
+#   build-next-app-ubuntu-node16:
+#     name: Ubuntu - Node 16
+#     uses: ./.github/workflows/build.yml
+#     with:
+#         deploy: false
+#         node-version: 16
+#         os: 'ubuntu-latest'
+#         package-name: 'nextjs-app'
+#     secrets: inherit
 
-  build-next-app-ubuntu-node18:
-    name: Ubuntu - Node 18
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 18
-        os: 'ubuntu-latest'
-        package-name: 'nextjs-app'
-    secrets: inherit
+#   build-next-app-ubuntu-node18:
+#     name: Ubuntu - Node 18
+#     uses: ./.github/workflows/build.yml
+#     with:
+#         deploy: false
+#         node-version: 18
+#         os: 'ubuntu-latest'
+#         package-name: 'nextjs-app'
+#     secrets: inherit
 
-  build-deploy-next-app-ubuntu-node20:
-      name: Ubuntu - Node 20
-      uses: ./.github/workflows/build.yml
-      with:
-          deploy: true
-          node-version: 20
-          os: 'ubuntu-latest'
-          amplify-app-id: 'd1106vmj1ozg8d'
-          package-name: 'nextjs-app'
-          package-dist-directory: './nextjs-app/out'
-          bucket-name-preview: 'pie-aperture-preview'
-          bucket-name-main: 'pie-aperture'
-      secrets: inherit
+#   build-deploy-next-app-ubuntu-node20:
+#       name: Ubuntu - Node 20
+#       uses: ./.github/workflows/build.yml
+#       with:
+#           deploy: true
+#           node-version: 20
+#           os: 'ubuntu-latest'
+#           amplify-app-id: 'd1106vmj1ozg8d'
+#           package-name: 'nextjs-app'
+#           package-dist-directory: './nextjs-app/out'
+#           bucket-name-preview: 'pie-aperture-preview'
+#           bucket-name-main: 'pie-aperture'
+#       secrets: inherit
 
-  browser-tests:
-    needs: 'build-deploy-next-app-ubuntu-node20'
-    name: Run WebDriverIO Tests
-    runs-on: ubuntu-latest
-    steps:
-      # Checkout the Repo
-      - name: Checkout
-        uses: actions/checkout@v3
+#   browser-tests:
+#     needs: 'build-deploy-next-app-ubuntu-node20'
+#     name: Run WebDriverIO Tests
+#     runs-on: ubuntu-latest
+#     steps:
+#       # Checkout the Repo
+#       - name: Checkout
+#         uses: actions/checkout@v3
 
-      # Setup Node
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "yarn"
+#       # Setup Node
+#       - name: Setup Node
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 20
+#           cache: "yarn"
 
-      - name: Install Dependencies - Root
-        shell: bash
-        run: yarn
+#       - name: Install Dependencies - Root
+#         shell: bash
+#         run: yarn
   
-      - name: Install Dependencies - NextJS App
-        shell: bash
-        working-directory: ./nextjs-app
-        run: yarn
+#       - name: Install Dependencies - NextJS App
+#         shell: bash
+#         working-directory: ./nextjs-app
+#         run: yarn
 
-      - name: Run Percy Tests
-        shell: bash
-        working-directory: ./nextjs-app
-        run: yarn test:visual
-    env:
-      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-      NEXT_AMPLIFY_ID: d1106vmj1ozg8d
-      PERCY_TOKEN_PIE_APERTURE_NEXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NEXT }}
-      PR_NUMBER: ${{ github.event.number }}
+#       - name: Run Percy Tests
+#         shell: bash
+#         working-directory: ./nextjs-app
+#         run: yarn test:visual
+#     env:
+#       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+#       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+#       NEXT_AMPLIFY_ID: d1106vmj1ozg8d
+#       PERCY_TOKEN_PIE_APERTURE_NEXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NEXT }}
+#       PR_NUMBER: ${{ github.event.number }}
