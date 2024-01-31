@@ -99,12 +99,10 @@ function handleSubmit(event) {
 }
 
 function handleNotificationsChange(event) {
-    console.log(event.target.checked)
     notifications.value = event.target.checked;
 }
 
 function handleApproveSettingsChange(event) {
-    console.log(event.target.checked)
     approveSettings.value = event.target.checked;
 }
 
