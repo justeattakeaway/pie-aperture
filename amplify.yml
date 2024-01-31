@@ -9,10 +9,6 @@ applications:
         build:
           commands:
             - yarn build
-      artifacts:
-        baseDirectory: .output/public
-        files:
-          - "**/*"
       cache:
         paths:
           - node_modules/**/*
