@@ -9,6 +9,10 @@ applications:
         build:
           commands:
             - yarn build
+      artifacts:
+        baseDirectory: nuxt-app/.amplify-hosting
+        files:
+          - '**/*'
       cache:
         paths:
           - node_modules/**/*
