@@ -6,6 +6,9 @@ import { PieLink } from "@justeattakeaway/pie-link/dist/react"
 import { PieSpinner } from "@justeattakeaway/pie-spinner/dist/react"
 import { PieModal } from "@justeattakeaway/pie-modal/dist/react"
 import { PieCookieBanner } from "@justeattakeaway/pie-cookie-banner/dist/react"
+// TODO: Remove this comment as soon as we provide the TS declaration for locales
+// @ts-ignore: missing declaration for locales
+import locales from "@justeattakeaway/pie-cookie-banner/locales"
 import { PieIconButton } from "@justeattakeaway/pie-icon-button/dist/react"
 import { IconClose } from "@justeattakeaway/pie-icons-webc/dist/react/IconClose"
 import { PieSwitch } from "@justeattakeaway/pie-switch/dist/react"
@@ -67,7 +70,11 @@ export default function Home() {
       </PieModal>
       <PieDivider />
 
-      <PieCookieBanner />
+      <PieCookieBanner
+        locale={locales.enGB}
+        hasPrimaryActionsOnly={true}
+        cookieTechnologiesLink="https://justeattakeaway.com"
+        cookieStatementLink="https://justeattakeaway.com" />
       <PieDivider />
 
       <h2>Pie Form Label</h2>
