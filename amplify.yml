@@ -27,7 +27,7 @@ applications:
           commands:
             - yarn build
       artifacts:
-        baseDirectory: .amplify-hosting
+        baseDirectory: .next
         files:
           - '**/*'
       cache:
