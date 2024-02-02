@@ -58,13 +58,13 @@
                     :checked="notifications"></pie-switch>
             </div>
             <div class="form__btns">
-                <pie-button class="form__btn" variant="secondary" type="reset">Reset</pie-button>
-                <pie-button class="form__btn" type="submit">Submit</pie-button>
+                <pie-button id="reset" class="form__btn" variant="secondary" type="reset">Reset</pie-button>
+                <pie-button id="submit" class="form__btn" type="submit">Submit</pie-button>
             </div>
         </form>
         <div id="output">
             <h2>Form Data</h2>
-            <pre>
+            <pre id="outputData">
                 {{ formDataDisplay }}
             </pre>
         </div>
@@ -81,7 +81,7 @@ const username = defineModel('username');
 const email = defineModel('email');
 const password = defineModel('password');
 const passwordConfirmation = defineModel('passwordConfirmation');
-const approveSettings = defineModel('approveSettings', { default: true });
+const approveSettings = defineModel('approveSettings', { default: false });
 const notifications = defineModel('notifications', { default: false });
 
 const formDataDisplay = defineModel('formDataDisplay');

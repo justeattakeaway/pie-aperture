@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { devices } from '@playwright/test';
 import { getEnvironmentBaseUrl } from './playwright-helpers/configuration-helper';
 
 const baseUrl = getEnvironmentBaseUrl(process.env.APP_NAME);
 =======
 import { defineConfig, devices } from '@playwright/test';
+=======
+import { devices } from '@playwright/test';
+>>>>>>> 2f3daf3 (add basic nuxt form test)
 
 >>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
 /**
@@ -17,10 +21,14 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default {
 =======
 export default defineConfig({
 >>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
+=======
+export default {
+>>>>>>> 2f3daf3 (add basic nuxt form test)
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -33,11 +41,8 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://127.0.0.1:3000',
-
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on',
   },
 
   /* Configure projects for major browsers */
@@ -94,4 +99,4 @@ export default defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
-});
+};
