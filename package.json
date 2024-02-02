@@ -2,6 +2,11 @@
   "name": "pie-aperture",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "nuxt-app",
+    "nextjs-app",
+    "vanilla-app"
+  ],
   "scripts": {
     "build": "turbo run build --token=${TURBO_TOKEN}",
     "cz": "./node_modules/cz-customizable/standalone.js",
