@@ -4,14 +4,45 @@ html {
 
 body {
     font-family: JetSansDigital;
-    margin: 0;
-    display: grid;
-    justify-content: center;
-    place-content: center;
+    margin: auto;
     min-height: 100%;
+    padding: 16px;
+    max-width: 720px;
 }
 
 pie-divider {
     display: block;
     margin-block: 2em;
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field {
+    margin-bottom: var(--dt-spacing-b);
+}
+
+.form-controls {
+    margin-top: var(--dt-spacing-e);
+
+    >* {
+        display: block;
+    }
+
+    >*+* {
+        margin-top: var(--dt-spacing-b);
+    }
+}
+
+.form-btns {
+    margin-top: var(--dt-spacing-c);
+    display: flex;
+    gap: var(--dt-spacing-a)
+}
+
+.form-btns>.form-btn:first-of-type {
+    margin-left: auto;
 }

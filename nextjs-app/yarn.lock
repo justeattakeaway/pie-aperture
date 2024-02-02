@@ -122,18 +122,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-cookie-banner@npm:0.16.1":
-  version: 0.16.1
-  resolution: "@justeattakeaway/pie-cookie-banner@npm:0.16.1"
+"@justeattakeaway/pie-cookie-banner@npm:0.17.0":
+  version: 0.17.0
+  resolution: "@justeattakeaway/pie-cookie-banner@npm:0.17.0"
   dependencies:
     "@justeattakeaway/pie-button": 0.45.2
     "@justeattakeaway/pie-divider": 0.12.1
     "@justeattakeaway/pie-icon-button": 0.27.2
     "@justeattakeaway/pie-link": 0.15.0
-    "@justeattakeaway/pie-modal": 0.38.3
+    "@justeattakeaway/pie-modal": 0.38.4
     "@justeattakeaway/pie-switch": 0.26.0
     "@justeattakeaway/pie-webc-core": 0.17.1
-  checksum: 6f972a09b4407dfcd4bb4845a01b4cc81f8c4e61f8ac72fed1f232a83c1e74f75e8320a520b32deb34716156e092dcf9f5d84b0e7e0e72d3f1f96cfcb67765a8
+  checksum: e73263cc67d6b30342a035ab205878b5376f582349d80c46ac67545ab564cd5086b0978577e4806588fd52891b8c15dbc37cd2d53155216eb91e7a75092442c4
   languageName: node
   linkType: hard
 
@@ -191,9 +191,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-modal@npm:0.38.3":
-  version: 0.38.3
-  resolution: "@justeattakeaway/pie-modal@npm:0.38.3"
+"@justeattakeaway/pie-modal@npm:0.38.4":
+  version: 0.38.4
+  resolution: "@justeattakeaway/pie-modal@npm:0.38.4"
   dependencies:
     "@justeattakeaway/pie-button": 0.45.2
     "@justeattakeaway/pie-icon-button": 0.27.2
@@ -202,7 +202,7 @@ __metadata:
     "@justeattakeaway/pie-webc-core": 0.17.1
     body-scroll-lock: 3.1.5
     dialog-polyfill: 0.5.6
-  checksum: 496eb304152920545803345379b9dcaa1b940246ef90ce1dedfd83eec7df862433496b691073d561a09781580f84502d04c4fdaa70eb179f579da1365360e0ba
+  checksum: 34137565dab1d80bf36c9abab2e6ffd4b61d4ad8cde3fa5e81acadec2cf90f60d35fc6a76ebc4172d52bcba483bc770c96eb5f79997d6a612ec20f78c6cac419
   languageName: node
   linkType: hard
 
@@ -3185,14 +3185,14 @@ __metadata:
   dependencies:
     "@justeattakeaway/pie-button": 0.45.2
     "@justeattakeaway/pie-card": 0.17.2
-    "@justeattakeaway/pie-cookie-banner": 0.16.1
+    "@justeattakeaway/pie-cookie-banner": 0.17.0
     "@justeattakeaway/pie-css": 0.10.0
     "@justeattakeaway/pie-divider": 0.12.1
     "@justeattakeaway/pie-form-label": 0.11.0
     "@justeattakeaway/pie-icon-button": 0.27.2
     "@justeattakeaway/pie-icons-webc": 0.17.2
     "@justeattakeaway/pie-link": 0.15.0
-    "@justeattakeaway/pie-modal": 0.38.3
+    "@justeattakeaway/pie-modal": 0.38.4
     "@justeattakeaway/pie-spinner": 0.5.2
     "@justeattakeaway/pie-switch": 0.26.0
     "@justeattakeaway/pie-tag": 0.5.0

@@ -71,6 +71,7 @@ export default function Home() {
       <PieDivider />
 
       <PieCookieBanner
+        defaultPreferences={{functional: true, personalized: true, analytical: true}}
         locale={locales.enGB}
         hasPrimaryActionsOnly={true}
         cookieTechnologiesLink="https://justeattakeaway.com"

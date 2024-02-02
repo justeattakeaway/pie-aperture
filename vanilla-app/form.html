@@ -29,12 +29,60 @@
     </head>
     <body>
         <h1>PIE Form Test Page</h1>
-        <form id="testForm">
-            <pie-switch label="Approve settings" id="approveSettings" name="approveSettings" value="foo" required></pie-switch>
-            <pie-switch label="Enable Notifications" id="notifications" name="notifications"></pie-switch>
-            <pie-divider style="margin-block: 1em; display: block;"></pie-divider>
-            <pie-button type="submit">Submit</pie-button>
+        <form class="form" id="testForm">
+            <label for="username">
+                Username:
+            </label>
+            <input
+                class="form-field"
+                id="username"
+                name="username"
+                type="text" />
+        
+            <label for="email">
+                Email:
+            </label>
+            <input
+                class="form-field"
+                id="email"
+                name="email"
+                type="email" />
+            
+            <label for="password">
+                Password:
+            </label>
+            <input
+                class="form-field"
+                id="password"
+                name="password"
+                type="password" />
+        
+            <label for="passwordConfirmation">
+                Confirm Password:
+            </label>
+            <input
+                class="form-field"
+                id="passwordConfirmation"
+                name="passwordConfirmation"
+                type="password" />
+        
+            <div class="form-controls">
+                <pie-switch
+                    label="Approve settings"
+                    id="approveSettings"
+                    name="approveSettings"
+                    required></pie-switch>
+                <pie-switch
+                    label="Enable Notifications"
+                    id="notifications"
+                    name="notifications"></pie-switch>
+            </div>
+            <div class="form-btns">
+                <pie-button class="form-btn" variant="secondary" type="reset">Reset</pie-button>
+                <pie-button class="form-btn" type="submit">Submit</pie-button>
+            </div>
         </form>
+        
         <div id="output"></div>
         <script type="module" src="/form.js"></script>
     </body>
