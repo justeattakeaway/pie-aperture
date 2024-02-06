@@ -158,7 +158,7 @@ esm
 
 # Turborepo config
 !.turbo/config.json
-.turbo
+.turbo/cookies
 
 /build
 dist/
