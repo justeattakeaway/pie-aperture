@@ -157,8 +157,8 @@ esm
 .vscode
 
 # Turborepo config
-.turbo
 !.turbo/config.json
+.turbo
 
 /build
 dist/

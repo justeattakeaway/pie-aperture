@@ -1,0 +1,18 @@
+{
+    "$schema": "https://turborepo.org/schema.json",
+    "pipeline": {
+      "preview": {
+        "cache": false,
+        "dependsOn": ["build"]
+      },
+      "test:visual": {
+        "cache": false
+      },
+      "dev": {
+        "cache": false
+      },
+      "upgrade-pie-packages": {
+        "cache": false
+      }
+    }
+}

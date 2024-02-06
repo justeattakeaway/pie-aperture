@@ -62,10 +62,9 @@ jobs:
         with:
           node-version: ${{ inputs.node-version }}
 
-      - name: Install Dependencies & Build - ${{ inputs.package-name }}
+      - name: Build - ${{ inputs.package-name }}
         shell: bash
-        working-directory: ./${{ inputs.package-name }}
-        run: yarn && yarn ${{ inputs.build-script }}
+        run: yarn ${{ inputs.build-script }}
 
       # This is a slightly modified version of the following workflow - https://github.com/justeattakeaway/pie/blob/main/.github/workflows/amplify-deploy.yml
       # Create Github Deployment

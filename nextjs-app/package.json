@@ -1,14 +1,14 @@
 {
-  "name": "pie-aperture-nextjs",
+  "name": "nextjs-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "preview": "next start",
     "lint": "next lint",
-    "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NEXT} npx percy exec -- ../node_modules/.bin/wdio run ./wdio.conf.js",
-    "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u && yarn"
+    "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NEXT} npx percy exec -- wdio run ./wdio.conf.js",
+    "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "dependencies": {
     "@justeattakeaway/pie-button": "0.45.2",
@@ -40,6 +40,9 @@
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "typescript": "5.2.2"
+  },
+  "installConfig": {
+    "hoistingLimits": "workspaces"
   },
   "volta": {
     "extends": "../package.json"
