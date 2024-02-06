@@ -62,6 +62,10 @@ jobs:
         with:
           node-version: ${{ inputs.node-version }}
 
+      - name: Install Dependencies
+        shell: bash
+        run: yarn
+
       - name: Build - ${{ inputs.package-name }}
         shell: bash
         run: yarn ${{ inputs.build-script }}
