@@ -69,7 +69,7 @@ jobs:
 
       - name: Build - ${{ inputs.package-name }}
         shell: bash
-        run: yarn ${{ inputs.build-script }}
+        run: yarn ${{ inputs.build-script }} --filter="${{ inputs.package-name }}"
 
       # This is a slightly modified version of the following workflow - https://github.com/justeattakeaway/pie/blob/main/.github/workflows/amplify-deploy.yml
       # Create Github Deployment
