@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "workspaces": [
-    "nuxt-app",
     "nextjs-app",
+    "nuxt-app",
     "vanilla-app"
   ],
   "scripts": {
@@ -13,6 +13,7 @@
     "dev": "turbo run dev",
     "generate": "turbo run generate --token=${TURBO_TOKEN}",
     "lint": "turbo run lint --token=${TURBO_TOKEN}",
+    "test:system": "turbo run test:system --token=${TURBO_TOKEN}",
     "test:visual": "turbo run test:visual",
     "upgrade-pie-packages": "turbo run upgrade-pie-packages && yarn"
   },
@@ -38,14 +39,10 @@
     "@wdio/local-runner": "8.19.0",
     "@wdio/mocha-framework": "8.19.0",
     "@wdio/spec-reporter": "8.19.0",
+    "cross-env": "^7.0.3",
     "selenium-webdriver": "4.14.0",
     "turbo": "^1.12.2"
   },
-  "workspaces": [
-    "nextjs-app",
-    "nuxt-app",
-    "vanilla-app"
-  ],
   "volta": {
     "node": "20.9.0",
     "yarn": "3.5.0"

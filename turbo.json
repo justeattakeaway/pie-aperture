@@ -5,11 +5,15 @@
         "cache": false,
         "dependsOn": ["build"]
       },
+      "test:system": {
+        "cache": true
+      },
       "test:visual": {
         "cache": false
       },
       "dev": {
-        "cache": false
+        "cache": false,
+        "persistent": true
       },
       "upgrade-pie-packages": {
         "cache": false

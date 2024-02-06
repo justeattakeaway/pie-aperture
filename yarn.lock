@@ -4958,6 +4958,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cross-env@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "cross-env@npm:7.0.3"
+  dependencies:
+    cross-spawn: ^7.0.1
+  bin:
+    cross-env: src/bin/cross-env.js
+    cross-env-shell: src/bin/cross-env-shell.js
+  checksum: 26f2f3ea2ab32617f57effb70d329c2070d2f5630adc800985d8b30b56e8bf7f5f439dd3a0358b79cee6f930afc23cf8e23515f17ccfb30092c6b62c6b630a79
+  languageName: node
+  linkType: hard
+
 "cross-fetch@npm:4.0.0":
   version: 4.0.0
   resolution: "cross-fetch@npm:4.0.0"
@@ -4977,7 +4989,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3":
+"cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.1, cross-spawn@npm:^7.0.2, cross-spawn@npm:^7.0.3":
   version: 7.0.3
   resolution: "cross-spawn@npm:7.0.3"
   dependencies:
@@ -9833,6 +9845,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nextjs-app@workspace:nextjs-app":
+  version: 0.0.0-use.local
+  resolution: "nextjs-app@workspace:nextjs-app"
+  dependencies:
+    "@justeattakeaway/pie-button": 0.45.2
+    "@justeattakeaway/pie-card": 0.17.2
+    "@justeattakeaway/pie-cookie-banner": 0.17.0
+    "@justeattakeaway/pie-css": 0.10.0
+    "@justeattakeaway/pie-divider": 0.12.1
+    "@justeattakeaway/pie-form-label": 0.11.0
+    "@justeattakeaway/pie-icon-button": 0.27.2
+    "@justeattakeaway/pie-icons-webc": 0.17.2
+    "@justeattakeaway/pie-link": 0.15.0
+    "@justeattakeaway/pie-modal": 0.38.4
+    "@justeattakeaway/pie-spinner": 0.5.2
+    "@justeattakeaway/pie-switch": 0.26.0
+    "@justeattakeaway/pie-tag": 0.5.0
+    "@lit-labs/nextjs": 0.1.4
+    "@lit/react": 1.0.2
+    "@types/node": 20.9.1
+    "@types/react": 18.2.47
+    "@types/react-dom": 18.2.7
+    deepmerge: 4.3.1
+    eslint: 8.48.0
+    eslint-config-next: 13.4.19
+    lit: 3.1.0
+    next: 13.5.6
+    react: 18.2.0
+    react-dom: 18.2.0
+    sass: 1.69.5
+    typescript: 5.2.2
+  languageName: unknown
+  linkType: soft
+
 "nitropack@npm:^2.8.1":
   version: 2.8.1
   resolution: "nitropack@npm:2.8.1"
@@ -10919,64 +10965,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pie-aperture-nextjs@workspace:nextjs-app":
-  version: 0.0.0-use.local
-  resolution: "pie-aperture-nextjs@workspace:nextjs-app"
-  dependencies:
-    "@justeattakeaway/pie-button": 0.45.2
-    "@justeattakeaway/pie-card": 0.17.2
-    "@justeattakeaway/pie-cookie-banner": 0.17.0
-    "@justeattakeaway/pie-css": 0.10.0
-    "@justeattakeaway/pie-divider": 0.12.1
-    "@justeattakeaway/pie-form-label": 0.11.0
-    "@justeattakeaway/pie-icon-button": 0.27.2
-    "@justeattakeaway/pie-icons-webc": 0.17.2
-    "@justeattakeaway/pie-link": 0.15.0
-    "@justeattakeaway/pie-modal": 0.38.4
-    "@justeattakeaway/pie-spinner": 0.5.2
-    "@justeattakeaway/pie-switch": 0.26.0
-    "@justeattakeaway/pie-tag": 0.5.0
-    "@lit-labs/nextjs": 0.1.4
-    "@lit/react": 1.0.2
-    "@types/node": 20.9.1
-    "@types/react": 18.2.47
-    "@types/react-dom": 18.2.7
-    deepmerge: 4.3.1
-    eslint: 8.48.0
-    eslint-config-next: 13.4.19
-    lit: 3.1.0
-    next: 13.5.6
-    react: 18.2.0
-    react-dom: 18.2.0
-    sass: 1.69.5
-    typescript: 5.2.2
-  languageName: unknown
-  linkType: soft
-
-"pie-aperture-vanilla@workspace:vanilla-app":
-  version: 0.0.0-use.local
-  resolution: "pie-aperture-vanilla@workspace:vanilla-app"
-  dependencies:
-    "@justeattakeaway/pie-button": 0.45.2
-    "@justeattakeaway/pie-card": 0.17.2
-    "@justeattakeaway/pie-cookie-banner": 0.17.0
-    "@justeattakeaway/pie-css": 0.10.0
-    "@justeattakeaway/pie-divider": 0.12.1
-    "@justeattakeaway/pie-form-label": 0.11.0
-    "@justeattakeaway/pie-icon-button": 0.27.2
-    "@justeattakeaway/pie-icons-webc": 0.17.2
-    "@justeattakeaway/pie-link": 0.15.0
-    "@justeattakeaway/pie-modal": 0.38.4
-    "@justeattakeaway/pie-spinner": 0.5.2
-    "@justeattakeaway/pie-switch": 0.26.0
-    "@justeattakeaway/pie-tag": 0.5.0
-    deepmerge: 4.3.1
-    lit: 3.1.0
-    typescript: 5.2.2
-    vite: 4.5.1
-  languageName: unknown
-  linkType: soft
-
 "pie-aperture@workspace:.":
   version: 0.0.0-use.local
   resolution: "pie-aperture@workspace:."
@@ -10991,8 +10979,10 @@ __metadata:
     "@wdio/mocha-framework": 8.19.0
     "@wdio/spec-reporter": 8.19.0
     commitizen: 4.3.0
+    cross-env: ^7.0.3
     cz-customizable: 7.0.0
     selenium-webdriver: 4.14.0
+    turbo: ^1.12.2
   languageName: unknown
   linkType: soft
 
@@ -13307,6 +13297,77 @@ __metadata:
   languageName: node
   linkType: hard
 
+"turbo-darwin-64@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo-darwin-64@npm:1.12.2"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"turbo-darwin-arm64@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo-darwin-arm64@npm:1.12.2"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"turbo-linux-64@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo-linux-64@npm:1.12.2"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"turbo-linux-arm64@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo-linux-arm64@npm:1.12.2"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"turbo-windows-64@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo-windows-64@npm:1.12.2"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"turbo-windows-arm64@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo-windows-arm64@npm:1.12.2"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"turbo@npm:^1.12.2":
+  version: 1.12.2
+  resolution: "turbo@npm:1.12.2"
+  dependencies:
+    turbo-darwin-64: 1.12.2
+    turbo-darwin-arm64: 1.12.2
+    turbo-linux-64: 1.12.2
+    turbo-linux-arm64: 1.12.2
+    turbo-windows-64: 1.12.2
+    turbo-windows-arm64: 1.12.2
+  dependenciesMeta:
+    turbo-darwin-64:
+      optional: true
+    turbo-darwin-arm64:
+      optional: true
+    turbo-linux-64:
+      optional: true
+    turbo-linux-arm64:
+      optional: true
+    turbo-windows-64:
+      optional: true
+    turbo-windows-arm64:
+      optional: true
+  bin:
+    turbo: bin/turbo
+  checksum: a889988310fbd088e241a4aeb1f5ea34a9dba231ab77cd6764dbe53a81e07ec1dde4d7123f543e06cc6cd653f350886424ccc9d883af645816e859d455042cf1
+  languageName: node
+  linkType: hard
+
 "type-check@npm:^0.4.0, type-check@npm:~0.4.0":
   version: 0.4.0
   resolution: "type-check@npm:0.4.0"
@@ -13811,6 +13872,30 @@ __metadata:
   checksum: 5342a994986199b3c28e53a8452a14b2bb5085727691ea7aa0d284a6606b127c371e0925ae99b3f1ef7cc7d2c9de75f52eb61a3d1cc45e39bca1e3a9444cbb4e
   languageName: node
   linkType: hard
+
+"vanilla-app@workspace:vanilla-app":
+  version: 0.0.0-use.local
+  resolution: "vanilla-app@workspace:vanilla-app"
+  dependencies:
+    "@justeattakeaway/pie-button": 0.45.2
+    "@justeattakeaway/pie-card": 0.17.2
+    "@justeattakeaway/pie-cookie-banner": 0.17.0
+    "@justeattakeaway/pie-css": 0.10.0
+    "@justeattakeaway/pie-divider": 0.12.1
+    "@justeattakeaway/pie-form-label": 0.11.0
+    "@justeattakeaway/pie-icon-button": 0.27.2
+    "@justeattakeaway/pie-icons-webc": 0.17.2
+    "@justeattakeaway/pie-link": 0.15.0
+    "@justeattakeaway/pie-modal": 0.38.4
+    "@justeattakeaway/pie-spinner": 0.5.2
+    "@justeattakeaway/pie-switch": 0.26.0
+    "@justeattakeaway/pie-tag": 0.5.0
+    deepmerge: 4.3.1
+    lit: 3.1.0
+    typescript: 5.2.2
+    vite: 4.5.1
+  languageName: unknown
+  linkType: soft
 
 "vite-node@npm:^1.2.2":
   version: 1.2.2

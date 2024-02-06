@@ -13,7 +13,7 @@ test.describe('Form Page', () => {
         }
 
         // Act
-        await page.goto('/form');
+        await page.goto('/form.html');
 
         await page.fill('#username', expectFormData.username);
         await page.fill('#email', expectFormData.email);
@@ -33,6 +33,8 @@ test.describe('Form Page', () => {
         // Assert
         const output = await page.textContent('#outputData');
         const outputData = JSON.parse(output || '');
+
+        console.log(outputData);
 
         expect(outputData).toEqual(expectFormData);
     });
