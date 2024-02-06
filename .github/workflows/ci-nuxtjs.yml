@@ -17,6 +17,9 @@ concurrency:
   group: CI-Nuxt-${{ github.ref }}
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
+env:
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+
 jobs:
 
   build-nuxt-app-windows-node16:
@@ -108,16 +111,10 @@ jobs:
   #     - name: Install Dependencies - Root
   #       shell: bash
   #       run: yarn
-
-  #     - name: Install Dependencies - Nuxt App
-  #       shell: bash
-  #       working-directory: ./nuxt-app
-  #       run: yarn
-
+  #
   #     - name: Run Percy Tests
   #       shell: bash
-  #       working-directory: ./nuxt-app
-  #       run: yarn test:visual
+  #       run: yarn test:visual --filter=nuxt-app
   #   env:
   #     BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
   #     BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}

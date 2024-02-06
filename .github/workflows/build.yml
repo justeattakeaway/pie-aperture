@@ -47,6 +47,7 @@ env:
   BRANCH_NAME: ${{ github.event_name == 'pull_request' && format('pr{0}', github.event.number) || github.ref == 'refs/heads/main' && 'main' }}
   BUCKET_NAME: ${{ github.event_name == 'pull_request' && inputs.bucket-name-preview || (github.ref == 'refs/heads/main' && inputs.bucket-name-main) }}
   ZIP_NAME: ${{ github.event_name == 'pull_request' && format('{0}-{1}-preview.zip', inputs.package-name, github.event.number) || (github.ref == 'refs/heads/main' && format('{0}-main.zip', inputs.package-name)) }}
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
 
 jobs:
   build:
@@ -62,10 +63,13 @@ jobs:
         with:
           node-version: ${{ inputs.node-version }}
 
-      - name: Install Dependencies & Build - ${{ inputs.package-name }}
+      - name: Install Dependencies
         shell: bash
-        working-directory: ./${{ inputs.package-name }}
-        run: yarn && yarn ${{ inputs.build-script }}
+        run: yarn
+
+      - name: Build - ${{ inputs.package-name }}
+        shell: bash
+        run: yarn ${{ inputs.build-script }} --filter="${{ inputs.package-name }}"
 
       # This is a slightly modified version of the following workflow - https://github.com/justeattakeaway/pie/blob/main/.github/workflows/amplify-deploy.yml
       # Create Github Deployment

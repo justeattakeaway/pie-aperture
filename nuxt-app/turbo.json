@@ -1,0 +1,19 @@
+{
+    "extends": ["//"],
+    "pipeline": {
+        "build": {
+            "cache": true,
+            "outputs": [
+              ".nuxt/**",
+              ".output/**"
+            ]
+        },
+        "generate": {
+            "cache": true,
+            "outputs": [
+              ".nuxt/**",
+              ".output/**"
+            ]
+        }
+    }
+}

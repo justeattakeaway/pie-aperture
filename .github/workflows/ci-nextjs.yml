@@ -17,6 +17,9 @@ concurrency:
   group: CI-NextJS-${{ github.ref }}
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
+env:
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+
 jobs:
 
   # Commenting these out for now as there's currently an issue with Next.
@@ -100,19 +103,13 @@ jobs:
           node-version: 20
           cache: "yarn"
 
-      - name: Install Dependencies - Root
+      - name: Install Dependencies
         shell: bash
-        run: yarn
-  
-      - name: Install Dependencies - NextJS App
-        shell: bash
-        working-directory: ./nextjs-app
         run: yarn
 
       - name: Run Percy Tests
         shell: bash
-        working-directory: ./nextjs-app
-        run: yarn test:visual
+        run: yarn test:visual --filter=nextjs-app
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
