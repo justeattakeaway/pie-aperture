@@ -21,11 +21,11 @@ pie-divider {
     flex-direction: column;
 }
 
-.form__field {
+.form-field {
     margin-bottom: var(--dt-spacing-b);
 }
 
-.form__controls {
+.form-controls {
     margin-top: var(--dt-spacing-e);
 
     >* {
@@ -37,12 +37,12 @@ pie-divider {
     }
 }
 
-.form__btns {
+.form-btns {
     margin-top: var(--dt-spacing-c);
     display: flex;
     gap: var(--dt-spacing-a)
 }
 
-.form__btns>.form__btn:first-of-type {
+.form-btns>.form-btn:first-of-type {
     margin-left: auto;
 }
