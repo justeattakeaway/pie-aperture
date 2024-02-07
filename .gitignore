@@ -165,19 +165,11 @@ dist/
 
 .plugin-clean
 
-# Playwright
-test-results/
-browsers-report/
-lit-browsers-report/
-visual-report/
-lit-visual-report/
-**/playwright-report/
-
 # TypeScript
 compiled/
 
 **/src/react.ts
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+
+# Playwright
+**/playwright-report
+**/test-results

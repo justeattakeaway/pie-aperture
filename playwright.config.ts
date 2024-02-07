@@ -32,9 +32,22 @@ export default {
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'system',
+      name: 'system:nuxt',
       use: { ...devices['Desktop Chrome'] },
+      grep: /@nuxt/,
       testMatch: '**/*.spec.ts',
+    },
+    {
+        name: 'system:nextjs',
+        grep: /@nextjs/,
+        use: { ...devices['Desktop Chrome'] },
+        testMatch: '**/*.spec.ts',
+    },
+    {
+        name: 'system:vanilla',
+        grep: /@vanilla/,
+        use: { ...devices['Desktop Chrome'] },
+        testMatch: '**/*.spec.ts',
     }
   ],
 };
