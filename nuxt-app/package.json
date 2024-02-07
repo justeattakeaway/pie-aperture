@@ -9,7 +9,7 @@
     "postinstall": "nuxt prepare",
     "test:system": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts --project=system:nuxt",
     "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NUXT} npx percy exec -- ../node_modules/.bin/wdio run ./wdio.conf.js",
-    "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u && yarn"
+    "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "devDependencies": {
     "deepmerge": "4.3.1",

@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "test:system": "APP_NAME=vanilla-app npx playwright test --config=../playwright.config.ts --project=system:vanilla",
     "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_VANILLA} npx percy exec -- ../node_modules/.bin/wdio run ./wdio.conf.js",
-    "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u && yarn"
+    "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "devDependencies": {
     "deepmerge": "4.3.1",
