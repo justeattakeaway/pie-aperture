@@ -1,4 +1,4 @@
-const { waitUntilPageLoad } = require('../../webdriver-helpers/wait-helper.js');
+const { waitUntilPageLoad } = require('../../../webdriver-helpers/wait-helper.js');
 const { percyScreenshot } = require('@percy/selenium-webdriver');
 
 describe('Nuxt App', () => {

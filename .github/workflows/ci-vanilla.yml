@@ -104,6 +104,14 @@ jobs:
         shell: bash
         run: yarn
 
+      # Setup Playwright
+      - name: Setup Playwright
+        uses: ./.github/actions/setup-playwright
+
+      - name: Run System Tests
+        shell: bash
+        run: yarn test:system --filter=vanilla-app
+
       - name: Run Percy Tests
         shell: bash
         run: yarn test:visual --filter=vanilla-app

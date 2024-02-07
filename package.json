@@ -8,6 +8,7 @@
     "dev": "turbo run dev",
     "generate": "turbo run generate --token=${TURBO_TOKEN}",
     "lint": "turbo run lint --token=${TURBO_TOKEN}",
+    "test:system": "turbo run test:system --token=${TURBO_TOKEN}",
     "test:visual": "turbo run test:visual",
     "upgrade-pie-packages": "turbo run upgrade-pie-packages && yarn"
   },
@@ -26,11 +27,14 @@
   "devDependencies": {
     "@percy/cli": "1.27.4",
     "@percy/selenium-webdriver": "2.0.2",
+    "@playwright/test": "1.41.1",
+    "@types/node": "20.11.13",
     "@wdio/browserstack-service": "8.24.1",
     "@wdio/cli": "8.19.0",
     "@wdio/local-runner": "8.19.0",
     "@wdio/mocha-framework": "8.19.0",
     "@wdio/spec-reporter": "8.19.0",
+    "cross-env": "^7.0.3",
     "selenium-webdriver": "4.14.0",
     "turbo": "^1.12.2"
   },

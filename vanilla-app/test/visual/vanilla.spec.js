@@ -1,4 +1,4 @@
-import { waitUntilPageLoad } from '../../webdriver-helpers/wait-helper.js';
+import { waitUntilPageLoad } from '../../../webdriver-helpers/wait-helper.js';
 import { percyScreenshot } from '@percy/selenium-webdriver';
 
 describe('Vanilla App', () => {

@@ -107,11 +107,19 @@ jobs:
   #       with:
   #         node-version: 20
   #         cache: "yarn"
-
-  #     - name: Install Dependencies - Root
+  
+  #     - name: Install Dependencies
   #       shell: bash
   #       run: yarn
-  #
+  
+  #     # Setup Playwright
+  #     - name: Setup Playwright
+  #       uses: ./.github/actions/setup-playwright
+  
+  #     - name: Run System Tests
+  #       shell: bash
+  #       run: yarn test:system --filter=nuxt-app
+  
   #     - name: Run Percy Tests
   #       shell: bash
   #       run: yarn test:visual --filter=nuxt-app

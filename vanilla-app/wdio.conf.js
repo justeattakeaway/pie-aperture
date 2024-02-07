@@ -7,7 +7,7 @@ const config = merge(sharedConf.config, {
     baseUrl: getEnvironmentBaseUrl('vanilla-app'),
 
     specs: [
-        './test/*.js'
+        './test/visual/*.js'
     ],
 });
 
