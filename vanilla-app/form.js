@@ -14,6 +14,6 @@ form.addEventListener('submit', (e) => {
 
     output.innerHTML = `
         <h2>Form Data</h2>
-        <pre data-test-id="outputData">${JSON.stringify(data, null, 2)}</pre>
+        <pre>${JSON.stringify(data, null, 2)}</pre>
     `;
 });

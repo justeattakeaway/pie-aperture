@@ -2,11 +2,6 @@
   "name": "pie-aperture",
   "version": "0.1.0",
   "private": true,
-  "workspaces": [
-    "nextjs-app",
-    "nuxt-app",
-    "vanilla-app"
-  ],
   "scripts": {
     "build": "turbo run build --token=${TURBO_TOKEN}",
     "cz": "./node_modules/cz-customizable/standalone.js",
@@ -43,6 +38,11 @@
     "selenium-webdriver": "4.14.0",
     "turbo": "^1.12.2"
   },
+  "workspaces": [
+    "nextjs-app",
+    "nuxt-app",
+    "vanilla-app"
+  ],
   "volta": {
     "node": "20.9.0",
     "yarn": "3.5.0"

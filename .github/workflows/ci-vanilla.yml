@@ -104,15 +104,9 @@ jobs:
         shell: bash
         run: yarn
 
-      - name: Install Dependencies - Vanilla App
-        shell: bash
-        working-directory: ./vanilla-app
-        run: yarn
-
       - name: Run System Tests
         shell: bash
-        working-directory: ./vanilla-app
-        run: yarn test:system
+        run: yarn test:system --filter=vanilla-app
 
       - name: Run Percy Tests
         shell: bash

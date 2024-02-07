@@ -107,17 +107,15 @@ jobs:
   #       with:
   #         node-version: 20
   #         cache: "yarn"
-
-  #     - name: Install Dependencies - Root
+  #
+  #     - name: Install Dependencies
   #       shell: bash
   #       run: yarn
-
-  #     - name: Install Dependencies - Nuxt App
+  #
+  #     - name: Run System Tests
   #       shell: bash
-  #       working-directory: ./nuxt-app
-  #       run: yarn
-
-
+  #       run: yarn test:system --filter=nuxt-app
+  #
   #     - name: Run Percy Tests
   #       shell: bash
   #       run: yarn test:visual --filter=nuxt-app
@@ -130,14 +128,12 @@ jobs:
   
       - name: Run System Tests
         shell: bash
-        working-directory: ./nuxt-app
-        run: yarn test:system
+        run: yarn test:system --filter=nuxt-app
 
 
       - name: Run Percy Tests
         shell: bash
-        working-directory: ./nuxt-app
-        run: yarn test:visual
+        run: yarn test:visual --filter=nuxt-app
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
