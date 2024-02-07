@@ -31,19 +31,22 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'nextjs:system',
-      use: { ...devices['Desktop Chrome'] },
-      testMatch: 'nextjs-app/test/system/*.spec.ts',
-    }, 
-    {
-      name: 'nuxtjs:system',
-      use: { ...devices['Desktop Chrome'] },
-      testMatch: 'nuxt-app/test/system/*.spec.ts',
+        name: 'system:nuxt',
+        use: { ...devices['Desktop Chrome'] },
+        grep: /@nuxt/,
+        testMatch: '**/*.spec.ts',
     },
     {
-      name: 'vanilla:system',
-      use: { ...devices['Desktop Chrome'] },
-      testMatch: 'vanilla-app/test/system/*.spec.ts',
+        name: 'system:nextjs',
+        grep: /@nextjs/,
+        use: { ...devices['Desktop Chrome'] },
+        testMatch: '**/*.spec.ts',
+    },
+    {
+        name: 'system:vanilla',
+        grep: /@vanilla/,
+        use: { ...devices['Desktop Chrome'] },
+        testMatch: '**/*.spec.ts',
     }
-  ],
+    ],
 });
