@@ -6,7 +6,7 @@
                 Username:
             </label>
             <input
-                class="form__field"
+                class="form-field"
                 id="username"
                 name="username"
                 v-model="username"
@@ -16,7 +16,7 @@
                 Email:
             </label>
             <input
-                class="form__field"
+                class="form-field"
                 id="email"
                 name="email"
                 v-model="email"
@@ -26,7 +26,7 @@
                 Password:
             </label>
             <input
-                class="form__field"
+                class="form-field"
                 id="password"
                 name="password"
                 v-model="password"
@@ -36,13 +36,13 @@
                 Confirm Password:
             </label>
             <input
-                class="form__field"
+                class="form-field"
                 id="passwordConfirmation"
                 name="passwordConfirmation"
                 v-model="passwordConfirmation"
                 type="password" />
         
-            <div class="form__controls">
+            <div class="form-controls">
                 <pie-switch
                     label="Approve settings"
                     id="approveSettings"
@@ -57,14 +57,14 @@
                     @change="handleNotificationsChange"
                     :checked="notifications"></pie-switch>
             </div>
-            <div class="form__btns">
-                <pie-button id="reset" class="form__btn" variant="secondary" type="reset">Reset</pie-button>
-                <pie-button id="submit" class="form__btn" type="submit">Submit</pie-button>
+            <div class="form-btns">
+                <pie-button class="form-btn" variant="secondary" type="reset">Reset</pie-button>
+                <pie-button class="form-btn" type="submit">Submit</pie-button>
             </div>
         </form>
         <div id="output">
             <h2>Form Data</h2>
-            <pre id="outputData">
+            <pre>
                 {{ formDataDisplay }}
             </pre>
         </div>
@@ -81,7 +81,7 @@ const username = defineModel('username');
 const email = defineModel('email');
 const password = defineModel('password');
 const passwordConfirmation = defineModel('passwordConfirmation');
-const approveSettings = defineModel('approveSettings', { default: false });
+const approveSettings = defineModel('approveSettings', { default: true });
 const notifications = defineModel('notifications', { default: false });
 
 const formDataDisplay = defineModel('formDataDisplay');
@@ -99,12 +99,10 @@ function handleSubmit(event) {
 }
 
 function handleNotificationsChange(event) {
-    console.log(event.target.checked)
     notifications.value = event.target.checked;
 }
 
 function handleApproveSettingsChange(event) {
-    console.log(event.target.checked)
     approveSettings.value = event.target.checked;
 }
 
@@ -117,11 +115,11 @@ function handleApproveSettingsChange(event) {
         flex-direction: column;
     }
 
-    .form__field {
+    .form-field {
         margin-bottom: var(--dt-spacing-b);
     }
 
-    .form__controls {
+    .form-controls {
         margin-top: var(--dt-spacing-e);
         > * {
             display: block;
@@ -132,13 +130,13 @@ function handleApproveSettingsChange(event) {
         }
     }
 
-    .form__btns {
+    .form-btns {
         margin-top: var(--dt-spacing-c);
         display: flex;
         gap: var(--dt-spacing-a)
     }
 
-    .form__btns > .form__btn:first-of-type {
+    .form-btns > .form-btn:first-of-type {
         margin-left: auto;
     }
 </style>
