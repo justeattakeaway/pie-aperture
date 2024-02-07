@@ -7,6 +7,6 @@ exports.config = merge(sharedConf.config, {
     baseUrl: getEnvironmentBaseUrl('nuxt-app'),
 
     specs: [
-        './test/*.js'
+        './test/visual/*.js'
     ],
 });
