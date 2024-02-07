@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { devices } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 import { getEnvironmentBaseUrl } from './playwright-helpers/configuration-helper';
 
 const baseUrl = getEnvironmentBaseUrl(process.env.APP_NAME);
-=======
-import { defineConfig, devices } from '@playwright/test';
-=======
-import { devices } from '@playwright/test';
->>>>>>> 2f3daf3 (add basic nuxt form test)
-
->>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -20,15 +11,7 @@ import { devices } from '@playwright/test';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default {
-=======
 export default defineConfig({
->>>>>>> f93bea4 (test: DSW-1581 add playwright to aperture)
-=======
-export default {
->>>>>>> 2f3daf3 (add basic nuxt form test)
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -62,41 +45,5 @@ export default {
       use: { ...devices['Desktop Chrome'] },
       testMatch: 'vanilla-app/test/system/*.spec.ts',
     }
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
-
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
-
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
   ],
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://127.0.0.1:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
-};
+});
