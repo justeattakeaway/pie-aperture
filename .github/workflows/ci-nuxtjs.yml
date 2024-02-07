@@ -107,15 +107,19 @@ jobs:
   #       with:
   #         node-version: 20
   #         cache: "yarn"
-  #
+  
   #     - name: Install Dependencies
   #       shell: bash
   #       run: yarn
-  #
+  
+  #     # Setup Playwright
+  #     - name: Setup Playwright
+  #       uses: ./.github/actions/setup-playwright
+  
   #     - name: Run System Tests
   #       shell: bash
   #       run: yarn test:system --filter=nuxt-app
-  #
+  
   #     - name: Run Percy Tests
   #       shell: bash
   #       run: yarn test:visual --filter=nuxt-app
@@ -125,18 +129,3 @@ jobs:
   #     NUXT_AMPLIFY_ID: d36dan3bxjue8c
   #     PERCY_TOKEN_PIE_APERTURE_NUXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NUXT }}
   #     PR_NUMBER: ${{ github.event.number }}
-  
-      - name: Run System Tests
-        shell: bash
-        run: yarn test:system --filter=nuxt-app
-
-
-      - name: Run Percy Tests
-        shell: bash
-        run: yarn test:visual --filter=nuxt-app
-    env:
-      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-      NUXT_AMPLIFY_ID: d36dan3bxjue8c
-      PERCY_TOKEN_PIE_APERTURE_NUXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NUXT }}
-      PR_NUMBER: ${{ github.event.number }}
