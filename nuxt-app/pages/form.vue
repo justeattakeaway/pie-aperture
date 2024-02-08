@@ -5,13 +5,14 @@
             <label for="username">
                 Username:
             </label>
-            <input
+            <pie-input
+                :value="username"
+                @input="handleUsernameInput"
                 class="form-field"
                 id="username"
                 data-test-id="username"
                 name="username"
-                v-model="username"
-                type="text" />
+                type="text"></pie-input>
         
             <label for="email">
                 Email:
@@ -76,16 +77,16 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { PieButton } from '@justeattakeaway/pie-button';
 import { PieSwitch } from '@justeattakeaway/pie-switch';
-
+import { PieInput } from '@justeattakeaway/pie-input';
 import { defineModel } from 'vue';
 
-const username = defineModel('username');
-const email = defineModel('email');
-const password = defineModel('password');
-const passwordConfirmation = defineModel('passwordConfirmation');
+const username = defineModel('username', { default: '' });
+const email = defineModel('email', { default: '' });
+const password = defineModel('password', { default: '' });
+const passwordConfirmation = defineModel('passwordConfirmation', { default: '' });
 const approveSettings = defineModel('approveSettings', { default: false });
 const notifications = defineModel('notifications', { default: false });
 
@@ -101,6 +102,10 @@ function handleSubmit(event) {
         approveSettings: approveSettings.value,
         enableNotifications: notifications.value
     }, null, 2);
+}
+
+function handleUsernameInput(event) {
+    username.value = event.target.value;
 }
 
 function handleNotificationsChange(event) {
