@@ -58,15 +58,6 @@ export default function Form() {
                 <label htmlFor="username">
                     Username:
                 </label>
-                {/* <input
-                    className="form-field"
-                    id="username"
-                    data-test-id="username"
-                    name="username"
-                    value={username}
-                    onChange={handleUsernameChange}
-                    type="text" /> */}
-
                 <PieInput
                     className="form-field"
                     id="username"
