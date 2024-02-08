@@ -12,8 +12,8 @@ form.addEventListener('submit', (e) => {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    data.approveSettings = formData.has('approveSettings') ? true : false;
-    data.enableNotifications = formData.has('enableNotifications') ? true : false;
+    data.approveSettings = formData.has('approveSettings');
+    data.enableNotifications = formData.has('enableNotifications');
 
     output.innerHTML = `
         <h2>Form Data</h2>

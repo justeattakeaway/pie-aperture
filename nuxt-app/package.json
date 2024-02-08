@@ -8,7 +8,7 @@
     "playwright:show-report": "npx playwright show-report ../playwright-reports/nuxt-app-playwright-report",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test:system": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts --project=system",
+    "test:system": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts",
     "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NUXT} npx percy exec -- wdio run ./wdio.conf.js",
     "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },

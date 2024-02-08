@@ -6,8 +6,8 @@ export class FormPage {
     readonly emailField: Locator;
     readonly passwordField: Locator;
     readonly passwordConfirmationField: Locator;
-    readonly approveSettingsBtn: Locator;
-    readonly enableNotificationsBtn: Locator;
+    readonly approveSettingsSwitch: Locator;
+    readonly enableNotificationsSwitch: Locator;
     readonly resetBtn: Locator;
     readonly submitBtn: Locator;
     readonly outputData: Locator;
@@ -18,8 +18,8 @@ export class FormPage {
         this.emailField = page.getByTestId('email');
         this.passwordField = page.getByTestId('password');
         this.passwordConfirmationField = page.getByTestId('passwordConfirmation');
-        this.approveSettingsBtn = page.getByTestId('approveSettings').getByTestId('switch-component');
-        this.enableNotificationsBtn = page.getByTestId('enableNotifications').getByTestId('switch-component');
+        this.approveSettingsSwitch = page.getByTestId('approveSettings').getByTestId('switch-component');
+        this.enableNotificationsSwitch = page.getByTestId('enableNotifications').getByTestId('switch-component');
         this.resetBtn = page.getByTestId('reset-btn');
         this.submitBtn = page.getByTestId('submit-btn');
 
@@ -38,11 +38,11 @@ export class FormPage {
         await this.passwordConfirmationField.fill(formData.passwordConfirmation);
 
         if (formData.approveSettings) {
-            await this.approveSettingsBtn.click();
+            await this.approveSettingsSwitch.click();
         }
 
         if (formData.enableNotifications) {
-            await this.enableNotificationsBtn.click();
+            await this.enableNotificationsSwitch.click();
         }
     }
 
