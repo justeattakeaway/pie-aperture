@@ -28,7 +28,7 @@
         </style>
     </head>
     <body>
-        <h1>PIE Form Test Page</h1>
+        <h1>Vanilla - PIE Form Test Page</h1>
         <form class="form" id="testForm">
             <label for="username">
                 Username:
@@ -36,6 +36,7 @@
             <input
                 class="form-field"
                 id="username"
+                data-test-id="username"
                 name="username"
                 type="text" />
         
@@ -45,6 +46,7 @@
             <input
                 class="form-field"
                 id="email"
+                data-test-id="email"
                 name="email"
                 type="email" />
             
@@ -54,6 +56,7 @@
             <input
                 class="form-field"
                 id="password"
+                data-test-id="password"
                 name="password"
                 type="password" />
         
@@ -63,6 +66,7 @@
             <input
                 class="form-field"
                 id="passwordConfirmation"
+                data-test-id="passwordConfirmation"
                 name="passwordConfirmation"
                 type="password" />
         
@@ -70,16 +74,17 @@
                 <pie-switch
                     label="Approve settings"
                     id="approveSettings"
-                    name="approveSettings"
-                    required></pie-switch>
+                    data-test-id="approveSettings"
+                    name="approveSettings"></pie-switch>
                 <pie-switch
                     label="Enable Notifications"
-                    id="notifications"
-                    name="notifications"></pie-switch>
+                    data-test-id="enableNotifications"
+                    id="enableNotifications"
+                    name="enableNotifications"></pie-switch>
             </div>
             <div class="form-btns">
-                <pie-button class="form-btn" variant="secondary" type="reset">Reset</pie-button>
-                <pie-button class="form-btn" type="submit">Submit</pie-button>
+                <pie-button class="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</pie-button>
+                <pie-button class="form-btn" data-test-id="submit-btn" type="submit">Submit</pie-button>
             </div>
         </form>
         

@@ -112,6 +112,12 @@ jobs:
         shell: bash
         run: yarn test:system --filter=vanilla-app
 
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: vanilla-playwright-report
+          path: playwright-reports/vanilla-playwright-report/
+
       - name: Run Percy Tests
         shell: bash
         run: yarn test:visual --filter=vanilla-app

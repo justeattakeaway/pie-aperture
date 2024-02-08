@@ -8,7 +8,8 @@
     "dev": "turbo run dev",
     "generate": "turbo run generate --token=${TURBO_TOKEN}",
     "lint": "turbo run lint --token=${TURBO_TOKEN}",
-    "test:system": "turbo run test:system --token=${TURBO_TOKEN}",
+    "test:system": "turbo run test:system --token=${TURBO_TOKEN} --continue",
+    "playwright:show-report": "turbo run playwright:show-report",
     "test:visual": "turbo run test:visual",
     "upgrade-pie-packages": "turbo run upgrade-pie-packages && yarn"
   },
@@ -35,6 +36,7 @@
     "@wdio/mocha-framework": "8.19.0",
     "@wdio/spec-reporter": "8.19.0",
     "cross-env": "^7.0.3",
+    "playwright-merge-html-reports": "^0.2.8",
     "selenium-webdriver": "4.14.0",
     "turbo": "^1.12.2"
   },

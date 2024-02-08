@@ -8,6 +8,9 @@
       "test:system": {
         "cache": true
       },
+      "playwright:show-report": {
+        "cache": false
+      },
       "test:visual": {
         "cache": false
       },

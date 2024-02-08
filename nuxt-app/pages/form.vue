@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>PIE Form Test Page</h1>
+        <h1>Nuxt - PIE Form Test Page</h1>
         <form class="form" id="testForm" @submit="handleSubmit">
             <label for="username">
                 Username:
@@ -8,6 +8,7 @@
             <input
                 class="form-field"
                 id="username"
+                data-test-id="username"
                 name="username"
                 v-model="username"
                 type="text" />
@@ -18,6 +19,7 @@
             <input
                 class="form-field"
                 id="email"
+                data-test-id="email"
                 name="email"
                 v-model="email"
                 type="email" />
@@ -28,6 +30,7 @@
             <input
                 class="form-field"
                 id="password"
+                data-test-id="password"
                 name="password"
                 v-model="password"
                 type="password" />
@@ -38,6 +41,7 @@
             <input
                 class="form-field"
                 id="passwordConfirmation"
+                data-test-id="passwordConfirmation"
                 name="passwordConfirmation"
                 v-model="passwordConfirmation"
                 type="password" />
@@ -46,25 +50,26 @@
                 <pie-switch
                     label="Approve settings"
                     id="approveSettings"
+                    data-test-id="approveSettings"
                     name="approveSettings"
                     @change="handleApproveSettingsChange"
-                    :checked="approveSettings"
-                    required></pie-switch>
+                    :checked="approveSettings"></pie-switch>
                 <pie-switch
                     label="Enable Notifications"
                     id="notifications"
+                    data-test-id="enableNotifications"
                     name="notifications"
                     @change="handleNotificationsChange"
                     :checked="notifications"></pie-switch>
             </div>
             <div class="form-btns">
-                <pie-button class="form-btn" variant="secondary" type="reset">Reset</pie-button>
-                <pie-button class="form-btn" type="submit">Submit</pie-button>
+                <pie-button class="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</pie-button>
+                <pie-button class="form-btn" data-test-id="submit-btn" type="submit">Submit</pie-button>
             </div>
         </form>
-        <div id="output">
+        <div id="output" data-test-id="output">
             <h2>Form Data</h2>
-            <pre>
+            <pre data-test-id="outputData">
                 {{ formDataDisplay }}
             </pre>
         </div>
@@ -81,7 +86,7 @@ const username = defineModel('username');
 const email = defineModel('email');
 const password = defineModel('password');
 const passwordConfirmation = defineModel('passwordConfirmation');
-const approveSettings = defineModel('approveSettings', { default: true });
+const approveSettings = defineModel('approveSettings', { default: false });
 const notifications = defineModel('notifications', { default: false });
 
 const formDataDisplay = defineModel('formDataDisplay');
@@ -94,7 +99,7 @@ function handleSubmit(event) {
         password: password.value,
         passwordConfirmation: passwordConfirmation.value,
         approveSettings: approveSettings.value,
-        notifications: notifications.value
+        enableNotifications: notifications.value
     }, null, 2);
 }
 

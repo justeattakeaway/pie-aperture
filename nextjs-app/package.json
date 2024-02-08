@@ -7,7 +7,8 @@
     "build": "next build",
     "preview": "next start",
     "lint": "next lint",
-    "test:system": "APP_NAME=nextjs-app playwright test -c ../playwright.config.ts --project=system:nextjs",
+    "playwright:show-report": "npx playwright show-report ../playwright-reports/nextjs-app-playwright-report",
+    "test:system": "APP_NAME=nextjs-app playwright test -c ../playwright.config.ts --project=system",
     "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NEXT} npx percy exec -- wdio run ./wdio.conf.js",
     "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },

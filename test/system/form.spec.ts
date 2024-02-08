@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
+import { FormPage } from '../playwright/page-objects/form.page';
 
-test.describe('Form Page', () => {
+test.describe(`Form Page - ${process.env.APP_NAME}`, () => {
     test('should submit the correct form data', async ({ page }) => {
         // Arrange
         const expectFormData = {
@@ -9,30 +10,19 @@ test.describe('Form Page', () => {
             password: 'foo',
             passwordConfirmation: 'bar',
             approveSettings: true,
-            notifications: true
+            enableNotifications: true,
         };
 
+        const formPage = new FormPage(page);
+
         // Act
-        await page.goto('/form');
+        await formPage.goto();
+        await formPage.fillForm(expectFormData);
 
-        await page.fill('#username', expectFormData.username);
-        await page.fill('#email', expectFormData.email);
-        await page.fill('#password', expectFormData.password);
-        await page.fill('#passwordConfirmation', expectFormData.passwordConfirmation);
-
-        // Move down to the approveSettings switch and enable it (click method won't work)
-        await page.keyboard.press('Tab');
-        await page.keyboard.press('Space');
-
-        // Move down to the notifications switch and enable it (click method won't work)
-        await page.keyboard.press('Tab');
-        await page.keyboard.press('Space');
-
-        await page.click('#submit');
+        await formPage.submitForm();
 
         // Assert
-        const output = await page.textContent('#outputData');
-        const outputData = JSON.parse(output || '');
+        const outputData = await formPage.getOutputData();
 
         expect(outputData).toEqual(expectFormData);
     });

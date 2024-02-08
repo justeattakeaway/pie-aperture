@@ -89,7 +89,7 @@ jobs:
 
   browser-tests:
     needs: 'build-deploy-next-app-ubuntu-node20'
-    name: Run WebDriverIO Tests
+    name: Run Playwright / WebDriverIO Tests
     runs-on: ubuntu-latest
     steps:
       # Checkout the Repo
@@ -114,6 +114,13 @@ jobs:
       - name: Run System Tests
         shell: bash
         run: yarn test:system --filter=nextjs-app
+
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: nextjs-playwright-report
+          path: playwright-reports/nextjs-playwright-report/
+          retention-days: 7
 
       - name: Run Percy Tests
         shell: bash
