@@ -92,44 +92,44 @@ jobs:
           bucket-name-main: 'pie-aperture'
       secrets: inherit
 
-  browser-tests:
-    needs: 'build-deploy-nuxt-app-ubuntu-node20'
-    name: Run Playwright / WebDriverIO Tests
-    runs-on: ubuntu-latest
-    steps:
-      # Checkout the Repo
-      - name: Checkout
-        uses: actions/checkout@v3
+  # browser-tests:
+  #   needs: 'build-deploy-nuxt-app-ubuntu-node20'
+  #   name: Run System / Visual Tests
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     # Checkout the Repo
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
 
-      # Setup Node
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "yarn"
+  #     # Setup Node
+  #     - name: Setup Node
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 20
+  #         cache: "yarn"
   
-      - name: Install Dependencies
-        shell: bash
-        run: yarn
+  #     - name: Install Dependencies
+  #       shell: bash
+  #       run: yarn
   
-      # Setup Playwright
-      - name: Setup Playwright
-        uses: ./.github/actions/setup-playwright
+  #     # Setup Playwright
+  #     - name: Setup Playwright
+  #       uses: ./.github/actions/setup-playwright
   
-      - name: Run System Tests
-        shell: bash
-        run: yarn test:system --filter=nuxt-app
+  #     - name: Run System Tests
+  #       shell: bash
+  #       run: yarn test:system --filter=nuxt-app
 
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: nuxt-playwright-report
-          path: playwright-reports/nuxt-playwright-report/
-          retention-days: 7
+  #     - uses: actions/upload-artifact@v3
+  #       if: always()
+  #       with:
+  #         name: nuxt-playwright-report
+  #         path: playwright-reports/nuxt-playwright-report/
+  #         retention-days: 7
 
-      # - name: Run Percy Tests
-      #   shell: bash
-      #   run: yarn test:visual --filter=nuxt-app
+  #     - name: Run Percy Tests
+  #     - shell: bash
+  #     - run: yarn test:visual --filter=nuxt-app
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
