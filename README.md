@@ -32,7 +32,7 @@ yarn test:visual --filter=<app-name>
 ```
 
 #### Devices & Browsers
-A list of our tested browsers & devices can be found in the (WebDriverIO configuration)[https://github.com/justeattakeaway/pie-aperture/blob/main/wdio.conf.js#L3-L15]
+A list of our tested browsers & devices can be found in the [WebDriverIO configuration](https://github.com/justeattakeaway/pie-aperture/blob/main/wdio.conf.js#L3-L15)
 
 
 ### Playwright
