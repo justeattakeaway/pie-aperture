@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PieSwitch } from '@justeattakeaway/pie-switch/dist/react';
 import { PieButton } from '@justeattakeaway/pie-button/dist/react';
+import { PieInput } from '@justeattakeaway/pie-input/dist/react';
 
 export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);
@@ -12,8 +13,8 @@ export default function Form() {
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
 
-    const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setUsername(event.target.value);   
+    const handleUsernameChange = (event: CustomEvent) => {
+        setUsername(event.detail?.sourceEvent?.target?.value || '');   
     };
 
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -57,14 +58,23 @@ export default function Form() {
                 <label htmlFor="username">
                     Username:
                 </label>
-                <input
+                {/* <input
                     className="form-field"
                     id="username"
                     data-test-id="username"
                     name="username"
                     value={username}
                     onChange={handleUsernameChange}
-                    type="text" />
+                    type="text" /> */}
+
+                <PieInput
+                    className="form-field"
+                    id="username"
+                    data-test-id="username"
+                    name="username"
+                    value={username}
+                    onChange={handleUsernameChange}
+                    type="text"></PieInput>
 
                 <label htmlFor="email">
                     Email:
