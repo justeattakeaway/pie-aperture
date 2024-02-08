@@ -3,6 +3,7 @@
 External Test apps for PIE Components
 
 ## Aperture deployment links
+[Nuxt application](https://aperture-nuxt.pie.design/)
 [NextJS application](https://aperture-nextjs.pie.design/)
 [Vanilla application](https://aperture-vanilla.pie.design/)
 
