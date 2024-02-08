@@ -1,6 +1,6 @@
 # PIE Aperture
 
-PIE Aperture is designed to be a testbed repo for the [PIE Web component library](https://github.com/justeattakeaway/pie). This repo houses text applications currently for NextJS, Nuxt and vanilla JS. These applications import the web components and ensure that they work as expected when installed in a variety of different frameworks.
+PIE Aperture is designed to be a testbed repo for the [PIE Web component library](https://github.com/justeattakeaway/pie). This repo houses test applications currently for NextJS, Nuxt and vanilla JS. These applications import the web components and ensure that they work as expected when installed in a variety of different frameworks.
 
 ## Aperture deployment links
 [Nuxt application](https://aperture-nuxt.pie.design/)
@@ -12,7 +12,7 @@ PIE Aperture is designed to be a testbed repo for the [PIE Web component library
 We utilise both Playwright and WebDriverIO to facilitate automation testing in PIE Aperture.
 
 ### WebDriverIO
-WebDriverIO is a widely used testing framework that is used for executing our Percy visual tests. In contrast to the PIE monorepo, these tests aim to verify the visual accuracy of our components across various popular web frameworks.
+WebDriverIO is a widely-used testing framework that is used for executing our Percy visual tests. In contrast to the PIE monorepo, these tests aim to verify the visual accuracy of our components across various popular web frameworks.
 
 PIE Aperture leverages Percy Automate, a new feature in Percy that allows for the execution of visual tests across an array of desktop operating systems, browser versions, and mobile devices.
 
@@ -29,11 +29,11 @@ yarn test:visual
 
 # Run visual tests for a specific project
 # app-name - can be one of the following: nextjs-app, nuxt-app, vanilla-app
-yarn test:visual --filter=<app-name> 
+yarn test:visual --filter=<app-name>
 ```
 
 #### Devices & Browsers
-A list of our tested browsers & devices can be found in the [WebDriverIO configuration](https://github.com/justeattakeaway/pie-aperture/blob/main/wdio.conf.js#L3-L15)
+A list of our tested browsers and devices can be found in the [WebDriverIO configuration](https://github.com/justeattakeaway/pie-aperture/blob/main/wdio.conf.js#L3-L15)
 
 
 ### Playwright

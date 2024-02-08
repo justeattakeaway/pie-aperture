@@ -4,7 +4,7 @@ export class FormPage {
     readonly page: Page;
     readonly usernameField: Locator;
     readonly emailField: Locator;
-    readonly passworldField: Locator;
+    readonly passwordField: Locator;
     readonly passwordConfirmationField: Locator;
     readonly approveSettingsBtn: Locator;
     readonly enableNotificationsBtn: Locator;
@@ -16,7 +16,7 @@ export class FormPage {
         this.page = page;
         this.usernameField = page.getByTestId('username');
         this.emailField = page.getByTestId('email');
-        this.passworldField = page.getByTestId('password');
+        this.passwordField = page.getByTestId('password');
         this.passwordConfirmationField = page.getByTestId('passwordConfirmation');
         this.approveSettingsBtn = page.getByTestId('approveSettings').getByTestId('switch-component');
         this.enableNotificationsBtn = page.getByTestId('enableNotifications').getByTestId('switch-component');
@@ -34,7 +34,7 @@ export class FormPage {
     async fillForm(formData: any) {
         await this.usernameField.fill(formData.username);
         await this.emailField.fill(formData.email);
-        await this.passworldField.fill(formData.password);
+        await this.passwordField.fill(formData.password);
         await this.passwordConfirmationField.fill(formData.passwordConfirmation);
 
         if (formData.approveSettings) {
