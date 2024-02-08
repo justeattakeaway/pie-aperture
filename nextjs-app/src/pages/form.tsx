@@ -13,9 +13,9 @@ export default function Form() {
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
 
-    const handleUsernameChange = (event: CustomEvent) => {
-        setUsername(event.detail?.sourceEvent?.target?.value || '');   
-    };
+    const handleUsernameInput = (event: InputEvent) => {
+        setUsername((event.target as HTMLInputElement).value);
+    }
 
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);   
@@ -64,7 +64,7 @@ export default function Form() {
                     data-test-id="username"
                     name="username"
                     value={username}
-                    onChange={handleUsernameChange}
+                    onInput={handleUsernameInput as any}
                     type="text"></PieInput>
 
                 <label htmlFor="email">
