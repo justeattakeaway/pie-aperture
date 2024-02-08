@@ -94,7 +94,7 @@ jobs:
 
   # browser-tests:
   #   needs: 'build-deploy-nuxt-app-ubuntu-node20'
-  #   name: Run WebDriverIO Tests
+  #   name: Run System / Visual Tests
   #   runs-on: ubuntu-latest
   #   steps:
   #     # Checkout the Repo
@@ -119,7 +119,14 @@ jobs:
   #     - name: Run System Tests
   #       shell: bash
   #       run: yarn test:system --filter=nuxt-app
-  
+
+  #     - uses: actions/upload-artifact@v3
+  #       if: always()
+  #       with:
+  #         name: nuxt-playwright-report
+  #         path: playwright-reports/nuxt-playwright-report/
+  #         retention-days: 7
+
   #     - name: Run Percy Tests
   #       shell: bash
   #       run: yarn test:visual --filter=nuxt-app

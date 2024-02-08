@@ -5,15 +5,16 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "playwright:show-report": "npx playwright show-report ../playwright-reports/nuxt-app-playwright-report",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test:system": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts --project=system:nuxt",
+    "test:system": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts",
     "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NUXT} npx percy exec -- wdio run ./wdio.conf.js",
     "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "devDependencies": {
     "deepmerge": "4.3.1",
-    "nuxt": "^3.9.1",
+    "nuxt": "^3.10.1",
     "sass": "^1.70.0",
     "vue": "^3.4.10",
     "vue-router": "^4.2.5"
@@ -27,5 +28,8 @@
   },
   "installConfig": {
     "hoistingLimits": "workspaces"
+  },
+  "volta": {
+    "extends": "../package.json"
   }
 }

@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "vite --port 3001",
     "build": "vite build",
+    "playwright:show-report": "npx playwright show-report ../playwright-reports/vanilla-app-playwright-report",
     "preview": "vite preview",
-    "test:system": "APP_NAME=vanilla-app npx playwright test --config=../playwright.config.ts --project=system:vanilla",
+    "test:system": "APP_NAME=vanilla-app npx playwright test --config=../playwright.config.ts",
     "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_VANILLA} npx percy exec -- wdio run ./wdio.conf.js",
     "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },

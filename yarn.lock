@@ -8833,7 +8833,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jszip@npm:^3.10.1":
+"jszip@npm:^3.10.1, jszip@npm:^3.7.1":
   version: 3.10.1
   resolution: "jszip@npm:3.10.1"
   dependencies:
@@ -10335,7 +10335,7 @@ __metadata:
     "@justeattakeaway/pie-switch": ^0.26.0
     deepmerge: 4.3.1
     lit: ^3.1.1
-    nuxt: ^3.9.1
+    nuxt: ^3.10.1
     nuxt-ssr-lit: ^1.6.10
     sass: ^1.70.0
     vue: ^3.4.10
@@ -10356,7 +10356,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt@npm:^3.9.1":
+"nuxt@npm:^3.10.1":
   version: 3.10.1
   resolution: "nuxt@npm:3.10.1"
   dependencies:
@@ -11048,6 +11048,7 @@ __metadata:
     commitizen: 4.3.0
     cross-env: ^7.0.3
     cz-customizable: 7.0.0
+    playwright-merge-html-reports: ^0.2.8
     selenium-webdriver: 4.14.0
     turbo: ^1.12.2
   languageName: unknown
@@ -11093,6 +11094,18 @@ __metadata:
   bin:
     playwright-core: cli.js
   checksum: c83446a560c6bd85f6f0cd586ff8c643b77e2005567386e12f85890936cc370673114b94cd883246018797cc1580e93b0296ade7d07275bb611b8962f5bb9693
+  languageName: node
+  linkType: hard
+
+"playwright-merge-html-reports@npm:^0.2.8":
+  version: 0.2.8
+  resolution: "playwright-merge-html-reports@npm:0.2.8"
+  dependencies:
+    jszip: ^3.7.1
+    yazl: ^2.5.1
+  peerDependencies:
+    "@playwright/test": ">= 1.18.1"
+  checksum: a834c4d4fb93c8c61c57bf2b897ca08500c8eeca0151b8b3bb5c4a82f9f87e5decca003f89e9af69a0f42766a80d18f3caa01260f8b207a2d3dcd0ffd09ae399
   languageName: node
   linkType: hard
 
@@ -14843,6 +14856,15 @@ __metadata:
     buffer-crc32: ~0.2.3
     fd-slicer: ~1.1.0
   checksum: 7f21fe0bbad6e2cb130044a5d1d0d5a0e5bf3d8d4f8c4e6ee12163ce798fee3de7388d22a7a0907f563ac5f9d40f8699a223d3d5c1718da90b0156da6904022b
+  languageName: node
+  linkType: hard
+
+"yazl@npm:^2.5.1":
+  version: 2.5.1
+  resolution: "yazl@npm:2.5.1"
+  dependencies:
+    buffer-crc32: ~0.2.3
+  checksum: daec5154b5485d8621bfea359e905ddca0b2f068430a4aa0a802bf5d67391157a383e0c2767acccbf5964264851da643bc740155a9458e2d8dce55b94c1cc2ed
   languageName: node
   linkType: hard
 

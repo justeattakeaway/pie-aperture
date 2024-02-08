@@ -171,5 +171,4 @@ compiled/
 **/src/react.ts
 
 # Playwright
-**/playwright-report
-**/test-results
+**/playwright-reports/*-playwright-report
