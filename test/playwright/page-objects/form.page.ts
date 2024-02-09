@@ -32,7 +32,7 @@ export class FormPage {
     }
 
     async fillForm(formData: any) {
-        await this.usernameField.fill(formData.username);
+        await this.usernameField.locator('input').fill(formData.username);
         await this.emailField.fill(formData.email);
         await this.passwordField.fill(formData.password);
         await this.passwordConfirmationField.fill(formData.passwordConfirmation);

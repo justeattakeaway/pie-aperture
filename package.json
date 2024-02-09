@@ -10,6 +10,7 @@
     "lint": "turbo run lint --token=${TURBO_TOKEN}",
     "test:system": "turbo run test:system --token=${TURBO_TOKEN} --continue",
     "playwright:show-report": "turbo run playwright:show-report",
+    "preview": "turbo run preview",
     "test:visual": "turbo run test:visual",
     "upgrade-pie-packages": "turbo run upgrade-pie-packages && yarn"
   },

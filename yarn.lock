@@ -1237,6 +1237,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justeattakeaway/pie-input@npm:0.10.0":
+  version: 0.10.0
+  resolution: "@justeattakeaway/pie-input@npm:0.10.0"
+  dependencies:
+    "@justeattakeaway/pie-webc-core": 0.17.1
+  checksum: 992dec03724fa220e49a42bdc765fed152829a2bf126409c04be66d5b7167d96b3c298314efa88585720d5f412b14146eaa1aea37aaa75ca1d492636eb244e22
+  languageName: node
+  linkType: hard
+
 "@justeattakeaway/pie-link@npm:0.15.0":
   version: 0.15.0
   resolution: "@justeattakeaway/pie-link@npm:0.15.0"
@@ -9923,6 +9932,7 @@ __metadata:
     "@justeattakeaway/pie-form-label": 0.11.0
     "@justeattakeaway/pie-icon-button": 0.27.2
     "@justeattakeaway/pie-icons-webc": 0.17.2
+    "@justeattakeaway/pie-input": 0.10.0
     "@justeattakeaway/pie-link": 0.15.0
     "@justeattakeaway/pie-modal": 0.38.4
     "@justeattakeaway/pie-spinner": 0.5.2
@@ -10332,6 +10342,7 @@ __metadata:
   dependencies:
     "@justeattakeaway/pie-button": ^0.45.2
     "@justeattakeaway/pie-css": ^0.10.0
+    "@justeattakeaway/pie-input": 0.10.0
     "@justeattakeaway/pie-switch": ^0.26.0
     deepmerge: 4.3.1
     lit: ^3.1.1
@@ -13969,6 +13980,7 @@ __metadata:
     "@justeattakeaway/pie-form-label": 0.11.0
     "@justeattakeaway/pie-icon-button": 0.27.2
     "@justeattakeaway/pie-icons-webc": 0.17.2
+    "@justeattakeaway/pie-input": 0.10.0
     "@justeattakeaway/pie-link": 0.15.0
     "@justeattakeaway/pie-modal": 0.38.4
     "@justeattakeaway/pie-spinner": 0.5.2
