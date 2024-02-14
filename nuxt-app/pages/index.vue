@@ -11,7 +11,7 @@
 
       <h2>PIE Icon Button</h2>
       <pie-icon-button>
-        <icon-close/>
+        <icon-close></icon-close>
       </pie-icon-button>
 
       <pie-divider></pie-divider>
