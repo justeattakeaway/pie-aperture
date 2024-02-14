@@ -1157,7 +1157,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-assistive-text@npm:0.2.0, @justeattakeaway/pie-assistive-text@npm:^0.2.0":
+"@justeattakeaway/pie-assistive-text@npm:0.2.0":
   version: 0.2.0
   resolution: "@justeattakeaway/pie-assistive-text@npm:0.2.0"
   dependencies:
@@ -1187,7 +1187,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-chip@npm:0.1.0, @justeattakeaway/pie-chip@npm:^0.1.0":
+"@justeattakeaway/pie-chip@npm:0.1.0":
   version: 0.1.0
   resolution: "@justeattakeaway/pie-chip@npm:0.1.0"
   dependencies:
@@ -1780,7 +1780,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.10.1, @nuxt/kit@npm:^3.8.2, @nuxt/kit@npm:^3.9.1, @nuxt/kit@npm:^3.9.3":
+"@nuxt/kit@npm:3.10.1":
   version: 3.10.1
   resolution: "@nuxt/kit@npm:3.10.1"
   dependencies:
@@ -1806,7 +1806,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/schema@npm:3.10.1, @nuxt/schema@npm:^3.9.1":
+"@nuxt/kit@npm:^3.8.2, @nuxt/kit@npm:^3.9.1, @nuxt/kit@npm:^3.9.3":
+  version: 3.10.2
+  resolution: "@nuxt/kit@npm:3.10.2"
+  dependencies:
+    "@nuxt/schema": 3.10.2
+    c12: ^1.7.0
+    consola: ^3.2.3
+    defu: ^6.1.4
+    globby: ^14.0.1
+    hash-sum: ^2.0.0
+    ignore: ^5.3.1
+    jiti: ^1.21.0
+    knitwork: ^1.0.0
+    mlly: ^1.5.0
+    pathe: ^1.1.2
+    pkg-types: ^1.0.3
+    scule: ^1.3.0
+    semver: ^7.6.0
+    ufo: ^1.4.0
+    unctx: ^2.3.1
+    unimport: ^3.7.1
+    untyped: ^1.4.2
+  checksum: 833f1e20d3b128d4f8601840917d3af733c15350199523bed1f74de63ac5d2daabe30c3e1def9f34c71f0fffa02f6d11a2afd818f16c318e4000ccf21107a778
+  languageName: node
+  linkType: hard
+
+"@nuxt/schema@npm:3.10.1":
   version: 3.10.1
   resolution: "@nuxt/schema@npm:3.10.1"
   dependencies:
@@ -1822,6 +1848,25 @@ __metadata:
     unimport: ^3.7.1
     untyped: ^1.4.2
   checksum: 62abd36545ec756719209d8c23020a3fe5e79c40b06d491a5ca10b3e815d5b8d51b0cf271b58cb47202d43cd178defe6f1823b7464a2f9d2f9f7db815d75e697
+  languageName: node
+  linkType: hard
+
+"@nuxt/schema@npm:3.10.2, @nuxt/schema@npm:^3.9.1":
+  version: 3.10.2
+  resolution: "@nuxt/schema@npm:3.10.2"
+  dependencies:
+    "@nuxt/ui-templates": ^1.3.1
+    consola: ^3.2.3
+    defu: ^6.1.4
+    hookable: ^5.5.3
+    pathe: ^1.1.2
+    pkg-types: ^1.0.3
+    scule: ^1.3.0
+    std-env: ^3.7.0
+    ufo: ^1.4.0
+    unimport: ^3.7.1
+    untyped: ^1.4.2
+  checksum: 140c9d676939318b7587b08d2f28406a9e9572cb48413d67846f14d961de1a31e5a17f1a60e4f65a33101a3b940a603bef838ea537c438af2f72a90db310035f
   languageName: node
   linkType: hard
 
@@ -4517,9 +4562,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"c12@npm:^1.5.1, c12@npm:^1.6.1":
-  version: 1.7.0
-  resolution: "c12@npm:1.7.0"
+"c12@npm:^1.5.1, c12@npm:^1.6.1, c12@npm:^1.7.0":
+  version: 1.8.0
+  resolution: "c12@npm:1.8.0"
   dependencies:
     chokidar: ^3.5.3
     defu: ^6.1.4
@@ -4534,7 +4579,7 @@ __metadata:
     perfect-debounce: ^1.0.0
     pkg-types: ^1.0.3
     rc9: ^2.1.1
-  checksum: e781b70f2a8aef481da6b203bce8439dc3c27f80d420a6364b90a5bbbba09810f9751da70013b47203825d971fe76ac0346064089ff6b732550c9f46bc1d4002
+  checksum: 022dc8d06568d0f8046e49e9ae3ff15d711eefa35e1d308402016915e06dfd7af5498a6f9fddded26b8ba955d69bf500f2b794f3265370df82f12de93041515a
   languageName: node
   linkType: hard
 
@@ -4800,11 +4845,11 @@ __metadata:
   linkType: hard
 
 "citty@npm:^0.1.5":
-  version: 0.1.5
-  resolution: "citty@npm:0.1.5"
+  version: 0.1.6
+  resolution: "citty@npm:0.1.6"
   dependencies:
     consola: ^3.2.3
-  checksum: 9a2379fd01345500f1eb2bcc33f5e60be8379551091b43a3ba4e3a39c63a92e41453dea542ab9f2528fe9e19177ff1453c01a845a74529292af34fdafd23a5f6
+  checksum: 3fbcaaea92d328deddb5aba7d629d9076d4f1aa0338f59db7ea647a8f51eedc14b7f6218c87ad03c9e3c126213ba87d13d7774f9c30d64209f4b074aa83bd6ab
   languageName: node
   linkType: hard
 
@@ -5157,7 +5202,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-env@npm:^7.0.3":
+"cross-env@npm:7.0.3":
   version: 7.0.3
   resolution: "cross-env@npm:7.0.3"
   dependencies:
@@ -7635,7 +7680,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^14.0.0":
+"globby@npm:^14.0.0, globby@npm:^14.0.1":
   version: 14.0.1
   resolution: "globby@npm:14.0.1"
   dependencies:
@@ -11168,11 +11213,11 @@ __metadata:
     "@wdio/mocha-framework": 8.19.0
     "@wdio/spec-reporter": 8.19.0
     commitizen: 4.3.0
-    cross-env: ^7.0.3
+    cross-env: 7.0.3
     cz-customizable: 7.0.0
-    playwright-merge-html-reports: ^0.2.8
+    playwright-merge-html-reports: 0.2.8
     selenium-webdriver: 4.14.0
-    turbo: ^1.12.2
+    turbo: 1.12.2
   languageName: unknown
   linkType: soft
 
@@ -11219,7 +11264,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-merge-html-reports@npm:^0.2.8":
+"playwright-merge-html-reports@npm:0.2.8":
   version: 0.2.8
   resolution: "playwright-merge-html-reports@npm:0.2.8"
   dependencies:
@@ -12501,7 +12546,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scule@npm:^1.0.0, scule@npm:^1.1.0, scule@npm:^1.1.1, scule@npm:^1.2.0":
+"scule@npm:^1.0.0, scule@npm:^1.1.0, scule@npm:^1.1.1, scule@npm:^1.2.0, scule@npm:^1.3.0":
   version: 1.3.0
   resolution: "scule@npm:1.3.0"
   checksum: f2968b292e33c0eddca4a68b5c70f08dfc8479e492461c248f72873deaf77ae87c9f27dde7a342b3cb6394d2fae9665890b07a2243f79cff5cba65c9525ccf7e
@@ -12537,7 +12582,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.0.0, semver@npm:^7.1.1, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.5.0, semver@npm:^7.5.3, semver@npm:^7.5.4":
+"semver@npm:^7.0.0, semver@npm:^7.1.1, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.5.0, semver@npm:^7.5.3, semver@npm:^7.5.4, semver@npm:^7.6.0":
   version: 7.6.0
   resolution: "semver@npm:7.6.0"
   dependencies:
@@ -13532,58 +13577,58 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turbo-darwin-64@npm:1.12.3":
-  version: 1.12.3
-  resolution: "turbo-darwin-64@npm:1.12.3"
+"turbo-darwin-64@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo-darwin-64@npm:1.12.2"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-darwin-arm64@npm:1.12.3":
-  version: 1.12.3
-  resolution: "turbo-darwin-arm64@npm:1.12.3"
+"turbo-darwin-arm64@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo-darwin-arm64@npm:1.12.2"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-linux-64@npm:1.12.3":
-  version: 1.12.3
-  resolution: "turbo-linux-64@npm:1.12.3"
+"turbo-linux-64@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo-linux-64@npm:1.12.2"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-linux-arm64@npm:1.12.3":
-  version: 1.12.3
-  resolution: "turbo-linux-arm64@npm:1.12.3"
+"turbo-linux-arm64@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo-linux-arm64@npm:1.12.2"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-windows-64@npm:1.12.3":
-  version: 1.12.3
-  resolution: "turbo-windows-64@npm:1.12.3"
+"turbo-windows-64@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo-windows-64@npm:1.12.2"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-windows-arm64@npm:1.12.3":
-  version: 1.12.3
-  resolution: "turbo-windows-arm64@npm:1.12.3"
+"turbo-windows-arm64@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo-windows-arm64@npm:1.12.2"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo@npm:^1.12.2":
-  version: 1.12.3
-  resolution: "turbo@npm:1.12.3"
+"turbo@npm:1.12.2":
+  version: 1.12.2
+  resolution: "turbo@npm:1.12.2"
   dependencies:
-    turbo-darwin-64: 1.12.3
-    turbo-darwin-arm64: 1.12.3
-    turbo-linux-64: 1.12.3
-    turbo-linux-arm64: 1.12.3
-    turbo-windows-64: 1.12.3
-    turbo-windows-arm64: 1.12.3
+    turbo-darwin-64: 1.12.2
+    turbo-darwin-arm64: 1.12.2
+    turbo-linux-64: 1.12.2
+    turbo-linux-arm64: 1.12.2
+    turbo-windows-64: 1.12.2
+    turbo-windows-arm64: 1.12.2
   dependenciesMeta:
     turbo-darwin-64:
       optional: true
@@ -13599,7 +13644,7 @@ __metadata:
       optional: true
   bin:
     turbo: bin/turbo
-  checksum: d1f21a7dde12412ae17bd20ec7ff9e8b93eac4b0c2e10e918b0f0ec6711cb8e60f1a76bea74920978cbec8216b429fa27c4215be1221779a55417901ffc03e9a
+  checksum: a889988310fbd088e241a4aeb1f5ea34a9dba231ab77cd6764dbe53a81e07ec1dde4d7123f543e06cc6cd653f350886424ccc9d883af645816e859d455042cf1
   languageName: node
   linkType: hard
 
@@ -13721,7 +13766,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ufo@npm:^1.1.2, ufo@npm:^1.2.0, ufo@npm:^1.3.0, ufo@npm:^1.3.1, ufo@npm:^1.3.2":
+"ufo@npm:^1.1.2, ufo@npm:^1.2.0, ufo@npm:^1.3.0, ufo@npm:^1.3.1, ufo@npm:^1.3.2, ufo@npm:^1.4.0":
   version: 1.4.0
   resolution: "ufo@npm:1.4.0"
   checksum: 7c7ca3d823ae56a0439bc7038116a26a8c4e95aa9252aef43091f08f104af5557c2d220d990d07891c2771ca7c0589c479e330737ce6d7bbee485bb031046f19
@@ -14105,10 +14150,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vanilla-app@workspace:vanilla-app"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": ^0.2.0
+    "@justeattakeaway/pie-assistive-text": 0.2.0
     "@justeattakeaway/pie-button": 0.45.3
     "@justeattakeaway/pie-card": 0.17.2
-    "@justeattakeaway/pie-chip": ^0.1.0
+    "@justeattakeaway/pie-chip": 0.1.0
     "@justeattakeaway/pie-cookie-banner": 0.17.1
     "@justeattakeaway/pie-css": 0.10.0
     "@justeattakeaway/pie-divider": 0.12.1
@@ -14313,8 +14358,8 @@ __metadata:
   linkType: hard
 
 "vite@npm:^5.0.0":
-  version: 5.1.1
-  resolution: "vite@npm:5.1.1"
+  version: 5.1.2
+  resolution: "vite@npm:5.1.2"
   dependencies:
     esbuild: ^0.19.3
     fsevents: ~2.3.3
@@ -14348,7 +14393,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 6aa7133ed1b455c63a164ba29e6627f4178884e74ec79937bf28492d95a4b9b3a30ce85d3162bb1854217b3adeb1f74bca87d38f394d5696df44f482c4bd3591
+  checksum: deb606eda820912ffc5361b732bbd763bf82ac4c982f9b6ddfafd7c035067cba78adcdc34d053d5bb0ed3a191f99b17e80012b38e23e7cb9376e45ad6813fe23
   languageName: node
   linkType: hard
 
