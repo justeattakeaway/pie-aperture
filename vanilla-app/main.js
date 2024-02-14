@@ -1,6 +1,8 @@
 import '@justeattakeaway/pie-css';
+import '@justeattakeaway/pie-assistive-text';
 import '@justeattakeaway/pie-button';
 import '@justeattakeaway/pie-card';
+import '@justeattakeaway/pie-chip';
 import '@justeattakeaway/pie-cookie-banner';
 import '@justeattakeaway/pie-divider';
 import '@justeattakeaway/pie-form-label';
@@ -79,6 +81,16 @@ document.querySelector('#app').innerHTML = `
     
     <h2>pie-tag</h2>
     <pie-tag>Pie Tag</pie-tag>
+
+    <pie-divider></pie-divider>
+
+    <h2>PIE Assistive Text</h2>
+    <pie-assistive-text>Assistive Text</pie-assistive-text>
+
+    <pie-divider></pie-divider>
+
+    <h2>PIE Chip</h2>
+    <pie-chip>PIE Chip</pie-chip>
 `;
 
 setupCounter(document.querySelector('#counter'));

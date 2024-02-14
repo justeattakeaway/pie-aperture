@@ -1,5 +1,7 @@
 import React, { useState } from "react"
+import { PieAssistiveText } from "@justeattakeaway/pie-assistive-text/dist/react"
 import { PieButton } from "@justeattakeaway/pie-button/dist/react"
+import { PieChip } from "@justeattakeaway/pie-chip/dist/react"
 import { PieDivider } from "@justeattakeaway/pie-divider/dist/react"
 import { PieFormLabel } from "@justeattakeaway/pie-form-label/dist/react"
 import { PieLink } from "@justeattakeaway/pie-link/dist/react"
@@ -65,7 +67,14 @@ export default function Home() {
 
       <h2>Pie Modal</h2>
       <PieButton onClick={() => setIsModalOpen(true)}>Open Modal</PieButton>
-      <PieModal isOpen={isModalOpen} heading="Modal Header" onPieModalClose={() => setIsModalOpen(false)} isDismissible hasBackButton>
+      <PieModal
+        isOpen={isModalOpen}
+        heading="Modal Header"
+        isDismissible
+        hasBackButton
+        onPieModalClose={() => setIsModalOpen(false)}
+        onPieModalBack={() => setIsModalOpen(false)}
+      >
         <p>Modal</p>
       </PieModal>
       <PieDivider />
@@ -73,7 +82,7 @@ export default function Home() {
       <PieCookieBanner
         defaultPreferences={{functional: true, personalized: true, analytical: true}}
         locale={locales.enGB}
-        hasPrimaryActionsOnly={true}
+        hasPrimaryActionsOnly
         cookieTechnologiesLink="https://justeattakeaway.com"
         cookieStatementLink="https://justeattakeaway.com" />
       <PieDivider />
@@ -85,6 +94,16 @@ export default function Home() {
 
       <h2>Pie Tag</h2>
       <PieTag>Pie Tag</PieTag>
+
+      <PieDivider />
+
+      <h2>Pie Assistive Text</h2>
+      <PieAssistiveText>Assistive Text</PieAssistiveText>
+
+      <PieDivider />
+      <h2>Pie Chip</h2>
+      <PieChip>Pie Chip</PieChip>
+
     </>
   );
 }
