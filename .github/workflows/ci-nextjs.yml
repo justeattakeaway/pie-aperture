@@ -22,25 +22,26 @@ env:
 
 jobs:
 
-  build-next-app-windows-node18:
-    name: Windows - Node 18
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 18
-        os: 'windows-latest'
-        package-name: 'nextjs-app'
-    secrets: inherit
+  # Commenting these out for now as there's currently an issue with Next.
+  # build-next-app-windows-node18:
+  #   name: Windows - Node 18
+  #   uses: ./.github/workflows/build.yml
+  #   with:
+  #       deploy: false
+  #       node-version: 18
+  #       os: 'windows-latest'
+  #       package-name: 'nextjs-app'
+  #   secrets: inherit
 
-  build-next-app-windows-node20:
-    name: Windows - Node 20
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 20
-        os: 'windows-latest'
-        package-name: 'nextjs-app'
-    secrets: inherit
+  # build-next-app-windows-node20:
+  #   name: Windows - Node 20
+  #   uses: ./.github/workflows/build.yml
+  #   with:
+  #       deploy: false
+  #       node-version: 20
+  #       os: 'windows-latest'
+  #       package-name: 'nextjs-app'
+  #   secrets: inherit
 
   build-next-app-ubuntu-node18:
     name: Ubuntu - Node 18
