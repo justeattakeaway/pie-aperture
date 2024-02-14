@@ -66,17 +66,17 @@
         cookieTechnologiesLink="https://justeattakeaway.com"
         cookieStatementLink="https://justeattakeaway.com"/>
 
-      <pie-divider/>
+      <pie-divider></pie-divider>
 
       <h2>PIE Tag</h2>
       <pie-tag variant="brand" size="large">Label</pie-tag>
 
-      <pie-divider/>
+      <pie-divider></pie-divider>
 
       <h2>PIE Assistive Text</h2>
       <pie-assistive-text>Assistive Text</pie-assistive-text>
 
-      <pie-divider/>
+      <pie-divider></pie-divider>
 
       <h2>PIE Chip</h2>
       <pie-chip>PIE Chip</pie-chip>
