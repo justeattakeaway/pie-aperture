@@ -1,5 +1,6 @@
 <template>
   <h1>Nuxt - PIE Modal</h1>
+
   <pie-link href="/">Home Page</pie-link>
 
   <pie-divider></pie-divider>

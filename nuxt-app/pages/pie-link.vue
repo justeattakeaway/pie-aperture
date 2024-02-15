@@ -1,6 +1,7 @@
 <template>
   <h1>Nuxt - PIE Link</h1>
-  <NuxtLink to="/">Home page</NuxtLink>
+
+  <pie-link href="/">Home Page</pie-link>
 
   <pie-divider></pie-divider>
   <pie-link href="https://www.pie.design">
