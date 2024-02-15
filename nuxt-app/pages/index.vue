@@ -1,5 +1,5 @@
 <template>
-      <h1>Nuxt - PIE Aperture - Amplify</h1>
+      <h1>Nuxt - PIE Aperture - Amplify - test</h1>
       <NuxtLink to="/form">Form page</NuxtLink>
 
       <h2>PIE Button</h2>
