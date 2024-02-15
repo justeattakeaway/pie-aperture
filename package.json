@@ -36,10 +36,10 @@
     "@wdio/local-runner": "8.19.0",
     "@wdio/mocha-framework": "8.19.0",
     "@wdio/spec-reporter": "8.19.0",
-    "cross-env": "^7.0.3",
-    "playwright-merge-html-reports": "^0.2.8",
+    "cross-env": "7.0.3",
+    "playwright-merge-html-reports": "0.2.8",
     "selenium-webdriver": "4.14.0",
-    "turbo": "^1.12.2"
+    "turbo": "1.12.2"
   },
   "workspaces": [
     "nextjs-app",

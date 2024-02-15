@@ -22,17 +22,6 @@ env:
 
 jobs:
 
-  build-nuxt-app-windows-node16:
-    name: Windows - Node 16
-    uses: ./.github/workflows/build.yml
-    with:
-        # build-script: 'generate'
-        deploy: false
-        node-version: 16
-        os: 'windows-latest'
-        package-name: 'nuxt-app'
-    secrets: inherit
-
   build-nuxt-app-windows-node18:
     name: Windows - Node 18
     uses: ./.github/workflows/build.yml
@@ -52,17 +41,6 @@ jobs:
         deploy: false
         node-version: 20
         os: 'windows-latest'
-        package-name: 'nuxt-app'
-    secrets: inherit
-
-  build-nuxt-app-ubuntu-node16:
-    name: Ubuntu - Node 16
-    uses: ./.github/workflows/build.yml
-    with:
-        # build-script: 'generate'
-        deploy: false
-        node-version: 16
-        os: 'ubuntu-latest'
         package-name: 'nuxt-app'
     secrets: inherit
 

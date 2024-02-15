@@ -21,16 +21,6 @@ env:
 
 jobs:
 
-  build-vanilla-app-windows-node16:
-    name: Windows - Node 16
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 16
-        os: 'windows-latest'
-        package-name: 'vanilla-app'
-    secrets: inherit
-
   build-vanilla-app-windows-node18:
     name: Windows - Node 18
     uses: ./.github/workflows/build.yml
@@ -48,16 +38,6 @@ jobs:
         deploy: false
         node-version: 20
         os: 'windows-latest'
-        package-name: 'vanilla-app'
-    secrets: inherit
-
-  build-vanilla-app-ubuntu-node16:
-    name: Ubuntu - Node 16
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 16
-        os: 'ubuntu-latest'
         package-name: 'vanilla-app'
     secrets: inherit
 

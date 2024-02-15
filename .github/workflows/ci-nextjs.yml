@@ -23,16 +23,6 @@ env:
 jobs:
 
   # Commenting these out for now as there's currently an issue with Next.
-  # build-next-app-windows-node16:
-  #   name: Windows - Node 16
-  #   uses: ./.github/workflows/build.yml
-  #   with:
-  #       deploy: false
-  #       node-version: 16
-  #       os: 'windows-latest'
-  #       package-name: 'nextjs-app'
-  #   secrets: inherit
-
   # build-next-app-windows-node18:
   #   name: Windows - Node 18
   #   uses: ./.github/workflows/build.yml
@@ -52,16 +42,6 @@ jobs:
   #       os: 'windows-latest'
   #       package-name: 'nextjs-app'
   #   secrets: inherit
-
-  build-next-app-ubuntu-node16:
-    name: Ubuntu - Node 16
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 16
-        os: 'ubuntu-latest'
-        package-name: 'nextjs-app'
-    secrets: inherit
 
   build-next-app-ubuntu-node18:
     name: Ubuntu - Node 18
