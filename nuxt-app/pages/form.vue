@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1>Nuxt - PIE Form Test Page</h1>
         <form class="form" id="testForm" @submit="handleSubmit">
             <pie-form-label for="username">
                 Username:
@@ -80,10 +79,9 @@
 </template>
 
 <script setup lang="ts">
-import { PieButton } from '@justeattakeaway/pie-button';
-import { PieFormLabel } from '@justeattakeaway/pie-form-label';
-import { PieInput } from '@justeattakeaway/pie-input';
-import { PieSwitch } from '@justeattakeaway/pie-switch';
+import '@justeattakeaway/pie-button';
+import '@justeattakeaway/pie-input';
+import '@justeattakeaway/pie-switch';
 import { defineModel } from 'vue';
 
 const username = defineModel('username', { default: '' });
