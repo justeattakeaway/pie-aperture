@@ -3,66 +3,32 @@
         <form class="form" id="testForm" @submit="handleSubmit">
             <pie-form-label for="username">
                 Username:
-            </pie-form-label>
-            <pie-input
-                :value="username"
-                @input="handleUsernameInput"
-                class="form-field"
-                id="username"
-                data-test-id="username"
-                name="username"
-                type="text"></pie-input>
-        
+            </label>
+            <pie-input :value="username" @input="handleUsernameInput" class="form-field" id="username"
+                data-test-id="username" name="username" type="text"></pie-input>
+
             <label for="email">
                 Email:
             </label>
-            <input
-                class="form-field"
-                id="email"
-                data-test-id="email"
-                name="email"
-                v-model="email"
-                type="email" />
-            
+            <input class="form-field" id="email" data-test-id="email" name="email" v-model="email" type="email" />
+
             <label for="password">
                 Password:
             </label>
-            <input
-                class="form-field"
-                id="password"
-                data-test-id="password"
-                name="password"
-                v-model="password"
+            <input class="form-field" id="password" data-test-id="password" name="password" v-model="password"
                 type="password" />
-        
+
             <label for="passwordConfirmation">
                 Confirm Password:
             </label>
-            <input
-                class="form-field"
-                id="passwordConfirmation"
-                data-test-id="passwordConfirmation"
-                name="passwordConfirmation"
-                v-model="passwordConfirmation"
-                type="password" />
-        
+            <input class="form-field" id="passwordConfirmation" data-test-id="passwordConfirmation"
+                name="passwordConfirmation" v-model="passwordConfirmation" type="password" />
+
             <div class="form-controls">
-                <pie-form-label for="approveSettings">
-                    Approve settings
-                </pie-form-label>
-                <pie-switch
-                    id="approveSettings"
-                    data-test-id="approveSettings"
-                    name="approveSettings"
-                    @change="handleApproveSettingsChange"
-                    :checked="approveSettings"></pie-switch>
-                <pie-switch
-                    label="Enable Notifications"
-                    id="notifications"
-                    data-test-id="enableNotifications"
-                    name="notifications"
-                    @change="handleNotificationsChange"
-                    :checked="notifications"></pie-switch>
+                <pie-switch label="Approve settings" id="approveSettings" data-test-id="approveSettings"
+                    name="approveSettings" @change="handleApproveSettingsChange" :checked="approveSettings"></pie-switch>
+                <pie-switch label="Enable Notifications" id="notifications" data-test-id="enableNotifications"
+                    name="notifications" @change="handleNotificationsChange" :checked="notifications"></pie-switch>
             </div>
             <div class="form-btns">
                 <pie-button class="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</pie-button>
@@ -120,34 +86,35 @@ function handleApproveSettingsChange(event) {
 </script>
 
 <style scoped>
-     /* Form Styles */
-    .form {
-        display: flex;
-        flex-direction: column;
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field {
+    margin-bottom: var(--dt-spacing-b);
+}
+
+.form-controls {
+    margin-top: var(--dt-spacing-e);
+
+    >* {
+        display: block;
     }
 
-    .form-field {
-        margin-bottom: var(--dt-spacing-b);
+    >*+* {
+        margin-top: var(--dt-spacing-b);
     }
+}
 
-    .form-controls {
-        margin-top: var(--dt-spacing-e);
-        > * {
-            display: block;
-        }
+.form-btns {
+    margin-top: var(--dt-spacing-c);
+    display: flex;
+    gap: var(--dt-spacing-a)
+}
 
-        > * + * {
-            margin-top: var(--dt-spacing-b);
-        }
-    }
-
-    .form-btns {
-        margin-top: var(--dt-spacing-c);
-        display: flex;
-        gap: var(--dt-spacing-a)
-    }
-
-    .form-btns > .form-btn:first-of-type {
-        margin-left: auto;
-    }
+.form-btns>.form-btn:first-of-type {
+    margin-left: auto;
+}
 </style>
