@@ -7,18 +7,12 @@
     </div>
 </template>
   
-<script>
+<script setup lang="ts">
 import * as webcIcons from '@justeattakeaway/pie-icons-webc';
 import kebabCase from 'just-kebab-case';
 
-export default {
-    setup () {
-        return {
-            // Converts IconClose to icon-close
-            icons: Object.keys(webcIcons).map(kebabCase)
-        };
-    },
-};
+const icons = Object.keys(webcIcons).map(kebabCase);
+
 </script>
 
 <style>
