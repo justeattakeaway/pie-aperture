@@ -3,7 +3,7 @@ import '@justeattakeaway/pie-button';
 import '@justeattakeaway/pie-input';
 import '@justeattakeaway/pie-switch';
 import '@justeattakeaway/pie-divider';
-import './style.css';
+import '../css/style.css';
 
 const form = document.querySelector('#testForm');
 const output = document.querySelector('#output');

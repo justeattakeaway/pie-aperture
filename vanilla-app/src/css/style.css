@@ -46,3 +46,7 @@ pie-divider {
 .form-btns>.form-btn:first-of-type {
     margin-left: auto;
 }
+
+ul {
+	list-style-type: none;
+}
