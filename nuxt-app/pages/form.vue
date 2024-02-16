@@ -83,7 +83,12 @@ import '@justeattakeaway/pie-button';
 import '@justeattakeaway/pie-form-label';
 import '@justeattakeaway/pie-input';
 import '@justeattakeaway/pie-switch';
-import { defineModel } from 'vue';
+import { defineModel} from 'vue';
+import { definePageMeta } from '#imports';
+
+definePageMeta({
+    title: 'Form Demo',
+});
 
 const username = defineModel('username', { default: '' });
 const email = defineModel('email', { default: '' });

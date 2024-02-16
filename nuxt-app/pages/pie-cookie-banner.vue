@@ -8,6 +8,11 @@
 
 <script setup lang="ts">
 import '@justeattakeaway/pie-cookie-banner';
+import { definePageMeta } from '#imports';
+
+definePageMeta({
+    title: 'PIE Cookie Banner',
+});
 
 // TODO: DSW-1710 - Update this to use the TS declaration for locales.
 // Currently importing the JSON file directly as a workaround as Nuxt wants import assertions.

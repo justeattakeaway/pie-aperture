@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<h1>Nuxt - PIE Aperture</h1>
 		<h3>Demo Integrations</h3>
 		<ul>
 			<li><pie-link href="/form">Form Demo</pie-link></li>
@@ -23,6 +22,11 @@
 </template>
 
 <script setup lang="ts">
+import { definePageMeta } from '#imports';
+
+definePageMeta({
+    title: 'PIE Aperture',
+});
 </script>
 
 <style>

@@ -10,4 +10,9 @@
 
 <script setup lang="ts">
 import '@justeattakeaway/pie-assistive-text';
+import { definePageMeta } from '#imports';
+
+definePageMeta({
+    title: 'PIE Assistive Text',
+});
 </script>

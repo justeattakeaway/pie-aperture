@@ -1,7 +1,5 @@
 <template>
   <div>
-    <pie-divider></pie-divider>
-
     <pie-tag variant="brand" size="large">Label</pie-tag>
 
     <pie-divider></pie-divider>
@@ -10,4 +8,9 @@
 
 <script setup lang="ts">
 import '@justeattakeaway/pie-tag';
+import { definePageMeta } from '#imports';
+
+definePageMeta({
+    title: 'PIE Tag',
+});
 </script>

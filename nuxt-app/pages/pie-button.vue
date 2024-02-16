@@ -10,6 +10,11 @@
 <script setup lang="ts">
 import '@justeattakeaway/pie-button';
 import { ref } from 'vue';
+import { definePageMeta } from '#imports';
+
+definePageMeta({
+    title: 'PIE Button',
+});
 
 let counter = ref(0);
 

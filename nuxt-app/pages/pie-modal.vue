@@ -14,6 +14,11 @@
 import '@justeattakeaway/pie-button';
 import '@justeattakeaway/pie-modal';
 import { ref } from 'vue';
+import { definePageMeta } from '#imports';
+
+definePageMeta({
+    title: 'PIE Modal',
+});
 
 let open = ref(false);
 
