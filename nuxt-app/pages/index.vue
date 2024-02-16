@@ -1,6 +1,8 @@
 <template>
       <h1>Nuxt - PIE Aperture</h1>
       <NuxtLink to="/form">Form page</NuxtLink>
+      <br/>
+      <NuxtLink to="/icons">Icons page</NuxtLink>
 
       <h2>PIE Button</h2>
       <pie-button @click="setCounter">

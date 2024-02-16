@@ -9186,6 +9186,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"just-kebab-case@npm:4.2.0":
+  version: 4.2.0
+  resolution: "just-kebab-case@npm:4.2.0"
+  checksum: 3f8b1041a56bfb7dd9d789ba4da8c244fa10775c7ed900440eb6c9002292caa3dbb6c88792907c830fea328db85a92ba2c302c31dbd740a58d81fd364423db4c
+  languageName: node
+  linkType: hard
+
 "keyv@npm:^4.5.3":
   version: 4.5.4
   resolution: "keyv@npm:4.5.4"
@@ -10669,6 +10676,7 @@ __metadata:
     "@justeattakeaway/pie-switch": 0.27.0
     "@justeattakeaway/pie-tag": 0.6.2
     deepmerge: 4.3.1
+    just-kebab-case: 4.2.0
     nuxt: 3.10.1
     nuxt-ssr-lit: 1.6.10
     sass: 1.70.0
@@ -14325,7 +14333,7 @@ __metadata:
     "@justeattakeaway/pie-divider": 0.12.1
     "@justeattakeaway/pie-form-label": 0.11.0
     "@justeattakeaway/pie-icon-button": 0.27.3
-    "@justeattakeaway/pie-icons-webc": 0.17.2
+    "@justeattakeaway/pie-icons-webc": 0.17.3
     "@justeattakeaway/pie-input": 0.11.0
     "@justeattakeaway/pie-link": 0.15.1
     "@justeattakeaway/pie-modal": 0.38.5
