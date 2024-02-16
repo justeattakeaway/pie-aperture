@@ -2,9 +2,9 @@
     <div>
         <h1>Nuxt - PIE Form Test Page</h1>
         <form class="form" id="testForm" @submit="handleSubmit">
-            <label for="username">
+            <pie-form-label for="username">
                 Username:
-            </label>
+            </pie-form-label>
             <pie-input
                 :value="username"
                 @input="handleUsernameInput"
@@ -48,8 +48,10 @@
                 type="password" />
         
             <div class="form-controls">
+                <pie-form-label for="approveSettings">
+                    Approve settings
+                </pie-form-label>
                 <pie-switch
-                    label="Approve settings"
                     id="approveSettings"
                     data-test-id="approveSettings"
                     name="approveSettings"
@@ -79,8 +81,9 @@
 
 <script setup lang="ts">
 import { PieButton } from '@justeattakeaway/pie-button';
-import { PieSwitch } from '@justeattakeaway/pie-switch';
+import { PieFormLabel } from '@justeattakeaway/pie-form-label';
 import { PieInput } from '@justeattakeaway/pie-input';
+import { PieSwitch } from '@justeattakeaway/pie-switch';
 import { defineModel } from 'vue';
 
 const username = defineModel('username', { default: '' });

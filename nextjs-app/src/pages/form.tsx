@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { PieFormLabel } from '@justeattakeaway/pie-form-label/dist/react';
 import { PieSwitch } from '@justeattakeaway/pie-switch/dist/react';
 import { PieButton } from '@justeattakeaway/pie-button/dist/react';
 import { PieInput } from '@justeattakeaway/pie-input/dist/react';
@@ -55,9 +56,9 @@ export default function Form() {
         <>
             <h1>NextJS - PIE Form Test Page</h1>
             <form className="form" id="testForm" onSubmit={handleSubmit}>
-                <label htmlFor="username">
+                <PieFormLabel for="username">
                     Username:
-                </label>
+                </PieFormLabel>
                 <PieInput
                     className="form-field"
                     id="username"
@@ -101,8 +102,10 @@ export default function Form() {
                     type="password" />
 
                 <div className="form-controls">
+                    <PieFormLabel for="approveSettings">
+                        Approve settings
+                    </PieFormLabel>
                     <PieSwitch
-                        label="Approve settings"
                         id="approveSettings"
                         data-test-id="approveSettings"
                         name="approveSettings"
