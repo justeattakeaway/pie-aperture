@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1>Nuxt - PIE Form Test Page</h1>
         <form class="form" id="testForm" @submit="handleSubmit">
             <pie-form-label for="username">
                 Username:
