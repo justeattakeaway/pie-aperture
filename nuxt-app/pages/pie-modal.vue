@@ -1,11 +1,5 @@
 <template>
   <div>
-    <h1>Nuxt - PIE Modal</h1>
-
-    <pie-link href="/">Home Page</pie-link>
-
-    <pie-divider></pie-divider>
-
     <pie-button @click="openModal">Open Modal</pie-button>
     <pie-modal :isOpen="open ? open : undefined" hasBackButton isDismissible heading="Modal Header"
       @pie-modal-close="handleModalClose" @pie-modal-back="handleModalClose">
@@ -18,8 +12,6 @@
 
 <script setup lang="ts">
 import '@justeattakeaway/pie-button';
-import '@justeattakeaway/pie-divider';
-import '@justeattakeaway/pie-link';
 import '@justeattakeaway/pie-modal';
 import { ref } from 'vue';
 

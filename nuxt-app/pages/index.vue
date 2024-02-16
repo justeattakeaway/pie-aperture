@@ -23,7 +23,6 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-link';
 </script>
 
 <style>

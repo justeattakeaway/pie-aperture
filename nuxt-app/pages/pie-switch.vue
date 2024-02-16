@@ -1,11 +1,5 @@
 <template>
   <div>
-    <h1>Nuxt - PIE Switch</h1>
-
-    <pie-link href="/">Home Page</pie-link>
-
-    <pie-divider></pie-divider>
-
     <pie-switch :label="`checked: ${checked}`" :checked="checked" @change="handleSwitchChange">
     </pie-switch>
 

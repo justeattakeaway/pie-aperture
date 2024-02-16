@@ -1,10 +1,5 @@
 <template>
   <div>
-    <h1>Nuxt - PIE Card</h1>
-
-    <pie-link href="/">Home Page</pie-link>
-
-    <pie-divider></pie-divider>
     <pie-card>
       <h2>Default Card</h2>
       <p>Lorem ipsum dolor sit amet
@@ -21,6 +16,4 @@
 
 <script setup lang="ts">
 import '@justeattakeaway/pie-card';
-import '@justeattakeaway/pie-divider';
-import '@justeattakeaway/pie-link';
 </script>
