@@ -1,0 +1,16 @@
+<template>
+	<div>
+		<pie-assistive-text>Assistive Text Default</pie-assistive-text>
+		<pie-assistive-text variant="success">Assistive Text Success</pie-assistive-text>
+		<pie-assistive-text variant="error">Assistive Text Error</pie-assistive-text>
+	</div>
+</template>
+
+<script setup lang="ts">
+import '@justeattakeaway/pie-assistive-text';
+import { definePageMeta } from '#imports';
+
+definePageMeta({
+    title: 'PIE Assistive Text',
+});
+</script>
