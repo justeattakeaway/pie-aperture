@@ -4,6 +4,7 @@
         <pie-link v-if="!homePage" href="/">Home Page</pie-link>
         <pie-divider></pie-divider>
         <slot />
+        <pie-divider v-if="!homePage"></pie-divider>
     </div>
 </template>
 

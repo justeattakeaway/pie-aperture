@@ -10,7 +10,6 @@
         dicta consequuntur commodi officiis
         tempora asperiores aspernatur atque quas.</p>
     </pie-card>
-    <pie-divider></pie-divider>
   </div>
 </template>
 

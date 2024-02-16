@@ -1,7 +1,6 @@
 <template>
   <div>
     <pie-form-label>Label</pie-form-label>
-    <pie-divider></pie-divider>
   </div>
 </template>
 

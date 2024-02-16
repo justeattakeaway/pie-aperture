@@ -5,8 +5,6 @@
       @pie-modal-close="handleModalClose" @pie-modal-back="handleModalClose">
       <p>Modal</p>
     </pie-modal>
-
-    <pie-divider></pie-divider>
   </div>
 </template>
 

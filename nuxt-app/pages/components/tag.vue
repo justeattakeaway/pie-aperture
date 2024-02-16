@@ -1,8 +1,6 @@
 <template>
   <div>
     <pie-tag variant="brand" size="large">Label</pie-tag>
-
-    <pie-divider></pie-divider>
   </div>
 </template>
 

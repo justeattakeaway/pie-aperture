@@ -3,7 +3,6 @@
     <pie-button @click="setCounter">
       Counter: {{ counter }}
     </pie-button>
-    <pie-divider></pie-divider>
   </div>
 </template>
 

@@ -3,7 +3,6 @@
     <pie-icon-button>
       <icon-close></icon-close>
     </pie-icon-button>
-    <pie-divider></pie-divider>
   </div>
 </template>
 

@@ -7,8 +7,6 @@
 
     <pie-divider></pie-divider>
     <pie-chip variant="ghost">PIE Chip Ghost</pie-chip>
-
-    <pie-divider></pie-divider>
   </div>
 </template>
 

@@ -2,8 +2,6 @@
   <div>
     <pie-switch :label="`checked: ${checked}`" :checked="checked" @change="handleSwitchChange">
     </pie-switch>
-
-    <pie-divider></pie-divider>
   </div>
 </template>
 
