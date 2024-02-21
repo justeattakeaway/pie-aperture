@@ -21,7 +21,7 @@ describe('Vanilla App', () => {
         { url: '/components/tag.html', title: 'PIE Aperture | Vanilla | Tag' },
     ];
 
-    page.forEach((page) => {
+    pageUrls.forEach((page) => {
         it(`should navigate to the ${url} page.`, async () => {
             await browser.url(page.url);
             await waitUntilPageLoad();
