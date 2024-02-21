@@ -7,6 +7,7 @@ export default defineConfig({
     outDir: path.join(__dirname, "dist"),
     rollupOptions: {
       input: [
+        ...glob.sync(path.resolve(__dirname, 'index.html')),
         ...glob.sync(path.resolve(__dirname, 'components', '*.html')),
         ...glob.sync(path.resolve(__dirname, 'integrations', '*.html'))
       ],
