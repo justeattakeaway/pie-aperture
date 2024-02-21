@@ -1294,6 +1294,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justeattakeaway/pie-divider@npm:^0.12.3":
+  version: 0.12.3
+  resolution: "@justeattakeaway/pie-divider@npm:0.12.3"
+  dependencies:
+    "@justeattakeaway/pie-webc-core": 0.19.0
+  checksum: cf008a256644bb9b2be4872d431f71be44809f1bcdb0d852a26fbe4c935ad91b6066684a4cdcf395e48ce319da3332421292296cbd4f6522e5aa34b3ab0d0f2a
+  languageName: node
+  linkType: hard
+
 "@justeattakeaway/pie-form-label@npm:0.11.0":
   version: 0.11.0
   resolution: "@justeattakeaway/pie-form-label@npm:0.11.0"
@@ -1493,6 +1502,15 @@ __metadata:
   dependencies:
     lit: 3.1.1
   checksum: 4b7ef0a2dfbbd0a175e8e5d30323fb87c68e111a32e0ca2b576305049430217a3185ccaef379220ffc2bdc777cf5606d680b5b5fd51420855c0308d114353431
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-webc-core@npm:0.19.0":
+  version: 0.19.0
+  resolution: "@justeattakeaway/pie-webc-core@npm:0.19.0"
+  dependencies:
+    lit: 3.1.1
+  checksum: 0d4e1db6c0208aca438afa319ec6babb26db2e83d1548452968a319515dd317cb6ed4312ec17d4172944d1da66daf5c74aa325d388bdff3dc7fabea358679b36
   languageName: node
   linkType: hard
 
@@ -14330,7 +14348,7 @@ __metadata:
     "@justeattakeaway/pie-chip": 0.1.0
     "@justeattakeaway/pie-cookie-banner": 0.17.1
     "@justeattakeaway/pie-css": 0.10.0
-    "@justeattakeaway/pie-divider": 0.12.1
+    "@justeattakeaway/pie-divider": ^0.12.3
     "@justeattakeaway/pie-form-label": 0.11.0
     "@justeattakeaway/pie-icon-button": 0.27.3
     "@justeattakeaway/pie-icons-webc": 0.17.3
