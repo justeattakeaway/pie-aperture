@@ -22,7 +22,7 @@ describe('Vanilla App', () => {
     ];
 
     pageUrls.forEach((page) => {
-        it(`should navigate to the ${url} page.`, async () => {
+        it(`should navigate to the ${page.url} page.`, async () => {
             await browser.url(page.url);
             await waitUntilPageLoad();
             await expect(await browser.getTitle()).toBe(page.title);
