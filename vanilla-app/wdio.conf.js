@@ -4,7 +4,7 @@ import { getEnvironmentBaseUrl } from '../webdriver-helpers/configuration-helper
 
 exports.config = merge(sharedConf.config, {
 
-    baseUrl: getEnvironmentBaseUrl(process.env.APP_NAME),
+    baseUrl: getEnvironmentBaseUrl('vanilla-app'),
 
     specs: [
         '../test/visual/*.js'

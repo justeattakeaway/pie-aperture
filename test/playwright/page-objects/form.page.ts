@@ -1,4 +1,5 @@
 import { type Locator, type Page } from '@playwright/test';
+const { APP_NAME } = process.env;
 
 export class FormPage {
     readonly page: Page;
@@ -27,8 +28,10 @@ export class FormPage {
     }
 
     async goto() {
-        const url = process.env.APP_NAME === 'Vanilla' ? 'integrations/form.html' : '/form';
-        await this.page.goto(url);
+
+        let url = 'integrations/form';
+        const formattedUrl = APP_NAME === 'vanilla-app' ? `${url}.html` : url;
+        await this.page.goto(formattedUrl);
     }
 
     async fillForm(formData: any) {
