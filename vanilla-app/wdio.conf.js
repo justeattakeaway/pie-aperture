@@ -2,12 +2,14 @@ import merge from 'deepmerge';
 import sharedConf from '../wdio.conf.js';
 import { getEnvironmentBaseUrl } from '../webdriver-helpers/configuration-helper.js';
 
-const config = merge(sharedConf.config, {
+process.env.APP_NAME = 'Vanilla';
 
-    baseUrl: getEnvironmentBaseUrl('vanilla-app'),
+exports.config = merge(sharedConf.config, {
+
+    baseUrl: getEnvironmentBaseUrl(process.env.APP_NAME),
 
     specs: [
-        './test/visual/*.js'
+        '../test/visual/*.js'
     ],
 });
 

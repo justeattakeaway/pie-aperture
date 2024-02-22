@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import NavigationLayout from '@/layout/navigation';
 import { PieFormLabel } from '@justeattakeaway/pie-form-label/dist/react';
 import { PieSwitch } from '@justeattakeaway/pie-switch/dist/react';
 import { PieButton } from '@justeattakeaway/pie-button/dist/react';
@@ -53,8 +54,7 @@ export default function Form() {
     };
 
     return (
-        <>
-            <h1>NextJS - PIE Form Test Page</h1>
+        <NavigationLayout title="Form Test Page">
             <form className="form" id="testForm" onSubmit={handleSubmit}>
                 <PieFormLabel for="username">
                     Username:
@@ -132,6 +132,6 @@ export default function Form() {
                     <pre data-test-id="outputData">{formDataDisplay}</pre>
                 </div>
             )}
-        </>
+        </NavigationLayout>
     );
 }
