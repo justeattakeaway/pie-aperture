@@ -27,7 +27,7 @@ export class FormPage {
     }
 
     async goto() {
-        const url = process.env.APP_NAME === 'vanilla-app' ? 'integrations/form.html' : '/form';
+        const url = process.env.APP_NAME === 'Vanilla' ? 'integrations/form.html' : '/form';
         await this.page.goto(url);
     }
 
