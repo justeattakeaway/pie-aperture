@@ -1,9 +1,9 @@
-import '@justeattakeaway/pie-css';
 import '@justeattakeaway/pie-button';
 import '@justeattakeaway/pie-input';
 import '@justeattakeaway/pie-switch';
-import '@justeattakeaway/pie-divider';
-import './style.css';
+import './utils/navigation.js';
+import './shared.js';
+
 
 const form = document.querySelector('#testForm');
 const output = document.querySelector('#output');

@@ -1,0 +1,67 @@
+html {
+    height: 100%;
+}
+@font-face {
+    font-family: JETSansDigital;
+    src: url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff2') format("woff2"),
+    url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff') format("woff");
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: JETSansDigital;
+    src: url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff2') format("woff2"),
+    url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff') format("woff");
+    font-weight: 700;
+    font-display: swap;
+}
+
+body {
+    font-family: JetSansDigital;
+    font-feature-settings: "tnum"; /* Enable tabular numbers */
+    margin: auto;
+    min-height: 100%;
+    padding: 16px;
+    max-width: 720px;
+}
+
+pie-divider {
+    display: block;
+    margin-block: 2em;
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field {
+    margin-bottom: var(--dt-spacing-b);
+}
+
+.form-controls {
+    margin-top: var(--dt-spacing-e);
+
+    >* {
+        display: block;
+    }
+
+    >*+* {
+        margin-top: var(--dt-spacing-b);
+    }
+}
+
+.form-btns {
+    margin-top: var(--dt-spacing-c);
+    display: flex;
+    gap: var(--dt-spacing-a)
+}
+
+.form-btns>.form-btn:first-of-type {
+    margin-left: auto;
+}
+
+ul {
+	list-style-type: none;
+}
