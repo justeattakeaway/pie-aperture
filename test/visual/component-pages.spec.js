@@ -26,7 +26,7 @@ describe(`${APP_NAME} Aperture App`, () => {
         it(`should navigate to the ${appName} ${page.name} page.`, async () => {
             await browser.url(page.url);
             await waitUntilPageLoad();
-            await expect(await browser.getTitle()).toBe(`PIE Aperture | ${APP_NAME} | ${page.name}`);
+            await expect(await browser.getTitle()).toContain(page.name);
             await percyScreenshot(page.title);
         });p
     

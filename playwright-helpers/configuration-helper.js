@@ -4,20 +4,20 @@ export function getAppConfig(appName) {
     const config = {};
 
     switch (appName) {
-        case 'Vanilla':
+        case 'vanilla-app':
             config.amplifyId = VANILLA_AMPLIFY_ID;
             config.port = '3001';
             break;
-        case 'NextJS':
+        case 'nextjs-app':
             config.amplifyId = NEXT_AMPLIFY_ID;
             config.port = '3000';
             break;
-        case 'Nuxt':
+        case 'nuxt-app':
             config.amplifyId = NUXT_AMPLIFY_ID;
             config.port = '3002';
             break;
         default:
-            throw new Error(`appName: '${appName}' is invalid. Please use either 'Vanilla', 'NextJS' or 'Nuxt'.`);
+            throw new Error(`appName: '${appName}' is invalid. Please use either 'vanilla-app', 'nextjs-app' or 'nuxt-app'.`);
     }
     return config;
 }
