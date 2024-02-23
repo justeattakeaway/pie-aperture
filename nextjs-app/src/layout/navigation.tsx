@@ -17,12 +17,15 @@ export default function NavigationLayout({ children, title }: NavigationLayoutPr
     return (
       <>
         <Head>
-            { isHomePage && <title>PIE Aperture</title>}
-          {!isHomePage && <title>PIE Aperture | NextJS | { title }</title>}
+            { isHomePage ? <title>PIE Aperture</title> : <title>PIE Aperture | NextJS | { title }</title>}
         </Head>
         <h1>NextJS - PIE { title } </h1>
-        { !isHomePage && <PieLink onClick={() => router.push('/')} tag="button">Back to home</PieLink>}
-        { !isHomePage && <PieDivider/>}
+        { !isHomePage && 
+        <>
+        <PieLink onClick={() => router.push('/')} tag="button">Back to home</PieLink>
+        <PieDivider/>
+        </>
+        }
         { children }
         { !isHomePage && <PieDivider/>}
       </>

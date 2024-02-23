@@ -5,7 +5,7 @@ import { IconClose } from "@justeattakeaway/pie-icons-webc/dist/react/IconClose"
 export default function IconButton() {
     return (
         <NavigationLayout title="Icon Button">
-        <PieIconButton>
+        <PieIconButton onClick={() => console.log("clicked")}>
             <IconClose></IconClose>
         </PieIconButton>
         </NavigationLayout>
