@@ -25,7 +25,7 @@ describe('NextJS Aperture App', () => {
             await browser.url(page.url);
             await waitUntilPageLoad();
             await expect(await browser.getTitle()).toContain(page.name);
-            await percyScreenshot(page.title);
+            await percyScreenshot(page.name);
         });
     });
 });
