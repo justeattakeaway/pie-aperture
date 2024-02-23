@@ -5,8 +5,8 @@ import { IconSearch } from "@justeattakeaway/pie-icons-webc/dist/react/IconSearc
 import { useState } from "react";
 
 export default function Button() {
+    const [counter, setCounter] = useState(0);
 
-    const [counter, setCounter] = useState(0)
     return (
         <NavigationLayout title="Button">
         <PieButton onClick={() => setCounter(counter + 1)}>Counter: {counter}</PieButton>
