@@ -1,5 +1,5 @@
-import { waitUntilPageLoad } from '../../../webdriver-helpers/wait-helper.js';
-import { percyScreenshot } from '@percy/selenium-webdriver';
+const { waitUntilPageLoad } = require('../../../webdriver-helpers/wait-helper.js');
+const { percyScreenshot } = require('@percy/selenium-webdriver');
 
 describe('NextJS Aperture App', () => {
     const pages = [
