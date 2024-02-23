@@ -18,7 +18,7 @@ exports.getAppConfig = (appName) => {
             config.port = '3002';
             break;
         default:
-            throw new Error(`appName: '${appName}' is invalid. Please use either 'Vanilla', 'NextJS' or 'Nuxt'.`);
+            throw new Error(`appName: '${appName}' is invalid. Please use either 'vanilla-app', 'nextjs-app' or 'nuxt-app'.`);
     }
     return config;
 }

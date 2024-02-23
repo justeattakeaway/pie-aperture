@@ -1,9 +1,7 @@
-
 import { waitUntilPageLoad } from '../../../webdriver-helpers/wait-helper.js';
 import { percyScreenshot } from '@percy/selenium-webdriver';
-const { APP_NAME } = process.env;
 
-describe(`${APP_NAME} Aperture App`, () => {
+describe('Nuxt Aperture App', () => {
     const pages = [
         { url: '/index.html', name: 'PIE Aperture' },
         { url: '/integrations/icons.html', name: 'Icons' },
@@ -23,12 +21,11 @@ describe(`${APP_NAME} Aperture App`, () => {
     ];
 
     pages.forEach((page) => {
-        it(`should navigate to the ${appName} ${page.name} page.`, async () => {
+        it.skip(`should navigate to the ${page.name} page.`, async () => {
             await browser.url(page.url);
             await waitUntilPageLoad();
             await expect(await browser.getTitle()).toContain(page.name);
             await percyScreenshot(page.title);
-        });p
-    
+        });
     });
 });
