@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h3>Demo Integrations</h3>
+		<h3>Demo Integrations - Preview Test</h3>
 		<ul>
 			<li><pie-link href="/integrations/form">Form Demo</pie-link></li>
 			<li><pie-link href="/integrations/icons">Icons Demo</pie-link></li>
