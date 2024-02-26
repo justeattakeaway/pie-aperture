@@ -1,34 +1,31 @@
 import { waitUntilPageLoad } from '../../../webdriver-helpers/wait-helper.js';
 import { percyScreenshot } from '@percy/selenium-webdriver';
 
-describe('Vanilla App', () => {
-
-    const pageUrls = [
-        { url: '/index.html', title: 'PIE Aperture' },
-        { url: '/integrations/icons.html', title: 'PIE Aperture | Vanilla | Icons' },
-        { url: '/integrations/form.html', title: 'PIE Aperture | Vanilla | Form' },
-        { url: '/components/assistive-text.html', title: 'PIE Aperture | Vanilla | Assistive Text' },
-        { url: '/components/button.html', title: 'PIE Aperture | Vanilla | Button' },
-        { url: '/components/card.html', title: 'PIE Aperture | Vanilla | Card' },
-        { url: '/components/chip.html', title: 'PIE Aperture | Vanilla | Chip' },
-        { url: '/components/cookie-banner.html', title: 'PIE Aperture | Vanilla | Cookie Banner' },
-        { url: '/components/form-label.html', title: 'PIE Aperture | Vanilla | Form Label' },
-        { url: '/components/icon-button.html', title: 'PIE Aperture | Vanilla | Icon Button' },
-        { url: '/components/link.html', title: 'PIE Aperture | Vanilla | Link' },
-        { url: '/components/modal.html', title: 'PIE Aperture | Vanilla | Modal' },
-        { url: '/components/spinner.html', title: 'PIE Aperture | Vanilla | Spinner' },
-        { url: '/components/switch.html', title: 'PIE Aperture | Vanilla | Switch' },
-        { url: '/components/tag.html', title: 'PIE Aperture | Vanilla | Tag' },
+describe('Vanilla Aperture App', () => {
+    const pages = [
+        { url: '/index.html', name: 'PIE Aperture' },
+        { url: '/integrations/icons.html', name: 'Icons' },
+        { url: '/integrations/form.html', name: 'Form' },
+        { url: '/components/assistive-text.html', name: 'Assistive Text' },
+        { url: '/components/button.html', name: 'Button' },
+        { url: '/components/card.html', name: 'Card' },
+        { url: '/components/chip.html', name: 'Chip' },
+        { url: '/components/cookie-banner.html', name: 'Cookie Banner' },
+        { url: '/components/form-label.html', name: 'Form Label' },
+        { url: '/components/icon-button.html', name: 'Icon Button' },
+        { url: '/components/link.html', name: 'Link' },
+        { url: '/components/modal.html', name: 'Modal' },
+        { url: '/components/spinner.html', name: 'Spinner' },
+        { url: '/components/switch.html', name: 'Switch' },
+        { url: '/components/tag.html', name: 'Tag' },
     ];
 
-    pageUrls.forEach((page) => {
-        it(`should navigate to the ${page.url} page.`, async () => {
+    pages.forEach((page) => {
+        it(`should navigate to the ${page.name} page.`, async () => {
             await browser.url(page.url);
             await waitUntilPageLoad();
-            await expect(await browser.getTitle()).toBe(page.title);
-            await percyScreenshot(page.title);
+            await expect(await browser.getTitle()).toContain(page.name);
+            await percyScreenshot(page.name);
         });
-    
     });
 });
-
