@@ -14363,6 +14363,7 @@ __metadata:
     "@justeattakeaway/pie-tag": 0.7.1
     deepmerge: 4.3.1
     vite: 4.5.2
+    vite-plugin-html-inject: 1.1.2
   languageName: unknown
   linkType: soft
 
@@ -14428,6 +14429,13 @@ __metadata:
     vue-tsc:
       optional: true
   checksum: 2bd1467ec03e9d9ba7bf6da8bfb6ebed232c55d5253c9ccc4fdd6f38c0cb621e637b76426a3730e37574b351a0386791f37893f6768b700731168acfb12a9d61
+  languageName: node
+  linkType: hard
+
+"vite-plugin-html-inject@npm:1.1.2":
+  version: 1.1.2
+  resolution: "vite-plugin-html-inject@npm:1.1.2"
+  checksum: 094beffc38340e85d92c24401de9e5699c82e2c913bfff9f60f254c01d99611ca1cfe1f9351b96a923804e4782ed5f5080706f3cdd0c589ec2ac2f4164324bc7
   languageName: node
   linkType: hard
 
