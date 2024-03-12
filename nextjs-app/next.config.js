@@ -1,5 +1,9 @@
 const withLitSSR = require('@lit-labs/nextjs')();
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+})
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -11,4 +15,4 @@ const nextConfig = {
   }
 }
 
-module.exports = withLitSSR(nextConfig);
+module.exports = withLitSSR(withBundleAnalyzer(nextConfig));

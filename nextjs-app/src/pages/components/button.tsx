@@ -1,5 +1,5 @@
 import NavigationLayout from "@/layout/navigation";
-import { PieButton } from "@justeattakeaway/pie-button/dist/react";
+import { PieButton } from '@justeattakeaway/pie-webc/dist/react';
 import { PieDivider } from "@justeattakeaway/pie-divider/dist/react";
 import { IconSearch } from "@justeattakeaway/pie-icons-webc/dist/react/IconSearch";
 import { useState } from "react";

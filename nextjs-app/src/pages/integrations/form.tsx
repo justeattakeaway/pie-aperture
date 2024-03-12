@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NavigationLayout from '@/layout/navigation';
 import { PieFormLabel } from '@justeattakeaway/pie-form-label/dist/react';
 import { PieSwitch } from '@justeattakeaway/pie-switch/dist/react';
-import { PieButton } from '@justeattakeaway/pie-button/dist/react';
+import { PieButton } from '@justeattakeaway/pie-webc/dist/react';
 import { PieInput } from '@justeattakeaway/pie-input/dist/react';
 
 export default function Form() {

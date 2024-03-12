@@ -1,6 +1,5 @@
 import NavigationLayout from "@/layout/navigation";
-import { PieButton } from "@justeattakeaway/pie-button/dist/react"
-import { PieModal } from "@justeattakeaway/pie-modal/dist/react";
+import { PieButton, PieModal } from '@justeattakeaway/pie-webc/dist/react';
 import { useState } from "react";
 
 export default function Modal() {
