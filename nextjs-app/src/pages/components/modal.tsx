@@ -1,4 +1,3 @@
-import NavigationLayout from "@/layout/navigation";
 import { PieButton } from "@justeattakeaway/pie-button/dist/react"
 import { PieModal } from "@justeattakeaway/pie-modal/dist/react";
 import { useState } from "react";
@@ -7,7 +6,7 @@ export default function Modal() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <NavigationLayout title="Modal">
+        <>
         <PieButton onClick={() => setIsModalOpen(true)}>Open Modal</PieButton>
         <PieModal
             isOpen={isModalOpen}
@@ -19,6 +18,6 @@ export default function Modal() {
         >
             <p>Modal</p>
         </PieModal>
-        </NavigationLayout>
+        </>
     );
 }
