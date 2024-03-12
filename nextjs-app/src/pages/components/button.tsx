@@ -1,4 +1,4 @@
-import { PieButton } from "@justeattakeaway/pie-button/dist/react";
+import { PieButton } from "@justeattakeaway/pie-webc/dist/react";
 import { useState } from "react";
 
 export default function Button() {

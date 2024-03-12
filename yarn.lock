@@ -1567,6 +1567,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justeattakeaway/pie-webc@npm:0.2.3":
+  version: 0.2.3
+  resolution: "@justeattakeaway/pie-webc@npm:0.2.3"
+  dependencies:
+    "@justeattakeaway/pie-button": 0.45.6
+    "@justeattakeaway/pie-modal": 0.39.0
+    "@justeattakeaway/pie-webc-core": 0.19.1
+  checksum: beabc0c7aad8289eb4df8d8a47137dd2af9b077af11239e9bcd69f55835535459943e27e960dcd31b0017e507fa84b16465b9c6468cc785be2affc27270fc702
+  languageName: node
+  linkType: hard
+
 "@justeattakeaway/pie-wrapper-react@npm:0.14.0":
   version: 0.14.0
   resolution: "@justeattakeaway/pie-wrapper-react@npm:0.14.0"
@@ -10584,9 +10595,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-app@workspace:nextjs-app"
   dependencies:
-    "@justeattakeaway/pie-button": 0.45.6
     "@justeattakeaway/pie-css": 0.10.0
-    "@justeattakeaway/pie-modal": 0.39.0
+    "@justeattakeaway/pie-webc": 0.2.3
     "@lit-labs/nextjs": 0.1.4
     "@lit/react": 1.0.2
     "@next/bundle-analyzer": ^14.1.3

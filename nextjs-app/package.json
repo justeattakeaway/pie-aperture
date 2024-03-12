@@ -14,9 +14,8 @@
     "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "dependencies": {
-    "@justeattakeaway/pie-button": "0.45.6",
     "@justeattakeaway/pie-css": "0.10.0",
-    "@justeattakeaway/pie-modal": "0.39.0",
+    "@justeattakeaway/pie-webc": "0.2.3",
     "@lit-labs/nextjs": "0.1.4",
     "@lit/react": "1.0.2",
     "next": "13.5.6",
