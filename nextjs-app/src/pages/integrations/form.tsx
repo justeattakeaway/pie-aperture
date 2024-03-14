@@ -8,6 +8,9 @@ import { PieInput } from '@justeattakeaway/pie-input/dist/react';
 export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);
     const [enableNotifications, setNotifications] = useState(false);
+    const [favouriteNumber, setFavouriteNumber] = useState('');
+    const [favouriteNumberValidationMessage, setFavouriteNumberValidationMessage] = useState('');
+
     const [formDataDisplay, setFormDataDisplay] = useState<string | null>(null);
 
     const [username, setUsername] = useState('');
@@ -19,16 +22,36 @@ export default function Form() {
         setUsername((event.target as HTMLInputElement).value);
     }
 
+    const handleFavouriteNumberInput = (event: InputEvent) => {
+        const inputElement = event.target as HTMLInputElement;
+        const value = inputElement.value;
+    
+        // Set the state based on the input. If the input is empty, value will be '', effectively clearing the input field.
+        setFavouriteNumber(value);
+    
+        let validationMessage = '';
+        
+        if (value && inputElement.validity.rangeUnderflow) {
+            validationMessage = 'The favourite number is too low. Please pick a number between -5 and 200.';
+        } else if (value && inputElement.validity.rangeOverflow) {
+            validationMessage = 'The favourite number is too high. Please pick a number between -5 and 200.';
+        }
+    
+        setFavouriteNumberValidationMessage(validationMessage);
+    };
+    
+    
+
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setEmail(event.target.value);   
+        setEmail(event.target.value);
     }
 
     const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setPassword(event.target.value);   
+        setPassword(event.target.value);
     }
 
     const handlePasswordConfirmationChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setPasswordConfirmation(event.target.value);   
+        setPasswordConfirmation(event.target.value);
     }
 
     const handleApproveSettingsChange = () => {
@@ -41,15 +64,16 @@ export default function Form() {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const data = { 
+        const data = {
             approveSettings,
             enableNotifications,
-            username, 
-            email, 
-            password, 
+            username,
+            favouriteNumber,
+            email,
+            password,
             passwordConfirmation
         };
-        
+
         setFormDataDisplay(JSON.stringify(data, null, 2));
     };
 
@@ -68,6 +92,23 @@ export default function Form() {
                     onInput={handleUsernameInput as any}
                     type="text"></PieInput>
 
+                <PieFormLabel for="favouriteNumber">
+                    Favourite Number:
+                </PieFormLabel>
+                <PieInput
+                    className="form-field"
+                    id="favouriteNumber"
+                    data-test-id="favouriteNumber"
+                    name="favouriteNumber"
+                    min={-5}
+                    max={200}
+                    value={favouriteNumber}
+                    onInput={handleFavouriteNumberInput as any} // Ensure type compatibility
+                    type="number"
+                    assistiveText={favouriteNumberValidationMessage}
+                    status={favouriteNumberValidationMessage ? 'error' : undefined}
+                ></PieInput>
+
                 <label htmlFor="email">
                     Email:
                 </label>
@@ -78,7 +119,7 @@ export default function Form() {
                     name="email"
                     onChange={handleEmailChange}
                     type="email" />
-                
+
                 <label htmlFor="password">
                     Password:
                 </label>
