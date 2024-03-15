@@ -4,6 +4,7 @@ const { APP_NAME } = process.env;
 export class FormPage {
     readonly page: Page;
     readonly usernameField: Locator;
+    readonly favouriteNumberField: Locator;
     readonly emailField: Locator;
     readonly passwordField: Locator;
     readonly passwordConfirmationField: Locator;
@@ -12,10 +13,11 @@ export class FormPage {
     readonly resetBtn: Locator;
     readonly submitBtn: Locator;
     readonly outputData: Locator;
-
+    
     constructor(page: Page) {
         this.page = page;
         this.usernameField = page.getByTestId('username');
+        this.favouriteNumberField = page.getByTestId('favouriteNumber');
         this.emailField = page.getByTestId('email');
         this.passwordField = page.getByTestId('password');
         this.passwordConfirmationField = page.getByTestId('passwordConfirmation');
@@ -28,7 +30,6 @@ export class FormPage {
     }
 
     async goto() {
-
         let url = 'integrations/form';
         const formattedUrl = APP_NAME === 'vanilla-app' ? `${url}.html` : url;
         await this.page.goto(formattedUrl);
@@ -36,6 +37,7 @@ export class FormPage {
 
     async fillForm(formData: any) {
         await this.usernameField.locator('input').fill(formData.username);
+        await this.favouriteNumberField.locator('input').fill(formData.favouriteNumber);
         await this.emailField.fill(formData.email);
         await this.passwordField.fill(formData.password);
         await this.passwordConfirmationField.fill(formData.passwordConfirmation);
