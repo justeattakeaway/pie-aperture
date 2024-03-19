@@ -6,6 +6,7 @@ test.describe(`Form Page - ${process.env.APP_NAME}`, () => {
         // Arrange
         const expectFormData = {
             username: 'John Doe',
+            favouriteNumber: '42',
             email: 'foo@bar.com',
             password: 'foo',
             passwordConfirmation: 'bar',
