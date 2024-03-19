@@ -1371,13 +1371,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-input@npm:0.0.0-snapshot-release-20240314162312":
-  version: 0.0.0-snapshot-release-20240314162312
-  resolution: "@justeattakeaway/pie-input@npm:0.0.0-snapshot-release-20240314162312"
+"@justeattakeaway/pie-input@npm:0.14.0":
+  version: 0.14.0
+  resolution: "@justeattakeaway/pie-input@npm:0.14.0"
   dependencies:
     "@justeattakeaway/pie-assistive-text": 0.2.4
     "@justeattakeaway/pie-webc-core": 0.19.1
-  checksum: 88e9a1f83091f29ba83925c87c647d2a93ac9a698c0cd3ee0e006d78dde0982bf39f4f03647c320b7d2b5e5c88b54deb77f48d23b1ce3832e0b451ed7af49dc4
+  checksum: ef3046a29782134ab27c9c671fbfa9310262717eb0c65ebd1f30787ca41961ca479cc54f6e4258c9c25b48d351314583a2f2d7fa7c8234ae920edfd67f4ccc43
   languageName: node
   linkType: hard
 
@@ -10280,7 +10280,7 @@ __metadata:
     "@justeattakeaway/pie-form-label": 0.12.0
     "@justeattakeaway/pie-icon-button": 0.27.4
     "@justeattakeaway/pie-icons-webc": 0.17.3
-    "@justeattakeaway/pie-input": 0.0.0-snapshot-release-20240314162312
+    "@justeattakeaway/pie-input": 0.14.0
     "@justeattakeaway/pie-link": 0.15.2
     "@justeattakeaway/pie-modal": 0.38.6
     "@justeattakeaway/pie-spinner": 0.5.3
@@ -10697,7 +10697,7 @@ __metadata:
     "@justeattakeaway/pie-form-label": 0.12.0
     "@justeattakeaway/pie-icon-button": 0.27.4
     "@justeattakeaway/pie-icons-webc": 0.17.3
-    "@justeattakeaway/pie-input": 0.0.0-snapshot-release-20240314162312
+    "@justeattakeaway/pie-input": 0.14.0
     "@justeattakeaway/pie-link": 0.15.2
     "@justeattakeaway/pie-modal": 0.38.6
     "@justeattakeaway/pie-spinner": 0.5.3
@@ -14375,7 +14375,7 @@ __metadata:
     "@justeattakeaway/pie-form-label": 0.12.1
     "@justeattakeaway/pie-icon-button": 0.27.5
     "@justeattakeaway/pie-icons-webc": 0.18.0
-    "@justeattakeaway/pie-input": 0.0.0-snapshot-release-20240314162312
+    "@justeattakeaway/pie-input": 0.14.0
     "@justeattakeaway/pie-link": 0.15.3
     "@justeattakeaway/pie-modal": 0.38.7
     "@justeattakeaway/pie-spinner": 0.5.4
