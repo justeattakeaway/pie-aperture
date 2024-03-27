@@ -1,0 +1,14 @@
+name: My Target Workflow
+
+on:
+  repository_dispatch:
+    types: ['trigger-aperture-workflow']
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run my script
+        run: |
+          echo "Hello ${{ github.event.client_payload.target_aperture_app}} trigger"
