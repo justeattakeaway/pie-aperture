@@ -2,7 +2,7 @@ name: pie-trigger
 
 on:
   repository_dispatch:
-    types: [pie-trigger]
+    types: ['pie-trigger']
     
 jobs:
   list-snapshots:
