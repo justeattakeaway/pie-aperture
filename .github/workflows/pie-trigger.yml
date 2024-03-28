@@ -1,9 +1,9 @@
-name: PIE Trigger
+name: pie-trigger
 
 on:
   repository_dispatch:
-    types: [pie-trigger]
-    
+    types: ['pie-trigger']
+
 jobs:
   list-snapshots:
     runs-on: ubuntu-latest
