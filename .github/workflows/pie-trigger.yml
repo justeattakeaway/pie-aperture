@@ -10,4 +10,4 @@ jobs:
     steps:
         - name: Return list of created snapshots
           run: |
-            echo "Created Snapshots: ${{ github.event.client_payload.snapshots}}"
+            echo "Created Snapshots: ${{ github.event.client_payload.snapshots }}"
