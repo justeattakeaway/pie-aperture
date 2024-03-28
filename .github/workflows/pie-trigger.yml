@@ -1,0 +1,13 @@
+name: PIE Trigger
+
+on:
+  repository_dispatch:
+    types: [pie-trigger]
+    
+jobs:
+  list-snapshots:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Return list of created snapshots
+          run: |
+            echo "Created Snapshots: ${{ github.event.client_payload.snapshots}}"
