@@ -6,6 +6,16 @@ import './utils/navigation.js';
 import './shared.js';
 
 const form = document.querySelector('#testForm');
+const form2 = document.querySelector('#testForm2');
+
+form2.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form2);
+    const data = Object.fromEntries(formData.entries());
+    console.log(data);
+});
+
 const output = document.querySelector('#output');
 const favouriteNumberInput = document.querySelector('#favouriteNumber');
 
@@ -28,6 +38,7 @@ favouriteNumberInput.addEventListener('input', (e) => {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    console.log('submitted')
 
     const formData = new FormData(form);
     

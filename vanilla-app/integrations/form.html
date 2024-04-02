@@ -16,11 +16,13 @@
     <pie-divider></pie-divider>
     <form class="form" id="testForm">
         <pie-form-label for="username">Username:</pie-form-label>
-        <pie-input class="form-field" id="username" data-test-id="username" name="username" type="text"></pie-input>
+        <pie-input class="form-field" id="username" data-test-id="username" name="username" type="text" pattern="0" required></pie-input>
 
         <pie-form-label for="favouriteNumber">Favourite Number:</pie-form-label>
         <pie-input class="form-field" id="favouriteNumber" data-test-id="favouriteNumber" name="favouriteNumber"
-            type="number" min="-5" max="200" assistive-text="" state=""></pie-input>
+            type="number" min="-5" max="200" assistive-text="" state="" required></pie-input>
+
+        <pie-input class="form-field" id="foo" data-test-id="foo" name="foo" type="text" pattern="0"></pie-input>
 
         <label for="email">Email:</label>
         <input class="form-field" id="email" data-test-id="email" name="email" type="email" />
@@ -42,6 +44,21 @@
         <div class="form-btns">
             <pie-button class="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</pie-button>
             <pie-button class="form-btn" data-test-id="submit-btn" type="submit">Submit</pie-button>
+        </div>
+    </form>
+
+    <form class="form" id="testForm2">
+        <pie-form-label for="username2">Username:</pie-form-label>
+        <pie-input class="form-field" id="username2" data-test-id="username2" name="username2" type="text" pattern="0" required></pie-input>
+
+        <pie-form-label for="favouriteNumber2">Favourite Number:</pie-form-label>
+        <pie-input class="form-field" id="favouriteNumber2" data-test-id="favouriteNumber2" name="favouriteNumber2"
+            type="number" min="-5" max="200" assistive-text="" state="" required></pie-input>
+
+        <pie-input class="form-field" id="foo2" data-test-id="foo2" name="foo2" type="text" pattern="0"></pie-input>
+        <div class="form-btns">
+            <pie-button class="form-btn" data-test-id="reset-btn2" variant="secondary" type="reset">Reset</pie-button>
+            <pie-button class="form-btn" data-test-id="submit-btn2" type="submit">Submit</pie-button>
         </div>
     </form>
 
