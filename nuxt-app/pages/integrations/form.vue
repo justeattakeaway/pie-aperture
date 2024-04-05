@@ -11,6 +11,7 @@
                 id="username"
                 data-test-id="username"
                 name="username"
+                required
                 type="text"></pie-input>
 
             <pie-form-label for="favouriteNumber">
@@ -27,6 +28,7 @@
                 name="favouriteNumber"
                 :min="-5"
                 :max="200"
+                required
                 type="number"></pie-input>
             <label for="email">
                 Email:

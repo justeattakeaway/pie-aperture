@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   // This makes nextjs build via SSG as this is currently the simplist way to deploy to AWS Amplify.
-  output: 'export',
+  // output: 'export',
   images: {
     unoptimized: true
   }

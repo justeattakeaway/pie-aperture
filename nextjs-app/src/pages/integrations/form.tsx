@@ -89,6 +89,7 @@ export default function Form() {
                     data-test-id="username"
                     name="username"
                     value={username}
+                    required
                     onInput={handleUsernameInput as any}
                     type="text"></PieInput>
 
@@ -100,6 +101,7 @@ export default function Form() {
                     id="favouriteNumber"
                     data-test-id="favouriteNumber"
                     name="favouriteNumber"
+                    required
                     min={-5}
                     max={200}
                     value={favouriteNumber}
