@@ -24,8 +24,8 @@ document.querySelector('#app').innerHTML = `
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet tincidunt est, vitae vulputate turpis. Cras pretium venenatis elementum. Duis tristique neque non varius tempor. In hac habitasse platea dictumst. Aenean accumsan vehicula urna.
     </pie-notification>`;
 
-var $notification = document.querySelector('#notification');
-var $notificationActionText = document.querySelector('#notification-action-text');
+const $notification = document.querySelector('#notification');
+const $notificationActionText = document.querySelector('#notification-action-text');
 
 function isValidOpen(selector) {
   return typeof selector === 'string'
