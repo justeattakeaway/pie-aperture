@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "@justeattakeaway/pie-assistive-text": "0.2.2",
-    "@justeattakeaway/pie-button": "0.45.5",
     "@justeattakeaway/pie-card": "0.17.4",
     "@justeattakeaway/pie-chip": "0.2.0",
     "@justeattakeaway/pie-cookie-banner": "0.17.3",
@@ -30,10 +29,10 @@
     "@justeattakeaway/pie-icons-webc": "0.18.0",
     "@justeattakeaway/pie-input": "0.14.0",
     "@justeattakeaway/pie-link": "0.15.3",
-    "@justeattakeaway/pie-modal": "0.38.7",
     "@justeattakeaway/pie-spinner": "0.5.4",
     "@justeattakeaway/pie-switch": "0.27.1",
-    "@justeattakeaway/pie-tag": "0.7.1"
+    "@justeattakeaway/pie-tag": "0.7.1",
+    "@justeattakeaway/pie-webc": "0.0.0-snapshot-release-20240415155648"
   },
   "installConfig": {
     "hoistingLimits": "workspaces"

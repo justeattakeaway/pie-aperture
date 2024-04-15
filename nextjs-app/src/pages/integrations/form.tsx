@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import NavigationLayout from '@/layout/navigation';
+import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieFormLabel } from '@justeattakeaway/pie-form-label/dist/react';
-import { PieSwitch } from '@justeattakeaway/pie-switch/dist/react';
-import { PieButton } from '@justeattakeaway/pie-button/dist/react';
 import { PieInput } from '@justeattakeaway/pie-input/dist/react';
+import { PieSwitch } from '@justeattakeaway/pie-switch/dist/react';
 
 export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);
@@ -25,22 +25,22 @@ export default function Form() {
     const handleFavouriteNumberInput = (event: InputEvent) => {
         const inputElement = event.target as HTMLInputElement;
         const value = inputElement.value;
-    
+
         // Set the state based on the input. If the input is empty, value will be '', effectively clearing the input field.
         setFavouriteNumber(value);
-    
+
         let validationMessage = '';
-        
+
         if (value && inputElement.validity.rangeUnderflow) {
             validationMessage = 'The favourite number is too low. Please pick a number between -5 and 200.';
         } else if (value && inputElement.validity.rangeOverflow) {
             validationMessage = 'The favourite number is too high. Please pick a number between -5 and 200.';
         }
-    
+
         setFavouriteNumberValidationMessage(validationMessage);
     };
-    
-    
+
+
 
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);

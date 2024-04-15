@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-button';
+import '@justeattakeaway/pie-webc/button.js';
 import { ref } from 'vue';
 import { definePageMeta } from '#imports';
 

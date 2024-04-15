@@ -1,4 +1,4 @@
-import '@justeattakeaway/pie-button';
+import '@justeattakeaway/pie-webc/button.js';
 import '@justeattakeaway/pie-input';
 import '@justeattakeaway/pie-switch';
 import '@justeattakeaway/pie-form-label';
@@ -30,7 +30,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    
+
     const data = Object.fromEntries(formData.entries());
     data.approveSettings = formData.get('approveSettings') === 'on';
     data.enableNotifications = formData.get('enableNotifications') === 'on';
