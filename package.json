@@ -2,6 +2,9 @@
   "name": "pie-aperture",
   "version": "0.1.0",
   "private": true,
+  "bin": {
+    "update-snapshots": "./scripts/update-snapshots.mjs"
+  },
   "scripts": {
     "build": "turbo run build --token=${TURBO_TOKEN}",
     "cz": "./node_modules/cz-customizable/standalone.js",
