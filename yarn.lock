@@ -1157,13 +1157,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-assistive-text@npm:0.0.0-snapshot-release-20240229155253":
-  version: 0.0.0-snapshot-release-20240229155253
-  resolution: "@justeattakeaway/pie-assistive-text@npm:0.0.0-snapshot-release-20240229155253"
+"@justeattakeaway/pie-assistive-text@npm:0.2.1":
+  version: 0.2.1
+  resolution: "@justeattakeaway/pie-assistive-text@npm:0.2.1"
   dependencies:
-    "@justeattakeaway/pie-icons-webc": 0.0.0-snapshot-release-20240229155253
+    "@justeattakeaway/pie-icons-webc": 0.17.3
+    "@justeattakeaway/pie-webc-core": 0.18.0
+  checksum: dac3b3690134ba78376227a1d433a4df02ea1601be7ca4c8d096006595ed377488de97391126743810df070e4330811ddd525663e94d521ae60b2c5502cd079c
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-assistive-text@npm:0.2.2":
+  version: 0.2.2
+  resolution: "@justeattakeaway/pie-assistive-text@npm:0.2.2"
+  dependencies:
+    "@justeattakeaway/pie-icons-webc": 0.18.0
     "@justeattakeaway/pie-webc-core": 0.19.0
-  checksum: d15c077b839ba0b092e962fc30963ee9d146622436d5ce6c27a84a66872b0f5a0c02a966563498e2189dd04d448d999c65638593bd4e1f0e5a861a9a309fea01
+  checksum: e940b6b9282e86e14d419262c6c41fb45c941991e1e45732a47ee0ad0a2deaaf9acf6f9a8f2790539e7fd644c774b7818b9250bb39ce89b6e7287b22f459e46e
   languageName: node
   linkType: hard
 
@@ -1174,17 +1184,6 @@ __metadata:
     "@justeattakeaway/pie-icons-webc": 0.19.1
     "@justeattakeaway/pie-webc-core": 0.19.1
   checksum: cd94d05916c24cf914892d8b46a2f8fa5e42d0463a7785135dddcbe5a3f7b369423f090b4d760bef5c7612894cffb53f274cdaae57c4d5c0739e5bc29be47526
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-button@npm:0.0.0-snapshot-release-20240229155253":
-  version: 0.0.0-snapshot-release-20240229155253
-  resolution: "@justeattakeaway/pie-button@npm:0.0.0-snapshot-release-20240229155253"
-  dependencies:
-    "@justeattakeaway/pie-spinner": 0.0.0-snapshot-release-20240229155253
-    "@justeattakeaway/pie-webc-core": 0.19.0
-    element-internals-polyfill: 1.3.10
-  checksum: c790bc5e5866609b2f7da221052e0014b7201f9ee61eba63aed7a35ecde235d503deccd201d6153bc34d8bf88d6fe1339918ea1348785b2c3579055769574a50
   languageName: node
   linkType: hard
 
@@ -1345,15 +1344,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-icons-webc@npm:0.0.0-snapshot-release-20240229155253":
-  version: 0.0.0-snapshot-release-20240229155253
-  resolution: "@justeattakeaway/pie-icons-webc@npm:0.0.0-snapshot-release-20240229155253"
-  dependencies:
-    "@justeattakeaway/pie-webc-core": 0.19.0
-  checksum: e514fdcca781180414a568b2777483aa58d53b7d6b86d2fa9b2d2c8da8491ea9a5cc1a5f054ef9088336eaaebe49281e3879e59ec74a7cffa4e5620d00dca5ce
-  languageName: node
-  linkType: hard
-
 "@justeattakeaway/pie-icons-webc@npm:0.17.3":
   version: 0.17.3
   resolution: "@justeattakeaway/pie-icons-webc@npm:0.17.3"
@@ -1436,15 +1426,6 @@ __metadata:
     body-scroll-lock: 3.1.5
     dialog-polyfill: 0.5.6
   checksum: e97400623df7e20019a8dfbe642f2bbecd9b7756c4fffcf53fe0ac2d009bc5b39e3cae30f54def3fa995dfc5712181c7d7a68885f2a101575e3c231646929a0e
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-spinner@npm:0.0.0-snapshot-release-20240229155253":
-  version: 0.0.0-snapshot-release-20240229155253
-  resolution: "@justeattakeaway/pie-spinner@npm:0.0.0-snapshot-release-20240229155253"
-  dependencies:
-    "@justeattakeaway/pie-webc-core": 0.19.0
-  checksum: db089d8575fbd27bf6c3f75f449cabffaa798d283ddfb523ec4a13e85bdc1bca7af0b4422be7eacfe56f31a8d2cb9cb2c79fd6fbce8e3cbda9e8a63896ca1146
   languageName: node
   linkType: hard
 
@@ -10289,8 +10270,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-app@workspace:nextjs-app"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 0.0.0-snapshot-release-20240229155253
-    "@justeattakeaway/pie-button": 0.0.0-snapshot-release-20240229155253
+    "@justeattakeaway/pie-assistive-text": 0.2.1
+    "@justeattakeaway/pie-button": 0.45.4
     "@justeattakeaway/pie-card": 0.17.3
     "@justeattakeaway/pie-chip": 0.1.1
     "@justeattakeaway/pie-cookie-banner": 0.17.2
@@ -10706,8 +10687,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nuxt-app@workspace:nuxt-app"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 0.0.0-snapshot-release-20240229155253
-    "@justeattakeaway/pie-button": 0.0.0-snapshot-release-20240229155253
+    "@justeattakeaway/pie-assistive-text": 0.2.1
+    "@justeattakeaway/pie-button": 0.45.4
     "@justeattakeaway/pie-card": 0.17.3
     "@justeattakeaway/pie-chip": 0.1.1
     "@justeattakeaway/pie-cookie-banner": 0.17.2
@@ -13626,8 +13607,8 @@ __metadata:
   linkType: hard
 
 "tar@npm:^6.1.11, tar@npm:^6.1.2, tar@npm:^6.2.0":
-  version: 6.2.0
-  resolution: "tar@npm:6.2.0"
+  version: 6.2.1
+  resolution: "tar@npm:6.2.1"
   dependencies:
     chownr: ^2.0.0
     fs-minipass: ^2.0.0
@@ -13635,7 +13616,7 @@ __metadata:
     minizlib: ^2.1.1
     mkdirp: ^1.0.3
     yallist: ^4.0.0
-  checksum: db4d9fe74a2082c3a5016630092c54c8375ff3b280186938cfd104f2e089c4fd9bad58688ef6be9cf186a889671bf355c7cda38f09bbf60604b281715ca57f5c
+  checksum: f1322768c9741a25356c11373bce918483f40fa9a25c69c59410c8a1247632487edef5fe76c5f12ac51a6356d2f1829e96d2bc34098668a2fc34d76050ac2b6c
   languageName: node
   linkType: hard
 
@@ -14065,11 +14046,11 @@ __metadata:
   linkType: hard
 
 "undici@npm:^5.28.2":
-  version: 5.28.3
-  resolution: "undici@npm:5.28.3"
+  version: 5.28.4
+  resolution: "undici@npm:5.28.4"
   dependencies:
     "@fastify/busboy": ^2.0.0
-  checksum: fa1e65aff896c5e2ee23637b632e306f9e3a2b32a3dc0b23ea71e5555ad350bcc25713aea894b3dccc0b7dc2c5e92a5a58435ebc2033b731a5524506f573dfd2
+  checksum: a8193132d84540e4dc1895ecc8dbaa176e8a49d26084d6fbe48a292e28397cd19ec5d13bc13e604484e76f94f6e334b2bdc740d5f06a6e50c44072818d0c19f9
   languageName: node
   linkType: hard
 
@@ -14386,8 +14367,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vanilla-app@workspace:vanilla-app"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 0.0.0-snapshot-release-20240229155253
-    "@justeattakeaway/pie-button": 0.0.0-snapshot-release-20240229155253
+    "@justeattakeaway/pie-assistive-text": 0.2.2
+    "@justeattakeaway/pie-button": 0.45.5
     "@justeattakeaway/pie-card": 0.17.4
     "@justeattakeaway/pie-chip": 0.2.0
     "@justeattakeaway/pie-cookie-banner": 0.17.3
