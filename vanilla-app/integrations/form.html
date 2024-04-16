@@ -16,22 +16,34 @@
     <pie-divider></pie-divider>
     <form class="form" id="testForm">
         <pie-form-label for="username">Username:</pie-form-label>
-        <pie-input class="form-field" id="username" data-test-id="username" name="username" type="text"></pie-input>
+        <pie-input class="form-field" id="username" data-test-id="username" name="username" type="text">
+            <icon-user slot="leading"></icon-user>
+        </pie-input>
 
         <pie-form-label for="favouriteNumber">Favourite Number:</pie-form-label>
-        <pie-input class="form-field" id="favouriteNumber" data-test-id="favouriteNumber" name="favouriteNumber" type="number" min="-5" max="200" assistive-text="" state=""></pie-input>
+        <pie-input class="form-field" id="favouriteNumber" data-test-id="favouriteNumber" name="favouriteNumber" type="number" min="-5" max="200" assistive-text="" state="">
+            <icon-number-symbol slot="leading"></icon-number-symbol>
+        </pie-input>
 
         <pie-form-label for="email">Email:</pie-form-label>
-        <pie-input class="form-field" id="email" data-test-id="email" name="email" type="email"></pie-input>
-        
-        <pie-form-label for="password">Password:</pie-form-label>
-        <pie-input class="form-field" id="password" data-test-id="password" name="password" type="password"></pie-input>
-        
+        <pie-input class="form-field" id="email" data-test-id="email" name="email" type="email">
+            <icon-email slot="leading"></icon-email>
+        </pie-input>
+
         <pie-form-label for="urlField">Website:</pie-form-label>
-        <pie-input class="form-field" id="urlField" data-test-id="urlField" name="urlField" type="url"></pie-input>
+        <pie-input class="form-field" id="url" data-test-id="url" name="url" type="url">
+            <icon-laptop slot="leading"></icon-laptop>
+        </pie-input>
         
         <pie-form-label for="telField">Telephone:</pie-form-label>
-        <pie-input class="form-field" id="telField" data-test-id="telField" name="telField" type="tel"></pie-input>
+        <pie-input class="form-field" id="tel" data-test-id="tel" name="tel" type="tel">
+            <icon-phone slot="leading"></icon-phone>
+        </pie-input>
+        
+        <pie-form-label for="password">Password:</pie-form-label>
+        <pie-input class="form-field" id="password" data-test-id="password" name="password" type="password">
+            <icon-key slot="leading"></icon-key>
+        </pie-input>
 
         <div class="form-controls">
             <pie-switch label="Approve settings" id="approveSettings" data-test-id="approveSettings"
