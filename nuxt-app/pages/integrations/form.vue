@@ -11,7 +11,9 @@
                 id="username"
                 data-test-id="username"
                 name="username"
-                type="text"></pie-input>
+                type="text">
+                <icon-user slot="leading"></icon-user>
+            </pie-input>
 
             <pie-form-label for="favouriteNumber">
                 Favourite Number:
@@ -27,39 +29,65 @@
                 name="favouriteNumber"
                 :min="-5"
                 :max="200"
-                type="number"></pie-input>
-            <label for="email">
+                type="number">
+                <icon-number-symbol slot="leading"></icon-number-symbol>
+            </pie-input>
+
+            <pie-form-label for="email">
                 Email:
-            </label>
-            <input
+            </pie-form-label>
+            <pie-input
+                :value="email"
+                @input="email = $event.target.value"
                 class="form-field"
                 id="email"
                 data-test-id="email"
                 name="email"
-                v-model="email"
-                type="email" />
+                type="email">
+                <icon-email slot="leading"></icon-email>
+            </pie-input>
 
-            <label for="password">
+            <pie-form-label for="url">
+                Website:
+            </pie-form-label>
+            <pie-input
+                :value="url"
+                @input="url = $event.target.value"
+                class="form-field"
+                id="url"
+                data-test-id="url"
+                name="url"
+                type="url">
+                <icon-laptop slot="leading"></icon-laptop>
+            </pie-input>
+
+            <pie-form-label for="tel">
+                Telephone:
+            </pie-form-label>
+            <pie-input
+                :value="tel"
+                @input="tel = $event.target.value"
+                class="form-field"
+                id="tel"
+                data-test-id="tel"
+                name="tel"
+                type="tel">
+                <icon-phone slot="leading"></icon-phone>
+            </pie-input>
+
+            <pie-form-label for="password">
                 Password:
-            </label>
-            <input
+            </pie-form-label>
+            <pie-input
+                :value="password"
+                @input="password = $event.target.value"
                 class="form-field"
                 id="password"
                 data-test-id="password"
                 name="password"
-                v-model="password"
-                type="password" />
-
-            <label for="passwordConfirmation">
-                Confirm Password:
-            </label>
-            <input
-                class="form-field"
-                id="passwordConfirmation"
-                data-test-id="passwordConfirmation"
-                name="passwordConfirmation"
-                v-model="passwordConfirmation"
-                type="password" />
+                type="password">
+                <icon-key slot="leading"></icon-key>
+            </pie-input>
 
             <div class="form-controls">
                 <pie-form-label for="approveSettings">
@@ -99,9 +127,17 @@ import '@justeattakeaway/pie-button';
 import '@justeattakeaway/pie-form-label';
 import '@justeattakeaway/pie-input';
 import '@justeattakeaway/pie-switch';
+import '@justeattakeaway/pie-icons-webc/IconEmail';
+import '@justeattakeaway/pie-icons-webc/IconLaptop';
+import '@justeattakeaway/pie-icons-webc/IconPhone';
+import '@justeattakeaway/pie-icons-webc/IconUser';
+import '@justeattakeaway/pie-icons-webc/IconNumberSymbol';
+import '@justeattakeaway/pie-icons-webc/IconKey';
 
 const username = ref('');
 const email = ref('');
+const tel = ref('');
+const url = ref('');
 const password = ref('');
 const passwordConfirmation = ref('');
 const approveSettings = ref(false);
@@ -130,8 +166,9 @@ function handleSubmit() {
     formDataDisplay.value = JSON.stringify({
         username: username.value,
         email: email.value,
+        tel: tel.value,
+        url: url.value,
         password: password.value,
-        passwordConfirmation: passwordConfirmation.value,
         approveSettings: approveSettings.value,
         enableNotifications: notifications.value,
         favouriteNumber: favouriteNumber.value
