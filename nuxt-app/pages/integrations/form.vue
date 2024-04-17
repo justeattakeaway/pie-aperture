@@ -95,7 +95,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import '@justeattakeaway/pie-webc/button.js';
+import '@justeattakeaway/pie-webc/components/button';
 import '@justeattakeaway/pie-form-label';
 import '@justeattakeaway/pie-input';
 import '@justeattakeaway/pie-switch';
