@@ -1,4 +1,4 @@
-import '@justeattakeaway/pie-webc/components/button';
+import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-input';
 import '@justeattakeaway/pie-switch';
 import '@justeattakeaway/pie-form-label';

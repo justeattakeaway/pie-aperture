@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NavigationLayout from '@/layout/navigation';
-import { PieButton } from '@justeattakeaway/pie-webc/react/button';
+import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieFormLabel } from '@justeattakeaway/pie-form-label/dist/react';
 import { PieInput } from '@justeattakeaway/pie-input/dist/react';
 import { PieSwitch } from '@justeattakeaway/pie-switch/dist/react';
