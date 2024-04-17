@@ -4,87 +4,121 @@ import { exec } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
-// Read and parse package.json
-const packageJsonPath = path.join(process.cwd(), 'package.json');
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-const dependencies = packageJson.dependencies || {};
-const devDependencies = packageJson.devDependencies || {};
-const allDependencies = Object.assign({}, dependencies, devDependencies);
+const workingDir = process.cwd();
 
-// Snapshot version as the first command-line argument
+// Function to check if the script is run from the correct directory
+function verifyRootDirectory(expectedPackageName) {
+    const packageJsonPath = path.join(workingDir, 'package.json');
+    if (!fs.existsSync(packageJsonPath)) {
+        console.error("Error: package.json not found. Please run this script from the root directory of your project.");
+        process.exit(1);
+    }
+
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+    if (packageJson.name !== expectedPackageName) {
+        console.error(`Error: This script should be run from the root directory of '${expectedPackageName}'.`);
+        process.exit(1);
+    }
+}
+
+verifyRootDirectory('pie-aperture'); // Ensure the script is run from the root directory of 'pie-aperture'
+
+const subProjects = ['nuxt-app', 'vanilla-app', 'nextjs-app'];
+
+function readDependencies(filePath) {
+    if (fs.existsSync(filePath)) {
+        const packageJson = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        return { ...packageJson.dependencies, ...packageJson.devDependencies };
+    }
+    return {};
+}
+
+function collectDependencies() {
+    const allDependencies = {};
+    subProjects.forEach(subProject => {
+        const packageJsonPath = path.join(workingDir, subProject, 'package.json');
+        const deps = readDependencies(packageJsonPath);
+        for (const [key, value] of Object.entries(deps)) {
+            if (key.startsWith('@justeattakeaway/')) {
+                allDependencies[key] = value;
+            }
+        }
+    });
+    return allDependencies;
+}
+
 const snapshotVersion = process.argv[2];
 const packagesToUpdate = process.argv.slice(3);
+const versionTag = `0.0.0-snapshot-release-${snapshotVersion}`;
 
-// Filter for packages that are in the list of packages to update and start with @justeattakeaway/pie-
+if (!snapshotVersion || !/^\d{14}$/.test(snapshotVersion)) {
+    console.error("Error: Invalid or missing snapshot version. Please provide a snapshot version in the format YYYYMMDDHHMMSS (e.g., 20240416153654).");
+    process.exit(1);
+}
+
+if (!packagesToUpdate.length) {
+    console.error("Error: No packages specified for update.");
+    process.exit(1);
+}
+
+const allDependencies = collectDependencies();
 const basePackages = Object.keys(allDependencies).filter(name =>
-    packagesToUpdate.includes(name) && name.startsWith('@justeattakeaway/pie-')
+    packagesToUpdate.includes(name) && name.startsWith('@justeattakeaway/')
 );
 
-// Flag to check if any package was successfully updated
 let updateSuccessful = false;
 
-// Function to execute yarn install for a specific package
 function yarnInstall(packageName) {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] Starting installation for ${packageName} with snapshot version ${snapshotVersion}`);
+    console.log(`[${timestamp}] Attempting to update ${packageName} with version ${versionTag}`);
+    const command = `yarn up ${packageName}@${versionTag} --mode=update-lockfile`;
     return new Promise((resolve, reject) => {
-
-        const command = `yarn up ${packageName}@0.0.0-snapshot-release-${snapshotVersion} --mode=update-lockfile`;
-
-        exec(command, (error, stdout, stderr) => {
+        exec(command, { cwd: workingDir }, (error, stdout, stderr) => {
             if (error) {
-                console.warn(`[${timestamp}] Error installing ${packageName}: ${error}`);
-                console.warn(`[${timestamp}] stderr: ${stderr}`);
+                console.error(`[${timestamp}] Error updating ${packageName}: ${error}`);
+                console.error(`[${timestamp}] stderr: ${stderr}`);
                 reject(error);
             } else {
-                console.log(`[${timestamp}] Successfully installed ${packageName}: ${stdout}`);
-                updateSuccessful = true; // Set flag if any package successfully updated
+                console.log(`[${timestamp}] Successfully updated ${packageName}: ${stdout}`);
+                updateSuccessful = true;
                 resolve(stdout);
             }
         });
     });
 }
 
-// Function to run yarn install
-function runYarnInstall() {
-    return new Promise((resolve, reject) => {
-        exec(`yarn install`, (error, stdout, stderr) => {
-            if (error) {
-                console.warn(`Error running yarn install: ${error}`);
-                reject(error);
-            } else {
-                console.log(`yarn install completed: ${stdout}`);
-                resolve(stdout);
-            }
-        });
-    });
-}
-
-// Main function to install all packages
 async function installPackages() {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] Starting installation of packages`);
+    console.log(`[${timestamp}] Starting the update process`);
+
+    if (basePackages.length === 0) {
+        console.error("Error: No matching packages found in the repository for the provided arguments.");
+        process.exit(1);
+    }
 
     for (let packageName of basePackages) {
         try {
             await yarnInstall(packageName);
         } catch (error) {
-            console.error(`[${timestamp}] Failed to install ${packageName}`);
+            console.error(`[${timestamp}] Failed to update ${packageName}: ${error.message}`);
         }
     }
 
-    // Run yarn install if any updates were successful
     if (updateSuccessful) {
-        console.log(`Some packages were updated, running yarn install...`);
-        try {
-            await runYarnInstall();
-        } catch (error) {
-            console.error('Failed to complete yarn install');
-        }
+        console.log(`Updates were successful, running yarn install...`);
+        const installCommand = `yarn install`;
+        exec(installCommand, { cwd: workingDir }, (error, stdout) => {
+            if (error) {
+                console.error('Failed to complete yarn install:', error);
+            } else {
+                console.log('Yarn install completed successfully.');
+            }
+        });
+    } else {
+        console.log('No packages were updated.');
     }
 
-    console.log(`[${timestamp}] All packages processed`);
+    console.log(`[${timestamp}] Update process completed.`);
 }
 
-// Start the installation process
 installPackages();
