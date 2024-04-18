@@ -26,11 +26,17 @@ verifyRootDirectory('pie-aperture'); // Ensure the script is run from the root d
 const subProjects = ['nuxt-app', 'vanilla-app', 'nextjs-app'];
 
 function readDependencies(filePath) {
+    const dependenciesSet = new Set();
     if (fs.existsSync(filePath)) {
         const packageJson = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-        return { ...packageJson.dependencies, ...packageJson.devDependencies };
+        const allDependencies = {...packageJson.dependencies, ...packageJson.devDependencies};
+        for (const key of Object.keys(allDependencies)) {
+            if (key.startsWith('@justeattakeaway/')) {
+                dependenciesSet.add(key);
+            }
+        }
     }
-    return {};
+    return dependenciesSet;
 }
 
 function collectDependencies() {
@@ -38,11 +44,7 @@ function collectDependencies() {
     subProjects.forEach(subProject => {
         const packageJsonPath = path.join(workingDir, subProject, 'package.json');
         const deps = readDependencies(packageJsonPath);
-        Object.keys(deps).forEach(key => {
-            if (key.startsWith('@justeattakeaway/')) {
-                allDependencies.add(key);
-            }
-        });
+        deps.forEach(dep => allDependencies.add(dep));
     });
     return allDependencies;
 }
