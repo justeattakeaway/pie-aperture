@@ -13,7 +13,7 @@
     "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "dependencies": {
-    "@justeattakeaway/pie-assistive-text": "0.2.1",
+    "@justeattakeaway/pie-assistive-text": "0.0.0-snapshot-release-20240418132620",
     "@justeattakeaway/pie-button": "0.45.4",
     "@justeattakeaway/pie-card": "0.17.3",
     "@justeattakeaway/pie-chip": "0.1.1",
@@ -23,7 +23,7 @@
     "@justeattakeaway/pie-form-label": "0.12.0",
     "@justeattakeaway/pie-icon-button": "0.27.4",
     "@justeattakeaway/pie-icons-webc": "0.17.3",
-    "@justeattakeaway/pie-input": "0.0.0-snapshot-release-20240412163322",
+    "@justeattakeaway/pie-input": "0.0.0-snapshot-release-20240418132620",
     "@justeattakeaway/pie-link": "0.15.2",
     "@justeattakeaway/pie-modal": "0.38.6",
     "@justeattakeaway/pie-spinner": "0.5.3",
