@@ -8,6 +8,20 @@ jobs:
   list-snapshots:
     runs-on: ubuntu-latest
     steps:
-        - name: Return list of created snapshots
-          run: |
-            echo "Created Snapshots: ${{ github.event.client_payload.snapshots }}"
+      # Checkout the Repo
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # Setup Node
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Install dependencies
+      shell: bash
+      run: yarn
+
+    - name: Update snapshots
+      shell: bash
+      run: npx update-snapshots ${{ github.event.client_payload.snapshot-version }} ${{ github.event.client_payload.snapshot-packages }}
