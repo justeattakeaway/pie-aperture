@@ -1331,14 +1331,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-webc@npm:0.0.0-snapshot-release-20240417135841":
-  version: 0.0.0-snapshot-release-20240417135841
-  resolution: "@justeattakeaway/pie-webc@npm:0.0.0-snapshot-release-20240417135841"
+"@justeattakeaway/pie-webc@npm:0.0.0-snapshot-release-20240417154239":
+  version: 0.0.0-snapshot-release-20240417154239
+  resolution: "@justeattakeaway/pie-webc@npm:0.0.0-snapshot-release-20240417154239"
   dependencies:
     "@justeattakeaway/pie-button": 0.47.3
     "@justeattakeaway/pie-modal": 0.42.3
     "@justeattakeaway/pie-webc-core": 0.21.1
-  checksum: 7a9182bd995adbfb0ff5bfc25d7077cc9dbda25ef813bb648f9066a7423d27a9facc0cc01bd4fd3b7e5e810c96a6d8bc320b9183a4c331962b122cc097a32f6e
+  checksum: 0adcbe2fd5740bbce1281de1c80c86861ad56b37bbea05032478038e4930ad901b3a4acce40cbd125b35baaede3a036663c314737fd7dd6dbd23cfcb89bf000d
   languageName: node
   linkType: hard
 
@@ -10099,7 +10099,7 @@ __metadata:
     "@justeattakeaway/pie-spinner": 0.6.3
     "@justeattakeaway/pie-switch": 0.29.2
     "@justeattakeaway/pie-tag": 0.9.3
-    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20240417135841
+    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20240417154239
     "@lit-labs/nextjs": 0.1.4
     "@lit/react": 1.0.2
     "@types/node": 20.9.1
@@ -10515,7 +10515,7 @@ __metadata:
     "@justeattakeaway/pie-spinner": 0.6.3
     "@justeattakeaway/pie-switch": 0.29.2
     "@justeattakeaway/pie-tag": 0.9.3
-    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20240417135841
+    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20240417154239
     deepmerge: 4.3.1
     just-kebab-case: 4.2.0
     nuxt: 3.10.1
@@ -14192,7 +14192,7 @@ __metadata:
     "@justeattakeaway/pie-spinner": 0.6.3
     "@justeattakeaway/pie-switch": 0.29.2
     "@justeattakeaway/pie-tag": 0.9.3
-    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20240417135841
+    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20240417154239
     deepmerge: 4.3.1
     vite: 4.5.2
     vite-plugin-html-inject: 1.1.2
