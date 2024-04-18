@@ -34,21 +34,21 @@ function readDependencies(filePath) {
 }
 
 function collectDependencies() {
-    const allDependencies = {};
+    const allDependencies = new Set();
     subProjects.forEach(subProject => {
         const packageJsonPath = path.join(workingDir, subProject, 'package.json');
         const deps = readDependencies(packageJsonPath);
-        for (const [key, value] of Object.entries(deps)) {
+        Object.keys(deps).forEach(key => {
             if (key.startsWith('@justeattakeaway/')) {
-                allDependencies[key] = value;
+                allDependencies.add(key);
             }
-        }
+        });
     });
     return allDependencies;
 }
 
 const snapshotVersion = process.argv[2];
-const packagesToUpdate = process.argv.slice(3);
+const packagesToUpdate = new Set(process.argv.slice(3));
 const versionTag = `0.0.0-snapshot-release-${snapshotVersion}`;
 
 if (!snapshotVersion || !/^\d{14}$/.test(snapshotVersion)) {
@@ -56,15 +56,13 @@ if (!snapshotVersion || !/^\d{14}$/.test(snapshotVersion)) {
     process.exit(1);
 }
 
-if (!packagesToUpdate.length) {
+if (!packagesToUpdate.size) {
     console.error("Error: No packages specified for update.");
     process.exit(1);
 }
 
 const allDependencies = collectDependencies();
-const basePackages = Object.keys(allDependencies).filter(name =>
-    packagesToUpdate.includes(name) && name.startsWith('@justeattakeaway/')
-);
+const basePackages = new Set([...allDependencies].filter(name => packagesToUpdate.has(name)));
 
 let updateSuccessful = false;
 
@@ -91,7 +89,7 @@ async function installPackages() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] Starting the update process`);
 
-    if (basePackages.length === 0) {
+    if (!basePackages.size) {
         console.error("Error: No matching packages found in the repository for the provided arguments.");
         process.exit(1);
     }
