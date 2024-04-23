@@ -1167,33 +1167,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-assistive-text@npm:0.2.1":
-  version: 0.2.1
-  resolution: "@justeattakeaway/pie-assistive-text@npm:0.2.1"
+"@justeattakeaway/pie-assistive-text@npm:0.3.4":
+  version: 0.3.4
+  resolution: "@justeattakeaway/pie-assistive-text@npm:0.3.4"
   dependencies:
-    "@justeattakeaway/pie-icons-webc": 0.17.3
-    "@justeattakeaway/pie-webc-core": 0.18.0
-  checksum: dac3b3690134ba78376227a1d433a4df02ea1601be7ca4c8d096006595ed377488de97391126743810df070e4330811ddd525663e94d521ae60b2c5502cd079c
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-assistive-text@npm:0.2.2":
-  version: 0.2.2
-  resolution: "@justeattakeaway/pie-assistive-text@npm:0.2.2"
-  dependencies:
-    "@justeattakeaway/pie-icons-webc": 0.18.0
-    "@justeattakeaway/pie-webc-core": 0.19.0
-  checksum: e940b6b9282e86e14d419262c6c41fb45c941991e1e45732a47ee0ad0a2deaaf9acf6f9a8f2790539e7fd644c774b7818b9250bb39ce89b6e7287b22f459e46e
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-assistive-text@npm:0.2.4":
-  version: 0.2.4
-  resolution: "@justeattakeaway/pie-assistive-text@npm:0.2.4"
-  dependencies:
-    "@justeattakeaway/pie-icons-webc": 0.19.1
-    "@justeattakeaway/pie-webc-core": 0.19.1
-  checksum: cd94d05916c24cf914892d8b46a2f8fa5e42d0463a7785135dddcbe5a3f7b369423f090b4d760bef5c7612894cffb53f274cdaae57c4d5c0739e5bc29be47526
+    "@justeattakeaway/pie-icons-webc": 0.22.0
+    "@justeattakeaway/pie-webc-core": 0.21.1
+  checksum: a6f5a1ebe27f666a9aa198a9b4de3ea84e53702c09654dd3a1d3fe931576218fcf6878fd215cb1d721291b3781a547a9ded9380476eec52568cfde57512475f5
   languageName: node
   linkType: hard
 
@@ -1372,22 +1352,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-icons-webc@npm:0.19.1":
-  version: 0.19.1
-  resolution: "@justeattakeaway/pie-icons-webc@npm:0.19.1"
+"@justeattakeaway/pie-icons-webc@npm:0.22.0":
+  version: 0.22.0
+  resolution: "@justeattakeaway/pie-icons-webc@npm:0.22.0"
   dependencies:
-    "@justeattakeaway/pie-webc-core": 0.19.1
-  checksum: cee4f438f29a4805cd52e159fbd4976ce7e8d31e74af6a310867e5470af92112682e8cce071ac1ea76ba8ad88d8bf33a5315577b26fc961b80e2e0966344abab
+    "@justeattakeaway/pie-webc-core": 0.21.1
+  checksum: e18673ed8361538ce7fcc5e4c0c4e8e78090914d9565f8e8d24fbca9e2b3b9f2641607b5a416d54221398ac05d7c9e328880c34078353c71fd7e3f03fdb551e7
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-input@npm:0.14.0":
-  version: 0.14.0
-  resolution: "@justeattakeaway/pie-input@npm:0.14.0"
+"@justeattakeaway/pie-input@npm:0.18.0":
+  version: 0.18.0
+  resolution: "@justeattakeaway/pie-input@npm:0.18.0"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 0.2.4
-    "@justeattakeaway/pie-webc-core": 0.19.1
-  checksum: ef3046a29782134ab27c9c671fbfa9310262717eb0c65ebd1f30787ca41961ca479cc54f6e4258c9c25b48d351314583a2f2d7fa7c8234ae920edfd67f4ccc43
+    "@justeattakeaway/pie-assistive-text": 0.3.4
+    "@justeattakeaway/pie-webc-core": 0.21.1
+  checksum: 2b309d2e4e18c028fa92f3d9f5cd31ec2b3455f492a8303d7cc871abeb358b941ae50d7ca2a9a352d1df5378644b063c4612a08e5c0b82adb4bd16df80437708
   languageName: node
   linkType: hard
 
@@ -1517,12 +1497,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-webc-core@npm:0.19.1":
-  version: 0.19.1
-  resolution: "@justeattakeaway/pie-webc-core@npm:0.19.1"
+"@justeattakeaway/pie-webc-core@npm:0.21.1":
+  version: 0.21.1
+  resolution: "@justeattakeaway/pie-webc-core@npm:0.21.1"
   dependencies:
     lit: 3.1.2
-  checksum: 414ee69ba4727c05d96fa3a6d0e0cb95258a3ae1d629bd1d52f6df80fcaabbd3970895bf4d4043aebe4543442dbe99c794bdb32b0ee11f785291c86dccc2473b
+  checksum: c7de0d674b34a097e5e3f25a444993b32ec985870f4ec942ef6916e236c791b8b319263304c14e995f5defd9d671c826495cbcb7f637cb15fbd84d8071b14854
   languageName: node
   linkType: hard
 
@@ -10759,7 +10739,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-app@workspace:nextjs-app"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 0.2.1
+    "@justeattakeaway/pie-assistive-text": 0.3.4
     "@justeattakeaway/pie-button": 0.45.4
     "@justeattakeaway/pie-card": 0.17.3
     "@justeattakeaway/pie-chip": 0.1.1
@@ -10769,7 +10749,7 @@ __metadata:
     "@justeattakeaway/pie-form-label": 0.12.0
     "@justeattakeaway/pie-icon-button": 0.27.4
     "@justeattakeaway/pie-icons-webc": 0.17.3
-    "@justeattakeaway/pie-input": 0.14.0
+    "@justeattakeaway/pie-input": 0.18.0
     "@justeattakeaway/pie-link": 0.15.2
     "@justeattakeaway/pie-modal": 0.38.6
     "@justeattakeaway/pie-spinner": 0.5.3
@@ -11180,7 +11160,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nuxt-app@workspace:nuxt-app"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 0.2.1
+    "@justeattakeaway/pie-assistive-text": 0.3.4
     "@justeattakeaway/pie-button": 0.45.4
     "@justeattakeaway/pie-card": 0.17.3
     "@justeattakeaway/pie-chip": 0.1.1
@@ -11190,7 +11170,7 @@ __metadata:
     "@justeattakeaway/pie-form-label": 0.12.0
     "@justeattakeaway/pie-icon-button": 0.27.4
     "@justeattakeaway/pie-icons-webc": 0.17.3
-    "@justeattakeaway/pie-input": 0.14.0
+    "@justeattakeaway/pie-input": 0.18.0
     "@justeattakeaway/pie-link": 0.15.2
     "@justeattakeaway/pie-modal": 0.38.6
     "@justeattakeaway/pie-spinner": 0.5.3
@@ -14949,7 +14929,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vanilla-app@workspace:vanilla-app"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 0.2.2
+    "@justeattakeaway/pie-assistive-text": 0.3.4
     "@justeattakeaway/pie-button": 0.45.5
     "@justeattakeaway/pie-card": 0.17.4
     "@justeattakeaway/pie-chip": 0.2.0
@@ -14959,7 +14939,7 @@ __metadata:
     "@justeattakeaway/pie-form-label": 0.12.1
     "@justeattakeaway/pie-icon-button": 0.27.5
     "@justeattakeaway/pie-icons-webc": 0.18.0
-    "@justeattakeaway/pie-input": 0.14.0
+    "@justeattakeaway/pie-input": 0.18.0
     "@justeattakeaway/pie-link": 0.15.3
     "@justeattakeaway/pie-modal": 0.38.7
     "@justeattakeaway/pie-spinner": 0.5.4

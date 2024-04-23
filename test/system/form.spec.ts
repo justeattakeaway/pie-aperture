@@ -8,8 +8,9 @@ test.describe(`Form Page - ${process.env.APP_NAME}`, () => {
             username: 'John Doe',
             favouriteNumber: '42',
             email: 'foo@bar.com',
+            url: 'https://example.com',
+            tel: '1234567890',
             password: 'foo',
-            passwordConfirmation: 'bar',
             approveSettings: true,
             enableNotifications: true,
         };
