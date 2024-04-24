@@ -1,109 +1,109 @@
-name: Build - Vanilla App
+# name: Build - Vanilla App
 
-on:
-  pull_request:
-    types: [assigned, opened, synchronize, reopened, "ready_for_review"]
-    paths:
-      - '.github/workflows/**'
-      - 'vanilla-app/**'
-      - 'webdriver-helpers/**'
-      - 'wdio.conf.js'
-  push:
-    branches:
-      - main
+# on:
+#   pull_request:
+#     types: [assigned, opened, synchronize, reopened, "ready_for_review"]
+#     paths:
+#       - '.github/workflows/**'
+#       - 'vanilla-app/**'
+#       - 'webdriver-helpers/**'
+#       - 'wdio.conf.js'
+#   push:
+#     branches:
+#       - main
 
-concurrency:
-  group: CI-Vanilla-${{ github.ref }}
-  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+# concurrency:
+#   group: CI-Vanilla-${{ github.ref }}
+#   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
-env:
-  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+# env:
+#   TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
 
-jobs:
+# jobs:
 
-  build-vanilla-app-windows-node18:
-    name: Windows - Node 18
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 18
-        os: 'windows-latest'
-        package-name: 'vanilla-app'
-    secrets: inherit
+#   build-vanilla-app-windows-node18:
+#     name: Windows - Node 18
+#     uses: ./.github/workflows/build.yml
+#     with:
+#         deploy: false
+#         node-version: 18
+#         os: 'windows-latest'
+#         package-name: 'vanilla-app'
+#     secrets: inherit
 
-  build-vanilla-app-windows-node20:
-    name: Windows - Node 20
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 20
-        os: 'windows-latest'
-        package-name: 'vanilla-app'
-    secrets: inherit
+#   build-vanilla-app-windows-node20:
+#     name: Windows - Node 20
+#     uses: ./.github/workflows/build.yml
+#     with:
+#         deploy: false
+#         node-version: 20
+#         os: 'windows-latest'
+#         package-name: 'vanilla-app'
+#     secrets: inherit
 
-  build-vanilla-app-ubuntu-node18:
-    name: Ubuntu - Node 18
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 18
-        os: 'ubuntu-latest'
-        package-name: 'vanilla-app'
-    secrets: inherit
+#   build-vanilla-app-ubuntu-node18:
+#     name: Ubuntu - Node 18
+#     uses: ./.github/workflows/build.yml
+#     with:
+#         deploy: false
+#         node-version: 18
+#         os: 'ubuntu-latest'
+#         package-name: 'vanilla-app'
+#     secrets: inherit
 
-  build-deploy-vanilla-app-node20:
-      name: Ubuntu - Node 20
-      uses: ./.github/workflows/build.yml
-      with:
-          deploy: true
-          os: ubuntu-latest
-          node-version: 20
-          amplify-app-id: 'd2vb6sjgivffb3'
-          package-name: 'vanilla-app'
-          package-dist-directory: './vanilla-app/dist'
-          bucket-name-preview: 'pie-aperture-preview'
-          bucket-name-main: 'pie-aperture'
-      secrets: inherit
+#   build-deploy-vanilla-app-node20:
+#       name: Ubuntu - Node 20
+#       uses: ./.github/workflows/build.yml
+#       with:
+#           deploy: true
+#           os: ubuntu-latest
+#           node-version: 20
+#           amplify-app-id: 'd2vb6sjgivffb3'
+#           package-name: 'vanilla-app'
+#           package-dist-directory: './vanilla-app/dist'
+#           bucket-name-preview: 'pie-aperture-preview'
+#           bucket-name-main: 'pie-aperture'
+#       secrets: inherit
 
-  browser-tests:
-    needs: 'build-deploy-vanilla-app-node20'
-    name: Run System / Visual Tests
-    runs-on: ubuntu-latest
-    steps:
-      # Checkout the Repo
-      - name: Checkout
-        uses: actions/checkout@v3
+#   browser-tests:
+#     needs: 'build-deploy-vanilla-app-node20'
+#     name: Run System / Visual Tests
+#     runs-on: ubuntu-latest
+#     steps:
+#       # Checkout the Repo
+#       - name: Checkout
+#         uses: actions/checkout@v3
 
-      # Setup Node
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+#       # Setup Node
+#       - name: Setup Node
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: 20
 
-      - name: Install Dependencies
-        shell: bash
-        run: yarn
+#       - name: Install Dependencies
+#         shell: bash
+#         run: yarn
 
-      # Setup Playwright
-      - name: Setup Playwright
-        uses: ./.github/actions/setup-playwright
+#       # Setup Playwright
+#       - name: Setup Playwright
+#         uses: ./.github/actions/setup-playwright
 
-      - name: Run System Tests
-        shell: bash
-        run: yarn test:system --filter=vanilla-app
+#       - name: Run System Tests
+#         shell: bash
+#         run: yarn test:system --filter=vanilla-app
 
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: vanilla-playwright-report
-          path: playwright-reports/vanilla-playwright-report/
+#       - uses: actions/upload-artifact@v3
+#         if: always()
+#         with:
+#           name: vanilla-playwright-report
+#           path: playwright-reports/vanilla-playwright-report/
 
-      - name: Run Percy Tests
-        shell: bash
-        run: yarn test:visual --filter=vanilla-app
-    env:
-      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-      PERCY_TOKEN_PIE_APERTURE_VANILLA: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_VANILLA }}
-      PR_NUMBER: ${{ github.event.number }}
-      VANILLA_AMPLIFY_ID: d2vb6sjgivffb3
+#       - name: Run Percy Tests
+#         shell: bash
+#         run: yarn test:visual --filter=vanilla-app
+#     env:
+#       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+#       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+#       PERCY_TOKEN_PIE_APERTURE_VANILLA: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_VANILLA }}
+#       PR_NUMBER: ${{ github.event.number }}
+#       VANILLA_AMPLIFY_ID: d2vb6sjgivffb3

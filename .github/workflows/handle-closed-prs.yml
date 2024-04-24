@@ -1,67 +1,67 @@
-name: Remove PR Previews
+# name: Remove PR Previews
 
-on:
-  pull_request:
-    types: [closed]
+# on:
+#   pull_request:
+#     types: [closed]
 
-concurrency: preview-teardown-${{ github.ref }}
+# concurrency: preview-teardown-${{ github.ref }}
 
-jobs:
-  list-environments:
-    runs-on: ubuntu-latest
-    outputs:
-      hasNextJsEnv: ${{ steps.list-environments.outputs.hasNextJsEnv }}
-      hasVanillaJsEnv: ${{ steps.list-environments.outputs.hasVanillaJsEnv }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+# jobs:
+#   list-environments:
+#     runs-on: ubuntu-latest
+#     outputs:
+#       hasNextJsEnv: ${{ steps.list-environments.outputs.hasNextJsEnv }}
+#       hasVanillaJsEnv: ${{ steps.list-environments.outputs.hasVanillaJsEnv }}
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
 
-      - name: List repo environments
-        id: list-environments
-        uses: actions/github-script@v6
-        env:
-          GITHUB_TOKEN: ${{ secrets.PIE_BOT_TOKEN }}
-        with:
-          script: |
-            const pullRequestNumber = context.issue.number;
-            const owner = context.repo.owner;
-            const repo = context.repo.repo;
+#       - name: List repo environments
+#         id: list-environments
+#         uses: actions/github-script@v6
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.PIE_BOT_TOKEN }}
+#         with:
+#           script: |
+#             const pullRequestNumber = context.issue.number;
+#             const owner = context.repo.owner;
+#             const repo = context.repo.repo;
 
-            // List environments
-            const environments = await github.rest.repos.getAllEnvironments({
-              owner: owner,
-              repo: repo,
-            });
+#             // List environments
+#             const environments = await github.rest.repos.getAllEnvironments({
+#               owner: owner,
+#               repo: repo,
+#             });
 
-            const envList = environments.data.environments.map(env => env.name);
+#             const envList = environments.data.environments.map(env => env.name);
 
-            // Check for existence of specific environments
-            const hasNextJsEnv = envList.includes(`nextjs-app-pr-${pullRequestNumber}`);
-            const hasVanillaJsEnv = envList.includes(`vanilla-app-pr-${pullRequestNumber}`);
+#             // Check for existence of specific environments
+#             const hasNextJsEnv = envList.includes(`nextjs-app-pr-${pullRequestNumber}`);
+#             const hasVanillaJsEnv = envList.includes(`vanilla-app-pr-${pullRequestNumber}`);
 
-            core.setOutput('hasNextJsEnv', hasNextJsEnv);
-            core.setOutput('hasVanillaJsEnv', hasVanillaJsEnv);
+#             core.setOutput('hasNextJsEnv', hasNextJsEnv);
+#             core.setOutput('hasVanillaJsEnv', hasVanillaJsEnv);
 
-      - name: Delete associated NextJS app environment
-        if: steps.list-environments.outputs.hasNextJsEnv == 'true'
-        uses: ./.github/actions/amplify-teardown
-        with:
-          github-token: ${{ secrets.PIE_BOT_TOKEN }}
-          amplify-app-id: dvskdcoepjoyf
-          aws-region: 'eu-west-1'
-          aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          environment-name: nextjs-app-pr-${{ github.event.number }}
-          branch-name: 'pr${{ github.event.number }}'
+#       - name: Delete associated NextJS app environment
+#         if: steps.list-environments.outputs.hasNextJsEnv == 'true'
+#         uses: ./.github/actions/amplify-teardown
+#         with:
+#           github-token: ${{ secrets.PIE_BOT_TOKEN }}
+#           amplify-app-id: dvskdcoepjoyf
+#           aws-region: 'eu-west-1'
+#           aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
+#           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           environment-name: nextjs-app-pr-${{ github.event.number }}
+#           branch-name: 'pr${{ github.event.number }}'
 
-      - name: Delete associated Vanilla app environment
-        if: steps.list-environments.outputs.hasVanillaJsEnv == 'true'
-        uses: ./.github/actions/amplify-teardown
-        with:
-          github-token: ${{ secrets.PIE_BOT_TOKEN }}
-          amplify-app-id: d17ja0ul7nrdy0
-          aws-region: 'eu-west-1'
-          aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          environment-name: vanilla-app-pr-${{ github.event.number }}
-          branch-name: 'pr${{ github.event.number }}'
+#       - name: Delete associated Vanilla app environment
+#         if: steps.list-environments.outputs.hasVanillaJsEnv == 'true'
+#         uses: ./.github/actions/amplify-teardown
+#         with:
+#           github-token: ${{ secrets.PIE_BOT_TOKEN }}
+#           amplify-app-id: d17ja0ul7nrdy0
+#           aws-region: 'eu-west-1'
+#           aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
+#           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           environment-name: vanilla-app-pr-${{ github.event.number }}
+#           branch-name: 'pr${{ github.event.number }}'

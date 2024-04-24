@@ -1,116 +1,116 @@
-name: Build - Nuxt App
+# name: Build - Nuxt App
 
-on:
-  pull_request:
-    types: [assigned, opened, synchronize, reopened, "ready_for_review"]
-    paths:
-      - '.github/workflows/**'
-      - 'nuxt-app/**'
-      - 'webdriver-helpers/**'
-      - 'wdio.conf.js'
+# on:
+#   pull_request:
+#     types: [assigned, opened, synchronize, reopened, "ready_for_review"]
+#     paths:
+#       - '.github/workflows/**'
+#       - 'nuxt-app/**'
+#       - 'webdriver-helpers/**'
+#       - 'wdio.conf.js'
 
-  push:
-    branches:
-      - main
+#   push:
+#     branches:
+#       - main
 
-concurrency:
-  group: CI-Nuxt-${{ github.ref }}
-  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+# concurrency:
+#   group: CI-Nuxt-${{ github.ref }}
+#   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
-env:
-  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+# env:
+#   TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
 
-jobs:
+# jobs:
 
-  build-nuxt-app-windows-node18:
-    name: Windows - Node 18
-    uses: ./.github/workflows/build.yml
-    with:
-        # build-script: 'generate'
-        deploy: false
-        node-version: 18
-        os: 'windows-latest'
-        package-name: 'nuxt-app'
-    secrets: inherit
+#   build-nuxt-app-windows-node18:
+#     name: Windows - Node 18
+#     uses: ./.github/workflows/build.yml
+#     with:
+#         # build-script: 'generate'
+#         deploy: false
+#         node-version: 18
+#         os: 'windows-latest'
+#         package-name: 'nuxt-app'
+#     secrets: inherit
 
-  build-nuxt-app-windows-node20:
-    name: Windows - Node 20
-    uses: ./.github/workflows/build.yml
-    with:
-        # build-script: 'generate'
-        deploy: false
-        node-version: 20
-        os: 'windows-latest'
-        package-name: 'nuxt-app'
-    secrets: inherit
+#   build-nuxt-app-windows-node20:
+#     name: Windows - Node 20
+#     uses: ./.github/workflows/build.yml
+#     with:
+#         # build-script: 'generate'
+#         deploy: false
+#         node-version: 20
+#         os: 'windows-latest'
+#         package-name: 'nuxt-app'
+#     secrets: inherit
 
-  build-nuxt-app-ubuntu-node18:
-    name: Ubuntu - Node 18
-    uses: ./.github/workflows/build.yml
-    with:
-        # build-script: 'generate'
-        deploy: false
-        node-version: 18
-        os: 'ubuntu-latest'
-        package-name: 'nuxt-app'
-    secrets: inherit
+#   build-nuxt-app-ubuntu-node18:
+#     name: Ubuntu - Node 18
+#     uses: ./.github/workflows/build.yml
+#     with:
+#         # build-script: 'generate'
+#         deploy: false
+#         node-version: 18
+#         os: 'ubuntu-latest'
+#         package-name: 'nuxt-app'
+#     secrets: inherit
 
-  build-deploy-nuxt-app-ubuntu-node20:
-      name: Ubuntu - Node 20
-      uses: ./.github/workflows/build.yml
-      with:
-          # build-script: 'generate'
-          deploy: false
-          node-version: 20
-          os: 'ubuntu-latest'
-          amplify-app-id: 'd36dan3bxjue8c'
-          package-name: 'nuxt-app'
-          package-dist-directory: './nuxt-app/dist'
-          bucket-name-preview: 'pie-aperture-preview'
-          bucket-name-main: 'pie-aperture'
-      secrets: inherit
+#   build-deploy-nuxt-app-ubuntu-node20:
+#       name: Ubuntu - Node 20
+#       uses: ./.github/workflows/build.yml
+#       with:
+#           # build-script: 'generate'
+#           deploy: false
+#           node-version: 20
+#           os: 'ubuntu-latest'
+#           amplify-app-id: 'd36dan3bxjue8c'
+#           package-name: 'nuxt-app'
+#           package-dist-directory: './nuxt-app/dist'
+#           bucket-name-preview: 'pie-aperture-preview'
+#           bucket-name-main: 'pie-aperture'
+#       secrets: inherit
 
-  # browser-tests:
-  #   needs: 'build-deploy-nuxt-app-ubuntu-node20'
-  #   name: Run System / Visual Tests
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     # Checkout the Repo
-  #     - name: Checkout
-  #       uses: actions/checkout@v3
+#   # browser-tests:
+#   #   needs: 'build-deploy-nuxt-app-ubuntu-node20'
+#   #   name: Run System / Visual Tests
+#   #   runs-on: ubuntu-latest
+#   #   steps:
+#   #     # Checkout the Repo
+#   #     - name: Checkout
+#   #       uses: actions/checkout@v3
 
-  #     # Setup Node
-  #     - name: Setup Node
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version: 20
-  #         cache: "yarn"
+#   #     # Setup Node
+#   #     - name: Setup Node
+#   #       uses: actions/setup-node@v4
+#   #       with:
+#   #         node-version: 20
+#   #         cache: "yarn"
   
-  #     - name: Install Dependencies
-  #       shell: bash
-  #       run: yarn
+#   #     - name: Install Dependencies
+#   #       shell: bash
+#   #       run: yarn
   
-  #     # Setup Playwright
-  #     - name: Setup Playwright
-  #       uses: ./.github/actions/setup-playwright
+#   #     # Setup Playwright
+#   #     - name: Setup Playwright
+#   #       uses: ./.github/actions/setup-playwright
   
-  #     - name: Run System Tests
-  #       shell: bash
-  #       run: yarn test:system --filter=nuxt-app
+#   #     - name: Run System Tests
+#   #       shell: bash
+#   #       run: yarn test:system --filter=nuxt-app
 
-  #     - uses: actions/upload-artifact@v3
-  #       if: always()
-  #       with:
-  #         name: nuxt-playwright-report
-  #         path: playwright-reports/nuxt-playwright-report/
-  #         retention-days: 7
+#   #     - uses: actions/upload-artifact@v3
+#   #       if: always()
+#   #       with:
+#   #         name: nuxt-playwright-report
+#   #         path: playwright-reports/nuxt-playwright-report/
+#   #         retention-days: 7
 
-  #     - name: Run Percy Tests
-  #       shell: bash
-  #       run: yarn test:visual --filter=nuxt-app
-  #   env:
-  #     BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-  #     BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-  #     NUXT_AMPLIFY_ID: d36dan3bxjue8c
-  #     PERCY_TOKEN_PIE_APERTURE_NUXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NUXT }}
-  #     PR_NUMBER: ${{ github.event.number }}
+#   #     - name: Run Percy Tests
+#   #       shell: bash
+#   #       run: yarn test:visual --filter=nuxt-app
+#   #   env:
+#   #     BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+#   #     BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+#   #     NUXT_AMPLIFY_ID: d36dan3bxjue8c
+#   #     PERCY_TOKEN_PIE_APERTURE_NUXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NUXT }}
+#   #     PR_NUMBER: ${{ github.event.number }}
