@@ -8,7 +8,7 @@ jobs:
   list-snapshots:
     runs-on: ubuntu-latest
     steps:
-      # Set up environment variable for the branch name
+      # Correctly set up environment variable for the branch name
       - name: Set branch name
         run: echo "BRANCH_NAME=${{ github.event.client_payload.pie-pr-number }}" >> $GITHUB_ENV
 
@@ -16,7 +16,7 @@ jobs:
       - name: Check if branch exists
         id: check_branch
         run: |
-          if git ls-remote --heads origin $BRANCH_NAME | grep -q $BRANCH_NAME; then
+          if git ls-remote --heads origin ${{ env.BRANCH_NAME }} | grep -q ${{ env.BRANCH_NAME }}; then
             echo "Branch exists."
             echo "BRANCH_EXISTS=true" >> $GITHUB_ENV
           else
