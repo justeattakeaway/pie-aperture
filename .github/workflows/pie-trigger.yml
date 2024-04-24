@@ -8,22 +8,46 @@ jobs:
   list-snapshots:
     runs-on: ubuntu-latest
     steps:
-      # Checkout the Repo
-    - name: Checkout
-      uses: actions/checkout@v3
-      with:
-        ref: "foo"
+      # Set up environment variable for the branch name
+      - name: Set branch name
+        run: echo "BRANCH_NAME=${{ github.event.client_payload.pie-pr-number }}" >> $GITHUB_ENV
 
-    # Setup Node
-    - name: Setup Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
+      # Check if the branch exists using git ls-remote
+      - name: Check if branch exists
+        id: check_branch
+        run: |
+          if git ls-remote --heads origin $BRANCH_NAME | grep -q $BRANCH_NAME; then
+            echo "Branch exists."
+            echo "BRANCH_EXISTS=true" >> $GITHUB_ENV
+          else
+            echo "Branch does not exist."
+            echo "BRANCH_EXISTS=false" >> $GITHUB_ENV
 
-    - name: Install dependencies
-      shell: bash
-      run: yarn
+      # Create and push the branch if it doesn't exist
+      - name: Create and push branch if not exists
+        if: env.BRANCH_EXISTS == 'false'
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "pie-design-system-bot"
+          git checkout -b $BRANCH_NAME
+          git push origin $BRANCH_NAME
 
-    - name: Update snapshots
-      shell: bash
-      run: npx update-snapshots ${{ github.event.client_payload.snapshot-version }} ${{ github.event.client_payload.snapshot-packages }}
+      # Checkout the branch
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH_NAME }}
+
+      # Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # Install dependencies
+      - name: Install dependencies
+        run: yarn
+
+      # Update snapshots
+      - name: Update snapshots
+        run: npx update-snapshots ${{ github.event.client_payload.snapshot-version }} ${{ github.event.client_payload.snapshot-packages }}
