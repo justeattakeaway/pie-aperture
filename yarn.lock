@@ -1363,6 +1363,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justeattakeaway/pie-icons-webc@npm:0.20.0":
+  version: 0.20.0
+  resolution: "@justeattakeaway/pie-icons-webc@npm:0.20.0"
+  dependencies:
+    "@justeattakeaway/pie-webc-core": 0.20.0
+  checksum: e5fd82cb1d2994a8acb66092031c584f3ff62d727cacaf8e3b760559195dc99fa40dff050f5b6dfa1e8ead370d7a2b42e89704331cc4e78794c7467d7c5a80c8
+  languageName: node
+  linkType: hard
+
 "@justeattakeaway/pie-icons-webc@npm:0.22.0":
   version: 0.22.0
   resolution: "@justeattakeaway/pie-icons-webc@npm:0.22.0"
@@ -1528,21 +1537,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-webc-core@npm:0.21.1":
-  version: 0.21.1
-  resolution: "@justeattakeaway/pie-webc-core@npm:0.21.1"
-  dependencies:
-    lit: 3.1.2
-  checksum: c7de0d674b34a097e5e3f25a444993b32ec985870f4ec942ef6916e236c791b8b319263304c14e995f5defd9d671c826495cbcb7f637cb15fbd84d8071b14854
-  languageName: node
-  linkType: hard
-
 "@justeattakeaway/pie-webc-core@npm:0.20.0":
   version: 0.20.0
   resolution: "@justeattakeaway/pie-webc-core@npm:0.20.0"
   dependencies:
     lit: 3.1.2
   checksum: 26b41c8274fc3fb55eb43f772827c15dea5e658b9a2e95e10873439375acb0c3c80c27f0876b56e11eb631f9d2e0444b269c25c7f2fa2c0cf22ae48de6190727
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-webc-core@npm:0.21.1":
+  version: 0.21.1
+  resolution: "@justeattakeaway/pie-webc-core@npm:0.21.1"
+  dependencies:
+    lit: 3.1.2
+  checksum: c7de0d674b34a097e5e3f25a444993b32ec985870f4ec942ef6916e236c791b8b319263304c14e995f5defd9d671c826495cbcb7f637cb15fbd84d8071b14854
   languageName: node
   linkType: hard
 
