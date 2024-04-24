@@ -8,6 +8,7 @@
 
 <script setup lang="ts">
 import { definePageMeta } from '#imports';
+import '@justeattakeaway/pie-link';
 
 definePageMeta({
     title: 'PIE Link',

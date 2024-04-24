@@ -6,9 +6,9 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-switch';
 import { ref } from 'vue';
 import { definePageMeta } from '#imports';
+import '@justeattakeaway/pie-switch';
 
 definePageMeta({
     title: 'PIE Switch',

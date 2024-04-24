@@ -9,10 +9,10 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-button';
-import '@justeattakeaway/pie-modal';
 import { ref } from 'vue';
 import { definePageMeta } from '#imports';
+import '@justeattakeaway/pie-button';
+import '@justeattakeaway/pie-modal';
 
 definePageMeta({
     title: 'PIE Modal',

@@ -7,8 +7,8 @@
 </template>
 
 <script setup lang="ts">
-import { definePageMeta, onBeforeMount } from '#imports';
-import { PieAssistiveText } from '@justeattakeaway/pie-assistive-text';
+import { definePageMeta } from '#imports';
+import '@justeattakeaway/pie-assistive-text';
 
 definePageMeta({
     title: 'PIE Assistive Text',
