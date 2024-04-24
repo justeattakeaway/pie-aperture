@@ -11,6 +11,8 @@ jobs:
       # Checkout the Repo
     - name: Checkout
       uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.client_payload.pie-branch }}
 
     # Setup Node
     - name: Setup Node
