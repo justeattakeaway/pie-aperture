@@ -10,7 +10,7 @@ jobs:
     steps:
       # Correctly set up environment variable for the branch name
       - name: Set branch name
-        run: echo "BRANCH_NAME=${{ github.event.client_payload.pie-pr-number }}" >> $GITHUB_ENV
+        run: echo "BRANCH_NAME=${{ github.event.client_payload.pie-branch }}" >> $GITHUB_ENV
 
       # Check if the branch exists using git ls-remote
       - name: Check if branch exists
