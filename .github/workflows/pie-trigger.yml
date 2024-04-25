@@ -18,31 +18,31 @@ jobs:
         run: echo "BRANCH_NAME=${{ github.event.client_payload.pie-branch }}" >> $GITHUB_ENV
 
       # Check if the branch exists using git ls-remote
-      - name: Check if branch exists
-        id: check_branch
-        run: |
-          if git ls-remote --heads origin ${{ env.BRANCH_NAME }} | grep -q ${{ env.BRANCH_NAME }}; then
-            echo "Branch exists."
-            echo "BRANCH_EXISTS=true" >> $GITHUB_ENV
-          else
-            echo "Branch does not exist."
-            echo "BRANCH_EXISTS=false" >> $GITHUB_ENV
-          fi
+      # - name: Check if branch exists
+      #   id: check_branch
+      #   run: |
+      #     if git ls-remote --heads origin ${{ env.BRANCH_NAME }} | grep -q ${{ env.BRANCH_NAME }}; then
+      #       echo "Branch exists."
+      #       echo "BRANCH_EXISTS=true" >> $GITHUB_ENV
+      #     else
+      #       echo "Branch does not exist."
+      #       echo "BRANCH_EXISTS=false" >> $GITHUB_ENV
+      #     fi
 
       # Create and push the branch if it doesn't exist
-      - name: Create and push branch if not exists
-        if: env.BRANCH_EXISTS == 'false'
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "pie-design-system-bot"
-          git checkout -b $BRANCH_NAME
-          git push origin $BRANCH_NAME
+      # - name: Create and push branch if not exists
+      #   if: env.BRANCH_EXISTS == 'false'
+      #   run: |
+      #     git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      #     git config --global user.name "pie-design-system-bot"
+      #     git checkout -b $BRANCH_NAME
+      #     git push origin $BRANCH_NAME
 
       # Checkout the branch
-      - name: Checkout branch
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ env.BRANCH_NAME }}
+      # - name: Checkout branch
+      #   uses: actions/checkout@v4
+      #   with:
+      #     ref: ${{ env.BRANCH_NAME }}
 
       # Setup Node
       - name: Setup Node
@@ -59,10 +59,22 @@ jobs:
         run: npx update-snapshots ${{ github.event.client_payload.snapshot-version }} ${{ github.event.client_payload.snapshot-packages }}
 
       # Push changes to branch
-      - name: Push changes to branch
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "pie-design-system-bot"
-          git add .
-          git commit -m "feat: ${{ env.BRANCH_NAME }}"
-          git push origin ${{ env.BRANCH_NAME }}
+      # - name: Push changes to branch
+      #   run: |
+      #     git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      #     git config --global user.name "pie-design-system-bot"
+      #     git add .
+      #     git commit -m "feat: ${{ env.BRANCH_NAME }}"
+      #     git push origin ${{ env.BRANCH_NAME }}
+
+      # Create PR if doesn't exist
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.CHANGESETS_TOKEN }}
+          commit-message: "feat: ${{ env.BRANCH_NAME }}"
+          branch: ${{ env.BRANCH_NAME }}
+          title: "feat: ${{ env.BRANCH_NAME }} integration"
+          body: |
+            "This PR has been automatically generated as part of the test-aperture workflow from the Pie monorepo"
+          draft: true
