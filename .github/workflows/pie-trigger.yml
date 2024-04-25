@@ -22,6 +22,7 @@ jobs:
           else
             echo "Branch does not exist."
             echo "BRANCH_EXISTS=false" >> $GITHUB_ENV
+          fi
 
       # Create and push the branch if it doesn't exist
       - name: Create and push branch if not exists
