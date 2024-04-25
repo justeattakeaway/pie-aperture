@@ -57,3 +57,12 @@ jobs:
       # Update snapshots
       - name: Update snapshots
         run: npx update-snapshots ${{ github.event.client_payload.snapshot-version }} ${{ github.event.client_payload.snapshot-packages }}
+
+      # Push changes to branch
+      - name: Push changes to branch
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "pie-design-system-bot"
+          git add .
+          git commit -m "feat: ${{ env.BRANCH_NAME }}"
+          git push ${{ env.BRANCH_NAME }}
