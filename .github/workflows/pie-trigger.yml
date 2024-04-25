@@ -65,4 +65,4 @@ jobs:
           git config --global user.name "pie-design-system-bot"
           git add .
           git commit -m "feat: ${{ env.BRANCH_NAME }}"
-          git push ${{ env.BRANCH_NAME }}
+          git push origin ${{ env.BRANCH_NAME }}
