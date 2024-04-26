@@ -8,20 +8,37 @@ jobs:
   list-snapshots:
     runs-on: ubuntu-latest
     steps:
-      # Checkout the Repo
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    # Setup Node
-    - name: Setup Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
+      # Correctly set up environment variable for the branch name
+      - name: Set branch name
+        run: echo "BRANCH_NAME=${{ github.event.client_payload.pie-branch }}" >> $GITHUB_ENV
 
-    - name: Install dependencies
-      shell: bash
-      run: yarn
+      # Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-    - name: Update snapshots
-      shell: bash
-      run: npx update-snapshots ${{ github.event.client_payload.snapshot-version }} ${{ github.event.client_payload.snapshot-packages }}
+      # Install dependencies
+      - name: Install dependencies
+        run: yarn
+
+      # Update snapshots
+      - name: Update snapshots
+        run: npx update-snapshots ${{ github.event.client_payload.snapshot-version }} ${{ github.event.client_payload.snapshot-packages }}
+
+      # Create PR if doesn't exist
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.CHANGESETS_TOKEN }}
+          commit-message: "feat: ${{ env.BRANCH_NAME }}"
+          branch: ${{ env.BRANCH_NAME }}
+          title: "feat: ${{ env.BRANCH_NAME }} integration"
+          body: |
+            This PR has been automatically generated as part of the test-aperture workflow from the Pie monorepo
+          draft: true
