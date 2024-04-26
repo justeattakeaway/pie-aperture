@@ -1,221 +1,221 @@
-# on:
-#   workflow_call:
-#     inputs:
-#       amplify-app-id:
-#         description: "The ID for your Amplify app (which you can get from the end of its ARN)"
-#         required: false
-#         type: string
-#       build-script:
-#         description: "The build script used to build the application for Amplify"
-#         required: false
-#         default: build
-#         type: string
-#       node-version:
-#         description: "The node version to use when building the application"
-#         required: true
-#         type: number
-#       os:
-#         description: "The operating system to use when building the application"
-#         required: true
-#         type: string
-#       package-name:
-#         description: "Name of the application being deployed"
-#         required: true
-#         type: string
-#       package-dist-directory:
-#         description: "The directory where the package dist is located"
-#         required: false
-#         type: string
-#       bucket-name-preview:
-#         description: "Name of the preview bucket being deployed to"
-#         required: false
-#         type: string
-#       bucket-name-main:
-#         description: "Name of the main bucket being deployed to"
-#         required: false
-#         type: string
-#       deploy:
-#         description: "Boolean flag on whether to deploy the application with the given node version"
-#         required: true
-#         type: boolean
+on:
+  workflow_call:
+    inputs:
+      amplify-app-id:
+        description: "The ID for your Amplify app (which you can get from the end of its ARN)"
+        required: false
+        type: string
+      build-script:
+        description: "The build script used to build the application for Amplify"
+        required: false
+        default: build
+        type: string
+      node-version:
+        description: "The node version to use when building the application"
+        required: true
+        type: number
+      os:
+        description: "The operating system to use when building the application"
+        required: true
+        type: string
+      package-name:
+        description: "Name of the application being deployed"
+        required: true
+        type: string
+      package-dist-directory:
+        description: "The directory where the package dist is located"
+        required: false
+        type: string
+      bucket-name-preview:
+        description: "Name of the preview bucket being deployed to"
+        required: false
+        type: string
+      bucket-name-main:
+        description: "Name of the main bucket being deployed to"
+        required: false
+        type: string
+      deploy:
+        description: "Boolean flag on whether to deploy the application with the given node version"
+        required: true
+        type: boolean
 
-# env:
-#   AMPLIFY_ID: ${{ inputs.amplify-app-id }}
-#   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
-#   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-#   AWS_REGION: 'eu-west-1'
-#   BRANCH_NAME: ${{ github.event_name == 'pull_request' && format('pr{0}', github.event.number) || github.ref == 'refs/heads/main' && 'main' }}
-#   BUCKET_NAME: ${{ github.event_name == 'pull_request' && inputs.bucket-name-preview || (github.ref == 'refs/heads/main' && inputs.bucket-name-main) }}
-#   ZIP_NAME: ${{ github.event_name == 'pull_request' && format('{0}-{1}-preview.zip', inputs.package-name, github.event.number) || (github.ref == 'refs/heads/main' && format('{0}-main.zip', inputs.package-name)) }}
-#   TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+env:
+  AMPLIFY_ID: ${{ inputs.amplify-app-id }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_REGION: 'eu-west-1'
+  BRANCH_NAME: ${{ github.event_name == 'pull_request' && format('pr{0}', github.event.number) || github.ref == 'refs/heads/main' && 'main' }}
+  BUCKET_NAME: ${{ github.event_name == 'pull_request' && inputs.bucket-name-preview || (github.ref == 'refs/heads/main' && inputs.bucket-name-main) }}
+  ZIP_NAME: ${{ github.event_name == 'pull_request' && format('{0}-{1}-preview.zip', inputs.package-name, github.event.number) || (github.ref == 'refs/heads/main' && format('{0}-main.zip', inputs.package-name)) }}
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
 
-# jobs:
-#   build:
-#     runs-on: ${{ inputs.os }}
-#     steps:
-#       # Checkout the Repo
-#       - name: Checkout
-#         uses: actions/checkout@v3
+jobs:
+  build:
+    runs-on: ${{ inputs.os }}
+    steps:
+      # Checkout the Repo
+      - name: Checkout
+        uses: actions/checkout@v3
 
-#       # Setup Node
-#       - name: Setup Node
-#         uses: actions/setup-node@v4
-#         with:
-#           node-version: ${{ inputs.node-version }}
+      # Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
 
-#       - name: Install Dependencies
-#         shell: bash
-#         run: yarn
+      - name: Install Dependencies
+        shell: bash
+        run: yarn
 
-#       - name: Build - ${{ inputs.package-name }}
-#         shell: bash
-#         run: yarn ${{ inputs.build-script }} --filter="${{ inputs.package-name }}"
+      - name: Build - ${{ inputs.package-name }}
+        shell: bash
+        run: yarn ${{ inputs.build-script }} --filter="${{ inputs.package-name }}"
 
-#       # This is a slightly modified version of the following workflow - https://github.com/justeattakeaway/pie/blob/main/.github/workflows/amplify-deploy.yml
-#       # Create Github Deployment
-#       - name: Create ${{ inputs.package-name }} GitHub deployment
-#         if: github.event_name == 'pull_request' && inputs.deploy == true
-#         uses: chrnorm/deployment-action@v2
-#         id: deploy
-#         with:
-#           token: ${{ secrets.GITHUB_TOKEN }}
-#           environment: "${{ inputs.package-name}}-pr-${{ github.event.number }}"
+      # This is a slightly modified version of the following workflow - https://github.com/justeattakeaway/pie/blob/main/.github/workflows/amplify-deploy.yml
+      # Create Github Deployment
+      - name: Create ${{ inputs.package-name }} GitHub deployment
+        if: github.event_name == 'pull_request' && inputs.deploy == true
+        uses: chrnorm/deployment-action@v2
+        id: deploy
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment: "${{ inputs.package-name}}-pr-${{ github.event.number }}"
 
-#       # Zip dist folder
-#       - name: Zip build output
-#         if: inputs.deploy == true
-#         shell: bash
-#         run: |
-#           cd ${{ inputs.package-dist-directory }}
-#           zip -r ./${{ env.ZIP_NAME }} .
+      # Zip dist folder
+      - name: Zip build output
+        if: inputs.deploy == true
+        shell: bash
+        run: |
+          cd ${{ inputs.package-dist-directory }}
+          zip -r ./${{ env.ZIP_NAME }} .
 
-#       # Upload zip to S3
-#       - name: Upload to S3
-#         if: inputs.deploy == true
-#         id: upload-s3
-#         uses: hkusu/s3-upload-action@v2
-#         with:
-#           aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
-#           aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
-#           aws-region: ${{ env.AWS_REGION }}
-#           aws-bucket: ${{ env.BUCKET_NAME }}
-#           bucket-root: "/"
-#           destination-dir: "/"
-#           file-path: "${{inputs.package-dist-directory}}/${{ env.ZIP_NAME }}"
-#           content-type: "application/zip"
-#           public: true
+      # Upload zip to S3
+      - name: Upload to S3
+        if: inputs.deploy == true
+        id: upload-s3
+        uses: hkusu/s3-upload-action@v2
+        with:
+          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+          aws-bucket: ${{ env.BUCKET_NAME }}
+          bucket-root: "/"
+          destination-dir: "/"
+          file-path: "${{inputs.package-dist-directory}}/${{ env.ZIP_NAME }}"
+          content-type: "application/zip"
+          public: true
 
-#       # Create branch on Amplify
-#       - name: Create Amplify branch
-#         if: inputs.deploy == true
-#         shell: bash
-#         # We return true to prevent the step from failing if the branch already exists
-#         run: |
-#           aws amplify create-branch \
-#             --app-id ${{ env.AMPLIFY_ID }} \
-#             --branch-name ${{ env.BRANCH_NAME }} \
-#             || true
+      # Create branch on Amplify
+      - name: Create Amplify branch
+        if: inputs.deploy == true
+        shell: bash
+        # We return true to prevent the step from failing if the branch already exists
+        run: |
+          aws amplify create-branch \
+            --app-id ${{ env.AMPLIFY_ID }} \
+            --branch-name ${{ env.BRANCH_NAME }} \
+            || true
 
-#       # Deploy Amplify from S3
-#       - name: Deploy Amplify from S3
-#         if: inputs.deploy
-#         shell: bash
-#         run: |
-#           aws amplify start-deployment \
-#             --app-id ${{ env.AMPLIFY_ID }} \
-#             --branch-name ${{ env.BRANCH_NAME }} \
-#             --source-url https://${{ env.BUCKET_NAME }}.s3.${{ env.AWS_REGION }}.amazonaws.com/${{ env.ZIP_NAME }}
-#       # Set env vars for domain name association
-#       - name: Set environment variables for domain name association
-#         if: github.event_name == 'pull_request' && inputs.deploy
-#         run: |
-#           PACKAGE_NAME_SUFFIX=$(echo "${{ inputs.package-name }}" | sed -e 's/^-app//')
-#           echo "SUB_DOMAIN=pr${{ github.event.number }}-aperture-$PACKAGE_NAME_SUFFIX" >> $GITHUB_ENV
+      # Deploy Amplify from S3
+      - name: Deploy Amplify from S3
+        if: inputs.deploy
+        shell: bash
+        run: |
+          aws amplify start-deployment \
+            --app-id ${{ env.AMPLIFY_ID }} \
+            --branch-name ${{ env.BRANCH_NAME }} \
+            --source-url https://${{ env.BUCKET_NAME }}.s3.${{ env.AWS_REGION }}.amazonaws.com/${{ env.ZIP_NAME }}
+      # Set env vars for domain name association
+      - name: Set environment variables for domain name association
+        if: github.event_name == 'pull_request' && inputs.deploy
+        run: |
+          PACKAGE_NAME_SUFFIX=$(echo "${{ inputs.package-name }}" | sed -e 's/^-app//')
+          echo "SUB_DOMAIN=pr${{ github.event.number }}-aperture-$PACKAGE_NAME_SUFFIX" >> $GITHUB_ENV
 
-#       - name: Get existing domain associations
-#         if: github.event_name == 'pull_request' && inputs.deploy
-#         run: |
-#           DOMAIN_ASSOCIATIONS=$(aws amplify get-domain-association \
-#             --app-id ${{ env.AMPLIFY_ID }} \
-#             --domain-name pie.design \
-#             --region ${{ env.AWS_REGION }} \
-#             | jq '
-#               [.domainAssociation.subDomains[].subDomainSetting | { prefix: (.prefix // ""), branchName }] |
-#               . |= (map(.branchName) | index("pr${{ github.event.number }}")) as $ix |
-#               if $ix == null then
-#                 . + [{branchName: "pr${{ github.event.number }}", prefix: "${{ env.SUB_DOMAIN }}"}]
-#               else . end
-#             ' -c)
-#           echo "DOMAIN_ASSOCIATIONS=$DOMAIN_ASSOCIATIONS" >> $GITHUB_ENV
-#       - name: Create Subdomain Association
-#         if: github.event_name == 'pull_request' && inputs.deploy
-#         shell: bash
-#         run: |
-#           aws amplify update-domain-association \
-#             --app-id ${{ env.AMPLIFY_ID }} \
-#             --domain-name pie.design \
-#             --sub-domain-settings '${{ env.DOMAIN_ASSOCIATIONS }}'
+      - name: Get existing domain associations
+        if: github.event_name == 'pull_request' && inputs.deploy
+        run: |
+          DOMAIN_ASSOCIATIONS=$(aws amplify get-domain-association \
+            --app-id ${{ env.AMPLIFY_ID }} \
+            --domain-name pie.design \
+            --region ${{ env.AWS_REGION }} \
+            | jq '
+              [.domainAssociation.subDomains[].subDomainSetting | { prefix: (.prefix // ""), branchName }] |
+              . |= (map(.branchName) | index("pr${{ github.event.number }}")) as $ix |
+              if $ix == null then
+                . + [{branchName: "pr${{ github.event.number }}", prefix: "${{ env.SUB_DOMAIN }}"}]
+              else . end
+            ' -c)
+          echo "DOMAIN_ASSOCIATIONS=$DOMAIN_ASSOCIATIONS" >> $GITHUB_ENV
+      - name: Create Subdomain Association
+        if: github.event_name == 'pull_request' && inputs.deploy
+        shell: bash
+        run: |
+          aws amplify update-domain-association \
+            --app-id ${{ env.AMPLIFY_ID }} \
+            --domain-name pie.design \
+            --sub-domain-settings '${{ env.DOMAIN_ASSOCIATIONS }}'
 
 
-#       - name: Wait for Amplify deployment
-#         if: github.event_name == 'pull_request' && inputs.deploy
-#         run: |
-#           LATEST_JOB_ID=$(aws amplify list-jobs \
-#             --app-id ${{ env.AMPLIFY_ID }} \
-#             --branch-name ${{ env.BRANCH_NAME }} \
-#             --region ${{ env.AWS_REGION }} \
-#             --query jobSummaries[0].jobId \
-#             --output text)
-#           MAX_ATTEMPTS=12
-#           SLEEP_SECONDS=10
+      - name: Wait for Amplify deployment
+        if: github.event_name == 'pull_request' && inputs.deploy
+        run: |
+          LATEST_JOB_ID=$(aws amplify list-jobs \
+            --app-id ${{ env.AMPLIFY_ID }} \
+            --branch-name ${{ env.BRANCH_NAME }} \
+            --region ${{ env.AWS_REGION }} \
+            --query jobSummaries[0].jobId \
+            --output text)
+          MAX_ATTEMPTS=12
+          SLEEP_SECONDS=10
 
-#           attempt_counter=0
-#           status=""
+          attempt_counter=0
+          status=""
 
-#           while [ $attempt_counter -lt $MAX_ATTEMPTS ]; do
-#             status=$(aws amplify get-job \
-#               --app-id ${{ env.AMPLIFY_ID }} \
-#               --branch-name ${{ env.BRANCH_NAME }} \
-#               --job-id $LATEST_JOB_ID \
-#               --query job.summary.status \
-#               --output text)
-#             echo "Attempt $(( attempt_counter+1 )) of $MAX_ATTEMPTS: Status - $status"
+          while [ $attempt_counter -lt $MAX_ATTEMPTS ]; do
+            status=$(aws amplify get-job \
+              --app-id ${{ env.AMPLIFY_ID }} \
+              --branch-name ${{ env.BRANCH_NAME }} \
+              --job-id $LATEST_JOB_ID \
+              --query job.summary.status \
+              --output text)
+            echo "Attempt $(( attempt_counter+1 )) of $MAX_ATTEMPTS: Status - $status"
 
-#             if [ "$status" == "SUCCEED" ]; then
-#               echo "Amplify deployment succeeded."
-#               break
-#             fi
+            if [ "$status" == "SUCCEED" ]; then
+              echo "Amplify deployment succeeded."
+              break
+            fi
 
-#             if [ "$status" == "FAILED" ]; then
-#               echo "Amplify deployment failed."
-#               exit 1
-#             fi
+            if [ "$status" == "FAILED" ]; then
+              echo "Amplify deployment failed."
+              exit 1
+            fi
 
-#             let "attempt_counter+=1"
-#             sleep $SLEEP_SECONDS
-#           done
+            let "attempt_counter+=1"
+            sleep $SLEEP_SECONDS
+          done
 
-#           if [ "$status" != "SUCCEED" ]; then
-#             echo "Amplify deployment did not succeed within the expected time."
-#             exit 1
-#           fi
+          if [ "$status" != "SUCCEED" ]; then
+            echo "Amplify deployment did not succeed within the expected time."
+            exit 1
+          fi
 
-#       # If successful
-#       - name: Update deployment status (success)
-#         if: github.event_name == 'pull_request' && inputs.deploy && success()
-#         uses: chrnorm/deployment-status@v2
-#         with:
-#           token: ${{ secrets.GITHUB_TOKEN }}
-#           environment-url: https://${{ env.SUB_DOMAIN }}.pie.design/
-#           deployment-id: ${{ steps.deploy.outputs.deployment_id }}
-#           state: "success"
+      # If successful
+      - name: Update deployment status (success)
+        if: github.event_name == 'pull_request' && inputs.deploy && success()
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment-url: https://${{ env.SUB_DOMAIN }}.pie.design/
+          deployment-id: ${{ steps.deploy.outputs.deployment_id }}
+          state: "success"
 
-#       # If it failed
-#       - name: Update deployment status (failure)
-#         if: github.event_name == 'pull_request' && inputs.deploy && failure()
-#         uses: chrnorm/deployment-status@v2
-#         with:
-#           token: ${{ secrets.GITHUB_TOKEN }}
-#           environment-url: https://${{ env.SUB_DOMAIN }}.pie.design/
-#           deployment-id: ${{ steps.deploy.outputs.deployment_id }}
-#           state: "failure"
+      # If it failed
+      - name: Update deployment status (failure)
+        if: github.event_name == 'pull_request' && inputs.deploy && failure()
+        uses: chrnorm/deployment-status@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment-url: https://${{ env.SUB_DOMAIN }}.pie.design/
+          deployment-id: ${{ steps.deploy.outputs.deployment_id }}
+          state: "failure"
