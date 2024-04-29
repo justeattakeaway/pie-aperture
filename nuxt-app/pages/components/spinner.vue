@@ -5,8 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-spinner';
 import { definePageMeta } from '#imports';
+import '@justeattakeaway/pie-spinner';
 
 definePageMeta({
     title: 'PIE Spinner',

@@ -5,8 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-form-label';
 import { definePageMeta } from '#imports';
+import '@justeattakeaway/pie-form-label';
 
 definePageMeta({
     title: 'PIE Form Label',

@@ -7,8 +7,8 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-cookie-banner';
 import { definePageMeta } from '#imports';
+import '@justeattakeaway/pie-cookie-banner';
 
 definePageMeta({
     title: 'PIE Cookie Banner',

@@ -1,12 +1,13 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "echo \"Error: Lit SSR is currently not working in Nuxt. So we have disabled the build to avoid false positives.\" && exit 0",
+    "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "playwright:show-report": "npx playwright show-report ../playwright-reports/nuxt-app-playwright-report",
-    "preview": "echo \"Error: Lit SSR is currently not working in Nuxt. So we have disabled the preview to avoid false positives.\" && exit 0",
+    "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test:system": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts",
     "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NUXT} npx percy exec -- wdio run ./wdio.conf.js",
@@ -14,10 +15,10 @@
   },
   "devDependencies": {
     "deepmerge": "4.3.1",
-    "nuxt": "3.10.1",
+    "nuxt": "3.11.2",
     "sass": "1.70.0",
-    "vue": "3.4.10",
-    "vue-router": "4.2.5"
+    "vue": "3.4.25",
+    "vue-router": "4.3.2"
   },
   "dependencies": {
     "@justeattakeaway/pie-assistive-text": "0.3.4",
@@ -37,7 +38,7 @@
     "@justeattakeaway/pie-switch": "0.27.0",
     "@justeattakeaway/pie-tag": "0.6.2",
     "just-kebab-case": "4.2.0",
-    "nuxt-ssr-lit": "1.6.10"
+    "nuxt-ssr-lit": "1.6.16"
   },
   "installConfig": {
     "hoistingLimits": "workspaces"
