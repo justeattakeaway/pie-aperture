@@ -10,7 +10,7 @@ exports.waitUntilPageLoad = async (timeout = null, timeoutMsg = null) => {
 
 exports.waitForPageTitleToBe = async (title, timeout = null, timeoutMsg = null) => {
     await browser.waitUntil(async function () {
-        return (await browser.getTitle()) === title
+        return (await browser.getTitle()).includes(title);
     },
     {
         timeout: timeout ? timeout : 60 * 1000,
