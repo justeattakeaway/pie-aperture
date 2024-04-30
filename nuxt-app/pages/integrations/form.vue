@@ -139,7 +139,6 @@ const email = ref('');
 const tel = ref('');
 const url = ref('');
 const password = ref('');
-const passwordConfirmation = ref('');
 const approveSettings = ref(false);
 const notifications = ref(false);
 const favouriteNumber = ref('');
