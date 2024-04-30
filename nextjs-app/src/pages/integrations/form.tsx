@@ -25,7 +25,6 @@ export default function Form() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [passwordConfirmation, setPasswordConfirmation] = useState('');
 
     const handleUsernameInput = (event: InputEvent) => {
         setUsername((event.target as HTMLInputElement).value);
