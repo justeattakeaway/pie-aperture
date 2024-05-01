@@ -87,20 +87,46 @@ function yarnInstall(packageName) {
     });
 }
 
+async function addPackageToSubProject(subProject, packageName, versionTag) {
+    const timestamp = new Date().toISOString();
+    const workspaceCommand = `yarn workspace ${subProject} add ${packageName}@${versionTag}`;
+    return new Promise((resolve, reject) => {
+        exec(workspaceCommand, { cwd: workingDir }, (error, stdout, stderr) => {
+            if (error) {
+                console.error(`[${timestamp}] Error adding ${packageName} to ${subProject}: ${error}`);
+                console.error(`[${timestamp}] stderr: ${stderr}`);
+                reject(error);
+            } else {
+                console.log(`[${timestamp}] Successfully added ${packageName} to ${subProject}: ${stdout}`);
+                resolve(stdout);
+            }
+        });
+    });
+}
+
 async function installPackages() {
     const timestamp = new Date().toISOString();
     console.log(`[${timestamp}] Starting the update process`);
 
     if (!basePackages.size) {
         console.error("Error: No matching packages found in the repository for the provided arguments.");
-        process.exit(1);
-    }
-
-    for (let packageName of basePackages) {
-        try {
-            await yarnInstall(packageName);
-        } catch (error) {
-            console.error(`[${timestamp}] Failed to update ${packageName}: ${error.message}`);
+        console.log(`[${timestamp}] Attempting to add specified packages to each sub-project.`);
+        for (const subProject of subProjects) {
+            for (const packageName of packagesToUpdate) {
+                try {
+                    await addPackageToSubProject(subProject, packageName, versionTag);
+                } catch (error) {
+                    console.error(`[${timestamp}] Failed to add ${packageName} to ${subProject}: ${error.message}`);
+                }
+            }
+        }
+    } else {
+        for (let packageName of basePackages) {
+            try {
+                await yarnInstall(packageName);
+            } catch (error) {
+                console.error(`[${timestamp}] Failed to update ${packageName}: ${error.message}`);
+            }
         }
     }
 
