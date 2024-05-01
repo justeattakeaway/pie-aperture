@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import NavigationLayout from '@/layout/navigation';
 import { PieFormLabel } from '@justeattakeaway/pie-form-label/dist/react';
 import { PieSwitch } from '@justeattakeaway/pie-switch/dist/react';
-import { PieButton } from '@justeattakeaway/pie-button/dist/react';
-import { PieInput } from '@justeattakeaway/pie-input/dist/react';
+import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
+import { PieInput } from '@justeattakeaway/pie-webc/react/input.js';
 import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
 import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
 import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
@@ -33,18 +33,18 @@ export default function Form() {
     const handleFavouriteNumberInput = (event: InputEvent) => {
         const inputElement = event.target as HTMLInputElement;
         const value = inputElement.value;
-    
+
         // Set the state based on the input. If the input is empty, value will be '', effectively clearing the input field.
         setFavouriteNumber(value);
-    
+
         let validationMessage = '';
-        
+
         if (value && inputElement.validity.rangeUnderflow) {
             validationMessage = 'The favourite number is too low. Please pick a number between -5 and 200.';
         } else if (value && inputElement.validity.rangeOverflow) {
             validationMessage = 'The favourite number is too high. Please pick a number between -5 and 200.';
         }
-    
+
         setFavouriteNumberValidationMessage(validationMessage);
     };
 
