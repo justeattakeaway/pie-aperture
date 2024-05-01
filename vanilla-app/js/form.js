@@ -2,12 +2,12 @@ import '@justeattakeaway/pie-button';
 import '@justeattakeaway/pie-input';
 import '@justeattakeaway/pie-switch';
 import '@justeattakeaway/pie-form-label';
-import '@justeattakeaway/pie-icons-webc/IconEmail';
-import '@justeattakeaway/pie-icons-webc/IconLaptop';
-import '@justeattakeaway/pie-icons-webc/IconPhone';
-import '@justeattakeaway/pie-icons-webc/IconUser';
-import '@justeattakeaway/pie-icons-webc/IconNumberSymbol';
-import '@justeattakeaway/pie-icons-webc/IconKey';
+import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconLaptop.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconPhone.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconUser.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconNumberSymbol.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconKey.js';
 
 import './utils/navigation.js';
 import './shared.js';

@@ -16,7 +16,8 @@ export default defineNuxtConfig({
             '@justeattakeaway/pie-modal',
             '@justeattakeaway/pie-spinner',
             '@justeattakeaway/pie-switch',
-            '@justeattakeaway/pie-tag'
+            '@justeattakeaway/pie-tag',
+            '@justeattakeaway/pie-icons-webc',
         ],
     },
     modules: [['nuxt-ssr-lit', { litElementPrefix: ['pie-', 'icon-'] }]],

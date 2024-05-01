@@ -1,4 +1,4 @@
-const { waitUntilPageLoad } = require('../../../webdriver-helpers/wait-helper.js');
+const { waitForPageTitleToBe } = require('../../../webdriver-helpers/wait-helper.js');
 const { percyScreenshot } = require('@percy/selenium-webdriver');
 
 describe('NextJS Aperture App', () => {
@@ -23,8 +23,7 @@ describe('NextJS Aperture App', () => {
     pages.forEach((page) => {
         it(`should navigate to the ${page.name} page.`, async () => {
             await browser.url(page.url);
-            await waitUntilPageLoad();
-            await expect(await browser.getTitle()).toContain(page.name);
+            await waitForPageTitleToBe(page.name);
             await percyScreenshot(page.name);
         });
     });
