@@ -1,5 +1,5 @@
 import NavigationLayout from "@/layout/navigation";
-import { PieSwitch } from "@justeattakeaway/pie-switch/dist/react";
+import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
 import { useState } from "react";
 
 export default function Switch() {

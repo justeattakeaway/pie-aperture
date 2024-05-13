@@ -1,4 +1,4 @@
-import '@justeattakeaway/pie-spinner';
+import '@justeattakeaway/pie-webc/components/spinner.js';
 import './shared.js';
 import './utils/navigation.js';
 

@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { definePageMeta } from '#imports';
-import '@justeattakeaway/pie-switch';
+import '@justeattakeaway/pie-webc/components/switch.js';
 
 definePageMeta({
     title: 'PIE Switch',

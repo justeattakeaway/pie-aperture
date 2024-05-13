@@ -1,4 +1,4 @@
-import '@justeattakeaway/pie-form-label';
+import '@justeattakeaway/pie-webc/components/form-label.js';
 import './utils/navigation.js';
 import './shared.js';
 

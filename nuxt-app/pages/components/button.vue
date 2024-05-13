@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { definePageMeta } from '#imports';
-import '@justeattakeaway/pie-button';
+import '@justeattakeaway/pie-webc/components/button.js';
 
 definePageMeta({
     title: 'PIE Button',

@@ -1,5 +1,5 @@
 import NavigationLayout from "@/layout/navigation";
-import { PieLink } from "@justeattakeaway/pie-link/dist/react";
+import { PieLink } from '@justeattakeaway/pie-webc/react/link.js';
 
 export default function Link() {
     return (
