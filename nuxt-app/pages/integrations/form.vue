@@ -106,6 +106,11 @@
                     name="notifications"
                     @change="notifications = $event.target.checked"
                     :checked="notifications"></pie-switch>
+                <pie-checkbox
+                    label="Receive discounts, loyalty offers and other updates via email"
+                    name="newsletter"
+                    :checked="newsletter"
+                    @change="newsletter = $event.target.checked"></pie-checkbox>
             </div>
             <div class="form-btns">
                 <pie-button class="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</pie-button>
@@ -127,6 +132,7 @@ import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/form-label.js';
 import '@justeattakeaway/pie-webc/components/text-input.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
+import '@justeattakeaway/pie-webc/pie-checkbox';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconLaptop.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconPhone.js';
@@ -143,6 +149,7 @@ const approveSettings = ref(false);
 const notifications = ref(false);
 const favouriteNumber = ref('');
 const favouriteNumberValidationMessage = ref('');
+const newsletter = ref(false);
 
 const formDataDisplay = ref('');
 
@@ -170,7 +177,8 @@ function handleSubmit() {
         password: password.value,
         approveSettings: approveSettings.value,
         enableNotifications: notifications.value,
-        favouriteNumber: favouriteNumber.value
+        favouriteNumber: favouriteNumber.value,
+        newsletterSignUp: newsletter.value,
     }, null, 2);
 }
 </script>
