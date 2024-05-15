@@ -1,6 +1,7 @@
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/text-input.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
+import '@justeattakeaway/pie-webc/pie-checkbox';
 import '@justeattakeaway/pie-webc/components/form-label.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconLaptop.js';
@@ -41,6 +42,7 @@ form.addEventListener('submit', (e) => {
     const data = Object.fromEntries(formData.entries());
     data.approveSettings = formData.get('approveSettings') === 'on';
     data.enableNotifications = formData.get('enableNotifications') === 'on';
+    data.newsletterSignup = formData.get('newsletterSignup') === 'on';
     output.innerHTML = `
         <h2>Form Data</h2>
         <pre data-test-id="outputData">${JSON.stringify(data, null, 2)}</pre>
