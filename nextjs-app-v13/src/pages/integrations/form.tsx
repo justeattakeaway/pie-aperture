@@ -4,6 +4,7 @@ import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
 import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
+import { PieCheckbox } from '@justeattakeaway/pie-webc/react/checkbox.js';
 import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
 import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
 import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
@@ -14,6 +15,7 @@ import { IconKey } from '@justeattakeaway/pie-icons-webc/dist/react/IconKey.js';
 export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);
     const [enableNotifications, setNotifications] = useState(false);
+    const [newsletterSignUp, setNewsletterSignUp] = useState(false);
     const [favouriteNumber, setFavouriteNumber] = useState('');
     const [favouriteNumberValidationMessage, setFavouriteNumberValidationMessage] = useState('');
 
@@ -70,6 +72,10 @@ export default function Form() {
 
     const handleNotificationsChange = () => {
         setNotifications(current => !current);
+    };
+
+    const handleNewsletterChange = () => {
+        setNewsletterSignUp(current => !current);
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -198,6 +204,14 @@ export default function Form() {
                         name="enableNotifications"
                         checked={enableNotifications}
                         onChange={handleNotificationsChange}
+                    />
+                    <PieCheckbox
+                        label="Receive discounts, loyalty offers and other updates via email"
+                        id="newsletterSignup"
+                        data-test-id="newsletterSignup"
+                        name="newsletter"
+                        checked={newsletterSignUp}
+                        onChange={handleNewsletterChange}
                     />
                 </div>
                 <div className='form-btns'>
