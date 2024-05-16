@@ -5,8 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-tag';
 import { definePageMeta } from '#imports';
+import '@justeattakeaway/pie-tag';
 
 definePageMeta({
     title: 'PIE Tag',

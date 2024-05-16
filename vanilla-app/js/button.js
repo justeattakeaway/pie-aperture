@@ -1,5 +1,5 @@
 import '@justeattakeaway/pie-button';
-import '@justeattakeaway/pie-icons-webc/IconSearch';
+import '@justeattakeaway/pie-icons-webc/dist/IconSearch.js';
 import './utils/navigation.js';
 import './shared.js';
 

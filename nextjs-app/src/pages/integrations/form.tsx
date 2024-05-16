@@ -4,6 +4,12 @@ import { PieFormLabel } from '@justeattakeaway/pie-form-label/dist/react';
 import { PieSwitch } from '@justeattakeaway/pie-switch/dist/react';
 import { PieButton } from '@justeattakeaway/pie-button/dist/react';
 import { PieInput } from '@justeattakeaway/pie-input/dist/react';
+import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
+import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
+import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
+import { IconUser } from '@justeattakeaway/pie-icons-webc/dist/react/IconUser.js';
+import { IconNumberSymbol } from '@justeattakeaway/pie-icons-webc/dist/react/IconNumberSymbol.js';
+import { IconKey } from '@justeattakeaway/pie-icons-webc/dist/react/IconKey.js';
 
 export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);
@@ -14,9 +20,11 @@ export default function Form() {
     const [formDataDisplay, setFormDataDisplay] = useState<string | null>(null);
 
     const [username, setUsername] = useState('');
+    const [url, setUrl] = useState('');
+    const [tel, setTel] = useState('');
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [passwordConfirmation, setPasswordConfirmation] = useState('');
 
     const handleUsernameInput = (event: InputEvent) => {
         setUsername((event.target as HTMLInputElement).value);
@@ -39,19 +47,21 @@ export default function Form() {
     
         setFavouriteNumberValidationMessage(validationMessage);
     };
-    
-    
 
-    const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setEmail(event.target.value);
+    const handleEmailInput = (event: InputEvent) => {
+        setEmail((event.target as HTMLInputElement).value);
     }
 
-    const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setPassword(event.target.value);
+    const handleUrlInput = (event: InputEvent) => {
+        setUrl((event.target as HTMLInputElement).value);
     }
 
-    const handlePasswordConfirmationChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setPasswordConfirmation(event.target.value);
+    const handleTelInput = (event: InputEvent) => {
+        setTel((event.target as HTMLInputElement).value);
+    }
+
+    const handlePasswordInput = (event: InputEvent) => {
+        setPassword((event.target as HTMLInputElement).value);
     }
 
     const handleApproveSettingsChange = () => {
@@ -70,8 +80,9 @@ export default function Form() {
             username,
             favouriteNumber,
             email,
-            password,
-            passwordConfirmation
+            url,
+            tel,
+            password
         };
 
         setFormDataDisplay(JSON.stringify(data, null, 2));
@@ -90,7 +101,9 @@ export default function Form() {
                     name="username"
                     value={username}
                     onInput={handleUsernameInput as any}
-                    type="text"></PieInput>
+                    type="text">
+                    <IconUser slot="leading"></IconUser>
+                </PieInput>
 
                 <PieFormLabel for="favouriteNumber">
                     Favourite Number:
@@ -107,40 +120,65 @@ export default function Form() {
                     type="number"
                     assistiveText={favouriteNumberValidationMessage}
                     status={favouriteNumberValidationMessage ? 'error' : undefined}
-                ></PieInput>
+                >
+                    <IconNumberSymbol slot="leading"></IconNumberSymbol>
+                </PieInput>
 
-                <label htmlFor="email">
+                <PieFormLabel for="email">
                     Email:
-                </label>
-                <input
+                </PieFormLabel>
+                <PieInput
                     className="form-field"
                     id="email"
                     data-test-id="email"
                     name="email"
-                    onChange={handleEmailChange}
-                    type="email" />
+                    value={email}
+                    onInput={handleEmailInput as any}
+                    type="email">
+                    <IconEmail slot="leading"></IconEmail>
+                </PieInput>
 
-                <label htmlFor="password">
+                <PieFormLabel for="url">
+                    Website:
+                </PieFormLabel>
+                <PieInput
+                    className="form-field"
+                    id="url"
+                    data-test-id="url"
+                    name="url"
+                    value={url}
+                    onInput={handleUrlInput as any}
+                    type="url">
+                    <IconLaptop slot="leading"></IconLaptop>
+                </PieInput>
+
+                <PieFormLabel for="tel">
+                    Telephone:
+                </PieFormLabel>
+                <PieInput
+                    className="form-field"
+                    id="tel"
+                    data-test-id="tel"
+                    name="tel"
+                    value={tel}
+                    onInput={handleTelInput as any}
+                    type="tel">
+                    <IconPhone slot="leading"></IconPhone>
+                </PieInput>
+
+                <PieFormLabel for="password">
                     Password:
-                </label>
-                <input
+                </PieFormLabel>
+                <PieInput
                     className="form-field"
                     id="password"
                     data-test-id="password"
                     name="password"
-                    onChange={handlePasswordChange}
-                    type="password" />
-
-                <label htmlFor="passwordConfirmation">
-                    Confirm Password:
-                </label>
-                <input
-                    className="form-field"
-                    id="passwordConfirmation"
-                    data-test-id="passwordConfirmation"
-                    name="passwordConfirmation"
-                    onChange={handlePasswordConfirmationChange}
-                    type="password" />
+                    value={password}
+                    onInput={handlePasswordInput as any}
+                    type="password">
+                    <IconKey slot="leading"></IconKey>
+                </PieInput>
 
                 <div className="form-controls">
                     <PieFormLabel for="approveSettings">

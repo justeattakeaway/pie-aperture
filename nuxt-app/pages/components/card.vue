@@ -14,8 +14,8 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-card';
 import { definePageMeta } from '#imports';
+import '@justeattakeaway/pie-card';
 
 definePageMeta({
     title: 'PIE Card',

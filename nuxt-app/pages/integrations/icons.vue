@@ -17,8 +17,10 @@ const icons = Object.keys(webcIcons).map(kebabCase);
 
 <style>
 .icon-container {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: var(--dt-spacing-c);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: var(--dt-spacing-c);
+  justify-items: center;
+  align-items: center;
 }
 </style>

@@ -6,8 +6,9 @@ export class FormPage {
     readonly usernameField: Locator;
     readonly favouriteNumberField: Locator;
     readonly emailField: Locator;
+    readonly urlField: Locator;
+    readonly telField: Locator;
     readonly passwordField: Locator;
-    readonly passwordConfirmationField: Locator;
     readonly approveSettingsSwitch: Locator;
     readonly enableNotificationsSwitch: Locator;
     readonly resetBtn: Locator;
@@ -19,8 +20,9 @@ export class FormPage {
         this.usernameField = page.getByTestId('username');
         this.favouriteNumberField = page.getByTestId('favouriteNumber');
         this.emailField = page.getByTestId('email');
+        this.urlField = page.getByTestId('url');
+        this.telField = page.getByTestId('tel');
         this.passwordField = page.getByTestId('password');
-        this.passwordConfirmationField = page.getByTestId('passwordConfirmation');
         this.approveSettingsSwitch = page.getByTestId('approveSettings').getByTestId('switch-component');
         this.enableNotificationsSwitch = page.getByTestId('enableNotifications').getByTestId('switch-component');
         this.resetBtn = page.getByTestId('reset-btn');
@@ -38,9 +40,10 @@ export class FormPage {
     async fillForm(formData: any) {
         await this.usernameField.locator('input').fill(formData.username);
         await this.favouriteNumberField.locator('input').fill(formData.favouriteNumber);
-        await this.emailField.fill(formData.email);
-        await this.passwordField.fill(formData.password);
-        await this.passwordConfirmationField.fill(formData.passwordConfirmation);
+        await this.emailField.locator('input').fill(formData.email);
+        await this.urlField.locator('input').fill(formData.url);
+        await this.telField.locator('input').fill(formData.tel);
+        await this.passwordField.locator('input').fill(formData.password);
 
         if (formData.approveSettings) {
             await this.approveSettingsSwitch.click();

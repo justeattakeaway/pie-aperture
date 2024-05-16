@@ -11,8 +11,8 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-chip';
 import { definePageMeta } from '#imports';
+import '@justeattakeaway/pie-chip';
 
 definePageMeta({
     title: 'PIE Chip',

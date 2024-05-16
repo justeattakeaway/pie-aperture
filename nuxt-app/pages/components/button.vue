@@ -7,9 +7,9 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-button';
 import { ref } from 'vue';
 import { definePageMeta } from '#imports';
+import '@justeattakeaway/pie-button';
 
 definePageMeta({
     title: 'PIE Button',
