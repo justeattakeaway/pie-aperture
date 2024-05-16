@@ -1,3 +1,4 @@
+'use client';
 import NavigationLayout from "@/layout/navigation";
 import { PieAssistiveText } from "@justeattakeaway/pie-assistive-text/dist/react";
 

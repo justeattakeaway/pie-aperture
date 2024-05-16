@@ -16,11 +16,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+    <Head>
         <title>PIE Aperture</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-      <Component {...pageProps} />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="icon" href="/favicon.ico"/>
+        <link rel="preload" href="https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff2"
+              as="font" type="font/woff2"/>
+        <link rel="preload" href="https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff2"
+              as="font" type="font/woff2"/>
+    </Head>
+    <body>
+    {children}
+    </body>
     </html>
   );
 }
