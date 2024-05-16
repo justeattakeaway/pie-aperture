@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { PieButton } from "@justeattakeaway/pie-button/dist/react"
-import { PieNotification } from "@justeattakeaway/pie-notification/dist/react";
-import { PieDivider } from "@justeattakeaway/pie-divider/dist/react"
+import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
+import { PieNotification } from '@justeattakeaway/pie-webc/react/notification.js';
+import { PieDivider } from '@justeattakeaway/pie-webc/react/divider.js';
 import NavigationLayout from "@/layout/navigation";
 
 export default function Notification() {
@@ -17,7 +17,7 @@ export default function Notification() {
 
       <PieDivider />
 
-      <PieNotification 
+      <PieNotification
         isOpen={isNotificationOpen}
         variant="info"
         heading="Title"
@@ -37,5 +37,6 @@ export default function Notification() {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet tincidunt est, vitae vulputate turpis. Cras pretium venenatis elementum. Duis tristique neque non varius tempor. In hac habitasse platea dictumst. Aenean accumsan vehicula urna.
       </PieNotification>
     </NavigationLayout>
+
   )
 }
