@@ -4,12 +4,12 @@ import { PieFormLabel } from '@justeattakeaway/pie-form-label/dist/react';
 import { PieSwitch } from '@justeattakeaway/pie-switch/dist/react';
 import { PieButton } from '@justeattakeaway/pie-button/dist/react';
 import { PieInput } from '@justeattakeaway/pie-input/dist/react';
-import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
-import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
-import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
-import { IconUser } from '@justeattakeaway/pie-icons-webc/dist/react/IconUser.js';
-import { IconNumberSymbol } from '@justeattakeaway/pie-icons-webc/dist/react/IconNumberSymbol.js';
-import { IconKey } from '@justeattakeaway/pie-icons-webc/dist/react/IconKey.js';
+import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail';
+import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop';
+import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone';
+import { IconUser } from '@justeattakeaway/pie-icons-webc/dist/react/IconUser';
+import { IconNumberSymbol } from '@justeattakeaway/pie-icons-webc/dist/react/IconNumberSymbol';
+import { IconKey } from '@justeattakeaway/pie-icons-webc/dist/react/IconKey';
 
 export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);
