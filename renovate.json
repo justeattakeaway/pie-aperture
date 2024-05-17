@@ -20,9 +20,9 @@
       "enabled": true
     },
     {
-      "commitMessagePrefix": "chore(nextjs-app)",
+      "commitMessagePrefix": "chore(nextjs-app-v13)",
       "description": "Group JET devDependencies / dependencies from package.json within the nextjs app",
-      "matchFiles": ["nextjs-app/package.json"],
+      "matchFiles": ["nextjs-app-v13/package.json"],
       "matchDepTypes": ["devDependencies", "dependencies"],
       "matchPackagePatterns": ["@justeat/*", "@justeattakeaway/*"],
       "matchUpdateTypes": ["minor", "patch", "major"],
