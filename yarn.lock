@@ -10450,11 +10450,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-app-v14@workspace:nextjs-app-v14"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 0.3.5
-    "@justeattakeaway/pie-button": 0.47.3
-    "@justeattakeaway/pie-card": 0.19.3
-    "@justeattakeaway/pie-chip": 0.6.1
-    "@justeattakeaway/pie-cookie-banner": 0.19.5
+    "@justeattakeaway/pie-cookie-banner": 0.19.6
     "@justeattakeaway/pie-css": 0.11.0
     "@justeattakeaway/pie-divider": 0.13.3
     "@justeattakeaway/pie-form-label": 0.13.3
