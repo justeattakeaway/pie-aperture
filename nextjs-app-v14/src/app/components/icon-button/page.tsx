@@ -1,3 +1,5 @@
+'use client';
+
 import NavigationLayout from "@/layout/navigation";
 import { PieIconButton } from "@justeattakeaway/pie-icon-button/dist/react"
 import { IconClose } from "@justeattakeaway/pie-icons-webc/dist/react/IconClose";

@@ -1,3 +1,5 @@
+'use client';
+
 import NavigationLayout from "@/layout/navigation";
 import { PieTag } from '@justeattakeaway/pie-webc/react/tag.js';
 

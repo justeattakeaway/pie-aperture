@@ -1,3 +1,5 @@
+'use client';
+
 import NavigationLayout from "@/layout/navigation";
 import { PieCard } from '@justeattakeaway/pie-webc/react/card.js';
 

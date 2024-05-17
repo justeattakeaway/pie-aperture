@@ -1,3 +1,5 @@
+'use client';
+
 import NavigationLayout from "@/layout/navigation";
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieModal } from '@justeattakeaway/pie-webc/react/modal.js';

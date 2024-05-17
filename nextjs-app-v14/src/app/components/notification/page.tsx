@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from "react";
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieNotification } from '@justeattakeaway/pie-webc/react/notification.js';

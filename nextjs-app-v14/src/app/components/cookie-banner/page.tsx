@@ -1,3 +1,5 @@
+'use client';
+
 import NavigationLayout from "@/layout/navigation";
 import { PieCookieBanner } from '@justeattakeaway/pie-webc/react/cookie-banner.js';
 // TODO: Remove this comment as soon as we provide the TS declaration for locales
