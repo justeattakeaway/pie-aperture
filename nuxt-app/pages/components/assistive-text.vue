@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { definePageMeta } from '#imports';
-import '@justeattakeaway/pie-assistive-text';
+import '@justeattakeaway/pie-webc/components/assistive-text.js';
 
 definePageMeta({
     title: 'PIE Assistive Text',

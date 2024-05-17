@@ -1,4 +1,4 @@
-import '@justeattakeaway/pie-assistive-text';
+import '@justeattakeaway/pie-webc/components/assistive-text.js';
 import './utils/navigation.js';
 import './shared.js';
 

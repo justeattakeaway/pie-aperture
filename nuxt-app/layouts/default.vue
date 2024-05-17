@@ -9,8 +9,8 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-link';
-import '@justeattakeaway/pie-divider';
+import '@justeattakeaway/pie-webc/components/link.js';
+import '@justeattakeaway/pie-webc/components/divider.js';
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 

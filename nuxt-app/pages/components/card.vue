@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import { definePageMeta } from '#imports';
-import '@justeattakeaway/pie-card';
+import '@justeattakeaway/pie-webc/components/card.js';
 
 definePageMeta({
     title: 'PIE Card',

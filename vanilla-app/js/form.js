@@ -1,7 +1,7 @@
-import '@justeattakeaway/pie-button';
-import '@justeattakeaway/pie-input';
-import '@justeattakeaway/pie-switch';
-import '@justeattakeaway/pie-form-label';
+import '@justeattakeaway/pie-webc/components/button.js';
+import '@justeattakeaway/pie-webc/components/input.js';
+import '@justeattakeaway/pie-webc/components/switch.js';
+import '@justeattakeaway/pie-webc/components/form-label.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconLaptop.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconPhone.js';
@@ -37,7 +37,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    
+
     const data = Object.fromEntries(formData.entries());
     data.approveSettings = formData.get('approveSettings') === 'on';
     data.enableNotifications = formData.get('enableNotifications') === 'on';

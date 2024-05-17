@@ -1,4 +1,4 @@
-import '@justeattakeaway/pie-card';
+import '@justeattakeaway/pie-webc/components/card.js';
 import './utils/navigation.js';
 import './shared.js';
 

@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { definePageMeta } from '#imports';
-import '@justeattakeaway/pie-chip';
+import '@justeattakeaway/pie-webc/components/chip.js';
 
 definePageMeta({
     title: 'PIE Chip',
