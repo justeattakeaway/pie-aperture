@@ -5,7 +5,7 @@ on:
     types: [assigned, opened, synchronize, reopened, "ready_for_review"]
     paths:
       - '.github/workflows/**'
-      - 'nextjs-app/**'
+      - 'nextjs-app-v13/**'
       - 'webdriver-helpers/**'
       - 'wdio.conf.js'
 
@@ -50,7 +50,7 @@ jobs:
         deploy: false
         node-version: 18
         os: 'ubuntu-latest'
-        package-name: 'nextjs-app'
+        package-name: 'nextjs-app-v13'
     secrets: inherit
 
   build-deploy-next-app-ubuntu-node20:
@@ -61,8 +61,8 @@ jobs:
           node-version: 20
           os: 'ubuntu-latest'
           amplify-app-id: 'd1106vmj1ozg8d'
-          package-name: 'nextjs-app'
-          package-dist-directory: './nextjs-app/out'
+          package-name: 'nextjs-app-v13'
+          package-dist-directory: './nextjs-app-v13/out'
           bucket-name-preview: 'pie-aperture-preview'
           bucket-name-main: 'pie-aperture'
       secrets: inherit
@@ -93,7 +93,7 @@ jobs:
 
       - name: Run System Tests
         shell: bash
-        run: yarn test:system --filter=nextjs-app
+        run: yarn test:system --filter=nextjs-app-v13
 
       - uses: actions/upload-artifact@v3
         if: always()
@@ -104,7 +104,7 @@ jobs:
 
       - name: Run Percy Tests
         shell: bash
-        run: yarn test:visual --filter=nextjs-app
+        run: yarn test:visual --filter=nextjs-app-v13
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}

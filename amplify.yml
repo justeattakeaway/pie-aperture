@@ -17,7 +17,7 @@ applications:
         paths:
           - node_modules/**/*
 
-  - appRoot: nextjs-app
+  - appRoot: nextjs-app-v13
     frontend:
       phases:
         preBuild:
