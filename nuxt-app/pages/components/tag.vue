@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { definePageMeta } from '#imports';
-import '@justeattakeaway/pie-tag';
+import '@justeattakeaway/pie-webc/components/tag.js';
 
 definePageMeta({
     title: 'PIE Tag',

@@ -1,5 +1,5 @@
 import NavigationLayout from "@/layout/navigation";
-import { PieCard } from "@justeattakeaway/pie-card/dist/react";
+import { PieCard } from '@justeattakeaway/pie-webc/react/card.js';
 
 export default function Card() {
     return (

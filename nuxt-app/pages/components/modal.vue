@@ -11,8 +11,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { definePageMeta } from '#imports';
-import '@justeattakeaway/pie-button';
-import '@justeattakeaway/pie-modal';
+import '@justeattakeaway/pie-webc/components/button.js';
+import '@justeattakeaway/pie-webc/components/modal.js';
 
 definePageMeta({
     title: 'PIE Modal',

@@ -1,5 +1,5 @@
-import '@justeattakeaway/pie-button';
-import '@justeattakeaway/pie-modal';
+import '@justeattakeaway/pie-webc/components/button.js';
+import '@justeattakeaway/pie-webc/components/modal.js';
 import './shared.js';
 import './utils/navigation.js';
 

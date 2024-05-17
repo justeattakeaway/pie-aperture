@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { definePageMeta } from '#imports';
-import '@justeattakeaway/pie-spinner';
+import '@justeattakeaway/pie-webc/components/spinner.js';
 
 definePageMeta({
     title: 'PIE Spinner',

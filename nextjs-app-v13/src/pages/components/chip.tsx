@@ -1,6 +1,6 @@
 import NavigationLayout from "@/layout/navigation";
-import { PieChip } from "@justeattakeaway/pie-chip/dist/react";
-import { PieDivider } from "@justeattakeaway/pie-divider/dist/react";
+import { PieChip } from '@justeattakeaway/pie-webc/react/chip.js';
+import { PieDivider } from '@justeattakeaway/pie-webc/react/divider.js';
 
 export default function Chip() {
     return (

@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { definePageMeta } from '#imports';
-import '@justeattakeaway/pie-form-label';
+import '@justeattakeaway/pie-webc/components/form-label.js';
 
 definePageMeta({
     title: 'PIE Form Label',

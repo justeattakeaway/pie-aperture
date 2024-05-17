@@ -1,4 +1,4 @@
-import '@justeattakeaway/pie-switch';
+import '@justeattakeaway/pie-webc/components/switch.js';
 import './shared.js';
 import './utils/navigation.js';
 

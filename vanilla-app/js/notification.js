@@ -1,6 +1,6 @@
-import '@justeattakeaway/pie-button';
-import '@justeattakeaway/pie-notification';
-import '@justeattakeaway/pie-divider';
+import '@justeattakeaway/pie-webc/components/button.js';
+import '@justeattakeaway/pie-webc/components/notification.js';
+import '@justeattakeaway/pie-webc/components/divider.js';
 import './shared.js';
 import './utils/navigation.js';
 
@@ -42,7 +42,7 @@ document.querySelector('#toggle-notification').addEventListener('click', () => {
 });
 
 $notification.addEventListener('pie-notification-close', () => {
-  $notificationActionText.innerHTML = 'Open'; 
+  $notificationActionText.innerHTML = 'Open';
   $notification.removeAttribute('isOpen');
 });
 

@@ -123,10 +123,10 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import '@justeattakeaway/pie-button';
-import '@justeattakeaway/pie-form-label';
-import '@justeattakeaway/pie-input';
-import '@justeattakeaway/pie-switch';
+import '@justeattakeaway/pie-webc/components/button.js';
+import '@justeattakeaway/pie-webc/components/form-label.js';
+import '@justeattakeaway/pie-webc/components/input.js';
+import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconLaptop.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconPhone.js';
