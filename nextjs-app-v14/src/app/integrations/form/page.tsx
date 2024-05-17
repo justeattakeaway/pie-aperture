@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import NavigationLayout from '@/layout/navigation';
 import { PieFormLabel } from '@justeattakeaway/pie-form-label/dist/react';

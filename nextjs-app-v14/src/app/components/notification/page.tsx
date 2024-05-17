@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from "react";
 import { PieButton } from "@justeattakeaway/pie-button/dist/react"
 import { PieNotification } from "@justeattakeaway/pie-notification/dist/react";

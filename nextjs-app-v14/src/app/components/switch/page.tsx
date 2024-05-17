@@ -1,3 +1,5 @@
+'use client';
+
 import NavigationLayout from "@/layout/navigation";
 import { PieSwitch } from "@justeattakeaway/pie-switch/dist/react";
 import { useState } from "react";

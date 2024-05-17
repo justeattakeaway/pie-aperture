@@ -1,3 +1,5 @@
+'use client';
+
 import NavigationLayout from "@/layout/navigation";
 import { PieLink } from "@justeattakeaway/pie-link/dist/react";
 

@@ -1,3 +1,5 @@
+'use client';
+
 import NavigationLayout from "@/layout/navigation";
 import { PieSpinner } from "@justeattakeaway/pie-spinner/dist/react";
 

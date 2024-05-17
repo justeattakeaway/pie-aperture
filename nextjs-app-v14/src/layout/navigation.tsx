@@ -1,6 +1,6 @@
 import { PieDivider } from "@justeattakeaway/pie-divider/dist/react"
 import { PieLink } from "@justeattakeaway/pie-link/dist/react";
-import { useRouter } from "next/router";
+import { useRouter, usePathname } from "next/navigation";
 import Head from 'next/head'; 
 import { type ReactNode } from "react";
 
@@ -12,7 +12,8 @@ interface NavigationLayoutProps {
 export default function NavigationLayout({ children, title }: NavigationLayoutProps) {
 
     const router = useRouter();
-    const isHomePage = router.pathname === '/';
+    const pathname = usePathname();
+    const isHomePage = pathname === '/';
 
     return (
       <>

@@ -1,3 +1,5 @@
+'use client';
+
 import NavigationLayout from "@/layout/navigation";
 import { PieChip } from "@justeattakeaway/pie-chip/dist/react";
 import { PieDivider } from "@justeattakeaway/pie-divider/dist/react";

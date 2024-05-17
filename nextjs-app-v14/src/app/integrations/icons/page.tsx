@@ -1,3 +1,5 @@
+'use client';
+
 import NavigationLayout from '@/layout/navigation';
 import * as icons from '@justeattakeaway/pie-icons-webc/dist/react';
 
