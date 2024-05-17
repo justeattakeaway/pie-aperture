@@ -14,7 +14,8 @@ export class FormPage {
     readonly resetBtn: Locator;
     readonly submitBtn: Locator;
     readonly outputData: Locator;
-    
+    readonly acceptNewsletterSignup: Locator;
+
     constructor(page: Page) {
         this.page = page;
         this.usernameField = page.getByTestId('username');
@@ -25,6 +26,7 @@ export class FormPage {
         this.passwordField = page.getByTestId('password');
         this.approveSettingsSwitch = page.getByTestId('approveSettings').getByTestId('switch-component');
         this.enableNotificationsSwitch = page.getByTestId('enableNotifications').getByTestId('switch-component');
+        this.acceptNewsletterSignup = page.getByTestId('newsletterSignup').getByTestId('pie-checkbox');
         this.resetBtn = page.getByTestId('reset-btn');
         this.submitBtn = page.getByTestId('submit-btn');
 
@@ -51,6 +53,10 @@ export class FormPage {
 
         if (formData.enableNotifications) {
             await this.enableNotificationsSwitch.click();
+        }
+
+        if (formData.acceptNewsletterSignup) {
+            await this.acceptNewsletterSignup.click();
         }
     }
 
