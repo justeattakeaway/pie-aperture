@@ -1,6 +1,6 @@
 import NavigationLayout from "@/layout/navigation";
-import { PieIconButton } from "@justeattakeaway/pie-icon-button/dist/react"
-import { IconClose } from "@justeattakeaway/pie-icons-webc/dist/react/IconClose";
+import { PieIconButton } from '@justeattakeaway/pie-webc/react/icon-button.js';
+import { IconClose } from '@justeattakeaway/pie-icons-webc/dist/react/IconClose.js';
 
 export default function IconButton() {
     return (
