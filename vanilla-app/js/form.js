@@ -1,5 +1,5 @@
 import '@justeattakeaway/pie-webc/components/button.js';
-import '@justeattakeaway/pie-webc/components/input.js';
+import '@justeattakeaway/pie-webc/components/text-input.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-webc/components/form-label.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';

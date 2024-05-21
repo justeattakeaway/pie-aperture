@@ -4,7 +4,7 @@
             <pie-form-label for="username">
                 Username:
             </pie-form-label>
-            <pie-input
+            <pie-text-input
                 :value="username"
                 @input="username = $event.target.value"
                 class="form-field"
@@ -13,12 +13,12 @@
                 name="username"
                 type="text">
                 <icon-user slot="leading"></icon-user>
-            </pie-input>
+            </pie-text-input>
 
             <pie-form-label for="favouriteNumber">
                 Favourite Number:
             </pie-form-label>
-            <pie-input
+            <pie-text-input
                 :value="favouriteNumber"
                 @input="handleFavouriteNumberInput"
                 :assistiveText="favouriteNumberValidationMessage"
@@ -31,12 +31,12 @@
                 :max="200"
                 type="number">
                 <icon-number-symbol slot="leading"></icon-number-symbol>
-            </pie-input>
+            </pie-text-input>
 
             <pie-form-label for="email">
                 Email:
             </pie-form-label>
-            <pie-input
+            <pie-text-input
                 :value="email"
                 @input="email = $event.target.value"
                 class="form-field"
@@ -45,12 +45,12 @@
                 name="email"
                 type="email">
                 <icon-email slot="leading"></icon-email>
-            </pie-input>
+            </pie-text-input>
 
             <pie-form-label for="url">
                 Website:
             </pie-form-label>
-            <pie-input
+            <pie-text-input
                 :value="url"
                 @input="url = $event.target.value"
                 class="form-field"
@@ -59,12 +59,12 @@
                 name="url"
                 type="url">
                 <icon-laptop slot="leading"></icon-laptop>
-            </pie-input>
+            </pie-text-input>
 
             <pie-form-label for="tel">
                 Telephone:
             </pie-form-label>
-            <pie-input
+            <pie-text-input
                 :value="tel"
                 @input="tel = $event.target.value"
                 class="form-field"
@@ -73,12 +73,12 @@
                 name="tel"
                 type="tel">
                 <icon-phone slot="leading"></icon-phone>
-            </pie-input>
+            </pie-text-input>
 
             <pie-form-label for="password">
                 Password:
             </pie-form-label>
-            <pie-input
+            <pie-text-input
                 :value="password"
                 @input="password = $event.target.value"
                 class="form-field"
@@ -87,7 +87,7 @@
                 name="password"
                 type="password">
                 <icon-key slot="leading"></icon-key>
-            </pie-input>
+            </pie-text-input>
 
             <div class="form-controls">
                 <pie-form-label for="approveSettings">
@@ -125,7 +125,7 @@
 import { ref } from 'vue';
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/form-label.js';
-import '@justeattakeaway/pie-webc/components/input.js';
+import '@justeattakeaway/pie-webc/components/text-input.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconLaptop.js';
