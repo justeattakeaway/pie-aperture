@@ -29,6 +29,17 @@
       "groupName": "justeattakeaway",
       "groupSlug": "nextjs-app-v13-just-eat-deps",
       "enabled": true
+    },
+    {
+      "commitMessagePrefix": "chore(nextjs-app-v14)",
+      "description": "Group JET devDependencies / dependencies from package.json within the nextjs app",
+      "matchFiles": ["nextjs-app-v14/package.json"],
+      "matchDepTypes": ["devDependencies", "dependencies"],
+      "matchPackagePatterns": ["@justeat/*", "@justeattakeaway/*"],
+      "matchUpdateTypes": ["minor", "patch", "major"],
+      "groupName": "justeattakeaway",
+      "groupSlug": "nextjs-app-v14-just-eat-deps",
+      "enabled": true
     }
   ]
 }
