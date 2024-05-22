@@ -4,7 +4,7 @@ const { getEnvironmentBaseUrl } = require('../webdriver-helpers/configuration-he
 
 exports.config = merge(sharedConf.config, {
 
-    baseUrl: getEnvironmentBaseUrl('nextjs-app'),
+    baseUrl: getEnvironmentBaseUrl('nextjs-app-v13'),
 
     specs: [
         './test/visual/*.js'
