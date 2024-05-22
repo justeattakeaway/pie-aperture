@@ -23,7 +23,7 @@ function verifyRootDirectory(expectedPackageName) {
 
 verifyRootDirectory('pie-aperture'); // Ensure the script is run from the root directory of 'pie-aperture'
 
-const subProjects = ['nuxt-app', 'vanilla-app', 'nextjs-app'];
+const subProjects = ['nuxt-app', 'vanilla-app', 'nextjs-app-v13'];
 
 function readDependencies(filePath) {
     const dependenciesSet = new Set();

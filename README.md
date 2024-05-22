@@ -28,7 +28,7 @@ Tests can be run by executing the following command at the root of the monorepo:
 yarn test:visual
 
 # Run visual tests for a specific project
-# app-name - can be one of the following: nextjs-app, nuxt-app, vanilla-app
+# app-name - can be one of the following: nextjs-app-v13, nuxt-app, vanilla-app
 yarn test:visual --filter=<app-name>
 ```
 
@@ -53,7 +53,7 @@ When running test locally, Playwright will automatically execute the `yarn dev` 
 After test execution, if you wish to view a test report (for example on test failure), you can execute the following command from the root of the monorepo:
 
 ```
-# app-name - can be one of the following: nextjs-app, nuxt-app, vanilla-app
+# app-name - can be one of the following: nextjs-app-v13, nuxt-app, vanilla-app
 yarn playwright:show-report --filter=<app-name>
 ```
 
