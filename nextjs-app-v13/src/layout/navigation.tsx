@@ -19,7 +19,7 @@ export default function NavigationLayout({ children, title }: NavigationLayoutPr
         <Head>
             { isHomePage ? <title>PIE Aperture</title> : <title>PIE Aperture | NextJS | { title }</title>}
         </Head>
-        <h1>NextJS - PIE { title } </h1>
+        <h1>NextJS 13 - PIE { title } </h1>
         { !isHomePage &&
         <>
         <PieLink onClick={() => router.push('/')} tag="button">Back to home</PieLink>
