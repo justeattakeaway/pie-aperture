@@ -1,4 +1,4 @@
-import '@justeattakeaway/pie-checkbox';
+import '@justeattakeaway/pie-webc/components/checkbox.js';
 import './shared.js';
 import './utils/navigation.js';
 

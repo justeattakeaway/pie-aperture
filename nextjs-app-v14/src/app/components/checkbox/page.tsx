@@ -1,3 +1,5 @@
+'use client';
+
 import NavigationLayout from "@/layout/navigation";
 import { PieCheckbox } from "@justeattakeaway/pie-webc/react/checkbox.js";
 import { useState } from "react";

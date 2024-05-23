@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { definePageMeta } from '#imports';
-import '@justeattakeaway/pie-checkbox';
+import '@justeattakeaway/pie-webc/components/checkbox.js';
 
 definePageMeta({
     title: 'PIE Checkbox',

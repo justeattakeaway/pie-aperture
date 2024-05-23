@@ -5,7 +5,8 @@ import NavigationLayout from '@/layout/navigation';
 import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
 import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
-import { PieInput } from '@justeattakeaway/pie-webc/react/input.js';
+import { PieCheckbox } from '@justeattakeaway/pie-webc/react/checkbox.js';
+import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
 import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
 import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
 import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
@@ -16,6 +17,7 @@ import { IconKey } from '@justeattakeaway/pie-icons-webc/dist/react/IconKey.js';
 export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);
     const [enableNotifications, setNotifications] = useState(false);
+    const [newsletterSignup, setNewsletterSignup] = useState(false);
     const [favouriteNumber, setFavouriteNumber] = useState('');
     const [favouriteNumberValidationMessage, setFavouriteNumberValidationMessage] = useState('');
 
@@ -35,18 +37,18 @@ export default function Form() {
     const handleFavouriteNumberInput = (event: InputEvent) => {
         const inputElement = event.target as HTMLInputElement;
         const value = inputElement.value;
-    
+
         // Set the state based on the input. If the input is empty, value will be '', effectively clearing the input field.
         setFavouriteNumber(value);
-    
+
         let validationMessage = '';
-        
+
         if (value && inputElement.validity.rangeUnderflow) {
             validationMessage = 'The favourite number is too low. Please pick a number between -5 and 200.';
         } else if (value && inputElement.validity.rangeOverflow) {
             validationMessage = 'The favourite number is too high. Please pick a number between -5 and 200.';
         }
-    
+
         setFavouriteNumberValidationMessage(validationMessage);
     };
 
@@ -74,11 +76,16 @@ export default function Form() {
         setNotifications(current => !current);
     };
 
+    const handleNewsletterChange = () => {
+        setNewsletterSignup(current => !current);
+    };
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = {
             approveSettings,
             enableNotifications,
+            newsletterSignup,
             username,
             favouriteNumber,
             email,
@@ -96,7 +103,7 @@ export default function Form() {
                 <PieFormLabel for="username">
                     Username:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="username"
                     data-test-id="username"
@@ -105,12 +112,12 @@ export default function Form() {
                     onInput={handleUsernameInput as any}
                     type="text">
                     <IconUser slot="leading"></IconUser>
-                </PieInput>
+                </PieTextInput>
 
                 <PieFormLabel for="favouriteNumber">
                     Favourite Number:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="favouriteNumber"
                     data-test-id="favouriteNumber"
@@ -124,12 +131,12 @@ export default function Form() {
                     status={favouriteNumberValidationMessage ? 'error' : undefined}
                 >
                     <IconNumberSymbol slot="leading"></IconNumberSymbol>
-                </PieInput>
+                </PieTextInput>
 
                 <PieFormLabel for="email">
                     Email:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="email"
                     data-test-id="email"
@@ -138,12 +145,12 @@ export default function Form() {
                     onInput={handleEmailInput as any}
                     type="email">
                     <IconEmail slot="leading"></IconEmail>
-                </PieInput>
+                </PieTextInput>
 
                 <PieFormLabel for="url">
                     Website:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="url"
                     data-test-id="url"
@@ -152,12 +159,12 @@ export default function Form() {
                     onInput={handleUrlInput as any}
                     type="url">
                     <IconLaptop slot="leading"></IconLaptop>
-                </PieInput>
+                </PieTextInput>
 
                 <PieFormLabel for="tel">
                     Telephone:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="tel"
                     data-test-id="tel"
@@ -166,12 +173,12 @@ export default function Form() {
                     onInput={handleTelInput as any}
                     type="tel">
                     <IconPhone slot="leading"></IconPhone>
-                </PieInput>
+                </PieTextInput>
 
                 <PieFormLabel for="password">
                     Password:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="password"
                     data-test-id="password"
@@ -180,7 +187,7 @@ export default function Form() {
                     onInput={handlePasswordInput as any}
                     type="password">
                     <IconKey slot="leading"></IconKey>
-                </PieInput>
+                </PieTextInput>
 
                 <div className="form-controls">
                     <PieFormLabel for="approveSettings">
@@ -200,6 +207,15 @@ export default function Form() {
                         name="enableNotifications"
                         checked={enableNotifications}
                         onChange={handleNotificationsChange}
+                    />
+
+                    <PieCheckbox
+                        label="Receive discounts, loyalty offers and other updates via email"
+                        id="newsletterSignup"
+                        data-test-id="newsletterSignup"
+                        name="newsletter"
+                        checked={newsletterSignup}
+                        onChange={handleNewsletterChange}
                     />
                 </div>
                 <div className='form-btns'>

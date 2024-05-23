@@ -15,7 +15,7 @@ import { IconKey } from '@justeattakeaway/pie-icons-webc/dist/react/IconKey.js';
 export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);
     const [enableNotifications, setNotifications] = useState(false);
-    const [newsletterSignUp, setNewsletterSignUp] = useState(false);
+    const [newsletterSignup, setNewsletterSignup] = useState(false);
     const [favouriteNumber, setFavouriteNumber] = useState('');
     const [favouriteNumberValidationMessage, setFavouriteNumberValidationMessage] = useState('');
 
@@ -75,7 +75,7 @@ export default function Form() {
     };
 
     const handleNewsletterChange = () => {
-        setNewsletterSignUp(current => !current);
+        setNewsletterSignup(current => !current);
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -83,6 +83,7 @@ export default function Form() {
         const data = {
             approveSettings,
             enableNotifications,
+            newsletterSignup,
             username,
             favouriteNumber,
             email,
@@ -210,7 +211,7 @@ export default function Form() {
                         id="newsletterSignup"
                         data-test-id="newsletterSignup"
                         name="newsletter"
-                        checked={newsletterSignUp}
+                        checked={newsletterSignup}
                         onChange={handleNewsletterChange}
                     />
                 </div>

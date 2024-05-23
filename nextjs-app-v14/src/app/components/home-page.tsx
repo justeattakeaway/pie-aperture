@@ -30,6 +30,7 @@ export default function HomePage() {
     <li><PieLink onClick={() => router.push('/components/switch')} tag="button">Switch</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/tag')} tag="button">Tag</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/notification')} tag="button">Notification</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/checkbox')} tag="button">Checkbox</PieLink></li>
     </ul>
     </NavigationLayout>
   );
