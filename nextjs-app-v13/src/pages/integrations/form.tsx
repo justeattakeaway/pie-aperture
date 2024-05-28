@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import NavigationLayout from '@/layout/navigation';
 import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
 import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
@@ -15,7 +15,6 @@ import { IconKey } from '@justeattakeaway/pie-icons-webc/dist/react/IconKey.js';
 export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);
     const [enableNotifications, setNotifications] = useState(false);
-    const [newsletterSignup, setNewsletterSignup] = useState(false);
     const [favouriteNumber, setFavouriteNumber] = useState('');
     const [favouriteNumberValidationMessage, setFavouriteNumberValidationMessage] = useState('');
 
@@ -27,6 +26,8 @@ export default function Form() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const checkboxRef = useRef<any>();
 
     const handleUsernameInput = (event: InputEvent) => {
         setUsername((event.target as HTMLInputElement).value);
@@ -74,12 +75,11 @@ export default function Form() {
         setNotifications(current => !current);
     };
 
-    const handleNewsletterChange = () => {
-        setNewsletterSignup(current => !current);
-    };
-
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        const newsletterSignup = checkboxRef.current && checkboxRef.current.checked;
+
         const data = {
             approveSettings,
             enableNotifications,
@@ -210,9 +210,8 @@ export default function Form() {
                         label="Receive discounts, loyalty offers and other updates via email"
                         id="newsletterSignup"
                         data-test-id="newsletterSignup"
-                        name="newsletter"
-                        checked={newsletterSignup}
-                        onChange={handleNewsletterChange}
+                        name="newsletterSignup"
+                        ref={checkboxRef}
                     />
                 </div>
                 <div className='form-btns'>
