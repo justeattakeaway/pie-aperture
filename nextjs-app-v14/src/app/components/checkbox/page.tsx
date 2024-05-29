@@ -8,16 +8,16 @@ export default function Checkbox() {
     const [isCheckboxChecked, setIsCheckboxCheck] = useState(false)
 
     const handleCheckboxChange = () => {
-    setIsCheckboxCheck(current => !current);
+        setIsCheckboxCheck(current => !current);
     };
 
     return (
         <NavigationLayout title="Checkbox">
-        <PieCheckbox
-            label={`checked: ${isCheckboxChecked}`}
-            checked={isCheckboxChecked}
-            onChange={handleCheckboxChange}>
-        </PieCheckbox>
+            <PieCheckbox
+                label={`checked: ${isCheckboxChecked}`}
+                checked={isCheckboxChecked}
+                onChange={handleCheckboxChange}>
+            </PieCheckbox>
         </NavigationLayout>
     );
 }
