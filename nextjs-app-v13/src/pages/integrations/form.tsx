@@ -102,7 +102,7 @@ export default function Form() {
                     value={username}
                     onInput={handleUsernameInput as any}
                     type="text">
-                    <IconUser slot="leading"></IconUser>
+                    <IconUser slot="leadingIcon"></IconUser>
                 </PieTextInput>
 
                 <PieFormLabel for="favouriteNumber">
@@ -121,7 +121,7 @@ export default function Form() {
                     assistiveText={favouriteNumberValidationMessage}
                     status={favouriteNumberValidationMessage ? 'error' : undefined}
                 >
-                    <IconNumberSymbol slot="leading"></IconNumberSymbol>
+                    <IconNumberSymbol slot="leadingIcon"></IconNumberSymbol>
                 </PieTextInput>
 
                 <PieFormLabel for="email">
@@ -135,7 +135,7 @@ export default function Form() {
                     value={email}
                     onInput={handleEmailInput as any}
                     type="email">
-                    <IconEmail slot="leading"></IconEmail>
+                    <IconEmail slot="leadingIcon"></IconEmail>
                 </PieTextInput>
 
                 <PieFormLabel for="url">
@@ -149,7 +149,7 @@ export default function Form() {
                     value={url}
                     onInput={handleUrlInput as any}
                     type="url">
-                    <IconLaptop slot="leading"></IconLaptop>
+                    <IconLaptop slot="leadingIcon"></IconLaptop>
                 </PieTextInput>
 
                 <PieFormLabel for="tel">
@@ -163,7 +163,7 @@ export default function Form() {
                     value={tel}
                     onInput={handleTelInput as any}
                     type="tel">
-                    <IconPhone slot="leading"></IconPhone>
+                    <IconPhone slot="leadingIcon"></IconPhone>
                 </PieTextInput>
 
                 <PieFormLabel for="password">
@@ -177,7 +177,7 @@ export default function Form() {
                     value={password}
                     onInput={handlePasswordInput as any}
                     type="password">
-                    <IconKey slot="leading"></IconKey>
+                    <IconKey slot="leadingIcon"></IconKey>
                 </PieTextInput>
 
                 <div className="form-controls">

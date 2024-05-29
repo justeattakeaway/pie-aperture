@@ -12,7 +12,7 @@
                 data-test-id="username"
                 name="username"
                 type="text">
-                <icon-user slot="leading"></icon-user>
+                <icon-user slot="leadingIcon"></icon-user>
             </pie-text-input>
 
             <pie-form-label for="favouriteNumber">
@@ -30,7 +30,7 @@
                 :min="-5"
                 :max="200"
                 type="number">
-                <icon-number-symbol slot="leading"></icon-number-symbol>
+                <icon-number-symbol slot="leadingIcon"></icon-number-symbol>
             </pie-text-input>
 
             <pie-form-label for="email">
@@ -44,7 +44,7 @@
                 data-test-id="email"
                 name="email"
                 type="email">
-                <icon-email slot="leading"></icon-email>
+                <icon-email slot="leadingIcon"></icon-email>
             </pie-text-input>
 
             <pie-form-label for="url">
@@ -58,7 +58,7 @@
                 data-test-id="url"
                 name="url"
                 type="url">
-                <icon-laptop slot="leading"></icon-laptop>
+                <icon-laptop slot="leadingIcon"></icon-laptop>
             </pie-text-input>
 
             <pie-form-label for="tel">
@@ -72,7 +72,7 @@
                 data-test-id="tel"
                 name="tel"
                 type="tel">
-                <icon-phone slot="leading"></icon-phone>
+                <icon-phone slot="leadingIcon"></icon-phone>
             </pie-text-input>
 
             <pie-form-label for="password">
@@ -86,7 +86,7 @@
                 data-test-id="password"
                 name="password"
                 type="password">
-                <icon-key slot="leading"></icon-key>
+                <icon-key slot="leadingIcon"></icon-key>
             </pie-text-input>
 
             <div class="form-controls">
