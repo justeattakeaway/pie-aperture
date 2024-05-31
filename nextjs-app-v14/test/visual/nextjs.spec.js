@@ -3,21 +3,21 @@ const { percyScreenshot } = require('@percy/selenium-webdriver');
 
 describe('NextJS Aperture App', () => {
     const pages = [
-        { url: '/index.html', name: 'PIE Aperture' },
-        { url: '/integrations/icons.html', name: 'Icons' },
-        { url: '/integrations/form.html', name: 'Form' },
-        { url: '/components/assistive-text.html', name: 'Assistive Text' },
-        { url: '/components/button.html', name: 'Button' },
-        { url: '/components/card.html', name: 'Card' },
-        { url: '/components/chip.html', name: 'Chip' },
-        { url: '/components/cookie-banner.html', name: 'Cookie Banner' },
-        { url: '/components/form-label.html', name: 'Form Label' },
-        { url: '/components/icon-button.html', name: 'Icon Button' },
-        { url: '/components/link.html', name: 'Link' },
-        { url: '/components/modal.html', name: 'Modal' },
-        { url: '/components/spinner.html', name: 'Spinner' },
-        { url: '/components/switch.html', name: 'Switch' },
-        { url: '/components/tag.html', name: 'Tag' },
+        { url: '/', name: 'PIE Aperture' },
+        { url: '/integrations/icons', name: 'Icons' },
+        { url: '/integrations/form', name: 'Form' },
+        { url: '/components/assistive-text', name: 'Assistive Text' },
+        { url: '/components/button', name: 'Button' },
+        { url: '/components/card', name: 'Card' },
+        { url: '/components/chip', name: 'Chip' },
+        { url: '/components/cookie-banner', name: 'Cookie Banner' },
+        { url: '/components/form-label', name: 'Form Label' },
+        { url: '/components/icon-button', name: 'Icon Button' },
+        { url: '/components/link', name: 'Link' },
+        { url: '/components/modal', name: 'Modal' },
+        { url: '/components/spinner', name: 'Spinner' },
+        { url: '/components/switch', name: 'Switch' },
+        { url: '/components/tag', name: 'Tag' },
     ];
 
     pages.forEach((page) => {

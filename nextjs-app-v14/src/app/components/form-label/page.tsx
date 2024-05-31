@@ -1,12 +1,10 @@
-'use client';
+import  FormLabel  from './form-label';
+import { Metadata } from 'next'
 
-import NavigationLayout from "@/layout/navigation";
-import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
+export const metadata: Metadata = {
+    title: 'Form Label',
+}
 
-export default function FormLabel() {
-    return (
-        <NavigationLayout title="Form Label">
-        <PieFormLabel>Label</PieFormLabel>
-        </NavigationLayout>
-    );
+export default function FormLabelComponent() {
+    return <FormLabel/>;
 }

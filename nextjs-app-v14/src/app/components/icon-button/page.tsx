@@ -1,15 +1,10 @@
-'use client';
+import  IconButton  from './icon-button';
+import { Metadata } from 'next'
 
-import NavigationLayout from "@/layout/navigation";
-import { PieIconButton } from '@justeattakeaway/pie-webc/react/icon-button.js';
-import { IconClose } from '@justeattakeaway/pie-icons-webc/dist/react/IconClose.js';
+export const metadata: Metadata = {
+    title: 'Icon Button',
+}
 
-export default function IconButton() {
-    return (
-        <NavigationLayout title="Icon Button">
-        <PieIconButton onClick={() => console.log("clicked")}>
-            <IconClose></IconClose>
-        </PieIconButton>
-        </NavigationLayout>
-    );
+export default function IconButtonComponent() {
+    return <IconButton/>;
 }

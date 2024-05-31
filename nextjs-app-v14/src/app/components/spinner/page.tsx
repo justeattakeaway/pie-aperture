@@ -1,12 +1,10 @@
-'use client';
+import  Spinner  from './spinner';
+import { Metadata } from 'next'
 
-import NavigationLayout from "@/layout/navigation";
-import { PieSpinner } from '@justeattakeaway/pie-webc/react/spinner.js';
+export const metadata: Metadata = {
+    title: 'Spinner',
+}
 
-export default function Spinner() {
-    return (
-        <NavigationLayout title="Spinner">
-        <PieSpinner/>
-        </NavigationLayout>
-    );
+export default function SpinnerComponent() {
+    return <Spinner/>;
 }

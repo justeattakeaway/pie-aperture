@@ -1,12 +1,10 @@
-'use client';
+import  Link  from './link';
+import { Metadata } from 'next'
 
-import NavigationLayout from "@/layout/navigation";
-import { PieLink } from '@justeattakeaway/pie-webc/react/link.js';
+export const metadata: Metadata = {
+    title: 'Link',
+}
 
-export default function Link() {
-    return (
-        <NavigationLayout title="Link">
-        <PieLink href="https://pie.design" target="_blank">Visit pie.design</PieLink>
-        </NavigationLayout>
-    );
+export default function LinkComponent() {
+    return <Link/>;
 }
