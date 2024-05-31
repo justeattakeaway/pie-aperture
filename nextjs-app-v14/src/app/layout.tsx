@@ -5,8 +5,11 @@ import "@/styles/main.scss";
 import "@/styles/icons.scss";
 
 export const metadata: Metadata = {
-  title: "PIE Aperture",
-};
+  title: {
+    template: 'PIE Aperture | NextJS | %s',
+    default: 'PIE Aperture',
+  },
+}
 
 export default function RootLayout({
   children,
@@ -16,7 +19,6 @@ export default function RootLayout({
   return (
     <html lang="en">
     <Head>
-        <title>PIE Aperture</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="icon" href="/favicon.ico"/>
         <link rel="preload" href="https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff2"
