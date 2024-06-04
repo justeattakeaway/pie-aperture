@@ -1,12 +1,10 @@
-'use client';
+import  Tag  from './tag';
+import { Metadata } from 'next'
 
-import NavigationLayout from "@/layout/navigation";
-import { PieTag } from '@justeattakeaway/pie-webc/react/tag.js';
+export const metadata: Metadata = {
+    title: 'Tag',
+}
 
-export default function Tag() {
-    return (
-        <NavigationLayout title="Tag">
-        <PieTag variant="brand" size="large">Label</PieTag>
-        </NavigationLayout>
-    );
+export default function TagComponent() {
+    return <Tag/>;
 }
