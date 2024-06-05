@@ -5,7 +5,7 @@ import NavigationLayout from '@/app/layout/navigation';
 import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
 import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
-import { PieInput } from '@justeattakeaway/pie-webc/react/input.js';
+import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
 import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
 import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
 import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
@@ -96,7 +96,7 @@ export default function Form() {
                 <PieFormLabel for="username">
                     Username:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="username"
                     data-test-id="username"
@@ -105,12 +105,12 @@ export default function Form() {
                     onInput={handleUsernameInput as any}
                     type="text">
                     <IconUser slot="leadingIcon"></IconUser>
-                </PieInput>
+                </PieTextInput>
 
                 <PieFormLabel for="favouriteNumber">
                     Favourite Number:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="favouriteNumber"
                     data-test-id="favouriteNumber"
@@ -124,12 +124,12 @@ export default function Form() {
                     status={favouriteNumberValidationMessage ? 'error' : undefined}
                 >
                     <IconNumberSymbol slot="leadingIcon"></IconNumberSymbol>
-                </PieInput>
+                </PieTextInput>
 
                 <PieFormLabel for="email">
                     Email:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="email"
                     data-test-id="email"
@@ -138,12 +138,12 @@ export default function Form() {
                     onInput={handleEmailInput as any}
                     type="email">
                     <IconEmail slot="leadingIcon"></IconEmail>
-                </PieInput>
+                </PieTextInput>
 
                 <PieFormLabel for="url">
                     Website:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="url"
                     data-test-id="url"
@@ -152,12 +152,12 @@ export default function Form() {
                     onInput={handleUrlInput as any}
                     type="url">
                     <IconLaptop slot="leadingIcon"></IconLaptop>
-                </PieInput>
+                </PieTextInput>
 
                 <PieFormLabel for="tel">
                     Telephone:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="tel"
                     data-test-id="tel"
@@ -166,12 +166,12 @@ export default function Form() {
                     onInput={handleTelInput as any}
                     type="tel">
                     <IconPhone slot="leadingIcon"></IconPhone>
-                </PieInput>
+                </PieTextInput>
 
                 <PieFormLabel for="password">
                     Password:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="password"
                     data-test-id="password"
@@ -180,7 +180,7 @@ export default function Form() {
                     onInput={handlePasswordInput as any}
                     type="password">
                     <IconKey slot="leadingIcon"></IconKey>
-                </PieInput>
+                </PieTextInput>
 
                 <div className="form-controls">
                     <PieFormLabel for="approveSettings">
