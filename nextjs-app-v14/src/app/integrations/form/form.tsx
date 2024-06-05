@@ -5,7 +5,7 @@ import NavigationLayout from '@/app/layout/navigation';
 import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
 import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
-import { PieInput } from '@justeattakeaway/pie-webc/react/input.js';
+import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
 import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
 import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
 import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
@@ -96,7 +96,7 @@ export default function Form() {
                 <PieFormLabel for="username">
                     Username:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="username"
                     data-test-id="username"
@@ -104,13 +104,13 @@ export default function Form() {
                     value={username}
                     onInput={handleUsernameInput as any}
                     type="text">
-                    <IconUser slot="leading"></IconUser>
-                </PieInput>
+                    <IconUser slot="leadingIcon"></IconUser>
+                </PieTextInput>
 
                 <PieFormLabel for="favouriteNumber">
                     Favourite Number:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="favouriteNumber"
                     data-test-id="favouriteNumber"
@@ -123,13 +123,13 @@ export default function Form() {
                     assistiveText={favouriteNumberValidationMessage}
                     status={favouriteNumberValidationMessage ? 'error' : undefined}
                 >
-                    <IconNumberSymbol slot="leading"></IconNumberSymbol>
-                </PieInput>
+                    <IconNumberSymbol slot="leadingIcon"></IconNumberSymbol>
+                </PieTextInput>
 
                 <PieFormLabel for="email">
                     Email:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="email"
                     data-test-id="email"
@@ -137,13 +137,13 @@ export default function Form() {
                     value={email}
                     onInput={handleEmailInput as any}
                     type="email">
-                    <IconEmail slot="leading"></IconEmail>
-                </PieInput>
+                    <IconEmail slot="leadingIcon"></IconEmail>
+                </PieTextInput>
 
                 <PieFormLabel for="url">
                     Website:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="url"
                     data-test-id="url"
@@ -151,13 +151,13 @@ export default function Form() {
                     value={url}
                     onInput={handleUrlInput as any}
                     type="url">
-                    <IconLaptop slot="leading"></IconLaptop>
-                </PieInput>
+                    <IconLaptop slot="leadingIcon"></IconLaptop>
+                </PieTextInput>
 
                 <PieFormLabel for="tel">
                     Telephone:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="tel"
                     data-test-id="tel"
@@ -165,13 +165,13 @@ export default function Form() {
                     value={tel}
                     onInput={handleTelInput as any}
                     type="tel">
-                    <IconPhone slot="leading"></IconPhone>
-                </PieInput>
+                    <IconPhone slot="leadingIcon"></IconPhone>
+                </PieTextInput>
 
                 <PieFormLabel for="password">
                     Password:
                 </PieFormLabel>
-                <PieInput
+                <PieTextInput
                     className="form-field"
                     id="password"
                     data-test-id="password"
@@ -179,8 +179,8 @@ export default function Form() {
                     value={password}
                     onInput={handlePasswordInput as any}
                     type="password">
-                    <IconKey slot="leading"></IconKey>
-                </PieInput>
+                    <IconKey slot="leadingIcon"></IconKey>
+                </PieTextInput>
 
                 <div className="form-controls">
                     <PieFormLabel for="approveSettings">
