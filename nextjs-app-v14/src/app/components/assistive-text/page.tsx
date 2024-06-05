@@ -1,14 +1,10 @@
-'use client';
+import  AssistiveText  from './assistive-text';
+import { Metadata } from 'next'
 
-import NavigationLayout from "@/layout/navigation";
-import { PieAssistiveText } from '@justeattakeaway/pie-webc/react/assistive-text.js';
+export const metadata: Metadata = {
+    title: 'Assistive Text',
+}
 
-export default function AssistiveText() {
-    return (
-        <NavigationLayout title="Assistive Text">
-        <PieAssistiveText>Assistive Text</PieAssistiveText>
-        <PieAssistiveText variant="success">Assistive Text</PieAssistiveText>
-        <PieAssistiveText variant="error">Assistive Text</PieAssistiveText>
-        </NavigationLayout>
-    );
+export default function AssistiveTextComponent() {
+    return <AssistiveText/>;
 }

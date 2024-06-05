@@ -1,6 +1,6 @@
 'use client';
 
-import NavigationLayout from "@/layout/navigation";
+import NavigationLayout from "@/app/layout/navigation";
 import { PieLink } from '@justeattakeaway/pie-link/dist/react';
 import { useRouter } from 'next/navigation';
 
@@ -30,6 +30,7 @@ export default function HomePage() {
     <li><PieLink onClick={() => router.push('/components/switch')} tag="button">Switch</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/tag')} tag="button">Tag</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/notification')} tag="button">Notification</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/checkbox')} tag="button">Checkbox</PieLink></li>
     </ul>
     </NavigationLayout>
   );

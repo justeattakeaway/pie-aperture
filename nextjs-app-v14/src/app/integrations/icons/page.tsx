@@ -1,16 +1,10 @@
-'use client';
+import  Icons  from './icons';
+import { Metadata } from 'next'
 
-import NavigationLayout from '@/layout/navigation';
-import * as icons from '@justeattakeaway/pie-icons-webc/dist/react';
+export const metadata: Metadata = {
+    title: 'Icons',
+}
 
-export default function Icons() {
-    return (
-        <NavigationLayout title="Icons Test Page">
-            <div className={"icon-container"}>
-                {Object.entries(icons).map(([iconName, IconComponent]) => (
-                    <IconComponent key={iconName} />
-                ))}
-            </div>
-        </NavigationLayout>
-    );
+export default function IconsPage() {
+    return <Icons/>;
 }
