@@ -115,7 +115,7 @@ jobs:
 
       - name: Run System Tests
         shell: bash
-        run: yarn test:system --filter=${{ matrix.package-name }}
+        run: yarn test:system --filter=${{ needs.build-next-app.outputs.package-name }}
 
       - uses: actions/upload-artifact@v3
         if: always()
@@ -126,7 +126,7 @@ jobs:
 
       - name: Run Percy Tests
         shell: bash
-        run: yarn test:visual --filter=${{ matrix.package-name }}
+        run: yarn test:visual --filter=${{ needs.build-next-app.outputs.package-name }}
 
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
