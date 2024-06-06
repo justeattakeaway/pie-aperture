@@ -73,8 +73,8 @@ jobs:
             deploy: true
             amplify-app-id: 'd1xxjuy6vbm7pk'
             package-dist-directory: './nextjs-app-v14/out'
-            bucket-name-preview: 'pie-aperture-preview-14'
-            bucket-name-main: 'pie-aperture-14'
+            bucket-name-preview: 'pie-aperture-preview'
+            bucket-name-main: 'pie-aperture'
 
     name: Build ${{ matrix.package-name }} - Node ${{ matrix.node-version }} on ${{ matrix.os }}
     uses: ./.github/workflows/build.yml
