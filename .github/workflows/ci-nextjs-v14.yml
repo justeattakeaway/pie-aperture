@@ -1,0 +1,113 @@
+name: Build - NextJS 14 App
+
+on:
+  pull_request:
+    types: [assigned, opened, synchronize, reopened, "ready_for_review"]
+    paths:
+      - '.github/workflows/**'
+      - 'nextjs-app-v14/**'
+      - 'webdriver-helpers/**'
+      - 'wdio.conf.js'
+
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: CI-NextJS-14-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+env:
+  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+
+jobs:
+
+  # Commenting these out for now as there's currently an issue with Next.
+  # build-next-app-windows-node18:
+  #   name: Windows - Node 18
+  #   uses: ./.github/workflows/build.yml
+  #   with:
+  #       deploy: false
+  #       node-version: 18
+  #       os: 'windows-latest'
+  #       package-name: 'nextjs-app-v14'
+  #   secrets: inherit
+
+  # build-next-app-windows-node20:
+  #   name: Windows - Node 20
+  #   uses: ./.github/workflows/build.yml
+  #   with:
+  #       deploy: false
+  #       node-version: 20
+  #       os: 'windows-latest'
+  #       package-name: 'nextjs-app-v14'
+  #   secrets: inherit
+
+  build-next-app-ubuntu-node18:
+    name: Ubuntu - Node 18
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        node-version: 18
+        os: 'ubuntu-latest'
+        package-name: 'nextjs-app-v14'
+    secrets: inherit
+
+  build-deploy-next-app-ubuntu-node20:
+      name: Ubuntu - Node 20
+      uses: ./.github/workflows/build.yml
+      with:
+          deploy: true
+          node-version: 20
+          os: 'ubuntu-latest'
+          amplify-app-id: 'd1xxjuy6vbm7pk'
+          package-name: 'nextjs-app-v14'
+          package-dist-directory: './nextjs-app-v14/out'
+          bucket-name-preview: 'pie-aperture-preview'
+          bucket-name-main: 'pie-aperture'
+      secrets: inherit
+
+  browser-tests:
+    needs: 'build-deploy-next-app-ubuntu-node20'
+    name: Run System / Visual Tests
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the Repo
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "yarn"
+
+      - name: Install Dependencies
+        shell: bash
+        run: yarn
+
+      # Setup Playwright
+      - name: Setup Playwright
+        uses: ./.github/actions/setup-playwright
+
+      - name: Run System Tests
+        shell: bash
+        run: yarn test:system --filter=nextjs-app-v14
+
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: nextjs-playwright-report
+          path: playwright-reports/nextjs-playwright-report/
+          retention-days: 7
+
+      - name: Run Percy Tests
+        shell: bash
+        run: yarn test:visual --filter=nextjs-app-v14
+    env:
+      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+      NEXT_14_AMPLIFY_ID: d1xxjuy6vbm7pk
+      PERCY_TOKEN_PIE_APERTURE_NEXT_14: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NEXT_14 }}
+      PR_NUMBER: ${{ github.event.number }}
