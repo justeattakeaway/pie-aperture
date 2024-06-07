@@ -1,4 +1,4 @@
-name: Build - NextJS App
+name: Build - NextJS 13 App
 
 on:
   pull_request:
@@ -14,7 +14,7 @@ on:
       - main
 
 concurrency:
-  group: CI-NextJS-${{ github.ref }}
+  group: CI-NextJS-13-${{ github.ref }}
   cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 env:
@@ -108,6 +108,6 @@ jobs:
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-      NEXT_AMPLIFY_ID: d1106vmj1ozg8d
+      NEXT_13_AMPLIFY_ID: d1106vmj1ozg8d
       PERCY_TOKEN_PIE_APERTURE_NEXT_13: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NEXT_13 }}
       PR_NUMBER: ${{ github.event.number }}

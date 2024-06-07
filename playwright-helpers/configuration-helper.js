@@ -1,4 +1,4 @@
-const { CI, GITHUB_REF_NAME, PR_NUMBER, VANILLA_AMPLIFY_ID, NEXT_AMPLIFY_ID, NEXT_14_AMPLIFY_ID, NUXT_AMPLIFY_ID } = process.env;
+const { CI, GITHUB_REF_NAME, PR_NUMBER, VANILLA_AMPLIFY_ID, NEXT_13_AMPLIFY_ID, NEXT_14_AMPLIFY_ID, NUXT_AMPLIFY_ID } = process.env;
 
 export function getAppConfig(appName) {
     const config = {};
@@ -9,7 +9,7 @@ export function getAppConfig(appName) {
             config.port = '3001';
             break;
         case 'nextjs-app-v13':
-            config.amplifyId = NEXT_AMPLIFY_ID;
+            config.amplifyId = NEXT_13_AMPLIFY_ID;
             config.port = '3000';
             break;
         case 'nextjs-app-v14':
