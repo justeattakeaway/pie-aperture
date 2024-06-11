@@ -50,7 +50,7 @@ function createDynamicComponentRegex(componentName: string) {
 
 // Visit each page in the SSR apps at /components/<component> and take a snapshot of the HTML returned from the server
 components.forEach((component) => {
-    test(`SSR: ${APP_NAME}: ${component}`, async ({ page }) => {
+    test(`SSR: ${APP_NAME}: ${component}`, async () => {
         // Arrange
         const url = getComponentPageUrl(component, baseUrl);
         
