@@ -11,6 +11,7 @@
     "dev": "turbo run dev",
     "generate": "turbo run generate --token=${TURBO_TOKEN}",
     "lint": "turbo run lint --token=${TURBO_TOKEN}",
+    "test:ssr": "turbo run test:ssr --token=${TURBO_TOKEN} --continue",
     "test:system": "turbo run test:system --token=${TURBO_TOKEN} --continue",
     "playwright:show-report": "turbo run playwright:show-report",
     "preview": "turbo run preview",

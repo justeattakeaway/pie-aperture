@@ -37,6 +37,11 @@ export default {
         name: 'system',
         use: { ...devices['Desktop Chrome'] },
         testMatch: `${monorepoRoot}/test/system/**/*.spec.ts`,
+    },
+    {
+        name: 'ssr',
+        use: { ...devices['Desktop Chrome'] },
+        testMatch: `${monorepoRoot}/test/ssr/**/*.spec.ts`,
     }
 ],
 
