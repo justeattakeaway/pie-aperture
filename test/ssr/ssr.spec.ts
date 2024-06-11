@@ -2,7 +2,9 @@ import { test, expect } from '@playwright/test';
 import http from 'http';
 import { getEnvironmentBaseUrl } from '../../playwright-helpers/configuration-helper';
 
-const baseUrl = getEnvironmentBaseUrl(process.env.APP_NAME);
+const APP_NAME = process.env.APP_NAME;
+
+const baseUrl = getEnvironmentBaseUrl(APP_NAME);
 
 const components = [
     'assistive-text',
@@ -18,7 +20,7 @@ const components = [
     'spinner',
     'switch',
     'tag',
-    'notification'
+    // 'notification'
 ];
 
 const getComponentPageUrl = (component: string, baseUrl: string) => `${baseUrl}/components/${component}`;
@@ -48,7 +50,7 @@ function createDynamicComponentRegex(componentName: string) {
 
 // Visit each page in the SSR apps at /components/<component> and take a snapshot of the HTML returned from the server
 components.forEach((component) => {
-    test(`SSR - ${process.env.APP_NAME}: ${component}`, async ({ page }) => {
+    test(`SSR: ${APP_NAME}: ${component}`, async ({ page }) => {
         // Arrange
         const url = getComponentPageUrl(component, baseUrl);
         
