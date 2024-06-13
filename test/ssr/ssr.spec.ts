@@ -8,18 +8,18 @@ const baseUrl = getEnvironmentBaseUrl(APP_NAME);
 
 const components = [
     'assistive-text',
-    'button',
-    'card',
-    'checkbox',
-    'chip',
-    'cookie-banner',
-    'form-label',
-    'icon-button',
-    'link',
-    'modal',
-    'spinner',
-    'switch',
-    'tag',
+    // 'button',
+    // 'card',
+    // 'checkbox',
+    // 'chip',
+    // 'cookie-banner',
+    // 'form-label',
+    // 'icon-button',
+    // 'link',
+    // 'modal',
+    // 'spinner',
+    // 'switch',
+    // 'tag',
     // 'notification'
 ];
 
