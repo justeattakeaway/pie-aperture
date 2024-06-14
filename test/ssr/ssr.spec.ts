@@ -6,20 +6,22 @@ const APP_NAME = process.env.APP_NAME;
 
 const baseUrl = getEnvironmentBaseUrl(APP_NAME);
 
+// TODO - Is there a better way to define this list?
+// TODO - uncomment the components when we are ready to test them
 const components = [
     'assistive-text',
     'button',
     'card',
-    'checkbox',
-    'chip',
-    'cookie-banner',
-    'form-label',
-    'icon-button',
-    'link',
-    'modal',
-    'spinner',
-    'switch',
-    'tag',
+    // 'checkbox',
+    // 'chip',
+    // 'cookie-banner',
+    // 'form-label',
+    // 'icon-button',
+    // 'link',
+    // 'modal',
+    // 'spinner',
+    // 'switch',
+    // 'tag',
     // 'notification'
 ];
 
