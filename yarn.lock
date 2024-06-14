@@ -1090,10 +1090,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-css@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@justeattakeaway/pie-css@npm:0.11.0"
-  checksum: 5d43e1a495ef4a6689fa371c8fbbe901dc46398d1fdb37c0a538c29bf1fc801f209e39dc15547569fab19022b33687b6bcc4900567278f14e6072d1a1b175159
+"@justeattakeaway/pie-css@npm:0.0.0-snapshot-release-20240614135501":
+  version: 0.0.0-snapshot-release-20240614135501
+  resolution: "@justeattakeaway/pie-css@npm:0.0.0-snapshot-release-20240614135501"
+  checksum: d0c2c0477720948397f55224b1fd4489de72c172363adacaea1b255eeb0ad9120f2cf574fe6d095ad89e606e4228d8c137ae4079cc24e57a44703c77b7ce04c8
   languageName: node
   linkType: hard
 
@@ -10716,7 +10716,7 @@ __metadata:
   resolution: "nextjs-app-v13@workspace:nextjs-app-v13"
   dependencies:
     "@justeattakeaway/pie-cookie-banner": 0.19.6
-    "@justeattakeaway/pie-css": 0.11.0
+    "@justeattakeaway/pie-css": 0.0.0-snapshot-release-20240614135501
     "@justeattakeaway/pie-icons-webc": 0.23.1
     "@justeattakeaway/pie-webc": 0.5.3
     "@lit-labs/nextjs": 0.1.4
@@ -10740,7 +10740,7 @@ __metadata:
   resolution: "nextjs-app-v14@workspace:nextjs-app-v14"
   dependencies:
     "@justeattakeaway/pie-cookie-banner": 0.19.6
-    "@justeattakeaway/pie-css": 0.11.0
+    "@justeattakeaway/pie-css": 0.0.0-snapshot-release-20240614135501
     "@justeattakeaway/pie-icons-webc": 0.23.1
     "@justeattakeaway/pie-webc": 0.5.3
     "@lit-labs/nextjs": 0.2.0
@@ -11149,7 +11149,7 @@ __metadata:
   resolution: "nuxt-app@workspace:nuxt-app"
   dependencies:
     "@justeattakeaway/pie-cookie-banner": 0.19.6
-    "@justeattakeaway/pie-css": 0.11.0
+    "@justeattakeaway/pie-css": 0.0.0-snapshot-release-20240614135501
     "@justeattakeaway/pie-icons-webc": 0.23.1
     "@justeattakeaway/pie-webc": 0.5.3
     deepmerge: 4.3.1
@@ -14878,7 +14878,7 @@ __metadata:
   resolution: "vanilla-app@workspace:vanilla-app"
   dependencies:
     "@justeattakeaway/pie-cookie-banner": 0.19.6
-    "@justeattakeaway/pie-css": 0.11.0
+    "@justeattakeaway/pie-css": 0.0.0-snapshot-release-20240614135501
     "@justeattakeaway/pie-icons-webc": 0.23.1
     "@justeattakeaway/pie-webc": 0.5.3
     deepmerge: 4.3.1
