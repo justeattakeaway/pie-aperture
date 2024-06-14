@@ -57,6 +57,7 @@ components.forEach((component) => {
         const url = getComponentPageUrl(component, baseUrl);
         // used to ensure the shadow dom markup is rendered correctly, we don't need to worry about attribute order
         const shadowDomRegex = /<template\s+(shadowroot="open"\s+shadowrootmode="open"|shadowrootmode="open"\s+shadowroot="open")>/;
+        const styleRegex = /<style>[\s\S]*?<\/style>/;
         const componentRegex = createDynamicComponentRegex(component);
 
         // Act
@@ -69,6 +70,7 @@ components.forEach((component) => {
         // Assert
         expect(pieComponentHtml).not.toBeNull();
         expect(pieComponentHtml).toMatch(shadowDomRegex);
+        expect(pieComponentHtml).toMatch(styleRegex);
         expect(pieComponentHtml).toMatchSnapshot();
     });
 });
