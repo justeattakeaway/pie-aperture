@@ -55,16 +55,20 @@ components.forEach((component) => {
     test(`SSR: ${APP_NAME}: ${component}`, async () => {
         // Arrange
         const url = getComponentPageUrl(component, baseUrl);
-        
+        // used to ensure the shadow dom markup is rendered correctly, we don't need to worry about attribute order
+        const shadowDomRegex = /<template\s+(shadowroot="open"\s+shadowrootmode="open"|shadowrootmode="open"\s+shadowroot="open")>/;
+        const componentRegex = createDynamicComponentRegex(component);
+
         // Act
         const rawHtml = await fetchHtml(url);
 
         // Extract the first <pie-[component]> element using a regular expression
-        const pieComponentMatch = rawHtml.match(createDynamicComponentRegex(component));
+        const pieComponentMatch = rawHtml.match(componentRegex);
         const pieComponentHtml = pieComponentMatch ? pieComponentMatch[0] : null;
 
         // Assert
         expect(pieComponentHtml).not.toBeNull();
+        expect(pieComponentHtml).toMatch(shadowDomRegex);
         expect(pieComponentHtml).toMatchSnapshot();
     });
 });
