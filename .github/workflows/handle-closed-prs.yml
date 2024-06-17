@@ -23,7 +23,7 @@ jobs:
         with:
           github-token: ${{ secrets.PIE_BOT_TOKEN }}
           script: |
-            const pullRequestNumber = context.issue.number;
+            const pullRequestNumber = context.payload.pull_request.number;
             const owner = context.repo.owner;
             const repo = context.repo.repo;
 
@@ -45,7 +45,7 @@ jobs:
             core.setOutput('hasVanillaJsEnv', hasVanillaJsEnv);
 
       - name: Delete associated NextJS 13 app environment
-        if: steps.list-environments.outputs.hasNextJs13Env == 'true'
+        if: ${{ steps.list-environments.outputs.hasNextJs13Env == 'true' }}
         uses: ./.github/actions/amplify-teardown
         with:
           github-token: ${{ secrets.PIE_BOT_TOKEN }}
@@ -53,11 +53,11 @@ jobs:
           aws-region: 'eu-west-1'
           aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          environment-name: nextjs-app-v13-pr-${{ github.event.number }}
-          branch-name: 'pr${{ github.event.number }}'
+          environment-name: nextjs-app-v13-pr-${{ github.event.pull_request.number }}
+          branch-name: 'pr${{ github.event.pull_request.number }}'
 
       - name: Delete associated NextJS 14 app environment
-        if: steps.list-environments.outputs.hasNextJs14Env == 'true'
+        if: ${{ steps.list-environments.outputs.hasNextJs14Env == 'true' }}
         uses: ./.github/actions/amplify-teardown
         with:
           github-token: ${{ secrets.PIE_BOT_TOKEN }}
@@ -65,11 +65,11 @@ jobs:
           aws-region: 'eu-west-1'
           aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          environment-name: nextjs-app-v14-pr-${{ github.event.number }}
-          branch-name: 'pr${{ github.event.number }}'
+          environment-name: nextjs-app-v14-pr-${{ github.event.pull_request.number }}
+          branch-name: 'pr${{ github.event.pull_request.number }}'
 
       - name: Delete associated Vanilla app environment
-        if: steps.list-environments.outputs.hasVanillaJsEnv == 'true'
+        if: ${{ steps.list-environments.outputs.hasVanillaJsEnv == 'true' }}
         uses: ./.github/actions/amplify-teardown
         with:
           github-token: ${{ secrets.PIE_BOT_TOKEN }}
@@ -77,5 +77,5 @@ jobs:
           aws-region: 'eu-west-1'
           aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          environment-name: vanilla-app-pr-${{ github.event.number }}
-          branch-name: 'pr${{ github.event.number }}'
+          environment-name: vanilla-app-pr-${{ github.event.pull_request.number }}
+          branch-name: 'pr${{ github.event.pull_request.number }}'
