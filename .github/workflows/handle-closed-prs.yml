@@ -27,22 +27,30 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
 
+            console.log(`Pull Request Number: ${pullRequestNumber}`);
+
             // List environments
-            const environments = await github.rest.repos.getAllEnvironments({
+            const { data: { environments } } = await github.rest.repos.getAllEnvironments({
               owner: owner,
               repo: repo,
             });
 
-            const envList = environments.data.environments.map(env => env.name);
+            const envList = environments.map(env => env.name);
+
+            console.log('Environment List:', envList);
 
             // Check for existence of specific environments
             const hasNextJs13Env = envList.includes(`nextjs-app-v13-pr-${pullRequestNumber}`);
             const hasNextJs14Env = envList.includes(`nextjs-app-v14-pr-${pullRequestNumber}`);
             const hasVanillaJsEnv = envList.includes(`vanilla-app-pr-${pullRequestNumber}`);
 
-            core.setOutput('hasNextJs13Env', hasNextJs13Env);
-            core.setOutput('hasNextJs14Env', hasNextJs14Env);
-            core.setOutput('hasVanillaJsEnv', hasVanillaJsEnv);
+            console.log('Has NextJS 13 Env:', hasNextJs13Env);
+            console.log('Has NextJS 14 Env:', hasNextJs14Env);
+            console.log('Has VanillaJS Env:', hasVanillaJsEnv);
+
+            core.setOutput('hasNextJs13Env', hasNextJs13Env ? 'true' : 'false');
+            core.setOutput('hasNextJs14Env', hasNextJs14Env ? 'true' : 'false');
+            core.setOutput('hasVanillaJsEnv', hasVanillaJsEnv ? 'true' : 'false');
 
       - name: Delete associated NextJS 13 app environment
         if: ${{ steps.list-environments.outputs.hasNextJs13Env == 'true' }}
