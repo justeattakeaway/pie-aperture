@@ -18,6 +18,7 @@ describe('NextJS Aperture App', () => {
         { url: '/components/spinner', name: 'Spinner' },
         { url: '/components/switch', name: 'Switch' },
         { url: '/components/tag', name: 'Tag' },
+        { url: '/components/text-input', name: 'Text Input' },
     ];
 
     pages.forEach((page) => {

@@ -10,7 +10,8 @@ jobs:
   list-environments:
     runs-on: ubuntu-latest
     outputs:
-      hasNextJsEnv: ${{ steps.list-environments.outputs.hasNextJsEnv }}
+      hasNextJs13Env: ${{ steps.list-environments.outputs.hasNextJs13Env }}
+      hasNextJs14Env: ${{ steps.list-environments.outputs.hasNextJs14Env }}
       hasVanillaJsEnv: ${{ steps.list-environments.outputs.hasVanillaJsEnv }}
     steps:
       - name: Checkout
@@ -19,49 +20,71 @@ jobs:
       - name: List repo environments
         id: list-environments
         uses: actions/github-script@v6
-        env:
-          GITHUB_TOKEN: ${{ secrets.PIE_BOT_TOKEN }}
         with:
+          github-token: ${{ secrets.PIE_BOT_TOKEN }}
           script: |
-            const pullRequestNumber = context.issue.number;
+            const pullRequestNumber = context.payload.pull_request.number;
             const owner = context.repo.owner;
             const repo = context.repo.repo;
 
+            console.log(`Pull Request Number: ${pullRequestNumber}`);
+
             // List environments
-            const environments = await github.rest.repos.getAllEnvironments({
+            const { data: { environments } } = await github.rest.repos.getAllEnvironments({
               owner: owner,
               repo: repo,
+              per_page: 100,
             });
 
-            const envList = environments.data.environments.map(env => env.name);
+            const envList = environments.map(env => env.name);
+
+            console.log('Environment List:', envList);
 
             // Check for existence of specific environments
-            const hasNextJsEnv = envList.includes(`nextjs-app-v13-pr-${pullRequestNumber}`);
+            const hasNextJs13Env = envList.includes(`nextjs-app-v13-pr-${pullRequestNumber}`);
+            const hasNextJs14Env = envList.includes(`nextjs-app-v14-pr-${pullRequestNumber}`);
             const hasVanillaJsEnv = envList.includes(`vanilla-app-pr-${pullRequestNumber}`);
 
-            core.setOutput('hasNextJsEnv', hasNextJsEnv);
-            core.setOutput('hasVanillaJsEnv', hasVanillaJsEnv);
+            console.log('Has NextJS 13 Env:', hasNextJs13Env);
+            console.log('Has NextJS 14 Env:', hasNextJs14Env);
+            console.log('Has VanillaJS Env:', hasVanillaJsEnv);
 
-      - name: Delete associated NextJS app environment
-        if: steps.list-environments.outputs.hasNextJsEnv == 'true'
+            core.setOutput('hasNextJs13Env', hasNextJs13Env ? 'true' : 'false');
+            core.setOutput('hasNextJs14Env', hasNextJs14Env ? 'true' : 'false');
+            core.setOutput('hasVanillaJsEnv', hasVanillaJsEnv ? 'true' : 'false');
+
+      - name: Delete associated NextJS 13 app environment
+        if: ${{ steps.list-environments.outputs.hasNextJs13Env == 'true' }}
         uses: ./.github/actions/amplify-teardown
         with:
           github-token: ${{ secrets.PIE_BOT_TOKEN }}
-          amplify-app-id: dvskdcoepjoyf
+          amplify-app-id: d1106vmj1ozg8d
           aws-region: 'eu-west-1'
           aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          environment-name: nextjs-app-v13-pr-${{ github.event.number }}
-          branch-name: 'pr${{ github.event.number }}'
+          environment-name: nextjs-app-v13-pr-${{ github.event.pull_request.number }}
+          branch-name: 'pr${{ github.event.pull_request.number }}'
+
+      - name: Delete associated NextJS 14 app environment
+        if: ${{ steps.list-environments.outputs.hasNextJs14Env == 'true' }}
+        uses: ./.github/actions/amplify-teardown
+        with:
+          github-token: ${{ secrets.PIE_BOT_TOKEN }}
+          amplify-app-id: d1xxjuy6vbm7pk
+          aws-region: 'eu-west-1'
+          aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          environment-name: nextjs-app-v14-pr-${{ github.event.pull_request.number }}
+          branch-name: 'pr${{ github.event.pull_request.number }}'
 
       - name: Delete associated Vanilla app environment
-        if: steps.list-environments.outputs.hasVanillaJsEnv == 'true'
+        if: ${{ steps.list-environments.outputs.hasVanillaJsEnv == 'true' }}
         uses: ./.github/actions/amplify-teardown
         with:
           github-token: ${{ secrets.PIE_BOT_TOKEN }}
-          amplify-app-id: d17ja0ul7nrdy0
+          amplify-app-id: d2vb6sjgivffb3
           aws-region: 'eu-west-1'
           aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          environment-name: vanilla-app-pr-${{ github.event.number }}
-          branch-name: 'pr${{ github.event.number }}'
+          environment-name: vanilla-app-pr-${{ github.event.pull_request.number }}
+          branch-name: 'pr${{ github.event.pull_request.number }}'

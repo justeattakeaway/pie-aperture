@@ -4,7 +4,8 @@ PIE Aperture is designed to be a testbed repo for the [PIE Web component library
 
 ## Aperture deployment links
 [Nuxt application](https://aperture-nuxt.pie.design/)
-[NextJS application](https://aperture-nextjs.pie.design/)
+[NextJS 13 application](https://aperture-nextjs-v13.pie.design/)
+[NextJS 14 application](https://aperture-nextjs-v14.pie.design/)
 [Vanilla application](https://aperture-vanilla.pie.design/)
 
 
