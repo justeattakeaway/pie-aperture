@@ -13,7 +13,7 @@ const components = [
     'button',
     'card',
     // 'checkbox',
-    // 'chip',
+    'chip',
     // 'cookie-banner',
     // 'form-label',
     'icon-button',
