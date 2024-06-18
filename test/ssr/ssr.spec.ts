@@ -19,7 +19,7 @@ const components = [
     'icon-button',
     // 'link',
     // 'modal',
-    // 'spinner',
+    'spinner',
     // 'switch',
     // 'tag',
     // 'notification'
