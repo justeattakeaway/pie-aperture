@@ -20,7 +20,7 @@ const components = [
     'link',
     // 'modal',
     'spinner',
-    // 'switch',
+    'switch',
     'tag',
     // 'notification'
 ];

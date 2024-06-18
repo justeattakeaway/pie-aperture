@@ -1,0 +1,33 @@
+<pie-switch defer-hydration=""><template shadowroot="open" shadowrootmode="open"><style>*,*:after,*:before{box-sizing:inherit}*,*:before,*:after{cursor:inherit}.c-switch-wrapper{display:inline-flex;align-items:center;gap:var(--dt-spacing-b);font-family:var(--dt-font-body-l-family);cursor:pointer}.c-switch-wrapper[disabled]{cursor:not-allowed}.c-switch{--switch-bg-color: var(--dt-color-interactive-form);--switch-bg-color--checked: var(--dt-color-interactive-brand);--switch-bg-color--disabled: var(--dt-color-disabled-01);--switch-width: 48px;--switch-height: 24px;--switch-control-size: 20px;--switch-padding: 2px;--switch-radius: var(--dt-radius-rounded-e);--switch-translation: calc(var(--switch-width) - var(--switch-control-size) - 2 * var(--switch-padding));position:relative;display:flex;width:var(--switch-width);height:var(--switch-height);flex-shrink:0;padding:var(--switch-padding);border-radius:var(--switch-radius);background-color:var(--switch-bg-color)}@media (prefers-reduced-motion: no-preference){.c-switch{transition:background-color .15s cubic-bezier(.4,0,.9,1) 0s}}.c-switch:hover{background-color:hsl(var(--dt-color-interactive-form-h),var(--dt-color-interactive-form-s),calc(var(--dt-color-interactive-form-l) - var(--dt-color-hover-01)))}.c-switch:focus,.c-switch:focus-within{box-shadow:0 0 0 2px var(--dt-color-focus-inner),0 0 0 4px var(--dt-color-focus-outer);outline:none}.c-switch:active{background-color:hsl(var(--dt-color-interactive-form-h),var(--dt-color-interactive-form-s),calc(var(--dt-color-interactive-form-l) - var(--dt-color-active-01)))}.c-switch[checked]{background-color:var(--switch-bg-color--checked)}@media (prefers-reduced-motion: no-preference){.c-switch[checked]{transition:background-color .15s cubic-bezier(.4,0,.9,1) 0s}}.c-switch[checked]:hover{background-color:hsl(var(--dt-color-interactive-brand-h),var(--dt-color-interactive-brand-s),calc(var(--dt-color-interactive-brand-l) - var(--dt-color-hover-01)))}.c-switch[checked]:focus,.c-switch[checked]:focus-within{background-color:var(--switch-bg-color--checked)}.c-switch[checked]:active{background-color:hsl(var(--dt-color-interactive-brand-h),var(--dt-color-interactive-brand-s),calc(var(--dt-color-interactive-brand-l) - var(--dt-color-active-01)))}[disabled] .c-switch{background-color:var(--switch-bg-color--disabled);pointer-events:none}.c-switch-input{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0;left:50%;transform:translate(-50%) translateY(-50%);bottom:0}.c-switch-input:disabled{background-color:transparent}.c-switch-control{position:absolute;left:2px;width:var(--switch-control-size);height:var(--switch-control-size);border-radius:var(--switch-radius);background-color:var(--dt-color-interactive-light);padding:var(--switch-padding)}@media (prefers-reduced-motion: no-preference){.c-switch-control{transition:transform .15s cubic-bezier(.4,0,.9,1) 0s}}.c-switch-input:checked+.c-switch-control{transform:translate(var(--switch-translation))}@media (prefers-reduced-motion: no-preference){.c-switch-input:checked+.c-switch-control{transition:transform .15s cubic-bezier(.4,0,.9,1) 0s}}.c-switch-input:checked+.c-switch-control .c-pieIcon--check{color:var(--switch-bg-color--checked)}@media (prefers-reduced-motion: no-preference){.c-switch-input:checked+.c-switch-control .c-pieIcon--check{transition:color .15s cubic-bezier(.4,0,.9,1) 0s}}.c-switch-input:disabled~.c-switch-control{color:var(--switch-bg-color--disabled)}.c-switch-input:disabled~.c-switch-control .c-pieIcon--check{color:var(--switch-bg-color--disabled)}@media (prefers-reduced-motion: no-preference){.c-switch-input:disabled~.c-switch-control .c-pieIcon--check{transition:color .15s cubic-bezier(.4,0,.9,1) 0s}}.c-switch-description{position:absolute;display:block;height:1px;width:1px;overflow:hidden;padding:1px;white-space:nowrap}.c-switch-wrapper[isRTL] .c-switch-control{position:absolute;left:initial;right:2px}.c-switch-wrapper[isRTL] .c-switch-input:checked+.c-switch-control{transform:translate(calc(-1 * var(--switch-translation)))}@media (prefers-reduced-motion: no-preference){.c-switch-wrapper[isRTL] .c-switch-input:checked+.c-switch-control{transition:transform .15s cubic-bezier(.4,0,.9,1) 0s}}
+</style><!--lit-part bbNyXGoilIM=-->
+            <!--lit-node 0--><label
+                class="c-switch-wrapper"
+                
+                >
+                <!--lit-part q8G84eyPVe4=-->
+                <!--lit-node 0--><span data-test-id="switch-label-leading">
+                    <!--lit-part-->checked: false<!--/lit-part-->
+                </span><!--/lit-part-->
+                <!--lit-node 2--><div
+                    data-test-id="switch-component"
+                    class="c-switch"
+                    >
+                    <!--lit-node 3--><input
+                        data-test-id="switch-input"
+                        role="switch"
+                        type="checkbox"
+                        class="c-switch-input"
+                        required="false"
+                        checked="false"
+                        disabled="false"
+                        
+                        
+                        >
+                    <div class="c-switch-control">
+                        <!--lit-part--><!--/lit-part-->
+                    </div>
+                </div>
+                <!--lit-part--><!--/lit-part-->
+                <!--lit-part--><!--/lit-part-->
+            </label>
+        <!--/lit-part--></template></pie-switch>

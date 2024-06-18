@@ -47,9 +47,9 @@ export class FormPage {
         await this.telField.locator('input').fill(formData.tel);
         await this.passwordField.locator('input').fill(formData.password);
 
-        if (formData.approveSettings) {
-            await this.approveSettingsSwitch.click();
-        }
+        // if (formData.approveSettings) {
+        //     await this.approveSettingsSwitch.click();
+        // }
 
         if (formData.enableNotifications) {
             await this.enableNotificationsSwitch.click();
