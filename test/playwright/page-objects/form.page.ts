@@ -24,8 +24,8 @@ export class FormPage {
         this.urlField = page.getByTestId('url');
         this.telField = page.getByTestId('tel');
         this.passwordField = page.getByTestId('password');
-        this.approveSettingsSwitch = page.getByTestId('approveSettings').getByTestId('switch-component');
-        this.enableNotificationsSwitch = page.getByTestId('enableNotifications').getByTestId('switch-component');
+        this.approveSettingsSwitch = page.getByTestId('approveSettings').getByTestId('switch-input');
+        this.enableNotificationsSwitch = page.getByTestId('enableNotifications').getByTestId('switch-input');
         this.newsletterSignupCheckbox = page.getByTestId('newsletterSignup').getByTestId('checkbox-input');
         this.resetBtn = page.getByTestId('reset-btn');
         this.submitBtn = page.getByTestId('submit-btn');
@@ -47,13 +47,13 @@ export class FormPage {
         await this.telField.locator('input').fill(formData.tel);
         await this.passwordField.locator('input').fill(formData.password);
 
-        // if (formData.approveSettings) {
-        //     await this.approveSettingsSwitch.click();
-        // }
+        if (formData.approveSettings) {
+            await this.approveSettingsSwitch.click();
+        }
 
-        // if (formData.enableNotifications) {
-        //     await this.enableNotificationsSwitch.click();
-        // }
+        if (formData.enableNotifications) {
+            await this.enableNotificationsSwitch.click();
+        }
 
         if (formData.newsletterSignup) {
             await this.newsletterSignupCheckbox.click();
