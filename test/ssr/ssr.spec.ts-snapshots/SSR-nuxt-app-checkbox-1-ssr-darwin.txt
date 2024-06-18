@@ -1,0 +1,19 @@
+<pie-checkbox label="checked: false" defer-hydration="true"><template shadowrootmode="open" shadowroot="open"><style>*,*:after,*:before{box-sizing:inherit}
+</style><!--lit-part urN4nByZJ7k=-->
+        <label data-test-id="checkbox-component">
+            <!--lit-node 1--><input
+                type="checkbox"
+                value="on"
+                checked="false"
+                
+                
+                
+                
+                
+                
+                
+                
+                data-test-id="checkbox-input"
+            />
+            <!--lit-part-->checked: false<!--/lit-part-->
+        </label><!--/lit-part--></template></pie-checkbox>

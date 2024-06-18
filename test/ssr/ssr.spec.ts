@@ -12,7 +12,7 @@ const components = [
     'assistive-text',
     'button',
     'card',
-    // 'checkbox',
+    'checkbox',
     'chip',
     // 'cookie-banner',
     'form-label',
@@ -56,7 +56,7 @@ components.forEach((component) => {
         // Arrange
         const url = getComponentPageUrl(component, baseUrl);
         // used to ensure the shadow dom markup is rendered correctly, we don't need to worry about attribute order
-        const shadowDomRegex = /<template\s+(shadowroot="open"\s+shadowrootmode="open"|shadowrootmode="open"\s+shadowroot="open")>/;
+        const shadowDomRegex = /<template\s+([^>]*shadowroot="open"[^>]*shadowrootmode="open"[^>]*|[^>]*shadowrootmode="open"[^>]*shadowroot="open"[^>]*)>/;
         const styleRegex = /<style>[\s\S]*?<\/style>/;
         const componentRegex = createComponentRegex(component);
 
