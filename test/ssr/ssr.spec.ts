@@ -17,7 +17,7 @@ const components = [
     // 'cookie-banner',
     'form-label',
     'icon-button',
-    // 'link',
+    'link',
     // 'modal',
     'spinner',
     // 'switch',
