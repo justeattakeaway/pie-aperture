@@ -1,0 +1,14 @@
+<pie-form-label><template shadowroot="open" shadowrootmode="open"><style>*,*:after,*:before{box-sizing:inherit}.c-formLabel{--form-label-font-size: calc(var(--dt-font-size-14) * 1px);--form-label-line-height: calc(var(--dt-font-size-14-line-height) * 1px);--form-label-font-weight: var(--dt-font-weight-bold);--form-label-color: var(--dt-color-content-default);display:flex;justify-content:space-between;align-items:flex-end;gap:var(--dt-spacing-d);color:var(--form-label-color);font-size:var(--form-label-font-size);line-height:var(--form-label-line-height);font-weight:var(--form-label-font-weight);margin-block-end:var(--dt-spacing-a)}.c-formLabel-optional,.c-formLabel-trailing{color:var(--dt-color-content-subdued);font-weight:var(--dt-font-weight-regular)}.c-formLabel-leading{margin-inline-end:var(--dt-spacing-b)}.c-formLabel-trailing{flex-shrink:0;white-space:var(--dt-spacing-d)}
+</style><!--lit-part 1y7F8HlzoRs=-->
+            <!--lit-node 0--><label
+                
+                data-test-id="pie-form-label"
+                class="c-formLabel"
+                >
+                    <div>
+                        <!--lit-part--><!--/lit-part-->
+                        <span class="c-formLabel-leading"><slot></slot></span>
+                        <!--lit-part--><!--/lit-part-->
+                    </div>
+                    <!--lit-part--><!--/lit-part-->
+            </label><!--/lit-part--></template>Label</pie-form-label>

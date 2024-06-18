@@ -15,7 +15,7 @@ const components = [
     // 'checkbox',
     'chip',
     // 'cookie-banner',
-    // 'form-label',
+    'form-label',
     'icon-button',
     // 'link',
     // 'modal',
