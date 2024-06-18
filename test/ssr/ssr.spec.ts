@@ -21,7 +21,7 @@ const components = [
     // 'modal',
     'spinner',
     // 'switch',
-    // 'tag',
+    'tag',
     // 'notification'
 ];
 
