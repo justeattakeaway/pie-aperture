@@ -33,6 +33,7 @@ jobs:
             const { data: { environments } } = await github.rest.repos.getAllEnvironments({
               owner: owner,
               repo: repo,
+              per_page: 100,
             });
 
             const envList = environments.map(env => env.name);
