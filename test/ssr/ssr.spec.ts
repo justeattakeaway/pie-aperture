@@ -18,7 +18,7 @@ const components = [
     'form-label',
     'icon-button',
     'link',
-    // 'modal',
+    'modal',
     'spinner',
     'switch',
     'tag',
