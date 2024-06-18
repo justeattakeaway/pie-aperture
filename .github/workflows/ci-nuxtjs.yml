@@ -106,7 +106,7 @@ jobs:
         if: always()
         with:
           name: nuxt-playwright-report
-          path: playwright-reports/nuxt-playwright-report/
+          path: playwright-reports/nuxt-app-playwright-report/
           retention-days: 7
 
       - name: Run Percy Tests
