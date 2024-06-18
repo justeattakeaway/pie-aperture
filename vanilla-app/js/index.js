@@ -21,6 +21,7 @@ document.querySelector('#navigation').innerHTML = `
         <li><pie-link href="/components/spinner.html">Spinner</pie-link></li>
         <li><pie-link href="/components/switch.html">Switch</pie-link></li>
         <li><pie-link href="/components/tag.html">Tag</pie-link></li>
+        <li><pie-link href="/components/text-input.html">Text Input</pie-link></li>
         <li><pie-link href="/components/notification.html">Notification</pie-link></li>
         <li><pie-link href="/components/checkbox.html">Checkbox</pie-link></li>
     </ul>`;
