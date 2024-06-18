@@ -45,7 +45,7 @@ async function fetchHtml(url: string): Promise<string> {
     });
 }
 
-function createDynamicComponentRegex(componentName: string) {
+function createComponentRegex(componentName: string) {
     const prefixedComponentName = `pie-${componentName}`;
     return new RegExp(`<${prefixedComponentName}[\\s\\S]*?<\\/${prefixedComponentName}>`);
 }
@@ -58,7 +58,7 @@ components.forEach((component) => {
         // used to ensure the shadow dom markup is rendered correctly, we don't need to worry about attribute order
         const shadowDomRegex = /<template\s+(shadowroot="open"\s+shadowrootmode="open"|shadowrootmode="open"\s+shadowroot="open")>/;
         const styleRegex = /<style>[\s\S]*?<\/style>/;
-        const componentRegex = createDynamicComponentRegex(component);
+        const componentRegex = createComponentRegex(component);
 
         // Act
         const rawHtml = await fetchHtml(url);
