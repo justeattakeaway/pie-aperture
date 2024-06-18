@@ -22,7 +22,7 @@ const components = [
     'spinner',
     'switch',
     'tag',
-    // 'text-input',
+    'text-input',
     // 'notification'
 ];
 
