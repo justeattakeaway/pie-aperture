@@ -91,13 +91,13 @@ jobs:
       - name: Setup Playwright
         uses: ./.github/actions/setup-playwright
 
-      - name: Run System Tests
-        shell: bash
-        run: yarn test:system --filter=nextjs-app-v14
-
       - name: Run SSR Tests
         shell: bash
         run: yarn test:ssr --filter=nextjs-app-v14
+
+      - name: Run System Tests
+        shell: bash
+        run: yarn test:system --filter=nextjs-app-v14
 
       - uses: actions/upload-artifact@v3
         if: always()
