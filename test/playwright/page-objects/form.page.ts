@@ -51,9 +51,9 @@ export class FormPage {
         //     await this.approveSettingsSwitch.click();
         // }
 
-        if (formData.enableNotifications) {
-            await this.enableNotificationsSwitch.click();
-        }
+        // if (formData.enableNotifications) {
+        //     await this.enableNotificationsSwitch.click();
+        // }
 
         if (formData.newsletterSignup) {
             await this.newsletterSignupCheckbox.click();
