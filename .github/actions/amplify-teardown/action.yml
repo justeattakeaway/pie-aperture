@@ -27,16 +27,10 @@ inputs:
 runs:
   using: composite
   steps:
-  - name: 🎟 Get GitHub App token
-    uses: navikt/github-app-token-generator@v1.2.0        
-    id: get-token
-    with:
-      github-token: ${{ inputs.github-token }}
-
   - name: Delete associated GitHub environment
     uses: strumwolf/delete-deployment-environment@v2.2.3
     with:
-      token: ${{ steps.get-token.outputs.token }}
+      token: ${{ inputs.github-token }}
       environment: ${{ inputs.environment-name }}
 
   - name: Delete Amplify branch
