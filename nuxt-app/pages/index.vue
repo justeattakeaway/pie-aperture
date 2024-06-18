@@ -19,6 +19,7 @@
 			<li><pie-link href="/components/spinner">Spinner</pie-link></li>
 			<li><pie-link href="/components/switch">Switch</pie-link></li>
 			<li><pie-link href="/components/tag">Tag</pie-link></li>
+			<li><pie-link href="/components/text-input">Text Input</pie-link></li>
 			<li><pie-link href="/components/checkbox">Checkbox</pie-link></li>
 		</ul>
 	</div>
