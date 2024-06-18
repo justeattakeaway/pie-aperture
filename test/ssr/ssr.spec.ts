@@ -14,7 +14,7 @@ const components = [
     'card',
     'checkbox',
     'chip',
-    // 'cookie-banner',
+    'cookie-banner',
     'form-label',
     'icon-button',
     'link',
@@ -22,6 +22,7 @@ const components = [
     'spinner',
     'switch',
     'tag',
+    // 'text-input',
     // 'notification'
 ];
 
