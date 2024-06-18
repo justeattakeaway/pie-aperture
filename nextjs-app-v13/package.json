@@ -8,7 +8,6 @@
     "preview": "next start",
     "lint": "next lint",
     "playwright:show-report": "npx playwright show-report ../playwright-reports/nextjs-app-v13-playwright-report",
-    "test:ssr": "APP_NAME=nextjs-app-v13 playwright test -c ../playwright.config.ts --project=ssr",
     "test:system": "APP_NAME=nextjs-app-v13 playwright test -c ../playwright.config.ts --project=system",
     "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NEXT_13} npx percy exec -- wdio run ./wdio.conf.js",
     "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"

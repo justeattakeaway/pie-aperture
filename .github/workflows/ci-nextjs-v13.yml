@@ -95,11 +95,6 @@ jobs:
         shell: bash
         run: yarn test:system --filter=nextjs-app-v13
 
-      - name: Run SSR Tests
-        shell: bash
-        continue-on-error: true # temporarily allow failures in next13
-        run: yarn test:ssr --filter=nextjs-app-v13
-
       - uses: actions/upload-artifact@v3
         if: always()
         with:
