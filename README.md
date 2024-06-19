@@ -43,7 +43,13 @@ Playwright is used to facilitate system testing. This ensures that components fu
 Given that the goal of this repo is to ensure consistent implementation of our components, we follow an approach where a single test can be executed across our test applications. This has a number of key benefits such as reduced duplication of tests and consistent DOM structure of our implemented components.
 
 #### Tests
-All shared tests live within the `test/system` folder at the root of the monorepo.
+We have two kinds of testing that are shared between applications. These are `system` and `ssr`. These can be found in `test/system` and `test/ssr` respectively at the root of the monorepo..
+
+The system tests are to test the functionality of components working together, potentially in an E2E fashion. An example could be filling in and submitting a form.
+
+The SSR tests are to test that when the components are rendered on the server in our different applications, they are rendered correctly (have a template with shadow DOM attributes and styles).
+
+The only application that does not get SSR tested is the vanilla application, as it does not have server-side rendering.
 
 Should you need to add a test for a specific application due to implementation differences, these can be added to the `test/system` folder within the application root directory.
 
