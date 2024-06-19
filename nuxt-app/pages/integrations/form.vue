@@ -22,7 +22,7 @@
                 :value="favouriteNumber"
                 @input="handleFavouriteNumberInput"
                 :assistiveText="favouriteNumberValidationMessage"
-                :status="favouriteNumberValidationMessage.length ? 'error' : undefined"
+                :status="favouriteNumberValidationMessage.length ? 'error' : 'default'"
                 class="form-field"
                 id="favouriteNumber"
                 data-test-id="favouriteNumber"

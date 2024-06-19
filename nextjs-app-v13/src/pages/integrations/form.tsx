@@ -127,7 +127,7 @@ export default function Form() {
                     onInput={handleFavouriteNumberInput as any} // Ensure type compatibility
                     type="number"
                     assistiveText={favouriteNumberValidationMessage}
-                    status={favouriteNumberValidationMessage ? 'error' : undefined}
+                    status={favouriteNumberValidationMessage ? 'error' : 'default'}
                 >
                     <IconNumberSymbol slot="leadingIcon"></IconNumberSymbol>
                 </PieTextInput>
