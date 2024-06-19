@@ -1,6 +1,6 @@
 'use client';
 
-import { PieDivider } from "@justeattakeaway/pie-divider/dist/react"
+import { PieDivider } from "@justeattakeaway/pie-divider/dist/react";
 import { PieLink } from "@justeattakeaway/pie-link/dist/react";
 import { useRouter, usePathname } from "next/navigation";
 import { type ReactNode } from "react";

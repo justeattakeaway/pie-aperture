@@ -5,8 +5,8 @@
 </template>
 
 <script setup lang="ts">
-import '@justeattakeaway/pie-webc/components/link.js';
-import '@justeattakeaway/pie-webc/components/divider.js';
+import '@justeattakeaway/pie-link';
+import '@justeattakeaway/pie-divider';
 </script>
 
 <style lang="scss">

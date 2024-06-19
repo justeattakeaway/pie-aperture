@@ -1,7 +1,7 @@
 'use client';
 
 import NavigationLayout from "@/app/layout/navigation";
-import { PieAssistiveText } from '@justeattakeaway/pie-webc/react/assistive-text.js';
+import { PieAssistiveText } from '@justeattakeaway/pie-webc/react/assistive-text';
 
 export default function AssistiveText() {
     return (

@@ -5,6 +5,9 @@
         "cache": false,
         "dependsOn": ["build"]
       },
+      "test:ssr": {
+        "cache": true
+      },
       "test:system": {
         "cache": true
       },

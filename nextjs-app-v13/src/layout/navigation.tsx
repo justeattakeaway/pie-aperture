@@ -1,5 +1,5 @@
-import { PieDivider } from '@justeattakeaway/pie-webc/react/divider.js';
-import { PieLink } from '@justeattakeaway/pie-webc/react/link.js';
+import { PieDivider } from '@justeattakeaway/pie-divider/dist/react';
+import { PieLink } from '@justeattakeaway/pie-link/dist/react';
 import { useRouter } from "next/router";
 import Head from 'next/head';
 import { type ReactNode } from "react";
