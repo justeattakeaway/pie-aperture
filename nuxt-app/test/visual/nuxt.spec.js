@@ -23,7 +23,7 @@ describe('Nuxt Aperture App', () => {
     ];
 
     pages.forEach((page) => {
-        it.skip(`should navigate to the ${page.name} page.`, async () => {
+        it(`should navigate to the ${page.name} page.`, async () => {
             await browser.url(page.url);
             await waitUntilPageLoad();
             await waitForPageTitleToBe(page.name);
