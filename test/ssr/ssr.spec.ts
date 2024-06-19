@@ -61,7 +61,7 @@ components.forEach((component) => {
     test(`SSR: ${APP_NAME}: ${component}`, async () => {
         // Arrange
         const url = getComponentPageUrl(component, baseUrl);
-        console.info('Requesting SSR component from:', url);
+
         // used to ensure the shadow dom markup is rendered correctly, we don't need to worry about attribute order
         const shadowDomRegex = /<template\s+([^>]*shadowroot="open"[^>]*shadowrootmode="open"[^>]*|[^>]*shadowrootmode="open"[^>]*shadowroot="open"[^>]*)>/;
         const styleRegex = /<style>[\s\S]*?<\/style>/;
