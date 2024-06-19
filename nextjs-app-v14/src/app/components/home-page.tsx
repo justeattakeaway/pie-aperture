@@ -12,7 +12,6 @@ export default function HomePage() {
     <NavigationLayout title="Aperture">
     <h2>Demo Integrations</h2>
     <ul>
-      <li><PieLink onClick={() => router.push('/integrations/icons')} tag="button">Icons Demo</PieLink></li>
       <li><PieLink onClick={() => router.push('/integrations/form')} tag="button">Form Demo</PieLink></li>
     </ul>
     <h2>Component Pages</h2>
@@ -23,6 +22,7 @@ export default function HomePage() {
     <li><PieLink onClick={() => router.push('/components/chip')} tag="button">Chip</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/cookie-banner')} tag="button">Cookie Banner</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/form-label')} tag="button">Form Label</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/icon')} tag="button">Icon</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/icon-button')} tag="button">Icon Button</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/link')} tag="button">Link</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/modal')} tag="button">Modal</PieLink></li>

@@ -4,7 +4,6 @@ const { percyScreenshot } = require('@percy/selenium-webdriver');
 describe('Nuxt Aperture App', () => {
     const pages = [
         { url: '/index.html', name: 'PIE Aperture' },
-        { url: '/integrations/icons.html', name: 'Icons' },
         { url: '/integrations/form.html', name: 'Form' },
         { url: '/components/assistive-text.html', name: 'Assistive Text' },
         { url: '/components/button.html', name: 'Button' },
@@ -12,6 +11,7 @@ describe('Nuxt Aperture App', () => {
         { url: '/components/chip.html', name: 'Chip' },
         { url: '/components/cookie-banner.html', name: 'Cookie Banner' },
         { url: '/components/form-label.html', name: 'Form Label' },
+        { url: '/components/icon.html', name: 'Icon' },
         { url: '/components/icon-button.html', name: 'Icon Button' },
         { url: '/components/link.html', name: 'Link' },
         { url: '/components/modal.html', name: 'Modal' },
