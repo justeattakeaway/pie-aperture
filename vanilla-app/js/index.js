@@ -5,7 +5,6 @@ document.querySelector('#navigation').innerHTML = `
     <h3>Demo Integrations</h3>
     <ul>
         <li><pie-link href="/integrations/form.html">Form Demo</pie-link></li>
-        <li><pie-link href="/integrations/icons.html">Icons Demo</pie-link></li>
     </ul>
     <h3>Component Pages</h3>
     <ul>
@@ -15,6 +14,7 @@ document.querySelector('#navigation').innerHTML = `
         <li><pie-link href="/components/chip.html">Chip</pie-link></li>
         <li><pie-link href="/components/cookie-banner.html">Cookie Banner</pie-link></li>
         <li><pie-link href="/components/form-label.html">Form Label</pie-link></li>
+        <li><pie-link href="/components/icon.html">Icon</pie-link></li>
         <li><pie-link href="/components/icon-button.html">Icon Button</pie-link></li>
         <li><pie-link href="/components/link.html">Link</pie-link></li>
         <li><pie-link href="/components/modal.html">Modal</pie-link></li>
