@@ -15,17 +15,17 @@ describe('NextJS Aperture App', () => {
         { url: '/components/icon-button.html', name: 'Icon Button' },
         { url: '/components/link.html', name: 'Link' },
         { url: '/components/modal.html', name: 'Modal' },
-        { url: '/components/spinner.html', name: 'Spinner' },
+        { url: '/components/spinner.html', name: 'Spinner', percyCSS: '--spinner-animation-speed: 999s;' },
         { url: '/components/switch.html', name: 'Switch' },
         { url: '/components/tag.html', name: 'Tag' },
         { url: '/components/text-input.html', name: 'Text Input' },
     ];
 
-    pages.forEach((page) => {
-        it(`should navigate to the ${page.name} page.`, async () => {
-            await browser.url(page.url);
-            await waitForPageTitleToBe(page.name);
-            await percyScreenshot(page.name);
+    pages.forEach(({ name, url, percyCSS }) => {
+        it(`should navigate to the ${name} page.`, async () => {
+            await browser.url(url);
+            await waitForPageTitleToBe(name);
+            await percyScreenshot(name, { percyCSS });
         });
     });
 });

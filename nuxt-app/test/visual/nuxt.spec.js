@@ -15,19 +15,19 @@ describe('Nuxt Aperture App', () => {
         { url: '/components/icon-button.html', name: 'Icon Button' },
         { url: '/components/link.html', name: 'Link' },
         { url: '/components/modal.html', name: 'Modal' },
-        { url: '/components/spinner.html', name: 'Spinner' },
+        { url: '/components/spinner.html', name: 'Spinner', percyCSS: '--spinner-animation-speed: 999s;' },
         { url: '/components/switch.html', name: 'Switch' },
         { url: '/components/tag.html', name: 'Tag' },
         { url: '/components/text-input.html', name: 'Text Input' },
         { url: '/components/checkbox.html', name: 'Checkbox' },
     ];
 
-    pages.forEach((page) => {
-        it.skip(`should navigate to the ${page.name} page.`, async () => {
-            await browser.url(page.url);
+    pages.forEach(({ name, url, percyCSS }) => {
+        it.skip(`should navigate to the ${name} page.`, async () => {
+            await browser.url(url);
             await waitUntilPageLoad();
-            await expect(await browser.getTitle()).toContain(page.name);
-            await percyScreenshot(page.name);
+            await expect(await browser.getTitle()).toContain(name);
+            await percyScreenshot(name, { percyCSS });
         });
     });
 });
