@@ -1,5 +1,7 @@
 import { test, expect } from '@playwright/test';
 import http from 'http';
+import https from 'https';
+import { URL } from 'url';
 import { getEnvironmentBaseUrl } from '../../playwright-helpers/configuration-helper';
 
 const APP_NAME = process.env.APP_NAME;
@@ -26,11 +28,14 @@ const components = [
     // 'notification'
 ];
 
-const getComponentPageUrl = (component: string, baseUrl: string) => `${baseUrl}/components/${component}`;
+const getComponentPageUrl = (component: string, baseUrl: string): string => `${baseUrl}/components/${component}`;
 
 async function fetchHtml(url: string): Promise<string> {
     return new Promise<string>((resolve, reject) => {
-        http.get(url, (response) => {
+        const parsedUrl = new URL(url);
+        const protocol = parsedUrl.protocol === 'https:' ? https : http;
+
+        protocol.get(url, (response) => {
             let data = '';
 
             response.on('data', (chunk) => {
@@ -46,7 +51,7 @@ async function fetchHtml(url: string): Promise<string> {
     });
 }
 
-function createComponentRegex(componentName: string) {
+function createComponentRegex(componentName: string): RegExp {
     const prefixedComponentName = `pie-${componentName}`;
     return new RegExp(`<${prefixedComponentName}[\\s\\S]*?<\\/${prefixedComponentName}>`);
 }
