@@ -1,7 +1,6 @@
 {
   "name": "nuxt-app",
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -9,7 +8,8 @@
     "playwright:show-report": "npx playwright show-report ../playwright-reports/nuxt-app-playwright-report",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test:system": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts",
+    "test:ssr": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts --project=ssr",
+    "test:system": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts --project=system",
     "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NUXT} npx percy exec -- wdio run ./wdio.conf.js",
     "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
@@ -24,7 +24,7 @@
     "@justeattakeaway/pie-cookie-banner": "0.19.6",
     "@justeattakeaway/pie-css": "0.11.0",
     "@justeattakeaway/pie-icons-webc": "0.23.1",
-    "@justeattakeaway/pie-webc": "0.5.3",
+    "@justeattakeaway/pie-webc": "0.5.6",
     "just-kebab-case": "4.2.0",
     "nuxt-ssr-lit": "1.6.16"
   },

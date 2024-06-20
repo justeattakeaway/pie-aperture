@@ -1,5 +1,5 @@
-import { waitUntilPageLoad } from '../../../webdriver-helpers/wait-helper.js';
-import { percyScreenshot } from '@percy/selenium-webdriver';
+const { waitForPageTitleToBe } = require('../../../webdriver-helpers/wait-helper.js');
+const { percyScreenshot } = require('@percy/selenium-webdriver');
 
 describe('Nuxt Aperture App', () => {
     const pages = [
@@ -23,10 +23,9 @@ describe('Nuxt Aperture App', () => {
     ];
 
     pages.forEach((page) => {
-        it.skip(`should navigate to the ${page.name} page.`, async () => {
+        it(`should navigate to the ${page.name} page.`, async () => {
             await browser.url(page.url);
-            await waitUntilPageLoad();
-            await expect(await browser.getTitle()).toContain(page.name);
+            await waitForPageTitleToBe(page.name);
             await percyScreenshot(page.name);
         });
     });
