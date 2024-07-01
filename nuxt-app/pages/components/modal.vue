@@ -18,7 +18,7 @@ definePageMeta({
     title: 'PIE Modal',
 });
 
-let open = ref(false);
+let open = ref(true);
 
 function openModal() {
   open.value = true;
