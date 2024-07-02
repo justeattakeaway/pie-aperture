@@ -8,6 +8,7 @@ document.querySelector('#app').innerHTML = `
     <pie-button id="modal-trigger" type="button">Open Modal</pie-button>
     <pie-modal
         id="modal"
+        isOpen="true"
         heading="My Awesome Heading"
         headingLevel="h3"
         leadingAction='${JSON.stringify({ text: 'Leading action' })}'
