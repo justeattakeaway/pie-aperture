@@ -1,6 +1,6 @@
 <template>
   <div>
-    <pie-button @click="toggleNotification">{{ !isNotificationOpen ? 'Open' : 'Close' }} Notification</pie-button>
+    <pie-button @click="handleToggleNotification">{{ !isNotificationOpen ? 'Open' : 'Close' }} Notification</pie-button>
 
     <pie-divider/>
 
@@ -11,10 +11,10 @@
         :isOpen="isNotificationOpen ? isNotificationOpen : undefined"
         :leadingAction="leadingAction"
         :supportingAction="supportingAction"
-        @pie-notification-close="closeNotification"
-        @pie-notification-open="openNotification"
-        @pie-notification-leading-action-click="closeNotification"
-        @pie-notification-supporting-action-click="closeNotification"
+        @pie-notification-close="handleCloseNotification"
+        @pie-notification-open="handleOpenNotification"
+        @pie-notification-leading-action-click="handleCloseNotification"
+        @pie-notification-supporting-action-click="handleCloseNotification"
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet tincidunt est, vitae vulputate turpis. Cras pretium venenatis elementum. Duis tristique neque non varius tempor. In hac habitasse platea dictumst. Aenean accumsan vehicula urna.
     </pie-notification>
@@ -35,15 +35,15 @@ definePageMeta({
 let isNotificationOpen = ref(true);
 const isMounted = ref(false);
 
-const toggleNotification = () =>  {
+const handleToggleNotification = () =>  {
   isNotificationOpen.value = !isNotificationOpen.value;
 }
 
-const closeNotification = () =>  {
+const handleCloseNotification = () =>  {
   isNotificationOpen.value = false;
 }
 
-const openNotification = () =>  {
+const handleOpenNotification = () =>  {
   isNotificationOpen.value = true;
 }
 
