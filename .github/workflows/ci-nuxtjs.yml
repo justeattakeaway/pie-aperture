@@ -2,7 +2,7 @@ name: Build - Nuxt App
 
 on:
   pull_request:
-    types: [assigned, opened, synchronize, reopened, "ready_for_review"]
+    types: [opened, synchronize, reopened, "ready_for_review"]
     paths:
       - '.github/workflows/**'
       - 'nuxt-app/**'
@@ -85,11 +85,11 @@ jobs:
         with:
           node-version: 20
           cache: "yarn"
-  
+
       - name: Install Dependencies
         shell: bash
         run: yarn
-  
+
       # Setup Playwright
       - name: Setup Playwright
         uses: ./.github/actions/setup-playwright
@@ -97,7 +97,7 @@ jobs:
       - name: Run SSR Tests
         shell: bash
         run: yarn test:ssr --filter=nuxt-app
-  
+
       # TODO - fix this test in DSW-2157
       # - name: Run System Tests
       #   shell: bash
