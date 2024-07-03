@@ -14,10 +14,13 @@ export default function Modal() {
             heading="Modal Header"
             isDismissible
             hasBackButton
+            leadingAction={{
+                text: 'Leading action',
+            }}
             onPieModalClose={() => setIsModalOpen(false)}
             onPieModalBack={() => setIsModalOpen(false)}
         >
-            <p>Modal</p>
+            <p>Modal content</p>
         </PieModal>
         </NavigationLayout>
     );
