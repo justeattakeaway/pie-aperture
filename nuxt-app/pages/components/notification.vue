@@ -7,10 +7,7 @@
     <pie-notification
         variant="info"
         heading="Title"
-        v-if="isMounted"
         :isOpen="isNotificationOpen ? isNotificationOpen : undefined"
-        :leadingAction="leadingAction"
-        :supportingAction="supportingAction"
         @pie-notification-close="handleCloseNotification"
         @pie-notification-open="handleOpenNotification"
         @pie-notification-leading-action-click="handleCloseNotification"
@@ -22,7 +19,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/divider.js';
@@ -33,7 +30,6 @@ definePageMeta({
 });
 
 let isNotificationOpen = ref(true);
-const isMounted = ref(false);
 
 const handleToggleNotification = () =>  {
   isNotificationOpen.value = !isNotificationOpen.value;
@@ -56,10 +52,5 @@ const supportingAction = {
   text: 'Cancel',
   ariaLabel: 'Descriptive cancellation text',
 };
-
-// Ensure client-side rendering
-onMounted(() => {
-  isMounted.value = true;
-});
 
 </script>
