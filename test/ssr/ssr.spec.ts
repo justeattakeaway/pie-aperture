@@ -11,7 +11,7 @@ const baseUrl = getEnvironmentBaseUrl(APP_NAME);
 // TODO - Is there a better way to define this list?
 // TODO - uncomment the components when we are ready to test them
 const components = [
-    // 'assistive-text',
+    'assistive-text',
     'button',
     'card',
     'checkbox',
