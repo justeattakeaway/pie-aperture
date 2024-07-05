@@ -79,6 +79,11 @@ test.describe('SSR - Components render with shadow dom and styles', () => {
 
             // Extract the first <pie-[component]> element using a regular expression
             const pieComponentMatch = rawHtml.match(componentRegex);
+
+            if (!pieComponentMatch) {
+                console.warn('Failed to find component in the SSR html: ', rawHtml)
+            }
+
             const pieComponentHtml = pieComponentMatch ? pieComponentMatch[0] : null;
 
             // Assert
