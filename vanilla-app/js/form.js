@@ -43,7 +43,8 @@ form.addEventListener('submit', (e) => {
     const data = Object.fromEntries(formData.entries());
     data.approveSettings = formData.get('approveSettings') === 'on';
     data.enableNotifications = formData.get('enableNotifications') === 'on';
-    data.newsletterSignup = formData.get('newsletterSignup') === 'on';
+    data.contactByEmail = formData.get('contactByEmail') === 'on';
+    data.contactByPhone = formData.get('contactByPhone') === 'on';
     output.innerHTML = `
         <h2>Form Data</h2>
         <pre data-test-id="outputData">${JSON.stringify(data, null, 2)}</pre>

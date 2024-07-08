@@ -124,6 +124,23 @@
                     name="newsletter"
                     @change="newsletter = $event.target.checked"
                     :checked="newsletter">Receive discounts, loyalty offers and other updates via email</pie-checkbox>
+
+                <pie-checkbox-group label="Choose the way we can contact you">
+                    <pie-checkbox
+                        label="Contact By Email"
+                        id="contactByEmail"
+                        name="contactByEmail"
+                        data-test-id="contactByEmail"
+                        @change="contactByEmail = $event.target.checked"
+                        :checked="contactByEmail"></pie-checkbox>
+                    <pie-checkbox
+                        label="Contact By Phone"
+                        id="contactByPhone"
+                        name="contactByPhone"
+                        data-test-id="contactByPhone"
+                        @change="contactByPhone = $event.target.checked"
+                        :checked="contactByPhone"></pie-checkbox>
+                </pie-checkbox-group>
             </div>
             <div class="form-btns">
                 <pie-button class="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</pie-button>
@@ -148,6 +165,7 @@ import '@justeattakeaway/pie-webc/components/text-input.js';
 import '@justeattakeaway/pie-webc/components/textarea.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-webc/components/checkbox.js';
+import '@justeattakeaway/pie-webc/components/checkbox-group.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconLaptop.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconPhone.js';
@@ -171,6 +189,8 @@ const favouriteNumberValidationMessage = ref('');
 const newsletter = ref(false);
 const description = ref('');
 
+const contactByEmail = ref(false);
+const contactByPhone = ref(false);
 
 const formDataDisplay = ref('');
 
@@ -201,6 +221,8 @@ function handleSubmit() {
         favouriteNumber: favouriteNumber.value,
         newsletterSignup: newsletter.value,
         description: description.value,
+        contactByEmail: contactByEmail.value,
+        contactByPhone: contactByPhone.value,
     }, null, 2);
 }
 </script>
