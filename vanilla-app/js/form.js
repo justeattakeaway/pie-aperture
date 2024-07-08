@@ -3,6 +3,7 @@ import '@justeattakeaway/pie-webc/components/text-input.js';
 import '@justeattakeaway/pie-webc/components/textarea.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-webc/components/checkbox.js';
+import '@justeattakeaway/pie-webc/components/checkbox-group.js';
 import '@justeattakeaway/pie-webc/components/form-label.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconLaptop.js';
@@ -43,6 +44,7 @@ form.addEventListener('submit', (e) => {
     const data = Object.fromEntries(formData.entries());
     data.approveSettings = formData.get('approveSettings') === 'on';
     data.enableNotifications = formData.get('enableNotifications') === 'on';
+    data.newsletterSignup = formData.get('newsletterSignup') === 'on';
     data.contactByEmail = formData.get('contactByEmail') === 'on';
     data.contactByPhone = formData.get('contactByPhone') === 'on';
     output.innerHTML = `

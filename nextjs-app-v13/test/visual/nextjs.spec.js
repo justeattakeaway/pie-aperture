@@ -20,6 +20,7 @@ describe('NextJS Aperture App', () => {
         { url: '/components/tag.html', name: 'Tag' },
         { url: '/components/text-input.html', name: 'Text Input' },
         { url: '/components/textarea.html', name: 'Textarea' },
+        { url: '/components/checkbox.html', name: 'Checkbox' },
     ];
 
     pages.forEach((page) => {

@@ -42,18 +42,18 @@ export default function Form() {
     const handleFavouriteNumberInput = (event: InputEvent) => {
         const inputElement = event.target as HTMLInputElement;
         const value = inputElement.value;
-    
+
         // Set the state based on the input. If the input is empty, value will be '', effectively clearing the input field.
         setFavouriteNumber(value);
-    
+
         let validationMessage = '';
-        
+
         if (value && inputElement.validity.rangeUnderflow) {
             validationMessage = 'The favourite number is too low. Please pick a number between -5 and 200.';
         } else if (value && inputElement.validity.rangeOverflow) {
             validationMessage = 'The favourite number is too high. Please pick a number between -5 and 200.';
         }
-    
+
         setFavouriteNumberValidationMessage(validationMessage);
     };
 
@@ -244,21 +244,26 @@ export default function Form() {
                         data-test-id="newsletterSignup"
                         name="newsletterSignup"
                         checked={newsletterSignup}
-                        onChange={handleNewsletterSignup}
-                    >Receive discounts, loyalty offers and other updates via email</PieCheckbox>
+                        onChange={handleNewsletterSignup}>
+                        Receive discounts, loyalty offers and other updates via email
+                    </PieCheckbox>
                     <PieCheckboxGroup label="Choose the way we can contact you">
                         <PieCheckbox
-                            label="Contact By Email"
                             id="contactByEmail"
+                            data-test-id="contactByEmail"
                             checked={contactByEmail}
                             name="contactByEmail"
-                            onChange={handleContactByEmail} />
+                            onChange={handleContactByEmail}>
+                            Contact By Email
+                        </PieCheckbox>
                         <PieCheckbox
-                            label="Contact By Phone"
                             id="contactByPhone"
+                            data-test-id="contactByPhone"
                             checked={contactByPhone}
                             name="contactByPhone"
-                            onChange={handleContactByPhone} />
+                            onChange={handleContactByPhone}>
+                            Contact By Phone
+                        </PieCheckbox>
                     </PieCheckboxGroup>
                 </div>
                 <div className='form-btns'>

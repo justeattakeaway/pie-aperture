@@ -123,23 +123,27 @@
                     data-test-id="newsletterSignup"
                     name="newsletter"
                     @change="newsletter = $event.target.checked"
-                    :checked="newsletter">Receive discounts, loyalty offers and other updates via email</pie-checkbox>
+                    :checked="newsletter">
+                    Receive discounts, loyalty offers and other updates via email
+                </pie-checkbox>
 
                 <pie-checkbox-group label="Choose the way we can contact you">
                     <pie-checkbox
-                        label="Contact By Email"
                         id="contactByEmail"
                         name="contactByEmail"
                         data-test-id="contactByEmail"
                         @change="contactByEmail = $event.target.checked"
-                        :checked="contactByEmail"></pie-checkbox>
+                        :checked="contactByEmail">
+                        Contact By Email
+                    </pie-checkbox>
                     <pie-checkbox
-                        label="Contact By Phone"
                         id="contactByPhone"
                         name="contactByPhone"
                         data-test-id="contactByPhone"
                         @change="contactByPhone = $event.target.checked"
-                        :checked="contactByPhone"></pie-checkbox>
+                        :checked="contactByPhone">
+                        Contact By Phone
+                    </pie-checkbox>
                 </pie-checkbox-group>
             </div>
             <div class="form-btns">

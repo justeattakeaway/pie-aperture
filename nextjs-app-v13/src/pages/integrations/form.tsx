@@ -243,22 +243,27 @@ export default function Form() {
                         data-test-id="newsletterSignup"
                         name="newsletterSignup"
                         checked={newsletterSignup}
-                        onChange={handleNewsletterSignup}
-                    >Receive discounts, loyalty offers and other updates via email</PieCheckbox>
+                        onChange={handleNewsletterSignup}>
+                        Receive discounts, loyalty offers and other updates via email
+                    </PieCheckbox>
 
                     <PieCheckboxGroup label="Choose the way we can contact you">
                         <PieCheckbox
-                            label="Contact By Email"
                             id="contactByEmail"
+                            data-test-id="contactByEmail"
                             checked={contactByEmail}
                             name="contactByEmail"
-                            onChange={handleContactByEmail} />
+                            onChange={handleContactByEmail}>
+                            Contact By Email
+                        </PieCheckbox>
                         <PieCheckbox
-                            label="Contact By Phone"
                             id="contactByPhone"
+                            data-test-id="contactByPhone"
                             checked={contactByPhone}
                             name="contactByPhone"
-                            onChange={handleContactByPhone} />
+                            onChange={handleContactByPhone}>
+                            Contact By Phone
+                        </PieCheckbox>
                     </PieCheckboxGroup>
                 </div>
                 <div className='form-btns'>
