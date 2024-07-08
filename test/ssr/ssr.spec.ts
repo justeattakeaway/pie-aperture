@@ -81,6 +81,8 @@ test.describe('SSR - Components render with shadow dom and styles', () => {
             const pieComponentMatch = rawHtml.match(componentRegex);
 
             if (!pieComponentMatch) {
+                console.warn('Get component page baseURL output: ', baseUrl)
+                console.warn('Get component page URL output: ', url)
                 console.warn('Failed to find component in the SSR html: ', rawHtml)
             }
 
