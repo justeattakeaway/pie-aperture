@@ -1,9 +1,15 @@
 <template>
   <div>
     <pie-button @click="openModal">Open Modal</pie-button>
-    <pie-modal :isOpen="open ? open : undefined" hasBackButton isDismissible heading="Modal Header"
-      @pie-modal-close="handleModalClose" @pie-modal-back="handleModalClose">
-      <p>Modal</p>
+    <pie-modal
+        heading="Modal Header"
+        hasBackButton
+        isDismissible
+        :isOpen="open ? open : undefined"
+        @pie-modal-close="handleModalClose"
+        @pie-modal-back="handleModalClose"
+    >
+      <p>Modal content</p>
     </pie-modal>
   </div>
 </template>
@@ -18,7 +24,7 @@ definePageMeta({
     title: 'PIE Modal',
 });
 
-let open = ref(false);
+let open = ref(true);
 
 function openModal() {
   open.value = true;
@@ -27,5 +33,9 @@ function openModal() {
 function handleModalClose() {
   open.value = false;
 }
+
+const leadingAction = {
+  text: 'Leading action',
+};
 
 </script>

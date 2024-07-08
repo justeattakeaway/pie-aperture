@@ -51,9 +51,11 @@ $notification.addEventListener('pie-notification-open', () => {
 });
 
 $notification.addEventListener('pie-notification-supporting-action-click', (event) => {
-  alert(`${event.type} clicked`);
+  $notificationActionText.innerHTML = 'Open';
+  $notification.removeAttribute('isOpen');
 });
 
 $notification.addEventListener('pie-notification-leading-action-click', (event) => {
-  alert(`${event.type} clicked`);
+  $notificationActionText.innerHTML = 'Open';
+  $notification.removeAttribute('isOpen');
 });

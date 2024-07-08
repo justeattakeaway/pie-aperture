@@ -5,7 +5,7 @@ import { PieDivider } from '@justeattakeaway/pie-webc/react/divider.js';
 import NavigationLayout from "@/layout/navigation";
 
 export default function Notification() {
-  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+  const [isNotificationOpen, setIsNotificationOpen] = useState(true);
 
   const toggleNotification = () => {
     setIsNotificationOpen((previousState => !previousState))

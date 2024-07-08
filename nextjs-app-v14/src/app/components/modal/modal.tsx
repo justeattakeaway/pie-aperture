@@ -6,7 +6,7 @@ import { PieModal } from '@justeattakeaway/pie-webc/react/modal.js';
 import { useState } from "react";
 
 export default function Modal() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(true);
 
     return (
         <NavigationLayout title="Modal">
@@ -16,10 +16,13 @@ export default function Modal() {
             heading="Modal Header"
             isDismissible
             hasBackButton
+            leadingAction={{
+                text: 'Leading action',
+            }}
             onPieModalClose={() => setIsModalOpen(false)}
             onPieModalBack={() => setIsModalOpen(false)}
         >
-            <p>Modal</p>
+            <p>Modal content</p>
         </PieModal>
         </NavigationLayout>
     );
