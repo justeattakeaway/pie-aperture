@@ -13,21 +13,25 @@ export default function NavigationLayout({ children, title }: NavigationLayoutPr
 
     const router = useRouter();
     const isHomePage = router.pathname === '/';
+    const headTitle =  isHomePage ? "PIE Aperture" : `PIE Aperture | NextJS | ${ title }`;
 
     return (
       <>
-        <Head>
-            { isHomePage ? <title>PIE Aperture</title> : <title>PIE Aperture | NextJS | { title }</title>}
-        </Head>
-        <h1>NextJS 13 - PIE { title } </h1>
-        { !isHomePage &&
-        <>
-        <PieLink onClick={() => router.push('/')} tag="button">Back to home</PieLink>
-        <PieDivider/>
-        </>
+        <Head><title>{headTitle}</title></Head>
+
+        <h1>NextJS 13 - PIE { title }</h1>
+
+        {!isHomePage &&
+            <>
+                <PieLink onClick={() => router.push('/')} tag="button">Back to home</PieLink>
+
+                <PieDivider/>
+            </>
         }
+
         { children }
-        { !isHomePage && <PieDivider/>}
+
+        {!isHomePage && <PieDivider/>}
       </>
     );
   }
