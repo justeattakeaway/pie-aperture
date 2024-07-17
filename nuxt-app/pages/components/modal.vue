@@ -6,8 +6,9 @@
         heading="Modal Header"
         hasBackButton
         isDismissible
-        :leadingAction="leadingAction"
         :isOpen="open"
+        :leadingAction="leadingAction"
+        position="top"
         @pie-modal-close="handleModalClose"
         @pie-modal-back="handleModalClose"
     >
