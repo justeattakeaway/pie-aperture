@@ -1683,15 +1683,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lit/react@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@lit/react@npm:1.0.2"
-  peerDependencies:
-    "@types/react": 17 || 18
-  checksum: 6a5c2be97d53e75b714fd6831629366e7d9d296a8756132289a49e4e4474f26b5a4bb3ef44d5d4f89a0cacfc75b305845bbbf45b0bdc356ce4a6eda0c488b7e8
-  languageName: node
-  linkType: hard
-
 "@lit/react@npm:1.0.5":
   version: 1.0.5
   resolution: "@lit/react@npm:1.0.5"
@@ -11049,7 +11040,7 @@ __metadata:
     "@justeattakeaway/pie-icons-webc": 0.23.1
     "@justeattakeaway/pie-webc": 0.5.13
     "@lit-labs/nextjs": 0.1.4
-    "@lit/react": 1.0.2
+    "@lit/react": 1.0.5
     "@types/node": 20.9.1
     "@types/react": 18.2.47
     "@types/react-dom": 18.2.7
