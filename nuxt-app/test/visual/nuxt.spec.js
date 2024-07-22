@@ -19,6 +19,7 @@ describe('Nuxt Aperture App', () => {
         { url: '/components/switch.html', name: 'Switch' },
         { url: '/components/tag.html', name: 'Tag' },
         { url: '/components/text-input.html', name: 'Text Input' },
+        { url: '/components/textarea.html', name: 'Textarea' },
         { url: '/components/notification.html', name: 'Notification' },
         { url: '/components/checkbox.html', name: 'Checkbox' },
     ];
