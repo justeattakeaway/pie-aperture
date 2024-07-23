@@ -8,11 +8,12 @@ export default function Textarea() {
 
     return (
         <NavigationLayout title="Textarea">
-            <PieTextarea/>
+            <PieTextarea value="foo"/>
 
             <PieDivider />
 
             <PieTextarea
+                value="foo"
                 resize="manual"
             />
         </NavigationLayout>
