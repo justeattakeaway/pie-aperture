@@ -22,7 +22,7 @@
                 :value="favouriteNumber"
                 @input="handleFavouriteNumberInput"
                 :assistiveText="favouriteNumberValidationMessage"
-                :status="favouriteNumberValidationMessage.length ? 'error' : undefined"
+                :status="favouriteNumberValidationMessage.length ? 'error' : 'default'"
                 class="form-field"
                 id="favouriteNumber"
                 data-test-id="favouriteNumber"
@@ -89,6 +89,18 @@
                 <icon-key slot="leadingIcon"></icon-key>
             </pie-text-input>
 
+            <pie-form-label for="tel">
+               Description:
+            </pie-form-label>
+            <pie-textarea
+                :value="description"
+                @input="description = $event.target.value"
+                class="form-field"
+                id="description"
+                data-test-id="description"
+                name="description">
+            </pie-textarea>
+
             <div class="form-controls">
                 <pie-form-label for="approveSettings">
                     Approve settings
@@ -130,9 +142,11 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import {definePageMeta} from "#imports";
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/form-label.js';
 import '@justeattakeaway/pie-webc/components/text-input.js';
+import '@justeattakeaway/pie-webc/components/textarea.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-webc/components/checkbox.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
@@ -141,6 +155,10 @@ import '@justeattakeaway/pie-icons-webc/dist/IconPhone.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconUser.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconNumberSymbol.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconKey.js';
+
+definePageMeta({
+  title: 'PIE Form Test Page',
+});
 
 const username = ref('');
 const email = ref('');
@@ -152,6 +170,8 @@ const notifications = ref(false);
 const favouriteNumber = ref('');
 const favouriteNumberValidationMessage = ref('');
 const newsletter = ref(false);
+const description = ref('');
+
 
 const formDataDisplay = ref('');
 
@@ -181,6 +201,7 @@ function handleSubmit() {
         enableNotifications: notifications.value,
         favouriteNumber: favouriteNumber.value,
         newsletterSignup: newsletter.value,
+        description: description.value,
     }, null, 2);
 }
 </script>
