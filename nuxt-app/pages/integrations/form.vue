@@ -142,7 +142,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import {definePageMeta} from "#imports";
+import { definePageMeta } from "#imports";
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/form-label.js';
 import '@justeattakeaway/pie-webc/components/text-input.js';
