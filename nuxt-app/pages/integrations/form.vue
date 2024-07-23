@@ -89,7 +89,7 @@
                 <icon-key slot="leadingIcon"></icon-key>
             </pie-text-input>
 
-            <pie-form-label for="tel">
+            <pie-form-label for="description">
                Description:
             </pie-form-label>
             <pie-textarea

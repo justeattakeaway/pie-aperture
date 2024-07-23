@@ -196,7 +196,7 @@ export default function Form() {
                     <IconKey slot="leadingIcon"></IconKey>
                 </PieTextInput>
 
-                <PieFormLabel for="password">
+                <PieFormLabel for="description">
                     Description:
                 </PieFormLabel>
                 <PieTextarea
