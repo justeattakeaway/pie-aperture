@@ -226,13 +226,12 @@ export default function Form() {
                         onChange={handleNotificationsChange}
                     />
                     <PieCheckbox
-                        label="Receive discounts, loyalty offers and other updates via email"
                         id="newsletterSignup"
                         data-test-id="newsletterSignup"
                         name="newsletterSignup"
                         checked={newsletterSignup}
                         onChange={handleNewsletterSignup}
-                    />
+                    >Receive discounts, loyalty offers and other updates via email</PieCheckbox>
                 </div>
                 <div className='form-btns'>
                     <PieButton className="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</PieButton>

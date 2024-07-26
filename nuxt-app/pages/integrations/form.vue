@@ -121,10 +121,9 @@
                 <pie-checkbox
                     id="newsletter"
                     data-test-id="newsletterSignup"
-                    label="Receive discounts, loyalty offers and other updates via email"
                     name="newsletter"
                     @change="newsletter = $event.target.checked"
-                    :checked="newsletter"></pie-checkbox>
+                    :checked="newsletter">Receive discounts, loyalty offers and other updates via email</pie-checkbox>
             </div>
             <div class="form-btns">
                 <pie-button class="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</pie-button>
