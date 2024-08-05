@@ -1,5 +1,5 @@
 import '@justeattakeaway/pie-webc/components/cookie-banner.js';
-import daDK from '@justeattakeaway/pie-cookie-banner/locales/dk-dk.json';
+import daDK from '@justeattakeaway/pie-cookie-banner/locales/da-dk.json';
 import './utils/navigation.js';
 import './shared.js';
 
