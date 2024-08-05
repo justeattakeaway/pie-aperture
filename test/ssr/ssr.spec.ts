@@ -22,11 +22,11 @@ const components = [
     'icon-button',
     'link',
     'modal',
+    'notification',
     'spinner',
     'switch',
     'tag',
     'text-input',
-    'notification',
 ];
 
 const getComponentPageUrl = (component: string, baseUrl: string): string => `${baseUrl}/components/${component}`;

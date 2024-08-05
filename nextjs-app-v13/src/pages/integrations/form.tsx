@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import NavigationLayout from '@/layout/navigation';
+import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
+import { PieCheckbox } from '@justeattakeaway/pie-webc/react/checkbox.js';
 import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
 import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
-import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
-import { PieCheckbox } from '@justeattakeaway/pie-webc/react/checkbox.js';
 import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
 import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
 import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
@@ -127,8 +127,7 @@ export default function Form() {
                     onInput={handleFavouriteNumberInput as any} // Ensure type compatibility
                     type="number"
                     assistiveText={favouriteNumberValidationMessage}
-                    status={favouriteNumberValidationMessage ? 'error' : undefined}
-                >
+                    status={favouriteNumberValidationMessage ? 'error' : 'default'}>
                     <IconNumberSymbol slot="leadingIcon"></IconNumberSymbol>
                 </PieTextInput>
 
@@ -208,13 +207,13 @@ export default function Form() {
                         onChange={handleNotificationsChange}
                     />
                     <PieCheckbox
-                        label="Receive discounts, loyalty offers and other updates via email"
                         id="newsletterSignup"
                         data-test-id="newsletterSignup"
                         name="newsletterSignup"
                         checked={newsletterSignup}
-                        onChange={handleNewsletterSignup}
-                    />
+                        onChange={handleNewsletterSignup}>
+                        Receive discounts, loyalty offers and other updates via email
+                    </PieCheckbox>
                 </div>
                 <div className='form-btns'>
                     <PieButton className="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</PieButton>

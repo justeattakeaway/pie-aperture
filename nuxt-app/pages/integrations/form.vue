@@ -22,7 +22,7 @@
                 :value="favouriteNumber"
                 @input="handleFavouriteNumberInput"
                 :assistiveText="favouriteNumberValidationMessage"
-                :status="favouriteNumberValidationMessage.length ? 'error' : undefined"
+                :status="favouriteNumberValidationMessage.length ? 'error' : 'default'"
                 class="form-field"
                 id="favouriteNumber"
                 data-test-id="favouriteNumber"
@@ -109,10 +109,11 @@
                 <pie-checkbox
                     id="newsletter"
                     data-test-id="newsletterSignup"
-                    label="Receive discounts, loyalty offers and other updates via email"
                     name="newsletter"
                     @change="newsletter = $event.target.checked"
-                    :checked="newsletter"></pie-checkbox>
+                    :checked="newsletter">
+                    Receive discounts, loyalty offers and other updates via email
+                </pie-checkbox>
             </div>
             <div class="form-btns">
                 <pie-button class="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</pie-button>
@@ -131,10 +132,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import '@justeattakeaway/pie-webc/components/button.js';
+import '@justeattakeaway/pie-webc/components/checkbox.js';
 import '@justeattakeaway/pie-webc/components/form-label.js';
 import '@justeattakeaway/pie-webc/components/text-input.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
-import '@justeattakeaway/pie-webc/components/checkbox.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconLaptop.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconPhone.js';
