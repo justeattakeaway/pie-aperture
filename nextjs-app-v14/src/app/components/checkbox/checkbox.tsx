@@ -16,7 +16,7 @@ export default function Checkbox() {
             <PieCheckbox
                 checked={isCheckboxChecked}
                 onChange={handleCheckboxChange}>
-                Label
+                {`checked: ${isCheckboxChecked}`}
             </PieCheckbox>
         </NavigationLayout>
     );

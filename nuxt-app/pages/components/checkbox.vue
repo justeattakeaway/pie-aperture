@@ -1,7 +1,7 @@
 <template>
   <div>
     <pie-checkbox :checked="checked" @change="handleCheckboxChange">
-      Label
+      {{ `checked: ${checked}` }}
     </pie-checkbox>
   </div>
 </template>

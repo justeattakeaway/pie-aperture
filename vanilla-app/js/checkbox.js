@@ -8,13 +8,13 @@ function handleCheckboxChange() {
     checked = !checked;
 
     const pieCheckbox = document.querySelector('pie-checkbox');
-    pieCheckbox.setAttribute('label', `checked: ${checked}`);
+    pieCheckbox.innerHTML = `checked: ${checked}`;
     pieCheckbox.checked = checked;
 }
 
 // Set initial HTML structure
 document.querySelector('#app').innerHTML = `
-    <pie-checkbox>Label</pie-checkbox>
+    <pie-checkbox>checked: ${checked}</pie-checkbox>
 `;
 
 // Add event listener to pie-switch for change events
