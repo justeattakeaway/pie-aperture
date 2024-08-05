@@ -9,7 +9,8 @@ document.querySelector('#app').innerHTML = `
         id="modal"
         isOpen="true"
         heading="Modal Header"
-        leadingAction='${JSON.stringify({text: 'Leading action' })}'
+        leadingActionText='Confirm'
+        supportingActionText='Cancel'
         isDismissible
         hasBackButton
     >

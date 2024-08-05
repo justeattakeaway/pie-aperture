@@ -8,6 +8,8 @@
         :isOpen="open ? open : undefined"
         @pie-modal-close="handleModalClose"
         @pie-modal-back="handleModalClose"
+        leadingActionText="Confirm"
+        supportingActionText="Cancel"
     >
       <p>Modal content</p>
     </pie-modal>
@@ -33,9 +35,5 @@ function openModal() {
 function handleModalClose() {
   open.value = false;
 }
-
-const leadingAction = {
-  text: 'Leading action',
-};
 
 </script>
