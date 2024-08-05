@@ -5,7 +5,8 @@
         heading="Modal Header"
         hasBackButton
         isDismissible
-        :isOpen="open ? open : undefined"
+        :isOpen="open"
+        leadingActionText="Leading action"
         @pie-modal-close="handleModalClose"
         @pie-modal-back="handleModalClose"
     >
@@ -33,9 +34,4 @@ function openModal() {
 function handleModalClose() {
   open.value = false;
 }
-
-const leadingAction = {
-  text: 'Leading action',
-};
-
 </script>

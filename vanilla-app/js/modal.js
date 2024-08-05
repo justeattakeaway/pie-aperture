@@ -9,10 +9,9 @@ document.querySelector('#app').innerHTML = `
         id="modal"
         isOpen="true"
         heading="Modal Header"
-        leadingAction='${JSON.stringify({text: 'Leading action' })}'
+        leadingActionText="Leading action"
         isDismissible
-        hasBackButton
-    >
+        hasBackButton>
       <p>Modal content</p>
     </pie-modal>`;
 

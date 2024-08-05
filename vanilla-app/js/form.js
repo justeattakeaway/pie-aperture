@@ -1,7 +1,7 @@
 import '@justeattakeaway/pie-webc/components/button.js';
-import '@justeattakeaway/pie-webc/components/text-input.js';
-import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-webc/components/checkbox.js';
+import '@justeattakeaway/pie-webc/components/switch.js';
+import '@justeattakeaway/pie-webc/components/text-input.js';
 import '@justeattakeaway/pie-webc/components/form-label.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconLaptop.js';
@@ -20,7 +20,7 @@ const favouriteNumberInput = document.querySelector('#favouriteNumber');
 favouriteNumberInput.addEventListener('input', (e) => {
     const value = parseInt(e.target.value, 10);
     let validationMessage = '';
-    let status = '';
+    let status = 'default';
 
     if (value < -5) {
         validationMessage = 'The favourite number is too low. Please pick a number between -5 and 200.';
