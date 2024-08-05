@@ -27,6 +27,7 @@ const components = [
     'switch',
     'tag',
     'text-input',
+    'textarea',
 ];
 
 const getComponentPageUrl = (component: string, baseUrl: string): string => `${baseUrl}/components/${component}`;

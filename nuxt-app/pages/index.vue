@@ -22,6 +22,7 @@
 			<li><pie-link href="/components/switch">Switch</pie-link></li>
 			<li><pie-link href="/components/tag">Tag</pie-link></li>
 			<li><pie-link href="/components/text-input">Text Input</pie-link></li>
+			<li><pie-link href="/components/textarea">Textarea</pie-link></li>
 		</ul>
 	</div>
 </template>
