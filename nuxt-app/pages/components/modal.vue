@@ -7,7 +7,6 @@
         isDismissible
         :isOpen="open"
         leadingActionText="Leading action"
-        position="top"
         @pie-modal-close="handleModalClose"
         @pie-modal-back="handleModalClose"
     >
