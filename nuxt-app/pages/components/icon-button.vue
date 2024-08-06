@@ -9,7 +9,7 @@
 <script setup lang="ts">
 import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/icon-button.js';
-import { IconClose } from '@justeattakeaway/pie-icons-webc';
+import '@justeattakeaway/pie-icons-webc/dist/IconClose.js';
 
 definePageMeta({
     title: 'PIE Icon Button',
