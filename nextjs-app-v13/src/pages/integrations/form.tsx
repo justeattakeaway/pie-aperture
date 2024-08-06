@@ -248,7 +248,7 @@ export default function Form() {
                     </PieCheckbox>
 
                     <PieCheckboxGroup>
-                        <PieFormLabel>Choose the way we can contact you:</PieFormLabel>
+                        <PieFormLabel slot="label">Choose the way we can contact you:</PieFormLabel>
                         <PieCheckbox
                             id="contactByEmail"
                             data-test-id="contactByEmail"

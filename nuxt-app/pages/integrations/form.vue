@@ -128,7 +128,7 @@
                 </pie-checkbox>
 
                 <pie-checkbox-group>
-                    <pie-form-label>Choose the way we can contact you:</pie-form-label>
+                    <pie-form-label slot="label">Choose the way we can contact you:</pie-form-label>
                     <pie-checkbox
                         id="contactByEmail"
                         name="contactByEmail"
