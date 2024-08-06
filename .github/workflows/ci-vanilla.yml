@@ -8,6 +8,8 @@ on:
       - 'vanilla-app/**'
       - 'webdriver-helpers/**'
       - 'wdio.conf.js'
+      - 'test/**'
+      - 'playwright-helpers/**'
   push:
     branches:
       - main
