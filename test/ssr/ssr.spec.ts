@@ -39,8 +39,8 @@ async function fetchHtml(url: string): Promise<string> {
         protocol.get(url, (response) => {
             let data = '';
 
-            console.log('Getting', url);
-            console.log('Status:', response.statusCode);
+            console.info('Getting', url);
+            console.info('Status:', response.statusCode);
 
             response.on('data', (chunk) => {
                 data += chunk;
