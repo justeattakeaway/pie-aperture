@@ -30,7 +30,7 @@ const components = [
     'textarea',
 ];
 
-const getComponentPageUrl = (component: string, baseUrl: string): string => `${baseUrl}/components/${component}/`;
+const getComponentPageUrl = (component: string, baseUrl: string): string => `${baseUrl}/components/${component}`;
 
 async function fetchHtml(url: string): Promise<string> {
     return new Promise<string>((resolve, reject) => {
