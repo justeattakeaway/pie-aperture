@@ -3587,6 +3587,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/follow-redirects@npm:^1.14.4":
+  version: 1.14.4
+  resolution: "@types/follow-redirects@npm:1.14.4"
+  dependencies:
+    "@types/node": "*"
+  checksum: 8d5e4a7efa3602d26a2e0a2ff8970d29ba900c13874b29038faebc69adc89b0c78b34cd1100fac638c686848a52916c0310fb27c6e5300c0e19830e7f4f63094
+  languageName: node
+  linkType: hard
+
 "@types/gitconfiglocal@npm:^2.0.1":
   version: 2.0.3
   resolution: "@types/gitconfiglocal@npm:2.0.3"
@@ -8434,6 +8443,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:1.15.6":
+  version: 1.15.6
+  resolution: "follow-redirects@npm:1.15.6"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: a62c378dfc8c00f60b9c80cab158ba54e99ba0239a5dd7c81245e5a5b39d10f0c35e249c3379eae719ff0285fff88c365dd446fab19dee771f1d76252df1bbf5
+  languageName: node
+  linkType: hard
+
 "for-each@npm:^0.3.3":
   version: 0.3.3
   resolution: "for-each@npm:0.3.3"
@@ -12504,6 +12523,7 @@ __metadata:
     "@percy/cli": 1.28.0
     "@percy/selenium-webdriver": 2.0.2
     "@playwright/test": 1.41.1
+    "@types/follow-redirects": ^1.14.4
     "@types/node": 20.11.13
     "@wdio/browserstack-service": 8.24.1
     "@wdio/cli": 8.19.0
@@ -12513,6 +12533,7 @@ __metadata:
     commitizen: 4.3.0
     cross-env: 7.0.3
     cz-customizable: 7.0.0
+    follow-redirects: 1.15.6
     playwright-merge-html-reports: 0.2.8
     selenium-webdriver: 4.14.0
     turbo: 1.12.2

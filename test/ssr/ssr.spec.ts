@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
-import http from 'http';
-import https from 'https';
+import { http, https } from 'follow-redirects';
 import { URL } from 'url';
 import { getEnvironmentBaseUrl } from '../../playwright-helpers/configuration-helper';
 

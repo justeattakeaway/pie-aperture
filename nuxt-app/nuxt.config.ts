@@ -2,12 +2,6 @@
 export default defineNuxtConfig({
   ssr: true,
 
-  router: {
-    options: {
-        strict: false,
-    },
-  },
-
   nitro: {
       moduleSideEffects: [
           '@justeattakeaway/pie-icons-webc',
