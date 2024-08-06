@@ -247,7 +247,8 @@ export default function Form() {
                         onChange={handleNewsletterSignup}>
                         Receive discounts, loyalty offers and other updates via email
                     </PieCheckbox>
-                    <PieCheckboxGroup label="Choose the way we can contact you">
+                    <PieCheckboxGroup>
+                        <PieFormLabel>Choose the way we can contact you:</PieFormLabel>
                         <PieCheckbox
                             id="contactByEmail"
                             data-test-id="contactByEmail"

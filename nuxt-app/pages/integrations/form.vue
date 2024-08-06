@@ -127,7 +127,8 @@
                     Receive discounts, loyalty offers and other updates via email
                 </pie-checkbox>
 
-                <pie-checkbox-group label="Choose the way we can contact you">
+                <pie-checkbox-group>
+                    <pie-form-label>Choose the way we can contact you:</pie-form-label>
                     <pie-checkbox
                         id="contactByEmail"
                         name="contactByEmail"
