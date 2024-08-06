@@ -8,6 +8,8 @@ on:
       - 'nextjs-app-v13/**'
       - 'webdriver-helpers/**'
       - 'wdio.conf.js'
+      - 'test/**'
+      - 'playwright-helpers/**'
 
   push:
     branches:

@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
-import http from 'http';
-import https from 'https';
+import { http, https } from 'follow-redirects';
 import { URL } from 'url';
 import { getEnvironmentBaseUrl } from '../../playwright-helpers/configuration-helper';
 
@@ -39,6 +38,9 @@ async function fetchHtml(url: string): Promise<string> {
 
         protocol.get(url, (response) => {
             let data = '';
+
+            console.info('Getting', url);
+            console.info('Status:', response.statusCode);
 
             response.on('data', (chunk) => {
                 data += chunk;
@@ -82,9 +84,9 @@ test.describe('SSR - Components render with shadow dom and styles', () => {
             const pieComponentMatch = rawHtml.match(componentRegex);
 
             if (!pieComponentMatch) {
-                console.warn('Get component page baseURL output: ', baseUrl)
-                console.warn('Get component page URL output: ', url)
-                console.warn('Failed to find component in the SSR html: ', rawHtml)
+                console.warn('Get component page baseURL output:', baseUrl);
+                console.warn('Get component page URL output:', url);
+                console.warn('Failed to find component in the SSR html:', rawHtml);
             }
 
             const pieComponentHtml = pieComponentMatch ? pieComponentMatch[0] : null;
