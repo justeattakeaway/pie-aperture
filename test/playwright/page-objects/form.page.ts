@@ -9,6 +9,7 @@ export class FormPage {
     readonly urlField: Locator;
     readonly telField: Locator;
     readonly passwordField: Locator;
+    readonly descriptionField: Locator;
     readonly approveSettingsSwitch: Locator;
     readonly enableNotificationsSwitch: Locator;
     readonly resetBtn: Locator;
@@ -24,6 +25,7 @@ export class FormPage {
         this.urlField = page.getByTestId('url');
         this.telField = page.getByTestId('tel');
         this.passwordField = page.getByTestId('password');
+        this.descriptionField = page.getByTestId('description');
         this.approveSettingsSwitch = page.getByTestId('approveSettings').getByTestId('switch-component');
         this.enableNotificationsSwitch = page.getByTestId('enableNotifications').getByTestId('switch-component');
         this.newsletterSignupCheckbox = page.getByTestId('newsletterSignup').getByTestId('checkbox-component');
@@ -46,6 +48,7 @@ export class FormPage {
         await this.urlField.locator('input').fill(formData.url);
         await this.telField.locator('input').fill(formData.tel);
         await this.passwordField.locator('input').fill(formData.password);
+        await this.descriptionField.locator('textarea').fill(formData.description);
 
         if (formData.approveSettings) {
             await this.approveSettingsSwitch.click();

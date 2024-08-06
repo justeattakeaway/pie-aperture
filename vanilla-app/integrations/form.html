@@ -45,14 +45,18 @@
             <icon-key slot="leadingIcon"></icon-key>
         </pie-text-input>
 
+        <pie-form-label for="description">Description:</pie-form-label>
+        <pie-textarea class="form-field" id="description" data-test-id="description" name="description">
+        </pie-textarea>
+
         <div class="form-controls">
             <pie-switch label="Approve settings" id="approveSettings" data-test-id="approveSettings"
                 name="approveSettings"></pie-switch>
 
             <pie-switch label="Enable Notifications" data-test-id="enableNotifications" id="enableNotifications"
                 name="enableNotifications"></pie-switch>
-            <pie-checkbox label="Receive discounts, loyalty offers and other updates via email" data-test-id="newsletterSignup" id="newsletterSignup"
-                name="newsletterSignup"></pie-checkbox>
+            <pie-checkbox data-test-id="newsletterSignup" id="newsletterSignup"
+                name="newsletterSignup">Receive discounts, loyalty offers and other updates via email</pie-checkbox>
         </div>
         <div class="form-btns">
             <pie-button class="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</pie-button>

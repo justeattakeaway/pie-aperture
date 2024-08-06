@@ -4,6 +4,7 @@ import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
 import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
+import { PieTextarea } from '@justeattakeaway/pie-webc/react/textarea.js';
 import { PieCheckbox } from '@justeattakeaway/pie-webc/react/checkbox.js';
 import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
 import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
@@ -27,6 +28,7 @@ export default function Form() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [description, setDescription] = useState('');
 
     const handleUsernameInput = (event: InputEvent) => {
         setUsername((event.target as HTMLInputElement).value);
@@ -78,6 +80,10 @@ export default function Form() {
         setNewsletterSignup(current => !current);
     };
 
+    const handleDescriptionTextarea = (event: InputEvent) => {
+        setDescription((event.target as HTMLTextAreaElement).value);
+    }
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
@@ -90,7 +96,8 @@ export default function Form() {
             email,
             url,
             tel,
-            password
+            password,
+            description
         };
 
         setFormDataDisplay(JSON.stringify(data, null, 2));
@@ -188,6 +195,17 @@ export default function Form() {
                     <IconKey slot="leadingIcon"></IconKey>
                 </PieTextInput>
 
+                <PieFormLabel for="description">
+                    Description:
+                </PieFormLabel>
+                <PieTextarea
+                    className="form-field"
+                    id="description"
+                    data-test-id="description"
+                    name="description"
+                    value={description}
+                    onInput={handleDescriptionTextarea as any}/>
+
                 <div className="form-controls">
                     <PieFormLabel for="approveSettings">
                         Approve settings
@@ -208,13 +226,12 @@ export default function Form() {
                         onChange={handleNotificationsChange}
                     />
                     <PieCheckbox
-                        label="Receive discounts, loyalty offers and other updates via email"
                         id="newsletterSignup"
                         data-test-id="newsletterSignup"
                         name="newsletterSignup"
                         checked={newsletterSignup}
                         onChange={handleNewsletterSignup}
-                    />
+                    >Receive discounts, loyalty offers and other updates via email</PieCheckbox>
                 </div>
                 <div className='form-btns'>
                     <PieButton className="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</PieButton>

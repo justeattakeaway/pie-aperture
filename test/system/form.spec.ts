@@ -14,6 +14,7 @@ test.describe(`Form Page - ${process.env.APP_NAME}`, () => {
             approveSettings: true,
             enableNotifications: true,
             newsletterSignup: true,
+            description: 'foo',
         };
 
         const formPage = new FormPage(page);
