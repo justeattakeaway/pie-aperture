@@ -2,7 +2,7 @@ import  CheckboxGroup  from './checkbox-group';
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'CheckboxGroup',
+    title: 'Checkbox Group',
 }
 
 export default function CheckboxGroupComponent() {
