@@ -6,6 +6,7 @@ import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
 import { PieTextarea } from '@justeattakeaway/pie-webc/react/textarea.js';
 import { PieCheckbox } from '@justeattakeaway/pie-webc/react/checkbox.js';
+import { PieCheckboxGroup } from "@justeattakeaway/pie-webc/react/checkbox-group.js";
 import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
 import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
 import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
@@ -17,6 +18,8 @@ export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);
     const [enableNotifications, setNotifications] = useState(false);
     const [newsletterSignup, setNewsletterSignup] = useState(false);
+    const [contactByPhone, setContactByPhone] = useState(false);
+    const [contactByEmail, setContactByEmail] = useState(false);
     const [favouriteNumber, setFavouriteNumber] = useState('');
     const [favouriteNumberValidationMessage, setFavouriteNumberValidationMessage] = useState('');
 
@@ -84,6 +87,14 @@ export default function Form() {
         setDescription((event.target as HTMLTextAreaElement).value);
     }
 
+    const handleContactByPhone = () => {
+        setContactByPhone(current => !current);
+    };
+
+    const handleContactByEmail = () => {
+        setContactByEmail(current => !current);
+    };
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
@@ -93,6 +104,8 @@ export default function Form() {
             newsletterSignup,
             username,
             favouriteNumber,
+            contactByEmail,
+            contactByPhone,
             email,
             url,
             tel,
@@ -230,8 +243,29 @@ export default function Form() {
                         data-test-id="newsletterSignup"
                         name="newsletterSignup"
                         checked={newsletterSignup}
-                        onChange={handleNewsletterSignup}
-                    >Receive discounts, loyalty offers and other updates via email</PieCheckbox>
+                        onChange={handleNewsletterSignup}>
+                        Receive discounts, loyalty offers and other updates via email
+                    </PieCheckbox>
+
+                    <PieCheckboxGroup>
+                        <PieFormLabel slot="label">Choose the way we can contact you:</PieFormLabel>
+                        <PieCheckbox
+                            id="contactByEmail"
+                            data-test-id="contactByEmail"
+                            checked={contactByEmail}
+                            name="contactByEmail"
+                            onChange={handleContactByEmail}>
+                            Contact By Email
+                        </PieCheckbox>
+                        <PieCheckbox
+                            id="contactByPhone"
+                            data-test-id="contactByPhone"
+                            checked={contactByPhone}
+                            name="contactByPhone"
+                            onChange={handleContactByPhone}>
+                            Contact By Phone
+                        </PieCheckbox>
+                    </PieCheckboxGroup>
                 </div>
                 <div className='form-btns'>
                     <PieButton className="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</PieButton>

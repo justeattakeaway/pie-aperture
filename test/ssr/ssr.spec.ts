@@ -14,6 +14,7 @@ const components = [
     'button',
     'card',
     'checkbox',
+    'checkbox-group',
     'chip',
     'cookie-banner',
     'form-label',

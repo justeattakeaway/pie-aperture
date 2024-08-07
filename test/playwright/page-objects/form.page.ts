@@ -16,6 +16,8 @@ export class FormPage {
     readonly submitBtn: Locator;
     readonly outputData: Locator;
     readonly newsletterSignupCheckbox: Locator;
+    readonly contactByEmailCheckbox: Locator;
+    readonly contactByPhoneCheckbox: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -29,6 +31,8 @@ export class FormPage {
         this.approveSettingsSwitch = page.getByTestId('approveSettings').getByTestId('switch-component');
         this.enableNotificationsSwitch = page.getByTestId('enableNotifications').getByTestId('switch-component');
         this.newsletterSignupCheckbox = page.getByTestId('newsletterSignup').getByTestId('checkbox-component');
+        this.contactByEmailCheckbox = page.getByTestId('contactByEmail').getByTestId('checkbox-component');
+        this.contactByPhoneCheckbox = page.getByTestId('contactByPhone').getByTestId('checkbox-component');
         this.resetBtn = page.getByTestId('reset-btn');
         this.submitBtn = page.getByTestId('submit-btn');
 
@@ -60,6 +64,14 @@ export class FormPage {
 
         if (formData.newsletterSignup) {
             await this.newsletterSignupCheckbox.click();
+        }
+
+        if (formData.contactByEmail) {
+            await this.contactByEmailCheckbox.click();
+        }
+
+        if (formData.contactByPhone) {
+            await this.contactByPhoneCheckbox.click();
         }
     }
 

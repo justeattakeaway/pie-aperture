@@ -55,8 +55,15 @@
 
             <pie-switch label="Enable Notifications" data-test-id="enableNotifications" id="enableNotifications"
                 name="enableNotifications"></pie-switch>
-            <pie-checkbox data-test-id="newsletterSignup" id="newsletterSignup"
-                name="newsletterSignup">Receive discounts, loyalty offers and other updates via email</pie-checkbox>
+            <pie-checkbox data-test-id="newsletterSignup" id="newsletterSignup" name="newsletterSignup">
+                Receive discounts, loyalty offers and other updates via email
+            </pie-checkbox>
+
+            <pie-checkbox-group>
+                <pie-form-label slot="label">Choose the way we can contact you:</pie-form-label>
+                <pie-checkbox id="contactByEmail" name="contactByEmail" data-test-id="contactByEmail">Contact By Email</pie-checkbox>
+                <pie-checkbox id="contactByPhone" name="contactByPhone" data-test-id="contactByPhone">Contact By Phone</pie-checkbox>
+            </pie-checkbox-group>
         </div>
         <div class="form-btns">
             <pie-button class="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</pie-button>
