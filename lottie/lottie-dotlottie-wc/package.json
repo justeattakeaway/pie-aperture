@@ -1,0 +1,19 @@
+{
+  "name": "lottie-dotlottie-wc",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "analyze": "npx vite-bundle-visualizer -t network"
+  },
+  "devDependencies": {
+    "rollup-plugin-visualizer": "^5.12.0",
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "@lottiefiles/dotlottie-wc": "^0.2.15"
+  }
+}
