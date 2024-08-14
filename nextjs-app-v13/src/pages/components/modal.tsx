@@ -14,8 +14,8 @@ export default function Modal() {
             heading="Modal Header"
             isDismissible
             hasBackButton
-            leadingActionText="Confirm"
-            supportingActionText="Cancel"
+            leadingAction={{ text: 'Confirm' }}
+            supportingAction={{ text: 'Cancel' }}
             onPieModalClose={() => setIsModalOpen(false)}
             onPieModalBack={() => setIsModalOpen(false)}
         >

@@ -5,11 +5,15 @@
         heading="Modal Header"
         hasBackButton
         isDismissible
-        :isOpen="open ? open : undefined"
+        :isOpen="open"
+        :leadingAction="{
+          text: 'Confirm'
+        }"
+        :supportingAction="{
+          text: 'Cancel'
+        }"
         @pie-modal-close="handleModalClose"
         @pie-modal-back="handleModalClose"
-        leadingActionText="Confirm"
-        supportingActionText="Cancel"
     >
       <p>Modal content</p>
     </pie-modal>

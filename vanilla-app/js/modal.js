@@ -7,13 +7,12 @@ document.querySelector('#app').innerHTML = `
     <pie-button id="modal-trigger" type="button">Open Modal</pie-button>
     <pie-modal
         id="modal"
-        isOpen="true"
+        isOpen
         heading="Modal Header"
-        leadingActionText='Confirm'
-        supportingActionText='Cancel'
+        leadingAction='${JSON.stringify({ text: 'Confirm' })}'
+        supportingAction='${JSON.stringify({ text: 'Cancel' })}'
         isDismissible
-        hasBackButton
-    >
+        hasBackButton>
       <p>Modal content</p>
     </pie-modal>`;
 
