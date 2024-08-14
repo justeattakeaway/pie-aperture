@@ -7,7 +7,9 @@
     <pie-notification
         variant="info"
         heading="Title"
-        :isOpen="isNotificationOpen ? isNotificationOpen : undefined"
+        :isOpen="isNotificationOpen"
+        :leadingAction="leadingAction"
+        :supportingAction="supportingAction"
         @pie-notification-close="handleCloseNotification"
         @pie-notification-open="handleOpenNotification"
         @pie-notification-leading-action-click="handleCloseNotification"
