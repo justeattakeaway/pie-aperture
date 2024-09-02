@@ -21,6 +21,7 @@ const components = [
     'icon',
     'icon-button',
     'link',
+    'lottie-player',
     'modal',
     'spinner',
     'switch',
