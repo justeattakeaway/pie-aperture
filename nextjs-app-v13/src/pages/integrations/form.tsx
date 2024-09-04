@@ -216,6 +216,7 @@ export default function Form() {
                     id="description"
                     data-test-id="description"
                     name="description"
+                    placeholder="Write something about yourself..."
                     value={description}
                     onInput={handleDescriptionTextarea as any}/>
 

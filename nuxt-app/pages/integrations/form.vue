@@ -94,6 +94,7 @@
             </pie-form-label>
             <pie-textarea
                 :value="description"
+                placeholder="Write something about yourself..."
                 @input="description = $event.target.value"
                 class="form-field"
                 id="description"

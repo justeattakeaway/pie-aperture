@@ -14,10 +14,10 @@
     "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "dependencies": {
-    "@justeattakeaway/pie-cookie-banner": "0.25.0",
+    "@justeattakeaway/pie-cookie-banner": "0.26.2",
     "@justeattakeaway/pie-css": "0.12.1",
-    "@justeattakeaway/pie-icons-webc": "0.25.0",
-    "@justeattakeaway/pie-webc": "0.5.25",
+    "@justeattakeaway/pie-icons-webc": "0.25.1",
+    "@justeattakeaway/pie-webc": "0.5.28",
     "@lit-labs/nextjs": "0.2.0",
     "@lit/react": "1.0.5",
     "next": "14.2.3",
