@@ -49,7 +49,7 @@ document.querySelector('#app').innerHTML = `
     <div class="c-tag-container">
         ${variants.map((variant) => `
             <pie-tag
-                key="${variant}"
+                variant="${variant}"
                 isInteractive
                 isStrong>
                 ${variant}
