@@ -65,3 +65,9 @@ pie-divider {
 ul {
   list-style: none;
 }
+
+.c-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dt-spacing-b);
+}

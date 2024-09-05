@@ -1,7 +1,0 @@
-.icon-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
-    gap: var(--dt-spacing-c);
-    justify-items: center;
-    align-items: center;
-}

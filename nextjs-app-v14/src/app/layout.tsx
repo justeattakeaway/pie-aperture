@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import "@justeattakeaway/pie-css";
 import "@/styles/main.scss";
-import "@/styles/icons.scss";
 
 export const metadata: Metadata = {
   title: {

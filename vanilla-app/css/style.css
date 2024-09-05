@@ -55,7 +55,7 @@ pie-divider {
 .form-btns {
     margin-top: var(--dt-spacing-c);
     display: flex;
-    gap: var(--dt-spacing-a)
+    gap: var(--dt-spacing-a);
 }
 
 .form-btns>.form-btn:first-of-type {
@@ -64,4 +64,10 @@ pie-divider {
 
 ul {
 	list-style-type: none;
+}
+
+.c-tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dt-spacing-b);
 }
