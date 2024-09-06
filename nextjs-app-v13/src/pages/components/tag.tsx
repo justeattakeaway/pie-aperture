@@ -1,7 +1,7 @@
 import NavigationLayout from '@/layout/navigation';
 import { PieTag, variants } from '@justeattakeaway/pie-webc/react/tag.js';
 import { PieDivider } from '@justeattakeaway/pie-webc/react/divider.js';
-import '@/styles/tag.scss';
+import styles from '../../styles/tag.module.scss';
 
 export default function Tag() {
     return (
@@ -9,7 +9,7 @@ export default function Tag() {
         <h2>Non-interactive</h2>
 
             <h3>Default</h3>
-            <div className="c-tag-container">
+            <div className={styles.cTagContainer}>
                 {variants.map((variant) => (
                     <PieTag
                         key={variant}
@@ -21,7 +21,7 @@ export default function Tag() {
 
             <h3>Strong</h3>
 
-            <div className="c-tag-container">
+            <div className={styles.cTagContainer}>
                 {variants.map((variant) => (
                     <PieTag
                         key={variant}
@@ -38,7 +38,7 @@ export default function Tag() {
 
             <h3>Default</h3>
 
-            <div className="c-tag-container">
+            <div className={styles.cTagContainer}>
                 {variants.map((variant) => (
                     <PieTag
                         isInteractive
@@ -51,7 +51,7 @@ export default function Tag() {
 
             <h3>Strong</h3>
 
-            <div className="c-tag-container">
+            <div className={styles.cTagContainer}>
                 {variants.map((variant) => (
                     <PieTag
                         isInteractive
