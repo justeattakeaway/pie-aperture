@@ -30,44 +30,6 @@ pie-divider {
     margin-block: 2em;
 }
 
-/* Form Styles */
-.form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-field {
-    margin-bottom: var(--dt-spacing-b);
-}
-
-.form-controls {
-    margin-top: var(--dt-spacing-e);
-
-    >* {
-        display: block;
-    }
-
-    >*+* {
-        margin-top: var(--dt-spacing-b);
-    }
-}
-
-.form-btns {
-    margin-top: var(--dt-spacing-c);
-    display: flex;
-    gap: var(--dt-spacing-a);
-}
-
-.form-btns>.form-btn:first-of-type {
-    margin-left: auto;
-}
-
 ul {
 	list-style-type: none;
-}
-
-.c-tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--dt-spacing-b);
 }

@@ -1,6 +1,7 @@
-import NavigationLayout from "@/layout/navigation";
+import NavigationLayout from '@/layout/navigation';
 import { PieTag, variants } from '@justeattakeaway/pie-webc/react/tag.js';
 import { PieDivider } from '@justeattakeaway/pie-webc/react/divider.js';
+import '@/styles/tag.scss';
 
 export default function Tag() {
     return (
