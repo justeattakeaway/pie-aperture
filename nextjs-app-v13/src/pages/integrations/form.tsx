@@ -268,7 +268,7 @@ export default function Form() {
                         </PieCheckbox>
                     </PieCheckboxGroup>
                 </div>
-                <div className='form-btns'>
+                <div className="form-btns">
                     <PieButton className="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</PieButton>
                     <PieButton className="form-btn" data-test-id="submit-btn" type="submit">Submit</PieButton>
                 </div>

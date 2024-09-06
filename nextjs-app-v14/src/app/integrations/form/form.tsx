@@ -15,6 +15,7 @@ import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.
 import { IconUser } from '@justeattakeaway/pie-icons-webc/dist/react/IconUser.js';
 import { IconNumberSymbol } from '@justeattakeaway/pie-icons-webc/dist/react/IconNumberSymbol.js';
 import { IconKey } from '@justeattakeaway/pie-icons-webc/dist/react/IconKey.js';
+import '@/styles/form.scss';
 
 export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);

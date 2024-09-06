@@ -14,6 +14,7 @@ import '@justeattakeaway/pie-icons-webc/dist/IconKey.js';
 
 import './utils/navigation.js';
 import './shared.js';
+import '../css/form.css';
 
 const form = document.querySelector('#testForm');
 const output = document.querySelector('#output');
