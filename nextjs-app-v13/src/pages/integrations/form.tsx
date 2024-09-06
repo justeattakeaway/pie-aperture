@@ -13,7 +13,6 @@ import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.
 import { IconUser } from '@justeattakeaway/pie-icons-webc/dist/react/IconUser.js';
 import { IconNumberSymbol } from '@justeattakeaway/pie-icons-webc/dist/react/IconNumberSymbol.js';
 import { IconKey } from '@justeattakeaway/pie-icons-webc/dist/react/IconKey.js';
-import styles from '@/styles/form.module.scss';
 
 export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);
@@ -119,12 +118,12 @@ export default function Form() {
 
     return (
         <NavigationLayout title="Form Test Page">
-            <form className={styles.form} id="testForm" onSubmit={handleSubmit}>
+            <form className="form" id="testForm" onSubmit={handleSubmit}>
                 <PieFormLabel for="username">
                     Username:
                 </PieFormLabel>
                 <PieTextInput
-                    className={styles.formField}
+                    className="form-field"
                     id="username"
                     data-test-id="username"
                     name="username"
@@ -138,7 +137,7 @@ export default function Form() {
                     Favourite Number:
                 </PieFormLabel>
                 <PieTextInput
-                    className={styles.formField}
+                    className="form-field"
                     id="favouriteNumber"
                     data-test-id="favouriteNumber"
                     name="favouriteNumber"
@@ -157,7 +156,7 @@ export default function Form() {
                     Email:
                 </PieFormLabel>
                 <PieTextInput
-                    className={styles.formField}
+                    className="form-field"
                     id="email"
                     data-test-id="email"
                     name="email"
@@ -171,7 +170,7 @@ export default function Form() {
                     Website:
                 </PieFormLabel>
                 <PieTextInput
-                    className={styles.formField}
+                    className="form-field"
                     id="url"
                     data-test-id="url"
                     name="url"
@@ -185,7 +184,7 @@ export default function Form() {
                     Telephone:
                 </PieFormLabel>
                 <PieTextInput
-                    className={styles.formField}
+                    className="form-field"
                     id="tel"
                     data-test-id="tel"
                     name="tel"
@@ -199,7 +198,7 @@ export default function Form() {
                     Password:
                 </PieFormLabel>
                 <PieTextInput
-                    className={styles.formField}
+                    className="form-field"
                     id="password"
                     data-test-id="password"
                     name="password"
@@ -213,7 +212,7 @@ export default function Form() {
                     Description:
                 </PieFormLabel>
                 <PieTextarea
-                    className={styles.formField}
+                    className="form-field"
                     id="description"
                     data-test-id="description"
                     name="description"
@@ -221,7 +220,7 @@ export default function Form() {
                     value={description}
                     onInput={handleDescriptionTextarea as any}/>
 
-                <div className={styles.formControls}>
+                <div className="form-controls">
                     <PieFormLabel for="approveSettings">
                         Approve settings
                     </PieFormLabel>
@@ -269,9 +268,9 @@ export default function Form() {
                         </PieCheckbox>
                     </PieCheckboxGroup>
                 </div>
-                <div className={styles.formBtns}>
-                    <PieButton className={styles.formBtn} data-test-id="reset-btn" variant="secondary" type="reset">Reset</PieButton>
-                    <PieButton className={styles.formBtn} data-test-id="submit-btn" type="submit">Submit</PieButton>
+                <div className="form-btns">
+                    <PieButton className="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</PieButton>
+                    <PieButton className="form-btn" data-test-id="submit-btn" type="submit">Submit</PieButton>
                 </div>
             </form>
             {formDataDisplay && (
