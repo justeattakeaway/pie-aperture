@@ -19,6 +19,7 @@ document.querySelector('#navigation').innerHTML = `
         <li><pie-link href="/components/icon.html">Icon</pie-link></li>
         <li><pie-link href="/components/icon-button.html">Icon Button</pie-link></li>
         <li><pie-link href="/components/link.html">Link</pie-link></li>
+        <li><pie-link href="/components/lottie-player.html">Lottie Player</pie-link></li>
         <li><pie-link href="/components/modal.html">Modal</pie-link></li>
         <li><pie-link href="/components/notification.html">Notification</pie-link></li>
         <li><pie-link href="/components/spinner.html">Spinner</pie-link></li>

@@ -16,6 +16,7 @@ describe('Nuxt Aperture App', () => {
         { url: '/components/icon.html', name: 'Icon' },
         { url: '/components/icon-button.html', name: 'Icon Button' },
         { url: '/components/link.html', name: 'Link' },
+        { url: '/components/lottie-player.html', name: 'Lottie Player' },
         { url: '/components/modal.html', name: 'Modal' },
         { url: '/components/notification.html', name: 'Notification' },
         { url: '/components/spinner.html', name: 'Spinner' },
