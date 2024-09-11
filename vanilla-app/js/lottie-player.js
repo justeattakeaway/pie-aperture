@@ -17,13 +17,15 @@ function handleLoadAnimationClick() {
         .animationSrc = animationPath;
 }
 
+const isRunningInPercy = document.location.search.indexOf('PERCY=true') > -1;
+const autoplay = isRunningInPercy ? 'autoPlayDisabled' : '';
+
 // Set initial HTML structure
-const rowStyle = 'display:flex; margin: 1rem 0;';
 document.querySelector('#app').innerHTML = `
     <div>
         <pie-button class="load" size="xsmall">load another animation</pie-button>
     </div>
-    <pie-lottie-player animationSrc="${animations[animationIndex% animations.length]}"></pie-lottie-player>
+    <pie-lottie-player animationSrc="${animations[animationIndex% animations.length]}" ${autoplay}></pie-lottie-player>
 `;
 
 document.querySelector('.load').addEventListener('click', handleLoadAnimationClick);
