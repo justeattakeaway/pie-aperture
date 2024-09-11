@@ -16,7 +16,7 @@ describe('Vanilla Aperture App', () => {
         { url: '/components/icon.html', name: 'Icon' },
         { url: '/components/icon-button.html', name: 'Icon Button' },
         { url: '/components/link.html', name: 'Link' },
-        { url: '/components/lottie-player.html', name: 'Lottie Player' },
+        { url: '/components/lottie-player.html', name: 'Lottie Player', pauseBeforeScreenshot: true },
         { url: '/components/modal.html', name: 'Modal' },
         { url: '/components/notification.html', name: 'Notification' },
         { url: '/components/spinner.html', name: 'Spinner' },
@@ -30,6 +30,9 @@ describe('Vanilla Aperture App', () => {
         it(`should navigate to the ${page.name} page.`, async () => {
             await browser.url(`${page.url}?PERCY=true`);
             await waitForPageTitleToBe(page.name);
+            // Some components might require extra time to mount and load its dependencies.
+            // Delaying the screenshot helps to avoid false negatives in diffs.
+            if (page.pauseBeforeScreenshot) await browser.pause(5000);
             await percyScreenshot(page.name);
         });
     });
