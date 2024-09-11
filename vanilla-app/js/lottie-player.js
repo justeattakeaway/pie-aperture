@@ -12,7 +12,7 @@ const animations = [
 
 function handleLoadAnimationClick() {
     animationIndex++;
-    const animationPath = animations[animationIndex% animations.length]
+    const animationPath = animations[animationIndex% animations.length];
     document.querySelector('pie-lottie-player')
         .animationSrc = animationPath;
 }
@@ -23,7 +23,7 @@ document.querySelector('#app').innerHTML = `
     <div>
         <pie-button class="load" size="xsmall">load another animation</pie-button>
     </div>
-    <pie-lottie-player animationSrc="/animations/preparing.json"></pie-lottie-player>
+    <pie-lottie-player animationSrc="${animations[animationIndex% animations.length]}"></pie-lottie-player>
 `;
 
 document.querySelector('.load').addEventListener('click', handleLoadAnimationClick);
