@@ -1,4 +1,4 @@
-import '@justeattakeaway/pie-lottie-player';
+import '@justeattakeaway/pie-webc/components/lottie-player.js';
 import '@justeattakeaway/pie-webc/components/button.js';
 import './shared.js';
 import './utils/navigation.js';

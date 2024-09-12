@@ -1,6 +1,6 @@
 import NavigationLayout from "@/layout/navigation";
-import { PieLottiePlayer } from '@justeattakeaway/pie-lottie-player/dist/react.js';
-import { PieButton } from '@justeattakeaway/pie-button/dist/react.js';
+import { PieLottiePlayer } from '@justeattakeaway/pie-webc/react/lottie-player.js';
+import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { useState } from "react";
 import { isServer } from 'lit';
 

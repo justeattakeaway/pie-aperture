@@ -14,7 +14,7 @@
 import { ref, onMounted } from 'vue';
 import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/button.js';
-import '@justeattakeaway/pie-lottie-player';
+import '@justeattakeaway/pie-webc/components/lottie-player.js';
 
 const animations = [
     "/animations/preparing.json",
