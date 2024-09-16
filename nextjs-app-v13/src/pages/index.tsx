@@ -25,6 +25,7 @@ export default function Home() {
       <li><PieLink onClick={() => router.push('/components/icon')} tag="button">Icon</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/icon-button')} tag="button">Icon Button</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/link')} tag="button">Link</PieLink></li>
+      <li><PieLink onClick={() => router.push('/components/lottie-player')} tag="button">Lottie Player</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/modal')} tag="button">Modal</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/notification')} tag="button">Notification</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/spinner')} tag="button">Spinner</PieLink></li>

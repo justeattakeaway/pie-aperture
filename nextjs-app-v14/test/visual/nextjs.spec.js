@@ -16,6 +16,7 @@ describe('NextJS Aperture App', () => {
         { url: '/components/icon', name: 'Icon' },
         { url: '/components/icon-button', name: 'Icon Button' },
         { url: '/components/link', name: 'Link' },
+        { url: '/components/lottie-player', name: 'Lottie Player', pauseBeforeScreenshot: true },
         { url: '/components/modal', name: 'Modal' },
         { url: '/components/notification', name: 'Notification' },
         { url: '/components/spinner', name: 'Spinner' },
@@ -27,8 +28,11 @@ describe('NextJS Aperture App', () => {
 
     pages.forEach((page) => {
         it(`should navigate to the ${page.name} page.`, async () => {
-            await browser.url(page.url);
+            await browser.url(`${page.url}?PERCY=true`);
             await waitForPageTitleToBe(page.name);
+            // Some components might require extra time to mount and load its dependencies.
+            // Delaying the screenshot helps to avoid false negatives in diffs.
+            if (page.pauseBeforeScreenshot) await browser.pause(5000);
             await percyScreenshot(page.name);
         });
     });

@@ -16,6 +16,7 @@
       <li><pie-link href="/components/form-label">Form Label</pie-link></li>
       <li><pie-link href="/components/icon">Icon</pie-link></li>
       <li><pie-link href="/components/icon-button">Icon Button</pie-link></li>
+      <li><pie-link href="/components/lottie-player">Lottie Player</pie-link></li>
       <li><pie-link href="/components/link">Link</pie-link></li>
       <li><pie-link href="/components/modal">Modal</pie-link></li>
       <li><pie-link href="/components/notification">Notification</pie-link></li>
