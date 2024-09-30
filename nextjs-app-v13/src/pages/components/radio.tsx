@@ -5,9 +5,8 @@ import { useState } from "react";
 export default function Radio() {
     const [isRadioChecked, setIsRadioCheck] = useState(false);
 
-    const handleRadioChange = () => {
+    const handleRadioInput = () => {
         setIsRadioCheck(current => !current);
-        console.log(isRadioChecked);
     };
 
     return (
@@ -15,7 +14,7 @@ export default function Radio() {
             <PieRadio
                 checked={isRadioChecked}
                 value="value"
-                onChange={handleRadioChange}>
+                onInput={handleRadioInput}>
                 {`checked: ${isRadioChecked}`}
             </PieRadio>
         </NavigationLayout>

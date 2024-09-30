@@ -98,8 +98,8 @@ export default function Form() {
         setContactByEmail(current => !current);
     };
 
-    const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setRadioValue(event.target.value);
+    const handleRadioInput = (event: InputEvent) => {
+        setRadioValue((event.target as HTMLInputElement).value);
     }
 
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -277,8 +277,8 @@ export default function Form() {
                     </PieCheckboxGroup>
 
                     <fieldset>
-                        <PieRadio value="radio-1" name="radio-group" onInput={handleRadioChange as any}>Radio 1</PieRadio>
-                        <PieRadio value="radio-2" name="radio-group" onInput={handleRadioChange as any}>Radio 2</PieRadio>
+                        <PieRadio value="radio-1" name="radio-group" onInput={handleRadioInput as any}>Radio 1</PieRadio>
+                        <PieRadio value="radio-2" name="radio-group" onInput={handleRadioInput as any}>Radio 2</PieRadio>
                     </fieldset>
                 </div>
                 <div className="form-btns">
