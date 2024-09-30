@@ -1,5 +1,5 @@
-import  Tag  from './tag';
-import { Metadata } from 'next'
+import Tag from './tag';
+import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Tag',
