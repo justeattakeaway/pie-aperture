@@ -128,6 +128,13 @@
                     Receive discounts, loyalty offers and other updates via email
                 </pie-checkbox>
 
+                <pie-radio
+                    value="value-1"
+                    name="radio-name"
+                    @change="radio = $event.target.value">
+                    Radio 1
+                </pie-radio>
+
                 <pie-checkbox-group>
                     <pie-form-label slot="label">Choose the way we can contact you:</pie-form-label>
                     <pie-checkbox
@@ -169,6 +176,7 @@ import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/form-label.js';
 import '@justeattakeaway/pie-webc/components/text-input.js';
 import '@justeattakeaway/pie-webc/components/textarea.js';
+import '@justeattakeaway/pie-webc/components/radio.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-webc/components/checkbox.js';
 import '@justeattakeaway/pie-webc/components/checkbox-group.js';
@@ -194,6 +202,7 @@ const favouriteNumber = ref('');
 const favouriteNumberValidationMessage = ref('');
 const newsletter = ref(false);
 const description = ref('');
+const radio = ref('');
 
 const contactByEmail = ref(false);
 const contactByPhone = ref(false);
@@ -221,6 +230,7 @@ function handleSubmit() {
         email: email.value,
         tel: tel.value,
         url: url.value,
+        radio: radio.value,
         password: password.value,
         approveSettings: approveSettings.value,
         enableNotifications: notifications.value,

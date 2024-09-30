@@ -17,5 +17,5 @@ document.querySelector('#app').innerHTML = `
     <pie-checkbox>checked: ${checked}</pie-checkbox>
 `;
 
-// Add event listener to pie-switch for change events
+// Add event listener to pie-checkbox for change events
 document.querySelector('pie-checkbox').addEventListener('change', handleCheckboxChange);
