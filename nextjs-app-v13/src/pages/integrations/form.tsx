@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import { type ChangeEvent, type FormEvent} from 'react';
+import { useState } from 'react';
 import NavigationLayout from '@/layout/navigation';
-import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
-import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
-import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
-import { PieTextarea } from '@justeattakeaway/pie-webc/react/textarea.js';
 import { PieCheckbox } from '@justeattakeaway/pie-webc/react/checkbox.js';
 import { PieCheckboxGroup } from "@justeattakeaway/pie-webc/react/checkbox-group.js";
+import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
+import { PieRadio } from '@justeattakeaway/pie-webc/react/radio.js';
+import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
+import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
+import { PieTextarea } from '@justeattakeaway/pie-webc/react/textarea.js';
 import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
 import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
 import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
@@ -32,6 +34,7 @@ export default function Form() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [description, setDescription] = useState('');
+    const [radioValue, setRadioValue] = useState('');
 
     const handleUsernameInput = (event: InputEvent) => {
         setUsername((event.target as HTMLInputElement).value);
@@ -95,7 +98,11 @@ export default function Form() {
         setContactByEmail(current => !current);
     };
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleRadioChange = (event: ChangeEvent<HTMLInputElement>) => {
+        setRadioValue(event.target.value);
+    }
+
+    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         const data = {
@@ -110,6 +117,7 @@ export default function Form() {
             url,
             tel,
             password,
+            radioValue,
             description
         };
 
@@ -147,7 +155,7 @@ export default function Form() {
                     onInput={handleFavouriteNumberInput as any} // Ensure type compatibility
                     type="number"
                     assistiveText={favouriteNumberValidationMessage}
-                    status={favouriteNumberValidationMessage ? 'error' : undefined}
+                    status={favouriteNumberValidationMessage ? 'error' : 'default'}
                 >
                     <IconNumberSymbol slot="leadingIcon"></IconNumberSymbol>
                 </PieTextInput>
@@ -267,6 +275,11 @@ export default function Form() {
                             Contact By Phone
                         </PieCheckbox>
                     </PieCheckboxGroup>
+
+                    <fieldset>
+                        <PieRadio value="radio-1" name="radio-group" onInput={handleRadioChange as any}>Radio 1</PieRadio>
+                        <PieRadio value="radio-2" name="radio-group" onInput={handleRadioChange as any}>Radio 2</PieRadio>
+                    </fieldset>
                 </div>
                 <div className="form-btns">
                     <PieButton className="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</PieButton>

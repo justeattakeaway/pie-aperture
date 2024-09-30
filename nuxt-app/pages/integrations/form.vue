@@ -128,12 +128,20 @@
                     Receive discounts, loyalty offers and other updates via email
                 </pie-checkbox>
 
-                <pie-radio
-                    value="value-1"
-                    name="radio-name"
-                    @change="radio = $event.target.value">
-                    Radio 1
-                </pie-radio>
+                <fieldset>
+                    <pie-radio
+                        value="radio-1"
+                        name="radio-group"
+                        @change="radio = $event.target.value">
+                        Radio 1
+                    </pie-radio>
+                    <pie-radio
+                        value="radio-2"
+                        name="radio-group"
+                        @change="radio = $event.target.value">
+                        Radio 2
+                    </pie-radio>
+                </fieldset>
 
                 <pie-checkbox-group>
                     <pie-form-label slot="label">Choose the way we can contact you:</pie-form-label>
