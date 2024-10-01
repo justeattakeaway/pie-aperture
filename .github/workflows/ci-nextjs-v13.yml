@@ -4,6 +4,7 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, "ready_for_review"]
     paths:
+      - 'packge.json'
       - '.github/workflows/**'
       - 'nextjs-app-v13/**'
       - 'webdriver-helpers/**'
