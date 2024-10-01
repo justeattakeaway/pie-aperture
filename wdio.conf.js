@@ -1,18 +1,18 @@
 const { createCapability } = require('./webdriver-helpers/configuration-helper');
 
 const capabilities = [
-    createCapability("OS X", "Big Sur", "Safari", "14.1"),
-    createCapability("OS X", "Ventura", "Safari", "16.0"),
+    createCapability("OS X", "Monterey", "Safari", "15.6"),
+    createCapability("OS X", "Sonoma", "Safari", "17.3"),
     createCapability("Windows", "11", "Chrome", "latest"),
-    createCapability("Windows", "11", "Chrome", "119"),
+    createCapability("Windows", "11", "Chrome", "126"),
     createCapability("Windows", "11", "Edge", "latest"),
-    createCapability("Windows", "11", "Edge", "119"),
+    createCapability("Windows", "11", "Edge", "126"),
     createCapability("Windows", "11", "Firefox", "latest"),
-    createCapability("Windows", "11", "Firefox", "120"),
-    createCapability(null, "17", "Safari", null, "iPhone 15"),
-    createCapability(null, "15", "Safari", null, "iPhone XS"),
-    createCapability(null, "14.0", "Chrome", null, "Google Pixel 8"),
-    createCapability(null, "11.0", "Chrome", null, "Google Pixel 5")
+    createCapability("Windows", "11", "Firefox", "127"),
+    createCapability(null, "18", "Safari", null, "iPhone 16"),
+    createCapability(null, "16", "Safari", null, "iPhone 14"),
+    createCapability(null, "14.0", "Chrome", null, "Google Pixel 9"),
+    createCapability(null, "11.0", "Chrome", null, "Google Pixel 6")
 ];
 
 exports.config = {
