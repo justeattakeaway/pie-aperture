@@ -1,5 +1,5 @@
-import  Card  from './card';
-import { Metadata } from 'next'
+import Card from './card';
+import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Card',

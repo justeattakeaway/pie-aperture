@@ -1,5 +1,5 @@
-import  Form  from './form';
-import { Metadata } from 'next'
+import Form from './form';
+import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Form',

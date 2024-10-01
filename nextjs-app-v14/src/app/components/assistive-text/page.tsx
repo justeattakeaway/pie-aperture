@@ -1,5 +1,5 @@
-import  AssistiveText  from './assistive-text';
-import { Metadata } from 'next'
+import AssistiveText from './assistive-text';
+import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Assistive Text',

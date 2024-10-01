@@ -1,5 +1,5 @@
-import  CookieBanner  from './cookie-banner';
-import { Metadata } from 'next'
+import CookieBanner from './cookie-banner';
+import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Cookie Banner',

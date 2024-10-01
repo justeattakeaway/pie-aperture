@@ -1,5 +1,5 @@
-import  Modal  from './modal';
-import { Metadata } from 'next'
+import Modal from './modal';
+import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Modal',

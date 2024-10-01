@@ -1,5 +1,5 @@
-import  Spinner  from './spinner';
-import { Metadata } from 'next'
+import Spinner from './spinner';
+import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Spinner',

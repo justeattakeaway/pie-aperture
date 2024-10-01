@@ -1,5 +1,5 @@
-import  Switch  from './switch';
-import { Metadata } from 'next'
+import Switch from './switch';
+import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Switch',

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import NavigationLayout from '@/app/layout/navigation';
 import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
+import { PieRadio } from '@justeattakeaway/pie-webc/react/radio.js';
 import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
@@ -25,6 +26,7 @@ export default function Form() {
     const [contactByEmail, setContactByEmail] = useState(false);
     const [favouriteNumber, setFavouriteNumber] = useState('');
     const [favouriteNumberValidationMessage, setFavouriteNumberValidationMessage] = useState('');
+    const [radioValue, setRadioValue] = useState('');
 
     const [formDataDisplay, setFormDataDisplay] = useState<string | null>(null);
 
@@ -74,6 +76,10 @@ export default function Form() {
         setPassword((event.target as HTMLInputElement).value);
     }
 
+    const handleRadioInput = (event: InputEvent) => {
+        setRadioValue((event.target as HTMLInputElement).value);
+    };
+
     const handleApproveSettingsChange = () => {
         setApproveSettings(current => !current);
     };
@@ -112,7 +118,8 @@ export default function Form() {
             url,
             tel,
             password,
-            description
+            radioValue,
+            description,
         };
 
         setFormDataDisplay(JSON.stringify(data, null, 2));
@@ -149,7 +156,7 @@ export default function Form() {
                     onInput={handleFavouriteNumberInput as any} // Ensure type compatibility
                     type="number"
                     assistiveText={favouriteNumberValidationMessage}
-                    status={favouriteNumberValidationMessage ? 'error' : undefined}
+                    status={favouriteNumberValidationMessage ? 'error' : 'default'}
                 >
                     <IconNumberSymbol slot="leadingIcon"></IconNumberSymbol>
                 </PieTextInput>
@@ -268,6 +275,11 @@ export default function Form() {
                             Contact By Phone
                         </PieCheckbox>
                     </PieCheckboxGroup>
+
+                    <fieldset>
+                        <PieRadio value="radio-1" name="radio-group" onInput={handleRadioInput as any}>Radio 1</PieRadio>
+                        <PieRadio value="radio-2" name="radio-group" onInput={handleRadioInput as any}>Radio 2</PieRadio>
+                    </fieldset>
                 </div>
                 <div className='form-btns'>
                     <PieButton className="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</PieButton>

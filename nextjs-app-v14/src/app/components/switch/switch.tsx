@@ -5,7 +5,7 @@ import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
 import { useState } from "react";
 
 export default function Switch() {
-    const [isSwitchChecked, setIsSwitchCheck] = useState(false)
+    const [isSwitchChecked, setIsSwitchCheck] = useState(false);
 
     const handleSwitchChange = () => {
       setIsSwitchCheck(current => !current);

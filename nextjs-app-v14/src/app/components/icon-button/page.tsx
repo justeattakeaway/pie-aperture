@@ -1,5 +1,5 @@
-import  IconButton  from './icon-button';
-import { Metadata } from 'next'
+import IconButton from './icon-button';
+import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Icon Button',
