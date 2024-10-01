@@ -1,5 +1,5 @@
-import  Textarea  from './textarea';
-import { Metadata } from 'next'
+import Textarea from './textarea';
+import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Textarea',

@@ -1,5 +1,5 @@
-import  Chip  from './chip';
-import { Metadata } from 'next'
+import Chip from './chip';
+import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Chip',

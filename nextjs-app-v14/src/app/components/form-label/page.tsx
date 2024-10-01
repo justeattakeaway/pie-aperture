@@ -1,5 +1,5 @@
-import  FormLabel  from './form-label';
-import { Metadata } from 'next'
+import FormLabel from './form-label';
+import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Form Label',
