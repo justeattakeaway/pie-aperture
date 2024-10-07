@@ -3161,22 +3161,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@percy/sdk-utils@npm:^1.27.2":
-  version: 1.28.8
-  resolution: "@percy/sdk-utils@npm:1.28.8"
-  checksum: c8a29a94ee9176a437c9a711082ded0b3f042de4fef2a60225943d1acc335ebb0ce057a167f4eab73a9f083d565ac18093338190323cb6ae181e369610450d04
+"@percy/sdk-utils@npm:^1.29.5-beta.0":
+  version: 1.30.0
+  resolution: "@percy/sdk-utils@npm:1.30.0"
+  checksum: cde64b02f0bc8de552c316a0cf4e882907fa9ac31a592618eba9a31406a2b4fea83d7135e3f45af8b651a53c222c60d21e437acd2542c85e5cff1005494f5e0d
   languageName: node
   linkType: hard
 
-"@percy/selenium-webdriver@npm:2.0.2":
-  version: 2.0.2
-  resolution: "@percy/selenium-webdriver@npm:2.0.2"
+"@percy/selenium-webdriver@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@percy/selenium-webdriver@npm:2.1.0"
   dependencies:
-    "@percy/sdk-utils": ^1.27.2
+    "@percy/sdk-utils": ^1.29.5-beta.0
     node-request-interceptor: ^0.6.3
-  peerDependencies:
-    selenium-webdriver: ~3 || ~4
-  checksum: 25e49b331562c667c86875e91d9c5ce4ae75374f7464b19aea1ba6de342d7c1dbb5f8431c82ece0021e7ddfeb8aaaaff5ef1ddebe93aea7251ef6494f876c474
+  checksum: d86e7cbc8a06d8f43251f798394ba201e8110c8ba142da3e15a7ecad08fab30e8d614f02919c08ff19e355a29ce8793fae8f512a82aa3699b7ac53308f51e037
   languageName: node
   linkType: hard
 
@@ -12710,7 +12708,7 @@ __metadata:
   resolution: "pie-aperture@workspace:."
   dependencies:
     "@percy/cli": 1.28.0
-    "@percy/selenium-webdriver": 2.0.2
+    "@percy/selenium-webdriver": 2.1.0
     "@playwright/test": 1.41.1
     "@types/follow-redirects": 1.14.4
     "@types/node": 20.11.13
