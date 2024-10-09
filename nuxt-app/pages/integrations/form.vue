@@ -131,13 +131,14 @@
                 <fieldset>
                     <pie-radio
                         value="radio-1"
-                        name="radio-group"
+                        name="radioValue"
                         @change="radio = $event.target.value">
                         Radio 1
                     </pie-radio>
                     <pie-radio
+                        data-test-id="radio-2"
                         value="radio-2"
-                        name="radio-group"
+                        name="radioValue"
                         @change="radio = $event.target.value">
                         Radio 2
                     </pie-radio>
@@ -238,7 +239,7 @@ function handleSubmit() {
         email: email.value,
         tel: tel.value,
         url: url.value,
-        radio: radio.value,
+        radioValue: radio.value,
         password: password.value,
         approveSettings: approveSettings.value,
         enableNotifications: notifications.value,

@@ -18,6 +18,7 @@ export class FormPage {
     readonly newsletterSignupCheckbox: Locator;
     readonly contactByEmailCheckbox: Locator;
     readonly contactByPhoneCheckbox: Locator;
+    readonly radioButton2: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -33,6 +34,7 @@ export class FormPage {
         this.newsletterSignupCheckbox = page.getByTestId('newsletterSignup').getByTestId('checkbox-component');
         this.contactByEmailCheckbox = page.getByTestId('contactByEmail').getByTestId('checkbox-component');
         this.contactByPhoneCheckbox = page.getByTestId('contactByPhone').getByTestId('checkbox-component');
+        this.radioButton2 = page.getByTestId('radio-2').getByTestId('pie-radio');
         this.resetBtn = page.getByTestId('reset-btn');
         this.submitBtn = page.getByTestId('submit-btn');
 
@@ -53,26 +55,12 @@ export class FormPage {
         await this.telField.locator('input').fill(formData.tel);
         await this.passwordField.locator('input').fill(formData.password);
         await this.descriptionField.locator('textarea').fill(formData.description);
-
-        if (formData.approveSettings) {
-            await this.approveSettingsSwitch.click();
-        }
-
-        if (formData.enableNotifications) {
-            await this.enableNotificationsSwitch.click();
-        }
-
-        if (formData.newsletterSignup) {
-            await this.newsletterSignupCheckbox.click();
-        }
-
-        if (formData.contactByEmail) {
-            await this.contactByEmailCheckbox.click();
-        }
-
-        if (formData.contactByPhone) {
-            await this.contactByPhoneCheckbox.click();
-        }
+        await this.approveSettingsSwitch.click();
+        await this.enableNotificationsSwitch.click();
+        await this.newsletterSignupCheckbox.click();
+        await this.contactByEmailCheckbox.click();
+        await this.contactByPhoneCheckbox.click();
+        await this.radioButton2.click();
     }
 
     async submitForm() {

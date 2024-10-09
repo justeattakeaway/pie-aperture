@@ -277,8 +277,8 @@ export default function Form() {
                     </PieCheckboxGroup>
 
                     <fieldset>
-                        <PieRadio value="radio-1" name="radio-group" onInput={handleRadioInput as any}>Radio 1</PieRadio>
-                        <PieRadio value="radio-2" name="radio-group" onInput={handleRadioInput as any}>Radio 2</PieRadio>
+                        <PieRadio value="radio-1" name="radioValue" onInput={handleRadioInput as any}>Radio 1</PieRadio>
+                        <PieRadio data-test-id="radio-2" value="radio-2" name="radioValue" onInput={handleRadioInput as any}>Radio 2</PieRadio>
                     </fieldset>
                 </div>
                 <div className='form-btns'>
