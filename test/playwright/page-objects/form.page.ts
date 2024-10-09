@@ -1,6 +1,22 @@
 import { type Locator, type Page } from '@playwright/test';
 const { APP_NAME } = process.env;
 
+export type TestFormData = {
+    username: string;
+    favouriteNumber: string;
+    email: string;
+    url: string;
+    tel: string;
+    password: string;
+    radioValue: string;
+    approveSettings: boolean;
+    enableNotifications: boolean;
+    newsletterSignup: boolean;
+    description: string;
+    contactByEmail: boolean;
+    contactByPhone: boolean;
+};
+
 export class FormPage {
     readonly page: Page;
     readonly usernameField: Locator;
@@ -47,7 +63,7 @@ export class FormPage {
         await this.page.goto(formattedUrl);
     }
 
-    async fillForm(formData: any) {
+    async fillForm(formData: TestFormData) {
         await this.usernameField.locator('input').fill(formData.username);
         await this.favouriteNumberField.locator('input').fill(formData.favouriteNumber);
         await this.emailField.locator('input').fill(formData.email);
