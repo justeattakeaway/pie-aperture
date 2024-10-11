@@ -19,6 +19,7 @@ describe('Nuxt Aperture App', () => {
         { url: '/components/lottie-player.html', name: 'Lottie Player', pauseBeforeScreenshot: true },
         { url: '/components/modal.html', name: 'Modal' },
         { url: '/components/notification.html', name: 'Notification' },
+        { url: '/components/radio.html', name: 'Radio' },
         { url: '/components/spinner.html', name: 'Spinner' },
         { url: '/components/switch.html', name: 'Switch' },
         { url: '/components/tag.html', name: 'Tag' },

@@ -1,17 +1,17 @@
 import { test, expect } from '@playwright/test';
-import { FormPage } from '../playwright/page-objects/form.page';
+import { FormPage, type TestFormData } from '../playwright/page-objects/form.page';
 
 test.describe(`Form Page - ${process.env.APP_NAME}`, () => {
     test('should submit the correct form data', async ({ page }) => {
         // Arrange
-        const expectFormData = {
+        const expectFormData: TestFormData = {
             username: 'John Doe',
             favouriteNumber: '42',
             email: 'foo@bar.com',
             url: 'https://example.com',
             tel: '1234567890',
             password: 'foo',
-            radioValue: '',
+            radioValue: 'radio-2',
             approveSettings: true,
             enableNotifications: true,
             newsletterSignup: true,
