@@ -16,21 +16,3 @@ applications:
       cache:
         paths:
           - node_modules/**/*
-
-  - appRoot: nextjs-app-v13
-    frontend:
-      phases:
-        preBuild:
-          commands:
-            - yarn install
-        build:
-          commands:
-            - yarn build
-      artifacts:
-        baseDirectory: .next
-        files:
-          - '**/*'
-      cache:
-        paths:
-          - node_modules/**/*
-        
