@@ -12,6 +12,6 @@ import '@justeattakeaway/pie-webc/components/textarea.js';
 import '@justeattakeaway/pie-webc/components/divider.js';
 
 definePageMeta({
-  title: 'PIE Textarea',
+  title: 'Textarea',
 });
 </script>

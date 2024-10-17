@@ -11,6 +11,6 @@ import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/assistive-text.js';
 
 definePageMeta({
-    title: 'PIE Assistive Text',
+    title: 'Assistive Text',
 });
 </script>

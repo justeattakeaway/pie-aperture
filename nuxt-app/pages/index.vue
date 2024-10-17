@@ -34,7 +34,7 @@
 import { definePageMeta } from '#imports';
 
 definePageMeta({
-    title: 'PIE Aperture',
+    title: 'Aperture',
 });
 
 </script>

@@ -11,6 +11,6 @@ import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/link.js';
 
 definePageMeta({
-    title: 'PIE Link',
+    title: 'Link',
 });
 </script>

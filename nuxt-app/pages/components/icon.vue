@@ -11,6 +11,6 @@ import '@justeattakeaway/pie-icons-webc/dist/IconPhone.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconPhoneLarge.js';
 
 definePageMeta({
-    title: 'PIE Icon',
+    title: 'Icon',
 });
 </script>

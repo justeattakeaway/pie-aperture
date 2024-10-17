@@ -11,7 +11,7 @@ import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/switch.js';
 
 definePageMeta({
-    title: 'PIE Switch',
+    title: 'Switch',
 });
 
 let checked = ref(false);

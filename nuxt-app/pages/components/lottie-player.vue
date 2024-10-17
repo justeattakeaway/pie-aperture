@@ -23,7 +23,7 @@ const animations = [
 ]
 
 definePageMeta({
-    title: 'PIE Lottie Player',
+    title: 'Lottie Player',
 });
 
 let animationIndex = ref(0);
