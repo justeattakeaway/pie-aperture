@@ -90,7 +90,7 @@
             </pie-text-input>
 
             <pie-form-label for="description">
-               Description:
+                Description:
             </pie-form-label>
             <pie-textarea
                 :value="description"
@@ -197,7 +197,7 @@ import '@justeattakeaway/pie-icons-webc/dist/IconNumberSymbol.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconKey.js';
 
 definePageMeta({
-  title: 'PIE Form Test Page',
+    title: 'PIE Form Test Page',
 });
 
 const username = ref('');

@@ -74,9 +74,9 @@ export class FormPage {
         await this.approveSettingsSwitch.click();
         await this.enableNotificationsSwitch.click();
         await this.newsletterSignupCheckbox.click();
+        await this.radioButton2.click();
         await this.contactByEmailCheckbox.click();
         await this.contactByPhoneCheckbox.click();
-        await this.radioButton2.click();
     }
 
     async submitForm() {
