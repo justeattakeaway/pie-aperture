@@ -12,7 +12,7 @@ import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/checkbox.js';
 
 definePageMeta({
-    title: 'PIE Checkbox',
+    title: 'Checkbox',
 });
 
 let checked = ref(false);

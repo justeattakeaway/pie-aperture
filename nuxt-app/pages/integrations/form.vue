@@ -197,7 +197,7 @@ import '@justeattakeaway/pie-icons-webc/dist/IconNumberSymbol.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconKey.js';
 
 definePageMeta({
-    title: 'PIE Form Test Page',
+    title: 'Form Test Page',
 });
 
 const username = ref('');

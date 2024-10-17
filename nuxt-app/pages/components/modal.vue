@@ -27,7 +27,7 @@ import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/modal.js';
 
 definePageMeta({
-    title: 'PIE Modal',
+    title: 'Modal',
 });
 
 let open = ref(true);

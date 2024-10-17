@@ -12,7 +12,7 @@ import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/button.js';
 
 definePageMeta({
-    title: 'PIE Button',
+    title: 'Button',
 });
 
 let counter = ref(0);

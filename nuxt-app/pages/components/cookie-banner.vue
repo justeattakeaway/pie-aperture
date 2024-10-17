@@ -11,7 +11,7 @@ import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/cookie-banner.js';
 
 definePageMeta({
-    title: 'PIE Cookie Banner',
+    title: 'Cookie Banner',
 });
 
 // TODO: DSW-1710 - Update this to use the TS declaration for locales.

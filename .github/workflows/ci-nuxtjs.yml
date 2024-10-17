@@ -111,10 +111,9 @@ jobs:
           path: playwright-reports/nuxt-app-playwright-report/
           retention-days: 7
 
-      # TODO - fix this test in DSW-2158
-      # - name: Run Percy Tests
-      #   shell: bash
-      #   run: yarn test:visual --filter=nuxt-app
+      - name: Run Percy Tests
+        shell: bash
+        run: yarn test:visual --filter=nuxt-app
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}

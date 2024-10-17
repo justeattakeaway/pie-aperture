@@ -56,7 +56,7 @@ import { variants } from '@justeattakeaway/pie-webc/components/tag.js';
 import '@justeattakeaway/pie-webc/components/divider.js';
 
 definePageMeta({
-    title: 'PIE Tag',
+    title: 'Tag',
 });
 </script>
 
