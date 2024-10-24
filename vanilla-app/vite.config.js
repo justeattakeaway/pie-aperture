@@ -14,5 +14,13 @@ export default defineConfig({
       ],
     },
   },
+  resolve: {
+    alias: {
+      '@justeattakeaway/pie-cookie-banner/locales': resolve(__dirname, './node_modules/@justeattakeaway/pie-cookie-banner/locales')
+    }
+  },
   plugins: [injectHTML()],
 })
+
+
+console.log('Alias set for locales:', resolve(__dirname, './node_modules/@justeattakeaway/pie-cookie-banner/locales'));
