@@ -33,7 +33,7 @@ const foodOptions: SelectProps['options'] = [
     }
 ];
 
-export default function Form() {
+export default function ControlledForm() {
     const [approveSettings, setApproveSettings] = useState(false);
     const [enableNotifications, setNotifications] = useState(false);
     const [newsletterSignup, setNewsletterSignup] = useState(false);
@@ -250,6 +250,18 @@ export default function Form() {
                     placeholder="Write something about yourself..."
                     value={description}
                     onInput={handleDescriptionTextarea as any}/>
+                    <PieFormLabel for="favouriteFood">
+                    Favourite Food:
+                </PieFormLabel>
+
+                <PieSelect
+                    className="form-field"
+                    id="favouriteFood"
+                    data-test-id="favouriteFood"
+                    name="favouriteFood"
+                    options={foodOptions}
+                    onChange={handleFavouriteFoodChange as any}
+                />
 
                 <PieFormLabel for="favouriteFood">
                     Favourite Food:
