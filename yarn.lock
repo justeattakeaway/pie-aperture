@@ -15464,6 +15464,7 @@ __metadata:
     deepmerge: 4.3.1
     vite: 5.4.11
     vite-plugin-html-inject: 1.1.2
+    vite-plugin-static-copy: ^2.1.0
   languageName: unknown
   linkType: soft
 
@@ -15568,6 +15569,20 @@ __metadata:
     "@nuxt/kit":
       optional: true
   checksum: 86c8bde2506171af58309470d9dfd0a29017f83f69eda5f1fc58949739251d3e11663fb1e8304abf836a389b2bf93f66c1a449d2d77949d77ecd1d90ddf06441
+  languageName: node
+  linkType: hard
+
+"vite-plugin-static-copy@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "vite-plugin-static-copy@npm:2.1.0"
+  dependencies:
+    chokidar: ^3.5.3
+    fast-glob: ^3.2.11
+    fs-extra: ^11.1.0
+    picocolors: ^1.0.0
+  peerDependencies:
+    vite: ^5.0.0
+  checksum: 1011af3f624671ba3dd5a0093d03dd198fd13bd9e7cc1215343acc54c2248ff41128b8d3adb28f37529653caae199eec16faaa4f2dca7386ef2698d83829455a
   languageName: node
   linkType: hard
 
