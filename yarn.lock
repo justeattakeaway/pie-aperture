@@ -775,13 +775,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/android-arm64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/android-arm64@npm:0.18.20"
-  conditions: os=android & cpu=arm64
-  languageName: node
-  linkType: hard
-
 "@esbuild/android-arm64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/android-arm64@npm:0.20.2"
@@ -800,13 +793,6 @@ __metadata:
   version: 0.23.1
   resolution: "@esbuild/android-arm64@npm:0.23.1"
   conditions: os=android & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@esbuild/android-arm@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/android-arm@npm:0.18.20"
-  conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
@@ -831,13 +817,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/android-x64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/android-x64@npm:0.18.20"
-  conditions: os=android & cpu=x64
-  languageName: node
-  linkType: hard
-
 "@esbuild/android-x64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/android-x64@npm:0.20.2"
@@ -856,13 +835,6 @@ __metadata:
   version: 0.23.1
   resolution: "@esbuild/android-x64@npm:0.23.1"
   conditions: os=android & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@esbuild/darwin-arm64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/darwin-arm64@npm:0.18.20"
-  conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
@@ -887,13 +859,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/darwin-x64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/darwin-x64@npm:0.18.20"
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
 "@esbuild/darwin-x64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/darwin-x64@npm:0.20.2"
@@ -912,13 +877,6 @@ __metadata:
   version: 0.23.1
   resolution: "@esbuild/darwin-x64@npm:0.23.1"
   conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@esbuild/freebsd-arm64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/freebsd-arm64@npm:0.18.20"
-  conditions: os=freebsd & cpu=arm64
   languageName: node
   linkType: hard
 
@@ -943,13 +901,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/freebsd-x64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/freebsd-x64@npm:0.18.20"
-  conditions: os=freebsd & cpu=x64
-  languageName: node
-  linkType: hard
-
 "@esbuild/freebsd-x64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/freebsd-x64@npm:0.20.2"
@@ -968,13 +919,6 @@ __metadata:
   version: 0.23.1
   resolution: "@esbuild/freebsd-x64@npm:0.23.1"
   conditions: os=freebsd & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@esbuild/linux-arm64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/linux-arm64@npm:0.18.20"
-  conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
@@ -999,13 +943,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-arm@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/linux-arm@npm:0.18.20"
-  conditions: os=linux & cpu=arm
-  languageName: node
-  linkType: hard
-
 "@esbuild/linux-arm@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/linux-arm@npm:0.20.2"
@@ -1024,13 +961,6 @@ __metadata:
   version: 0.23.1
   resolution: "@esbuild/linux-arm@npm:0.23.1"
   conditions: os=linux & cpu=arm
-  languageName: node
-  linkType: hard
-
-"@esbuild/linux-ia32@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/linux-ia32@npm:0.18.20"
-  conditions: os=linux & cpu=ia32
   languageName: node
   linkType: hard
 
@@ -1055,13 +985,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-loong64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/linux-loong64@npm:0.18.20"
-  conditions: os=linux & cpu=loong64
-  languageName: node
-  linkType: hard
-
 "@esbuild/linux-loong64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/linux-loong64@npm:0.20.2"
@@ -1080,13 +1003,6 @@ __metadata:
   version: 0.23.1
   resolution: "@esbuild/linux-loong64@npm:0.23.1"
   conditions: os=linux & cpu=loong64
-  languageName: node
-  linkType: hard
-
-"@esbuild/linux-mips64el@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/linux-mips64el@npm:0.18.20"
-  conditions: os=linux & cpu=mips64el
   languageName: node
   linkType: hard
 
@@ -1111,13 +1027,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-ppc64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/linux-ppc64@npm:0.18.20"
-  conditions: os=linux & cpu=ppc64
-  languageName: node
-  linkType: hard
-
 "@esbuild/linux-ppc64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/linux-ppc64@npm:0.20.2"
@@ -1136,13 +1045,6 @@ __metadata:
   version: 0.23.1
   resolution: "@esbuild/linux-ppc64@npm:0.23.1"
   conditions: os=linux & cpu=ppc64
-  languageName: node
-  linkType: hard
-
-"@esbuild/linux-riscv64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/linux-riscv64@npm:0.18.20"
-  conditions: os=linux & cpu=riscv64
   languageName: node
   linkType: hard
 
@@ -1167,13 +1069,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-s390x@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/linux-s390x@npm:0.18.20"
-  conditions: os=linux & cpu=s390x
-  languageName: node
-  linkType: hard
-
 "@esbuild/linux-s390x@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/linux-s390x@npm:0.20.2"
@@ -1195,13 +1090,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-x64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/linux-x64@npm:0.18.20"
-  conditions: os=linux & cpu=x64
-  languageName: node
-  linkType: hard
-
 "@esbuild/linux-x64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/linux-x64@npm:0.20.2"
@@ -1220,13 +1108,6 @@ __metadata:
   version: 0.23.1
   resolution: "@esbuild/linux-x64@npm:0.23.1"
   conditions: os=linux & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@esbuild/netbsd-x64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/netbsd-x64@npm:0.18.20"
-  conditions: os=netbsd & cpu=x64
   languageName: node
   linkType: hard
 
@@ -1258,13 +1139,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/openbsd-x64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/openbsd-x64@npm:0.18.20"
-  conditions: os=openbsd & cpu=x64
-  languageName: node
-  linkType: hard
-
 "@esbuild/openbsd-x64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/openbsd-x64@npm:0.20.2"
@@ -1283,13 +1157,6 @@ __metadata:
   version: 0.23.1
   resolution: "@esbuild/openbsd-x64@npm:0.23.1"
   conditions: os=openbsd & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@esbuild/sunos-x64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/sunos-x64@npm:0.18.20"
-  conditions: os=sunos & cpu=x64
   languageName: node
   linkType: hard
 
@@ -1314,13 +1181,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/win32-arm64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/win32-arm64@npm:0.18.20"
-  conditions: os=win32 & cpu=arm64
-  languageName: node
-  linkType: hard
-
 "@esbuild/win32-arm64@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/win32-arm64@npm:0.20.2"
@@ -1342,13 +1202,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/win32-ia32@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/win32-ia32@npm:0.18.20"
-  conditions: os=win32 & cpu=ia32
-  languageName: node
-  linkType: hard
-
 "@esbuild/win32-ia32@npm:0.20.2":
   version: 0.20.2
   resolution: "@esbuild/win32-ia32@npm:0.20.2"
@@ -1367,13 +1220,6 @@ __metadata:
   version: 0.23.1
   resolution: "@esbuild/win32-ia32@npm:0.23.1"
   conditions: os=win32 & cpu=ia32
-  languageName: node
-  linkType: hard
-
-"@esbuild/win32-x64@npm:0.18.20":
-  version: 0.18.20
-  resolution: "@esbuild/win32-x64@npm:0.18.20"
-  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -1615,79 +1461,79 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-assistive-text@npm:0.7.4":
-  version: 0.7.4
-  resolution: "@justeattakeaway/pie-assistive-text@npm:0.7.4"
+"@justeattakeaway/pie-assistive-text@npm:0.8.0":
+  version: 0.8.0
+  resolution: "@justeattakeaway/pie-assistive-text@npm:0.8.0"
   dependencies:
-    "@justeattakeaway/pie-icons-webc": 1.0.0
+    "@justeattakeaway/pie-icons-webc": 1.1.0
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: a01f28c3af925368c2c55c3acaa74e3dc8ae6e532c890ed611c5680469ad7b03afcd80e196316b8e4bf5ece6db812f0bfc629250d6c38d27faf51608eb6d8f5a
+  checksum: b74657dce4dba6474e9941561dcf3e3a18686302289c78695b152bfd10fd205160183d02acc914e4716ec6247bc6f94e0be1a7c151a56e49f0d858959c9bdd2e
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-button@npm:0.49.3":
-  version: 0.49.3
-  resolution: "@justeattakeaway/pie-button@npm:0.49.3"
+"@justeattakeaway/pie-button@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@justeattakeaway/pie-button@npm:1.0.0"
   dependencies:
-    "@justeattakeaway/pie-spinner": 0.7.2
+    "@justeattakeaway/pie-spinner": 1.0.0
     "@justeattakeaway/pie-webc-core": 0.24.2
     element-internals-polyfill: 1.3.11
-  checksum: 3f3b19f172c770e7c04e8fd77f019dd90ae8c1d42295aa115a8190a04353de2c517f421fbd59b8e059df4fa2c87727cdd5fb14ce62ea9af72b1e4049f4e6c2ad
+  checksum: 6607c2ce5339538a6955e9c93c0332edf236ca3fcf21434dca968f28aeaaedd675334f9467e8dafb9e375b24302ba0cb131e805e28dfe3b584a28cb052db1482
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-card@npm:0.21.2":
-  version: 0.21.2
-  resolution: "@justeattakeaway/pie-card@npm:0.21.2"
+"@justeattakeaway/pie-card@npm:0.21.3":
+  version: 0.21.3
+  resolution: "@justeattakeaway/pie-card@npm:0.21.3"
   dependencies:
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: a8ac9273f6029a0894c742d9a506b88fe1f9173d1daa4b26c52b6ed7ad22d0b5810d8bea716ac75daee999007e8bed55f32060febcc49022c250ca41e43ea0e3
+  checksum: ecccdd6e2d5894555414e7f0485c2ca4ed4939a364f45eced60670a53f37a642eb31f5ffd949215e50f40fdf1ba530f222fd04711d756f025f80e14ce202b8a2
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-checkbox-group@npm:0.7.3":
-  version: 0.7.3
-  resolution: "@justeattakeaway/pie-checkbox-group@npm:0.7.3"
+"@justeattakeaway/pie-checkbox-group@npm:0.7.6":
+  version: 0.7.6
+  resolution: "@justeattakeaway/pie-checkbox-group@npm:0.7.6"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 0.7.4
+    "@justeattakeaway/pie-assistive-text": 0.8.0
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: 59cf7c7532604fcf43889b7e69612adce0395111701e72584df46b55e578f9ef78d49ee99aefe89c49781e333d5dfa82055669124f2f829043f91532b263167b
+  checksum: ad48a95ddf6594d3617d50090faa4b7bec54c8fb92dbdae30510d4975f265043a96c05024f90fefac4f80b49714585050a048f1bf18292386b4c5a854d8b4e1c
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-checkbox@npm:0.13.3":
-  version: 0.13.3
-  resolution: "@justeattakeaway/pie-checkbox@npm:0.13.3"
+"@justeattakeaway/pie-checkbox@npm:0.13.6":
+  version: 0.13.6
+  resolution: "@justeattakeaway/pie-checkbox@npm:0.13.6"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 0.7.4
+    "@justeattakeaway/pie-assistive-text": 0.8.0
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: 13fc22fe562d26eec819460b96ae71050f16be8ea7f2edaa9193e161c7bd61d6b1a64c3b2e1f41cb8d5ec596d8d6cc3d3fac687aceda5ec47a5a7d0ba8767f0c
+  checksum: 1246a72d546e9ce2bcf65186cc55f33302f514c5c5c829ba0b138396e3224f468cee7dd5926c54fa68b54600b1f80e0a953278331b5a12ffe92ec9f9c547ee53
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-chip@npm:0.9.0":
-  version: 0.9.0
-  resolution: "@justeattakeaway/pie-chip@npm:0.9.0"
+"@justeattakeaway/pie-chip@npm:0.9.3":
+  version: 0.9.3
+  resolution: "@justeattakeaway/pie-chip@npm:0.9.3"
   dependencies:
-    "@justeattakeaway/pie-icons-webc": 1.0.0
-    "@justeattakeaway/pie-spinner": 0.7.2
+    "@justeattakeaway/pie-icons-webc": 1.1.0
+    "@justeattakeaway/pie-spinner": 1.0.0
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: 62179b6a066bb6497e8ee27fd7416ff338e9e4eb42b3627223da15dd0a2c9ba45fb72db3ba753b1df0418c4aa735767730860dffc9e6e106353e5fa4973e426b
+  checksum: 40d1fdbbe32f8cd00f7666bf1d51484401994d287455003691270356ed840bcdd53fd71cf948abd236607c19234dfc46c069646c99f1c15864f6f419e30553ce
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-cookie-banner@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@justeattakeaway/pie-cookie-banner@npm:1.0.0"
+"@justeattakeaway/pie-cookie-banner@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@justeattakeaway/pie-cookie-banner@npm:1.0.4"
   dependencies:
-    "@justeattakeaway/pie-button": 0.49.3
-    "@justeattakeaway/pie-divider": 0.14.2
-    "@justeattakeaway/pie-icon-button": 0.29.0
-    "@justeattakeaway/pie-link": 0.18.2
-    "@justeattakeaway/pie-modal": 0.49.1
-    "@justeattakeaway/pie-switch": 0.30.4
+    "@justeattakeaway/pie-button": 1.0.0
+    "@justeattakeaway/pie-divider": 1.0.0
+    "@justeattakeaway/pie-icon-button": 1.0.0
+    "@justeattakeaway/pie-link": 1.0.0
+    "@justeattakeaway/pie-modal": 1.0.0
+    "@justeattakeaway/pie-switch": 1.0.0
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: 4020130a9c154ba560b763e8687c904bde15f85c0118df2586691b0b131362a53e91d5e24acd97398ea3c25b07637ef263df4fc578d8d0694496ad12a1bf9003
+  checksum: c1e870b66db4202e6f1b58b81590da23953f7323963ab7c61d6454c6c6278f13a9a7084a7ab2a33bdcaedfec86400e14ab0ffc70320420d36ef0e9aca3dab655
   languageName: node
   linkType: hard
 
@@ -1698,32 +1544,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-divider@npm:0.14.2":
-  version: 0.14.2
-  resolution: "@justeattakeaway/pie-divider@npm:0.14.2"
+"@justeattakeaway/pie-divider@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@justeattakeaway/pie-divider@npm:1.0.0"
   dependencies:
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: 30c53f5ab6cc7bbb272443fd8fae079dd92fe5c393663dd647a7522eb31766548b9155e580162dbb325da76e4a4c7c9bfa6413b007097c9b04b0faf68b8d5be8
+  checksum: b67e97df6f1c3902abc9b8d5ba4ca9e85a41ed92028b7f95f1211e78660e6f0957bb18ca5759643740261e6626b04b76e203ee2ebb0aba5c344ac77a72dc987f
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-form-label@npm:0.14.3":
-  version: 0.14.3
-  resolution: "@justeattakeaway/pie-form-label@npm:0.14.3"
+"@justeattakeaway/pie-form-label@npm:0.14.4":
+  version: 0.14.4
+  resolution: "@justeattakeaway/pie-form-label@npm:0.14.4"
   dependencies:
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: 85bf45196bfc573c173bebd170a6b77a6d4219a33a2b0a081dcf003a23348a458fe1bec7698eb85c1f76031a21f4843382b246189b3a78f96b9c14a0a56e6fa9
+  checksum: b88e8530715bca9c6aaf10dde4424be4fe7e5e31c962019e9b82dce5dcaadc0c4b476c5f59e4e5da02e7283899bf51fbc89e5a2ed5e55c18d55cb5e3945dfa8f
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-icon-button@npm:0.29.0":
-  version: 0.29.0
-  resolution: "@justeattakeaway/pie-icon-button@npm:0.29.0"
+"@justeattakeaway/pie-icon-button@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@justeattakeaway/pie-icon-button@npm:1.0.0"
   dependencies:
-    "@justeattakeaway/pie-icons-webc": 1.0.0
-    "@justeattakeaway/pie-spinner": 0.7.2
+    "@justeattakeaway/pie-icons-webc": 1.1.0
+    "@justeattakeaway/pie-spinner": 1.0.0
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: 31a4f485a9d38476020127bf00784a34103edb6cdfe25cb97fc1e6560efa1f03bc3179767fcd6ae7982ab8bb1a7f02b9aa5ebc687eceebf7fd6e0ebbae6c5a0c
+  checksum: 12cc22907d87218d102fd1e243c82f0ac20c437ec864c955d39585ebf6cb611fbf771a86f9fb2a5f5943b4006a35821d9f64e17387d6750adf02b9ca85bd032e
   languageName: node
   linkType: hard
 
@@ -1736,139 +1582,140 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-icons-webc@npm:1.0.0":
+"@justeattakeaway/pie-icons-webc@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@justeattakeaway/pie-icons-webc@npm:1.1.0"
+  dependencies:
+    "@justeattakeaway/pie-webc-core": 0.24.2
+  checksum: eb9ed23cb3dcd65883bc5ee3e7cbf9798e4fd13ebb06c79165122deafa337ae0a2f4d5a1405c3984a7a8663d376520541e053bfcce7b981025e0c43c242a4a0c
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-link@npm:1.0.0":
   version: 1.0.0
-  resolution: "@justeattakeaway/pie-icons-webc@npm:1.0.0"
+  resolution: "@justeattakeaway/pie-link@npm:1.0.0"
   dependencies:
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: cf3a0e7ccb87efbaeb9ac0342a1e63d7a353eff048c616b840fe3c81e099a92a37a5811542d3602e132c4d063bf5ef53fa661f07f5d0a5da8d3cdba6bb10d5bf
+  checksum: 1f0a1d214aa970004582ff59f934a3ec2fe9bb81ada63a09af9a322689ab647761627746bccea23e51f8e9b606eb4d67d57e7c1d8e0aa3f30494e8e64109277c
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-link@npm:0.18.2":
-  version: 0.18.2
-  resolution: "@justeattakeaway/pie-link@npm:0.18.2"
-  dependencies:
-    "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: 6c5297eec2d0f3868574d0eaec0c0638e4c10a5e9f3a2c6ce00388ef433b1b31df6b1a00e9f663e8ff50f6712ee8530084377f29d8e495cd20c43a9badb3e8ff
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-lottie-player@npm:0.0.4":
-  version: 0.0.4
-  resolution: "@justeattakeaway/pie-lottie-player@npm:0.0.4"
+"@justeattakeaway/pie-lottie-player@npm:0.0.5":
+  version: 0.0.5
+  resolution: "@justeattakeaway/pie-lottie-player@npm:0.0.5"
   dependencies:
     "@justeattakeaway/pie-webc-core": 0.24.2
     lottie-web: 5.12.2
-  checksum: 437221d52b3007e883235cd75dc03c46ac1e12d306a5b22b482510119fdd91c1184a359ccf90d4586af8f986df4f5ce4b32c0fa84e89b4973fae5cfb4eef029b
+  checksum: fc95d5b511457440c69fcf48a1aacfd4bdbf660e2f2b063faa2e1610be0210d057139cbef7ff0d2be41bc15f80aea981754bf8a5713d46350c67f461fb1bc32b
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-modal@npm:0.49.1":
-  version: 0.49.1
-  resolution: "@justeattakeaway/pie-modal@npm:0.49.1"
+"@justeattakeaway/pie-modal@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@justeattakeaway/pie-modal@npm:1.0.0"
   dependencies:
-    "@justeattakeaway/pie-button": 0.49.3
-    "@justeattakeaway/pie-icon-button": 0.29.0
-    "@justeattakeaway/pie-icons-webc": 1.0.0
-    "@justeattakeaway/pie-spinner": 0.7.2
+    "@justeattakeaway/pie-button": 1.0.0
+    "@justeattakeaway/pie-icon-button": 1.0.0
+    "@justeattakeaway/pie-icons-webc": 1.1.0
+    "@justeattakeaway/pie-spinner": 1.0.0
     "@justeattakeaway/pie-webc-core": 0.24.2
     body-scroll-lock: 3.1.5
     dialog-polyfill: 0.5.6
-  checksum: 25d27aba2b8d6165bcb41b27ba2627f3bd8c720db60f767e3565d15e8b9c18e781b4fb7fa815d971bbb76b490c3c2be79b35a73a9b56c849075081725b58247d
+  checksum: f0fd537641554527b1199523d3e65029bf9a70012330477e59933a0ce73fcee69772cd6d9e842af3839eb7ead740dd1c25a4698c2a3584f75e3ad1b4b9c6a648
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-notification@npm:0.12.3":
-  version: 0.12.3
-  resolution: "@justeattakeaway/pie-notification@npm:0.12.3"
+"@justeattakeaway/pie-notification@npm:0.12.6":
+  version: 0.12.6
+  resolution: "@justeattakeaway/pie-notification@npm:0.12.6"
   dependencies:
-    "@justeattakeaway/pie-icon-button": 0.29.0
-    "@justeattakeaway/pie-icons-webc": 1.0.0
+    "@justeattakeaway/pie-icon-button": 1.0.0
+    "@justeattakeaway/pie-icons-webc": 1.1.0
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: eb12c3ddae9a18b0753adb7cc6bb639535aad4290eda077e169c09a28e8cf0ecff2690cbc1ba2a16bf3993ac16fdc653e7ed9ba250f68e7cb81d6b03879a6131
+  checksum: c16602c561761e3d32ae02bfef5e4bf371999d29992f66caa20b461722491388604229b1bcee1ecd7576b0b2a609ec2df58ea65d8be0c8eae1303e588fbc531e
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-radio-group@npm:0.1.2":
-  version: 0.1.2
-  resolution: "@justeattakeaway/pie-radio-group@npm:0.1.2"
-  dependencies:
-    "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: 8e7636790e3c89ee2265cff2bd8c186528c916133274857b76898c57c62491db57bc11f045deb983a6cdfe450ef9815bd5fb924888011fa4e98fe3df326da898
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-radio@npm:0.3.0":
+"@justeattakeaway/pie-radio-group@npm:0.3.0":
   version: 0.3.0
-  resolution: "@justeattakeaway/pie-radio@npm:0.3.0"
+  resolution: "@justeattakeaway/pie-radio-group@npm:0.3.0"
   dependencies:
+    "@justeattakeaway/pie-assistive-text": 0.8.0
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: 79b233ddc998e3a70f64ea02f25dd897d00ce0146412bee848af782bc29c50e90190d23615ab3cbd859409eeadd0bf8576b7226b201d91ffd804173b2b8c13c0
+  checksum: 55b49fb8982fa6dd90549f05c748455b49fb0490531cdefd556af197c36e873fc837208c934cb5c09f357d4f49654d8140deb0d52501805a461878d43429dcf0
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-spinner@npm:0.7.2":
-  version: 0.7.2
-  resolution: "@justeattakeaway/pie-spinner@npm:0.7.2"
+"@justeattakeaway/pie-radio@npm:0.5.0":
+  version: 0.5.0
+  resolution: "@justeattakeaway/pie-radio@npm:0.5.0"
   dependencies:
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: 371a994edddd707321d5212ecaa3f0ee69b1e88db381e330409e8aa6bf7ef5f57cb715daa6f75de21b2cbd2d8bc1d9a5916b21833389463554196939ea903dfe
+  checksum: 87cb9e3ed1cd7c0de1b1234224decd6270b5628e9412d7d03735e7513df15be435b27d5ac2230e4c00a53a761b142f30bd90c2921184784fbf4ebb296960293d
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-switch@npm:0.30.4":
-  version: 0.30.4
-  resolution: "@justeattakeaway/pie-switch@npm:0.30.4"
+"@justeattakeaway/pie-spinner@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@justeattakeaway/pie-spinner@npm:1.0.0"
   dependencies:
-    "@justeattakeaway/pie-icons-webc": 1.0.0
+    "@justeattakeaway/pie-webc-core": 0.24.2
+  checksum: daeabed4b916aae6255ca742dede338b136bc44838dd7ccdf63b88b3bd4624adefdbcfad43f968f44999778264d949a7e6100ced519f99db4f39aeeed9a102f3
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-switch@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@justeattakeaway/pie-switch@npm:1.0.0"
+  dependencies:
+    "@justeattakeaway/pie-icons-webc": 1.1.0
     "@justeattakeaway/pie-webc-core": 0.24.2
     "@justeattakeaway/pie-wrapper-react": 0.14.2
     element-internals-polyfill: 1.3.11
-  checksum: 7916b72af6e34fb9aaf4a9f2e818a8e2fbf6a4843cdfe1a639fadeba7c41934df652c1fbe55e7160b383304c1b814bee5d9805b471a2f5c874b26ab858646cbe
+  checksum: 65b22aefcc77932362eecfc72ce90583de3a0ddffd730ee5635d98c7261ae1e0583d7cba1cf57b5e638684621f730ec034dc3b400ba10e44a51cc0e4eba76166
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-tag@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@justeattakeaway/pie-tag@npm:0.11.0"
+"@justeattakeaway/pie-tag@npm:0.12.0":
+  version: 0.12.0
+  resolution: "@justeattakeaway/pie-tag@npm:0.12.0"
   dependencies:
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: ac4d1f664672c0e9b833c1b8fefe5a0fc11ae6cd0dbf7b849d2c1175c85144bb5e22eb464548d36a3b3026321e45c864ebbb54c5ab15c63717eb3693267a9402
+  checksum: dd4973226303a40bdf0e6d972ef66e3833129721e1f2185f8f7e4bd42440c85942351e21f56ff12614fd4fe0939bebfcb86ad17fef74d405d6957b5e87b24593
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-text-input@npm:0.24.3":
-  version: 0.24.3
-  resolution: "@justeattakeaway/pie-text-input@npm:0.24.3"
+"@justeattakeaway/pie-text-input@npm:0.24.5":
+  version: 0.24.5
+  resolution: "@justeattakeaway/pie-text-input@npm:0.24.5"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 0.7.4
+    "@justeattakeaway/pie-assistive-text": 0.8.0
     "@justeattakeaway/pie-webc-core": 0.24.2
     element-internals-polyfill: 1.3.11
-  checksum: 685f68084aa78ee931fa253d52043f9fc75792d81da5d93f7e304f8b516962d748e6816b6a99458748e2bb3eccb93e108ec3c93124df97af649aa6c2e99308b5
+  checksum: 4145de25bcdf2c6e1f98c8051c58dcce0e35d7ea5a0198e490b1ff68993e649e696519a8a8151684ab407cd57115d5c2fccde70efe3b040e35967812854cbae3
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-textarea@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@justeattakeaway/pie-textarea@npm:0.11.0"
+"@justeattakeaway/pie-textarea@npm:0.11.1":
+  version: 0.11.1
+  resolution: "@justeattakeaway/pie-textarea@npm:0.11.1"
   dependencies:
-    "@justeattakeaway/pie-form-label": 0.14.3
+    "@justeattakeaway/pie-form-label": 0.14.4
     "@justeattakeaway/pie-webc-core": 0.24.2
     lodash.throttle: 4.1.1
-  checksum: 3dafabaae1ba305608e37a46f1a67e5cad4afa96e7153f31164f23337dc0fb03e10fae3b76f13bca70d349ec9e85f78e395aa21b1f6a70092b4a3e537e5e75ea
+  checksum: 16f7ce8b66f5b6ad12c623be1a84114116a242143784a4a00457a1e0d3233e2902dc48298028829d8a5d6fe730a668419ae98a0cd5f9d10c394a0b0126efdf12
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-toast@npm:0.4.1":
-  version: 0.4.1
-  resolution: "@justeattakeaway/pie-toast@npm:0.4.1"
+"@justeattakeaway/pie-toast@npm:0.4.4":
+  version: 0.4.4
+  resolution: "@justeattakeaway/pie-toast@npm:0.4.4"
   dependencies:
-    "@justeattakeaway/pie-button": 0.49.3
-    "@justeattakeaway/pie-icon-button": 0.29.0
-    "@justeattakeaway/pie-icons-webc": 1.0.0
+    "@justeattakeaway/pie-button": 1.0.0
+    "@justeattakeaway/pie-icon-button": 1.0.0
+    "@justeattakeaway/pie-icons-webc": 1.1.0
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: e58a43f614e05599dcfd6d97e1ce749ee7a13ff44233736d56a64ea10d26bff14e34606c8b9a1d153e437f8a455fd116d840112f3dcb197e91d6cb2a8b58a9df
+  checksum: a4edfa285b1f49508da23efa40304945252721b9331adabac2ad353c199c3d3167b1a62363b25c7aca5a796871d3cedd3de373abbcd2c5ad7861d8b408ceeb9a
   languageName: node
   linkType: hard
 
@@ -1890,35 +1737,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-webc@npm:0.5.46":
-  version: 0.5.46
-  resolution: "@justeattakeaway/pie-webc@npm:0.5.46"
+"@justeattakeaway/pie-webc@npm:0.5.50":
+  version: 0.5.50
+  resolution: "@justeattakeaway/pie-webc@npm:0.5.50"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 0.7.4
-    "@justeattakeaway/pie-button": 0.49.3
-    "@justeattakeaway/pie-card": 0.21.2
-    "@justeattakeaway/pie-checkbox": 0.13.3
-    "@justeattakeaway/pie-checkbox-group": 0.7.3
-    "@justeattakeaway/pie-chip": 0.9.0
-    "@justeattakeaway/pie-cookie-banner": 1.0.0
-    "@justeattakeaway/pie-divider": 0.14.2
-    "@justeattakeaway/pie-form-label": 0.14.3
-    "@justeattakeaway/pie-icon-button": 0.29.0
-    "@justeattakeaway/pie-link": 0.18.2
-    "@justeattakeaway/pie-lottie-player": 0.0.4
-    "@justeattakeaway/pie-modal": 0.49.1
-    "@justeattakeaway/pie-notification": 0.12.3
-    "@justeattakeaway/pie-radio": 0.3.0
-    "@justeattakeaway/pie-radio-group": 0.1.2
-    "@justeattakeaway/pie-spinner": 0.7.2
-    "@justeattakeaway/pie-switch": 0.30.4
-    "@justeattakeaway/pie-tag": 0.11.0
-    "@justeattakeaway/pie-text-input": 0.24.3
-    "@justeattakeaway/pie-textarea": 0.11.0
-    "@justeattakeaway/pie-toast": 0.4.1
+    "@justeattakeaway/pie-assistive-text": 0.8.0
+    "@justeattakeaway/pie-button": 1.0.0
+    "@justeattakeaway/pie-card": 0.21.3
+    "@justeattakeaway/pie-checkbox": 0.13.6
+    "@justeattakeaway/pie-checkbox-group": 0.7.6
+    "@justeattakeaway/pie-chip": 0.9.3
+    "@justeattakeaway/pie-cookie-banner": 1.0.4
+    "@justeattakeaway/pie-divider": 1.0.0
+    "@justeattakeaway/pie-form-label": 0.14.4
+    "@justeattakeaway/pie-icon-button": 1.0.0
+    "@justeattakeaway/pie-link": 1.0.0
+    "@justeattakeaway/pie-lottie-player": 0.0.5
+    "@justeattakeaway/pie-modal": 1.0.0
+    "@justeattakeaway/pie-notification": 0.12.6
+    "@justeattakeaway/pie-radio": 0.5.0
+    "@justeattakeaway/pie-radio-group": 0.3.0
+    "@justeattakeaway/pie-spinner": 1.0.0
+    "@justeattakeaway/pie-switch": 1.0.0
+    "@justeattakeaway/pie-tag": 0.12.0
+    "@justeattakeaway/pie-text-input": 0.24.5
+    "@justeattakeaway/pie-textarea": 0.11.1
+    "@justeattakeaway/pie-toast": 0.4.4
   bin:
     add-components: src/index.js
-  checksum: a54055628f82e323d0f38a17317877acbd1914ceaafb0d2f8903ef0ce937e8f672fdecae42dfe76cfc172863a703784c0540a42a22028bd318894bd78757d657
+  checksum: 3ca01335948a7134aa81f49f2518ba3ea74f14668b43ebc128e7adbcaa4327ea19fccf2e434561aecdffd7dcf1d059b4286ed5378245ff91464b908e8b80f860
   languageName: node
   linkType: hard
 
@@ -7345,83 +7192,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.18.10":
-  version: 0.18.20
-  resolution: "esbuild@npm:0.18.20"
-  dependencies:
-    "@esbuild/android-arm": 0.18.20
-    "@esbuild/android-arm64": 0.18.20
-    "@esbuild/android-x64": 0.18.20
-    "@esbuild/darwin-arm64": 0.18.20
-    "@esbuild/darwin-x64": 0.18.20
-    "@esbuild/freebsd-arm64": 0.18.20
-    "@esbuild/freebsd-x64": 0.18.20
-    "@esbuild/linux-arm": 0.18.20
-    "@esbuild/linux-arm64": 0.18.20
-    "@esbuild/linux-ia32": 0.18.20
-    "@esbuild/linux-loong64": 0.18.20
-    "@esbuild/linux-mips64el": 0.18.20
-    "@esbuild/linux-ppc64": 0.18.20
-    "@esbuild/linux-riscv64": 0.18.20
-    "@esbuild/linux-s390x": 0.18.20
-    "@esbuild/linux-x64": 0.18.20
-    "@esbuild/netbsd-x64": 0.18.20
-    "@esbuild/openbsd-x64": 0.18.20
-    "@esbuild/sunos-x64": 0.18.20
-    "@esbuild/win32-arm64": 0.18.20
-    "@esbuild/win32-ia32": 0.18.20
-    "@esbuild/win32-x64": 0.18.20
-  dependenciesMeta:
-    "@esbuild/android-arm":
-      optional: true
-    "@esbuild/android-arm64":
-      optional: true
-    "@esbuild/android-x64":
-      optional: true
-    "@esbuild/darwin-arm64":
-      optional: true
-    "@esbuild/darwin-x64":
-      optional: true
-    "@esbuild/freebsd-arm64":
-      optional: true
-    "@esbuild/freebsd-x64":
-      optional: true
-    "@esbuild/linux-arm":
-      optional: true
-    "@esbuild/linux-arm64":
-      optional: true
-    "@esbuild/linux-ia32":
-      optional: true
-    "@esbuild/linux-loong64":
-      optional: true
-    "@esbuild/linux-mips64el":
-      optional: true
-    "@esbuild/linux-ppc64":
-      optional: true
-    "@esbuild/linux-riscv64":
-      optional: true
-    "@esbuild/linux-s390x":
-      optional: true
-    "@esbuild/linux-x64":
-      optional: true
-    "@esbuild/netbsd-x64":
-      optional: true
-    "@esbuild/openbsd-x64":
-      optional: true
-    "@esbuild/sunos-x64":
-      optional: true
-    "@esbuild/win32-arm64":
-      optional: true
-    "@esbuild/win32-ia32":
-      optional: true
-    "@esbuild/win32-x64":
-      optional: true
-  bin:
-    esbuild: bin/esbuild
-  checksum: 5d253614e50cdb6ec22095afd0c414f15688e7278a7eb4f3720a6dd1306b0909cf431e7b9437a90d065a31b1c57be60130f63fe3e8d0083b588571f31ee6ec7b
-  languageName: node
-  linkType: hard
-
 "esbuild@npm:^0.20.2":
   version: 0.20.2
   resolution: "esbuild@npm:0.20.2"
@@ -11471,7 +11241,7 @@ __metadata:
   dependencies:
     "@justeattakeaway/pie-css": 0.13.0
     "@justeattakeaway/pie-icons-webc": 0.25.1
-    "@justeattakeaway/pie-webc": 0.5.46
+    "@justeattakeaway/pie-webc": 0.5.50
     "@lit-labs/nextjs": 0.2.0
     "@lit/react": 1.0.5
     "@types/node": 20.9.1
@@ -11810,7 +11580,7 @@ __metadata:
   dependencies:
     "@justeattakeaway/pie-css": 0.13.0
     "@justeattakeaway/pie-icons-webc": 0.25.1
-    "@justeattakeaway/pie-webc": 0.5.46
+    "@justeattakeaway/pie-webc": 0.5.50
     deepmerge: 4.3.1
     just-kebab-case: 4.2.0
     nuxt: 3.13.2
@@ -13001,7 +12771,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.27, postcss@npm:^8.4.38, postcss@npm:^8.4.39":
+"postcss@npm:^8.4.38, postcss@npm:^8.4.39":
   version: 8.4.39
   resolution: "postcss@npm:8.4.39"
   dependencies:
@@ -13731,20 +13501,6 @@ __metadata:
   bin:
     rollup-plugin-visualizer: dist/bin/cli.js
   checksum: 17dc10a93d4bd457c8bb7796a57c284487fb00f4b9703a33a1a954f5d40c66a89b24aca98564569922456f4fa8f72281c3ef96a95502195e6930b3fac62fce8e
-  languageName: node
-  linkType: hard
-
-"rollup@npm:^3.27.1":
-  version: 3.29.5
-  resolution: "rollup@npm:3.29.5"
-  dependencies:
-    fsevents: ~2.3.2
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  bin:
-    rollup: dist/bin/rollup
-  checksum: 6f8304e58ac8170a715e61e46c4aa674b2ae2587ed2a712dab58f72e5e54803ae40b485fbe6b3e6a694f4c8f7a59ab936ccf9f6b686c7cfd1f1970fa9ecadf1a
   languageName: node
   linkType: hard
 
@@ -15704,9 +15460,9 @@ __metadata:
   dependencies:
     "@justeattakeaway/pie-css": 0.13.0
     "@justeattakeaway/pie-icons-webc": 0.25.1
-    "@justeattakeaway/pie-webc": 0.5.46
+    "@justeattakeaway/pie-webc": 0.5.50
     deepmerge: 4.3.1
-    vite: 4.5.3
+    vite: 5.4.11
     vite-plugin-html-inject: 1.1.2
   languageName: unknown
   linkType: soft
@@ -15834,19 +15590,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:4.5.3":
-  version: 4.5.3
-  resolution: "vite@npm:4.5.3"
+"vite@npm:5.4.11":
+  version: 5.4.11
+  resolution: "vite@npm:5.4.11"
   dependencies:
-    esbuild: ^0.18.10
-    fsevents: ~2.3.2
-    postcss: ^8.4.27
-    rollup: ^3.27.1
+    esbuild: ^0.21.3
+    fsevents: ~2.3.3
+    postcss: ^8.4.43
+    rollup: ^4.20.0
   peerDependencies:
-    "@types/node": ">= 14"
+    "@types/node": ^18.0.0 || >=20.0.0
     less: "*"
     lightningcss: ^1.21.0
     sass: "*"
+    sass-embedded: "*"
     stylus: "*"
     sugarss: "*"
     terser: ^5.4.0
@@ -15862,6 +15619,8 @@ __metadata:
       optional: true
     sass:
       optional: true
+    sass-embedded:
+      optional: true
     stylus:
       optional: true
     sugarss:
@@ -15870,7 +15629,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: fd3f512ce48ca2a1fe60ad0376283b832de9272725fdbc65064ae9248f792de87b0f27a89573115e23e26784800daca329f8a9234d298ba6f60e808a9c63883c
+  checksum: 8c5b31d17487b69c40a30419dc0ade9f33360eb6893dbfa33a90980271bd74d35ae550b5cbb2a9e640f0df41ea36fd1bb4f222c98f6d02e607080f20832e69e8
   languageName: node
   linkType: hard
 
