@@ -24,7 +24,7 @@ import '@justeattakeaway/pie-webc/components/checkbox-group.js';
 import '@justeattakeaway/pie-webc/components/form-label.js';
 
 definePageMeta({
-  title: 'PIE Checkbox Group',
+  title: 'Checkbox Group',
 });
 
 const contactByEmail = ref(false);

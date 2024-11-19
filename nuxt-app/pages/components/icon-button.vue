@@ -12,6 +12,6 @@ import '@justeattakeaway/pie-webc/components/icon-button.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconClose.js';
 
 definePageMeta({
-    title: 'PIE Icon Button',
+    title: 'Icon Button',
 });
 </script>

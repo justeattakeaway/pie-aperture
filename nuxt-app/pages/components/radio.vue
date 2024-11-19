@@ -12,7 +12,7 @@
   import '@justeattakeaway/pie-webc/components/radio.js';
 
   definePageMeta({
-      title: 'PIE Radio',
+      title: 'Radio',
   });
 
   let checked = ref(false);

@@ -28,7 +28,7 @@ import '@justeattakeaway/pie-webc/components/divider.js';
 import '@justeattakeaway/pie-webc/components/notification.js';
 
 definePageMeta({
-  title: 'PIE Notification',
+  title: 'Notification',
 });
 
 let isNotificationOpen = ref(true);

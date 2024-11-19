@@ -1,4 +1,4 @@
-const { CI, GITHUB_REF_NAME, PR_NUMBER, VANILLA_AMPLIFY_ID, NEXT_13_AMPLIFY_ID, NEXT_14_AMPLIFY_ID, NUXT_AMPLIFY_ID } = process.env;
+const { CI, GITHUB_REF_NAME, PR_NUMBER, VANILLA_AMPLIFY_ID, NEXT_14_AMPLIFY_ID, NUXT_AMPLIFY_ID } = process.env;
 
 export function getAppConfig(appName) {
     const config = {};
@@ -7,10 +7,6 @@ export function getAppConfig(appName) {
         case 'vanilla-app':
             config.amplifyId = VANILLA_AMPLIFY_ID;
             config.port = '3001';
-            break;
-        case 'nextjs-app-v13':
-            config.amplifyId = NEXT_13_AMPLIFY_ID;
-            config.port = '3000';
             break;
         case 'nextjs-app-v14':
             config.amplifyId = NEXT_14_AMPLIFY_ID;
@@ -21,7 +17,7 @@ export function getAppConfig(appName) {
             config.port = '3002';
             break;
         default:
-            throw new Error(`appName: '${appName}' is invalid. Please use either 'vanilla-app', 'nextjs-app-v13', 'nextjs-app-v14' or 'nuxt-app'.`);
+            throw new Error(`appName: '${appName}' is invalid. Please use either 'vanilla-app', 'nextjs-app-v14' or 'nuxt-app'.`);
     }
     return config;
 }

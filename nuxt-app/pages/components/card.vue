@@ -18,6 +18,6 @@ import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/card.js';
 
 definePageMeta({
-    title: 'PIE Card',
+    title: 'Card',
 });
 </script>

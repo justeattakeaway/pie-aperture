@@ -12,6 +12,6 @@ import '@justeattakeaway/pie-webc/components/text-input.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconPhone.js';
 
 definePageMeta({
-    title: 'PIE Text Input',
+    title: 'Text Input',
 });
 </script>
