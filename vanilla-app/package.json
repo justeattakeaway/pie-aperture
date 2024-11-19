@@ -18,10 +18,9 @@
     "vite-plugin-html-inject": "1.1.2"
   },
   "dependencies": {
-    "@justeattakeaway/pie-cookie-banner": "0.26.5",
     "@justeattakeaway/pie-css": "0.13.0",
     "@justeattakeaway/pie-icons-webc": "0.25.1",
-    "@justeattakeaway/pie-webc": "0.5.42"
+    "@justeattakeaway/pie-webc": "0.5.53"
   },
   "installConfig": {
     "hoistingLimits": "workspaces"

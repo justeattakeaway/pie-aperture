@@ -11,7 +11,7 @@ const capabilities = [
     createCapability("Windows", "11", "Firefox", "127"),
     createCapability(null, "18", "Safari", null, "iPhone 16"),
     createCapability(null, "16", "Safari", null, "iPhone 14"),
-    createCapability(null, "14.0", "Chrome", null, "Google Pixel 9"),
+    createCapability(null, "15.0", "Chrome", null, "Google Pixel 9"),
     createCapability(null, "11.0", "Chrome", null, "Google Pixel 6")
 ];
 

@@ -3,6 +3,7 @@
     "pipeline": {
       "preview": {
         "cache": false,
+        "persistent": true,
         "dependsOn": ["build"]
       },
       "test:ssr": {
