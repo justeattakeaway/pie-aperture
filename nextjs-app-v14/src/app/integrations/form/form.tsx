@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import NavigationLayout from '@/app/layout/navigation';
 import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
 import { PieRadio } from '@justeattakeaway/pie-webc/react/radio.js';
+import { PieRadioGroup } from '@justeattakeaway/pie-webc/react/radio-group.js';
 import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
@@ -27,6 +28,7 @@ export default function Form() {
     const [favouriteNumber, setFavouriteNumber] = useState('');
     const [favouriteNumberValidationMessage, setFavouriteNumberValidationMessage] = useState('');
     const [radioValue, setRadioValue] = useState('');
+    const [favouriteTakeaway, setFavouriteTakeaway] = useState('');
 
     const [formDataDisplay, setFormDataDisplay] = useState<string | null>(null);
 
@@ -104,6 +106,11 @@ export default function Form() {
         setContactByEmail(current => !current);
     };
 
+    const handleFavouriteTakeaway = (event: InputEvent) => {
+        const newFavourite = (event.target as HTMLInputElement).value;
+        setFavouriteTakeaway(newFavourite);
+    }
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = {
@@ -118,7 +125,7 @@ export default function Form() {
             url,
             tel,
             password,
-            radioValue,
+            favouriteTakeaway,
             description,
         };
 
@@ -276,10 +283,11 @@ export default function Form() {
                         </PieCheckbox>
                     </PieCheckboxGroup>
 
-                    <fieldset>
-                        <PieRadio value="radio-1" name="radioValue" onInput={handleRadioInput as any}>Radio 1</PieRadio>
-                        <PieRadio data-test-id="radio-2" value="radio-2" name="radioValue" onInput={handleRadioInput as any}>Radio 2</PieRadio>
-                    </fieldset>
+                    <PieRadioGroup name="favouriteTakeaway" onChange={handleFavouriteTakeaway as any}>
+                        <PieFormLabel slot="label">Choose a radio button:</PieFormLabel>
+                        <PieRadio value="chinese">Chinese</PieRadio>
+                        <PieRadio data-test-id="shawarma" value="shawarma">Shawarma</PieRadio>
+                    </PieRadioGroup>
                 </div>
                 <div className='form-btns'>
                     <PieButton className="form-btn" data-test-id="reset-btn" variant="secondary" type="reset">Reset</PieButton>

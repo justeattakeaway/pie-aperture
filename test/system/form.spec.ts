@@ -11,7 +11,7 @@ test.describe(`Form Page - ${process.env.APP_NAME}`, () => {
             url: 'https://example.com',
             tel: '1234567890',
             password: 'foo',
-            radioValue: 'radio-2',
+            favouriteTakeaway: 'shawarma',
             approveSettings: true,
             enableNotifications: true,
             newsletterSignup: true,
