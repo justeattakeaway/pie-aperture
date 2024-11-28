@@ -8,7 +8,7 @@ export type TestFormData = {
     url: string;
     tel: string;
     password: string;
-    radioValue: string;
+    favouriteTakeaway: string;
     approveSettings: boolean;
     enableNotifications: boolean;
     newsletterSignup: boolean;
@@ -34,7 +34,7 @@ export class FormPage {
     readonly newsletterSignupCheckbox: Locator;
     readonly contactByEmailCheckbox: Locator;
     readonly contactByPhoneCheckbox: Locator;
-    readonly radioButton2: Locator;
+    readonly favouriteTakeaway: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -50,7 +50,7 @@ export class FormPage {
         this.newsletterSignupCheckbox = page.getByTestId('newsletterSignup').getByTestId('checkbox-component');
         this.contactByEmailCheckbox = page.getByTestId('contactByEmail').getByTestId('checkbox-component');
         this.contactByPhoneCheckbox = page.getByTestId('contactByPhone').getByTestId('checkbox-component');
-        this.radioButton2 = page.getByTestId('radio-2').getByTestId('pie-radio');
+        this.favouriteTakeaway = page.getByTestId('shawarma').getByTestId('pie-radio');
         this.resetBtn = page.getByTestId('reset-btn');
         this.submitBtn = page.getByTestId('submit-btn');
 
@@ -74,7 +74,7 @@ export class FormPage {
         await this.approveSettingsSwitch.click();
         await this.enableNotificationsSwitch.click();
         await this.newsletterSignupCheckbox.click();
-        await this.radioButton2.click();
+        await this.favouriteTakeaway.click();
         await this.contactByEmailCheckbox.click();
         await this.contactByPhoneCheckbox.click();
     }

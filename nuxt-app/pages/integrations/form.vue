@@ -128,21 +128,20 @@
                     Receive discounts, loyalty offers and other updates via email
                 </pie-checkbox>
 
-                <fieldset>
+                <pie-radio-group name="favouriteTakeaway" @change="favouriteTakeaway = $event.target.value">
+                    <pie-form-label>
+                    Your favourite takeaway
+                    </pie-form-label>
                     <pie-radio
-                        value="radio-1"
-                        name="radioValue"
-                        @change="radio = $event.target.value">
-                        Radio 1
+                        value="chinese">
+                        Chinese
                     </pie-radio>
                     <pie-radio
-                        data-test-id="radio-2"
-                        value="radio-2"
-                        name="radioValue"
-                        @change="radio = $event.target.value">
-                        Radio 2
+                        data-test-id="shawarma"
+                        value="shawarma">
+                        Shawarma
                     </pie-radio>
-                </fieldset>
+                </pie-radio-group>
 
                 <pie-checkbox-group>
                     <pie-form-label slot="label">Choose the way we can contact you:</pie-form-label>
@@ -186,6 +185,7 @@ import '@justeattakeaway/pie-webc/components/form-label.js';
 import '@justeattakeaway/pie-webc/components/text-input.js';
 import '@justeattakeaway/pie-webc/components/textarea.js';
 import '@justeattakeaway/pie-webc/components/radio.js';
+import '@justeattakeaway/pie-webc/components/radio-group.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-webc/components/checkbox.js';
 import '@justeattakeaway/pie-webc/components/checkbox-group.js';
@@ -211,7 +211,7 @@ const favouriteNumber = ref('');
 const favouriteNumberValidationMessage = ref('');
 const newsletter = ref(false);
 const description = ref('');
-const radio = ref('');
+const favouriteTakeaway = ref('');
 
 const contactByEmail = ref(false);
 const contactByPhone = ref(false);
@@ -239,7 +239,7 @@ function handleSubmit() {
         email: email.value,
         tel: tel.value,
         url: url.value,
-        radioValue: radio.value,
+        favouriteTakeaway: favouriteTakeaway.value,
         password: password.value,
         approveSettings: approveSettings.value,
         enableNotifications: notifications.value,
