@@ -30,6 +30,13 @@
     title: 'Toast Provider',
   });
 
+  const toastOptions = ref({
+    isDismissible: true,
+    onPieToastOpen: () => console.log('Toast Opened'),
+    onPieToastClose: () => console.log('Toast Closed'),
+    onPieToastLeadingActionClick: () => console.log('Leading Action Clicked'),
+  });
+
   const queueLength = ref(0);
   
   const handleQueueUpdate = (event: CustomEvent) => {
@@ -60,14 +67,5 @@
   const clearToasts = () => {
     toaster.clearAll();
   };
-  
-  const toastOptions = ref({
-    duration: 3000,
-    isDismissible: true,
-    onPieToastOpen: () => console.log('Toast Opened'),
-    onPieToastClose: () => console.log('Toast Closed'),
-    onPieToastLeadingActionClick: () => console.log('Leading Action Clicked'),
-  });
-
   </script>
   
