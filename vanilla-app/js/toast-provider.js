@@ -32,24 +32,21 @@ toastProvider.addEventListener('pie-toast-leading-action-click', () => {
 document.getElementById('trigger-info-toast').addEventListener('click', () => {
     toaster.create({
         message: 'This is an info toast.',
-        variant: 'info',
-        duration: 3000
+        variant: 'info'
     });
 });
 
 document.getElementById('trigger-warning-toast').addEventListener('click', () => {
     toaster.create({
         message: 'This is a warning toast.',
-        variant: 'warning',
-        duration: 3000
+        variant: 'warning'
     });
 });
 
 document.getElementById('trigger-error-toast').addEventListener('click', () => {
     toaster.create({
         message: 'This is an error toast.',
-        variant: 'error',
-        duration: 3000
+        variant: 'error'
     });
 });
 

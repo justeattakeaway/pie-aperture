@@ -11,7 +11,7 @@ export default function Toast() {
 
     return (
         <NavigationLayout title="Toast">
-            <PieToast duration={null} message="This is a message" isDismissible leadingAction={leadingAction} />
+            <PieToast message="This is a message" isDismissible leadingAction={leadingAction} />
         </NavigationLayout>
     );
 }
