@@ -6,7 +6,7 @@ import './utils/navigation.js';
 import './shared.js';
 
 document.querySelector('#app').innerHTML = `
-    <pie-toast-provider id="toast-provider" is-dismissible="true"></pie-toast-provider>
+    <pie-toast-provider id="toast-provider"></pie-toast-provider>
     <div style="margin-top: 16px; display: flex; gap: 16px; flex-wrap: wrap;">
         <pie-button id="trigger-info-toast">Trigger Info Toast</pie-button>
         <pie-button id="trigger-warning-toast">Trigger Warning Toast</pie-button>
