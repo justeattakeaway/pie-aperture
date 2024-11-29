@@ -12,11 +12,27 @@ export default function Button() {
     return (
         <NavigationLayout title="Button">
         <PieButton onClick={() => setCounter(counter + 1)}>Counter: {counter}</PieButton>
+
         <PieDivider />
+
         <h2>PIE Button - with Icon and text</h2>
         <PieButton>
             <IconSearch slot="icon"></IconSearch>
             Search
+        </PieButton>
+
+        <PieDivider />
+
+        <h2>PIE Button - multi-line content</h2>
+        <PieButton>
+            This button has a long text that will wrap to the next line. It‘s very long
+        </PieButton>
+
+        <PieDivider />
+
+        <h2>PIE Button - truncated content</h2>
+        <PieButton isFullWidth>
+            Thisisawordthatdoesntactuallyexistsothatwecanseehowthecontentistruncated
         </PieButton>
         </NavigationLayout>
     );
