@@ -47,13 +47,17 @@
     "selenium-webdriver": "4.27.0",
     "turbo": "1.13.4"
   },
+  "resolutions": {
+    "rimraf": "3.0.2",
+    "glob": "10.4.5"
+  },
   "workspaces": [
     "nextjs-app-v14",
     "nuxt-app",
     "vanilla-app"
   ],
   "volta": {
-    "node": "20.9.0",
+    "node": "20.18.1",
     "yarn": "3.5.0"
   }
 }
