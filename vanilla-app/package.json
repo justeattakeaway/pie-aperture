@@ -14,13 +14,13 @@
   },
   "devDependencies": {
     "deepmerge": "4.3.1",
-    "vite": "4.5.3",
+    "vite": "4.5.5",
     "vite-plugin-html-inject": "1.1.2"
   },
   "dependencies": {
-    "@justeattakeaway/pie-css": "0.13.0",
-    "@justeattakeaway/pie-icons-webc": "0.25.1",
-    "@justeattakeaway/pie-webc": "0.0.0-snapshot-release-20241128132140"
+    "@justeattakeaway/pie-css": "0.13.1",
+    "@justeattakeaway/pie-icons-webc": "1.1.0",
+    "@justeattakeaway/pie-webc": "0.5.56"
   },
   "installConfig": {
     "hoistingLimits": "workspaces"

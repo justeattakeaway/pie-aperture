@@ -19,8 +19,8 @@
     "upgrade-pie-packages": "turbo run upgrade-pie-packages && yarn"
   },
   "dependencies": {
-    "commitizen": "4.3.0",
-    "cz-customizable": "7.0.0"
+    "commitizen": "4.3.1",
+    "cz-customizable": "7.2.1"
   },
   "config": {
     "commitizen": {
@@ -31,21 +31,21 @@
     }
   },
   "devDependencies": {
-    "@percy/cli": "1.28.0",
-    "@percy/selenium-webdriver": "2.0.2",
-    "@playwright/test": "1.41.1",
+    "@percy/cli": "1.30.4",
+    "@percy/selenium-webdriver": "2.1.0",
+    "@playwright/test": "1.49.0",
     "@types/follow-redirects": "1.14.4",
-    "@types/node": "20.11.13",
-    "@wdio/browserstack-service": "8.24.1",
-    "@wdio/cli": "8.19.0",
-    "@wdio/local-runner": "8.19.0",
-    "@wdio/mocha-framework": "8.19.0",
-    "@wdio/spec-reporter": "8.19.0",
+    "@types/node": "20.17.9",
+    "@wdio/browserstack-service": "8.40.6",
+    "@wdio/cli": "8.40.6",
+    "@wdio/local-runner": "8.40.6",
+    "@wdio/mocha-framework": "8.40.6",
+    "@wdio/spec-reporter": "8.40.6",
     "cross-env": "7.0.3",
-    "follow-redirects": "1.15.6",
+    "follow-redirects": "1.15.9",
     "playwright-merge-html-reports": "0.2.8",
-    "selenium-webdriver": "4.14.0",
-    "turbo": "1.12.2"
+    "selenium-webdriver": "4.27.0",
+    "turbo": "1.13.4"
   },
   "workspaces": [
     "nextjs-app-v14",
