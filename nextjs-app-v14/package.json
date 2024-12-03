@@ -14,24 +14,24 @@
     "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "dependencies": {
-    "@justeattakeaway/pie-css": "0.13.0",
-    "@justeattakeaway/pie-icons-webc": "0.25.1",
-    "@justeattakeaway/pie-webc": "0.5.53",
+    "@justeattakeaway/pie-css": "0.13.1",
+    "@justeattakeaway/pie-icons-webc": "1.1.0",
+    "@justeattakeaway/pie-webc": "0.5.56",
     "@lit-labs/nextjs": "0.2.0",
-    "@lit/react": "1.0.5",
-    "next": "14.2.3",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sass": "1.69.5"
+    "@lit/react": "1.0.6",
+    "next": "14.2.18",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sass": "1.81.0"
   },
   "devDependencies": {
-    "@types/node": "20.9.1",
-    "@types/react": "18.2.47",
-    "@types/react-dom": "18.2.7",
+    "@types/node": "20.17.9",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
     "deepmerge": "4.3.1",
-    "eslint": "8.48.0",
-    "eslint-config-next": "13.4.19",
-    "typescript": "5.2.2"
+    "eslint": "8.57.1",
+    "eslint-config-next": "13.5.7",
+    "typescript": "5.7.2"
   },
   "installConfig": {
     "hoistingLimits": "workspaces"

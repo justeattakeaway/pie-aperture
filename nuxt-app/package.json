@@ -15,15 +15,15 @@
   },
   "devDependencies": {
     "deepmerge": "4.3.1",
-    "nuxt": "3.13.2",
-    "sass": "1.70.0"
+    "nuxt": "3.14.1592",
+    "sass": "1.81.0"
   },
   "dependencies": {
-    "@justeattakeaway/pie-css": "0.13.0",
-    "@justeattakeaway/pie-icons-webc": "0.25.1",
-    "@justeattakeaway/pie-webc": "0.5.53",
+    "@justeattakeaway/pie-css": "0.13.1",
+    "@justeattakeaway/pie-icons-webc": "1.1.0",
+    "@justeattakeaway/pie-webc": "0.5.56",
     "just-kebab-case": "4.2.0",
-    "nuxt-ssr-lit": "1.6.16"
+    "nuxt-ssr-lit": "1.6.27"
   },
   "installConfig": {
     "hoistingLimits": "workspaces"
