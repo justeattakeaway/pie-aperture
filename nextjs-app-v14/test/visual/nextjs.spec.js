@@ -20,6 +20,7 @@ describe('NextJS Aperture App', () => {
         { url: '/components/modal', name: 'Modal' },
         { url: '/components/notification', name: 'Notification' },
         { url: '/components/radio', name: 'Radio' },
+        { url: '/components/radio-group', name: 'Radio Group' },
         { url: '/components/spinner', name: 'Spinner' },
         { url: '/components/switch', name: 'Switch' },
         { url: '/components/tag', name: 'Tag' },
