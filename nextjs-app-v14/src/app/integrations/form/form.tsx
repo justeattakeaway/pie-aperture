@@ -27,7 +27,6 @@ export default function Form() {
     const [contactByEmail, setContactByEmail] = useState(false);
     const [favouriteNumber, setFavouriteNumber] = useState('');
     const [favouriteNumberValidationMessage, setFavouriteNumberValidationMessage] = useState('');
-    const [radioValue, setRadioValue] = useState('');
     const [favouriteTakeaway, setFavouriteTakeaway] = useState('');
 
     const [formDataDisplay, setFormDataDisplay] = useState<string | null>(null);
@@ -77,10 +76,6 @@ export default function Form() {
     const handlePasswordInput = (event: InputEvent) => {
         setPassword((event.target as HTMLInputElement).value);
     }
-
-    const handleRadioInput = (event: InputEvent) => {
-        setRadioValue((event.target as HTMLInputElement).value);
-    };
 
     const handleApproveSettingsChange = () => {
         setApproveSettings(current => !current);

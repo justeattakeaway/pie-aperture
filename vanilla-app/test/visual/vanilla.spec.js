@@ -20,6 +20,7 @@ describe('Vanilla Aperture App', () => {
         { url: '/components/modal.html', name: 'Modal' },
         { url: '/components/notification.html', name: 'Notification' },
         { url: '/components/radio.html', name: 'Radio' },
+        { url: '/components/radio-group.html', name: 'Radio Group' },
         { url: '/components/spinner.html', name: 'Spinner' },
         { url: '/components/switch.html', name: 'Switch' },
         { url: '/components/tag.html', name: 'Tag' },

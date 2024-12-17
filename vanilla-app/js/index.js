@@ -23,6 +23,7 @@ document.querySelector('#navigation').innerHTML = `
         <li><pie-link href="/components/modal.html">Modal</pie-link></li>
         <li><pie-link href="/components/notification.html">Notification</pie-link></li>
         <li><pie-link href="/components/radio.html">Radio</pie-link></li>
+        <li><pie-link href="/components/radio-group.html">Radio Group</pie-link></li>
         <li><pie-link href="/components/spinner.html">Spinner</pie-link></li>
         <li><pie-link href="/components/switch.html">Switch</pie-link></li>
         <li><pie-link href="/components/tag.html">Tag</pie-link></li>

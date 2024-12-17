@@ -23,6 +23,8 @@ const components = [
     'link',
     'lottie-player',
     'modal',
+    'radio',
+    'radio-group',
     'spinner',
     'switch',
     'tag',
