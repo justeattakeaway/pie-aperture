@@ -26,6 +26,8 @@ describe('Nuxt Aperture App', () => {
         { url: '/components/tag', name: 'Tag' },
         { url: '/components/text-input', name: 'Text Input' },
         { url: '/components/textarea', name: 'Textarea' },
+        { url: '/components/toast', name: 'Toast' },
+        { url: '/components/toast-provider', name: 'Toast Provider' },
     ];
 
     pages.forEach((page) => {
