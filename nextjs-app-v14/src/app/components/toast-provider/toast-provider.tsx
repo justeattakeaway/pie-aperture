@@ -26,12 +26,16 @@ export default function ToastProviderPage() {
                 onPieToastProviderQueueUpdate={handleQueueUpdate}
             />
 
-            <PieTag variant="information" style={{ marginTop: '16px' }}>
+            <PieTag
+                data-test-id="toast-queue-length"
+                variant="information"
+                style={{ marginTop: '16px' }}>
                 Toast Queue Length: {queueLength}
             </PieTag>
 
             <div style={{ marginTop: '16px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                 <PieButton
+                    data-test-id="info-toast-btn"
                     onClick={() =>
                         toaster.create({
                             message: 'Low Priority Info',
@@ -43,6 +47,7 @@ export default function ToastProviderPage() {
                 </PieButton>
 
                 <PieButton
+                    data-test-id="warning-toast-btn"
                     onClick={() =>
                         toaster.create({
                             message: 'Medium Priority Warning Toast',
@@ -54,6 +59,7 @@ export default function ToastProviderPage() {
                 </PieButton>
 
                 <PieButton
+                    data-test-id="error-toast-btn"
                     onClick={() =>
                         toaster.create({
                             message: 'High Priority Error Toast',
@@ -64,7 +70,10 @@ export default function ToastProviderPage() {
                     Trigger Error Toast (High Priority)
                 </PieButton>
 
-                <PieButton variant="secondary" onClick={() => toaster.clearAll()}>
+                <PieButton
+                    data-test-id="clear-toasts-btn"
+                    variant="secondary"
+                    onClick={() => toaster.clearAll()}>
                     Clear All Toasts
                 </PieButton>
             </div>
