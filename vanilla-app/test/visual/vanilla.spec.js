@@ -26,6 +26,7 @@ describe('Vanilla Aperture App', () => {
         { url: '/components/tag.html', name: 'Tag' },
         { url: '/components/text-input.html', name: 'Text Input' },
         { url: '/components/textarea.html', name: 'Textarea' },
+        { url: '/components/toast.html', name: 'Toast' }
     ];
 
     pages.forEach((page) => {

@@ -27,6 +27,8 @@
       <li><pie-link href="/components/tag">Tag</pie-link></li>
       <li><pie-link href="/components/text-input">Text Input</pie-link></li>
       <li><pie-link href="/components/textarea">Textarea</pie-link></li>
+      <li><pie-link href="/components/toast">Toast</pie-link></li>
+      <li><pie-link href="/components/toast-provider">Toast Provider</pie-link></li>
 		</ul>
 	</div>
 </template>

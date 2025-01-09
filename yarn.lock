@@ -1214,15 +1214,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-icons-webc@npm:1.1.0":
-  version: 1.1.0
-  resolution: "@justeattakeaway/pie-icons-webc@npm:1.1.0"
-  dependencies:
-    "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: eb9ed23cb3dcd65883bc5ee3e7cbf9798e4fd13ebb06c79165122deafa337ae0a2f4d5a1405c3984a7a8663d376520541e053bfcce7b981025e0c43c242a4a0c
-  languageName: node
-  linkType: hard
-
 "@justeattakeaway/pie-icons-webc@npm:1.2.0":
   version: 1.2.0
   resolution: "@justeattakeaway/pie-icons-webc@npm:1.2.0"
@@ -1357,24 +1348,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-toast-provider@npm:0.0.0":
-  version: 0.0.0
-  resolution: "@justeattakeaway/pie-toast-provider@npm:0.0.0"
+"@justeattakeaway/pie-toast-provider@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@justeattakeaway/pie-toast-provider@npm:0.1.0"
   dependencies:
+    "@justeattakeaway/pie-toast": 0.6.0
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: a1263498229a3434326ab56f56fbbb80a90e5d0561f5d8d7f4ad54d9495b21680f147a3067ad5ba76d45fe1fef7857b56de9dfcdf1b6d158ef778869491eea89
+  checksum: 5243ff73af33c077d7f6f6db67b6642d71e02b4049329e87e4f05f7ad515423ff69aa7a280aae4c4147921dbad3886295fea7c231a7212732ca14096d37c2f67
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-toast@npm:0.5.2":
-  version: 0.5.2
-  resolution: "@justeattakeaway/pie-toast@npm:0.5.2"
+"@justeattakeaway/pie-toast@npm:0.6.0":
+  version: 0.6.0
+  resolution: "@justeattakeaway/pie-toast@npm:0.6.0"
   dependencies:
     "@justeattakeaway/pie-button": 1.1.0
     "@justeattakeaway/pie-icon-button": 1.1.0
     "@justeattakeaway/pie-icons-webc": 1.2.0
     "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: f9690f8bcb044e41adc155cf7c4bce6f0ec0ec10aa65979d67427013d69ff7266962970ef85b5bddd8521f1225dfde018bf34eb17707530aeaf85eabfe7ba576
+  checksum: 786412975e3eafc50a62d5f6f290f37733008ecbd2f360c4b5f937e7e2d306b719e88f6e35bae5c1fd4c2f6109e3ed8554139dad528ff3b357789407ae0bc71a
   languageName: node
   linkType: hard
 
@@ -1387,9 +1379,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-webc@npm:0.5.59":
-  version: 0.5.59
-  resolution: "@justeattakeaway/pie-webc@npm:0.5.59"
+"@justeattakeaway/pie-webc@npm:0.6.0":
+  version: 0.6.0
+  resolution: "@justeattakeaway/pie-webc@npm:0.6.0"
   dependencies:
     "@justeattakeaway/pie-assistive-text": 0.8.1
     "@justeattakeaway/pie-button": 1.1.0
@@ -1413,11 +1405,11 @@ __metadata:
     "@justeattakeaway/pie-text-input": 0.24.6
     "@justeattakeaway/pie-textarea": 0.13.1
     "@justeattakeaway/pie-thumbnail": 0.1.0
-    "@justeattakeaway/pie-toast": 0.5.2
-    "@justeattakeaway/pie-toast-provider": 0.0.0
+    "@justeattakeaway/pie-toast": 0.6.0
+    "@justeattakeaway/pie-toast-provider": 0.1.0
   bin:
     add-components: src/index.js
-  checksum: cf71c943b48c86976f51d15070a471c2be97cc1e4fb5bab8b458b48980b1691fe727b7c9f1343a74b3efd2a469e489618554841f4f436e699d43e15755f094a0
+  checksum: 14ba7b5efa939d2708855fd53702da34fe6c3a2fdadf8bb1310312b3c7fbe44141ec6c24a6f46b10d74683d6d0d659387323893bf4a5ba8866b37ee586472006
   languageName: node
   linkType: hard
 
@@ -9991,8 +9983,8 @@ __metadata:
   resolution: "nextjs-app-v14@workspace:nextjs-app-v14"
   dependencies:
     "@justeattakeaway/pie-css": 0.13.1
-    "@justeattakeaway/pie-icons-webc": 1.1.0
-    "@justeattakeaway/pie-webc": 0.5.59
+    "@justeattakeaway/pie-icons-webc": 1.2.0
+    "@justeattakeaway/pie-webc": 0.6.0
     "@lit-labs/nextjs": 0.2.0
     "@lit/react": 1.0.6
     "@types/node": 20.17.9
@@ -10308,8 +10300,8 @@ __metadata:
   resolution: "nuxt-app@workspace:nuxt-app"
   dependencies:
     "@justeattakeaway/pie-css": 0.13.1
-    "@justeattakeaway/pie-icons-webc": 1.1.0
-    "@justeattakeaway/pie-webc": 0.5.59
+    "@justeattakeaway/pie-icons-webc": 1.2.0
+    "@justeattakeaway/pie-webc": 0.6.0
     deepmerge: 4.3.1
     just-kebab-case: 4.2.0
     nuxt: 3.14.1592
@@ -13858,8 +13850,8 @@ __metadata:
   resolution: "vanilla-app@workspace:vanilla-app"
   dependencies:
     "@justeattakeaway/pie-css": 0.13.1
-    "@justeattakeaway/pie-icons-webc": 1.1.0
-    "@justeattakeaway/pie-webc": 0.5.59
+    "@justeattakeaway/pie-icons-webc": 1.2.0
+    "@justeattakeaway/pie-webc": 0.6.0
     deepmerge: 4.3.1
     vite: 4.5.5
     vite-plugin-html-inject: 1.1.2
