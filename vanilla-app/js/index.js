@@ -31,4 +31,5 @@ document.querySelector('#navigation').innerHTML = `
         <li><pie-link href="/components/textarea.html">Textarea</pie-link></li>
         <li><pie-link href="/components/toast.html">Toast</pie-link></li>
         <li><pie-link href="/components/toast-provider.html">Toast Provider</pie-link></li>
+        <li><pie-link href="/components/thumbnail.html">Thumbnail</pie-link></li>
     </ul>`;
