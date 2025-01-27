@@ -10,6 +10,14 @@ export default function Thumbnail() {
         alt: 'JET logo',
     }
 
+    const invalidSrcWithPlaceholderProps = {
+        src: 'https://www.pie.design/assets/img/jet-invalid-aperture.svg',
+        placeholder: {
+            src: 'https://www.pie.design/assets/img/404_narrow.png',
+            alt: 'Thumbnail placeholder image',
+        }
+    }
+
     return (
         <NavigationLayout title="Thumbnail">
             <h3>Default</h3>
@@ -17,6 +25,8 @@ export default function Thumbnail() {
             <PieDivider />
             <h3>Outline</h3>
             <PieThumbnail variant="outline" {...props} />
+            <h3>Placeholder</h3>
+            <PieThumbnail {...invalidSrcWithPlaceholderProps} />
         </NavigationLayout>
     );
 }
