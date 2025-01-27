@@ -24,7 +24,7 @@ export default function Thumbnail() {
             <PieThumbnail {...props} />
             <PieDivider />
             <h3>Outline</h3>
-            <PieThumbnail disabled variant="outline" {...props} />
+            <PieThumbnail variant="outline" {...props} />
             <h3>Placeholder</h3>
             <PieThumbnail  {...invalidSrcWithPlaceholderProps} />
         </NavigationLayout>
