@@ -11,7 +11,7 @@ export default function Thumbnail() {
     }
 
     const invalidSrcWithPlaceholderProps = {
-        src: 'https://www.pie.design/assets/img/jet-invalid-aperture.svg',
+        src: 'https://www.pie.design/assets/img/invalid-thumbnail-aperture.svg',
         placeholder: {
             src: 'https://www.pie.design/assets/img/404_narrow.png',
             alt: 'Thumbnail placeholder image',
@@ -24,9 +24,9 @@ export default function Thumbnail() {
             <PieThumbnail {...props} />
             <PieDivider />
             <h3>Outline</h3>
-            <PieThumbnail variant="outline" {...props} />
+            <PieThumbnail disabled variant="outline" {...props} />
             <h3>Placeholder</h3>
-            <PieThumbnail {...invalidSrcWithPlaceholderProps} />
+            <PieThumbnail  {...invalidSrcWithPlaceholderProps} />
         </NavigationLayout>
     );
 }

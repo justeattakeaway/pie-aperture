@@ -10,17 +10,22 @@ const thumbnailProps = {
 };
 
 const invalidSrcWithPlaceholderProps = {
-  src: 'https://www.pie.design/assets/img/jet-invalid-aperture.svg',
+  src: 'https://www.pie.design/assets/img/invalid-thumbnail-aperture.svg',
   placeholder: {
-      src: 'https://www.pie.design/assets/img/404_narrow.png',
-      alt: 'Thumbnail placeholder image',
+    src: 'https://www.pie.design/assets/img/404_narrow.png',
+    alt: 'Thumbnail placeholder image',
   }
 }
 
 function toAttributes(props) {
-    return Object.entries(props)
-        .map(([key, value]) => `${key}="${value}"`)
-        .join(' ');
+  return Object.entries(props)
+      .map(([key, value]) => {
+          if (typeof value === 'object') {
+              return `${key}='${JSON.stringify(value)}'`;
+          }
+          return `${key}="${value}"`;
+      })
+      .join(' ');
 }
 
 const defaultThumbnail = `<pie-thumbnail ${toAttributes(thumbnailProps)}></pie-thumbnail>`;

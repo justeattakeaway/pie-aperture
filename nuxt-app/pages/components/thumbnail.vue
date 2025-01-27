@@ -23,7 +23,7 @@ const props = {
 };
 
 const invalidSrcWithPlaceholderProps = {
-    src: 'https://www.pie.design/assets/img/jet-invalid-aperture.svg',
+    src: 'https://www.pie.design/assets/img/invalid-thumbnail-aperture.svg',
     placeholder: {
         src: 'https://www.pie.design/assets/img/404_narrow.png',
         alt: 'Thumbnail placeholder image',
