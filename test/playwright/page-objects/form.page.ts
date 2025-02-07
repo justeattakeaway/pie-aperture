@@ -47,9 +47,9 @@ export class FormPage {
         this.descriptionField = page.getByTestId('description');
         this.approveSettingsSwitch = page.getByTestId('approveSettings').getByTestId('switch-component');
         this.enableNotificationsSwitch = page.getByTestId('enableNotifications').getByTestId('switch-component');
-        this.newsletterSignupCheckbox = page.getByTestId('newsletterSignup').getByTestId('checkbox-component');
-        this.contactByEmailCheckbox = page.getByTestId('contactByEmail').getByTestId('checkbox-component');
-        this.contactByPhoneCheckbox = page.getByTestId('contactByPhone').getByTestId('checkbox-component');
+        this.newsletterSignupCheckbox = page.getByTestId('newsletterSignup').getByTestId('pie-checkbox-label');
+        this.contactByEmailCheckbox = page.getByTestId('contactByEmail').getByTestId('pie-checkbox-label');
+        this.contactByPhoneCheckbox = page.getByTestId('contactByPhone').getByTestId('pie-checkbox-label');
         this.favouriteTakeaway = page.getByTestId('shawarma').getByTestId('pie-radio');
         this.resetBtn = page.getByTestId('reset-btn');
         this.submitBtn = page.getByTestId('submit-btn');
