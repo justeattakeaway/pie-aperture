@@ -98,7 +98,7 @@ jobs:
         if: always()
         with:
           name: vanilla-playwright-report
-          path: playwright-reports/vanilla-playwright-report/
+          path: playwright-reports/vanilla-app-playwright-report/
 
       - name: Run Percy Tests
         shell: bash
