@@ -5,12 +5,14 @@
 </template>
 
 <script setup lang="ts">
+import '@justeattakeaway/pie-css';
 import '@justeattakeaway/pie-webc/components/link.js';
 import '@justeattakeaway/pie-webc/components/divider.js';
 </script>
 
 <style lang="scss">
   html {
+    background-color: var(--dt-color-container-default);
     height: 100%;
 
     @font-face {
@@ -36,6 +38,7 @@ import '@justeattakeaway/pie-webc/components/divider.js';
     min-height: 100%;
     padding: 16px;
     max-width: 720px;
+    color: var(--dt-color-content-default);
   }
 
   pie-divider {
