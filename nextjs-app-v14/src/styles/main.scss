@@ -1,4 +1,5 @@
 html {
+  background-color: var(--dt-color-container-default);
   height: 100%;
 
   @font-face {
@@ -20,6 +21,7 @@ html {
 
 body {
   font-family: JetSansDigital;
+  color: var(--dt-color-content-default);
   margin: auto;
   min-height: 100%;
   padding: 16px;

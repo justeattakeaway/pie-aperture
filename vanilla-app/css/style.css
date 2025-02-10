@@ -1,5 +1,6 @@
 html {
     height: 100%;
+    background-color: var(--dt-color-container-default);
 }
 @font-face {
     font-family: JETSansDigital;
@@ -19,6 +20,7 @@ html {
 body {
     font-family: JetSansDigital;
     font-feature-settings: "tnum"; /* Enable tabular numbers */
+    color: var(--dt-color-content-default);
     margin: auto;
     min-height: 100%;
     padding: 16px;

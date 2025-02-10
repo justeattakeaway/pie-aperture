@@ -94,11 +94,11 @@ jobs:
         shell: bash
         run: yarn test:system --filter=vanilla-app
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
         if: always()
         with:
           name: vanilla-playwright-report
-          path: playwright-reports/vanilla-playwright-report/
+          path: playwright-reports/vanilla-app-playwright-report/
 
       - name: Run Percy Tests
         shell: bash
