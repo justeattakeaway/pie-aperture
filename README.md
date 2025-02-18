@@ -28,7 +28,7 @@ Tests can be run by executing the following command at the root of the monorepo:
 yarn test:visual
 
 # Run visual tests for a specific project
-# app-name - can be one of the following: nextjs-app-v14, nuxt-app, vanilla-app
+# app-name - can be one of the following: nextjs-app-v14, nextjs-app-v15, nuxt-app, vanilla-app
 yarn test:visual --filter=<app-name>
 ```
 

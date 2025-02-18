@@ -1,0 +1,46 @@
+{
+  "name": "nextjs-app-v15",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3003",
+    "build": "next build",
+    "preview": "next start",
+    "lint": "next lint",
+    "playwright:show-report": "npx playwright show-report ../playwright-reports/nextjs-app-v14-playwright-report",
+    "test:ssr": "APP_NAME=nextjs-app-v14 playwright test -c ../playwright.config.ts --project=ssr",
+    "test:system": "APP_NAME=nextjs-app-v14 playwright test -c ../playwright.config.ts --project=system",
+    "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NEXT_14} npx percy exec -- wdio run ./wdio.conf.js",
+    "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
+  },
+  "dependencies": {
+    "@justeattakeaway/pie-css": "0.13.1",
+    "@justeattakeaway/pie-icons-webc": "1.2.0",
+    "@justeattakeaway/pie-webc": "0.6.4",
+    "@lit-labs/nextjs": "0.2.1",
+    "@lit/react": "1.0.7",
+    "next": "15.1.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "sass": "1.81.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.17.9",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
+    "deepmerge": "4.3.1",
+    "eslint": "8.57.1",
+    "eslint-config-next": "15.1.6",
+    "typescript": "5.7.2"
+  },
+  "installConfig": {
+    "hoistingLimits": "workspaces"
+  },
+  "volta": {
+    "extends": "../package.json"
+  },
+  "resolutions": {
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3"
+  }
+}
