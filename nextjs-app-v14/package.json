@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3003",
     "build": "next build",
-    "preview": "next start",
+    "preview": "npx serve@latest out",
     "lint": "next lint",
     "playwright:show-report": "npx playwright show-report ../playwright-reports/nextjs-app-v14-playwright-report",
     "test:ssr": "APP_NAME=nextjs-app-v14 playwright test -c ../playwright.config.ts --project=ssr",
