@@ -1,6 +1,6 @@
 <template>
   <div>
-    <pie-button @click="setCounter">
+    <pie-button @click="setCounter" variant="primary-alternative">
       Counter: {{ counter }}
     </pie-button>
 

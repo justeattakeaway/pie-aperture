@@ -11,7 +11,7 @@ export default function Button() {
 
     return (
         <NavigationLayout title="Button">
-        <PieButton onClick={() => setCounter(counter + 1)}>Counter: {counter}</PieButton>
+        <PieButton variant="primary-alternative" onClick={() => setCounter(counter + 1)}>Counter: {counter}</PieButton>
 
         <PieDivider />
 

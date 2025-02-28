@@ -4,7 +4,7 @@ import './utils/navigation.js';
 import './shared.js';
 
 document.querySelector('#app').innerHTML = `
-    <pie-button id="counter" type="button"></pie-button>
+    <pie-button id="counter" type="button" variant="primary-alternative"></pie-button>
 
     <pie-divider></pie-divider>
 
