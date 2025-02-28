@@ -1206,10 +1206,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-css@npm:0.14.1":
-  version: 0.14.1
-  resolution: "@justeattakeaway/pie-css@npm:0.14.1"
-  checksum: f5f9e69c27c41bf69a43fc4d6a476152a905ce50832b4fe1921995d381fe313857b9ea15a6440138b9a464f33a15871494c8138708f8c6aee33b9f19eae36292
+"@justeattakeaway/pie-css@npm:0.15.1":
+  version: 0.15.1
+  resolution: "@justeattakeaway/pie-css@npm:0.15.1"
+  checksum: 0fc2ee3dd7976c3ca5dfefc2a06382e7ec3c336734d6d7c41566d821c4d44142e925a632ef4f3830d5a423131dc5d7f9771c1a6564d666caa525895d92bfa1de
   languageName: node
   linkType: hard
 
@@ -1239,15 +1239,6 @@ __metadata:
     "@justeattakeaway/pie-spinner": 1.0.1
     "@justeattakeaway/pie-webc-core": 0.24.2
   checksum: fc090849773d9bc0f8b361396ee7e951ac5b065f637d1ce79e3c4faa5a8b144cf6d30839f2193d8226c7fea3c9dfe72d5f1bc0572a39efc88825dfc5f8d6449e
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-icons-webc@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@justeattakeaway/pie-icons-webc@npm:1.3.0"
-  dependencies:
-    "@justeattakeaway/pie-webc-core": 0.24.2
-  checksum: bd9bee22e8b1636004b3ad98e816b6316e16029c84979bc50e3f29ff152d311f4b2830c3358c78383807810280d6d422ffe9928d195f871c4d0c81fbf6e2719b
   languageName: node
   linkType: hard
 
@@ -10277,8 +10268,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-app-v14@workspace:nextjs-app-v14"
   dependencies:
-    "@justeattakeaway/pie-css": 0.14.1
-    "@justeattakeaway/pie-icons-webc": 1.3.0
+    "@justeattakeaway/pie-css": 0.15.1
+    "@justeattakeaway/pie-icons-webc": 1.5.0
     "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20250228081546
     "@lit-labs/nextjs": 0.2.0
     "@lit/react": 1.0.6
@@ -10594,8 +10585,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nuxt-app@workspace:nuxt-app"
   dependencies:
-    "@justeattakeaway/pie-css": 0.14.1
-    "@justeattakeaway/pie-icons-webc": 1.3.0
+    "@justeattakeaway/pie-css": 0.15.1
+    "@justeattakeaway/pie-icons-webc": 1.5.0
     "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20250228081546
     deepmerge: 4.3.1
     just-kebab-case: 4.2.0
@@ -14389,8 +14380,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vanilla-app@workspace:vanilla-app"
   dependencies:
-    "@justeattakeaway/pie-css": 0.14.1
-    "@justeattakeaway/pie-icons-webc": 1.3.0
+    "@justeattakeaway/pie-css": 0.15.1
+    "@justeattakeaway/pie-icons-webc": 1.5.0
     "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20250228081546
     deepmerge: 4.3.1
     vite: 4.5.5
