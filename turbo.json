@@ -7,10 +7,30 @@
         "dependsOn": ["build"]
       },
       "test:ssr": {
-        "cache": false
+        "cache": true,
+        "inputs": [
+          "$TURBO_DEFAULT$",
+          "../playwright.config.ts",
+          "../playwright-helpers/**",
+          "../package.json",
+          "../test/playwright/**",
+          "../test/ssr/**",
+          "../turbo.json",
+          "../yarn.lock"
+        ]
       },
       "test:system": {
-        "cache": true
+        "cache": true,
+        "inputs": [
+          "$TURBO_DEFAULT$",
+          "./playwright.config.ts",
+          "../playwright-helpers/**",
+          "../package.json",
+          "../test/playwright/**",
+          "../test/system/**",
+          "../turbo.json",
+          "../yarn.lock"
+        ]
       },
       "playwright:show-report": {
         "cache": false

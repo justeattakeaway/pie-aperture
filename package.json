@@ -31,9 +31,9 @@
     }
   },
   "devDependencies": {
-    "@percy/cli": "1.30.4",
-    "@percy/selenium-webdriver": "2.1.0",
-    "@playwright/test": "1.49.0",
+    "@percy/cli": "1.30.7",
+    "@percy/selenium-webdriver": "2.2.2",
+    "@playwright/test": "1.50.1",
     "@types/follow-redirects": "1.14.4",
     "@types/node": "20.17.9",
     "@wdio/browserstack-service": "8.40.6",

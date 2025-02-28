@@ -28,6 +28,9 @@ export class ToastProviderPage {
         await this.infoToastBtn.click();
         await this.warningToastBtn.click();
         await this.errorToastBtn.click();
+
+        // Wait for the toasts to be added to the queue
+        await this.page.waitForTimeout(2000);
     }
 
     async clearAllToasts() {
