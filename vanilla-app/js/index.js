@@ -26,6 +26,7 @@ document.querySelector('#navigation').innerHTML = `
         <li><pie-link href="/components/radio-group.html">Radio Group</pie-link></li>
         <li><pie-link href="/components/spinner.html">Spinner</pie-link></li>
         <li><pie-link href="/components/switch.html">Switch</pie-link></li>
+        <li><pie-link href="/components/select.html">Select</pie-link></li>
         <li><pie-link href="/components/tag.html">Tag</pie-link></li>
         <li><pie-link href="/components/text-input.html">Text Input</pie-link></li>
         <li><pie-link href="/components/textarea.html">Textarea</pie-link></li>
