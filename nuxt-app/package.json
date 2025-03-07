@@ -1,6 +1,7 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -15,8 +16,12 @@
   },
   "devDependencies": {
     "deepmerge": "4.3.1",
+    "eslint": "^9.21.0",
+    "eslint-plugin-vue": "^10.0.0",
+    "globals": "^16.0.0",
     "nuxt": "3.14.1592",
-    "sass": "1.81.0"
+    "sass": "1.81.0",
+    "vue-eslint-parser": "^10.1.1"
   },
   "dependencies": {
     "@justeattakeaway/pie-css": "0.14.1",
