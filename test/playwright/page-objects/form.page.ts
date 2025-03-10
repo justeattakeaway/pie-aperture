@@ -50,7 +50,7 @@ export class FormPage {
         this.newsletterSignupCheckbox = page.getByTestId('newsletterSignup').getByTestId('pie-checkbox-label');
         this.contactByEmailCheckbox = page.getByTestId('contactByEmail').getByTestId('pie-checkbox-label');
         this.contactByPhoneCheckbox = page.getByTestId('contactByPhone').getByTestId('pie-checkbox-label');
-        this.favouriteTakeaway = page.getByTestId('shawarma').getByTestId('pie-radio');
+        this.favouriteTakeaway = page.getByTestId('shawarma').getByTestId('pie-radio-input');
         this.resetBtn = page.getByTestId('reset-btn');
         this.submitBtn = page.getByTestId('submit-btn');
 
