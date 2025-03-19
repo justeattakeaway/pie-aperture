@@ -7,7 +7,9 @@ import './utils/navigation.js';
 // Set initial HTML structure
 document.querySelector('#app').innerHTML = `
     <pie-select>
-        <pie-option-group>Animal</pie-option-group>
-        <pie-option value="cat">Cat</pie-option>
+        <pie-option-group label="Animal">
+            <pie-option value="cat">Cat</pie-option>
+            <pie-option value="dog">Dog</pie-option>
+        </pie-option-group>
     </pie-select>
 `;

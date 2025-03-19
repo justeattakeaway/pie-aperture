@@ -10,8 +10,10 @@ export default function Select() {
     return (
         <NavigationLayout title="Select">
             <PieSelect>
-                <PieOptionGroup>Animals</PieOptionGroup>
-                <PieOption>Cat</PieOption>
+                <PieOptionGroup label="Animals">
+                    <PieOption value="cat">Cat</PieOption>
+                    <PieOption value="dog">Dog</PieOption>
+                </PieOptionGroup>
             </PieSelect>
         </NavigationLayout>
     );
