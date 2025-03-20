@@ -102,6 +102,18 @@
                 name="description">
             </pie-textarea>
 
+            <pie-form-label for="favouriteFood">
+                Favourite Food:
+            </pie-form-label>
+            <pie-select
+                @change="favouriteFood = $event.detail.sourceEvent.target.value"
+                class="form-field"
+                id="favouriteFood"
+                data-test-id="favouriteFood"
+                name="favouriteFood"
+                :options="foodOptions">
+            </pie-select>
+
             <div class="form-controls">
                 <pie-form-label for="approveSettings">
                     Approve settings
@@ -187,6 +199,7 @@ import '@justeattakeaway/pie-webc/components/textarea.js';
 import '@justeattakeaway/pie-webc/components/radio.js';
 import '@justeattakeaway/pie-webc/components/radio-group.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
+import '@justeattakeaway/pie-webc/components/select.js';
 import '@justeattakeaway/pie-webc/components/checkbox.js';
 import '@justeattakeaway/pie-webc/components/checkbox-group.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
@@ -215,6 +228,21 @@ const favouriteTakeaway = ref('');
 
 const contactByEmail = ref(false);
 const contactByPhone = ref(false);
+
+const foodOptions = [
+    {
+        tag: 'option',
+        text: 'Select a value',
+        value: '',
+    },
+    {
+        tag: 'option',
+        text: 'Burger',
+        value: 'burger',
+    }
+];
+
+const favouriteFood = ref('');
 
 const formDataDisplay = ref('');
 
@@ -246,6 +274,7 @@ function handleSubmit() {
         favouriteNumber: favouriteNumber.value,
         newsletterSignup: newsletter.value,
         description: description.value,
+        favouriteFood: favouriteFood.value,
         contactByEmail: contactByEmail.value,
         contactByPhone: contactByPhone.value,
     }, null, 2);
