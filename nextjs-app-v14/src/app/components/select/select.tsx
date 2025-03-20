@@ -1,20 +1,31 @@
 'use client';
 
 import NavigationLayout from "@/app/layout/navigation";
-import { PieSelect } from "@justeattakeaway/pie-webc/react/select.js";
-import { PieOption } from "@justeattakeaway/pie-webc/react/option.js";
-import { PieOptionGroup } from "@justeattakeaway/pie-webc/react/option-group.js";
-
+import { PieSelect, type SelectProps } from "@justeattakeaway/pie-webc/react/select.js";
 
 export default function Select() {
+    const options: SelectProps['options'] = [
+        {
+            tag: 'optgroup',
+            label: 'Animals',
+            options: [
+                {
+                    tag: 'option',
+                    text: 'Cat',
+                    value: 'cat',
+                },
+                {
+                    tag: 'option',
+                    text: 'Dog',
+                    value: 'dog',
+                },
+            ],
+        },
+    ];
+
     return (
         <NavigationLayout title="Select">
-            <PieSelect>
-                <PieOptionGroup label="Animals">
-                    <PieOption value="cat">Cat</PieOption>
-                    <PieOption value="dog">Dog</PieOption>
-                </PieOptionGroup>
-            </PieSelect>
+            <PieSelect options={options} />
         </NavigationLayout>
     );
 }
