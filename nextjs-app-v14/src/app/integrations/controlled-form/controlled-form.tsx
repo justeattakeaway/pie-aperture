@@ -19,7 +19,7 @@ import { IconNumberSymbol } from '@justeattakeaway/pie-icons-webc/dist/react/Ico
 import { IconKey } from '@justeattakeaway/pie-icons-webc/dist/react/IconKey.js';
 import '@/styles/form.scss';
 
-export default function Form() {
+export default function ControlledForm() {
     const [approveSettings, setApproveSettings] = useState(false);
     const [enableNotifications, setNotifications] = useState(false);
     const [newsletterSignup, setNewsletterSignup] = useState(false);
