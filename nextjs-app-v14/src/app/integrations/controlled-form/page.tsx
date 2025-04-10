@@ -5,6 +5,6 @@ export const metadata: Metadata = {
     title: 'Controlled Form',
 }
 
-export default function FormPage() {
+export default function ControlledFormPage() {
     return <ControlledForm/>;
 }
