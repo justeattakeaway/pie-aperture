@@ -1,10 +1,10 @@
-import Form from './controlled-form';
+import ControlledForm from './controlled-form';
 import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Form',
+    title: 'Controlled Form',
 }
 
 export default function FormPage() {
-    return <Form/>;
+    return <ControlledForm/>;
 }
