@@ -1,4 +1,4 @@
-import Form from './form';
+import Form from './controlled-form';
 import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
