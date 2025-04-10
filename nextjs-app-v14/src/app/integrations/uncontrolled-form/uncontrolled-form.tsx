@@ -1,7 +1,7 @@
 // @ts-nocheck
 'use client';
 
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import NavigationLayout from '@/app/layout/navigation';
 import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
 import { PieRadio } from '@justeattakeaway/pie-webc/react/radio.js';
@@ -25,7 +25,8 @@ export default function UnControlledForm() {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const formData = new FormData(event.currentTarget);        const formDataObj = Object.fromEntries(formData.entries());
+        const formData = new FormData(event.currentTarget);
+        const formDataObj = Object.fromEntries(formData.entries());
         setFormDataDisplay(JSON.stringify(formDataObj, null, 2));
     };
 
@@ -51,7 +52,7 @@ export default function UnControlledForm() {
                     id="description"
                     data-test-id="description"
                     name="description"
-                    placeholder="Write something about yourself..."/>
+                    placeholder="Write something about yourself..." />
 
                 <div className="form-controls">
                     <PieFormLabel for="approveSettings">
@@ -62,14 +63,14 @@ export default function UnControlledForm() {
                         data-test-id="approveSettings"
                         name="approveSettings"
                     />
-    
+
                     <PieCheckbox
                         id="newsletterSignup"
                         data-test-id="newsletterSignup"
                         name="newsletterSignup">
                         Receive discounts, loyalty offers and other updates via email
                     </PieCheckbox>
-    
+
                     <PieCheckboxGroup>
                         <PieFormLabel slot="label">Choose the way we can contact you:</PieFormLabel>
                         <PieCheckbox
