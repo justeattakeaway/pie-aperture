@@ -11,6 +11,7 @@ import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
 import { PieTextarea } from '@justeattakeaway/pie-webc/react/textarea.js';
 import { PieCheckbox } from '@justeattakeaway/pie-webc/react/checkbox.js';
 import { PieCheckboxGroup } from '@justeattakeaway/pie-webc/react/checkbox-group.js';
+import { PieSelect, SelectProps } from '@justeattakeaway/pie-webc/react/select.js';
 import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
 import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
 import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
@@ -18,6 +19,19 @@ import { IconUser } from '@justeattakeaway/pie-icons-webc/dist/react/IconUser.js
 import { IconNumberSymbol } from '@justeattakeaway/pie-icons-webc/dist/react/IconNumberSymbol.js';
 import { IconKey } from '@justeattakeaway/pie-icons-webc/dist/react/IconKey.js';
 import '@/styles/form.scss';
+
+const foodOptions: SelectProps['options'] = [
+    {
+        tag: 'option',
+        text: 'Select a value',
+        value: '',
+    },
+    {
+        tag: 'option',
+        text: 'Burger',
+        value: 'burger',
+    }
+];
 
 export default function Form() {
     const [approveSettings, setApproveSettings] = useState(false);
@@ -28,6 +42,7 @@ export default function Form() {
     const [favouriteNumber, setFavouriteNumber] = useState('');
     const [favouriteNumberValidationMessage, setFavouriteNumberValidationMessage] = useState('');
     const [favouriteTakeaway, setFavouriteTakeaway] = useState('');
+    const [favouriteFood, setFavouriteFood] = useState('');
 
     const [formDataDisplay, setFormDataDisplay] = useState<string | null>(null);
 
@@ -106,6 +121,10 @@ export default function Form() {
         setFavouriteTakeaway(newFavourite);
     }
 
+    const handleFavouriteFoodChange = (event: CustomEvent) => {
+        setFavouriteFood(event.detail.sourceEvent.target.value);
+    };
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = {
@@ -121,6 +140,7 @@ export default function Form() {
             tel,
             password,
             favouriteTakeaway,
+            favouriteFood,
             description,
         };
 
@@ -230,6 +250,18 @@ export default function Form() {
                     placeholder="Write something about yourself..."
                     value={description}
                     onInput={handleDescriptionTextarea as any}/>
+
+                <PieFormLabel for="favouriteFood">
+                    Favourite Food:
+                </PieFormLabel>
+                <PieSelect
+                    className="form-field"
+                    id="favouriteFood"
+                    data-test-id="favouriteFood"
+                    name="favouriteFood"
+                    options={foodOptions}
+                    onChange={handleFavouriteFoodChange as any}
+                />
 
                 <div className="form-controls">
                     <PieFormLabel for="approveSettings">
