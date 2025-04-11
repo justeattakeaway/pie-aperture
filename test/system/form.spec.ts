@@ -14,6 +14,7 @@ test.describe(`Form Page - ${process.env.APP_NAME}`, () => {
             favouriteTakeaway: 'shawarma',
             approveSettings: true,
             enableNotifications: true,
+            favouriteFood: "burger",
             newsletterSignup: true,
             description: 'foo',
             contactByEmail: true,
