@@ -7,6 +7,7 @@ import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-webc/components/checkbox.js';
 import '@justeattakeaway/pie-webc/components/checkbox-group.js';
 import '@justeattakeaway/pie-webc/components/form-label.js';
+import '@justeattakeaway/pie-webc/components/select.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconEmail.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconLaptop.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconPhone.js';
@@ -21,6 +22,22 @@ import '../css/form.css';
 const form = document.querySelector('#testForm');
 const output = document.querySelector('#output');
 const favouriteNumberInput = document.querySelector('#favouriteNumber');
+const favouriteFoodSelect = document.querySelector('#favouriteFood');
+
+const foodOptions = [
+    {
+        tag: 'option',
+        text: 'Pizza',
+        value: 'pizza',
+    },
+    {
+        tag: 'option',
+        text: 'Burger',
+        value: 'burger',
+    }
+];
+
+favouriteFoodSelect.options = foodOptions;
 
 favouriteNumberInput.addEventListener('input', (e) => {
     const value = parseInt(e.target.value, 10);
