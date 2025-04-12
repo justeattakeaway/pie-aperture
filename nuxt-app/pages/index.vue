@@ -24,6 +24,7 @@
       <li><pie-link href="/components/radio-group">Radio Group</pie-link></li>
       <li><pie-link href="/components/spinner">Spinner</pie-link></li>
       <li><pie-link href="/components/switch">Switch</pie-link></li>
+      <li><pie-link href="/components/select">Select</pie-link></li>
       <li><pie-link href="/components/tag">Tag</pie-link></li>
       <li><pie-link href="/components/text-input">Text Input</pie-link></li>
       <li><pie-link href="/components/textarea">Textarea</pie-link></li>

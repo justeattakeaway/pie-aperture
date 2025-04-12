@@ -23,6 +23,7 @@ describe('NextJS Aperture App', () => {
         { url: '/components/radio-group', name: 'Radio Group' },
         { url: '/components/spinner', name: 'Spinner' },
         { url: '/components/switch', name: 'Switch' },
+        { url: '/components/select', name: 'Select' },
         { url: '/components/tag', name: 'Tag' },
         { url: '/components/text-input', name: 'Text Input' },
         { url: '/components/textarea', name: 'Textarea' },
