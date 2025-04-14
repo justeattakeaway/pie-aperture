@@ -249,8 +249,8 @@ export default function ControlledForm() {
                     name="description"
                     placeholder="Write something about yourself..."
                     value={description}
-                    onInput={handleDescriptionTextarea as any}/>
-                    <PieFormLabel for="favouriteFood">
+                    onInput={handleDescriptionTextarea as any} />
+                <PieFormLabel for="favouriteFood">
                     Favourite Food:
                 </PieFormLabel>
 
