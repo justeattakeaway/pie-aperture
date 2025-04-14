@@ -60,10 +60,8 @@ export class FormPage {
         this.outputData = page.getByTestId('outputData');
     }
 
-    async goto() {
-        let url = 'integrations/form';
-        const formattedUrl = APP_NAME === 'vanilla-app' ? `${url}.html` : url;
-        await this.page.goto(formattedUrl);
+    async goto(urlPath: string) {
+        await this.page.goto(urlPath);
     }
 
     async fillForm(formData: TestFormData) {

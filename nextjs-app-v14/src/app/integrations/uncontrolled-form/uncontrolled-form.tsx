@@ -39,8 +39,14 @@ export default function UnControlledForm() {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const formData = new FormData(event.currentTarget);
-        const formDataObj = Object.fromEntries(formData.entries());
+        const formDataObj = Object.fromEntries(
+            new FormData(event.currentTarget).entries()
+        );
+
+        Object.entries(formDataObj).forEach(([key, value]) => {
+            if (value === 'on') formDataObj[key] = true;
+        });
+
         setFormDataDisplay(JSON.stringify(formDataObj, null, 2));
     };
 
@@ -56,6 +62,68 @@ export default function UnControlledForm() {
                     data-test-id="username"
                     name="username">
                     <IconUser slot="leadingIcon"></IconUser>
+                </PieTextInput>
+
+                <PieFormLabel for="favouriteNumber">
+                    Favourite Number:
+                </PieFormLabel>
+                <PieTextInput
+                    className="form-field"
+                    id="favouriteNumber"
+                    data-test-id="favouriteNumber"
+                    name="favouriteNumber"
+                    type="number"
+                    min="-5"
+                    max="200">
+                    <IconNumberSymbol slot="leadingIcon"></IconNumberSymbol>
+                </PieTextInput>
+
+                <PieFormLabel for="email">
+                    Email:
+                </PieFormLabel>
+                <PieTextInput
+                    className="form-field"
+                    id="email"
+                    data-test-id="email"
+                    name="email"
+                    type="email">
+                    <IconEmail slot="leadingIcon"></IconEmail>
+                </PieTextInput>
+
+                <PieFormLabel for="url">
+                    URL:
+                </PieFormLabel>
+                <PieTextInput
+                    className="form-field"
+                    id="url"
+                    data-test-id="url"
+                    name="url"
+                    type="url">
+                    <IconLaptop slot="leadingIcon"></IconLaptop>
+                </PieTextInput>
+
+                <PieFormLabel for="tel">
+                    Telephone:
+                </PieFormLabel>
+                <PieTextInput
+                    className="form-field"
+                    id="tel"
+                    data-test-id="tel"
+                    name="tel"
+                    type="tel">
+                    <IconPhone slot="leadingIcon"></IconPhone>
+                </PieTextInput>
+
+                <PieFormLabel for="password">
+                    Password:
+                </PieFormLabel>
+                <PieTextInput
+                    className="form-field"
+                    id="password"
+                    data-test-id="password"
+                    name="password"
+                    type="password">
+                    <IconKey slot="leadingIcon"></IconKey>
                 </PieTextInput>
 
                 <PieFormLabel for="description">
@@ -76,6 +144,15 @@ export default function UnControlledForm() {
                         id="approveSettings"
                         data-test-id="approveSettings"
                         name="approveSettings"
+                    />
+
+                    <PieFormLabel for="enableNotifications">
+                        Enable Notifications
+                    </PieFormLabel>
+                    <PieSwitch
+                        id="enableNotifications"
+                        data-test-id="enableNotifications"
+                        name="enableNotifications"
                     />
 
                     <PieCheckbox
@@ -107,6 +184,9 @@ export default function UnControlledForm() {
                         <PieRadio data-test-id="shawarma" value="shawarma">Shawarma</PieRadio>
                     </PieRadioGroup>
 
+                    <PieFormLabel for="favouriteFood">
+                        Favourite Food:
+                    </PieFormLabel>
                     <PieSelect
                         className="form-field"
                         id="favouriteFood"

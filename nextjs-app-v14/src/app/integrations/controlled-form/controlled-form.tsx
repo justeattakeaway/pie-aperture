@@ -254,15 +254,6 @@ export default function ControlledForm() {
                     Favourite Food:
                 </PieFormLabel>
 
-                <PieSelect
-                    className="form-field"
-                    id="favouriteFood"
-                    data-test-id="favouriteFood"
-                    name="favouriteFood"
-                    options={foodOptions}
-                    onChange={handleFavouriteFoodChange as any}
-                />
-
                 <PieFormLabel for="favouriteFood">
                     Favourite Food:
                 </PieFormLabel>
