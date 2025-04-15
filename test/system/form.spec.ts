@@ -1,37 +1,55 @@
 import { test, expect } from '@playwright/test';
 import { FormPage, type TestFormData } from '../playwright/page-objects/form.page';
 
-test.describe(`Form Page - ${process.env.APP_NAME}`, () => {
-    test('should submit the correct form data', async ({ page }) => {
-        // Arrange
-        const expectFormData: TestFormData = {
-            username: 'John Doe',
-            favouriteNumber: '42',
-            email: 'foo@bar.com',
-            url: 'https://example.com',
-            tel: '1234567890',
-            password: 'foo',
-            favouriteTakeaway: 'shawarma',
-            approveSettings: true,
-            enableNotifications: true,
-            favouriteFood: "burger",
-            newsletterSignup: true,
-            description: 'foo',
-            contactByEmail: true,
-            contactByPhone: true,
-        };
+const { APP_NAME } = process.env;
 
-        const formPage = new FormPage(page);
+const sampleFormData: TestFormData = {
+    username: 'John Doe',
+    favouriteNumber: '42',
+    email: 'foo@bar.com',
+    url: 'https://example.com',
+    tel: '1234567890',
+    password: 'foo',
+    favouriteTakeaway: 'shawarma',
+    approveSettings: true,
+    enableNotifications: true,
+    favouriteFood: "burger",
+    newsletterSignup: true,
+    description: 'foo',
+    contactByEmail: true,
+    contactByPhone: true,
+};
 
-        // Act
-        await formPage.goto();
-        await formPage.fillForm(expectFormData);
+const getFormUrls = (): string[] => {
+    switch (APP_NAME) {
+        case 'vanilla-app':
+            return ['integrations/form.html'];
+        case 'nextjs-app-v14':
+            return ['integrations/uncontrolled-form', 'integrations/controlled-form'];
+        case 'nuxt-app':
+            return ['integrations/form'];
+        default:
+            return ['integrations/form'];
+    }
+};
 
-        await formPage.submitForm();
+test.describe(`Form Page - ${APP_NAME}`, () => {
+    const formUrls = getFormUrls();
+    
+    formUrls.forEach(url => {
+        test(`should submit the correct data for ${APP_NAME} / ${url}`, async ({ page }) => {
+            // Arrange
+            const expectFormData = { ...sampleFormData };
+            const formPage = new FormPage(page);
 
-        // Assert
-        const outputData = await formPage.getOutputData();
+            // Act
+            await formPage.goto(url);
+            await formPage.fillForm(expectFormData);
+            await formPage.submitForm();
 
-        expect(outputData).toEqual(expectFormData);
+            // Assert
+            const outputData = await formPage.getOutputData();
+            expect(outputData).toEqual(expectFormData);
+        });
     });
 });
