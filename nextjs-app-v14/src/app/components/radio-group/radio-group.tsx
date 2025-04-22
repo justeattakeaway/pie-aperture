@@ -12,14 +12,14 @@ export default function RadioGroup() {
     const [favouriteTakeaway, setFavouriteTakeaway] = useState('');
 
 
-    const handleFavouriteTakeaway = (event: InputEvent) => {
+    const handleFavouriteTakeaway = (event: CustomEvent) => {
         const newFavourite = (event.target as HTMLInputElement).value;
         setFavouriteTakeaway(newFavourite);
     }
 
     return (
         <NavigationLayout title="Radio Group">
-            <PieRadioGroup name="favouriteTakeaway" onChange={handleFavouriteTakeaway as any}>
+            <PieRadioGroup name="favouriteTakeaway" onChange={handleFavouriteTakeaway}>
                 <PieFormLabel slot="label">Your favourite takeaway: { favouriteTakeaway }</PieFormLabel>
                 <PieRadio value="chinese">Chinese</PieRadio>
                 <PieRadio value="shawarma">Shawarma</PieRadio>

@@ -116,7 +116,7 @@ export default function ControlledForm() {
         setContactByEmail(current => !current);
     };
 
-    const handleFavouriteTakeaway = (event: InputEvent) => {
+    const handleFavouriteTakeaway = (event: CustomEvent) => {
         const newFavourite = (event.target as HTMLInputElement).value;
         setFavouriteTakeaway(newFavourite);
     }
@@ -159,7 +159,7 @@ export default function ControlledForm() {
                     data-test-id="username"
                     name="username"
                     value={username}
-                    onInput={handleUsernameInput as any}
+                    onInput={handleUsernameInput}
                     type="text">
                     <IconUser slot="leadingIcon"></IconUser>
                 </PieTextInput>
@@ -175,7 +175,7 @@ export default function ControlledForm() {
                     min={-5}
                     max={200}
                     value={favouriteNumber}
-                    onInput={handleFavouriteNumberInput as any} // Ensure type compatibility
+                    onInput={handleFavouriteNumberInput}
                     type="number"
                     assistiveText={favouriteNumberValidationMessage}
                     status={favouriteNumberValidationMessage ? 'error' : 'default'}
@@ -192,7 +192,7 @@ export default function ControlledForm() {
                     data-test-id="email"
                     name="email"
                     value={email}
-                    onInput={handleEmailInput as any}
+                    onInput={handleEmailInput}
                     type="email">
                     <IconEmail slot="leadingIcon"></IconEmail>
                 </PieTextInput>
@@ -206,7 +206,7 @@ export default function ControlledForm() {
                     data-test-id="url"
                     name="url"
                     value={url}
-                    onInput={handleUrlInput as any}
+                    onInput={handleUrlInput}
                     type="url">
                     <IconLaptop slot="leadingIcon"></IconLaptop>
                 </PieTextInput>
@@ -220,7 +220,7 @@ export default function ControlledForm() {
                     data-test-id="tel"
                     name="tel"
                     value={tel}
-                    onInput={handleTelInput as any}
+                    onInput={handleTelInput}
                     type="tel">
                     <IconPhone slot="leadingIcon"></IconPhone>
                 </PieTextInput>
@@ -234,7 +234,7 @@ export default function ControlledForm() {
                     data-test-id="password"
                     name="password"
                     value={password}
-                    onInput={handlePasswordInput as any}
+                    onInput={handlePasswordInput}
                     type="password">
                     <IconKey slot="leadingIcon"></IconKey>
                 </PieTextInput>
@@ -249,10 +249,7 @@ export default function ControlledForm() {
                     name="description"
                     placeholder="Write something about yourself..."
                     value={description}
-                    onInput={handleDescriptionTextarea as any} />
-                <PieFormLabel for="favouriteFood">
-                    Favourite Food:
-                </PieFormLabel>
+                    onInput={handleDescriptionTextarea} />
 
                 <PieFormLabel for="favouriteFood">
                     Favourite Food:
@@ -263,7 +260,7 @@ export default function ControlledForm() {
                     data-test-id="favouriteFood"
                     name="favouriteFood"
                     options={foodOptions}
-                    onChange={handleFavouriteFoodChange as any}
+                    onChange={handleFavouriteFoodChange}
                 />
 
                 <div className="form-controls">
@@ -313,7 +310,7 @@ export default function ControlledForm() {
                         </PieCheckbox>
                     </PieCheckboxGroup>
 
-                    <PieRadioGroup name="favouriteTakeaway" onChange={handleFavouriteTakeaway as any}>
+                    <PieRadioGroup name="favouriteTakeaway" onChange={handleFavouriteTakeaway}>
                         <PieFormLabel slot="label">Choose a radio button:</PieFormLabel>
                         <PieRadio value="chinese">Chinese</PieRadio>
                         <PieRadio data-test-id="shawarma" value="shawarma">Shawarma</PieRadio>
