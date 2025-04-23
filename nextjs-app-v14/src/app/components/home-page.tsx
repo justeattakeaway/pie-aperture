@@ -12,7 +12,8 @@ export default function HomePage() {
     <NavigationLayout title="Aperture">
     <h2>Demo Integrations</h2>
     <ul>
-      <li><PieLink onClick={() => router.push('/integrations/form')} tag="button">Form Demo</PieLink></li>
+      <li><PieLink onClick={() => router.push('/integrations/controlled-form')} tag="button">Controlled Form Demo</PieLink></li>
+      <li><PieLink onClick={() => router.push('/integrations/uncontrolled-form')} tag="button">Uncontrolled Form Demo</PieLink></li>
     </ul>
     <h2>Component Pages</h2>
     <ul>
@@ -34,6 +35,7 @@ export default function HomePage() {
       <li><PieLink onClick={() => router.push('/components/radio-group')} tag="button">Radio Group</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/spinner')} tag="button">Spinner</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/switch')} tag="button">Switch</PieLink></li>
+      <li><PieLink onClick={() => router.push('/components/select')} tag="button">Select</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/tag')} tag="button">Tag</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/text-input')} tag="button">Text Input</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/textarea')} tag="button">Textarea</PieLink></li>

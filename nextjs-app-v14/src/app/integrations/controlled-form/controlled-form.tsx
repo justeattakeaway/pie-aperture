@@ -11,6 +11,7 @@ import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
 import { PieTextarea } from '@justeattakeaway/pie-webc/react/textarea.js';
 import { PieCheckbox } from '@justeattakeaway/pie-webc/react/checkbox.js';
 import { PieCheckboxGroup } from '@justeattakeaway/pie-webc/react/checkbox-group.js';
+import { PieSelect, SelectProps } from '@justeattakeaway/pie-webc/react/select.js';
 import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
 import { IconLaptop } from '@justeattakeaway/pie-icons-webc/dist/react/IconLaptop.js';
 import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
@@ -19,7 +20,20 @@ import { IconNumberSymbol } from '@justeattakeaway/pie-icons-webc/dist/react/Ico
 import { IconKey } from '@justeattakeaway/pie-icons-webc/dist/react/IconKey.js';
 import '@/styles/form.scss';
 
-export default function Form() {
+const foodOptions: SelectProps['options'] = [
+    {
+        tag: 'option',
+        text: 'Select a value',
+        value: '',
+    },
+    {
+        tag: 'option',
+        text: 'Burger',
+        value: 'burger',
+    }
+];
+
+export default function ControlledForm() {
     const [approveSettings, setApproveSettings] = useState(false);
     const [enableNotifications, setNotifications] = useState(false);
     const [newsletterSignup, setNewsletterSignup] = useState(false);
@@ -28,6 +42,7 @@ export default function Form() {
     const [favouriteNumber, setFavouriteNumber] = useState('');
     const [favouriteNumberValidationMessage, setFavouriteNumberValidationMessage] = useState('');
     const [favouriteTakeaway, setFavouriteTakeaway] = useState('');
+    const [favouriteFood, setFavouriteFood] = useState('');
 
     const [formDataDisplay, setFormDataDisplay] = useState<string | null>(null);
 
@@ -101,10 +116,14 @@ export default function Form() {
         setContactByEmail(current => !current);
     };
 
-    const handleFavouriteTakeaway = (event: InputEvent) => {
+    const handleFavouriteTakeaway = (event: CustomEvent) => {
         const newFavourite = (event.target as HTMLInputElement).value;
         setFavouriteTakeaway(newFavourite);
     }
+
+    const handleFavouriteFoodChange = (event: CustomEvent) => {
+        setFavouriteFood(event.detail.sourceEvent.target.value);
+    };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -121,6 +140,7 @@ export default function Form() {
             tel,
             password,
             favouriteTakeaway,
+            favouriteFood,
             description,
         };
 
@@ -139,7 +159,7 @@ export default function Form() {
                     data-test-id="username"
                     name="username"
                     value={username}
-                    onInput={handleUsernameInput as any}
+                    onInput={handleUsernameInput}
                     type="text">
                     <IconUser slot="leadingIcon"></IconUser>
                 </PieTextInput>
@@ -155,7 +175,7 @@ export default function Form() {
                     min={-5}
                     max={200}
                     value={favouriteNumber}
-                    onInput={handleFavouriteNumberInput as any} // Ensure type compatibility
+                    onInput={handleFavouriteNumberInput}
                     type="number"
                     assistiveText={favouriteNumberValidationMessage}
                     status={favouriteNumberValidationMessage ? 'error' : 'default'}
@@ -172,7 +192,7 @@ export default function Form() {
                     data-test-id="email"
                     name="email"
                     value={email}
-                    onInput={handleEmailInput as any}
+                    onInput={handleEmailInput}
                     type="email">
                     <IconEmail slot="leadingIcon"></IconEmail>
                 </PieTextInput>
@@ -186,7 +206,7 @@ export default function Form() {
                     data-test-id="url"
                     name="url"
                     value={url}
-                    onInput={handleUrlInput as any}
+                    onInput={handleUrlInput}
                     type="url">
                     <IconLaptop slot="leadingIcon"></IconLaptop>
                 </PieTextInput>
@@ -200,7 +220,7 @@ export default function Form() {
                     data-test-id="tel"
                     name="tel"
                     value={tel}
-                    onInput={handleTelInput as any}
+                    onInput={handleTelInput}
                     type="tel">
                     <IconPhone slot="leadingIcon"></IconPhone>
                 </PieTextInput>
@@ -214,7 +234,7 @@ export default function Form() {
                     data-test-id="password"
                     name="password"
                     value={password}
-                    onInput={handlePasswordInput as any}
+                    onInput={handlePasswordInput}
                     type="password">
                     <IconKey slot="leadingIcon"></IconKey>
                 </PieTextInput>
@@ -229,7 +249,19 @@ export default function Form() {
                     name="description"
                     placeholder="Write something about yourself..."
                     value={description}
-                    onInput={handleDescriptionTextarea as any}/>
+                    onInput={handleDescriptionTextarea} />
+
+                <PieFormLabel for="favouriteFood">
+                    Favourite Food:
+                </PieFormLabel>
+                <PieSelect
+                    className="form-field"
+                    id="favouriteFood"
+                    data-test-id="favouriteFood"
+                    name="favouriteFood"
+                    options={foodOptions}
+                    onChange={handleFavouriteFoodChange}
+                />
 
                 <div className="form-controls">
                     <PieFormLabel for="approveSettings">
@@ -278,7 +310,7 @@ export default function Form() {
                         </PieCheckbox>
                     </PieCheckboxGroup>
 
-                    <PieRadioGroup name="favouriteTakeaway" onChange={handleFavouriteTakeaway as any}>
+                    <PieRadioGroup name="favouriteTakeaway" onChange={handleFavouriteTakeaway}>
                         <PieFormLabel slot="label">Choose a radio button:</PieFormLabel>
                         <PieRadio value="chinese">Chinese</PieRadio>
                         <PieRadio data-test-id="shawarma" value="shawarma">Shawarma</PieRadio>
