@@ -6,6 +6,7 @@ describe('NextJS Aperture App', () => {
         { url: '/', name: 'PIE Aperture' },
         { url: '/components/assistive-text', name: 'Assistive Text' },
         { url: '/components/button', name: 'Button' },
+        { url: '/components/breadcrumb', name: 'Breadcrumb' },
         { url: '/components/card', name: 'Card' },
         { url: '/components/checkbox', name: 'Checkbox' },
         { url: '/components/checkbox-group', name: 'Checkbox Group' },
