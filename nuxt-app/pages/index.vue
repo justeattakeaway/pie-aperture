@@ -8,6 +8,7 @@
 		<ul>
 			<li><pie-link href="/components/assistive-text">Assistive Text</pie-link></li>
 			<li><pie-link href="/components/button">Button</pie-link></li>
+      <li><pie-link href="/components/breadcrumb">Breadcrumb</pie-link></li>
 			<li><pie-link href="/components/card">Card</pie-link></li>
       <li><pie-link href="/components/checkbox">Checkbox</pie-link></li>
       <li><pie-link href="/components/checkbox-group">Checkbox Group</pie-link></li>

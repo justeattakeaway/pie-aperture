@@ -19,6 +19,7 @@ export default function HomePage() {
     <ul>
     <li><PieLink onClick={() => router.push('/components/assistive-text')} tag="button">Assistive Text</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/button')} tag="button">Button</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/breadcrumb')} tag="button">Breadcrumb</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/card')} tag="button">Card</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/checkbox')} tag="button">Checkbox</PieLink></li>
       <li><PieLink onClick={() => router.push('/components/checkbox-group')} tag="button">Checkbox Group</PieLink></li>

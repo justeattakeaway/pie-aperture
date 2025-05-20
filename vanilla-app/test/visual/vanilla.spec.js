@@ -6,6 +6,7 @@ describe('Vanilla Aperture App', () => {
         { url: '/index.html', name: 'PIE Aperture' },
         { url: '/components/assistive-text.html', name: 'Assistive Text' },
         { url: '/components/button.html', name: 'Button' },
+        { url: '/components/breadcrumb.html', name: 'Button' },
         { url: '/components/card.html', name: 'Card' },
         { url: '/components/checkbox.html', name: 'Checkbox' },
         { url: '/components/checkbox-group.html', name: 'Checkbox Group' },
