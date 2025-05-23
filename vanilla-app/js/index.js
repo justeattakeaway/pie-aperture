@@ -10,6 +10,7 @@ document.querySelector('#navigation').innerHTML = `
     <ul>
         <li><pie-link href="/components/assistive-text.html">Assistive Text</pie-link></li>
         <li><pie-link href="/components/button.html">Button</pie-link></li>
+        <li><pie-link href="/components/breadcrumb.html">Breadcrumb</pie-link></li>
         <li><pie-link href="/components/card.html">Card</pie-link></li>
         <li><pie-link href="/components/checkbox.html">Checkbox</pie-link></li>
         <li><pie-link href="/components/checkbox-group.html">Checkbox Group</pie-link></li>

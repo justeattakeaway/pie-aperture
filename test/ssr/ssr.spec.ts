@@ -12,6 +12,7 @@ const baseUrl = getEnvironmentBaseUrl(APP_NAME);
 const components = [
     'assistive-text',
     'button',
+    'breadcrumb',
     'card',
     'checkbox',
     'checkbox-group',
@@ -31,6 +32,8 @@ const components = [
     'text-input',
     'notification',
     'textarea',
+    'toast',
+    'toast-provider',
 ];
 
 const getComponentPageUrl = (component: string, baseUrl: string): string => `${baseUrl}/components/${component}`;
