@@ -22,6 +22,7 @@ export default function RadioGroup() {
             <PieRadioGroup name="favouriteTakeaway" onChange={handleFavouriteTakeaway}>
                 <PieFormLabel slot="label">Your favourite takeaway: { favouriteTakeaway }</PieFormLabel>
                 <PieRadio value="chinese">Chinese</PieRadio>
+                <PieRadio disabled value="gyros">Gyros</PieRadio>
                 <PieRadio value="shawarma">Shawarma</PieRadio>
                 <PieRadio value="pizza">Pizza</PieRadio>
             </PieRadioGroup>

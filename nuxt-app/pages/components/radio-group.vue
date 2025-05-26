@@ -9,6 +9,11 @@
                 Chinese
             </pie-radio>
             <pie-radio
+                value="gyros"
+                disabled>
+                Gyros
+            </pie-radio>
+            <pie-radio
                 value="shawarma">
                 Shawarma
             </pie-radio>
