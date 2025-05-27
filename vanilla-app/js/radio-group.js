@@ -20,6 +20,7 @@ document.querySelector('#app').innerHTML = `
     <pie-radio-group>
         <pie-form-label slot="label">Your favourite takeaway:</pie-form-label>
         <pie-radio name="favouriteTakeaway" value="chinese">Chinese</pie-radio>
+        <pie-radio name="favouriteTakeaway" value="gyros" disabled>Gyros</pie-radio>
         <pie-radio name="favouriteTakeaway" value="shawarma">Shawarma</pie-radio>
         <pie-radio name="favouriteTakeaway" value="pizza">Pizza</pie-radio>
     </pie-radio-group>
