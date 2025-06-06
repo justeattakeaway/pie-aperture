@@ -12,6 +12,7 @@ describe('Vanilla Aperture App', () => {
         { url: '/components/checkbox-group.html', name: 'Checkbox Group' },
         { url: '/components/chip.html', name: 'Chip' },
         { url: '/components/cookie-banner.html', name: 'Cookie Banner' },
+        { url: '/components/divider.html', name: 'Divider' },
         { url: '/integrations/form.html', name: 'Form' },
         { url: '/components/form-label.html', name: 'Form Label' },
         { url: '/components/icon.html', name: 'Icon' },
