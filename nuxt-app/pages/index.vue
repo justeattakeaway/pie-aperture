@@ -14,6 +14,7 @@
       <li><pie-link href="/components/checkbox-group">Checkbox Group</pie-link></li>
       <li><pie-link href="/components/chip">Chip</pie-link></li>
       <li><pie-link href="/components/cookie-banner">Cookie Banner</pie-link></li>
+      <li><pie-link href="/components/divider">Divider</pie-link></li>
       <li><pie-link href="/components/form-label">Form Label</pie-link></li>
       <li><pie-link href="/components/icon">Icon</pie-link></li>
       <li><pie-link href="/components/icon-button">Icon Button</pie-link></li>
