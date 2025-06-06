@@ -18,6 +18,7 @@ const components = [
     'checkbox-group',
     'chip',
     'cookie-banner',
+    'divider',
     'form-label',
     'icon',
     'icon-button',
