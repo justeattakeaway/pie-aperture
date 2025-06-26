@@ -1,13 +1,29 @@
 <template>
   <div>
-    <pie-toast-provider :options="toastOptions"
-      @pie-toast-provider-queue-update="handleQueueUpdate"></pie-toast-provider>
+    <pie-toast-provider
+      :options="toastOptions"
+      :position="selectedPosition"
+      @pie-toast-provider-queue-update="handleQueueUpdate" />
 
-    <pie-tag data-test-id="toast-queue-length" variant="information" style="margin-top: 16px;">
+    <pie-tag
+      data-test-id="toast-queue-length"
+      variant="information"
+      style="margin-top: var(--dt-spacing-d);">
       Toast Queue Length: {{ queueLength }}
     </pie-tag>
 
-    <div style="margin-top: 16px; display: flex; gap: 16px; flex-wrap: wrap;">
+    <div style="margin-top: var(--dt-spacing-d); display: flex; align-items: center; gap: var(--dt-spacing-d); flex-wrap: wrap;">
+        <h3>Position:</h3>
+        <pie-chip
+            v-for="position in positions"
+            :key="position"
+            :isSelected="selectedPosition === position"
+            @click="selectedPosition = position">
+            {{ position }}
+        </pie-chip>
+    </div>
+
+    <div style="margin-top: var(--dt-spacing-d); display: flex; gap: var(--dt-spacing-d); flex-wrap: wrap;">
       <pie-button data-test-id="info-toast-btn" @click="triggerInfoToast">Trigger Info Toast (Low Priority)</pie-button>
       <pie-button data-test-id="warning-toast-btn" @click="triggerWarningToast">Trigger Warning Toast (Medium
         Priority)</pie-button>
@@ -21,10 +37,11 @@
 <script setup lang="ts">
 import { definePageMeta } from '#imports';
 import { ref } from 'vue';
-import { toaster } from '@justeattakeaway/pie-webc/components/toast-provider.js';
+import { toaster, positions } from '@justeattakeaway/pie-webc/components/toast-provider.js';
 import '@justeattakeaway/pie-webc/components/toast-provider.js';
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/tag.js';
+import '@justeattakeaway/pie-webc/components/chip.js';
 
 definePageMeta({
   title: 'Toast Provider',
@@ -38,6 +55,7 @@ const toastOptions = ref({
 });
 
 const queueLength = ref(0);
+const selectedPosition = ref('default');
 
 const handleQueueUpdate = (event: CustomEvent) => {
   queueLength.value = event.detail.length;

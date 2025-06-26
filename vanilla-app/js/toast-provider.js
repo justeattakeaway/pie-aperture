@@ -1,19 +1,33 @@
 import '@justeattakeaway/pie-webc/components/toast-provider.js';
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/tag.js';
-import { toaster } from '@justeattakeaway/pie-webc/components/toast-provider.js';
+import '@justeattakeaway/pie-webc/components/chip.js';
+import { toaster, positions } from '@justeattakeaway/pie-webc/components/toast-provider.js';
 
 import './utils/navigation.js';
 import './shared.js';
 
-document.querySelector('#app').innerHTML = `
-    <pie-toast-provider id="toast-provider" isDismissible="true"></pie-toast-provider>
+let selectedPosition = 'default';
 
-    <pie-tag id="toast-queue-length" data-test-id="toast-queue-length" variant="information" style="margin-top: 16px;">
+document.querySelector('#app').innerHTML = `
+    <pie-toast-provider id="toast-provider" isDismissible="true" position="${selectedPosition}"></pie-toast-provider>
+
+    <pie-tag id="toast-queue-length" data-test-id="toast-queue-length" variant="information" style="margin-top: var(--dt-spacing-d);">
         Toast Queue Length: 0
     </pie-tag>
 
-    <div style="margin-top: 16px; display: flex; gap: 16px; flex-wrap: wrap;">
+    <div id="position-controls" style="margin-top: var(--dt-spacing-d); display: flex; align-items: center; gap: var(--dt-spacing-d); flex-wrap: wrap;">
+        <h3>Position:</h3>
+        ${positions.map((position) => `
+            <pie-chip
+                data-position="${position}"
+                ${position === selectedPosition ? 'isSelected' : ''}>
+                ${position}
+            </pie-chip>
+        `).join('')}
+    </div>
+
+    <div style="margin-top: var(--dt-spacing-d); display: flex; gap: var(--dt-spacing-d); flex-wrap: wrap;">
         <pie-button id="info-toast-btn" data-test-id="info-toast-btn">
             Trigger Info Toast
         </pie-button>
@@ -32,7 +46,27 @@ document.querySelector('#app').innerHTML = `
 let queueLength = 0;
 const toastProvider = document.getElementById('toast-provider');
 const queueLengthTag = document.getElementById('toast-queue-length');
+const positionControls = document.getElementById('position-controls');
 
+positionControls.addEventListener('click', (event) => {
+    const chip = event.target.closest('pie-chip');
+    if (!chip) return;
+
+    const position = chip.dataset.position;
+    if (position) {
+        selectedPosition = position;
+        toastProvider.setAttribute('position', selectedPosition);
+
+        const allChips = positionControls.querySelectorAll('pie-chip');
+        allChips.forEach((c) => {
+            if (c.dataset.position === selectedPosition) {
+                c.setAttribute('isSelected', '');
+            } else {
+                c.removeAttribute('isSelected');
+            }
+        });
+    }
+});
 
 toastProvider.addEventListener('pie-toast-open', () => {
     console.log('Toast Opened');
