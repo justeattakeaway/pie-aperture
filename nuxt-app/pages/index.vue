@@ -7,6 +7,7 @@
 		<h3>Component Pages</h3>
 		<ul>
 			<li><pie-link href="/components/assistive-text">Assistive Text</pie-link></li>
+			<li><pie-link href="/components/avatar">Avatar</pie-link></li>
 			<li><pie-link href="/components/button">Button</pie-link></li>
       <li><pie-link href="/components/breadcrumb">Breadcrumb</pie-link></li>
 			<li><pie-link href="/components/card">Card</pie-link></li>
