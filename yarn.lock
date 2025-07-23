@@ -1211,6 +1211,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justeattakeaway/pie-components-config@npm:0.0.0-snapshot-release-20250723154823":
+  version: 0.0.0-snapshot-release-20250723154823
+  resolution: "@justeattakeaway/pie-components-config@npm:0.0.0-snapshot-release-20250723154823"
+  dependencies:
+    deepmerge-ts: 5.1.0
+  peerDependencies:
+    cem-plugin-module-file-extensions: 0.0.5
+  bin:
+    playwright-lit-setup: scripts/playwright-lit-setup.js
+  checksum: 363b3d38e112b884d7f7d3664d687ef9fcc640ed9b2eb60f42e92e569fee1942fb7a5232342f0f949a6328c92c5efadf83af4f6194fba862ccc4b0328fc773aa
+  languageName: node
+  linkType: hard
+
 "@justeattakeaway/pie-cookie-banner@npm:1.6.13":
   version: 1.6.13
   resolution: "@justeattakeaway/pie-cookie-banner@npm:1.6.13"
@@ -5729,7 +5742,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deepmerge-ts@npm:^5.0.0, deepmerge-ts@npm:^5.1.0":
+"deepmerge-ts@npm:5.1.0, deepmerge-ts@npm:^5.0.0, deepmerge-ts@npm:^5.1.0":
   version: 5.1.0
   resolution: "deepmerge-ts@npm:5.1.0"
   checksum: 6b57db93c2985e4a35f24b2451db31715050d143988b7d6346f4049c9aec21a6c289514b88d3ee3d6e0697e72ef5d96ff0bbb7cb75422d56fee55ee85c7168e7
@@ -10662,6 +10675,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nuxt-app@workspace:nuxt-app"
   dependencies:
+    "@justeattakeaway/pie-components-config": 0.0.0-snapshot-release-20250723154823
     "@justeattakeaway/pie-css": 0.18.0
     "@justeattakeaway/pie-icons-webc": 1.13.0
     "@justeattakeaway/pie-webc": 0.7.6
@@ -14494,6 +14508,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vanilla-app@workspace:vanilla-app"
   dependencies:
+    "@justeattakeaway/pie-components-config": 0.0.0-snapshot-release-20250723154823
     "@justeattakeaway/pie-css": 0.18.0
     "@justeattakeaway/pie-icons-webc": 1.13.0
     "@justeattakeaway/pie-webc": 0.7.6
