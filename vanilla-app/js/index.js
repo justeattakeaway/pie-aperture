@@ -9,6 +9,7 @@ document.querySelector('#navigation').innerHTML = `
     <h3>Component Pages</h3>
     <ul>
         <li><pie-link href="/components/assistive-text.html">Assistive Text</pie-link></li>
+        <li><pie-link href="/components/avatar.html">Avatar</pie-link></li>
         <li><pie-link href="/components/button.html">Button</pie-link></li>
         <li><pie-link href="/components/breadcrumb.html">Breadcrumb</pie-link></li>
         <li><pie-link href="/components/card.html">Card</pie-link></li>
