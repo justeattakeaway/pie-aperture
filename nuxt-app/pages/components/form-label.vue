@@ -1,6 +1,6 @@
 <template>
   <div>
-    <pie-form-label>Label</pie-form-label>
+    <pie-form-label optional="Optional" trailing="X out of X">Label</pie-form-label>
   </div>
 </template>
 

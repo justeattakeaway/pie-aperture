@@ -6,7 +6,7 @@ import { PieFormLabel } from '@justeattakeaway/pie-webc/react/form-label.js';
 export default function FormLabel() {
     return (
         <NavigationLayout title="Form Label">
-        <PieFormLabel>Label</PieFormLabel>
+        <PieFormLabel optional="Optional" trailing="X out of X">Label</PieFormLabel>
         </NavigationLayout>
     );
 }
