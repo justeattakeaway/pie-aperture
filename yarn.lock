@@ -10385,6 +10385,7 @@ __metadata:
     eslint: 8.57.1
     eslint-config-next: 13.5.7
     next: 14.2.18
+    npm-check-updates: 18.0.2
     react: 18.3.1
     react-dom: 18.3.1
     sass: 1.81.0
@@ -10635,6 +10636,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"npm-check-updates@npm:18.0.2":
+  version: 18.0.2
+  resolution: "npm-check-updates@npm:18.0.2"
+  bin:
+    ncu: build/cli.js
+    npm-check-updates: build/cli.js
+  checksum: b927d499cbb2f731166de301d338a7fc982ae28934c2aa4ed1c6e5df3616d49e57633bd70bc2e3f5b957adfeaee84c3ac629363b4bdb55491699cd63849b80c6
+  languageName: node
+  linkType: hard
+
 "npm-run-path@npm:^4.0.1":
   version: 4.0.1
   resolution: "npm-run-path@npm:4.0.1"
@@ -10695,6 +10706,7 @@ __metadata:
     "@justeattakeaway/pie-webc": 0.7.10
     deepmerge: 4.3.1
     just-kebab-case: 4.2.0
+    npm-check-updates: 18.0.2
     nuxt: 3.14.1592
     nuxt-ssr-lit: 1.6.27
     sass: 1.81.0
@@ -14526,6 +14538,7 @@ __metadata:
     "@justeattakeaway/pie-icons-webc": 1.13.0
     "@justeattakeaway/pie-webc": 0.7.10
     deepmerge: 4.3.1
+    npm-check-updates: 18.0.2
     vite: 4.5.5
     vite-plugin-html-inject: 1.1.2
   languageName: unknown
