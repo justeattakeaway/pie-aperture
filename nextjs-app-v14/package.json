@@ -11,7 +11,7 @@
     "test:ssr": "APP_NAME=nextjs-app-v14 playwright test -c ../playwright.config.ts --project=ssr",
     "test:system": "APP_NAME=nextjs-app-v14 playwright test -c ../playwright.config.ts --project=system",
     "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NEXT_14} npx percy exec -- wdio run ./wdio.conf.js",
-    "upgrade-pie-packages": "npx npm-check-updates \"@justeattakeaway/pie-*\" -u"
+    "upgrade-pie-packages": "yarn npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "dependencies": {
     "@justeattakeaway/pie-css": "0.18.0",
@@ -31,6 +31,7 @@
     "deepmerge": "4.3.1",
     "eslint": "8.57.1",
     "eslint-config-next": "13.5.7",
+    "npm-check-updates": "18.0.2",
     "typescript": "5.7.2"
   },
   "installConfig": {
