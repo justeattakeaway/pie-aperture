@@ -21,8 +21,8 @@ export default function DataTable() {
             <PieDataTable columns={sampleColumns} data={sampleData}
                 data-test-id="PieDataTable"
             >
-                <PieDataTableHeader slot="table-header" title="PIE Data Table – Table with header"
-                    subtitle="Optional subtitle text"
+                <PieDataTableHeader slot="table-header" heading="PIE Data Table – Table with header"
+                    subHeading="Optional subtitle text"
                 >
                     <PieButton slot="action-button" variant="secondary" size="xsmall">Action</PieButton>
                     <PieButton slot="action-button" variant="secondary" size="xsmall">Action</PieButton>

@@ -12,7 +12,7 @@ document.querySelector('#app').innerHTML = `
 
 
 <pie-data-table columns={sampleColumns} data={sampleData} data-test-id="PieDataTable">
-    <pie-data-table-header slot="table-header" title="PIE Data Table – Table with header" subtitle="Optional subtitle text">
+    <pie-data-table-header slot="table-header" heading="PIE Data Table – Table with header" subHeading="Optional subtitle text">
         <pie-button slot="action-button" variant="secondary" size="xsmall">Action</pie-button>
         <pie-button slot="action-button" variant="secondary" size="xsmall">Action</pie-button>
         <pie-button slot="action-button" variant="secondary" size="xsmall">Action</pie-button>
