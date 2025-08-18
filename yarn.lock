@@ -1140,13 +1140,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-avatar@npm:0.3.0":
-  version: 0.3.0
-  resolution: "@justeattakeaway/pie-avatar@npm:0.3.0"
+"@justeattakeaway/pie-avatar@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@justeattakeaway/pie-avatar@npm:0.2.0"
   dependencies:
     "@justeattakeaway/pie-icons-webc": 1.14.2
     "@justeattakeaway/pie-webc-core": 1.1.0
-  checksum: 8d96d22a211a5f176455852b28178b3805605d16c6316fa5d8a851936d94f326acc4bb9028589d7c1bb125cf8ce22a705d3bf8636e6a3d7562050736c5491c34
+  checksum: 931730eea654b9f6b5bfe83c155f7869eb0867de5ee414102bad762dc9a90a616e85e235d698b0b5ba1182091a542893fc8064a9e207d8e658813f970b1e0884
   languageName: node
   linkType: hard
 
@@ -1234,12 +1234,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-data-table@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@justeattakeaway/pie-data-table@npm:0.1.1"
+"@justeattakeaway/pie-data-table@npm:0.0.0-snapshot-release-20250818121553":
+  version: 0.0.0-snapshot-release-20250818121553
+  resolution: "@justeattakeaway/pie-data-table@npm:0.0.0-snapshot-release-20250818121553"
   dependencies:
     "@justeattakeaway/pie-webc-core": 1.1.0
-  checksum: c71f6f359b7b5741ce3011257fdfaebcf1bbb794c4b5307cd818c9dde153df34292d429b32a69ec76b8885253ee3600eb77c8073832cfc6c812870cf9d2e5747
+  checksum: 09bf5a1c489765b881655a31cc822236d8958a1394e898271704f2d1791ce29de5402da0d0698f27653c3e6ddb5d48379ebf47adbc1f6aafc6956c8826c1ea38
   languageName: node
   linkType: hard
 
@@ -1465,12 +1465,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-webc@npm:0.7.13":
-  version: 0.7.13
-  resolution: "@justeattakeaway/pie-webc@npm:0.7.13"
+"@justeattakeaway/pie-webc@npm:0.0.0-snapshot-release-20250818121553":
+  version: 0.0.0-snapshot-release-20250818121553
+  resolution: "@justeattakeaway/pie-webc@npm:0.0.0-snapshot-release-20250818121553"
   dependencies:
     "@justeattakeaway/pie-assistive-text": 0.10.11
-    "@justeattakeaway/pie-avatar": 0.3.0
+    "@justeattakeaway/pie-avatar": 0.2.0
     "@justeattakeaway/pie-breadcrumb": 0.7.0
     "@justeattakeaway/pie-button": 1.6.7
     "@justeattakeaway/pie-card": 0.26.1
@@ -1478,7 +1478,7 @@ __metadata:
     "@justeattakeaway/pie-checkbox-group": 0.9.11
     "@justeattakeaway/pie-chip": 0.12.11
     "@justeattakeaway/pie-cookie-banner": 1.6.17
-    "@justeattakeaway/pie-data-table": 0.1.1
+    "@justeattakeaway/pie-data-table": 0.0.0-snapshot-release-20250818121553
     "@justeattakeaway/pie-divider": 1.4.6
     "@justeattakeaway/pie-form-label": 0.17.0
     "@justeattakeaway/pie-icon-button": 2.0.6
@@ -1501,7 +1501,7 @@ __metadata:
     "@justeattakeaway/pie-toast-provider": 0.7.0
   bin:
     add-components: src/index.js
-  checksum: cfd00d161d8068fd3ea2ea8937ad4d06629c88562a2e959cb5d20f7dacaccc781a4dcefbf0a4285975d54871d3e802698d50080580d2eaf6d23673988bed74ec
+  checksum: cc84ac96e211d921539c2c13b2d1810e70877840ef5370a20a7b78a32f3e19e5af0f2a60551ee6e86e7aa477ac5b3e35c56744e9e9faaf1de5d9ce42e8627c27
   languageName: node
   linkType: hard
 
@@ -10368,7 +10368,7 @@ __metadata:
   dependencies:
     "@justeattakeaway/pie-css": 0.18.0
     "@justeattakeaway/pie-icons-webc": 1.14.2
-    "@justeattakeaway/pie-webc": 0.7.13
+    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20250818121553
     "@lit-labs/nextjs": 0.2.3
     "@lit/react": 1.0.7
     "@types/node": 20.17.9
@@ -10696,7 +10696,7 @@ __metadata:
   dependencies:
     "@justeattakeaway/pie-css": 0.18.0
     "@justeattakeaway/pie-icons-webc": 1.14.2
-    "@justeattakeaway/pie-webc": 0.7.13
+    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20250818121553
     deepmerge: 4.3.1
     just-kebab-case: 4.2.0
     npm-check-updates: 18.0.2
@@ -14529,7 +14529,7 @@ __metadata:
   dependencies:
     "@justeattakeaway/pie-css": 0.18.0
     "@justeattakeaway/pie-icons-webc": 1.14.2
-    "@justeattakeaway/pie-webc": 0.7.13
+    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20250818121553
     deepmerge: 4.3.1
     npm-check-updates: 18.0.2
     vite: 4.5.5
