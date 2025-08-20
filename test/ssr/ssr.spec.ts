@@ -11,6 +11,7 @@ const baseUrl = getEnvironmentBaseUrl(APP_NAME);
 // TODO - uncomment the components when we are ready to test them
 const components = [
     'assistive-text',
+    'avatar',
     'button',
     'breadcrumb',
     'card',

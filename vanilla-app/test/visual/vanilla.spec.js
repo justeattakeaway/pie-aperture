@@ -5,6 +5,7 @@ describe('Vanilla Aperture App', () => {
     const pages = [
         { url: '/index.html', name: 'PIE Aperture' },
         { url: '/components/assistive-text.html', name: 'Assistive Text' },
+        { url: '/components/avatar.html', name: 'Avatar' },
         { url: '/components/button.html', name: 'Button' },
         { url: '/components/breadcrumb.html', name: 'Breadcrumb' },
         { url: '/components/card.html', name: 'Card' },
