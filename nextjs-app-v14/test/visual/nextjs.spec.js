@@ -5,6 +5,7 @@ describe('NextJS Aperture App', () => {
     const pages = [
         { url: '/', name: 'PIE Aperture' },
         { url: '/components/assistive-text', name: 'Assistive Text' },
+        { url: '/components/avatar', name: 'Avatar' },
         { url: '/components/button', name: 'Button' },
         { url: '/components/breadcrumb', name: 'Breadcrumb' },
         { url: '/components/card', name: 'Card' },
