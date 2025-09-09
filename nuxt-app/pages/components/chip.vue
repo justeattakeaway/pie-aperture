@@ -1,20 +1,89 @@
 <template>
-  <div>
-    <pie-chip>PIE Chip Default</pie-chip>
+  <div style="display: flex; flex-direction: column; gap: 16px;">
+    <!-- Default Chip Variants -->
+    <section>
+      <h2 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px;">Variants</h2>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <pie-chip>PIE Chip Default</pie-chip>
+        <pie-chip variant="outline">PIE Chip Outline</pie-chip>
+        <pie-chip variant="ghost">PIE Chip Ghost</pie-chip>
+        <pie-chip isLoading>PIE Chip Ghost</pie-chip>
+        <pie-chip isSelected isDismissible>Close me</pie-chip>
+      </div>
+    </section>
 
     <pie-divider></pie-divider>
-    <pie-chip variant="outline">PIE Chip Outline</pie-chip>
+
+    <!-- Checkbox Group Example -->
+    <section>
+        <h2 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px;">Checkbox Group</h2>
+        <fieldset style="border: none; padding: 0;">
+            <legend style="padding-bottom: 8px; font-weight: bold;">Select your interests</legend>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                <pie-chip type="checkbox" @pie-chip-selected="selectAction">Chip 1</pie-chip>
+                <pie-chip type="checkbox" isSelected @pie-chip-selected="selectAction">Chip 2</pie-chip>
+                <pie-chip type="checkbox" disabled @pie-chip-selected="selectAction">Chip 3 (Disabled)</pie-chip>
+                <pie-chip type="checkbox" disabled isSelected @pie-chip-selected="selectAction">Chip 4 (Disabled and Selected)</pie-chip>
+                <pie-chip type="checkbox" @pie-chip-selected="selectAction">
+                    <icon-heart-filled slot="icon"></icon-heart-filled>
+                    Chip 5
+                </pie-chip>
+                <pie-chip type="checkbox" isSelected @pie-chip-selected="selectAction">
+                    <icon-heart-filled slot="icon"></icon-heart-filled>
+                    Chip 6
+                </pie-chip>
+            </div>
+        </fieldset>
+    </section>
 
     <pie-divider></pie-divider>
-    <pie-chip variant="ghost">PIE Chip Ghost</pie-chip>
+
+    <!-- Button Group Example -->
+    <section>
+        <h2 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px;">Button Group</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <pie-chip type="button" @pie-chip-clicked="toggleSelected">Chip 1</pie-chip>
+            <pie-chip type="button" @pie-chip-clicked="toggleSelected">Chip 2</pie-chip>
+            <pie-chip type="button" disabled @pie-chip-clicked="clickAction">Chip 3 (Disabled)</pie-chip>
+            <pie-chip type="button" @pie-chip-clicked="toggleSelected">
+                <icon-heart-filled slot="icon"></icon-heart-filled>
+                Chip 4
+            </pie-chip>
+            <pie-chip type="button" @pie-chip-clicked="toggleSelected">
+                <icon-heart-filled slot="icon"></icon-heart-filled>
+                Chip 5
+            </pie-chip>
+        </div>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
 import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/chip.js';
+import '@justeattakeaway/pie-webc/components/divider.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconHeartFilled.js';
 
 definePageMeta({
     title: 'Chip',
 });
+
+// Action handlers to log events in the console
+const selectAction = (e: CustomEvent) => {
+  console.log('pie-chip-selected', e);
+};
+
+const clickAction = (e: CustomEvent) => {
+  console.log('pie-chip-clicked', e);
+};
+
+// Toggles the isSelected state of a chip when clicked
+const toggleSelected = (e: Event) => {
+    clickAction(e as CustomEvent);
+    const chip = e.target as HTMLElement & { isSelected: boolean };
+    if (chip) {
+      chip.isSelected = !chip.isSelected;
+    }
+};
 </script>
+
