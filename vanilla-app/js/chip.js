@@ -4,7 +4,6 @@ import '@justeattakeaway/pie-icons-webc/dist/IconHeartFilled.js';
 import './utils/navigation.js';
 import './shared.js';
 
-// Define action handlers to log events in the console
 const selectAction = (e) => {
     console.log('pie-chip-selected', e);
 };
@@ -13,16 +12,14 @@ const clickAction = (e) => {
     console.log('pie-chip-clicked', e);
 };
 
-// Toggles the isSelected state of a chip when clicked
 const toggleSelected = (e) => {
-    clickAction(e); // Log the base click event
+    clickAction(e);
     const chip = e.target;
     if (chip) {
         chip.isSelected = !chip.isSelected;
     }
 };
 
-// Set the inner HTML of the app
 document.querySelector('#app').innerHTML = `
 <div style="display: flex; flex-direction: column; gap: 16px;">
     <!-- Default Chip Variants -->

@@ -3,7 +3,7 @@
     <!-- Default Chip Variants -->
     <section>
       <h2 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px;">Variants</h2>
-      <div style="display: flex; align-items: center; gap: 16px;">
+      <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
         <pie-chip>PIE Chip Default</pie-chip>
         <pie-chip variant="outline">PIE Chip Outline</pie-chip>
         <pie-chip variant="ghost">PIE Chip Ghost</pie-chip>
