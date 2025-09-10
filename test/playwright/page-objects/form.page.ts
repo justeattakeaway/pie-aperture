@@ -74,11 +74,15 @@ export class FormPage {
         await this.descriptionField.locator('textarea').fill(formData.description);
         await this.approveSettingsSwitch.click();
         await this.enableNotificationsSwitch.click();
-        await this.favouriteFood.locator('select').selectOption('burger');
+        await this.selectFavouriteFood('burger');
         await this.newsletterSignupCheckbox.click();
         await this.favouriteTakeaway.click();
         await this.contactByEmailCheckbox.click();
         await this.contactByPhoneCheckbox.click();
+    }
+
+    async selectFavouriteFood(optionValue) {
+        await this.favouriteFood.locator('select').selectOption(optionValue);
     }
 
     async submitForm() {
