@@ -51,5 +51,46 @@ test.describe(`Form Page - ${APP_NAME}`, () => {
             const outputData = await formPage.getOutputData();
             expect(outputData).toEqual(expectFormData);
         });
+
+        test.describe(`when favourite food is selected once`, () => {
+            test(`it should fire an event with the expected value for ${APP_NAME} / ${url}`, async ({page}) => {
+                // Arrange
+                const formPage = new FormPage(page);
+
+                // Act
+                await formPage.goto(url);
+                await formPage.favouriteFood.evaluate((el) => {
+                    el.addEventListener('change', (event) => {
+                        window['eventTargetValue'] = (event.target as HTMLInputElement).value;
+                    });
+                });
+                await formPage.selectFavouriteFood('burger');
+                
+                // Assert
+                const eventTargetValue = await formPage.page.evaluate((element) => window['eventTargetValue']);
+                expect(eventTargetValue).toBe('burger');
+            })
+        })
+
+        test.describe(`when favourite food is selected twice`, () => {
+            test(`it should fire an event with the expected value for ${APP_NAME} / ${url}`, async ({page}) => {
+                // Arrange
+                const formPage = new FormPage(page);
+
+                // Act
+                await formPage.goto(url);
+                await formPage.favouriteFood.evaluate((el) => {
+                    el.addEventListener('change', (event) => {
+                        window['eventTargetValue'] = (event.target as HTMLInputElement).value;
+                    });
+                });
+                await formPage.selectFavouriteFood('burger');
+                await formPage.selectFavouriteFood('pizza');
+                
+                // Assert
+                const eventTargetValue = await formPage.page.evaluate((element) => window['eventTargetValue']);
+                expect(eventTargetValue).toBe('pizza');
+            })
+        })
     });
 });
