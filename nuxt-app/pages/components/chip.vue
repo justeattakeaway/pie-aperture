@@ -20,15 +20,15 @@
         <fieldset style="border: none; padding: 0;">
             <legend style="padding-bottom: 8px; font-weight: bold;">Select your interests</legend>
             <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-                <pie-chip type="checkbox" @pie-chip-selected="selectAction">Chip 1</pie-chip>
-                <pie-chip type="checkbox" isSelected @pie-chip-selected="selectAction">Chip 2</pie-chip>
-                <pie-chip type="checkbox" disabled @pie-chip-selected="selectAction">Chip 3 (Disabled)</pie-chip>
-                <pie-chip type="checkbox" disabled isSelected @pie-chip-selected="selectAction">Chip 4 (Disabled and Selected)</pie-chip>
-                <pie-chip type="checkbox" @pie-chip-selected="selectAction">
+                <pie-chip type="checkbox" @change="selectAction">Chip 1</pie-chip>
+                <pie-chip type="checkbox" isSelected @change="selectAction">Chip 2</pie-chip>
+                <pie-chip type="checkbox" disabled @change="selectAction">Chip 3 (Disabled)</pie-chip>
+                <pie-chip type="checkbox" disabled isSelected @change="selectAction">Chip 4 (Disabled and Selected)</pie-chip>
+                <pie-chip type="checkbox" @change="selectAction">
                     <icon-heart-filled slot="icon"></icon-heart-filled>
                     Chip 5
                 </pie-chip>
-                <pie-chip type="checkbox" isSelected @pie-chip-selected="selectAction">
+                <pie-chip type="checkbox" isSelected @change="selectAction">
                     <icon-heart-filled slot="icon"></icon-heart-filled>
                     Chip 6
                 </pie-chip>
@@ -42,14 +42,14 @@
     <section>
         <h2 style="font-size: 1.25rem; font-weight: bold; margin-bottom: 8px;">Button Group</h2>
         <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            <pie-chip type="button" @pie-chip-clicked="toggleSelected">Chip 1</pie-chip>
-            <pie-chip type="button" @pie-chip-clicked="toggleSelected">Chip 2</pie-chip>
-            <pie-chip type="button" disabled @pie-chip-clicked="clickAction">Chip 3 (Disabled)</pie-chip>
-            <pie-chip type="button" @pie-chip-clicked="toggleSelected">
+            <pie-chip type="button" @change="selectAction">Chip 1</pie-chip>
+            <pie-chip type="button" @change="selectAction">Chip 2</pie-chip>
+            <pie-chip type="button" disabled @change="selectAction">Chip 3 (Disabled)</pie-chip>
+            <pie-chip type="button" @change="selectAction">
                 <icon-heart-filled slot="icon"></icon-heart-filled>
                 Chip 4
             </pie-chip>
-            <pie-chip type="button" @pie-chip-clicked="toggleSelected">
+            <pie-chip type="button" @change="selectAction">
                 <icon-heart-filled slot="icon"></icon-heart-filled>
                 Chip 5
             </pie-chip>
@@ -68,22 +68,8 @@ definePageMeta({
     title: 'Chip',
 });
 
-// Action handlers to log events in the console
 const selectAction = (e: CustomEvent) => {
-  console.log('pie-chip-selected', e);
-};
-
-const clickAction = (e: CustomEvent) => {
-  console.log('pie-chip-clicked', e);
-};
-
-// Toggles the isSelected state of a chip when clicked
-const toggleSelected = (e: Event) => {
-    clickAction(e as CustomEvent);
-    const chip = e.target as HTMLElement & { isSelected: boolean };
-    if (chip) {
-      chip.isSelected = !chip.isSelected;
-    }
+  console.log('Chip was selected', e);
 };
 </script>
 

@@ -6,22 +6,8 @@ import { PieDivider } from '@justeattakeaway/pie-divider/dist/react';
 import { IconHeartFilled } from '@justeattakeaway/pie-icons-webc/dist/react/IconHeartFilled';
 
 export default function Chip() {
-    // Action handlers to log events in the console
-    const selectAction = (e: CustomEvent) => {
-        console.log('pie-chip-selected', e);
-    };
-
-    const clickAction = (e: CustomEvent) => {
-        console.log('pie-chip-clicked', e);
-    };
-
-    // Toggles the isSelected state of a chip when clicked
-    const toggleSelected = (e: Event) => {
-        clickAction(e as CustomEvent); // Log the base click event
-        const chip = e.target as HTMLElement & { isSelected: boolean };
-        if (chip) {
-            chip.isSelected = !chip.isSelected;
-        }
+    const selectAction = (e: Event) => {
+        console.log('Chip was selected', e);
     };
 
     return (
@@ -47,15 +33,15 @@ export default function Chip() {
                 <fieldset style={{ border: 'none', padding: 0 }}>
                     <legend style={{ paddingBottom: '8px', fontWeight: 'bold' }}>Select your interests</legend>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                        <PieChip type="checkbox" onPieChipSelected={selectAction}>Chip 1</PieChip>
-                        <PieChip type="checkbox" isSelected onPieChipSelected={selectAction}>Chip 2</PieChip>
-                        <PieChip type="checkbox" disabled onPieChipSelected={selectAction}>Chip 3 (Disabled)</PieChip>
-                        <PieChip type="checkbox" disabled isSelected onPieChipSelected={selectAction}>Chip 4 (Disabled and Selected)</PieChip>
-                        <PieChip type="checkbox" onPieChipSelected={selectAction}>
+                        <PieChip type="checkbox" onChange={selectAction}>Chip 1</PieChip>
+                        <PieChip type="checkbox" isSelected onChange={selectAction}>Chip 2</PieChip>
+                        <PieChip type="checkbox" disabled onChange={selectAction}>Chip 3 (Disabled)</PieChip>
+                        <PieChip type="checkbox" disabled isSelected onChange={selectAction}>Chip 4 (Disabled and Selected)</PieChip>
+                        <PieChip type="checkbox" onChange={selectAction}>
                             <IconHeartFilled slot="icon"></IconHeartFilled>
                             Chip 5
                         </PieChip>
-                        <PieChip type="checkbox" isSelected onPieChipSelected={selectAction}>
+                        <PieChip type="checkbox" isSelected onChange={selectAction}>
                             <IconHeartFilled slot="icon"></IconHeartFilled>
                             Chip 6
                         </PieChip>
@@ -69,14 +55,14 @@ export default function Chip() {
             <section>
                 <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '8px' }}>Button Group</h2>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                    <PieChip type="button" onPieChipClicked={toggleSelected}>Chip 1</PieChip>
-                    <PieChip type="button" onPieChipClicked={toggleSelected}>Chip 2</PieChip>
-                    <PieChip type="button" disabled onPieChipClicked={clickAction}>Chip 3 (Disabled)</PieChip>
-                    <PieChip type="button" onPieChipClicked={toggleSelected}>
+                    <PieChip type="button" onChange={selectAction as any}>Chip 1</PieChip>
+                    <PieChip type="button" onChange={selectAction as any}>Chip 2</PieChip>
+                    <PieChip type="button" disabled onChange={selectAction as any}>Chip 3 (Disabled)</PieChip>
+                    <PieChip type="button" onChange={selectAction as any}>
                         <IconHeartFilled slot="icon"></IconHeartFilled>
                         Chip 4
                     </PieChip>
-                    <PieChip type="button" onPieChipClicked={toggleSelected}>
+                    <PieChip type="button" onChange={selectAction as any}>
                         <IconHeartFilled slot="icon"></IconHeartFilled>
                         Chip 5
                     </PieChip>

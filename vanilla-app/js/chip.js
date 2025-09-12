@@ -5,19 +5,7 @@ import './utils/navigation.js';
 import './shared.js';
 
 const selectAction = (e) => {
-    console.log('pie-chip-selected', e);
-};
-
-const clickAction = (e) => {
-    console.log('pie-chip-clicked', e);
-};
-
-const toggleSelected = (e) => {
-    clickAction(e);
-    const chip = e.target;
-    if (chip) {
-        chip.isSelected = !chip.isSelected;
-    }
+    console.log('Chip was selected', e);
 };
 
 document.querySelector('#app').innerHTML = `
@@ -80,15 +68,10 @@ document.querySelector('#app').innerHTML = `
 </div>
 `;
 
-// Add event listeners after the DOM is updated
 document.querySelectorAll('#checkbox-group pie-chip').forEach(chip => {
-    chip.addEventListener('pie-chip-selected', selectAction);
+    chip.addEventListener('change', selectAction);
 });
 
 document.querySelectorAll('#button-group pie-chip').forEach(chip => {
-    if (!chip.hasAttribute('disabled')) {
-        chip.addEventListener('pie-chip-clicked', toggleSelected);
-    } else {
-        chip.addEventListener('pie-chip-clicked', clickAction);
-    }
+    chip.addEventListener('change', selectAction);
 });
