@@ -31,6 +31,26 @@ const foodOptions: SelectProps['options'] = [
         tag: 'option',
         text: 'Burger',
         value: 'burger',
+    },
+    {
+        tag: 'option',
+        text: 'Döner',
+        value: 'doner',
+    },
+    {
+        tag: 'option',
+        text: 'Pizza',
+        value: 'pizza',
+    },
+    {
+        tag: 'option',
+        text: 'Pasta',
+        value: 'pasta',
+    },
+    {
+        tag: 'option',
+        text: 'Salad',
+        value: 'salad',
     }
 ];
 

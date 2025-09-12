@@ -30,6 +30,26 @@ const foodOptions: SelectProps['options'] = [
         tag: 'option',
         text: 'Burger',
         value: 'burger',
+    },
+    {
+        tag: 'option',
+        text: 'Döner',
+        value: 'doner',
+    },
+    {
+        tag: 'option',
+        text: 'Pizza',
+        value: 'pizza',
+    },
+    {
+        tag: 'option',
+        text: 'Pasta',
+        value: 'pasta',
+    },
+    {
+        tag: 'option',
+        text: 'Salad',
+        value: 'salad',
     }
 ];
 
@@ -122,7 +142,7 @@ export default function ControlledForm() {
     }
 
     const handleFavouriteFoodChange = (event: CustomEvent) => {
-        setFavouriteFood(event.detail.sourceEvent.target.value);
+        setFavouriteFood((event.target as HTMLSelectElement).value)
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -260,6 +280,7 @@ export default function ControlledForm() {
                     data-test-id="favouriteFood"
                     name="favouriteFood"
                     options={foodOptions}
+                    value={favouriteFood}
                     onChange={handleFavouriteFoodChange}
                 />
 

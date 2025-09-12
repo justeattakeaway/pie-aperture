@@ -106,7 +106,8 @@
                 Favourite Food:
             </pie-form-label>
             <pie-select
-                @change="favouriteFood = $event.detail.sourceEvent.target.value"
+                :value="favouriteFood"
+                @change="favouriteFood = $event.target.value"
                 class="form-field"
                 id="favouriteFood"
                 data-test-id="favouriteFood"
@@ -239,6 +240,26 @@ const foodOptions = [
         tag: 'option',
         text: 'Burger',
         value: 'burger',
+    },
+    {
+        tag: 'option',
+        text: 'Döner',
+        value: 'doner',
+    },
+    {
+        tag: 'option',
+        text: 'Pizza',
+        value: 'pizza',
+    },
+    {
+        tag: 'option',
+        text: 'Pasta',
+        value: 'pasta',
+    },
+    {
+        tag: 'option',
+        text: 'Salad',
+        value: 'salad',
     }
 ];
 
