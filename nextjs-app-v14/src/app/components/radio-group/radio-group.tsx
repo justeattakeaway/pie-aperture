@@ -221,12 +221,6 @@ export default function RadioGroupPage() {
         }
     `;
 
-    // By returning null on the server, we ensure the component only renders on the client.
-    // This prevents the SSR hydration error caused by web components and direct style injection.
-    if (!isClient) {
-        return null;
-    }
-
     return (
         <main title="Radio Group">
             <div className="p-8">
