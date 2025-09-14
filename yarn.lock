@@ -1261,6 +1261,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justeattakeaway/pie-headless-radio-group@npm:0.0.0-snapshot-release-20250914164344":
+  version: 0.0.0-snapshot-release-20250914164344
+  resolution: "@justeattakeaway/pie-headless-radio-group@npm:0.0.0-snapshot-release-20250914164344"
+  dependencies:
+    "@justeattakeaway/pie-webc-core": 1.1.0
+  checksum: ef228d7ed13097bfa3f02660aeb71219165b26a7c2b57bc4059645f29dae2b83a73ab7a7390c18ca30aaa4c82f3f74fa7df377462fae9d603b466083b5cb0435
+  languageName: node
+  linkType: hard
+
 "@justeattakeaway/pie-icon-button@npm:2.1.0":
   version: 2.1.0
   resolution: "@justeattakeaway/pie-icon-button@npm:2.1.0"
@@ -10367,6 +10376,7 @@ __metadata:
   resolution: "nextjs-app-v14@workspace:nextjs-app-v14"
   dependencies:
     "@justeattakeaway/pie-css": 0.18.0
+    "@justeattakeaway/pie-headless-radio-group": 0.0.0-snapshot-release-20250914164344
     "@justeattakeaway/pie-icons-webc": 1.14.2
     "@justeattakeaway/pie-webc": 0.7.20
     "@lit-labs/nextjs": 0.2.3
@@ -10695,6 +10705,7 @@ __metadata:
   resolution: "nuxt-app@workspace:nuxt-app"
   dependencies:
     "@justeattakeaway/pie-css": 0.18.0
+    "@justeattakeaway/pie-headless-radio-group": 0.0.0-snapshot-release-20250914164344
     "@justeattakeaway/pie-icons-webc": 1.14.2
     "@justeattakeaway/pie-webc": 0.7.20
     deepmerge: 4.3.1
