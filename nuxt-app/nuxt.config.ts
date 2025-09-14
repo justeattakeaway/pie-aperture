@@ -6,6 +6,7 @@ export default defineNuxtConfig({
       moduleSideEffects: [
           '@justeattakeaway/pie-icons-webc',
           '@justeattakeaway/pie-webc',
+          '@justeattakeaway/pie-headless-radio-group',
       ],
   },
 
