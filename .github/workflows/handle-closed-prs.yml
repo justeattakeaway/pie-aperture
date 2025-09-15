@@ -42,14 +42,17 @@ jobs:
 
             // Check for existence of specific environments
             const hasNextJs14Env = envList.includes(`nextjs-app-v14-pr-${pullRequestNumber}`);
+            const hasNextJs15Env = envList.includes(`nextjs-app-v15-pr-${pullRequestNumber}`);
             const hasNuxtEnv = envList.includes(`nuxt-app-pr-${pullRequestNumber}`);
             const hasVanillaJsEnv = envList.includes(`vanilla-app-pr-${pullRequestNumber}`);
 
             console.log('Has NextJS 14 Env:', hasNextJs14Env);
+            console.log('Has NextJS 15 Env:', hasNextJs15Env);
             console.log('Has Nuxt Env:', hasNuxtEnv);
             console.log('Has VanillaJS Env:', hasVanillaJsEnv);
 
             core.setOutput('hasNextJs14Env', hasNextJs14Env ? 'true' : 'false');
+            core.setOutput('hasNextJs15Env', hasNextJs15Env ? 'true' : 'false');
             core.setOutput('hasNuxtEnv', hasNuxtEnv ? 'true' : 'false');
             core.setOutput('hasVanillaJsEnv', hasVanillaJsEnv ? 'true' : 'false');
 
@@ -63,6 +66,18 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           environment-name: nextjs-app-v14-pr-${{ github.event.pull_request.number }}
+          branch-name: 'pr${{ github.event.pull_request.number }}'
+
+      - name: Delete associated NextJS 15 app environment
+        if: ${{ steps.list-environments.outputs.hasNextJs15Env == 'true' }}
+        uses: ./.github/actions/amplify-teardown
+        with:
+          github-token: ${{ secrets.PIE_BOT_TOKEN }}
+          amplify-app-id: xxxxxxxxxxxxxx
+          aws-region: 'eu-west-1'
+          aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          environment-name: nextjs-app-v15-pr-${{ github.event.pull_request.number }}
           branch-name: 'pr${{ github.event.pull_request.number }}'
 
       - name: Delete associated Nuxt app environment
