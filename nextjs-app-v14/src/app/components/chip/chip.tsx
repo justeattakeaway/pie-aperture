@@ -33,15 +33,15 @@ export default function Chip() {
                 <fieldset style={{ border: 'none', padding: 0 }}>
                     <legend style={{ paddingBottom: '8px', fontWeight: 'bold' }}>Select your interests</legend>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                        <PieChip type="checkbox" onChange={selectAction}>Chip 1</PieChip>
-                        <PieChip type="checkbox" isSelected onChange={selectAction}>Chip 2</PieChip>
-                        <PieChip type="checkbox" disabled onChange={selectAction}>Chip 3 (Disabled)</PieChip>
-                        <PieChip type="checkbox" disabled isSelected onChange={selectAction}>Chip 4 (Disabled and Selected)</PieChip>
-                        <PieChip type="checkbox" onChange={selectAction}>
+                        <PieChip type="checkbox" onChange={selectAction as any}>Chip 1</PieChip>
+                        <PieChip type="checkbox" isSelected onChange={selectAction as any}>Chip 2</PieChip>
+                        <PieChip type="checkbox" disabled onChange={selectAction as any}>Chip 3 (Disabled)</PieChip>
+                        <PieChip type="checkbox" disabled isSelected onChange={selectAction as any}>Chip 4 (Disabled and Selected)</PieChip>
+                        <PieChip type="checkbox" onChange={selectAction as any}>
                             <IconHeartFilled slot="icon"></IconHeartFilled>
                             Chip 5
                         </PieChip>
-                        <PieChip type="checkbox" isSelected onChange={selectAction}>
+                        <PieChip type="checkbox" isSelected onChange={selectAction as any}>
                             <IconHeartFilled slot="icon"></IconHeartFilled>
                             Chip 6
                         </PieChip>
