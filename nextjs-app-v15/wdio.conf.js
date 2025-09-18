@@ -1,6 +1,6 @@
-const merge = require('deepmerge');
-const sharedConf = require('../wdio.conf.js');
-const { getEnvironmentBaseUrl } = require('../webdriver-helpers/configuration-helper.js');
+import merge from 'deepmerge';
+import sharedConf from '../wdio.conf.js';
+import { getEnvironmentBaseUrl } from '../webdriver-helpers/configuration-helper.js';
 
 exports.config = merge(sharedConf.config, {
 
