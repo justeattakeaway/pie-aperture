@@ -73,7 +73,7 @@ jobs:
         uses: ./.github/actions/amplify-teardown
         with:
           github-token: ${{ secrets.PIE_BOT_TOKEN }}
-          amplify-app-id: xxxxxxxxxxxxxx
+          amplify-app-id: dg9syjb0jj07x
           aws-region: 'eu-west-1'
           aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

@@ -62,7 +62,7 @@ jobs:
           deploy: true
           node-version: 20
           os: 'ubuntu-latest'
-          amplify-app-id: 'd1xxjuy6vbm7pk'
+          amplify-app-id: 'dg9syjb0jj07x'
           package-name: 'nextjs-app-v15'
           package-dist-directory: './nextjs-app-v15/out'
           bucket-name-preview: 'pie-aperture-preview'
@@ -114,6 +114,6 @@ jobs:
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-      NEXT_15_AMPLIFY_ID: d1xxjuy6vbm7pk
+      NEXT_15_AMPLIFY_ID: dg9syjb0jj07x
       PERCY_TOKEN_PIE_APERTURE_NEXT_15: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NEXT_15 }}
       PR_NUMBER: ${{ github.event.number }}

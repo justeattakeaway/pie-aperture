@@ -24,6 +24,7 @@ export default function Breadcrumb() {
 // See: https://nextjs.org/docs/14/pages/api-reference/components/link#if-the-child-is-a-functional-component
 const PieBreadcrumbItemWithRef = React.forwardRef(({ href, onClick }: { href?: string, onClick?:  React.MouseEventHandler<HTMLLIElement>}, ref) => {
     return (
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         <PieBreadcrumbItem href={href} onClick={onClick} ref={ref as any}>Home</PieBreadcrumbItem>
     )
 })
