@@ -1,13 +1,58 @@
 'use client';
 
+import { useState } from 'react';
 import NavigationLayout from "@/app/layout/navigation";
-import { PieChip } from '@justeattakeaway/pie-chip/dist/react';
-import { PieDivider } from '@justeattakeaway/pie-divider/dist/react';
+import { PieChip } from '@justeattakeaway/pie-webc/react/chip.js';
+import { PieDivider } from '@justeattakeaway/pie-webc/react/divider.js';
 import { IconHeartFilled } from '@justeattakeaway/pie-icons-webc/dist/react/IconHeartFilled';
 
+// Initial state for the multi-select checkbox group
+const initialCheckboxChips = [
+    { id: 'c1', label: 'Chip 1', isSelected: false, hasIcon: false },
+    { id: 'c2', label: 'Chip 2', isSelected: true, hasIcon: false },
+    { id: 'c3', label: 'Chip 3 (Disabled)', isSelected: false, hasIcon: false, disabled: true },
+    { id: 'c4', label: 'Chip 4 (Disabled and Selected)', isSelected: true, hasIcon: false, disabled: true },
+    { id: 'c5', label: 'Chip 5', isSelected: false, hasIcon: true },
+    { id: 'c6', label: 'Chip 6', isSelected: true, hasIcon: true },
+];
+
+// Data for the single-select button group
+const buttonChipsData = [
+    { id: 'b1', label: 'Chip 1', hasIcon: false },
+    { id: 'b2', label: 'Chip 2', hasIcon: false },
+    { id: 'b3', label: 'Chip 3 (Disabled)', hasIcon: false, disabled: true },
+    { id: 'b4', label: 'Chip 4', hasIcon: true },
+    { id: 'b5', label: 'Chip 5', hasIcon: true },
+];
+
 export default function Chip() {
-    const selectAction = (e: Event) => {
-        console.log('Chip was selected', e);
+    const [checkboxChips, setCheckboxChips] = useState(initialCheckboxChips);
+    const [selectedButtonId, setSelectedButtonId] = useState<string | null>('b2'); // 'Chip 2' is initially selected
+
+    /**
+     * Handles the state change for the multi-select checkbox group.
+     * Toggles the `isSelected` state of the clicked chip.
+     */
+    const handleCheckboxChange = (chipIdToToggle: string) => {
+        setCheckboxChips(prevChips =>
+            prevChips.map(chip =>
+                chip.id === chipIdToToggle
+                    ? { ...chip, isSelected: !chip.isSelected }
+                    : chip
+            )
+        );
+        console.log(`Checkbox chip with id "${chipIdToToggle}" was changed.`);
+    };
+
+    /**
+     * Handles the state change for the single-select button group.
+     * If the clicked chip is already selected, it deselects it.
+     * Otherwise, it selects the clicked chip.
+     */
+    const handleButtonClick = (chipIdToSelect: string) => {
+        const newSelectedId = selectedButtonId === chipIdToSelect ? null : chipIdToSelect;
+        setSelectedButtonId(newSelectedId);
+        console.log(`Button chip with id "${chipIdToSelect}" was clicked. New selection: ${newSelectedId}`);
     };
 
     return (
@@ -21,51 +66,52 @@ export default function Chip() {
                         <PieChip variant="outline">PIE Chip Outline</PieChip>
                         <PieChip variant="ghost">PIE Chip Ghost</PieChip>
                         <PieChip isLoading>PIE Chip Ghost</PieChip>
-                        <PieChip isSelected isDismissible>Close me</PieChip>
+                        <PieChip isSelected isDismissible onClose={() => console.log('Dismissible chip closed!')}>Close me</PieChip>
                     </div>
                 </section>
 
             <PieDivider />
 
-            {/* Checkbox Group Example */}
+            {/* Interactive Checkbox Group Example */}
             <section>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '8px' }}>Checkbox Group</h2>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '8px' }}>Checkbox Group (Multi-select)</h2>
                 <fieldset style={{ border: 'none', padding: 0 }}>
                     <legend style={{ paddingBottom: '8px', fontWeight: 'bold' }}>Select your interests</legend>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                        <PieChip type="checkbox" onChange={selectAction as any}>Chip 1</PieChip>
-                        <PieChip type="checkbox" isSelected onChange={selectAction as any}>Chip 2</PieChip>
-                        <PieChip type="checkbox" disabled onChange={selectAction as any}>Chip 3 (Disabled)</PieChip>
-                        <PieChip type="checkbox" disabled isSelected onChange={selectAction as any}>Chip 4 (Disabled and Selected)</PieChip>
-                        <PieChip type="checkbox" onChange={selectAction as any}>
-                            <IconHeartFilled slot="icon"></IconHeartFilled>
-                            Chip 5
-                        </PieChip>
-                        <PieChip type="checkbox" isSelected onChange={selectAction as any}>
-                            <IconHeartFilled slot="icon"></IconHeartFilled>
-                            Chip 6
-                        </PieChip>
+                        {checkboxChips.map((chip) => (
+                            <PieChip
+                                key={chip.id}
+                                type="checkbox"
+                                isSelected={chip.isSelected}
+                                disabled={chip.disabled}
+                                onChange={() => handleCheckboxChange(chip.id)}
+                            >
+                                {chip.hasIcon && <IconHeartFilled slot="icon" />}
+                                {chip.label}
+                            </PieChip>
+                        ))}
                     </div>
                 </fieldset>
             </section>
 
             <PieDivider />
 
-            {/* Button Group Example */}
+            {/* Interactive Button Group Example */}
             <section>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '8px' }}>Button Group</h2>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '8px' }}>Button Group (Single-select)</h2>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                    <PieChip type="button" onChange={selectAction as any}>Chip 1</PieChip>
-                    <PieChip type="button" onChange={selectAction as any}>Chip 2</PieChip>
-                    <PieChip type="button" disabled onChange={selectAction as any}>Chip 3 (Disabled)</PieChip>
-                    <PieChip type="button" onChange={selectAction as any}>
-                        <IconHeartFilled slot="icon"></IconHeartFilled>
-                        Chip 4
-                    </PieChip>
-                    <PieChip type="button" onChange={selectAction as any}>
-                        <IconHeartFilled slot="icon"></IconHeartFilled>
-                        Chip 5
-                    </PieChip>
+                    {buttonChipsData.map((chip) => (
+                        <PieChip
+                            key={chip.id}
+                            type="button"
+                            isSelected={selectedButtonId === chip.id}
+                            disabled={chip.disabled}
+                            onClick={() => handleButtonClick(chip.id)}
+                        >
+                            {chip.hasIcon && <IconHeartFilled slot="icon" />}
+                            {chip.label}
+                        </PieChip>
+                    ))}
                 </div>
             </section>
         </div>
