@@ -1,4 +1,5 @@
-import withLitSSR from '@lit-labs/nextjs';
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+const withLitSSR = require('@lit-labs/nextjs')();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -11,4 +12,4 @@ const nextConfig = {
   }
 }
 
-export default withLitSSR()(nextConfig);
+module.exports = withLitSSR(nextConfig);
