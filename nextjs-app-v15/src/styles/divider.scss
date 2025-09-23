@@ -1,0 +1,11 @@
+.divider-container {
+    height: 200px;
+    margin: 100px 0;
+}
+
+.divider-container-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--dt-spacing-d);
+}

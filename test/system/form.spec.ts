@@ -26,6 +26,8 @@ const getFormUrls = (): string[] => {
             return ['integrations/form.html'];
         case 'nextjs-app-v14':
             return ['integrations/uncontrolled-form', 'integrations/controlled-form'];
+        case 'nextjs-app-v15':
+            return ['integrations/uncontrolled-form', 'integrations/controlled-form'];
         case 'nuxt-app':
             return ['integrations/form'];
         default:
