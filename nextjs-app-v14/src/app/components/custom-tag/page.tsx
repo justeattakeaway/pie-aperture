@@ -2,7 +2,7 @@ import CustomTag from './custom-tag';
 import { type Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Custom Styled Tag',
+    title: 'Custom Tag',
 }
 
 export default function CustomTagComponent() {
