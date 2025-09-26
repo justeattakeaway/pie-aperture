@@ -17,7 +17,7 @@ import '@justeattakeaway/pie-webc/components/divider.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconOfferFilled.js';
 
 definePageMeta({
-    title: 'Tag',
+    title: 'Custom Tag',
 });
 </script>
 
