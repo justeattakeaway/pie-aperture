@@ -13,12 +13,16 @@ exports.getAppConfig = (appName) => {
             config.amplifyId = NEXT_14_AMPLIFY_ID;
             config.port = '3003';
             break;
+        case 'nextjs-app-v15':
+            config.amplifyId = NEXT_14_AMPLIFY_ID;
+            config.port = '3004';
+            break;
         case 'nuxt-app':
             config.amplifyId = NUXT_AMPLIFY_ID;
             config.port = '3002';
             break;
         default:
-            throw new Error(`appName: '${appName}' is invalid. Please use either 'vanilla-app', 'nextjs-app-v14' or 'nuxt-app'.`);
+            throw new Error(`appName: '${appName}' is invalid. Please use either 'vanilla-app', 'nextjs-app-v14', 'nextjs-app-v15' or 'nuxt-app'.`);
     }
     return config;
 }
