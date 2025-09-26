@@ -1,4 +1,4 @@
-const { CI, GITHUB_REF_NAME, GITHUB_RUN_ID, PR_NUMBER, VANILLA_AMPLIFY_ID, NEXT_14_AMPLIFY_ID, NUXT_AMPLIFY_ID } = process.env;
+const { CI, GITHUB_REF_NAME, GITHUB_RUN_ID, PR_NUMBER, VANILLA_AMPLIFY_ID, NEXT_14_AMPLIFY_ID, NEXT_15_AMPLIFY_ID, NUXT_AMPLIFY_ID } = process.env;
 const { execSync } = require('child_process');
 
 exports.getAppConfig = (appName) => {
@@ -14,7 +14,7 @@ exports.getAppConfig = (appName) => {
             config.port = '3003';
             break;
         case 'nextjs-app-v15':
-            config.amplifyId = NEXT_14_AMPLIFY_ID;
+            config.amplifyId = NEXT_15_AMPLIFY_ID;
             config.port = '3004';
             break;
         case 'nuxt-app':
