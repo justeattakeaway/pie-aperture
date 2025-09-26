@@ -3,7 +3,7 @@ import '@justeattakeaway/pie-icons-webc/dist/IconOfferFilled.js';
 
 import './shared.js';
 import './utils/navigation.js';
-import '../css/tag.css';
+import '../css/custom-tag.css';
 
 document.querySelector('#app').innerHTML = `
     <h3>Customised Tag using CSS parts</h3>
