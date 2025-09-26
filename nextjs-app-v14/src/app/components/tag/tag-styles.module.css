@@ -33,13 +33,11 @@
     aspect-ratio: 1/1;
 }
 
-.custom-1::part(body),
-.custom-2::part(body) {
+.custom-1::part(body) {
     color: var(--dt-color-white);
 }
 
-.custom-1::part(icon),
-.custom-2::part(icon) {
+.custom-1::part(icon) {
     --icon-size-override: 14px;
 
     color: var(--dt-color-content-dark-solid);
@@ -49,23 +47,6 @@
 
 .custom-1::part(body) {
     font-weight: var(--dt-font-weight-bold);
-}
-
-.custom-2::part(body) {
-    background-color: var(--dt-color-turmeric-90);
-    font-weight: var(--dt-font-weight-regular);
-}
-
-.custom-3::part(body) {
-    --icon-size-override: 12px;
-    color: var(--dt-color-content-default);
-    font-weight: var(--dt-font-weight-regular);
-}
-
-.custom-3::part(icon) {
-    color: var(--dt-color-support-positive);
-    background-color: var(--dt-color-support-positive-02);
-    padding: 2px;
 }
 
 .customTagContainerDark {
