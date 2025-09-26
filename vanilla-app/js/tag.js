@@ -1,7 +1,6 @@
 import '@justeattakeaway/pie-webc/components/tag.js';
 import { variants } from '@justeattakeaway/pie-webc/components/tag.js';
 import '@justeattakeaway/pie-webc/components/divider.js';
-
 import './shared.js';
 import './utils/navigation.js';
 import '../css/tag.css';
