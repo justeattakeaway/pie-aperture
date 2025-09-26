@@ -57,5 +57,4 @@ document.querySelector('#app').innerHTML = `
                 ${variant}
             </pie-tag>
         `).join('')}
-    </div>
-</div>`;
+    </div>`;
