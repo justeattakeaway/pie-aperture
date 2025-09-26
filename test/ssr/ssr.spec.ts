@@ -47,7 +47,6 @@ const componentConfigs: componentConfiguration[] = [
     { selector: 'toast-provider', page: 'toast-provider' },
 ];
 
-
 const getComponentPageUrl = (component: string, baseUrl: string): string => `${baseUrl}/components/${component}`;
 
 async function fetchHtml(url: string): Promise<string> {
