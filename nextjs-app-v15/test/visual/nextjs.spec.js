@@ -4,10 +4,10 @@ const { percyScreenshot } = require('@percy/selenium-webdriver');
 describe('NextJS Aperture App', () => {
     const pages = [
         { url: '/', name: 'PIE Aperture' },
-        // { url: '/components/assistive-text', name: 'Assistive Text' },
-        // { url: '/components/avatar', name: 'Avatar' },
+        { url: '/components/assistive-text', name: 'Assistive Text' },
+        { url: '/components/avatar', name: 'Avatar' },
+        { url: '/components/breadcrumb', name: 'Breadcrumb' },
         // { url: '/components/button', name: 'Button' },
-        // { url: '/components/breadcrumb', name: 'Breadcrumb' },
         // { url: '/components/card', name: 'Card' },
         // { url: '/components/checkbox', name: 'Checkbox' },
         // { url: '/components/checkbox-group', name: 'Checkbox Group' },
