@@ -12,9 +12,8 @@ export default function HomePage() {
     <NavigationLayout title="Aperture">
     <h2>Demo Integrations</h2>
     <ul>
-      {/* To be implemented in future PR */}
-      {/* <li><PieLink onClick={() => router.push('/integrations/controlled-form')} tag="button">Controlled Form Demo</PieLink></li>
-      <li><PieLink onClick={() => router.push('/integrations/uncontrolled-form')} tag="button">Uncontrolled Form Demo</PieLink></li> */}
+      <li><PieLink onClick={() => router.push('/integrations/controlled-form')} tag="button">Controlled Form Demo</PieLink></li>
+      <li><PieLink onClick={() => router.push('/integrations/uncontrolled-form')} tag="button">Uncontrolled Form Demo</PieLink></li>
     </ul>
     <h2>Component Pages</h2>
     <ul>
@@ -44,9 +43,9 @@ export default function HomePage() {
     <li><PieLink onClick={() => router.push('/components/tag')} tag="button">Tag</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/text-input')} tag="button">Text Input</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/textarea')} tag="button">Textarea</PieLink></li>
-    <li><PieLink onClick={() => router.push('/components/toast')} tag="button">Toast</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/toast')} tag="button">Toast</PieLink></li> */}
     <li><PieLink onClick={() => router.push('/components/toast-provider')} tag="button">Toast Provider</PieLink></li>
-    <li><PieLink onClick={() => router.push('/components/thumbnail')} tag="button">Thumbnail</PieLink></li> */}
+    {/* <li><PieLink onClick={() => router.push('/components/thumbnail')} tag="button">Thumbnail</PieLink></li> */}
     </ul>
     </NavigationLayout>
   );
