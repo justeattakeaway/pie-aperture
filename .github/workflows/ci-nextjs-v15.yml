@@ -69,7 +69,6 @@ jobs:
           bucket-name-main: 'pie-aperture'
       secrets: inherit
 
-  # Commenting out browser tests for now as there's currently no implementation of components yet.
   browser-tests:
     needs: 'build-deploy-next-app-ubuntu-node20'
     name: Run System / Visual Tests
