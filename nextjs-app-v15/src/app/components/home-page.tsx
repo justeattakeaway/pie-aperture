@@ -21,10 +21,10 @@ export default function HomePage() {
     <li><PieLink onClick={() => router.push('/components/assistive-text')} tag="button">Assistive Text</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/avatar')} tag="button">Avatar</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/breadcrumb')} tag="button">Breadcrumb</PieLink></li>
-    {/* <li><PieLink onClick={() => router.push('/components/button')} tag="button">Button</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/button')} tag="button">Button</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/card')} tag="button">Card</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/checkbox')} tag="button">Checkbox</PieLink></li>
-    <li><PieLink onClick={() => router.push('/components/checkbox-group')} tag="button">Checkbox Group</PieLink></li>
+    {/* <li><PieLink onClick={() => router.push('/components/checkbox-group')} tag="button">Checkbox Group</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/chip')} tag="button">Chip</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/cookie-banner')} tag="button">Cookie Banner</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/divider')} tag="button">Divider</PieLink></li>
