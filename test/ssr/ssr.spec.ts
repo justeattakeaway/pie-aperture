@@ -15,8 +15,6 @@ type componentConfiguration = {
     page: string
 }
 
-// TODO - Is there a better way to define this list?
-// TODO - uncomment the components when we are ready to test them
 const componentConfigs: componentConfiguration[] = [
     { selector: 'assistive-text', page: 'assistive-text' },
     { selector: 'avatar', page: 'avatar' },
