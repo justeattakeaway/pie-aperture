@@ -1547,13 +1547,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-css@npm:0.21.0":
-  version: 0.21.0
-  resolution: "@justeattakeaway/pie-css@npm:0.21.0"
-  checksum: 92feed27b8997fd3ba3a829dcfd33cb716cc7d31e2adad72a068be86163032450a268fb2b9e4de56285e1c7e2f94f82bee0a4882bcc908db0ff4336e42283477
-  languageName: node
-  linkType: hard
-
 "@justeattakeaway/pie-css@npm:0.22.0":
   version: 0.22.0
   resolution: "@justeattakeaway/pie-css@npm:0.22.0"
@@ -11873,7 +11866,7 @@ __metadata:
   resolution: "nextjs-app-v15@workspace:nextjs-app-v15"
   dependencies:
     "@eslint/eslintrc": 3
-    "@justeattakeaway/pie-css": 0.21.0
+    "@justeattakeaway/pie-css": 0.22.0
     "@justeattakeaway/pie-icons-webc": 1.14.2
     "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20251002132304
     "@lit-labs/nextjs": 0.2.4

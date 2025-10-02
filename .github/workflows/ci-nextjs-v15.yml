@@ -69,52 +69,51 @@ jobs:
           bucket-name-main: 'pie-aperture'
       secrets: inherit
 
-  # Commenting out browser tests for now as there's currently no implementation of components yet.
-  # browser-tests:
-  #   needs: 'build-deploy-next-app-ubuntu-node20'
-  #   name: Run System / Visual Tests
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     # Checkout the Repo
-  #     - name: Checkout
-  #       uses: actions/checkout@v3
+  browser-tests:
+    needs: 'build-deploy-next-app-ubuntu-node20'
+    name: Run System / Visual Tests
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the Repo
+      - name: Checkout
+        uses: actions/checkout@v3
 
-  #     # Setup Node
-  #     - name: Setup Node
-  #       uses: actions/setup-node@v4
-  #       with:
-  #         node-version: 20
-  #         cache: "yarn"
+      # Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "yarn"
 
-  #     - name: Install Dependencies
-  #       shell: bash
-  #       run: yarn
+      - name: Install Dependencies
+        shell: bash
+        run: yarn
 
-  #     # Setup Playwright
-  #     - name: Setup Playwright
-  #       uses: ./.github/actions/setup-playwright
+      # Setup Playwright
+      - name: Setup Playwright
+        uses: ./.github/actions/setup-playwright
 
-  #     - name: Run SSR Tests
-  #       shell: bash
-  #       run: yarn test:ssr --filter=nextjs-app-v15
+      # - name: Run SSR Tests
+      #   shell: bash
+      #   run: yarn test:ssr --filter=nextjs-app-v15
 
-  #     - name: Run System Tests
-  #       shell: bash
-  #       run: yarn test:system --filter=nextjs-app-v15
+      - name: Run System Tests
+        shell: bash
+        run: yarn test:system --filter=nextjs-app-v15
 
-  #     - uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
-  #       if: always()
-  #       with:
-  #         name: nextjs-playwright-report
-  #         path: playwright-reports/nextjs-app-v15-playwright-report/
-  #         retention-days: 7
+      - uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
+        if: always()
+        with:
+          name: nextjs-playwright-report
+          path: playwright-reports/nextjs-app-v15-playwright-report/
+          retention-days: 7
 
-  #     - name: Run Percy Tests
-  #       shell: bash
-  #       run: yarn test:visual --filter=nextjs-app-v15
-  #   env:
-  #     BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-  #     BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-  #     NEXT_15_AMPLIFY_ID: dg9syjb0jj07x
-  #     PERCY_TOKEN_PIE_APERTURE_NEXT_15: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NEXT_15 }}
-  #     PR_NUMBER: ${{ github.event.number }}
+      - name: Run Percy Tests
+        shell: bash
+        run: yarn test:visual --filter=nextjs-app-v15
+    env:
+      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+      NEXT_15_AMPLIFY_ID: dg9syjb0jj07x
+      PERCY_TOKEN_PIE_APERTURE_NEXT_15: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NEXT_15 }}
+      PR_NUMBER: ${{ github.event.number }}
