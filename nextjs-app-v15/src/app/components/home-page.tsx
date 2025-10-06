@@ -34,12 +34,12 @@ export default function HomePage() {
     <li><PieLink onClick={() => router.push('/components/link')} tag="button">Link</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/lottie-player')} tag="button">Lottie Player</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/modal')} tag="button">Modal</PieLink></li>
-    {/* <li><PieLink onClick={() => router.push('/components/notification')} tag="button">Notification</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/notification')} tag="button">Notification</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/radio')} tag="button">Radio</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/radio-group')} tag="button">Radio Group</PieLink></li>
-    <li><PieLink onClick={() => router.push('/components/spinner')} tag="button">Spinner</PieLink></li>
-    <li><PieLink onClick={() => router.push('/components/switch')} tag="button">Switch</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/select')} tag="button">Select</PieLink></li>
+    {/* <li><PieLink onClick={() => router.push('/components/spinner')} tag="button">Spinner</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/switch')} tag="button">Switch</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/tag')} tag="button">Tag</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/text-input')} tag="button">Text Input</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/textarea')} tag="button">Textarea</PieLink></li>
