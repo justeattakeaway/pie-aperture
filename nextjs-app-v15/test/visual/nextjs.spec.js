@@ -1,5 +1,5 @@
-const { waitForPageTitleToBe } = require('../../../webdriver-helpers/wait-helper.js');
-const { percyScreenshot } = require('@percy/selenium-webdriver');
+import { waitForPageTitleToBe } from '../../../webdriver-helpers/wait-helper.js';
+import { percyScreenshot } from '@percy/selenium-webdriver';
 
 describe('NextJS Aperture App', () => {
     const pages = [
