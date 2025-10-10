@@ -17,6 +17,7 @@ document.querySelector('#navigation').innerHTML = `
         <li><pie-link href="/components/checkbox-group.html">Checkbox Group</pie-link></li>
         <li><pie-link href="/components/chip.html">Chip</pie-link></li>
         <li><pie-link href="/components/cookie-banner.html">Cookie Banner</pie-link></li>
+        <li><pie-link href="/components/custom-tag.html">Custom Tag</pie-link></li>
         <li><pie-link href="/components/divider.html">Divider</pie-link></li>
         <li><pie-link href="/components/form-label.html">Form Label</pie-link></li>
         <li><pie-link href="/components/icon.html">Icon</pie-link></li>
