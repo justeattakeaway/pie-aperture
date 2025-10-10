@@ -42,10 +42,10 @@ export default function HomePage() {
     <li><PieLink onClick={() => router.push('/components/switch')} tag="button">Switch</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/tag')} tag="button">Tag</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/text-input')} tag="button">Text Input</PieLink></li>
-    {/* <li><PieLink onClick={() => router.push('/components/textarea')} tag="button">Textarea</PieLink></li>
-    <li><PieLink onClick={() => router.push('/components/toast')} tag="button">Toast</PieLink></li> */}
+    <li><PieLink onClick={() => router.push('/components/textarea')} tag="button">Textarea</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/toast')} tag="button">Toast</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/toast-provider')} tag="button">Toast Provider</PieLink></li>
-    {/* <li><PieLink onClick={() => router.push('/components/thumbnail')} tag="button">Thumbnail</PieLink></li> */}
+    <li><PieLink onClick={() => router.push('/components/thumbnail')} tag="button">Thumbnail</PieLink></li>
     </ul>
     </NavigationLayout>
   );
