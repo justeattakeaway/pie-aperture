@@ -37,7 +37,7 @@
         :variant="variant">
         {{ variant }}
       </pie-tag>
-      
+
       <pie-tag
         v-for="variant in variants"
         :key="variant"
