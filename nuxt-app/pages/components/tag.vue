@@ -1,51 +1,57 @@
 <template>
-  <h2>Non-interactive</h2>
+  <div>
+    <h2>Non-interactive</h2>
 
-  <h3>Default</h3>
-  <div class="c-tag-container">
-    <pie-tag
-      v-for="variant in variants"
-      :variant="variant">
-      {{ variant }}
-    </pie-tag>
-  </div>
+    <h3>Default</h3>
+    <div class="c-tag-container">
+      <pie-tag
+        v-for="variant in variants"
+        :key="variant"
+        :variant="variant">
+        {{ variant }}
+      </pie-tag>
+    </div>
 
-  <h3>Strong</h3>
+    <h3>Strong</h3>
 
-  <div class="c-tag-container">
-    <pie-tag
-      v-for="variant in variants"
-      isStrong
-      :variant="variant">
-      {{ variant }}
-    </pie-tag>
-  </div>
+    <div class="c-tag-container">
+      <pie-tag
+        v-for="variant in variants"
+        :key="variant"
+        isStrong
+        :variant="variant">
+        {{ variant }}
+      </pie-tag>
+    </div>
 
-  <pie-divider></pie-divider>
+    <pie-divider></pie-divider>
 
-  <h2>Interactive</h2>
+    <h2>Interactive</h2>
 
-  <h3>Default</h3>
+    <h3>Default</h3>
 
-  <div class="c-tag-container">
-    <pie-tag
-      v-for="variant in variants"
-      isInteractive
-      :variant="variant">
-      {{ variant }}
-    </pie-tag>
-  </div>
+    <div class="c-tag-container">
+      <pie-tag
+        v-for="variant in variants"
+        :key="variant"
+        isInteractive
+        :variant="variant">
+        {{ variant }}
+      </pie-tag>
+    </div>
 
-  <h3>Strong</h3>
+    <h3>Strong</h3>
 
-  <div class="c-tag-container">
-    <pie-tag
-      v-for="variant in variants"
-      isInteractive
-      isStrong
-      :variant="variant">
-      {{ variant }}
-    </pie-tag>
+    <div class="c-tag-container">
+      <pie-tag
+        v-for="variant in variants"
+        :key="variant"
+        isInteractive
+        isStrong
+        :variant="variant">
+        {{ variant }}
+      </pie-tag>
+    </div>
   </div>
 </template>
 

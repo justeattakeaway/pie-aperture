@@ -13,6 +13,7 @@ describe('Nuxt Aperture App', () => {
         { url: '/components/checkbox-group', name: 'Checkbox Group' },
         { url: '/components/chip', name: 'Chip' },
         { url: '/components/cookie-banner', name: 'Cookie Banner' },
+        { url: '/components/custom-tag', name: 'Custom Tag' },
         { url: '/components/divider', name: 'Divider' },
         { url: '/integrations/form', name: 'Form' },
         { url: '/components/form-label', name: 'Form Label' },
