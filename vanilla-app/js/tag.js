@@ -1,6 +1,6 @@
 import '@justeattakeaway/pie-webc/components/tag.js';
 import { variants } from '@justeattakeaway/pie-webc/components/tag.js';
-import '@justeattakeaway/pie-webc/components/divider.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconFingerprint.js';
 import './shared.js';
 import './utils/navigation.js';
 import '../css/tag.css';
@@ -15,6 +15,14 @@ document.querySelector('#app').innerHTML = `
                 ${variant}
             </pie-tag>
         `).join('')}
+
+        ${variants.map((variant) => `
+            <pie-tag
+                variant="${variant}">
+                <icon-fingerprint slot="icon"></icon-fingerprint>
+                ${variant}
+            </pie-tag>
+        `).join('')}
     </div>
 
     <h3>Strong</h3>
@@ -27,33 +35,13 @@ document.querySelector('#app').innerHTML = `
                 ${variant}
             </pie-tag>
         `).join('')}
-    </div>
-
-    <pie-divider></pie-divider>
-
-    <h2>Interactive</h2>
-
-    <h3>Default</h3>
-
-    <div class="c-tag-container">
         ${variants.map((variant) => `
             <pie-tag
                 variant="${variant}"
-                isInteractive>
-                ${variant}
-            </pie-tag>
-        `).join('')}
-    </div>
-
-    <h3>Strong</h3>
-
-    <div class="c-tag-container">
-        ${variants.map((variant) => `
-            <pie-tag
-                variant="${variant}"
-                isInteractive
                 isStrong>
+                <icon-fingerprint slot="icon"></icon-fingerprint>
                 ${variant}
             </pie-tag>
         `).join('')}
-    </div>`;
+    </div>
+`;
