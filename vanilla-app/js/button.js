@@ -11,7 +11,7 @@ document.querySelector('#app').innerHTML = `
     <h2>PIE Button – with icon and text</h2>
     <pie-button>
         <icon-search slot="icon"></icon-search>
-        Search
+        Search TEST
     </pie-button>
 
     <pie-divider></pie-divider>

@@ -9,7 +9,7 @@
     <h2>PIE Button - with Icon and text</h2>
     <pie-button>
         <icon-search slot="icon"></icon-search>
-        Search
+        Search TEST
     </pie-button>
 
     <pie-divider></pie-divider>
