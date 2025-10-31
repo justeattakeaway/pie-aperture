@@ -18,7 +18,7 @@ export default function Button() {
         <h2>PIE Button - with Icon and text</h2>
         <PieButton>
             <IconSearch slot="icon"></IconSearch>
-            Search TEST
+            Search
         </PieButton>
 
         <PieDivider />
