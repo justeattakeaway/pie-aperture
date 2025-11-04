@@ -17,6 +17,14 @@
         <icon-fingerprint slot="icon"></icon-fingerprint>
         {{ variant }}
       </pie-tag>
+
+      <pie-tag
+        v-for="variant in variants"
+        :key="variant"
+        :variant="variant"
+        isIconOnly>
+        <icon-fingerprint slot="icon"></icon-fingerprint>
+      </pie-tag>
     </div>
 
     <h3>Strong</h3>
@@ -38,6 +46,15 @@
         hasLeadingIcon>
         <icon-fingerprint slot="icon"></icon-fingerprint>
         {{ variant }}
+      </pie-tag>
+
+      <pie-tag
+        v-for="variant in variants"
+        :key="variant"
+        isStrong
+        :variant="variant"
+        isIconOnly>
+        <icon-fingerprint slot="icon"></icon-fingerprint>
       </pie-tag>
     </div>
   </div>

@@ -12,6 +12,7 @@ document.querySelector('#app').innerHTML = `
         ${variants.map((variant) => `
             <pie-tag
                 variant="${variant}">
+                <icon-fingerprint slot="icon"></icon-fingerprint>
                 ${variant}
             </pie-tag>
         `).join('')}
@@ -20,6 +21,12 @@ document.querySelector('#app').innerHTML = `
             <pie-tag
                 variant="${variant}">
                 <icon-fingerprint slot="icon"></icon-fingerprint>
+            </pie-tag>
+        `).join('')}
+
+        ${variants.map((variant) => `
+            <pie-tag
+                variant="${variant}">
                 ${variant}
             </pie-tag>
         `).join('')}
@@ -35,12 +42,21 @@ document.querySelector('#app').innerHTML = `
                 ${variant}
             </pie-tag>
         `).join('')}
+
         ${variants.map((variant) => `
             <pie-tag
                 variant="${variant}"
                 isStrong>
                 <icon-fingerprint slot="icon"></icon-fingerprint>
                 ${variant}
+            </pie-tag>
+        `).join('')}
+
+        ${variants.map((variant) => `
+            <pie-tag
+                variant="${variant}"
+                isStrong>
+                <icon-fingerprint slot="icon"></icon-fingerprint>
             </pie-tag>
         `).join('')}
     </div>

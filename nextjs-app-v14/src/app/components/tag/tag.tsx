@@ -13,9 +13,19 @@ export default function Tag() {
                 {variants.map((variant) => (
                     <PieTag
                         key={variant}
-                        variant={variant}>
+                        variant={variant}
+                        hasLeadingIcon>
                         <IconFingerprint slot="icon" />
                         {variant}
+                    </PieTag>
+                ))}
+
+                {variants.map((variant) => (
+                    <PieTag
+                        key={variant}
+                        variant={variant}
+                        isIconOnly>
+                        <IconFingerprint slot="icon" />
                     </PieTag>
                 ))}
 
@@ -44,9 +54,19 @@ export default function Tag() {
                     <PieTag
                         key={variant}
                         variant={variant}
-                        isStrong>
+                        isStrong
+                        hasLeadingIcon>
                         <IconFingerprint slot="icon" />
                         {variant}
+                    </PieTag>
+                ))}
+
+                {variants.map((variant) => (
+                    <PieTag
+                        key={variant}
+                        variant={variant}
+                        isIconOnly>
+                        <IconFingerprint slot="icon" />
                     </PieTag>
                 ))}
             </div>

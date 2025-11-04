@@ -8,14 +8,14 @@ import '@/styles/tag.scss';
 export default function Tag() {
     return (
         <NavigationLayout title="Tag">
-            <h2>Non-interactive</h2>
-
             <h3>Default</h3>
             <div className="c-tag-container">
                 {variants.map((variant) => (
                     <PieTag
                         key={variant}
-                        variant={variant}>
+                        variant={variant}
+                        hasLeadingIcon>
+                        <IconFingerprint slot="icon" />
                         {variant}
                     </PieTag>
                 ))}
@@ -23,8 +23,16 @@ export default function Tag() {
                 {variants.map((variant) => (
                     <PieTag
                         key={variant}
-                        variant={variant}>
+                        variant={variant}
+                        isIconOnly>
                         <IconFingerprint slot="icon" />
+                    </PieTag>
+                ))}
+
+                {variants.map((variant) => (
+                    <PieTag
+                        key={variant}
+                        variant={variant}>
                         {variant}
                     </PieTag>
                 ))}
@@ -46,9 +54,19 @@ export default function Tag() {
                     <PieTag
                         key={variant}
                         variant={variant}
-                        isStrong>
+                        isStrong
+                        hasLeadingIcon>
                         <IconFingerprint slot="icon" />
                         {variant}
+                    </PieTag>
+                ))}
+
+                {variants.map((variant) => (
+                    <PieTag
+                        key={variant}
+                        variant={variant}
+                        isIconOnly>
+                        <IconFingerprint slot="icon" />
                     </PieTag>
                 ))}
             </div>
