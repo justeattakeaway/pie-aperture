@@ -12,7 +12,8 @@
       <pie-tag
         v-for="variant in variants"
         :key="variant"
-        :variant="variant">
+        :variant="variant"
+        hasLeadingIcon>
         <icon-fingerprint slot="icon"></icon-fingerprint>
         {{ variant }}
       </pie-tag>
@@ -33,7 +34,8 @@
         v-for="variant in variants"
         :key="variant"
         isStrong
-        :variant="variant">
+        :variant="variant"
+        hasLeadingIcon>
         <icon-fingerprint slot="icon"></icon-fingerprint>
         {{ variant }}
       </pie-tag>
