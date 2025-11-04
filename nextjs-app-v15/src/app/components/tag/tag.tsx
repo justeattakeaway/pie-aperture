@@ -8,7 +8,7 @@ import '@/styles/tag.scss';
 export default function Tag() {
     return (
         <NavigationLayout title="Tag">
-            <h3>Default</h3>
+            <h2>Default</h2>
             <div className="c-tag-container">
                 {variants.map((variant) => (
                     <PieTag
@@ -38,7 +38,7 @@ export default function Tag() {
                 ))}
             </div>
 
-            <h3>Strong</h3>
+            <h2>Strong</h2>
 
             <div className="c-tag-container">
                 {variants.map((variant) => (

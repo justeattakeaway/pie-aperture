@@ -6,12 +6,19 @@ import './utils/navigation.js';
 import '../css/tag.css';
 
 document.querySelector('#app').innerHTML = `
-    <h2>Non-interactive</h2>
-    <h3>Default</h3>
+    <h2>Default</h2>
     <div class="c-tag-container">
         ${variants.map((variant) => `
             <pie-tag
                 variant="${variant}">
+                ${variant}
+            </pie-tag>
+        `).join('')}
+
+        ${variants.map((variant) => `
+            <pie-tag
+                variant="${variant}"
+                has-leading-icon>
                 <icon-fingerprint slot="icon"></icon-fingerprint>
                 ${variant}
             </pie-tag>
@@ -19,20 +26,14 @@ document.querySelector('#app').innerHTML = `
 
         ${variants.map((variant) => `
             <pie-tag
-                variant="${variant}">
+                variant="${variant}"
+                is-icon-only>
                 <icon-fingerprint slot="icon"></icon-fingerprint>
-            </pie-tag>
-        `).join('')}
-
-        ${variants.map((variant) => `
-            <pie-tag
-                variant="${variant}">
-                ${variant}
             </pie-tag>
         `).join('')}
     </div>
 
-    <h3>Strong</h3>
+    <h2>Strong</h2>
 
     <div class="c-tag-container">
         ${variants.map((variant) => `
@@ -46,7 +47,8 @@ document.querySelector('#app').innerHTML = `
         ${variants.map((variant) => `
             <pie-tag
                 variant="${variant}"
-                isStrong>
+                isStrong
+                has-leading-icon>
                 <icon-fingerprint slot="icon"></icon-fingerprint>
                 ${variant}
             </pie-tag>
@@ -55,7 +57,8 @@ document.querySelector('#app').innerHTML = `
         ${variants.map((variant) => `
             <pie-tag
                 variant="${variant}"
-                isStrong>
+                isStrong
+                is-icon-only>
                 <icon-fingerprint slot="icon"></icon-fingerprint>
             </pie-tag>
         `).join('')}

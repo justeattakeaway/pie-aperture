@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Default</h3>
+    <h2>Default</h2>
     <div class="c-tag-container">
       <pie-tag
         v-for="variant in variants"
@@ -27,7 +27,7 @@
       </pie-tag>
     </div>
 
-    <h3>Strong</h3>
+    <h2>Strong</h2>
 
     <div class="c-tag-container">
       <pie-tag
