@@ -50,7 +50,6 @@ permissions:
 
 env:
   AMPLIFY_ID: ${{ inputs.amplify-app-id }}
-  aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
   AWS_REGION: 'eu-west-1'
   BRANCH_NAME: ${{ github.event_name == 'pull_request' && format('pr{0}', github.event.number) || github.ref == 'refs/heads/main' && 'main' }}
   BUCKET_NAME: ${{ github.event_name == 'pull_request' && inputs.bucket-name-preview || (github.ref == 'refs/heads/main' && inputs.bucket-name-main) }}

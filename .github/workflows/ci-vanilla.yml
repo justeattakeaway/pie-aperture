@@ -20,7 +20,6 @@ concurrency:
 
 env:
   TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-  aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
 
 jobs:
 
