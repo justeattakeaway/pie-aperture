@@ -53,6 +53,7 @@ jobs:
         node-version: 18
         os: 'ubuntu-latest'
         package-name: 'nextjs-app-v14'
+        aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
     secrets: inherit
 
   build-deploy-next-app-ubuntu-node20:
@@ -67,6 +68,7 @@ jobs:
           package-dist-directory: './nextjs-app-v14/out'
           bucket-name-preview: 'pie-aperture-preview'
           bucket-name-main: 'pie-aperture'
+          aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
       secrets: inherit
 
   browser-tests:

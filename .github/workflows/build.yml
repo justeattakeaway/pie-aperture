@@ -34,15 +34,22 @@ on:
         description: "Name of the main bucket being deployed to"
         required: false
         type: string
+      aws-role-arn:
+        description: 'The AWS IAM role ARN to assume for OIDC authentication'
+        required: true
+        type: string
       deploy:
         description: "Boolean flag on whether to deploy the application with the given node version"
         required: true
         type: boolean
 
+permissions:
+  id-token: write
+  contents: read
+  deployments: write
+
 env:
   AMPLIFY_ID: ${{ inputs.amplify-app-id }}
-  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY_ID }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_REGION: 'eu-west-1'
   BRANCH_NAME: ${{ github.event_name == 'pull_request' && format('pr{0}', github.event.number) || github.ref == 'refs/heads/main' && 'main' }}
   BUCKET_NAME: ${{ github.event_name == 'pull_request' && inputs.bucket-name-preview || (github.ref == 'refs/heads/main' && inputs.bucket-name-main) }}
@@ -56,6 +63,14 @@ jobs:
       # Checkout the Repo
       - name: Checkout
         uses: actions/checkout@v3
+      
+      # Configure AWS credentials using OIDC
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502 # v4.0.2
+        with:
+          role-to-assume: ${{ inputs.aws-role-arn }}
+          role-session-name: github-actions-${{ github.run_id }}
+          aws-region: ${{ env.AWS_REGION }}
 
       # Setup Node
       - name: Setup Node
@@ -89,21 +104,24 @@ jobs:
           cd ${{ inputs.package-dist-directory }}
           zip -r ./${{ env.ZIP_NAME }} .
 
-      # Upload zip to S3
+      # Upload zip to S3 using AWS CLI
       - name: Upload to S3
         if: inputs.deploy == true
         id: upload-s3
-        uses: hkusu/s3-upload-action@v2
-        with:
-          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.AWS_REGION }}
-          aws-bucket: ${{ env.BUCKET_NAME }}
-          bucket-root: "/"
-          destination-dir: "/"
-          file-path: "${{inputs.package-dist-directory}}/${{ env.ZIP_NAME }}"
-          content-type: "application/zip"
-          public: true
+        shell: bash
+        run: |
+          cd ${{ inputs.package-dist-directory }}
+          
+          # Upload file to S3 with public-read ACL
+          aws s3 cp ./${{ env.ZIP_NAME }} s3://${{ env.BUCKET_NAME }}/${{ env.ZIP_NAME }} \
+            --content-type "application/zip" \
+            --acl public-read \
+            --region ${{ env.AWS_REGION }}
+          
+          # Construct the public URL
+          FILE_URL="https://${{ env.BUCKET_NAME }}.s3.${{ env.AWS_REGION }}.amazonaws.com/${{ env.ZIP_NAME }}"
+          echo "file-url=$FILE_URL" >> "$GITHUB_OUTPUT"
+          echo "Uploaded to: $FILE_URL"
 
       # Create branch on Amplify
       - name: Create Amplify branch

@@ -3,12 +3,19 @@ name: Remove PR Previews
 on:
   pull_request:
     types: [closed]
+    
+permissions:
+  contents: read
+  id-token: write
 
 concurrency: preview-teardown-${{ github.ref }}
 
 jobs:
   list-environments:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     outputs:
       hasNextJs14Env: ${{ steps.list-environments.outputs.hasNextJs14Env }}
       hasNextJs15Env: ${{ steps.list-environments.outputs.hasNextJs15Env }}
@@ -64,8 +71,7 @@ jobs:
           github-token: ${{ secrets.PIE_BOT_TOKEN }}
           amplify-app-id: d1xxjuy6vbm7pk
           aws-region: 'eu-west-1'
-          aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
           environment-name: nextjs-app-v14-pr-${{ github.event.pull_request.number }}
           branch-name: 'pr${{ github.event.pull_request.number }}'
 
@@ -76,8 +82,7 @@ jobs:
           github-token: ${{ secrets.PIE_BOT_TOKEN }}
           amplify-app-id: dg9syjb0jj07x
           aws-region: 'eu-west-1'
-          aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
           environment-name: nextjs-app-v15-pr-${{ github.event.pull_request.number }}
           branch-name: 'pr${{ github.event.pull_request.number }}'
 
@@ -88,8 +93,7 @@ jobs:
           github-token: ${{ secrets.PIE_BOT_TOKEN }}
           amplify-app-id: d36dan3bxjue8c
           aws-region: 'eu-west-1'
-          aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
           environment-name: nuxt-app-pr-${{ github.event.pull_request.number }}
           branch-name: 'pr${{ github.event.pull_request.number }}'
 
@@ -100,7 +104,6 @@ jobs:
           github-token: ${{ secrets.PIE_BOT_TOKEN }}
           amplify-app-id: d2vb6sjgivffb3
           aws-region: 'eu-west-1'
-          aws-access-key-id: ${{ secrets.AWS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
           environment-name: vanilla-app-pr-${{ github.event.pull_request.number }}
           branch-name: 'pr${{ github.event.pull_request.number }}'
