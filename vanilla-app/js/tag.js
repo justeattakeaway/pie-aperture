@@ -1,13 +1,12 @@
 import '@justeattakeaway/pie-webc/components/tag.js';
 import { variants } from '@justeattakeaway/pie-webc/components/tag.js';
-import '@justeattakeaway/pie-webc/components/divider.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconFingerprint.js';
 import './shared.js';
 import './utils/navigation.js';
 import '../css/tag.css';
 
 document.querySelector('#app').innerHTML = `
-    <h2>Non-interactive</h2>
-    <h3>Default</h3>
+    <h2>Default</h2>
     <div class="c-tag-container">
         ${variants.map((variant) => `
             <pie-tag
@@ -15,9 +14,26 @@ document.querySelector('#app').innerHTML = `
                 ${variant}
             </pie-tag>
         `).join('')}
+
+        ${variants.map((variant) => `
+            <pie-tag
+                variant="${variant}"
+                has-leading-icon>
+                <icon-fingerprint slot="icon"></icon-fingerprint>
+                ${variant}
+            </pie-tag>
+        `).join('')}
+
+        ${variants.map((variant) => `
+            <pie-tag
+                variant="${variant}"
+                is-icon-only>
+                <icon-fingerprint slot="icon"></icon-fingerprint>
+            </pie-tag>
+        `).join('')}
     </div>
 
-    <h3>Strong</h3>
+    <h2>Strong</h2>
 
     <div class="c-tag-container">
         ${variants.map((variant) => `
@@ -27,33 +43,24 @@ document.querySelector('#app').innerHTML = `
                 ${variant}
             </pie-tag>
         `).join('')}
-    </div>
 
-    <pie-divider></pie-divider>
-
-    <h2>Interactive</h2>
-
-    <h3>Default</h3>
-
-    <div class="c-tag-container">
         ${variants.map((variant) => `
             <pie-tag
                 variant="${variant}"
-                isInteractive>
+                isStrong
+                has-leading-icon>
+                <icon-fingerprint slot="icon"></icon-fingerprint>
                 ${variant}
             </pie-tag>
         `).join('')}
-    </div>
 
-    <h3>Strong</h3>
-
-    <div class="c-tag-container">
         ${variants.map((variant) => `
             <pie-tag
                 variant="${variant}"
-                isInteractive
-                isStrong>
-                ${variant}
+                isStrong
+                is-icon-only>
+                <icon-fingerprint slot="icon"></icon-fingerprint>
             </pie-tag>
         `).join('')}
-    </div>`;
+    </div>
+`;
