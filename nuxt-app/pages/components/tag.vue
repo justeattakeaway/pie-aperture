@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h2>Non-interactive</h2>
-
-    <h3>Default</h3>
+    <h2>Default</h2>
     <div class="c-tag-container">
       <pie-tag
         v-for="variant in variants"
@@ -10,9 +8,26 @@
         :variant="variant">
         {{ variant }}
       </pie-tag>
+
+      <pie-tag
+        v-for="variant in variants"
+        :key="variant"
+        :variant="variant"
+        hasLeadingIcon>
+        <icon-fingerprint slot="icon"></icon-fingerprint>
+        {{ variant }}
+      </pie-tag>
+
+      <pie-tag
+        v-for="variant in variants"
+        :key="variant"
+        :variant="variant"
+        isIconOnly>
+        <icon-fingerprint slot="icon"></icon-fingerprint>
+      </pie-tag>
     </div>
 
-    <h3>Strong</h3>
+    <h2>Strong</h2>
 
     <div class="c-tag-container">
       <pie-tag
@@ -22,34 +37,24 @@
         :variant="variant">
         {{ variant }}
       </pie-tag>
-    </div>
-
-    <pie-divider></pie-divider>
-
-    <h2>Interactive</h2>
-
-    <h3>Default</h3>
-
-    <div class="c-tag-container">
+      
       <pie-tag
         v-for="variant in variants"
         :key="variant"
-        isInteractive
-        :variant="variant">
+        isStrong
+        :variant="variant"
+        hasLeadingIcon>
+        <icon-fingerprint slot="icon"></icon-fingerprint>
         {{ variant }}
       </pie-tag>
-    </div>
 
-    <h3>Strong</h3>
-
-    <div class="c-tag-container">
       <pie-tag
         v-for="variant in variants"
         :key="variant"
-        isInteractive
         isStrong
-        :variant="variant">
-        {{ variant }}
+        :variant="variant"
+        isIconOnly>
+        <icon-fingerprint slot="icon"></icon-fingerprint>
       </pie-tag>
     </div>
   </div>
@@ -59,6 +64,8 @@
 import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/tag.js';
 import { variants } from '@justeattakeaway/pie-webc/components/tag.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconFingerprint.js';
+
 import '@justeattakeaway/pie-webc/components/divider.js';
 
 definePageMeta({
