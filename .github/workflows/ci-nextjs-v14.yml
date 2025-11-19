@@ -45,17 +45,6 @@ jobs:
   #       package-name: 'nextjs-app-v14'
   #   secrets: inherit
 
-  build-next-app-ubuntu-node18:
-    name: Ubuntu - Node 18
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        node-version: 18
-        os: 'ubuntu-latest'
-        package-name: 'nextjs-app-v14'
-        aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
-    secrets: inherit
-
   build-deploy-next-app-ubuntu-node20:
       name: Ubuntu - Node 20
       uses: ./.github/workflows/build.yml
