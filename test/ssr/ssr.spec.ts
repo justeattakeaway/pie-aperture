@@ -18,8 +18,8 @@ type componentConfiguration = {
 const componentConfigs: componentConfiguration[] = [
     { selector: 'assistive-text', page: 'assistive-text' },
     { selector: 'avatar', page: 'avatar' },
-    { selector: 'button', page: 'button' },
     { selector: 'breadcrumb', page: 'breadcrumb' },
+    { selector: 'button', page: 'button' },
     { selector: 'card', page: 'card' },
     { selector: 'checkbox', page: 'checkbox' },
     { selector: 'checkbox-group', page: 'checkbox-group' },
@@ -33,16 +33,18 @@ const componentConfigs: componentConfiguration[] = [
     { selector: 'link', page: 'link' },
     { selector: 'lottie-player', page: 'lottie-player' },
     { selector: 'modal', page: 'modal' },
+    { selector: 'notification', page: 'notification' },
     { selector: 'radio', page: 'radio' },
     { selector: 'radio-group', page: 'radio-group' },
+    { selector: 'select', page: 'select' },
     { selector: 'spinner', page: 'spinner' },
     { selector: 'switch', page: 'switch' },
     { selector: 'tag', page: 'tag' },
     { selector: 'text-input', page: 'text-input' },
-    { selector: 'notification', page: 'notification' },
     { selector: 'textarea', page: 'textarea' },
+    { selector: 'thumbnail', page: 'thumbnail' },
     { selector: 'toast', page: 'toast' },
-    { selector: 'toast-provider', page: 'toast-provider' },
+    { selector: 'toast-provider', page: 'toast-provider' }
 ];
 
 const getComponentPageUrl = (component: string, baseUrl: string): string => `${baseUrl}/components/${component}`;
