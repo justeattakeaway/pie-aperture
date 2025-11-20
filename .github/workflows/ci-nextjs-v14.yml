@@ -24,16 +24,7 @@ env:
 
 jobs:
 
-  # Commenting these out for now as there's currently an issue with Next.
-  # build-next-app-windows-node18:
-  #   name: Windows - Node 18
-  #   uses: ./.github/workflows/build.yml
-  #   with:
-  #       deploy: false
-  #       node-version: 18
-  #       os: 'windows-latest'
-  #       package-name: 'nextjs-app-v14'
-  #   secrets: inherit
+  # Commenting this out for now as there's currently an issue with Next.
 
   # build-next-app-windows-node20:
   #   name: Windows - Node 20
