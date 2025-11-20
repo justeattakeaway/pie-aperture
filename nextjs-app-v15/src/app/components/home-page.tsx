@@ -28,6 +28,7 @@ export default function HomePage() {
     <li><PieLink onClick={() => router.push('/components/chip')} tag="button">Chip</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/cookie-banner')} tag="button">Cookie Banner</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/custom-tag')} tag="button">Custom Tag</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/data-table')} tag="button">Data Table</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/divider')} tag="button">Divider</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/form-label')} tag="button">Form Label</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/icon')} tag="button">Icon</PieLink></li>
