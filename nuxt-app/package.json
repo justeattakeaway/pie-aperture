@@ -15,14 +15,14 @@
   },
   "devDependencies": {
     "deepmerge": "4.3.1",
-    "npm-check-updates": "18.0.2",
+    "npm-check-updates": "18.3.1",
     "nuxt": "3.14.1592",
-    "sass": "1.81.0"
+    "sass": "1.94.1"
   },
   "dependencies": {
-    "@justeattakeaway/pie-css": "0.22.0",
-    "@justeattakeaway/pie-icons-webc": "1.14.2",
-    "@justeattakeaway/pie-webc": "0.7.31",
+    "@justeattakeaway/pie-css": "0.24.0",
+    "@justeattakeaway/pie-icons-webc": "1.17.0",
+    "@justeattakeaway/pie-webc": "0.7.33",
     "just-kebab-case": "4.2.0",
     "nuxt-ssr-lit": "1.6.27"
   },

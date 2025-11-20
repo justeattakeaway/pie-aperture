@@ -24,18 +24,6 @@ env:
 
 jobs:
 
-  build-nuxt-app-windows-node18:
-    name: Windows - Node 18
-    uses: ./.github/workflows/build.yml
-    with:
-        build-script: 'generate'
-        deploy: false
-        node-version: 18
-        os: 'windows-latest'
-        package-name: 'nuxt-app'
-        aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
-    secrets: inherit
-
   build-nuxt-app-windows-node20:
     name: Windows - Node 20
     uses: ./.github/workflows/build.yml
@@ -44,18 +32,6 @@ jobs:
         deploy: false
         node-version: 20
         os: 'windows-latest'
-        package-name: 'nuxt-app'
-        aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
-    secrets: inherit
-
-  build-nuxt-app-ubuntu-node18:
-    name: Ubuntu - Node 18
-    uses: ./.github/workflows/build.yml
-    with:
-        build-script: 'generate'
-        deploy: false
-        node-version: 18
-        os: 'ubuntu-latest'
         package-name: 'nuxt-app'
         aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
     secrets: inherit
