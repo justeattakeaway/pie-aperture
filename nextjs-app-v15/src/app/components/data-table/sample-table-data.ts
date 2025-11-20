@@ -17,7 +17,7 @@ export const sampleColumns = [
     {
         id: 'department',
         heading:  'Department',
-        textAlign: 'right' as 'right',
+        textAlign: 'right' as const,
         accessor: 'department',
     },
 ];
