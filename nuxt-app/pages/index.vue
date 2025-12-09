@@ -3,6 +3,7 @@
 		<h3>Demo Integrations</h3>
 		<ul>
 			<li><pie-link href="/integrations/form">Form Demo</pie-link></li>
+			<li><pie-link href="/integrations/typography">Typography Demo</pie-link></li>
 		</ul>
 		<h3>Component Pages</h3>
 		<ul>
