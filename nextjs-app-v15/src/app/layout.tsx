@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Head from "next/head";
 import "@justeattakeaway/pie-css";
+import "@justeattakeaway/pie-css/dist/helpers/typography.css";
 import "@/styles/main.scss";
 
 export const metadata: Metadata = {
