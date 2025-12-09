@@ -4,17 +4,17 @@ html {
 
   @font-face {
     font-family: JETSansDigital;
-    src: url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff2') format("woff2"),
-      url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff') format("woff");
-    font-weight: 400;
+    src: url('https://pie-design-system-cdn.production.jet-external.com/fonts/JETSansDigital-VF-optimised-extended.woff2') format("woff2");
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+    font-style: oblique 0deg 20deg;
     font-display: swap;
   }
 
   @font-face {
-    font-family: JETSansDigital;
-    src: url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff2') format("woff2"),
-      url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff') format("woff");
-    font-weight: 700;
+    font-family: PTMono;
+    src: url('https://d30v2pzvrfyzpo.cloudfront.net/fonts/PTMono-Regular.ttf') format("truetype");
+    font-weight: 400;
     font-display: swap;
   }
 }

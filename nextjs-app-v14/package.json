@@ -14,7 +14,7 @@
     "upgrade-pie-packages": "yarn npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "dependencies": {
-    "@justeattakeaway/pie-css": "0.24.0",
+    "@justeattakeaway/pie-css": "0.0.0-snapshot-release-20251209172645",
     "@justeattakeaway/pie-icons-webc": "1.17.0",
     "@justeattakeaway/pie-webc": "0.7.33",
     "@lit-labs/nextjs": "0.2.3",
