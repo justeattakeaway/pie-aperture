@@ -3,6 +3,7 @@ import Head from "next/head";
 import "@justeattakeaway/pie-css";
 import "@justeattakeaway/pie-css/dist/helpers/typography.css";
 import "@/styles/main.scss";
+import NavigationHeader from "@/components/navigation-header";
 
 export const metadata: Metadata = {
   title: {
@@ -27,6 +28,7 @@ export default function RootLayout({
               as="font" type="font/woff2"/>
     </Head>
     <body>
+    <NavigationHeader />
     {children}
     </body>
     </html>
