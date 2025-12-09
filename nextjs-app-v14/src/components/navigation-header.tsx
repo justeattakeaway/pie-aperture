@@ -3,16 +3,16 @@
 import React, { useEffect, useState } from 'react';
 import { getNavigationData } from '../../../shared/navigation-urls.js';
 
-// Declare pie-link as a valid JSX element
-declare global {
-    namespace JSX {
-        interface IntrinsicElements {
-            'pie-link': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-                href?: string;
-            };
-        }
-    }
-}
+// Type for pie-link custom element
+type PieLinkProps = {
+    href?: string;
+    children: React.ReactNode;
+} & React.HTMLAttributes<HTMLElement>;
+
+// Create a typed component wrapper
+const PieLink = (props: PieLinkProps) => {
+    return React.createElement('pie-link', props, props.children);
+};
 
 interface NavigationItem {
     name: string;
@@ -40,9 +40,9 @@ const NavigationHeader = () => {
                             {item.name}
                         </span>
                     ) : (
-                        <pie-link key={item.key} href={item.url}>
+                        <PieLink key={item.key} href={item.url}>
                             {item.name}
-                        </pie-link>
+                        </PieLink>
                     )
                 ))}
             </div>
