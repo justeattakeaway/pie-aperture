@@ -24,13 +24,36 @@ interface NavigationItem {
 const NavigationHeader = () => {
     const [navigationData, setNavigationData] = useState<NavigationItem[]>([]);
 
+    const updateNavigationData = () => {
+        setNavigationData(getNavigationData());
+    };
+
     useEffect(() => {
         // Import pie-link component
         import('@justeattakeaway/pie-webc/components/link.js');
-        setNavigationData(getNavigationData());
-    }, []);
-
-    return (
+        updateNavigationData();
+        
+        // Monitor pathname changes using an interval
+        let currentPathname = window.location.pathname;
+        const intervalId = setInterval(() => {
+            if (window.location.pathname !== currentPathname) {
+                currentPathname = window.location.pathname;
+                updateNavigationData();
+            }
+        }, 100); // Check every 100ms
+        
+        // Also listen for browser navigation events
+        const handleLocationChange = () => {
+            setTimeout(updateNavigationData, 10);
+        };
+        
+        window.addEventListener('popstate', handleLocationChange);
+        
+        return () => {
+            clearInterval(intervalId);
+            window.removeEventListener('popstate', handleLocationChange);
+        };
+    }, []);    return (
         <header style={{ padding: '1rem 0', borderBottom: '1px solid #ddd' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
                 <strong>PIE Aperture:</strong>

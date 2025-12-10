@@ -15,9 +15,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { getNavigationData } from '../../shared/navigation-urls.js';
 import '@justeattakeaway/pie-webc/components/link.js';
+import { useRoute } from 'vue-router';
 
 interface NavigationItem {
     name: string;
@@ -27,8 +28,18 @@ interface NavigationItem {
 }
 
 const navigationData = ref<NavigationItem[]>([]);
+const route = useRoute();
+
+const updateNavigationData = () => {
+    navigationData.value = getNavigationData();
+};
 
 onMounted(() => {
-    navigationData.value = getNavigationData();
+    updateNavigationData();
+});
+
+// Watch for route changes and update navigation data
+watch(route, () => {
+    updateNavigationData();
 });
 </script>
