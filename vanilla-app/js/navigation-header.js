@@ -40,3 +40,25 @@ export function renderNavigationHeader(container) {
     container.innerHTML = '';
     container.appendChild(header);
 }
+
+/**
+ * Initialize navigation header with auto-refresh capability
+ */
+export function initNavigationHeader() {
+    const headerContainer = document.querySelector('#navigation-header');
+    if (headerContainer) {
+        renderNavigationHeader(headerContainer);
+
+        // Listen for popstate events (back/forward navigation)
+        window.addEventListener('popstate', () => {
+            setTimeout(() => renderNavigationHeader(headerContainer), 10);
+        });
+
+        // Listen for page visibility changes (when switching tabs and coming back)
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                renderNavigationHeader(headerContainer);
+            }
+        });
+    }
+}
