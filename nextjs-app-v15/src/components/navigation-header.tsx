@@ -32,7 +32,7 @@ const NavigationHeader = () => {
         // Import pie-link component
         import('@justeattakeaway/pie-webc/components/link.js');
         updateNavigationData();
-        
+
         // Monitor pathname changes using an interval
         let currentPathname = window.location.pathname;
         const intervalId = setInterval(() => {
@@ -41,14 +41,14 @@ const NavigationHeader = () => {
                 updateNavigationData();
             }
         }, 100); // Check every 100ms
-        
+
         // Also listen for browser navigation events
         const handleLocationChange = () => {
             setTimeout(updateNavigationData, 10);
         };
-        
+
         window.addEventListener('popstate', handleLocationChange);
-        
+
         return () => {
             clearInterval(intervalId);
             window.removeEventListener('popstate', handleLocationChange);
