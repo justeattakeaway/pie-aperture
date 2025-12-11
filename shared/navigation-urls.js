@@ -26,15 +26,18 @@ export function getCurrentPath(targetApp) {
         if (targetApp === 'nextjsV14' || targetApp === 'nextjsV15') {
             currentPath = 'integrations/controlled-form';
         }
-    } else if (currentPath === 'integrations/controlled-form' || currentPath === 'integrations/uncontrolled-form') {
-        // Map controlled-form and uncontrolled-form back to form for non-NextJS apps
+    } else if (currentPath === 'integrations/controlled-form') {
+        // Map controlled-form back to form for non-NextJS apps, keep as controlled-form for NextJS apps
         if (targetApp === 'vanilla' || targetApp === 'nuxt') {
             currentPath = 'integrations/form';
         }
-        // For NextJS apps, keep as controlled-form regardless of whether coming from controlled or uncontrolled
-        else if (targetApp === 'nextjsV14' || targetApp === 'nextjsV15') {
-            currentPath = 'integrations/controlled-form';
+        // For NextJS apps, keep as controlled-form (no change needed)
+    } else if (currentPath === 'integrations/uncontrolled-form') {
+        // Map uncontrolled-form back to form for non-NextJS apps, keep as uncontrolled-form for NextJS apps
+        if (targetApp === 'vanilla' || targetApp === 'nuxt') {
+            currentPath = 'integrations/form';
         }
+        // For NextJS apps, keep as uncontrolled-form (no change needed)
     }
 
     // For vanilla app, add .html extension if not present and not on homepage
