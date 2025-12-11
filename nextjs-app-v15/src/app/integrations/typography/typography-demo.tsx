@@ -4,7 +4,7 @@ import NavigationLayout from '@/app/layout/navigation';
 
 export default function TypographyDemo() {
   return (
-    <NavigationLayout title="Typography Demo">
+    <NavigationLayout title="Typography">
       <section>
         <h1 className="u-font-heading-xxl">Main Title (XXL)</h1>
         <h2 className="u-font-heading-xl">Section Heading (XL)</h2>

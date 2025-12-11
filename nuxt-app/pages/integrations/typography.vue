@@ -63,6 +63,6 @@
 import { definePageMeta } from '#imports';
 
 definePageMeta({
-    title: 'PIE Typography helpers'
+    title: 'Typography'
 });
 </script>
