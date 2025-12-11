@@ -35,11 +35,11 @@ export default function TypographyDemo() {
             <a href="#" className="u-font-body-s-link">This is a small link in the secondary body text.</a>
         </p>
 
-        <p className="u-font-body-strong-l"><strong>This is strong body text (L)</strong>, highlighting a key takeaway or important warning.
+        <p className="u-font-body-strong-l">This is strong body text (L), highlighting a key takeaway or important warning.
             <a href="#" className="u-font-body-strong-l-link">Strong link here.</a>
         </p>
 
-        <p className="u-font-body-strong-s"><strong>This is strong body text (S)</strong>, for emphasis in smaller contexts.
+        <p className="u-font-body-strong-s">This is strong body text (S), for emphasis in smaller contexts.
             <a href="#" className="u-font-body-strong-s-link">Strong small link here.</a>
         </p>
 
@@ -57,7 +57,7 @@ export default function TypographyDemo() {
             <a href="#" className="u-font-caption-link">Caption link example.</a>
         </p>
 
-        <p className="u-font-caption-strong"><strong>This is a strong caption</strong>, useful for crucial metadata or brief labels.
+        <p className="u-font-caption-strong">This is a strong caption, useful for crucial metadata or brief labels.
             <a href="#" className="u-font-caption-strong-link">Strong caption link.</a>
         </p>
       </section>
