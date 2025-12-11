@@ -26,10 +26,14 @@ export function getCurrentPath(targetApp) {
         if (targetApp === 'nextjsV14' || targetApp === 'nextjsV15') {
             currentPath = 'integrations/controlled-form';
         }
-    } else if (currentPath === 'integrations/controlled-form') {
-        // Map controlled-form back to form for non-NextJS apps
+    } else if (currentPath === 'integrations/controlled-form' || currentPath === 'integrations/uncontrolled-form') {
+        // Map controlled-form and uncontrolled-form back to form for non-NextJS apps
         if (targetApp === 'vanilla' || targetApp === 'nuxt') {
             currentPath = 'integrations/form';
+        }
+        // For NextJS apps, keep as controlled-form regardless of whether coming from controlled or uncontrolled
+        else if (targetApp === 'nextjsV14' || targetApp === 'nextjsV15') {
+            currentPath = 'integrations/controlled-form';
         }
     }
 

@@ -16,6 +16,7 @@ describe('Nuxt Aperture App', () => {
         { url: '/components/custom-tag', name: 'Custom Tag' },
         { url: '/components/divider', name: 'Divider' },
         { url: '/integrations/form', name: 'Form' },
+        { url: '/integrations/typography', name: 'Typography' },
         { url: '/components/form-label', name: 'Form Label' },
         { url: '/components/icon', name: 'Icon' },
         { url: '/components/icon-button', name: 'Icon Button' },
