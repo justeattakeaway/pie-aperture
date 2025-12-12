@@ -16,6 +16,7 @@ describe('Vanilla Aperture App', () => {
         { url: '/components/custom-tag.html', name: 'Custom Tag' },
         { url: '/components/divider.html', name: 'Divider' },
         { url: '/integrations/form.html', name: 'Form' },
+        { url: '/integrations/typography.html', name: 'Typography' },
         { url: '/components/form-label.html', name: 'Form Label' },
         { url: '/components/icon.html', name: 'Icon' },
         { url: '/components/icon-button.html', name: 'Icon Button' },

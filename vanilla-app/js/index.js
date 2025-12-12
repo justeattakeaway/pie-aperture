@@ -1,10 +1,18 @@
 import '@justeattakeaway/pie-webc/components/link.js';
 import './shared.js';
+import { renderNavigationHeader } from './navigation-header.js';
+
+// Render the cross-app navigation header
+const headerContainer = document.querySelector('#navigation-header');
+if (headerContainer) {
+    renderNavigationHeader(headerContainer);
+}
 
 document.querySelector('#navigation').innerHTML = `
     <h3>Demo Integrations</h3>
     <ul>
         <li><pie-link href="/integrations/form.html">Form Demo</pie-link></li>
+        <li><pie-link href="/integrations/typography.html">Typography Demo</pie-link></li>
     </ul>
     <h3>Component Pages</h3>
     <ul>
