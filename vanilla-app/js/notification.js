@@ -22,6 +22,25 @@ document.querySelector('#app').innerHTML = `
         })}'
       >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet tincidunt est, vitae vulputate turpis. Cras pretium venenatis elementum. Duis tristique neque non varius tempor. In hac habitasse platea dictumst. Aenean accumsan vehicula urna.
+    </pie-notification>
+    <pie-divider></pie-divider>
+    <pie-notification
+        id="notification-links"
+        variant="success"
+        heading="Link Actions"
+        leadingAction='${JSON.stringify({
+          text: 'Learn More',
+          href: 'https://example.com',
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        })}'
+        supportingAction='${JSON.stringify({
+          text: 'Download',
+          href: '/path/to/file.pdf',
+          download: 'release-notes.pdf',
+        })}'
+      >
+      A new version is available with exciting features. This notification demonstrates link-based actions instead of buttons.
     </pie-notification>`;
 
 const $notification = document.querySelector('#notification');
