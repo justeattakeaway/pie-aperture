@@ -18,8 +18,8 @@ export default function NavigationLayout({ children, title }: NavigationLayoutPr
 
     return (
       <>
-        <h1>NextJS 15 - PIE { title } </h1>
-        { !isHomePage && 
+        <h1 className="u-font-heading-xl">NextJS 15 - PIE { title } </h1>
+        { !isHomePage &&
         <>
         <PieLink onClick={() => router.push('/')} tag="button">Back to home</PieLink>
         <PieDivider/>
