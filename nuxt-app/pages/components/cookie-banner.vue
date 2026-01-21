@@ -1,6 +1,6 @@
 <template>
   <div>
-    <pie-cookie-banner hasPrimaryActionsOnly language="da" country="dk" cookieTechnologiesLink="https://justeattakeaway.com"
+    <pie-cookie-banner hasPrimaryActionsOnly language="da" country="dk" :openLinksInSameTab="true" cookieTechnologiesLink="https://justeattakeaway.com"
       cookieStatementLink="https://justeattakeaway.com">
     </pie-cookie-banner>
   </div>

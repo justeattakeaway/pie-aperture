@@ -9,3 +9,6 @@ document.querySelector('#app').innerHTML = `
         hasPrimaryActionsOnly
         cookieTechnologiesLink="https://justeattakeaway.com"
         cookieStatementLink="https://justeattakeaway.com"></pie-cookie-banner>`;
+
+const cookieBanner = document.querySelector('pie-cookie-banner');
+cookieBanner.openLinksInSameTab = true;

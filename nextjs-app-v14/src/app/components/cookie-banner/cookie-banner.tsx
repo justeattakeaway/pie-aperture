@@ -11,6 +11,7 @@ export default function CookieBanner() {
             language="da"
             country="dk"
             hasPrimaryActionsOnly
+            openLinksInSameTab={true}
             cookieTechnologiesLink="https://justeattakeaway.com"
             cookieStatementLink="https://justeattakeaway.com" />
         </NavigationLayout>
