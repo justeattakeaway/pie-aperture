@@ -10,7 +10,7 @@ export default function TableNoHeader() {
             title="DataTable - No Header"
             parentLink={{ href: '/components/data-table', label: 'Back to Data Table variants' }}
         >
-            <h2>PIE Data Table – Table with no header</h2>
+            <h2>Table with no header</h2>
             <PieDataTable columns={sampleColumns} data={sampleData}
                 data-test-id="PieDataTable"
             ></PieDataTable>

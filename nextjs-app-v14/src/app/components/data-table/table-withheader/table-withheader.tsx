@@ -15,7 +15,7 @@ export default function TableWithHeader() {
             <PieDataTable columns={sampleColumns} data={sampleData}
                 data-test-id="PieDataTable"
             >
-                <PieDataTableHeader slot="table-header" heading="PIE Data Table – Table with header"
+                <PieDataTableHeader slot="table-header" heading="Table with header"
                     subHeading="Optional subtitle text"
                 >
                     <PieButton slot="action-button" variant="secondary" size="xsmall">Action</PieButton>

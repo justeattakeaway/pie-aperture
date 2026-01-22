@@ -1,6 +1,6 @@
 <template>
     <NuxtLayout name="default" :parent-link="{ href: '/components/data-table', label: 'Back to Data Table variants' }">
-        <h2>PIE Data Table – Table with no header</h2>
+        <h2>Table with no header</h2>
         <pie-data-table
             :columns="sampleColumns"
             :data="sampleData"
