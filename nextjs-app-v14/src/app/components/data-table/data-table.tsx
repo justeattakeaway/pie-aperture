@@ -15,6 +15,7 @@ export default function DataTable() {
                 <li><PieLink onClick={() => router.push('/components/data-table/table-withheader')} tag="button">Data Table - With Header</PieLink></li>
                 <li><PieLink onClick={() => router.push('/components/data-table/table-additionalrows')} tag="button">Data Table - Additional Rows</PieLink></li>
                 <li><PieLink onClick={() => router.push('/components/data-table/table-additionalrows-withheader')} tag="button">Data Table - Additional Rows with Header</PieLink></li>
+                <li><PieLink onClick={() => router.push('/components/data-table/table-usessubcomponents')} tag="button">Data Table - Uses Subcomponents</PieLink></li>
             </ul>
         </NavigationLayout>
     );
