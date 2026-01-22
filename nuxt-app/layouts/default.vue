@@ -1,6 +1,5 @@
 <template>
     <div>
-        <NavigationHeader />
         <h1 class="u-font-heading-xl">Nuxt - {{  route.meta.title }}</h1>
         <pie-link v-if="!homePage" href="/">Home Page</pie-link>
         <pie-divider></pie-divider>
@@ -15,7 +14,6 @@ import '@justeattakeaway/pie-webc/components/link.js';
 import '@justeattakeaway/pie-webc/components/divider.js';
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import NavigationHeader from '~/components/NavigationHeader.vue';
 
 const route = useRoute();
 
