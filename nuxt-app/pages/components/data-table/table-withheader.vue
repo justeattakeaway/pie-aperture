@@ -1,14 +1,5 @@
 <template>
-    <div>
-        <h2>PIE Data Table – Table with no header</h2>
-        <pie-data-table
-            :columns="sampleColumns"
-            :data="sampleData"
-            data-test-id="pie-data-table"
-        ></pie-data-table>
-
-        <pie-divider></pie-divider>
-
+    <NuxtLayout name="default" :parent-link="{ href: '/components/data-table', label: 'Back to Data Table variants' }">
         <pie-data-table
             :columns="sampleColumns"
             :data="sampleData"
@@ -19,7 +10,7 @@
                 <pie-button slot="action-button" variant="secondary" size="xsmall">Action</pie-button>
             </pie-data-table-header>
         </pie-data-table>
-    </div>
+    </NuxtLayout>
 </template>
 
 <script setup lang="ts">
@@ -27,10 +18,10 @@ import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/data-table.js';
 import '@justeattakeaway/pie-webc/components/data-table-header.js';
 import '@justeattakeaway/pie-webc/components/button.js';
-import '@justeattakeaway/pie-webc/components/divider.js';
-import { sampleColumns, sampleData } from '../../data/sampleTableData';
+import { sampleColumns, sampleData } from '../../../data/sampleTableData';
 
 definePageMeta({
-    title: 'DataTable',
+    title: 'DataTable - With Header',
+    layout: false,
 });
 </script>
