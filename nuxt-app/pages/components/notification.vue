@@ -17,6 +17,17 @@
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet tincidunt est, vitae vulputate turpis. Cras pretium venenatis elementum. Duis tristique neque non varius tempor. In hac habitasse platea dictumst. Aenean accumsan vehicula urna.
     </pie-notification>
+
+    <pie-divider/>
+
+    <pie-notification
+        variant="success"
+        heading="Link Actions"
+        :leadingAction="leadingActionLink"
+        :supportingAction="supportingActionLink"
+    >
+      A new version is available with exciting features. This notification demonstrates link-based actions instead of buttons.
+    </pie-notification>
   </div>
 </template>
 
@@ -53,6 +64,19 @@ const leadingAction = {
 const supportingAction = {
   text: 'Cancel',
   ariaLabel: 'Descriptive cancellation text',
+};
+
+const leadingActionLink = {
+  text: 'Learn More',
+  href: 'https://example.com',
+  target: '_blank',
+  rel: 'noopener noreferrer',
+};
+
+const supportingActionLink = {
+  text: 'Download',
+  href: '/path/to/file.pdf',
+  download: 'release-notes.pdf',
 };
 
 </script>
