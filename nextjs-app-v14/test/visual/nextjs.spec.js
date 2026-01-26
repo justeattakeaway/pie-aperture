@@ -1,8 +1,6 @@
-const { waitForPageTitleToBe } = require('../../../webdriver-helpers/wait-helper.js');
-const { percyScreenshot } = require('@percy/selenium-webdriver');
+import { test, expect, takeSnapshot } from "@chromatic-com/playwright";
 
-describe('NextJS Aperture App', () => {
-    const pages = [
+const pages = [
         { url: '/', name: 'PIE Aperture' },
         { url: '/components/assistive-text', name: 'Assistive Text' },
         { url: '/components/avatar', name: 'Avatar' },
@@ -36,14 +34,31 @@ describe('NextJS Aperture App', () => {
         { url: '/components/thumbnail', name: 'Thumbnail' }
     ];
 
-    pages.forEach((page) => {
-        it(`should navigate to the ${page.name} page.`, async () => {
-            await browser.url(`${page.url}?PERCY=true`);
-            await waitForPageTitleToBe(page.name);
+    pages.forEach((pageConfig) => {
+        test(`should navigate to the ${pageConfig.name} page.`, async ({ page }, testInfo) => {
+            await page.goto(pageConfig.url);
+
+
+            // Wait for page to load and verify title
+            await expect(page).toHaveTitle(new RegExp(pageConfig.name, 'i'));
+
+            // Wait for page to be fully loaded
+            await page.waitForLoadState('networkidle');
+
             // Some components might require extra time to mount and load its dependencies.
             // Delaying the screenshot helps to avoid false negatives in diffs.
-            if (page.pauseBeforeScreenshot) await browser.pause(5000);
-            await percyScreenshot(page.name, { fullPage: true });
+            if (pageConfig.pauseBeforeScreenshot) {
+                await page.waitForTimeout(5000);
+            }
+
+            // Chromatic will automatically capture snapshots during Playwright tests
+            // Using toHaveScreenshot() creates an explicit snapshot that Chromatic will capture
+            // await expect(page).toHaveScreenshot(`${pageConfig.name.toLowerCase().replace(/\s+/g, '-')}.png`, {
+            //     fullPage: true
+            // });
+
+            // Use takeSnapshot to capture a snapshot at this point in the test
+            await takeSnapshot(page, pageConfig.name, testInfo);
         });
     });
-});
+
