@@ -14,6 +14,8 @@ export default function HomePage() {
     <ul>
       <li><PieLink onClick={() => router.push('/integrations/controlled-form')} tag="button">Controlled Form Demo</PieLink></li>
       <li><PieLink onClick={() => router.push('/integrations/uncontrolled-form')} tag="button">Uncontrolled Form Demo</PieLink></li>
+      <li><PieLink onClick={() => router.push('/integrations/checkout-flow')} tag="button">Checkout Flow Demo</PieLink></li>
+      <li><PieLink onClick={() => router.push('/integrations/restaurant-booking')} tag="button">Restaurant Booking Demo</PieLink></li>
     </ul>
     <h2>Component Pages</h2>
     <ul>
