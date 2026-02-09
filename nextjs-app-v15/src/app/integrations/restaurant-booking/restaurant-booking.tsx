@@ -7,50 +7,46 @@ import { PieTextInput } from '@justeattakeaway/pie-webc/react/text-input.js';
 import { PieTextarea } from '@justeattakeaway/pie-webc/react/textarea.js';
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieCard } from '@justeattakeaway/pie-webc/react/card.js';
-import { PieSelect, SelectProps } from '@justeattakeaway/pie-webc/react/select.js';
 import { PieRadio } from '@justeattakeaway/pie-webc/react/radio.js';
 import { PieRadioGroup } from '@justeattakeaway/pie-webc/react/radio-group.js';
 import { PieCheckbox } from '@justeattakeaway/pie-webc/react/checkbox.js';
-import { PieCheckboxGroup } from '@justeattakeaway/pie-webc/react/checkbox-group.js';
+import { PieSelect, SelectProps } from '@justeattakeaway/pie-webc/react/select.js';
 import { PieNotification } from '@justeattakeaway/pie-webc/react/notification.js';
 import { PieModal } from '@justeattakeaway/pie-webc/react/modal.js';
 import { PieDivider } from '@justeattakeaway/pie-webc/react/divider.js';
-import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
-import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
 import { IconUser } from '@justeattakeaway/pie-icons-webc/dist/react/IconUser.js';
+import { IconEmail } from '@justeattakeaway/pie-icons-webc/dist/react/IconEmail.js';
+import { IconPhone } from '@justeattakeaway/pie-icons-webc/dist/react/IconPhone.js';
 import '@/styles/form.scss';
 
 // Time slot options
-const timeSlotOptions: SelectProps['options'] = [
+const timeOptions: SelectProps['options'] = [
     { tag: 'option', text: 'Select a time', value: '' },
-    { tag: 'optgroup', label: 'Lunch', options: [
-        { tag: 'option', text: '12:00 PM', value: '12:00' },
-        { tag: 'option', text: '12:30 PM', value: '12:30' },
-        { tag: 'option', text: '1:00 PM', value: '13:00' },
-        { tag: 'option', text: '1:30 PM', value: '13:30' },
-        { tag: 'option', text: '2:00 PM', value: '14:00' },
-    ]},
-    { tag: 'optgroup', label: 'Dinner', options: [
-        { tag: 'option', text: '6:00 PM', value: '18:00' },
-        { tag: 'option', text: '6:30 PM', value: '18:30' },
-        { tag: 'option', text: '7:00 PM', value: '19:00' },
-        { tag: 'option', text: '7:30 PM', value: '19:30' },
-        { tag: 'option', text: '8:00 PM', value: '20:00' },
-        { tag: 'option', text: '8:30 PM', value: '20:30' },
-        { tag: 'option', text: '9:00 PM', value: '21:00' },
-    ]},
+    { tag: 'option', text: '12:00', value: '12:00' },
+    { tag: 'option', text: '12:30', value: '12:30' },
+    { tag: 'option', text: '13:00', value: '13:00' },
+    { tag: 'option', text: '13:30', value: '13:30' },
+    { tag: 'option', text: '14:00', value: '14:00' },
+    { tag: 'option', text: '18:00', value: '18:00' },
+    { tag: 'option', text: '18:30', value: '18:30' },
+    { tag: 'option', text: '19:00', value: '19:00' },
+    { tag: 'option', text: '19:30', value: '19:30' },
+    { tag: 'option', text: '20:00', value: '20:00' },
+    { tag: 'option', text: '20:30', value: '20:30' },
+    { tag: 'option', text: '21:00', value: '21:00' },
 ];
 
-// Party size options
-const partySizeOptions: SelectProps['options'] = [
-    { tag: 'option', text: 'Select party size', value: '' },
-    { tag: 'option', text: '1 person', value: '1' },
-    { tag: 'option', text: '2 people', value: '2' },
-    { tag: 'option', text: '3 people', value: '3' },
-    { tag: 'option', text: '4 people', value: '4' },
-    { tag: 'option', text: '5 people', value: '5' },
-    { tag: 'option', text: '6 people', value: '6' },
-    { tag: 'option', text: '7+ people (Large party)', value: '7+' },
+// Guest count options
+const guestOptions: SelectProps['options'] = [
+    { tag: 'option', text: 'Select number of guests', value: '' },
+    { tag: 'option', text: '1 guest', value: '1' },
+    { tag: 'option', text: '2 guests', value: '2' },
+    { tag: 'option', text: '3 guests', value: '3' },
+    { tag: 'option', text: '4 guests', value: '4' },
+    { tag: 'option', text: '5 guests', value: '5' },
+    { tag: 'option', text: '6 guests', value: '6' },
+    { tag: 'option', text: '7 guests', value: '7' },
+    { tag: 'option', text: '8 guests', value: '8' },
 ];
 
 export default function RestaurantBooking() {
@@ -60,31 +56,17 @@ export default function RestaurantBooking() {
     const [phone, setPhone] = useState('');
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
-    const [partySize, setPartySize] = useState('');
+    const [guests, setGuests] = useState('');
     const [seatingPreference, setSeatingPreference] = useState('no-preference');
     const [specialRequests, setSpecialRequests] = useState('');
-    
-    // Dietary requirements (checkboxes)
-    const [vegetarian, setVegetarian] = useState(false);
-    const [vegan, setVegan] = useState(false);
-    const [glutenFree, setGlutenFree] = useState(false);
-    const [nutAllergy, setNutAllergy] = useState(false);
-    const [halal, setHalal] = useState(false);
-    
-    // Other options
-    const [isSpecialOccasion, setIsSpecialOccasion] = useState(false);
-    const [occasionType, setOccasionType] = useState('');
-    const [smsReminder, setSmsReminder] = useState(true);
-    
+    const [marketingConsent, setMarketingConsent] = useState(false);
+
     // Validation state
     const [errors, setErrors] = useState<Record<string, string>>({});
-    
+
     // Modal state
     const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
-    const [bookingRef, setBookingRef] = useState('');
-
-    // Generate min date (today)
-    const today = new Date().toISOString().split('T')[0];
+    const [bookingReference, setBookingReference] = useState('');
 
     // Input handlers
     const handleFullNameInput = useCallback((event: InputEvent) => {
@@ -114,7 +96,7 @@ export default function RestaurantBooking() {
     const handleDateInput = useCallback((event: InputEvent) => {
         const value = (event.target as HTMLInputElement).value;
         setDate(value);
-        if (errors.date && value) {
+        if (errors.date && value.trim()) {
             setErrors(prev => ({ ...prev, date: '' }));
         }
     }, [errors.date]);
@@ -127,13 +109,13 @@ export default function RestaurantBooking() {
         }
     }, [errors.time]);
 
-    const handlePartySizeChange = useCallback((event: CustomEvent) => {
+    const handleGuestsChange = useCallback((event: CustomEvent) => {
         const value = (event.target as HTMLSelectElement).value;
-        setPartySize(value);
-        if (errors.partySize && value) {
-            setErrors(prev => ({ ...prev, partySize: '' }));
+        setGuests(value);
+        if (errors.guests && value) {
+            setErrors(prev => ({ ...prev, guests: '' }));
         }
-    }, [errors.partySize]);
+    }, [errors.guests]);
 
     const handleSeatingPreferenceChange = useCallback((event: CustomEvent) => {
         setSeatingPreference((event.target as HTMLInputElement).value);
@@ -143,22 +125,14 @@ export default function RestaurantBooking() {
         setSpecialRequests((event.target as HTMLTextAreaElement).value);
     }, []);
 
-    const handleSpecialOccasionChange = useCallback(() => {
-        setIsSpecialOccasion(prev => !prev);
-    }, []);
-
-    const handleOccasionTypeChange = useCallback((event: CustomEvent) => {
-        setOccasionType((event.target as HTMLInputElement).value);
-    }, []);
-
-    const handleSmsReminderChange = useCallback(() => {
-        setSmsReminder(prev => !prev);
+    const handleMarketingConsentChange = useCallback(() => {
+        setMarketingConsent(prev => !prev);
     }, []);
 
     // Form validation
     const validateForm = (): boolean => {
         const newErrors: Record<string, string> = {};
-        
+
         if (!fullName.trim()) {
             newErrors.fullName = 'Please enter your full name';
         }
@@ -169,17 +143,26 @@ export default function RestaurantBooking() {
         }
         if (!phone.trim()) {
             newErrors.phone = 'Please enter your phone number';
+        } else if (!/^[\d\s+()-]+$/.test(phone)) {
+            newErrors.phone = 'Please enter a valid phone number';
         }
         if (!date) {
             newErrors.date = 'Please select a date';
+        } else {
+            const selectedDate = new Date(date);
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            if (selectedDate < today) {
+                newErrors.date = 'Please select a date in the future';
+            }
         }
         if (!time) {
-            newErrors.time = 'Please select a time slot';
+            newErrors.time = 'Please select a time';
         }
-        if (!partySize) {
-            newErrors.partySize = 'Please select party size';
+        if (!guests) {
+            newErrors.guests = 'Please select the number of guests';
         }
-        
+
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -187,11 +170,10 @@ export default function RestaurantBooking() {
     // Form submission
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        
+
         if (validateForm()) {
-            // Generate booking reference
-            const ref = `BK-${Date.now().toString(36).toUpperCase().slice(-6)}`;
-            setBookingRef(ref);
+            const newReference = `RES-${Date.now().toString(36).toUpperCase()}`;
+            setBookingReference(newReference);
             setIsConfirmationOpen(true);
         }
     };
@@ -200,371 +182,293 @@ export default function RestaurantBooking() {
         setIsConfirmationOpen(false);
     };
 
-    // Format date for display
-    const formatDate = (dateStr: string) => {
-        if (!dateStr) return '';
-        return new Date(dateStr).toLocaleDateString('en-GB', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-    };
-
-    // Format time for display
-    const formatTime = (timeStr: string) => {
-        if (!timeStr) return '';
-        const [hours, minutes] = timeStr.split(':');
-        const hour = parseInt(hours, 10);
-        const period = hour >= 12 ? 'PM' : 'AM';
-        const displayHour = hour > 12 ? hour - 12 : hour;
-        return `${displayHour}:${minutes} ${period}`;
-    };
+    const seatingLabel = seatingPreference === 'indoor' ? 'Indoor'
+        : seatingPreference === 'outdoor' ? 'Outdoor'
+        : 'No preference';
 
     return (
-        <NavigationLayout title="Book a Table">
-            <div style={{ 
-                maxWidth: '800px',
+        <NavigationLayout title="Restaurant Booking">
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr',
+                gap: 'var(--dt-spacing-e)',
+                maxWidth: '1200px',
                 margin: '0 auto'
             }}>
-                {/* Restaurant Info Card */}
-                <PieCard padding="d" style={{ marginBottom: 'var(--dt-spacing-e)' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--dt-spacing-b)' }}>
-                        <h2 style={{ margin: 0 }}>La Bella Italia 🍝</h2>
-                        <p style={{ margin: 0, color: 'var(--dt-color-content-subdued)' }}>
-                            Authentic Italian cuisine in the heart of the city. Fresh pasta, wood-fired pizzas, and an extensive wine selection.
-                        </p>
-                        <div style={{ display: 'flex', gap: 'var(--dt-spacing-d)', flexWrap: 'wrap' }}>
-                            <span>📍 123 High Street, London EC1A 1BB</span>
-                            <span>⭐ 4.8 (324 reviews)</span>
-                        </div>
-                    </div>
-                </PieCard>
-
+                {/* Info Notification */}
                 <PieNotification
                     variant="info"
-                    heading="Booking Policy"
+                    heading="Book your table"
                     isCompact
-                    style={{ marginBottom: 'var(--dt-spacing-e)' }}
                 >
-                    We hold reservations for 15 minutes. For parties of 7+, please call us directly.
+                    Reserve a table at our restaurant. All bookings are confirmed instantly.
                 </PieNotification>
 
-                <form className="form" onSubmit={handleSubmit}>
-                    <h3 style={{ marginBottom: 'var(--dt-spacing-d)' }}>Reservation Details</h3>
-                    
-                    <div style={{ 
-                        display: 'grid', 
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
-                        gap: 'var(--dt-spacing-d)',
-                        marginBottom: 'var(--dt-spacing-d)'
-                    }}>
-                        <div>
-                            <PieFormLabel for="date">
-                                Date
-                            </PieFormLabel>
-                            <PieTextInput
-                                className="form-field"
-                                id="date"
-                                name="date"
-                                value={date}
-                                onInput={handleDateInput}
-                                type="text"
-                                required
-                                placeholder="YYYY-MM-DD"
-                                status={errors.date ? 'error' : 'default'}
-                                assistiveText={errors.date || `Select your preferred date (${today} or later)`}
-                            />
-                        </div>
-                        
-                        <div>
-                            <PieFormLabel for="time">
-                                Time
-                            </PieFormLabel>
-                            <PieSelect
-                                className="form-field"
-                                id="time"
-                                name="time"
-                                options={timeSlotOptions}
-                                value={time}
-                                onChange={handleTimeChange}
-                                status={errors.time ? 'error' : 'default'}
-                                assistiveText={errors.time}
-                            />
-                        </div>
-                        
-                        <div>
-                            <PieFormLabel for="partySize">
-                                Party Size
-                            </PieFormLabel>
-                            <PieSelect
-                                className="form-field"
-                                id="partySize"
-                                name="partySize"
-                                options={partySizeOptions}
-                                value={partySize}
-                                onChange={handlePartySizeChange}
-                                status={errors.partySize ? 'error' : 'default'}
-                                assistiveText={errors.partySize}
-                            />
-                        </div>
-                    </div>
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                    gap: 'var(--dt-spacing-e)',
+                    alignItems: 'start'
+                }}>
+                    {/* Booking Form */}
+                    <form className="form" onSubmit={handleSubmit}>
+                        <h2 style={{ marginBottom: 'var(--dt-spacing-d)' }}>Your Details</h2>
 
-                    <PieDivider style={{ margin: 'var(--dt-spacing-d) 0' }} />
-
-                    <h3 style={{ marginBottom: 'var(--dt-spacing-d)' }}>Contact Information</h3>
-                    
-                    <PieFormLabel for="fullName">
-                        Full Name
-                    </PieFormLabel>
-                    <PieTextInput
-                        className="form-field"
-                        id="fullName"
-                        name="fullName"
-                        value={fullName}
-                        onInput={handleFullNameInput}
-                        type="text"
-                        required
-                        status={errors.fullName ? 'error' : 'default'}
-                        assistiveText={errors.fullName}
-                        autocomplete="name"
-                    >
-                        <IconUser slot="leadingIcon" />
-                    </PieTextInput>
-
-                    <PieFormLabel for="email">
-                        Email Address
-                    </PieFormLabel>
-                    <PieTextInput
-                        className="form-field"
-                        id="email"
-                        name="email"
-                        value={email}
-                        onInput={handleEmailInput}
-                        type="email"
-                        required
-                        status={errors.email ? 'error' : 'default'}
-                        assistiveText={errors.email || 'Confirmation will be sent to this email'}
-                        autocomplete="email"
-                    >
-                        <IconEmail slot="leadingIcon" />
-                    </PieTextInput>
-
-                    <PieFormLabel for="phone">
-                        Phone Number
-                    </PieFormLabel>
-                    <PieTextInput
-                        className="form-field"
-                        id="phone"
-                        name="phone"
-                        value={phone}
-                        onInput={handlePhoneInput}
-                        type="tel"
-                        required
-                        status={errors.phone ? 'error' : 'default'}
-                        assistiveText={errors.phone}
-                        autocomplete="tel"
-                    >
-                        <IconPhone slot="leadingIcon" />
-                    </PieTextInput>
-
-                    <PieDivider style={{ margin: 'var(--dt-spacing-d) 0' }} />
-
-                    <h3 style={{ marginBottom: 'var(--dt-spacing-d)' }}>Preferences</h3>
-
-                    <div className="form-controls">
-                        <PieRadioGroup 
-                            name="seatingPreference" 
-                            value={seatingPreference}
-                            onChange={handleSeatingPreferenceChange}
-                        >
-                            <PieFormLabel slot="label">Seating Preference</PieFormLabel>
-                            <PieRadio value="no-preference" defaultChecked>No preference</PieRadio>
-                            <PieRadio value="indoor">Indoor</PieRadio>
-                            <PieRadio value="outdoor">Outdoor / Terrace</PieRadio>
-                            <PieRadio value="window">Window seat</PieRadio>
-                            <PieRadio value="booth">Booth</PieRadio>
-                        </PieRadioGroup>
-
-                        <PieDivider style={{ margin: 'var(--dt-spacing-d) 0' }} />
-
-                        <PieCheckboxGroup>
-                            <PieFormLabel slot="label">Dietary Requirements (select all that apply)</PieFormLabel>
-                            <PieCheckbox
-                                name="vegetarian"
-                                checked={vegetarian}
-                                onChange={() => setVegetarian(prev => !prev)}
-                            >
-                                Vegetarian
-                            </PieCheckbox>
-                            <PieCheckbox
-                                name="vegan"
-                                checked={vegan}
-                                onChange={() => setVegan(prev => !prev)}
-                            >
-                                Vegan
-                            </PieCheckbox>
-                            <PieCheckbox
-                                name="glutenFree"
-                                checked={glutenFree}
-                                onChange={() => setGlutenFree(prev => !prev)}
-                            >
-                                Gluten-free
-                            </PieCheckbox>
-                            <PieCheckbox
-                                name="nutAllergy"
-                                checked={nutAllergy}
-                                onChange={() => setNutAllergy(prev => !prev)}
-                            >
-                                Nut allergy
-                            </PieCheckbox>
-                            <PieCheckbox
-                                name="halal"
-                                checked={halal}
-                                onChange={() => setHalal(prev => !prev)}
-                            >
-                                Halal
-                            </PieCheckbox>
-                        </PieCheckboxGroup>
-
-                        <PieDivider style={{ margin: 'var(--dt-spacing-d) 0' }} />
-
-                        <PieCheckbox
-                            name="isSpecialOccasion"
-                            checked={isSpecialOccasion}
-                            onChange={handleSpecialOccasionChange}
-                        >
-                            This is a special occasion
-                        </PieCheckbox>
-
-                        {isSpecialOccasion && (
-                            <PieRadioGroup 
-                                name="occasionType" 
-                                value={occasionType}
-                                onChange={handleOccasionTypeChange}
-                                style={{ marginTop: 'var(--dt-spacing-c)', marginLeft: 'var(--dt-spacing-e)' }}
-                            >
-                                <PieFormLabel slot="label">Type of occasion</PieFormLabel>
-                                <PieRadio value="birthday">Birthday</PieRadio>
-                                <PieRadio value="anniversary">Anniversary</PieRadio>
-                                <PieRadio value="engagement">Engagement</PieRadio>
-                                <PieRadio value="business">Business dinner</PieRadio>
-                                <PieRadio value="other">Other celebration</PieRadio>
-                            </PieRadioGroup>
-                        )}
-
-                        <PieDivider style={{ margin: 'var(--dt-spacing-d) 0' }} />
-
-                        <PieFormLabel for="specialRequests" optional="(Optional)">
-                            Special Requests or Notes
+                        <PieFormLabel for="fullName">
+                            Full Name
                         </PieFormLabel>
-                        <PieTextarea
+                        <PieTextInput
                             className="form-field"
-                            id="specialRequests"
-                            name="specialRequests"
-                            value={specialRequests}
-                            onInput={handleSpecialRequestsInput}
-                            placeholder="e.g., High chair needed, wheelchair access required, specific wine preferences..."
+                            id="fullName"
+                            name="fullName"
+                            value={fullName}
+                            onInput={handleFullNameInput}
+                            type="text"
+                            required
+                            status={errors.fullName ? 'error' : 'default'}
+                            assistiveText={errors.fullName}
+                            autocomplete="name"
+                        >
+                            <IconUser slot="leadingIcon" />
+                        </PieTextInput>
+
+                        <PieFormLabel for="email">
+                            Email Address
+                        </PieFormLabel>
+                        <PieTextInput
+                            className="form-field"
+                            id="email"
+                            name="email"
+                            value={email}
+                            onInput={handleEmailInput}
+                            type="email"
+                            required
+                            status={errors.email ? 'error' : 'default'}
+                            assistiveText={errors.email}
+                            autocomplete="email"
+                        >
+                            <IconEmail slot="leadingIcon" />
+                        </PieTextInput>
+
+                        <PieFormLabel for="phone">
+                            Phone Number
+                        </PieFormLabel>
+                        <PieTextInput
+                            className="form-field"
+                            id="phone"
+                            name="phone"
+                            value={phone}
+                            onInput={handlePhoneInput}
+                            type="tel"
+                            required
+                            status={errors.phone ? 'error' : 'default'}
+                            assistiveText={errors.phone}
+                            autocomplete="tel"
+                        >
+                            <IconPhone slot="leadingIcon" />
+                        </PieTextInput>
+
+                        <PieDivider style={{ margin: 'var(--dt-spacing-d) 0' }} />
+
+                        <h2 style={{ marginBottom: 'var(--dt-spacing-d)' }}>Booking Details</h2>
+
+                        <PieFormLabel for="date">
+                            Date
+                        </PieFormLabel>
+                        <PieTextInput
+                            className="form-field"
+                            id="date"
+                            name="date"
+                            value={date}
+                            onInput={handleDateInput}
+                            type="text"
+                            placeholder="YYYY-MM-DD"
+                            required
+                            status={errors.date ? 'error' : 'default'}
+                            assistiveText={errors.date}
                         />
 
-                        <PieDivider style={{ margin: 'var(--dt-spacing-d) 0' }} />
+                        <PieFormLabel for="time">
+                            Time
+                        </PieFormLabel>
+                        <PieSelect
+                            className="form-field"
+                            id="time"
+                            name="time"
+                            options={timeOptions}
+                            value={time}
+                            onChange={handleTimeChange}
+                            status={errors.time ? 'error' : 'default'}
+                            assistiveText={errors.time}
+                        />
 
-                        <PieCheckbox
-                            name="smsReminder"
-                            checked={smsReminder}
-                            onChange={handleSmsReminderChange}
-                        >
-                            Send me an SMS reminder on the day of the booking
-                        </PieCheckbox>
-                    </div>
+                        <PieFormLabel for="guests">
+                            Number of Guests
+                        </PieFormLabel>
+                        <PieSelect
+                            className="form-field"
+                            id="guests"
+                            name="guests"
+                            options={guestOptions}
+                            value={guests}
+                            onChange={handleGuestsChange}
+                            status={errors.guests ? 'error' : 'default'}
+                            assistiveText={errors.guests}
+                        />
 
-                    <div className="form-btns" style={{ marginTop: 'var(--dt-spacing-e)' }}>
-                        <PieButton 
-                            variant="secondary" 
-                            type="reset"
-                        >
-                            Clear Form
-                        </PieButton>
-                        <PieButton 
-                            variant="primary" 
-                            size="large" 
-                            type="submit"
-                        >
-                            Confirm Reservation
-                        </PieButton>
+                        <div className="form-controls">
+                            <PieRadioGroup
+                                name="seatingPreference"
+                                value={seatingPreference}
+                                onChange={handleSeatingPreferenceChange}
+                            >
+                                <PieFormLabel slot="label">Seating Preference</PieFormLabel>
+                                <PieRadio value="indoor">Indoor</PieRadio>
+                                <PieRadio value="outdoor">Outdoor</PieRadio>
+                                <PieRadio value="no-preference" defaultChecked>No preference</PieRadio>
+                            </PieRadioGroup>
+
+                            <PieDivider style={{ margin: 'var(--dt-spacing-d) 0' }} />
+
+                            <PieFormLabel for="specialRequests" optional="(Optional)">
+                                Special Requests
+                            </PieFormLabel>
+                            <PieTextarea
+                                className="form-field"
+                                id="specialRequests"
+                                name="specialRequests"
+                                value={specialRequests}
+                                onInput={handleSpecialRequestsInput}
+                                placeholder="e.g., Allergies, high chair needed, birthday celebration..."
+                            />
+
+                            <PieDivider style={{ margin: 'var(--dt-spacing-d) 0' }} />
+
+                            <PieCheckbox
+                                name="marketingConsent"
+                                checked={marketingConsent}
+                                onChange={handleMarketingConsentChange}
+                            >
+                                Send me special offers and event updates via email
+                            </PieCheckbox>
+                        </div>
+
+                        <div className="form-btns" style={{ marginTop: 'var(--dt-spacing-e)' }}>
+                            <PieButton
+                                variant="primary"
+                                size="large"
+                                type="submit"
+                                isFullWidth
+                            >
+                                Confirm Booking
+                            </PieButton>
+                        </div>
+                    </form>
+
+                    {/* Booking Summary Card */}
+                    <div>
+                        <h2 style={{ marginBottom: 'var(--dt-spacing-d)' }}>Booking Summary</h2>
+                        <PieCard padding="d">
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--dt-spacing-c)' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <span style={{ color: 'var(--dt-color-content-subdued)' }}>Name</span>
+                                    <span style={{ fontWeight: 500 }}>{fullName || '—'}</span>
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <span style={{ color: 'var(--dt-color-content-subdued)' }}>Email</span>
+                                    <span style={{ fontWeight: 500 }}>{email || '—'}</span>
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <span style={{ color: 'var(--dt-color-content-subdued)' }}>Phone</span>
+                                    <span style={{ fontWeight: 500 }}>{phone || '—'}</span>
+                                </div>
+
+                                <PieDivider />
+
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <span style={{ color: 'var(--dt-color-content-subdued)' }}>Date</span>
+                                    <span style={{ fontWeight: 500 }}>{date || '—'}</span>
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <span style={{ color: 'var(--dt-color-content-subdued)' }}>Time</span>
+                                    <span style={{ fontWeight: 500 }}>{time || '—'}</span>
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <span style={{ color: 'var(--dt-color-content-subdued)' }}>Guests</span>
+                                    <span style={{ fontWeight: 500 }}>{guests ? `${guests} guest${guests === '1' ? '' : 's'}` : '—'}</span>
+                                </div>
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <span style={{ color: 'var(--dt-color-content-subdued)' }}>Seating</span>
+                                    <span style={{ fontWeight: 500 }}>{seatingLabel}</span>
+                                </div>
+
+                                {specialRequests && (
+                                    <>
+                                        <PieDivider />
+                                        <div>
+                                            <span style={{ color: 'var(--dt-color-content-subdued)', display: 'block', marginBottom: 'var(--dt-spacing-a)' }}>Special Requests</span>
+                                            <span style={{ fontWeight: 500 }}>{specialRequests}</span>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
+                        </PieCard>
                     </div>
-                </form>
+                </div>
             </div>
 
             {/* Booking Confirmation Modal */}
             <PieModal
-                heading="Reservation Confirmed! 🎉"
+                heading="Booking Confirmed!"
                 headingLevel="h2"
                 isOpen={isConfirmationOpen}
                 isDismissible
                 size="medium"
                 leadingAction={{
-                    text: 'Add to Calendar',
-                    variant: 'primary'
-                }}
-                supportingAction={{
                     text: 'Done',
-                    variant: 'ghost'
+                    variant: 'primary'
                 }}
                 onPieModalClose={handleModalClose}
             >
-                <div style={{ padding: 'var(--dt-spacing-d)' }}>
-                    <PieNotification 
-                        variant="success" 
-                        isCompact 
-                        style={{ marginBottom: 'var(--dt-spacing-d)' }}
-                    >
-                        A confirmation email has been sent to {email}
-                    </PieNotification>
-                    
-                    <div style={{ 
-                        background: 'var(--dt-color-container-subtle)', 
-                        padding: 'var(--dt-spacing-d)',
-                        borderRadius: 'var(--dt-radius-rounded-c)'
+                <div style={{ textAlign: 'center', padding: 'var(--dt-spacing-d)' }}>
+                    <p style={{ fontSize: '1.125rem', marginBottom: 'var(--dt-spacing-d)' }}>
+                        Thank you, {fullName || 'valued guest'}!
+                    </p>
+                    <p style={{ marginBottom: 'var(--dt-spacing-c)' }}>
+                        Your booking reference is:
+                    </p>
+                    <p style={{
+                        fontSize: '1.5rem',
+                        fontWeight: 700,
+                        color: 'var(--dt-color-content-brand)',
+                        marginBottom: 'var(--dt-spacing-d)'
                     }}>
-                        <h3 style={{ marginTop: 0 }}>Booking Details</h3>
-                        
-                        <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--dt-spacing-b)' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                <span style={{ color: 'var(--dt-color-content-subdued)' }}>Reference:</span>
-                                <strong>{bookingRef}</strong>
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                <span style={{ color: 'var(--dt-color-content-subdued)' }}>Name:</span>
-                                <span>{fullName}</span>
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                <span style={{ color: 'var(--dt-color-content-subdued)' }}>Date:</span>
-                                <span>{formatDate(date)}</span>
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                <span style={{ color: 'var(--dt-color-content-subdued)' }}>Time:</span>
-                                <span>{formatTime(time)}</span>
-                            </div>
-                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                <span style={{ color: 'var(--dt-color-content-subdued)' }}>Party Size:</span>
-                                <span>{partySize} {parseInt(partySize) === 1 ? 'person' : 'people'}</span>
-                            </div>
-                            {seatingPreference !== 'no-preference' && (
-                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                    <span style={{ color: 'var(--dt-color-content-subdued)' }}>Seating:</span>
-                                    <span style={{ textTransform: 'capitalize' }}>{seatingPreference}</span>
-                                </div>
-                            )}
+                        {bookingReference}
+                    </p>
+
+                    <PieDivider style={{ margin: 'var(--dt-spacing-d) 0' }} />
+
+                    <div style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: 'var(--dt-spacing-b)' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <span style={{ color: 'var(--dt-color-content-subdued)' }}>Date</span>
+                            <span style={{ fontWeight: 500 }}>{date}</span>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <span style={{ color: 'var(--dt-color-content-subdued)' }}>Time</span>
+                            <span style={{ fontWeight: 500 }}>{time}</span>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <span style={{ color: 'var(--dt-color-content-subdued)' }}>Guests</span>
+                            <span style={{ fontWeight: 500 }}>{guests} guest{guests === '1' ? '' : 's'}</span>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <span style={{ color: 'var(--dt-color-content-subdued)' }}>Seating</span>
+                            <span style={{ fontWeight: 500 }}>{seatingLabel}</span>
                         </div>
                     </div>
-                    
-                    <p style={{ 
-                        marginTop: 'var(--dt-spacing-d)', 
-                        color: 'var(--dt-color-content-subdued)',
-                        fontSize: '0.875rem'
-                    }}>
-                        Please arrive 5-10 minutes before your reservation time. If you need to cancel or modify your booking, please contact us at least 2 hours in advance.
+
+                    <p style={{ color: 'var(--dt-color-content-subdued)', marginTop: 'var(--dt-spacing-d)' }}>
+                        A confirmation email has been sent to {email}.
                     </p>
                 </div>
             </PieModal>
