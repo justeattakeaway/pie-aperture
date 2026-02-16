@@ -2,9 +2,9 @@
 
 import NavigationLayout from '@/app/layout/navigation';
 
-export default function TypographyDemo() {
+export default function TypographyClasses() {
   return (
-    <NavigationLayout title="Typography">
+    <NavigationLayout title="Typography (CSS Classes)">
       <section>
         <h1 className="u-font-heading-xxl">Main Title (XXL)</h1>
         <h2 className="u-font-heading-xl">Section Heading (XL)</h2>

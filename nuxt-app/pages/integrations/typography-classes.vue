@@ -63,6 +63,6 @@
 import { definePageMeta } from '#imports';
 
 definePageMeta({
-    title: 'Typography'
+    title: 'Typography (CSS Classes)'
 });
 </script>
