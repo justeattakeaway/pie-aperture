@@ -63,7 +63,7 @@
 import { definePageMeta } from '#imports';
 
 definePageMeta({
-    title: 'Typography (Mixins)'
+    title: 'Typography Demo (Mixins)'
 });
 </script>
 
