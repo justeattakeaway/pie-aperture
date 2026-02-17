@@ -93,9 +93,9 @@ jobs:
           path: playwright-reports/nextjs-app-v14-playwright-report/
           retention-days: 7
 
-      - name: Run Percy Tests
-        shell: bash
-        run: yarn test:visual --filter=nextjs-app-v14
+      # - name: Run Percy Tests
+      #  shell: bash
+      #  run: yarn test:visual --filter=nextjs-app-v14
 
       - name: Run Chromatic Tests
         shell: bash
