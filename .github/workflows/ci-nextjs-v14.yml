@@ -96,6 +96,10 @@ jobs:
       - name: Run Percy Tests
         shell: bash
         run: yarn test:visual --filter=nextjs-app-v14
+
+      - name: Run Chromatic Tests
+        shell: bash
+        run: yarn test:visual:chromatic --filter=nextjs-app-v14
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
