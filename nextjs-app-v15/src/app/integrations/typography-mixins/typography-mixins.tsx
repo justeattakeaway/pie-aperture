@@ -1,0 +1,67 @@
+'use client';
+
+import NavigationLayout from '@/app/layout/navigation';
+import '@/styles/typography-mixins.scss';
+
+export default function TypographyDemo() {
+  return (
+    <NavigationLayout title="Typography">
+      <section>
+        <h1 className="test-font-heading-xxl">Main Title (XXL)</h1>
+        <h2 className="test-font-heading-xl">Section Heading (XL)</h2>
+        <h3 className="test-font-heading-l">Sub-Section Heading (L)</h3>
+        <h4 className="test-font-heading-m">Content Block Title (M)</h4>
+        <h5 className="test-font-heading-s">Small Header (S)</h5>
+        <h6 className="test-font-heading-xs">Tiny Header (XS)</h6>
+
+        <h1 className="test-font-heading-xxl-italic">Main Title Italic (XXL)</h1>
+        <h2 className="test-font-heading-xl-italic">Section Heading Italic (XL)</h2>
+        <h3 className="test-font-heading-l-italic">Sub-Section Heading Italic (L)</h3>
+        <h4 className="test-font-heading-m-italic">Content Block Title Italic (M)</h4>
+        <h5 className="test-font-heading-s-italic">Small Header Italic (S)</h5>
+        <h6 className="test-font-heading-xs-italic">Tiny Header Italic (XS)</h6>
+
+        <hr />
+
+        <p className="test-font-subheading-l">This is a prominent subheading, perhaps introducing a new section of body text (L).</p>
+        <p className="test-font-subheading-s">This is a smaller subheading, useful for brief context or labels (S).</p>
+
+        <hr />
+
+        <p className="test-font-body-l">This is a main paragraph of body text (L). It&apos;s intended for long-form reading, like an article or detailed description.
+            <a href="#" className="test-font-body-l-link">This is a link within the body text.</a>
+        </p>
+
+        <p className="test-font-body-s">This is a smaller paragraph of body text (S). Used for secondary content or compact information.
+            <a href="#" className="test-font-body-s-link">This is a small link in the secondary body text.</a>
+        </p>
+
+        <p className="test-font-body-strong-l">This is strong body text (L), highlighting a key takeaway or important warning.
+            <a href="#" className="test-font-body-strong-l-link">Strong link here.</a>
+        </p>
+
+        <p className="test-font-body-strong-s">This is strong body text (S), for emphasis in smaller contexts.
+            <a href="#" className="test-font-body-strong-s-link">Strong small link here.</a>
+        </p>
+
+        <hr />
+
+        <p>
+            <button className="test-font-interactive-l">Large Interactive Button Text</button>
+            <button className="test-font-interactive-s">Small Interactive Text</button>
+            <button className="test-font-interactive-xs">Extra-Small Interactive Text</button>
+        </p>
+
+        <hr />
+
+        <p className="test-font-caption">This is a standard caption, used for image descriptions, metadata, or footnotes.
+            <a href="#" className="test-font-caption-link">Caption link example.</a>
+        </p>
+
+        <p className="test-font-caption-strong">This is a strong caption, useful for crucial metadata or brief labels.
+            <a href="#" className="test-font-caption-strong-link">Strong caption link.</a>
+        </p>
+      </section>
+    </NavigationLayout>
+  );
+}

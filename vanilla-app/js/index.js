@@ -5,6 +5,8 @@ document.querySelector('#navigation').innerHTML = `
     <h3>Demo Integrations</h3>
     <ul>
         <li><pie-link href="/integrations/form.html">Form Demo</pie-link></li>
+        <li><pie-link href="/integrations/typography-classes.html">Typography Demo (CSS Classes)</pie-link></li>
+        <li><pie-link href="/integrations/typography-mixins.html">Typography Demo (Mixins)</pie-link></li>
     </ul>
     <h3>Component Pages</h3>
     <ul>

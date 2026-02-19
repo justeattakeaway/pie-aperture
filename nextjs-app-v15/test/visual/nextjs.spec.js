@@ -16,6 +16,8 @@ describe('NextJS Aperture App', () => {
         { url: '/components/divider', name: 'Divider' },
         { url: '/integrations/uncontrolled-form', name: 'Uncontrolled Form' },
         { url: '/integrations/controlled-form', name: 'Controlled Form' },
+        { url: '/integrations/typography-classes', name: 'Typography Demo (CSS Classes)' },
+        { url: '/integrations/typography-mixins', name: 'Typography Demo (Mixins)' },
         { url: '/components/form-label', name: 'Form Label' },
         { url: '/components/icon', name: 'Icon' },
         { url: '/components/icon-button', name: 'Icon Button' },

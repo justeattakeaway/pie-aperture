@@ -1450,6 +1450,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justeat/pie-design-tokens@npm:7.10.2":
+  version: 7.10.2
+  resolution: "@justeat/pie-design-tokens@npm:7.10.2"
+  dependencies:
+    jsonc-parser: 3.2.0
+    lodash.merge: 4.6.2
+    mkdirp: 1.0.4
+  checksum: 046c1b4051d3b697bb16ae957a31066b4e1cfeee65df1b4ecfece7197ead9a4ea95aba3df35e8e51fc89c5445e48cf9e5558fc65fe679e48b757af814e82b96f
+  languageName: node
+  linkType: hard
+
 "@justeattakeaway/pie-assistive-text@npm:0.11.9":
   version: 0.11.9
   resolution: "@justeattakeaway/pie-assistive-text@npm:0.11.9"
@@ -1547,10 +1558,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-css@npm:0.24.0":
-  version: 0.24.0
-  resolution: "@justeattakeaway/pie-css@npm:0.24.0"
-  checksum: ed0c0e8c2cef6be1ec308e530af7108b6febfd38c6ffd61497cf5285cc004adb0aebbdad8bb2f37d102e49bf7b1ce4837cb4c3a7512e4ea30e4492ef75b965ac
+"@justeattakeaway/pie-css@npm:0.26.2":
+  version: 0.26.2
+  resolution: "@justeattakeaway/pie-css@npm:0.26.2"
+  dependencies:
+    "@justeat/pie-design-tokens": 7.10.2
+  checksum: 635a28191075c7dd07304cb62fd9ab7631f61ccedc9e07e71971ce06168cb555430aaaf311703def045406f14231d74383effdc0fb6dfd29d1e751419b998fb2
   languageName: node
   linkType: hard
 
@@ -10662,6 +10675,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsonc-parser@npm:3.2.0":
+  version: 3.2.0
+  resolution: "jsonc-parser@npm:3.2.0"
+  checksum: 946dd9a5f326b745aa326d48a7257e3f4a4b62c5e98ec8e49fa2bdd8d96cef7e6febf1399f5c7016114fd1f68a1c62c6138826d5d90bc650448e3cf0951c53c7
+  languageName: node
+  linkType: hard
+
 "jsonfile@npm:^6.0.1":
   version: 6.1.0
   resolution: "jsonfile@npm:6.1.0"
@@ -11018,7 +11038,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.merge@npm:^4.6.2":
+"lodash.merge@npm:4.6.2, lodash.merge@npm:^4.6.2":
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
   checksum: ad580b4bdbb7ca1f7abf7e1bce63a9a0b98e370cf40194b03380a46b4ed799c9573029599caebc1b14e3f24b111aef72b96674a56cfa105e0f5ac70546cdc005
@@ -11537,6 +11557,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mkdirp@npm:1.0.4, mkdirp@npm:^1.0.3":
+  version: 1.0.4
+  resolution: "mkdirp@npm:1.0.4"
+  bin:
+    mkdirp: bin/cmd.js
+  checksum: a96865108c6c3b1b8e1d5e9f11843de1e077e57737602de1b82030815f311be11f96f09cce59bd5b903d0b29834733e5313f9301e3ed6d6f6fba2eae0df4298f
+  languageName: node
+  linkType: hard
+
 "mkdirp@npm:^0.5.1":
   version: 0.5.6
   resolution: "mkdirp@npm:0.5.6"
@@ -11545,15 +11574,6 @@ __metadata:
   bin:
     mkdirp: bin/cmd.js
   checksum: 0c91b721bb12c3f9af4b77ebf73604baf350e64d80df91754dc509491ae93bf238581e59c7188360cec7cb62fc4100959245a42cfe01834efedc5e9d068376c2
-  languageName: node
-  linkType: hard
-
-"mkdirp@npm:^1.0.3":
-  version: 1.0.4
-  resolution: "mkdirp@npm:1.0.4"
-  bin:
-    mkdirp: bin/cmd.js
-  checksum: a96865108c6c3b1b8e1d5e9f11843de1e077e57737602de1b82030815f311be11f96f09cce59bd5b903d0b29834733e5313f9301e3ed6d6f6fba2eae0df4298f
   languageName: node
   linkType: hard
 
@@ -11851,7 +11871,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-app-v14@workspace:nextjs-app-v14"
   dependencies:
-    "@justeattakeaway/pie-css": 0.24.0
+    "@justeattakeaway/pie-css": 0.26.2
     "@justeattakeaway/pie-icons-webc": 1.17.0
     "@justeattakeaway/pie-webc": 0.7.41
     "@lit-labs/nextjs": 0.2.3
@@ -11876,7 +11896,7 @@ __metadata:
   resolution: "nextjs-app-v15@workspace:nextjs-app-v15"
   dependencies:
     "@eslint/eslintrc": 3
-    "@justeattakeaway/pie-css": 0.24.0
+    "@justeattakeaway/pie-css": 0.26.2
     "@justeattakeaway/pie-icons-webc": 1.17.0
     "@justeattakeaway/pie-webc": 0.7.41
     "@lit-labs/nextjs": 0.2.4
@@ -12214,7 +12234,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nuxt-app@workspace:nuxt-app"
   dependencies:
-    "@justeattakeaway/pie-css": 0.24.0
+    "@justeattakeaway/pie-css": 0.26.2
     "@justeattakeaway/pie-icons-webc": 1.17.0
     "@justeattakeaway/pie-webc": 0.7.41
     deepmerge: 4.3.1
@@ -16493,11 +16513,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vanilla-app@workspace:vanilla-app"
   dependencies:
-    "@justeattakeaway/pie-css": 0.24.0
+    "@justeattakeaway/pie-css": 0.26.2
     "@justeattakeaway/pie-icons-webc": 1.17.0
     "@justeattakeaway/pie-webc": 0.7.41
     deepmerge: 4.3.1
     npm-check-updates: 18.3.1
+    sass: 1.94.1
     vite: 4.5.5
     vite-plugin-html-inject: 1.1.2
   languageName: unknown

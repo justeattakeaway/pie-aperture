@@ -1,0 +1,104 @@
+@use '@justeattakeaway/pie-css/scss/mixins' as *;
+
+// Typography utility classes using font-theme mixin
+
+// Heading classes
+.test-font-heading-xs {
+    @include font-theme('font-heading-xs');
+}
+.test-font-heading-s {
+    @include font-theme('font-heading-s');
+}
+.test-font-heading-m {
+    @include font-theme('font-heading-m');
+}
+.test-font-heading-l {
+    @include font-theme('font-heading-l');
+}
+.test-font-heading-xl {
+    @include font-theme('font-heading-xl');
+}
+.test-font-heading-xxl {
+    @include font-theme('font-heading-xxl');
+}
+
+// Heading italic classes
+.test-font-heading-xs-italic {
+    @include font-theme('font-heading-xs-italic');
+}
+.test-font-heading-s-italic {
+    @include font-theme('font-heading-s-italic');
+}
+.test-font-heading-m-italic {
+    @include font-theme('font-heading-m-italic');
+}
+.test-font-heading-l-italic {
+    @include font-theme('font-heading-l-italic');
+}
+.test-font-heading-xl-italic {
+    @include font-theme('font-heading-xl-italic');
+}
+.test-font-heading-xxl-italic {
+    @include font-theme('font-heading-xxl-italic');
+}
+
+// Subheading classes
+.test-font-subheading-l {
+    @include font-theme('font-subheading-l');
+}
+.test-font-subheading-s {
+    @include font-theme('font-subheading-s');
+}
+
+// Body text classes
+.test-font-body-l {
+    @include font-theme('font-body-l');
+}
+.test-font-body-l-link {
+    @include font-theme('font-body-l-link');
+}
+.test-font-body-s {
+    @include font-theme('font-body-s');
+}
+.test-font-body-s-link {
+    @include font-theme('font-body-s-link');
+}
+
+// Strong body text classes
+.test-font-body-strong-l {
+    @include font-theme('font-body-strong-l');
+}
+.test-font-body-strong-l-link {
+    @include font-theme('font-body-strong-l-link');
+}
+.test-font-body-strong-s {
+    @include font-theme('font-body-strong-s');
+}
+.test-font-body-strong-s-link {
+    @include font-theme('font-body-strong-s-link');
+}
+
+// Interactive classes
+.test-font-interactive-l {
+    @include font-theme('font-interactive-l');
+}
+.test-font-interactive-s {
+    @include font-theme('font-interactive-s');
+}
+.test-font-interactive-xs {
+    @include font-theme('font-interactive-xs');
+}
+
+// Caption classes
+.test-font-caption {
+    @include font-theme('font-caption');
+}
+.test-font-caption-link {
+    @include font-theme('font-caption-link');
+}
+.test-font-caption-strong {
+    @include font-theme('font-caption-strong');
+}
+.test-font-caption-strong-link {
+    @include font-theme('font-caption-strong-link');
+}
