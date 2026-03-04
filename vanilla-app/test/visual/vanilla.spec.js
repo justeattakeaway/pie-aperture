@@ -15,6 +15,7 @@ describe('Vanilla Aperture App', () => {
         { url: '/components/cookie-banner.html', name: 'Cookie Banner' },
         { url: '/components/custom-tag.html', name: 'Custom Tag' },
         { url: '/components/divider.html', name: 'Divider' },
+        { url: '/integrations/css-only-radio.html', name: 'CSS Only Radio' },
         { url: '/integrations/form.html', name: 'Form' },
         { url: '/integrations/typography-classes.html', name: 'Typography Demo (CSS Classes)' },
         { url: '/integrations/typography-mixins.html', name: 'Typography Demo (Mixins)' },

@@ -1,0 +1,249 @@
+<template>
+    <div>
+        <fieldset class="delivery-options">
+            <label class="delivery-card">
+                <div class="card-main">
+                    <input 
+                        type="radio" 
+                        name="delivery_plan" 
+                        value="free" 
+                        class="c-radio"
+                        v-model="selectedPlan">
+                    <div class="card-content">
+                        <span class="card-title">Lorem ipsum dolor</span>
+                        <span class="card-subtitle">Donec id justo sed nulla amet</span>
+                    </div>
+                </div>
+            </label>
+
+            <label class="delivery-card">
+                <div class="card-main">
+                    <input 
+                        type="radio" 
+                        name="delivery_plan" 
+                        value="extend" 
+                        class="c-radio"
+                        v-model="selectedPlan">
+                    <div class="card-content">
+                        <span class="card-title">Lorem ipsum dolor et amet</span>
+                        <span class="card-subtitle">Aenean eu leo quam ornare</span>
+                        <span class="card-subtitle">Donec id justo sed nulla amet</span>
+                    </div>
+                </div>
+
+                <div class="card-expanded">
+                    <p>Nulla vitae <strong>ipsum fermentum</strong> elit cras justo vehicula! Cras mattis consectetur purus sit amet <strong>purus</strong></p>
+                </div>
+            </label>
+
+            <label class="delivery-card">
+                <div class="card-main">
+                    <input 
+                        type="radio" 
+                        name="delivery_plan" 
+                        value="extend-2" 
+                        class="c-radio"
+                        v-model="selectedPlan">
+                    <div class="card-content">
+                        <span class="card-title">Lorem ipsum dolor et</span>
+                        <span class="card-subtitle">Aenean eu leo quam ornare</span>
+                        <span class="card-subtitle">Donec id justo sed nulla amet</span>
+                    </div>
+                </div>
+
+                <div class="card-expanded">
+                    <p>Nulla vitae <strong>ipsum fermentum</strong> elit vehicula! Cras mattis purus sit <strong>purus</strong></p>
+                </div>
+            </label>
+
+            <label class="delivery-card">
+                <div class="card-main">
+                    <input 
+                        type="radio" 
+                        name="delivery_plan" 
+                        value="premium" 
+                        class="c-radio"
+                        disabled>
+                    <div class="card-content">
+                        <span class="card-title">Lorem ipsum premium (Disabled)</span>
+                        <span class="card-subtitle">Sed posuere consectetur est</span>
+                        <span class="card-subtitle">Maecenas sed diam eget risus</span>
+                    </div>
+                </div>
+
+                <div class="card-expanded">
+                    <p>Vestibulum id <strong>ligula porta</strong> felis euismod semper!</p>
+                </div>
+            </label>
+        </fieldset>
+
+        <pie-divider></pie-divider>
+
+        <h2 class="u-font-heading-l">Error State</h2>
+        <fieldset class="delivery-options has-error">
+            <label class="delivery-card">
+                <div class="card-main">
+                    <input 
+                        type="radio" 
+                        name="delivery_plan_error" 
+                        value="standard" 
+                        class="c-radio c-radio--error"
+                        v-model="selectedPlanError">
+                    <div class="card-content">
+                        <span class="card-title">Nullam quis risus eget</span>
+                        <span class="card-subtitle">Cras justo odio dapibus</span>
+                    </div>
+                </div>
+            </label>
+
+            <label class="delivery-card">
+                <div class="card-main">
+                    <input 
+                        type="radio" 
+                        name="delivery_plan_error" 
+                        value="express" 
+                        class="c-radio c-radio--error"
+                        v-model="selectedPlanError">
+                    <div class="card-content">
+                        <span class="card-title">Vestibulum id ligula porta</span>
+                        <span class="card-subtitle">Praesent commodo cursus magna</span>
+                        <span class="card-subtitle">Vivamus sagittis lacus vel</span>
+                    </div>
+                </div>
+
+                <div class="card-expanded">
+                    <p>Cras mattis consectetur <strong>purus sit</strong> amet fermentum. Donec sed odio dui.</p>
+                </div>
+            </label>
+        </fieldset>
+    </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { definePageMeta } from "#imports";
+import '@justeattakeaway/pie-css/dist/components/radio.css';
+import '@justeattakeaway/pie-webc/components/divider.js';
+
+definePageMeta({
+    title: 'CSS Only Radio',
+});
+
+const selectedPlan = ref('extend');
+const selectedPlanError = ref('express');
+</script>
+
+<style scoped>
+.delivery-options {
+    --delivery-bg-default: var(--dt-color-container-default);
+    --delivery-bg-expanded: var(--dt-color-container-subtle);
+
+    --delivery-border-default: var(--dt-color-border-default);
+    --delivery-border-active: var(--dt-color-border-selected-brand);
+    --delivery-border-top-inactive: var(--dt-color-support-neutral);
+
+    --delivery-text-title: var(--dt-color-content-default);
+    --delivery-text-subtitle: var(--dt-color-content-subdued);
+    --delivery-text-expanded: var(--dt-color-content-default);
+
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-d);
+    font-family: var(--dt-font-family-primary);
+    max-width: 500px;
+}
+
+.delivery-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--delivery-border-default);
+    border-top: var(--dt-spacing-b) solid var(--delivery-border-top-inactive);
+    border-radius: var(--dt-radius-rounded-c);
+    background-color: var(--delivery-bg-default);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all var(--dt-motion-timing-200) var(--dt-motion-easing-out);
+}
+
+.delivery-card:has(input[type="radio"]:checked) {
+    border-color: var(--delivery-border-active);
+    border-top-color: var(--delivery-border-active);
+}
+
+.delivery-card:has(input[type="radio"]:disabled) {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.card-main {
+    display: flex;
+    align-items: center;
+    padding: var(--dt-spacing-d) var(--dt-spacing-e);
+    gap: var(--dt-spacing-d);
+}
+
+.c-radio {
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-a);
+    flex-grow: 1;
+}
+
+.card-title {
+    font-weight: var(--dt-font-body-strong-l-weight);
+    font-size: var(--dt-font-body-strong-l-size);
+    line-height: calc(var(--dt-font-body-strong-l-line-height) * 1px);
+    color: var(--delivery-text-title);
+}
+
+.card-subtitle {
+    font-size: var(--dt-font-body-s-size);
+    line-height: calc(var(--dt-font-body-s-line-height) * 1px);
+    color: var(--delivery-text-subtitle);
+}
+
+.card-expanded {
+    display: none;
+    border-top: 1px solid var(--delivery-border-active);
+    background-color: var(--delivery-bg-expanded);
+    padding: var(--dt-spacing-d) var(--dt-spacing-e);
+    align-items: center;
+    gap: var(--dt-spacing-c);
+}
+
+.delivery-card:has(input[type="radio"]:checked) .card-expanded {
+    display: flex;
+}
+
+.card-expanded p {
+    margin: 0;
+    font-size: var(--dt-font-body-s-size);
+    line-height: calc(var(--dt-font-body-s-line-height) * 1px);
+    color: var(--delivery-text-expanded);
+    flex-grow: 1;
+}
+
+/* Error state */
+.delivery-options.has-error .delivery-card {
+    border-color: var(--dt-color-border-error);
+    border-top-color: var(--dt-color-border-error);
+}
+
+.delivery-options.has-error .delivery-card:has(input[type="radio"]:checked) {
+    border-color: var(--dt-color-border-error);
+    border-top-color: var(--dt-color-border-error);
+}
+
+.form-controls {
+    margin-top: var(--dt-spacing-e);
+}
+</style>

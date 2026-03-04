@@ -15,6 +15,7 @@ describe('Nuxt Aperture App', () => {
         { url: '/components/cookie-banner', name: 'Cookie Banner' },
         { url: '/components/custom-tag', name: 'Custom Tag' },
         { url: '/components/divider', name: 'Divider' },
+        { url: '/integrations/css-only-radio', name: 'CSS Only Radio' },
         { url: '/integrations/form', name: 'Form' },
         { url: '/integrations/typography-classes', name: 'Typography Demo (CSS Classes)' },
         { url: '/integrations/typography-mixins', name: 'Typography Demo (Mixins)' },
