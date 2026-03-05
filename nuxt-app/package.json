@@ -20,9 +20,9 @@
     "sass": "1.94.1"
   },
   "dependencies": {
-    "@justeattakeaway/pie-css": "0.0.0-snapshot-release-20260304082119",
-    "@justeattakeaway/pie-icons-webc": "0.0.0-snapshot-release-20260304082119",
-    "@justeattakeaway/pie-webc": "0.0.0-snapshot-release-20260304082119",
+    "@justeattakeaway/pie-css": "0.28.0",
+    "@justeattakeaway/pie-icons-webc": "1.20.3",
+    "@justeattakeaway/pie-webc": "0.8.5",
     "just-kebab-case": "4.2.0",
     "nuxt-ssr-lit": "1.6.27"
   },
