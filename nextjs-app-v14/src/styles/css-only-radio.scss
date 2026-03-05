@@ -1,0 +1,112 @@
+.delivery-options {
+    --delivery-bg-default: var(--dt-color-container-default);
+    --delivery-bg-expanded: var(--dt-color-container-subtle);
+
+    --delivery-border-default: var(--dt-color-border-default);
+    --delivery-border-active: var(--dt-color-border-selected-brand);
+    --delivery-border-top-inactive: var(--dt-color-support-neutral);
+
+    --delivery-text-title: var(--dt-color-content-default);
+    --delivery-text-subtitle: var(--dt-color-content-subdued);
+    --delivery-text-expanded: var(--dt-color-content-default);
+
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-d);
+    font-family: var(--dt-font-family-primary);
+    max-width: 500px;
+}
+
+.delivery-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--delivery-border-default);
+    border-top: var(--dt-spacing-b) solid var(--delivery-border-top-inactive);
+    border-radius: var(--dt-radius-rounded-c);
+    background-color: var(--delivery-bg-default);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all var(--dt-motion-timing-200) var(--dt-motion-easing-out);
+}
+
+.delivery-card:has(input[type="radio"]:checked) {
+    border-color: var(--delivery-border-active);
+    border-top-color: var(--delivery-border-active);
+}
+
+.delivery-card:has(input[type="radio"]:disabled) {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.card-main {
+    display: flex;
+    align-items: center;
+    padding: var(--dt-spacing-d) var(--dt-spacing-e);
+    gap: var(--dt-spacing-d);
+}
+
+.c-radio {
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-a);
+    flex-grow: 1;
+}
+
+.card-title {
+    font-weight: var(--dt-font-body-strong-l-weight);
+    font-size: var(--dt-font-body-strong-l-size);
+    line-height: calc(var(--dt-font-body-strong-l-line-height) * 1px);
+    color: var(--delivery-text-title);
+}
+
+.card-subtitle {
+    font-size: var(--dt-font-body-s-size);
+    line-height: calc(var(--dt-font-body-s-line-height) * 1px);
+    color: var(--delivery-text-subtitle);
+}
+
+.card-expanded {
+    display: none;
+    border-top: 1px solid var(--delivery-border-active);
+    background-color: var(--delivery-bg-expanded);
+    padding: var(--dt-spacing-d) var(--dt-spacing-e);
+    align-items: center;
+    gap: var(--dt-spacing-c);
+}
+
+.delivery-card:has(input[type="radio"]:checked) .card-expanded {
+    display: flex;
+}
+
+.card-expanded p {
+    margin: 0;
+    font-size: var(--dt-font-body-s-size);
+    line-height: calc(var(--dt-font-body-s-line-height) * 1px);
+    color: var(--delivery-text-expanded);
+    flex-grow: 1;
+}
+
+/* Error state */
+.delivery-options.has-error .delivery-card {
+    border-color: var(--dt-color-border-error);
+    border-top-color: var(--dt-color-border-error);
+}
+
+.delivery-options.has-error .delivery-card:has(input[type="radio"]:checked) {
+    border-color: var(--dt-color-border-error);
+    border-top-color: var(--dt-color-border-error);
+}
+
+.form-controls {
+    margin-top: var(--dt-spacing-e);
+}
