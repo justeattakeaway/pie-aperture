@@ -32,6 +32,10 @@ export default function TypographyDemo() {
             <a href="#" className="test-font-body-l-link">This is a link within the body text.</a>
         </p>
 
+        <p className="test-font-body-l test-font-spacing-body-l">This is a main paragraph of body text (L) with typography-spacing mixin applied.
+          <a href="#" className="test-font-body-l-link">This is a link within the body text.</a>
+        </p>
+
         <p className="test-font-body-s">This is a smaller paragraph of body text (S). Used for secondary content or compact information.
             <a href="#" className="test-font-body-s-link">This is a small link in the secondary body text.</a>
         </p>
@@ -56,6 +60,10 @@ export default function TypographyDemo() {
 
         <p className="test-font-caption">This is a standard caption, used for image descriptions, metadata, or footnotes.
             <a href="#" className="test-font-caption-link">Caption link example.</a>
+        </p>
+
+        <p className="test-font-caption test-font-spacing-caption">This is a standard caption with typography-spacing mixin applied.
+          <a href="#" className="test-font-caption-link">Caption link example.</a>
         </p>
 
         <p className="test-font-caption-strong">This is a strong caption, useful for crucial metadata or brief labels.

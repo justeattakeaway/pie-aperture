@@ -31,6 +31,10 @@ export default function TypographyClasses() {
             <a href="#" className="u-font-body-l-link">This is a link within the body text.</a>
         </p>
 
+        <p className="u-font-body-l u-typographySpacing">This is a main paragraph of body text (L) with opt-in paragraph spacing.
+          <a href="#" className="u-font-body-l-link u-typographySpacing">This is a link within the body text with opt-in spacing.</a>
+        </p>
+
         <p className="u-font-body-s">This is a smaller paragraph of body text (S). Used for secondary content or compact information.
             <a href="#" className="u-font-body-s-link">This is a small link in the secondary body text.</a>
         </p>
@@ -56,6 +60,10 @@ export default function TypographyClasses() {
         <p className="u-font-caption">This is a standard caption, used for image descriptions, metadata, or footnotes.
             <a href="#" className="u-font-caption-link">Caption link example.</a>
         </p>
+
+    <p className="u-font-caption u-typographySpacing">This is a standard caption with opt-in paragraph spacing.
+      <a href="#" className="u-font-caption-link u-typographySpacing">Caption link example with opt-in spacing.</a>
+    </p>
 
         <p className="u-font-caption-strong">This is a strong caption, useful for crucial metadata or brief labels.
             <a href="#" className="u-font-caption-strong-link">Strong caption link.</a>

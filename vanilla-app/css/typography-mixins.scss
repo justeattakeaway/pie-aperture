@@ -102,3 +102,12 @@
 .test-font-caption-strong-link {
     @include font-theme('font-caption-strong-link');
 }
+
+/* Typography spacing classes */
+.test-font-spacing-body-l {
+    @include typography-spacing('font-body-l');
+}
+
+.test-font-spacing-caption {
+    @include typography-spacing('font-caption');
+}
