@@ -32,6 +32,7 @@
     }
   },
   "devDependencies": {
+    "@chromatic-com/playwright": "0.12.8",
     "@percy/cli": "1.31.6",
     "@percy/selenium-webdriver": "2.2.2",
     "@playwright/test": "1.50.1",
