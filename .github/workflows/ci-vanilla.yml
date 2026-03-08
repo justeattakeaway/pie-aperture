@@ -60,6 +60,8 @@ jobs:
       # Checkout the Repo
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       # Setup Node
       - name: Setup Node
@@ -88,9 +90,23 @@ jobs:
       - name: Run Percy Tests
         shell: bash
         run: yarn test:visual --filter=vanilla-app
+
+      - name: Run Chromatic Tests
+        if: (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.ref == 'refs/heads/main'
+        shell: bash
+        run: yarn test:visual:chromatic --filter=vanilla-app
+
+      - name: Upload Chromatic Results
+        if: (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.ref == 'refs/heads/main'
+        shell: bash
+        run: npx chromatic --playwright -t=${CHROMATIC_PROJECT_TOKEN}
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+      CHROMATIC_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
+      CHROMATIC_SHA: ${{ github.event.pull_request.head.sha || github.ref }}
+      CHROMATIC_SLUG: ${{ github.repository }}
+      CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN_PIE_APERTURE }}
       PERCY_TOKEN_PIE_APERTURE_VANILLA: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_VANILLA }}
       PR_NUMBER: ${{ github.event.number }}
       VANILLA_AMPLIFY_ID: d2vb6sjgivffb3
