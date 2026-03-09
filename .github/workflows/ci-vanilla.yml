@@ -87,9 +87,9 @@ jobs:
           name: vanilla-playwright-report
           path: playwright-reports/vanilla-app-playwright-report/
 
-      - name: Run Percy Tests
-        shell: bash
-        run: yarn test:visual --filter=vanilla-app
+      # - name: Run Percy Tests
+      #   shell: bash
+      #   run: yarn test:visual --filter=vanilla-app
 
       - name: Run Chromatic Tests
         if: (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.ref == 'refs/heads/main'

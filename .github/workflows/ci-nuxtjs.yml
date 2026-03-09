@@ -96,9 +96,9 @@ jobs:
           path: playwright-reports/nuxt-app-playwright-report/
           retention-days: 7
 
-      - name: Run Percy Tests
-        shell: bash
-        run: yarn test:visual --filter=nuxt-app
+      # - name: Run Percy Tests
+      #   shell: bash
+      #   run: yarn test:visual --filter=nuxt-app
 
       - name: Run Chromatic Tests
         if: (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.ref == 'refs/heads/main'
