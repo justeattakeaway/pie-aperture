@@ -106,7 +106,7 @@ jobs:
       CHROMATIC_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
       CHROMATIC_SHA: ${{ github.event.pull_request.head.sha || github.ref }}
       CHROMATIC_SLUG: ${{ github.repository }}
-      CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN_PIE_APERTURE }}
+      CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
       PERCY_TOKEN_PIE_APERTURE_VANILLA: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_VANILLA }}
       PR_NUMBER: ${{ github.event.number }}
       VANILLA_AMPLIFY_ID: d2vb6sjgivffb3
