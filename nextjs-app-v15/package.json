@@ -21,8 +21,7 @@
     "@lit/react": "1.0.8",
     "next": "15.5.7",
     "react": "19.2.1",
-    "react-dom": "19.2.1",
-    "sass": "1.94.1"
+    "react-dom": "19.2.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3",
@@ -33,6 +32,7 @@
     "eslint": "9",
     "eslint-config-next": "15.5.3",
     "npm-check-updates": "18.1.0",
+    "sass": "1.98.0",
     "typescript": "5.9.3"
   },
   "installConfig": {
