@@ -20,10 +20,8 @@ export default function RootLayout({
     <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="icon" href="/favicon.ico"/>
-        <link rel="preload" href="https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Regular-optimised.woff2"
-              as="font" type="font/woff2"/>
-        <link rel="preload" href="https://d30v2pzvrfyzpo.cloudfront.net/fonts/JETSansDigital-Bold-optimised.woff2"
-              as="font" type="font/woff2"/>
+        <link rel="preload" href="https://pie-design-system-cdn.production.jet-external.com/fonts/JETSansDigital-VF-opt.woff2"
+              as="font" type="font/woff2" crossOrigin="anonymous"/>
     </Head>
     <body>
     {children}
