@@ -12,8 +12,11 @@ export default function HomePage() {
     <NavigationLayout title="Aperture">
     <h2>Demo Integrations</h2>
     <ul>
+      <li><PieLink onClick={() => router.push('/integrations/css-only-radio')} tag="button">CSS Only Radio</PieLink></li>
       <li><PieLink onClick={() => router.push('/integrations/controlled-form')} tag="button">Controlled Form Demo</PieLink></li>
       <li><PieLink onClick={() => router.push('/integrations/uncontrolled-form')} tag="button">Uncontrolled Form Demo</PieLink></li>
+      <li><PieLink onClick={() => router.push('/integrations/typography-classes')} tag="button">Typography Demo (CSS Classes)</PieLink></li>
+      <li><PieLink onClick={() => router.push('/integrations/typography-mixins')} tag="button">Typography Demo (Mixins)</PieLink></li>
     </ul>
     <h2>Component Pages</h2>
     <ul>

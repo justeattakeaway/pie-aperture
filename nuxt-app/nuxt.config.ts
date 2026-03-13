@@ -31,7 +31,7 @@ export default defineNuxtConfig({
       },
   },
 
-  css: ['@justeattakeaway/pie-css'],
+  css: ['@justeattakeaway/pie-css', '@justeattakeaway/pie-css/dist/helpers/typography.css'],
   devtools: { enabled: true },
 
   devServer: {

@@ -2,7 +2,10 @@
 	<div>
 		<h3>Demo Integrations</h3>
 		<ul>
+			<li><pie-link href="/integrations/css-only-radio">CSS Only Radio</pie-link></li>
 			<li><pie-link href="/integrations/form">Form Demo</pie-link></li>
+			<li><pie-link href="/integrations/typography-classes">Typography Demo (CSS Classes)</pie-link></li>
+			<li><pie-link href="/integrations/typography-mixins">Typography Demo (Mixins)</pie-link></li>
 		</ul>
 		<h3>Component Pages</h3>
 		<ul>

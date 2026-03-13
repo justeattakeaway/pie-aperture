@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Nuxt - {{  route.meta.title }}</h1>
+        <h1 class="u-font-heading-xl">Nuxt - {{  route.meta.title }}</h1>
         <pie-link v-if="!homePage" href="/">Home Page</pie-link>
         <pie-divider></pie-divider>
         <slot />
