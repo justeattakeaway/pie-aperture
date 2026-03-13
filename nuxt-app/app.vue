@@ -12,7 +12,7 @@ import '@justeattakeaway/pie-webc/components/divider.js';
 
 <style lang="scss">
   @font-face {
-    font-family: JetSansDigital;
+    font-family: JETSansDigital;
     src: url('https://pie-design-system-cdn.production.jet-external.com/fonts/JETSansDigital-VF-opt.woff2') format("woff2");
     font-weight: 100 1000;
     font-stretch: 25% 151%;
@@ -26,7 +26,7 @@ import '@justeattakeaway/pie-webc/components/divider.js';
   }
 
   body {
-    font-family: JetSansDigital;
+    font-family: JETSansDigital;
     font-feature-settings: "tnum";
     margin: auto;
     min-height: 100%;
