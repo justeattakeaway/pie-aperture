@@ -26,6 +26,10 @@
                 <a href="#" class="test-font-body-l-link">This is a link within the body text.</a>
             </p>
 
+            <p class="test-font-body-l test-font-spacing-body-l">This is a main paragraph of body text (L) with typography-spacing mixin applied.
+                <a href="#" class="test-font-body-l-link">This is a link within the body text.</a>
+            </p>
+
             <p class="test-font-body-s">This is a smaller paragraph of body text (S). Used for secondary content or compact information.
                 <a href="#" class="test-font-body-s-link">This is a small link in the secondary body text.</a>
             </p>
@@ -49,6 +53,10 @@
             <hr>
 
             <p class="test-font-caption">This is a standard caption, used for image descriptions, metadata, or footnotes.
+                <a href="#" class="test-font-caption-link">Caption link example.</a>
+            </p>
+
+            <p class="test-font-caption test-font-spacing-caption">This is a standard caption with typography-spacing mixin applied.
                 <a href="#" class="test-font-caption-link">Caption link example.</a>
             </p>
 
@@ -171,5 +179,14 @@ definePageMeta({
 }
 .test-font-caption-strong-link {
     @include font-theme('font-caption-strong-link');
+}
+
+// Typography spacing classes
+.test-font-spacing-body-l {
+    @include typography-spacing('font-body-l');
+}
+
+.test-font-spacing-caption {
+    @include typography-spacing('font-caption');
 }
 </style>
