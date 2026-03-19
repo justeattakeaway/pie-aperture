@@ -1,0 +1,17 @@
+.button-examples {
+    max-width: 500px;
+    font-family: var(--dt-font-family-primary);
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dt-spacing-d);
+    align-items: center;
+}
+
+.button-group--inverse {
+    background-color: var(--dt-color-interactive-brand);
+    padding: var(--dt-spacing-d);
+    border-radius: var(--dt-radius-rounded-c);
+}
