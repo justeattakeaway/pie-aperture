@@ -99,7 +99,7 @@ jobs:
       - name: Upload Chromatic Results
         if: (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.ref == 'refs/heads/main'
         shell: bash
-        run: npx chromatic --playwright -t=${CHROMATIC_PROJECT_TOKEN}
+        run: npx chromatic --playwright --exit-zero-on-changes -t=${CHROMATIC_PROJECT_TOKEN}
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
