@@ -36,6 +36,8 @@ yarn test:visual --filter=<app-name>
 #### Devices & Browsers
 A list of our tested browsers and devices can be found in the [WebDriverIO configuration](https://github.com/justeattakeaway/pie-aperture/blob/main/wdio.conf.js#L3-L15)
 
+Percy custom browser tags for this shared BrowserStack matrix are configured in the root `.percy.yml`. When the WebDriverIO capability list changes, the matching Percy platform entries should be updated in the same change.
+
 
 ### Playwright
 Playwright is used to facilitate system testing. This ensures that components function as expected when integrated into web applications.
