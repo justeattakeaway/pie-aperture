@@ -11,7 +11,6 @@
     "test:ssr": "APP_NAME=nextjs-app-v15 npx playwright test -c ../playwright.config.ts --project=ssr",
     "test:system": "APP_NAME=nextjs-app-v15 npx playwright test -c ../playwright.config.ts --project=system",
     "test:visual": "APP_NAME=nextjs-app-v15 PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NEXT_15} npx percy exec -- npx browserstack-node-sdk playwright test --config=../playwright.percy.config.ts",
-    "test:visual:playwright": "APP_NAME=nextjs-app-v15 PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NEXT_15} npx percy exec -- npx browserstack-node-sdk playwright test --config=../playwright.percy.config.ts",
     "test:visual:chromatic": "APP_NAME=nextjs-app-v15 npx playwright test -c ../playwright.config.ts --project=visual",
     "upgrade-pie-packages": "yarn npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },

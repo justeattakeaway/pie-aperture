@@ -16,7 +16,6 @@
     "playwright:show-report": "turbo run playwright:show-report",
     "preview": "turbo run preview",
     "test:visual": "turbo run test:visual",
-    "test:visual:playwright": "turbo run test:visual:playwright",
     "test:visual:chromatic": "turbo run test:visual:chromatic",
     "upgrade-pie-packages": "turbo run upgrade-pie-packages && yarn"
   },
