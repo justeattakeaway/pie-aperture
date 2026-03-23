@@ -8,5 +8,9 @@ exports.config = merge(sharedConf.config, {
 
     specs: [
         './test/visual/*.js'
+    ],
+
+    exclude: [
+        './test/visual/*-chromatic.spec.js'
     ]
 });

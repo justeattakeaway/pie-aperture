@@ -55,16 +55,16 @@ jobs:
           aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
       secrets: inherit
 
-  browser-tests:
+  system-tests:
     needs: 'build-deploy-nuxt-app-ubuntu-node20'
-    name: Run System / Visual Tests
+    name: Run System Tests
     runs-on: ubuntu-latest
     steps:
-      # Checkout the Repo
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-      # Setup Node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -75,7 +75,6 @@ jobs:
         shell: bash
         run: yarn
 
-      # Setup Playwright
       - name: Setup Playwright
         uses: ./.github/actions/setup-playwright
 
@@ -93,6 +92,30 @@ jobs:
           name: nuxt-playwright-report
           path: playwright-reports/nuxt-app-playwright-report/
           retention-days: 7
+    env:
+      NUXT_AMPLIFY_ID: d36dan3bxjue8c
+      PR_NUMBER: ${{ github.event.number }}
+
+  percy-tests:
+    needs: 'build-deploy-nuxt-app-ubuntu-node20'
+    if: (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.ref == 'refs/heads/main'
+    name: Run Percy Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "yarn"
+
+      - name: Install Dependencies
+        shell: bash
+        run: yarn
 
       - name: Run Percy Tests
         shell: bash
@@ -100,6 +123,45 @@ jobs:
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-      NUXT_AMPLIFY_ID: d36dan3bxjue8c
       PERCY_TOKEN_PIE_APERTURE_NUXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NUXT }}
+      NUXT_AMPLIFY_ID: d36dan3bxjue8c
+      PR_NUMBER: ${{ github.event.number }}
+
+  chromatic-tests:
+    needs: 'build-deploy-nuxt-app-ubuntu-node20'
+    if: (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.ref == 'refs/heads/main'
+    name: Run Chromatic Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "yarn"
+
+      - name: Install Dependencies
+        shell: bash
+        run: yarn
+
+      - name: Setup Playwright
+        uses: ./.github/actions/setup-playwright
+
+      - name: Run Chromatic Tests
+        shell: bash
+        run: yarn test:visual:chromatic --filter=nuxt-app
+
+      - name: Upload Chromatic Results
+        shell: bash
+        run: npx chromatic --playwright --exit-zero-on-changes -t=${CHROMATIC_PROJECT_TOKEN}
+    env:
+      CHROMATIC_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
+      CHROMATIC_SHA: ${{ github.event.pull_request.head.sha || github.ref }}
+      CHROMATIC_SLUG: ${{ github.repository }}
+      CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN_NUXT }}
+      NUXT_AMPLIFY_ID: d36dan3bxjue8c
       PR_NUMBER: ${{ github.event.number }}

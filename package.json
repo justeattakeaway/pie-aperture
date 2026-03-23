@@ -16,6 +16,7 @@
     "playwright:show-report": "turbo run playwright:show-report",
     "preview": "turbo run preview",
     "test:visual": "turbo run test:visual",
+    "test:visual:chromatic": "turbo run test:visual:chromatic",
     "upgrade-pie-packages": "turbo run upgrade-pie-packages && yarn"
   },
   "dependencies": {
@@ -31,6 +32,7 @@
     }
   },
   "devDependencies": {
+    "@chromatic-com/playwright": "0.12.8",
     "@percy/cli": "1.31.6",
     "@percy/selenium-webdriver": "2.2.2",
     "@playwright/test": "1.50.1",
@@ -41,6 +43,7 @@
     "@wdio/local-runner": "8.40.6",
     "@wdio/mocha-framework": "8.40.6",
     "@wdio/spec-reporter": "8.40.6",
+    "chromatic": "13.3.5",
     "cross-env": "7.0.3",
     "follow-redirects": "1.15.11",
     "playwright-merge-html-reports": "0.2.8",

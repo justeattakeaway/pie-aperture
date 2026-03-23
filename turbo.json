@@ -38,6 +38,9 @@
       "test:visual": {
         "cache": false
       },
+      "test:visual:chromatic": {
+        "cache": false
+      },
       "dev": {
         "cache": false,
         "persistent": true
