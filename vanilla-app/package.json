@@ -9,12 +9,12 @@
     "playwright:show-report": "npx playwright show-report ../playwright-reports/vanilla-app-playwright-report",
     "preview": "vite preview",
     "test:system": "APP_NAME=vanilla-app npx playwright test --config=../playwright.config.ts --project=system",
-    "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_VANILLA} npx percy exec -- wdio run ./wdio.conf.js",
+    "test:visual": "APP_NAME=vanilla-app PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_VANILLA} npx percy exec -- npx browserstack-node-sdk playwright test --config=../playwright.percy.config.ts",
+    "test:visual:playwright": "APP_NAME=vanilla-app PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_VANILLA} npx percy exec -- npx browserstack-node-sdk playwright test --config=../playwright.percy.config.ts",
     "test:visual:chromatic": "APP_NAME=vanilla-app npx playwright test --config=../playwright.config.ts --project=visual",
     "upgrade-pie-packages": "yarn npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "devDependencies": {
-    "deepmerge": "4.3.1",
     "npm-check-updates": "18.3.1",
     "sass": "1.98.0",
     "vite": "4.5.5",

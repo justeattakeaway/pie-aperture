@@ -38,6 +38,18 @@
       "test:visual": {
         "cache": false
       },
+      "test:visual:playwright": {
+        "cache": false,
+        "inputs": [
+          "$TURBO_DEFAULT$",
+          "../package.json",
+          "../playwright.percy.config.ts",
+          "../playwright-helpers/**",
+          "../test/playwright/**",
+          "../turbo.json",
+          "../yarn.lock"
+        ]
+      },
       "test:visual:chromatic": {
         "cache": false
       },

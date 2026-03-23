@@ -6,8 +6,7 @@ on:
     paths:
       - '.github/workflows/**'
       - 'nextjs-app-v15/**'
-      - 'webdriver-helpers/**'
-      - 'wdio.conf.js'
+      - 'playwright.percy.config.ts'
       - 'test/**'
       - 'playwright-helpers/**'
       - '.percy.yml'

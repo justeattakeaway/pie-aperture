@@ -10,12 +10,12 @@
     "postinstall": "nuxt prepare",
     "test:ssr": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts --project=ssr",
     "test:system": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts --project=system",
-    "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NUXT} npx percy exec -- wdio run ./wdio.conf.js",
+    "test:visual": "APP_NAME=nuxt-app PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NUXT} npx percy exec -- npx browserstack-node-sdk playwright test --config=../playwright.percy.config.ts",
+    "test:visual:playwright": "APP_NAME=nuxt-app PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NUXT} npx percy exec -- npx browserstack-node-sdk playwright test --config=../playwright.percy.config.ts",
     "test:visual:chromatic": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts --project=visual",
     "upgrade-pie-packages": "yarn npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "devDependencies": {
-    "deepmerge": "4.3.1",
     "npm-check-updates": "18.3.1",
     "nuxt": "3.14.1592",
     "sass": "1.98.0"
