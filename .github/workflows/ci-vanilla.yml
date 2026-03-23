@@ -10,6 +10,9 @@ on:
       - 'wdio.conf.js'
       - 'test/**'
       - 'playwright-helpers/**'
+      - '.percy.yml'
+      - 'package.json'
+      - 'yarn.lock'
   push:
     branches:
       - main
