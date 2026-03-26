@@ -4,6 +4,18 @@
       cookieStatementLink="https://justeattakeaway.com">
     </pie-cookie-banner>
   </div>
+
+  <pie-divider></pie-divider>
+
+  <h2>PIE Cookie - French Canada</h2>
+  <pie-cookie-banner hasPrimaryActionsOnly language="fr" country="ca" cookieTechnologiesLink="https://justeattakeaway.com"
+    cookieStatementLink="https://justeattakeaway.com">
+
+  <pie-divider></pie-divider>
+
+  <h2>PIE Cookie - English Canada</h2>
+  <pie-cookie-banner hasPrimaryActionsOnly language="en" country="ca" cookieTechnologiesLink="https://justeattakeaway.com"
+    cookieStatementLink="https://justeattakeaway.com">
 </template>
 
 <script setup lang="ts">
