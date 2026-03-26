@@ -27,4 +27,3 @@ definePageMeta({
 });
 
 </script>
-git pull
