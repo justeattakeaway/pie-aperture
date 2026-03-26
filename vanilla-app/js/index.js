@@ -4,6 +4,7 @@ import './shared.js';
 document.querySelector('#navigation').innerHTML = `
     <h3>Demo Integrations</h3>
     <ul>
+        <li><pie-link href="/integrations/css-only-button.html">CSS Only Button</pie-link></li>
         <li><pie-link href="/integrations/css-only-radio.html">CSS Only Radio</pie-link></li>
         <li><pie-link href="/integrations/form.html">Form Demo</pie-link></li>
         <li><pie-link href="/integrations/typography-classes.html">Typography Demo (CSS Classes)</pie-link></li>
