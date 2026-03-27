@@ -8,8 +8,8 @@ export default function CookieBanner() {
         <NavigationLayout title="Cookie Banner">
         <PieCookieBanner
             defaultPreferences={{functional: true, personalized: true, analytical: true}}
-            language="da"
-            country="dk"
+            language="en"
+            country="ca"
             hasPrimaryActionsOnly
             cookieTechnologiesLink="https://justeattakeaway.com"
             cookieStatementLink="https://justeattakeaway.com" />
