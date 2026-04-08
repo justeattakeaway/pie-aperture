@@ -7,6 +7,7 @@ on:
 permissions:
   contents: read
   id-token: write
+  deployments: write
 
 concurrency: preview-teardown-${{ github.ref }}
 
@@ -16,6 +17,7 @@ jobs:
     permissions:
       contents: read
       id-token: write
+      deployments: write
     outputs:
       hasNextJs14Env: ${{ steps.list-environments.outputs.hasNextJs14Env }}
       hasNextJs15Env: ${{ steps.list-environments.outputs.hasNextJs15Env }}
@@ -25,11 +27,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+
       - name: List repo environments
         id: list-environments
         uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.PIE_BOT_TOKEN }}
+          github-token: ${{ steps.app-token.outputs.token }}
           script: |
             const pullRequestNumber = context.payload.pull_request.number;
             const owner = context.repo.owner;
@@ -68,7 +77,7 @@ jobs:
         if: ${{ steps.list-environments.outputs.hasNextJs14Env == 'true' }}
         uses: ./.github/actions/amplify-teardown
         with:
-          github-token: ${{ secrets.PIE_BOT_TOKEN }}
+          github-token: ${{ steps.app-token.outputs.token }}
           amplify-app-id: d1xxjuy6vbm7pk
           aws-region: 'eu-west-1'
           aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
@@ -79,7 +88,7 @@ jobs:
         if: ${{ steps.list-environments.outputs.hasNextJs15Env == 'true' }}
         uses: ./.github/actions/amplify-teardown
         with:
-          github-token: ${{ secrets.PIE_BOT_TOKEN }}
+          github-token: ${{ steps.app-token.outputs.token }}
           amplify-app-id: dg9syjb0jj07x
           aws-region: 'eu-west-1'
           aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
@@ -90,7 +99,7 @@ jobs:
         if: ${{ steps.list-environments.outputs.hasNuxtEnv == 'true' }}
         uses: ./.github/actions/amplify-teardown
         with:
-          github-token: ${{ secrets.PIE_BOT_TOKEN }}
+          github-token: ${{ steps.app-token.outputs.token }}
           amplify-app-id: d36dan3bxjue8c
           aws-region: 'eu-west-1'
           aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
@@ -101,7 +110,7 @@ jobs:
         if: ${{ steps.list-environments.outputs.hasVanillaJsEnv == 'true' }}
         uses: ./.github/actions/amplify-teardown
         with:
-          github-token: ${{ secrets.PIE_BOT_TOKEN }}
+          github-token: ${{ steps.app-token.outputs.token }}
           amplify-app-id: d2vb6sjgivffb3
           aws-region: 'eu-west-1'
           aws-role-arn: ${{ vars.AWS_ROLE_ARN }}
