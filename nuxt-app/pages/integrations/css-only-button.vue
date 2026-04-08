@@ -34,11 +34,11 @@
 
         <h2 class="u-font-heading-l">Disabled</h2>
         <div class="button-group">
-            <div class="c-button c-button--primary c-button--medium c-button--disabled">Primary Disabled</div>
-            <div class="c-button c-button--secondary c-button--medium c-button--disabled">Secondary Disabled</div>
-            <div class="c-button c-button--outline c-button--medium c-button--disabled">Outline Disabled</div>
-            <div class="c-button c-button--ghost c-button--medium c-button--disabled">Ghost Disabled</div>
-            <div class="c-button c-button--destructive c-button--medium c-button--disabled">Destructive Disabled</div>
+            <div class="c-button c-button--primary c-button--medium is-disabled">Primary Disabled</div>
+            <div class="c-button c-button--secondary c-button--medium is-disabled">Secondary Disabled</div>
+            <div class="c-button c-button--outline c-button--medium is-disabled">Outline Disabled</div>
+            <div class="c-button c-button--ghost c-button--medium is-disabled">Ghost Disabled</div>
+            <div class="c-button c-button--destructive c-button--medium is-disabled">Destructive Disabled</div>
         </div>
 
         <pie-divider></pie-divider>

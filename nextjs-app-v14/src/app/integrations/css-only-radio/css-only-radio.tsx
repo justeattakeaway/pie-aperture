@@ -107,7 +107,7 @@ export default function CssOnlyRadio() {
                                 type="radio" 
                                 name="delivery_plan_error" 
                                 value="standard" 
-                                className="c-radio c-radio--error"
+                                className="c-radio has-error"
                                 checked={selectedPlanError === 'standard'}
                                 onChange={(e) => setSelectedPlanError(e.target.value)}
                             />
@@ -124,7 +124,7 @@ export default function CssOnlyRadio() {
                                 type="radio" 
                                 name="delivery_plan_error" 
                                 value="express" 
-                                className="c-radio c-radio--error"
+                                className="c-radio has-error"
                                 checked={selectedPlanError === 'express'}
                                 onChange={(e) => setSelectedPlanError(e.target.value)}
                             />
