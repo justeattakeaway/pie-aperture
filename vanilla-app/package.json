@@ -23,8 +23,12 @@
   "dependencies": {
     "@chromatic-com/playwright": "0.12.8",
     "@justeattakeaway/pie-css": "0.32.0",
+    "@justeattakeaway/pie-icons": "0.0.0-snapshot-release-20260408133445",
+    "@justeattakeaway/pie-icons-react": "0.0.0-snapshot-release-20260408133445",
+    "@justeattakeaway/pie-icons-vue": "0.0.0-snapshot-release-20260408133445",
     "@justeattakeaway/pie-icons-webc": "1.21.1",
     "@justeattakeaway/pie-webc": "0.9.7",
+    "@justeattakeaway/pie-wrapper-react": "0.0.0-snapshot-release-20260408133445",
     "chromatic": "13.3.5"
   },
   "installConfig": {

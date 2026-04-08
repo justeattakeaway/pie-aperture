@@ -1849,12 +1849,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justeattakeaway/pie-icons-react@npm:0.0.0-snapshot-release-20260408133445":
+  version: 0.0.0-snapshot-release-20260408133445
+  resolution: "@justeattakeaway/pie-icons-react@npm:0.0.0-snapshot-release-20260408133445"
+  checksum: d5741fcb8e15c477a83e1e59f5c46ac26135b0722d0b71daadc752e25ba913c1461601f6e65245425c871c8792be5d89eb9e9383e521e36ca7ed84af69b50bc4
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-icons-vue@npm:0.0.0-snapshot-release-20260408133445":
+  version: 0.0.0-snapshot-release-20260408133445
+  resolution: "@justeattakeaway/pie-icons-vue@npm:0.0.0-snapshot-release-20260408133445"
+  dependencies:
+    "@vue/babel-helper-vue-jsx-merge-props": 1.4.0
+  checksum: 4090098f6eeaa0c354f2ddfa347eb3c246590e9b2143467ecb5ea7f63c1c9252d4d1ce44f2e64902eeade25406a06e9d8479f40f2b92344d982b6bf223731d22
+  languageName: node
+  linkType: hard
+
 "@justeattakeaway/pie-icons-webc@npm:1.21.1":
   version: 1.21.1
   resolution: "@justeattakeaway/pie-icons-webc@npm:1.21.1"
   dependencies:
     "@justeattakeaway/pie-webc-core": 12.0.0
   checksum: d8d5d6ffc37cd2ef2bb1351043fb30ecf0fd5af44687e6014f6be2292ce81779177d7802519f3931029c176cdd274e9e3f4c2e4f49b1dc083094d364998002f0
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-icons@npm:0.0.0-snapshot-release-20260408133445":
+  version: 0.0.0-snapshot-release-20260408133445
+  resolution: "@justeattakeaway/pie-icons@npm:0.0.0-snapshot-release-20260408133445"
+  dependencies:
+    cheerio: 1.0.0-rc.12
+    classnames: 2.3.2
+    html-minifier-terser: 7.2.0
+    prettier: 2.8.7
+    svgo: 3.0.2
+  checksum: aec83c5cd0d35a4dd736a504fa9e73a27b1685192ff4c4da2b39941b64f299b63222dd69dc33ba2726a533200abe945795b4a4bac018ae44d81709766d277b89
   languageName: node
   linkType: hard
 
@@ -2081,6 +2110,17 @@ __metadata:
   bin:
     add-components: src/index.js
   checksum: 0cd0ac3aab563b31f2bdbeb93ad0398f5ba97b102f864fad383798bcff7bdf21fbb04ff253bf9fa13cefef48095b33c9f7930411364384ed57bea71bf6944221
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-wrapper-react@npm:0.0.0-snapshot-release-20260408133445":
+  version: 0.0.0-snapshot-release-20260408133445
+  resolution: "@justeattakeaway/pie-wrapper-react@npm:0.0.0-snapshot-release-20260408133445"
+  dependencies:
+    fs-extra: 9.1.0
+  bin:
+    build-react-wrapper: index.js
+  checksum: b36041741b5b0f1f3a88ace932007e2e11bddb875d49e9d112e060c17bf2c3f12aa643ace03a7233603fe5c2feb7794d194809b4be37354482958a8f80d80deb
   languageName: node
   linkType: hard
 
@@ -4846,6 +4886,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/babel-helper-vue-jsx-merge-props@npm:1.4.0":
+  version: 1.4.0
+  resolution: "@vue/babel-helper-vue-jsx-merge-props@npm:1.4.0"
+  checksum: 2383ff7719b324da2330f7444472e6a2f0c8710d1ad0a1b5cccdda1c5a4160129d0e9db97e6404cc4a4ecb64a7e8510fde0bec381b3eb03103f814534f02b18d
+  languageName: node
+  linkType: hard
+
 "@vue/babel-helper-vue-transform-on@npm:1.2.5":
   version: 1.2.5
   resolution: "@vue/babel-helper-vue-transform-on@npm:1.2.5"
@@ -6651,6 +6698,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cheerio-select@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "cheerio-select@npm:2.1.0"
+  dependencies:
+    boolbase: ^1.0.0
+    css-select: ^5.1.0
+    css-what: ^6.1.0
+    domelementtype: ^2.3.0
+    domhandler: ^5.0.3
+    domutils: ^3.0.1
+  checksum: 843d6d479922f28a6c5342c935aff1347491156814de63c585a6eb73baf7bb4185c1b4383a1195dca0f12e3946d737c7763bcef0b9544c515d905c5c44c5308b
+  languageName: node
+  linkType: hard
+
+"cheerio@npm:1.0.0-rc.12":
+  version: 1.0.0-rc.12
+  resolution: "cheerio@npm:1.0.0-rc.12"
+  dependencies:
+    cheerio-select: ^2.1.0
+    dom-serializer: ^2.0.0
+    domhandler: ^5.0.3
+    domutils: ^3.0.1
+    htmlparser2: ^8.0.1
+    parse5: ^7.0.0
+    parse5-htmlparser2-tree-adapter: ^7.0.0
+  checksum: 5d4c1b7a53cf22d3a2eddc0aff70cf23cbb30d01a4c79013e703a012475c02461aa1fcd99127e8d83a02216386ed6942b2c8103845fd0812300dd199e6e7e054
+  languageName: node
+  linkType: hard
+
 "chokidar@npm:^3.5.1, chokidar@npm:^3.5.3, chokidar@npm:^3.6.0":
   version: 3.6.0
   resolution: "chokidar@npm:3.6.0"
@@ -6747,7 +6823,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clean-css@npm:^5.2.2":
+"classnames@npm:2.3.2":
+  version: 2.3.2
+  resolution: "classnames@npm:2.3.2"
+  checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
+  languageName: node
+  linkType: hard
+
+"clean-css@npm:^5.2.2, clean-css@npm:~5.3.2":
   version: 5.3.3
   resolution: "clean-css@npm:5.3.3"
   dependencies:
@@ -6938,6 +7021,13 @@ __metadata:
   dependencies:
     delayed-stream: ~1.0.0
   checksum: 49fa4aeb4916567e33ea81d088f6584749fc90c7abec76fd516bf1c5aa5c79f3584b5ba3de6b86d26ddd64bae5329c4c7479343250cfe71c75bb366eae53bb7c
+  languageName: node
+  linkType: hard
+
+"commander@npm:^10.0.0":
+  version: 10.0.1
+  resolution: "commander@npm:10.0.1"
+  checksum: 436901d64a818295803c1996cd856621a74f30b9f9e28a588e726b2b1670665bccd7c1a77007ebf328729f0139838a88a19265858a0fa7a8728c4656796db948
   languageName: node
   linkType: hard
 
@@ -7312,7 +7402,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-tree@npm:^2.3.1":
+"css-tree@npm:^2.2.1, css-tree@npm:^2.3.1":
   version: 2.3.1
   resolution: "css-tree@npm:2.3.1"
   dependencies:
@@ -8250,7 +8340,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"entities@npm:^4.2.0, entities@npm:^4.5.0":
+"entities@npm:^4.2.0, entities@npm:^4.4.0, entities@npm:^4.5.0":
   version: 4.5.0
   resolution: "entities@npm:4.5.0"
   checksum: 853f8ebd5b425d350bffa97dd6958143179a5938352ccae092c62d1267c4e392a039be1bae7d51b6e4ffad25f51f9617531fedf5237f15df302ccfb452cbf2d7
@@ -10829,6 +10919,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"html-minifier-terser@npm:7.2.0":
+  version: 7.2.0
+  resolution: "html-minifier-terser@npm:7.2.0"
+  dependencies:
+    camel-case: ^4.1.2
+    clean-css: ~5.3.2
+    commander: ^10.0.0
+    entities: ^4.4.0
+    param-case: ^3.0.4
+    relateurl: ^0.2.7
+    terser: ^5.15.1
+  bin:
+    html-minifier-terser: cli.js
+  checksum: 39feed354b5a8aafc8e910977d68cfd961d6db330a8e1a5b16a528c86b8ee7745d8945134822cf00acf7bf0d0135bf1abad650bf308bee4ea73adb003f5b8656
+  languageName: node
+  linkType: hard
+
 "html-minifier-terser@npm:^6.0.2":
   version: 6.1.0
   resolution: "html-minifier-terser@npm:6.1.0"
@@ -10883,6 +10990,18 @@ __metadata:
     domutils: ^2.5.2
     entities: ^2.0.0
   checksum: 81a7b3d9c3bb9acb568a02fc9b1b81ffbfa55eae7f1c41ae0bf840006d1dbf54cb3aa245b2553e2c94db674840a9f0fdad7027c9a9d01a062065314039058c4e
+  languageName: node
+  linkType: hard
+
+"htmlparser2@npm:^8.0.1":
+  version: 8.0.2
+  resolution: "htmlparser2@npm:8.0.2"
+  dependencies:
+    domelementtype: ^2.3.0
+    domhandler: ^5.0.3
+    domutils: ^3.0.1
+    entities: ^4.4.0
+  checksum: 29167a0f9282f181da8a6d0311b76820c8a59bc9e3c87009e21968264c2987d2723d6fde5a964d4b7b6cba663fca96ffb373c06d8223a85f52a6089ced942700
   languageName: node
   linkType: hard
 
@@ -13883,8 +14002,12 @@ __metadata:
   dependencies:
     "@chromatic-com/playwright": 0.12.8
     "@justeattakeaway/pie-css": 0.32.0
+    "@justeattakeaway/pie-icons": 0.0.0-snapshot-release-20260408133445
+    "@justeattakeaway/pie-icons-react": 0.0.0-snapshot-release-20260408133445
+    "@justeattakeaway/pie-icons-vue": 0.0.0-snapshot-release-20260408133445
     "@justeattakeaway/pie-icons-webc": 1.21.1
     "@justeattakeaway/pie-webc": 0.9.7
+    "@justeattakeaway/pie-wrapper-react": 0.0.0-snapshot-release-20260408133445
     chromatic: 13.3.5
     deepmerge: 4.3.1
     just-kebab-case: 4.2.0
@@ -14532,6 +14655,16 @@ __metadata:
     "@types/parse-path": ^7.0.0
     parse-path: ^7.0.0
   checksum: 765d4beac7de59c88007018e2a4b95ed8ff96cdcd0ff510b1ad00ab3d17f63949c7664218685394fe35af52061516c5efbba520fb760d7104b8238a6196f28c4
+  languageName: node
+  linkType: hard
+
+"parse5-htmlparser2-tree-adapter@npm:^7.0.0":
+  version: 7.1.0
+  resolution: "parse5-htmlparser2-tree-adapter@npm:7.1.0"
+  dependencies:
+    domhandler: ^5.0.3
+    parse5: ^7.0.0
+  checksum: 98326fc5443e2149e10695adbfd0b0b3383c54398799f858b4ac2914adb199af8fcc90c2143aa5f7fd5f9482338f26ef253b468722f34d50bb215ec075d89fe9
   languageName: node
   linkType: hard
 
@@ -15227,6 +15360,15 @@ __metadata:
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
   checksum: cd192ec0d0a8e4c6da3bb80e4f62afe336df3f76271ac6deb0e6a36187133b6073a19e9727a1ff108cd8b9982e4768850d413baa71214dd80c7979617dca827a
+  languageName: node
+  linkType: hard
+
+"prettier@npm:2.8.7":
+  version: 2.8.7
+  resolution: "prettier@npm:2.8.7"
+  bin:
+    prettier: bin-prettier.js
+  checksum: fdc8f2616f099f5f0d685907f4449a70595a0fc1d081a88919604375989e0d5e9168d6121d8cc6861f21990b31665828e00472544d785d5940ea08a17660c3a6
   languageName: node
   linkType: hard
 
@@ -17354,6 +17496,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"svgo@npm:3.0.2":
+  version: 3.0.2
+  resolution: "svgo@npm:3.0.2"
+  dependencies:
+    "@trysound/sax": 0.2.0
+    commander: ^7.2.0
+    css-select: ^5.1.0
+    css-tree: ^2.2.1
+    csso: ^5.0.5
+    picocolors: ^1.0.0
+  bin:
+    svgo: bin/svgo
+  checksum: 381ba14aa782e71ab7033227634a3041c11fa3e2769aeaf0df43a08a615de61925108e34f55af6e7c5146f4a3109e78deabb4fa9d687e36d45d1f848b4e23d17
+  languageName: node
+  linkType: hard
+
 "svgo@npm:^3.3.2":
   version: 3.3.2
   resolution: "svgo@npm:3.3.2"
@@ -17507,6 +17665,20 @@ __metadata:
   bin:
     terser: bin/terser
   checksum: 39d28f3723e84e80ddb4576a441adb12a6d365258fb9262e25f8b6d1e4514954e81f711008ee2ad9927f00b860a5bcbd4c1db7a6873d0f712bdcc667fb7b7557
+  languageName: node
+  linkType: hard
+
+"terser@npm:^5.15.1":
+  version: 5.46.1
+  resolution: "terser@npm:5.46.1"
+  dependencies:
+    "@jridgewell/source-map": ^0.3.3
+    acorn: ^8.15.0
+    commander: ^2.20.0
+    source-map-support: ~0.5.20
+  bin:
+    terser: bin/terser
+  checksum: 1d93e7c57c192b029738684df639426e788041eea689080e4c1e54823dc949fbaead64b287d637084df28ef5dc1ddd46fdf28370bfc219f6b53e528f5f49506c
   languageName: node
   linkType: hard
 
@@ -18504,8 +18676,12 @@ __metadata:
   dependencies:
     "@chromatic-com/playwright": 0.12.8
     "@justeattakeaway/pie-css": 0.32.0
+    "@justeattakeaway/pie-icons": 0.0.0-snapshot-release-20260408133445
+    "@justeattakeaway/pie-icons-react": 0.0.0-snapshot-release-20260408133445
+    "@justeattakeaway/pie-icons-vue": 0.0.0-snapshot-release-20260408133445
     "@justeattakeaway/pie-icons-webc": 1.21.1
     "@justeattakeaway/pie-webc": 0.9.7
+    "@justeattakeaway/pie-wrapper-react": 0.0.0-snapshot-release-20260408133445
     chromatic: 13.3.5
     deepmerge: 4.3.1
     npm-check-updates: 18.3.1
