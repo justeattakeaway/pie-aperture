@@ -4,6 +4,10 @@ on:
   repository_dispatch:
     types: ['pie-trigger']
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   list-snapshots:
     runs-on: ubuntu-latest
@@ -12,10 +16,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      # Correctly set up environment variable for the branch name
-      - name: Set branch name
-        run: echo "BRANCH_NAME=${{ github.event.client_payload.pie-branch }}" >> $GITHUB_ENV
 
       # Setup Node
       - name: Setup Node
@@ -31,14 +31,21 @@ jobs:
       - name: Update snapshots
         run: npx update-snapshots ${{ github.event.client_payload.snapshot-version }} ${{ github.event.client_payload.snapshot-packages }}
 
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+
       # Create PR if doesn't exist
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.CHANGESETS_TOKEN }}
-          commit-message: "feat: ${{ env.BRANCH_NAME }}"
-          branch: ${{ env.BRANCH_NAME }}
-          title: "feat: ${{ env.BRANCH_NAME }} integration"
+          token: ${{ steps.app-token.outputs.token }}
+          commit-message: "feat: ${{ github.event.client_payload.pie-branch }}"
+          branch: ${{ github.event.client_payload.pie-branch }}
+          title: "feat: ${{ github.event.client_payload.pie-branch }} integration"
           body: |
             This PR has been automatically generated as part of the test-aperture workflow from the Pie monorepo
           draft: true
