@@ -87,7 +87,7 @@
                         type="radio" 
                         name="delivery_plan_error" 
                         value="standard" 
-                        class="c-radio c-radio--error"
+                        class="c-radio has-error"
                         v-model="selectedPlanError">
                     <div class="card-content">
                         <span class="card-title">Nullam quis risus eget</span>
@@ -102,7 +102,7 @@
                         type="radio" 
                         name="delivery_plan_error" 
                         value="express" 
-                        class="c-radio c-radio--error"
+                        class="c-radio has-error"
                         v-model="selectedPlanError">
                     <div class="card-content">
                         <span class="card-title">Vestibulum id ligula porta</span>
