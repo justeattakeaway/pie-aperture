@@ -99,33 +99,92 @@ jobs:
         env:
           APERTURE_PR_URL: ${{ steps.create-pr.outputs.pull-request-url }}
           OPERATION: ${{ steps.create-pr.outputs.pull-request-operation }}
+          PIE_PR_SHA: ${{ steps.pie-pr.outputs.sha }}
         with:
           github-token: ${{ steps.app-token.outputs.token }}
           script: |
+            const MARKER = '<!-- test-aperture:feedback -->';
             const op = process.env.OPERATION;
             const verb = op === 'created'
               ? 'created'
               : op === 'updated'
                 ? 'updated'
                 : 'is already up to date';
-            const body = `🚀 Aperture PR ${verb}: ${process.env.APERTURE_PR_URL}\n\nApp deployments will appear under the **Deployments** section of this PR shortly!`;
-            await github.rest.issues.createComment({
+            const shortSha = (process.env.PIE_PR_SHA || '').slice(0, 7);
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const body = [
+              MARKER,
+              `🚀 Aperture PR ${verb}: ${process.env.APERTURE_PR_URL}`,
+              '',
+              'App deployments will appear under the **Deployments** section of this PR shortly!',
+              '',
+              `<sub>Updated ${new Date().toISOString()} · PIE @ \`${shortSha}\` · [workflow run](${runUrl})</sub>`,
+            ].join('\n');
+
+            const piePrNumber = Number(process.env.PIE_PR_NUMBER);
+            const { data: comments } = await github.rest.issues.listComments({
               owner: 'justeattakeaway',
               repo: 'pie',
-              issue_number: Number(process.env.PIE_PR_NUMBER),
-              body,
+              issue_number: piePrNumber,
+              per_page: 100,
             });
+            const existing = comments.find((c) => (c.body || '').includes(MARKER));
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: 'justeattakeaway',
+                repo: 'pie',
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: 'justeattakeaway',
+                repo: 'pie',
+                issue_number: piePrNumber,
+                body,
+              });
+            }
 
       - name: Report failure to PIE PR
         if: failure()
         uses: actions/github-script@v7
+        env:
+          PIE_PR_SHA: ${{ steps.pie-pr.outputs.sha }}
         with:
           github-token: ${{ steps.app-token.outputs.token }}
           script: |
+            const MARKER = '<!-- test-aperture:feedback -->';
+            const shortSha = (process.env.PIE_PR_SHA || '').slice(0, 7) || 'unknown';
             const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
-            await github.rest.issues.createComment({
+            const body = [
+              MARKER,
+              `❌ The aperture PR workflow failed. [View logs](${runUrl}).`,
+              '',
+              `<sub>Updated ${new Date().toISOString()} · PIE @ \`${shortSha}\` · [workflow run](${runUrl})</sub>`,
+            ].join('\n');
+
+            const piePrNumber = Number(process.env.PIE_PR_NUMBER);
+            const { data: comments } = await github.rest.issues.listComments({
               owner: 'justeattakeaway',
               repo: 'pie',
-              issue_number: Number(process.env.PIE_PR_NUMBER),
-              body: `❌ The aperture PR workflow failed. [View logs](${runUrl}).`,
+              issue_number: piePrNumber,
+              per_page: 100,
             });
+            const existing = comments.find((c) => (c.body || '').includes(MARKER));
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: 'justeattakeaway',
+                repo: 'pie',
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: 'justeattakeaway',
+                repo: 'pie',
+                issue_number: piePrNumber,
+                body,
+              });
+            }
