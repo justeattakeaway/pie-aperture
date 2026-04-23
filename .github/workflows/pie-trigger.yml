@@ -26,8 +26,6 @@ permissions:
 jobs:
   list-snapshots:
     runs-on: ubuntu-latest
-    # Coalesce payload shapes: repository_dispatch → client_payload,
-    # workflow_dispatch → inputs. Whichever fires, these are populated.
     env:
       PIE_BRANCH: ${{ github.event.client_payload.pie-branch || github.event.inputs.pie-branch }}
       SNAPSHOT_VERSION: ${{ github.event.client_payload.snapshot-version || github.event.inputs.snapshot-version }}
