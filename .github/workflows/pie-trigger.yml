@@ -3,6 +3,21 @@ name: pie-trigger
 on:
   repository_dispatch:
     types: ['pie-trigger']
+  # Temporary workflow dispatch to allow manual triggering to more easily test dsw-1982 since repository_dispatch events only trigger the workflow on the default branch, and we want to be able to test on a feature branch
+  workflow_dispatch:
+    inputs:
+      pie-branch:
+        description: 'Source PIE branch name (used for aperture branch + commit subject)'
+        required: true
+      pie-pr-number:
+        description: 'PIE PR number to comment on; its current head SHA is fetched live'
+        required: true
+      snapshot-version:
+        description: 'Snapshot version produced by PIE test-aperture (e.g. 20260422123456)'
+        required: true
+      snapshot-packages:
+        description: 'Space-separated list of @justeattakeaway/pie-* package names'
+        required: true
 
 permissions:
   contents: write
@@ -11,6 +26,10 @@ permissions:
 jobs:
   list-snapshots:
     runs-on: ubuntu-latest
+    env:
+      PIE_BRANCH: ${{ github.event.client_payload.pie-branch || github.event.inputs.pie-branch }}
+      SNAPSHOT_VERSION: ${{ github.event.client_payload.snapshot-version || github.event.inputs.snapshot-version }}
+      SNAPSHOT_PACKAGES: ${{ github.event.client_payload.snapshot-packages || github.event.inputs.snapshot-packages }}
     steps:
       - name: Checkout branch
         uses: actions/checkout@v4
@@ -29,7 +48,7 @@ jobs:
 
       # Update snapshots
       - name: Update snapshots
-        run: npx update-snapshots ${{ github.event.client_payload.snapshot-version }} ${{ github.event.client_payload.snapshot-packages }}
+        run: npx update-snapshots "$SNAPSHOT_VERSION" $SNAPSHOT_PACKAGES
 
       - name: Generate GitHub App token
         id: app-token
@@ -43,9 +62,9 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ steps.app-token.outputs.token }}
-          commit-message: "feat: ${{ github.event.client_payload.pie-branch }}"
-          branch: ${{ github.event.client_payload.pie-branch }}
-          title: "feat: ${{ github.event.client_payload.pie-branch }} integration"
+          commit-message: "feat: ${{ env.PIE_BRANCH }}"
+          branch: ${{ env.PIE_BRANCH }}
+          title: "feat: ${{ env.PIE_BRANCH }} integration"
           body: |
             This PR has been automatically generated as part of the test-aperture workflow from the Pie monorepo
           draft: true
