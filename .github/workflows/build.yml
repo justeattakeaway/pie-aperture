@@ -65,10 +65,15 @@ jobs:
         uses: actions/checkout@v3
 
       # Detect whether this PR was opened by the test-aperture workflow by
-      # looking for metadata trailers in the head commit message.
+      # looking for metadata trailers in the head commit message. Gated on
+      # the PR author being our GitHub App so regular pie-aperture PRs
+      # (human, dependabot, renovate) skip this entirely and can't regress
+      # on a GitHub API hiccup.
       - name: Check for PIE PR metadata
         id: pie-meta
-        if: github.event_name == 'pull_request' && inputs.deploy == true
+        if: |
+          github.event_name == 'pull_request' && inputs.deploy == true &&
+          github.event.pull_request.user.login == 'pie-design-system-app[bot]'
         uses: actions/github-script@v7
         env:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
@@ -113,7 +118,7 @@ jobs:
           github-token: ${{ steps.pie-app-token.outputs.token }}
           script: |
             const pkg = process.env.PACKAGE_NAME;
-            const environment = `aperture-${pkg}-pr-${process.env.APERTURE_PR_NUMBER}`;
+            const environment = `aperture-${pkg}`;
             const environmentUrl = `https://pr${process.env.APERTURE_PR_NUMBER}-aperture-${pkg}.pie.design/`;
             const logUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
 

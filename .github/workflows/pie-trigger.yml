@@ -112,13 +112,18 @@ jobs:
                 : 'is already up to date';
             const shortSha = (process.env.PIE_PR_SHA || '').slice(0, 7);
             const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const updatedAt = `${new Intl.DateTimeFormat('en-GB', {
+              dateStyle: 'medium',
+              timeStyle: 'short',
+              timeZone: 'UTC',
+            }).format(new Date())} UTC`;
             const body = [
               MARKER,
               `🚀 Aperture PR ${verb}: ${process.env.APERTURE_PR_URL}`,
               '',
               'App deployments will appear under the **Deployments** section of this PR shortly!',
               '',
-              `<sub>Updated ${new Date().toISOString()} · PIE @ \`${shortSha}\` · [workflow run](${runUrl})</sub>`,
+              `<sub>Updated ${updatedAt} · PIE @ \`${shortSha}\` · [workflow run](${runUrl})</sub>`,
             ].join('\n');
 
             const piePrNumber = Number(process.env.PIE_PR_NUMBER);
@@ -157,11 +162,16 @@ jobs:
             const MARKER = '<!-- test-aperture:feedback -->';
             const shortSha = (process.env.PIE_PR_SHA || '').slice(0, 7) || 'unknown';
             const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const updatedAt = `${new Intl.DateTimeFormat('en-GB', {
+              dateStyle: 'medium',
+              timeStyle: 'short',
+              timeZone: 'UTC',
+            }).format(new Date())} UTC`;
             const body = [
               MARKER,
               `❌ The aperture PR workflow failed. [View logs](${runUrl}).`,
               '',
-              `<sub>Updated ${new Date().toISOString()} · PIE @ \`${shortSha}\` · [workflow run](${runUrl})</sub>`,
+              `<sub>Updated ${updatedAt} · PIE @ \`${shortSha}\` · [workflow run](${runUrl})</sub>`,
             ].join('\n');
 
             const piePrNumber = Number(process.env.PIE_PR_NUMBER);
