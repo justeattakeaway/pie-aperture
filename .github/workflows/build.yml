@@ -63,7 +63,85 @@ jobs:
       # Checkout the Repo
       - name: Checkout
         uses: actions/checkout@v3
-      
+
+      # Detect whether this PR was opened by the test-aperture workflow by
+      # looking for metadata trailers in the head commit message.
+      - name: Check for PIE PR metadata
+        id: pie-meta
+        if: |
+          github.event_name == 'pull_request' && inputs.deploy == true &&
+          github.event.pull_request.user.login == 'pie-design-system-app[bot]'
+        uses: actions/github-script@v7
+        env:
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        with:
+          script: |
+            const { data: commit } = await github.rest.repos.getCommit({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: process.env.HEAD_SHA,
+            });
+            const msg = commit.commit.message || '';
+            const numMatch = msg.match(/^pie-pr-number:\s*(\d+)\s*$/m);
+            const shaMatch = msg.match(/^pie-pr-sha:\s*([a-f0-9]+)\s*$/m);
+            if (numMatch && shaMatch) {
+              core.setOutput('present', 'true');
+              core.setOutput('pie-pr-number', numMatch[1]);
+              core.setOutput('pie-pr-sha', shaMatch[1]);
+            } else {
+              core.setOutput('present', 'false');
+            }
+
+      - name: Generate GH App token for PIE
+        id: pie-app-token
+        if: steps.pie-meta.outputs.present == 'true'
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+          owner: justeattakeaway
+          repositories: pie
+
+      # Create an in_progress deployment on the PIE PR so the aperture preview surfaces natively in PIE's Deployments UI
+      - name: Create in_progress PIE deployment
+        id: pie-deploy
+        if: steps.pie-meta.outputs.present == 'true'
+        uses: actions/github-script@v7
+        env:
+          PIE_PR_SHA: ${{ steps.pie-meta.outputs.pie-pr-sha }}
+          APERTURE_PR_NUMBER: ${{ github.event.number }}
+          PACKAGE_NAME: ${{ inputs.package-name }}
+        with:
+          github-token: ${{ steps.pie-app-token.outputs.token }}
+          script: |
+            const pkg = process.env.PACKAGE_NAME;
+            const environment = `aperture-${pkg}-pr-${process.env.APERTURE_PR_NUMBER}`;
+            const environmentUrl = `https://pr${process.env.APERTURE_PR_NUMBER}-aperture-${pkg}.pie.design/`;
+            const logUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+
+            const { data: deployment } = await github.rest.repos.createDeployment({
+              owner: 'justeattakeaway',
+              repo: 'pie',
+              ref: process.env.PIE_PR_SHA,
+              environment,
+              required_contexts: [],
+              auto_merge: false,
+              transient_environment: true,
+              description: `Aperture ${pkg} preview`,
+            });
+
+            await github.rest.repos.createDeploymentStatus({
+              owner: 'justeattakeaway',
+              repo: 'pie',
+              deployment_id: deployment.id,
+              state: 'in_progress',
+              environment_url: environmentUrl,
+              log_url: logUrl,
+            });
+
+            core.setOutput('deployment-id', deployment.id);
+            core.setOutput('environment-url', environmentUrl);
+
       # Configure AWS credentials using OIDC
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502 # v4.0.2
@@ -237,3 +315,40 @@ jobs:
           environment-url: https://${{ env.SUB_DOMAIN }}.pie.design/
           deployment-id: ${{ steps.deploy.outputs.deployment_id }}
           state: "failure"
+
+      - name: Update PIE deployment status (success)
+        if: steps.pie-meta.outputs.present == 'true' && github.event_name == 'pull_request' && inputs.deploy && success()
+        uses: actions/github-script@v7
+        env:
+          DEPLOYMENT_ID: ${{ steps.pie-deploy.outputs.deployment-id }}
+          ENVIRONMENT_URL: ${{ steps.pie-deploy.outputs.environment-url }}
+        with:
+          github-token: ${{ steps.pie-app-token.outputs.token }}
+          script: |
+            await github.rest.repos.createDeploymentStatus({
+              owner: 'justeattakeaway',
+              repo: 'pie',
+              deployment_id: Number(process.env.DEPLOYMENT_ID),
+              state: 'success',
+              environment_url: process.env.ENVIRONMENT_URL,
+              log_url: `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+            });
+
+      - name: Update PIE deployment status (failure)
+        if: steps.pie-meta.outputs.present == 'true' && github.event_name == 'pull_request' && inputs.deploy && failure()
+        uses: actions/github-script@v7
+        env:
+          DEPLOYMENT_ID: ${{ steps.pie-deploy.outputs.deployment-id }}
+          ENVIRONMENT_URL: ${{ steps.pie-deploy.outputs.environment-url }}
+        with:
+          github-token: ${{ steps.pie-app-token.outputs.token }}
+          script: |
+            if (!process.env.DEPLOYMENT_ID) return;
+            await github.rest.repos.createDeploymentStatus({
+              owner: 'justeattakeaway',
+              repo: 'pie',
+              deployment_id: Number(process.env.DEPLOYMENT_ID),
+              state: 'failure',
+              environment_url: process.env.ENVIRONMENT_URL,
+              log_url: `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+            });
