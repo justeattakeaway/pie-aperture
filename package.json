@@ -48,8 +48,9 @@
     "follow-redirects": "1.15.11",
     "playwright-merge-html-reports": "0.2.8",
     "selenium-webdriver": "4.27.0",
-    "turbo": "1.13.4"
+    "turbo": "2.9.6"
   },
+  "packageManager": "yarn@3.5.0",
   "resolutions": {
     "rimraf": "3.0.2",
     "glob": "10.4.5"
