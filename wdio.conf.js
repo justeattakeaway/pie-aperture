@@ -98,7 +98,7 @@ exports.config = {
 
     before: function (capabilities, specs) {
         if (!capabilities['bstack:options']?.deviceName) {
-            return browser.setWindowRect(0, 0, 1324, 1080);
+            return browser.setWindowRect(0, 0, 1920, 1080);
         }
     }
 }
