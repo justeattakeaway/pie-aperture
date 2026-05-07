@@ -28,6 +28,31 @@
     >
       A new version is available with exciting features. This notification demonstrates link-based actions instead of buttons.
     </pie-notification>
+
+    <pie-divider/>
+
+    <pie-notification
+        variant="info"
+        heading="Slotted Actions"
+        :isOpen="isSlottedNotificationOpen"
+    >
+      This notification uses slotted pie-button elements for custom actions instead of the leadingAction and supportingAction props.
+      <pie-button
+          slot="leadingAction"
+          variant="primary"
+          size="small-productive"
+          @click="handleCloseSlottedNotification">
+          <icon-plus-circle slot="icon"></icon-plus-circle>
+          Confirm
+      </pie-button>
+      <pie-button
+          slot="supportingAction"
+          variant="ghost"
+          size="small-productive"
+          @click="handleCloseSlottedNotification">
+          Cancel
+      </pie-button>
+    </pie-notification>
   </div>
 </template>
 
@@ -37,12 +62,14 @@ import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/divider.js';
 import '@justeattakeaway/pie-webc/components/notification.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconPlusCircle.js';
 
 definePageMeta({
   title: 'Notification',
 });
 
 let isNotificationOpen = ref(true);
+let isSlottedNotificationOpen = ref(true);
 
 const handleToggleNotification = () =>  {
   isNotificationOpen.value = !isNotificationOpen.value;
@@ -54,6 +81,10 @@ const handleCloseNotification = () =>  {
 
 const handleOpenNotification = () =>  {
   isNotificationOpen.value = true;
+}
+
+const handleCloseSlottedNotification = () =>  {
+  isSlottedNotificationOpen.value = false;
 }
 
 const leadingAction = {
