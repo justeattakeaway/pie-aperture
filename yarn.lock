@@ -1811,15 +1811,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-css@npm:1.1.1":
-  version: 1.1.1
-  resolution: "@justeattakeaway/pie-css@npm:1.1.1"
-  dependencies:
-    "@justeat/pie-design-tokens": 7.11.1
-  checksum: 565f0f631773373071affe7e30d7383eea51ecbfd4736e7f9b07ad9805cd7184eafea353c2b5ee31a7b7477d13f05ada75b9bcd321bfc526695b9aba45687834
-  languageName: node
-  linkType: hard
-
 "@justeattakeaway/pie-data-table@npm:0.3.12":
   version: 0.3.12
   resolution: "@justeattakeaway/pie-data-table@npm:0.3.12"
@@ -18512,7 +18503,7 @@ __metadata:
   resolution: "vanilla-app@workspace:vanilla-app"
   dependencies:
     "@chromatic-com/playwright": 0.12.8
-    "@justeattakeaway/pie-css": 1.1.1
+    "@justeattakeaway/pie-css": 1.0.0
     "@justeattakeaway/pie-icons-webc": 1.21.2
     "@justeattakeaway/pie-webc": 0.9.10
     chromatic: 13.3.5
