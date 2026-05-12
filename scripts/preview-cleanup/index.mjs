@@ -4,8 +4,8 @@ import { teardown } from './teardown.mjs';
 const APPS = [
   { appId: 'd1xxjuy6vbm7pk', envPrefix: 'nextjs-app-v14-pr-', name: 'nextjs-app-v14' },
   { appId: 'dg9syjb0jj07x',  envPrefix: 'nextjs-app-v15-pr-', name: 'nextjs-app-v15' },
-  { appId: 'd36dan3bxjue8c', envPrefix: 'nuxt-app-pr-',        name: 'nuxt-app'       },
-  { appId: 'd2vb6sjgivffb3', envPrefix: 'vanilla-app-pr-',     name: 'vanilla-app'    },
+  { appId: 'd36dan3bxjue8c', envPrefix: 'nuxt-app-pr-',       name: 'nuxt-app'       },
+  { appId: 'd2vb6sjgivffb3', envPrefix: 'vanilla-app-pr-',    name: 'vanilla-app'    },
 ];
 const AWS_REGION = 'eu-west-1';
 const CUTOFF_DAYS = parseInt(process.env.AMPLIFY_CUTOFF_DAYS);
