@@ -24,24 +24,34 @@ inputs:
 runs:
   using: composite
   steps:
-  - name: Configure AWS credentials
-    uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502 # v4.0.2
-    with:
-      role-to-assume: ${{ inputs.aws-role-arn }}
-      role-session-name: github-actions-amplify-teardown-${{ github.run_id }}
-      aws-region: ${{ inputs.aws-region }}
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502 # v4.0.2
+      with:
+        role-to-assume: ${{ inputs.aws-role-arn }}
+        role-session-name: github-actions-amplify-teardown-${{ github.run_id }}
+        aws-region: ${{ inputs.aws-region }}
 
-  - name: Delete associated GitHub environment
-    uses: strumwolf/delete-deployment-environment@v2.2.3
-    with:
-      token: ${{ inputs.github-token }}
-      environment: ${{ inputs.environment-name }}
-
-  - name: Delete Amplify branch
-    shell: bash
-    run: |
-      aws amplify delete-branch \
-        --app-id ${{ inputs.amplify-app-id }} \
-        --branch-name ${{ inputs.branch-name }}
-    env:
-      AWS_REGION: ${{ inputs.aws-region }}
+    - name: Teardown environment and Amplify branch
+      uses: actions/github-script@v7
+      env:
+        AMPLIFY_APP_ID: ${{ inputs.amplify-app-id }}
+        ENV_NAME: ${{ inputs.environment-name }}
+        BRANCH_NAME: ${{ inputs.branch-name }}
+        AWS_REGION: ${{ inputs.aws-region }}
+      with:
+        github-token: ${{ inputs.github-token }}
+        script: |
+          const { teardown } = await import(`${process.env.GITHUB_WORKSPACE}/scripts/preview-cleanup/teardown.mjs`);
+          const result = await teardown({
+            octokit: github,
+            exec,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            appId: process.env.AMPLIFY_APP_ID,
+            envName: process.env.ENV_NAME,
+            branchName: process.env.BRANCH_NAME,
+            awsRegion: process.env.AWS_REGION,
+          });
+          if (result.errors.length > 0) {
+            core.setFailed(result.errors.join('; '));
+          }

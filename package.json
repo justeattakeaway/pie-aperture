@@ -6,11 +6,12 @@
     "update-snapshots": "./scripts/update-snapshots.mjs"
   },
   "scripts": {
-    "build": "turbo run build --token=${TURBO_TOKEN}",
+    "build": "turbo run build test --token=${TURBO_TOKEN}",
     "cz": "./node_modules/cz-customizable/standalone.js",
     "dev": "turbo run dev",
     "generate": "turbo run generate --token=${TURBO_TOKEN}",
     "lint": "turbo run lint --token=${TURBO_TOKEN}",
+    "test": "vitest run scripts/preview-cleanup",
     "test:ssr": "turbo run test:ssr --token=${TURBO_TOKEN} --continue",
     "test:system": "turbo run test:system --token=${TURBO_TOKEN} --continue",
     "playwright:show-report": "turbo run playwright:show-report",
@@ -45,7 +46,8 @@
     "follow-redirects": "1.15.11",
     "playwright-merge-html-reports": "0.2.8",
     "selenium-webdriver": "4.27.0",
-    "turbo": "2.9.6"
+    "turbo": "2.9.6",
+    "vitest": "2.1.9"
   },
   "packageManager": "yarn@3.5.0",
   "resolutions": {

@@ -45,6 +45,10 @@
       },
       "upgrade-pie-packages": {
         "cache": false
+      },
+      "test": {
+        "cache": true,
+        "inputs": ["scripts/preview-cleanup/**"]
       }
     }
 }
