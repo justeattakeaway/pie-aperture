@@ -1,6 +1,7 @@
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/notification.js';
 import '@justeattakeaway/pie-webc/components/divider.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconPlusCircle.js';
 import './shared.js';
 import './utils/navigation.js';
 
@@ -41,6 +42,28 @@ document.querySelector('#app').innerHTML = `
         })}'
       >
       A new version is available with exciting features. This notification demonstrates link-based actions instead of buttons.
+    </pie-notification>
+    <pie-divider></pie-divider>
+    <pie-notification
+        id="notification-slotted"
+        variant="info"
+        heading="Slotted Actions"
+        isOpen="true"
+      >
+      This notification uses slotted pie-button elements for custom actions instead of the leadingAction and supportingAction props.
+      <pie-button
+          slot="leadingAction"
+          variant="primary"
+          size="small-productive">
+          <icon-plus-circle slot="icon"></icon-plus-circle>
+          Confirm
+      </pie-button>
+      <pie-button
+          slot="supportingAction"
+          variant="ghost"
+          size="small-productive">
+          Cancel
+      </pie-button>
     </pie-notification>`;
 
 const $notification = document.querySelector('#notification');
@@ -77,4 +100,14 @@ $notification.addEventListener('pie-notification-supporting-action-click', (even
 $notification.addEventListener('pie-notification-leading-action-click', (event) => {
   $notificationActionText.innerHTML = 'Open';
   $notification.removeAttribute('isOpen');
+});
+
+const $notificationSlotted = document.querySelector('#notification-slotted');
+
+$notificationSlotted.querySelector('[slot="leadingAction"]').addEventListener('click', () => {
+  $notificationSlotted.removeAttribute('isOpen');
+});
+
+$notificationSlotted.querySelector('[slot="supportingAction"]').addEventListener('click', () => {
+  $notificationSlotted.removeAttribute('isOpen');
 });

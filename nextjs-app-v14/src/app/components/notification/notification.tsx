@@ -4,10 +4,12 @@ import { useState } from "react";
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieNotification } from '@justeattakeaway/pie-webc/react/notification.js';
 import { PieDivider } from '@justeattakeaway/pie-webc/react/divider.js';
+import { IconPlusCircle } from '@justeattakeaway/pie-icons-webc/dist/react/IconPlusCircle.js';
 import NavigationLayout from "@/app/layout/navigation";
 
 export default function Notification() {
   const [isNotificationOpen, setIsNotificationOpen] = useState(true);
+  const [isSlottedNotificationOpen, setIsSlottedNotificationOpen] = useState(true);
 
   const toggleNotification = () => {
     setIsNotificationOpen((previousState => !previousState))
@@ -57,6 +59,31 @@ export default function Notification() {
         }}
       >
         A new version is available with exciting features. This notification demonstrates link-based actions instead of buttons.
+      </PieNotification>
+
+      <PieDivider />
+
+      <PieNotification
+        isOpen={isSlottedNotificationOpen}
+        variant="info"
+        heading="Slotted Actions"
+      >
+        This notification uses slotted pie-button elements for custom actions instead of the leadingAction and supportingAction props.
+        <PieButton
+            slot="leadingAction"
+            variant="primary"
+            size="small-productive"
+            onClick={() => setIsSlottedNotificationOpen(false)}>
+            <IconPlusCircle slot="icon" />
+            Confirm
+        </PieButton>
+        <PieButton
+            slot="supportingAction"
+            variant="ghost"
+            size="small-productive"
+            onClick={() => setIsSlottedNotificationOpen(false)}>
+            Cancel
+        </PieButton>
       </PieNotification>
     </NavigationLayout>
 
