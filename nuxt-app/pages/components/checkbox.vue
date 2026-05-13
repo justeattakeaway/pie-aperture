@@ -1,7 +1,26 @@
 <template>
   <div>
-    <pie-checkbox :checked="checked" @change="handleCheckboxChange">
-      {{ `checked: ${checked}` }}
+    <h2>Default (trailing, hug)</h2>
+    <pie-checkbox :checked="checked1" @change="() => checked1 = !checked1">
+      {{ `checked: ${checked1}` }}
+    </pie-checkbox>
+
+    <br />
+    <h2>labelPosition="leading", labelFit="hug"</h2>
+    <pie-checkbox :checked="checked2" @change="() => checked2 = !checked2" labelPosition="leading">
+      {{ `checked: ${checked2}` }}
+    </pie-checkbox>
+
+    <br />
+    <h2>labelPosition="leading", labelFit="fill"</h2>
+    <pie-checkbox :checked="checked3" @change="() => checked3 = !checked3" labelPosition="leading" labelFit="fill">
+      {{ `checked: ${checked3}` }}
+    </pie-checkbox>
+
+    <br />
+    <h2>labelPosition="trailing", labelFit="fill"</h2>
+    <pie-checkbox :checked="checked4" @change="() => checked4 = !checked4" labelFit="fill">
+      {{ `checked: ${checked4}` }}
     </pie-checkbox>
   </div>
 </template>
@@ -15,10 +34,9 @@ definePageMeta({
     title: 'Checkbox',
 });
 
-let checked = ref(false);
-
-function handleCheckboxChange() {
-  checked.value = !checked.value;
-}
+let checked1 = ref(false);
+let checked2 = ref(false);
+let checked3 = ref(false);
+let checked4 = ref(false);
 
 </script>
