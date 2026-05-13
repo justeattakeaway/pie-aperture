@@ -1802,12 +1802,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-css@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@justeattakeaway/pie-css@npm:1.0.0"
+"@justeattakeaway/pie-css@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@justeattakeaway/pie-css@npm:1.1.1"
   dependencies:
     "@justeat/pie-design-tokens": 7.11.1
-  checksum: 2363f23890f23f02903cbde04f5277c8f41efa3ff2467470c728b3abe562f221f834fc074efeed6672d9f97ffb2d623677a524e0bff601520c56517b5a1d0cc1
+  checksum: 565f0f631773373071affe7e30d7383eea51ecbfd4736e7f9b07ad9805cd7184eafea353c2b5ee31a7b7477d13f05ada75b9bcd321bfc526695b9aba45687834
   languageName: node
   linkType: hard
 
@@ -1846,15 +1846,6 @@ __metadata:
     "@justeattakeaway/pie-spinner": 1.4.14
     "@justeattakeaway/pie-webc-core": 14.0.1
   checksum: d2d1e2fb416c996f6ff511fdc80dcb5c43aae24e9f384d6434141f36964f1306e9e55fdcfe59c182874130d59d0decda06a0c737aa6c5d1481178e17b53d4d91
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-icons-webc@npm:1.21.2":
-  version: 1.21.2
-  resolution: "@justeattakeaway/pie-icons-webc@npm:1.21.2"
-  dependencies:
-    "@justeattakeaway/pie-webc-core": 13.0.0
-  checksum: 4cf360bf6ba409bc71c0749000dca512a7e2f4605466c1bdc4a00ac2c0a166638d4163e895482b88453b1bcf2a417f6c616ec65a4a56d9e3d3e152b43ffb263d
   languageName: node
   linkType: hard
 
@@ -2039,17 +2030,6 @@ __metadata:
     "@justeattakeaway/pie-icons-webc": 1.23.0
     "@justeattakeaway/pie-webc-core": 14.0.1
   checksum: f105664a6a27809dc8d92e7763726960d9928598f68310f41d7eeffec5b5a42317f11c80b58a80599816310aa0fd65ddcfc81949c22b11768b5062317871d029
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-webc-core@npm:13.0.0":
-  version: 13.0.0
-  resolution: "@justeattakeaway/pie-webc-core@npm:13.0.0"
-  dependencies:
-    lit: 3.2.0
-  peerDependencies:
-    "@justeattakeaway/pie-css": 1.0.0
-  checksum: 6a8d5d39eca4714a6b5b19f30fc2b3fddc568a0cd51192c4bfd4b09dd6e142a22e64d6bda921d28818b71da95746cf03a4d40aeaf2605217cba76b5254256380
   languageName: node
   linkType: hard
 
@@ -13553,8 +13533,8 @@ __metadata:
   resolution: "nextjs-app-v14@workspace:nextjs-app-v14"
   dependencies:
     "@chromatic-com/playwright": 0.12.8
-    "@justeattakeaway/pie-css": 1.0.0
-    "@justeattakeaway/pie-icons-webc": 1.21.2
+    "@justeattakeaway/pie-css": 1.1.1
+    "@justeattakeaway/pie-icons-webc": 1.23.0
     "@justeattakeaway/pie-webc": 0.10.8
     "@lit-labs/nextjs": 0.2.3
     "@lit/react": 1.0.7
@@ -13580,8 +13560,8 @@ __metadata:
   dependencies:
     "@chromatic-com/playwright": 0.12.8
     "@eslint/eslintrc": 3
-    "@justeattakeaway/pie-css": 1.0.0
-    "@justeattakeaway/pie-icons-webc": 1.21.2
+    "@justeattakeaway/pie-css": 1.1.1
+    "@justeattakeaway/pie-icons-webc": 1.23.0
     "@justeattakeaway/pie-webc": 0.10.8
     "@lit-labs/nextjs": 0.2.4
     "@lit/react": 1.0.8
@@ -13944,8 +13924,8 @@ __metadata:
   resolution: "nuxt-app@workspace:nuxt-app"
   dependencies:
     "@chromatic-com/playwright": 0.12.8
-    "@justeattakeaway/pie-css": 1.0.0
-    "@justeattakeaway/pie-icons-webc": 1.21.2
+    "@justeattakeaway/pie-css": 1.1.1
+    "@justeattakeaway/pie-icons-webc": 1.23.0
     "@justeattakeaway/pie-webc": 0.10.8
     chromatic: 13.3.5
     deepmerge: 4.3.1
@@ -18523,8 +18503,8 @@ __metadata:
   resolution: "vanilla-app@workspace:vanilla-app"
   dependencies:
     "@chromatic-com/playwright": 0.12.8
-    "@justeattakeaway/pie-css": 1.0.0
-    "@justeattakeaway/pie-icons-webc": 1.21.2
+    "@justeattakeaway/pie-css": 1.1.1
+    "@justeattakeaway/pie-icons-webc": 1.23.0
     "@justeattakeaway/pie-webc": 0.10.8
     chromatic: 13.3.5
     deepmerge: 4.3.1
