@@ -7,6 +7,10 @@ const state = {
     cb2: false,
     cb3: false,
     cb4: false,
+    cb5: true,
+    cb6: true,
+    cb7: true,
+    cb8: true,
 };
 
 function createHandler(key) {
@@ -34,6 +38,22 @@ document.querySelector('#app').innerHTML = `
     <br />
     <h2>labelPosition="trailing", labelFit="fill"</h2>
     <pie-checkbox id="cb4" labelFit="fill">checked: ${state.cb4}</pie-checkbox>
+
+    <br />
+    <h2>Default (trailing, hug) - Checked</h2>
+    <pie-checkbox id="cb5" checked>checked: ${state.cb5}</pie-checkbox>
+
+    <br />
+    <h2>labelPosition="leading", labelFit="hug" - Checked</h2>
+    <pie-checkbox id="cb6" checked labelPosition="leading">checked: ${state.cb6}</pie-checkbox>
+
+    <br />
+    <h2>labelPosition="leading", labelFit="fill" - Checked</h2>
+    <pie-checkbox id="cb7" checked labelPosition="leading" labelFit="fill">checked: ${state.cb7}</pie-checkbox>
+
+    <br />
+    <h2>labelPosition="trailing", labelFit="fill" - Checked</h2>
+    <pie-checkbox id="cb8" checked labelFit="fill">checked: ${state.cb8}</pie-checkbox>
 `;
 
 // Add individual event listeners
