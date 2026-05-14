@@ -1766,13 +1766,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-checkbox@npm:1.0.23":
-  version: 1.0.23
-  resolution: "@justeattakeaway/pie-checkbox@npm:1.0.23"
+"@justeattakeaway/pie-checkbox@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@justeattakeaway/pie-checkbox@npm:1.1.0"
   dependencies:
     "@justeattakeaway/pie-assistive-text": 0.11.29
     "@justeattakeaway/pie-webc-core": 14.0.1
-  checksum: a0f78f08216b28d1dd7d206cc28e1ecc1f8a5f0b97d1d1fa4d11b4f42ad617fa0ee684d517a44e293ade3af565c262478e07c355998d8d3e786860dabfb83e59
+  checksum: 04cfdfb05dd4462f881685e0ac71f206707ea12d8e1c84bf24e6c0aa1a63cb37cdde1ebcc586ab01c08a944c17a61d13e2a2b01802700745f3c750693abaa4eb
   languageName: node
   linkType: hard
 
@@ -2044,16 +2044,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-webc@npm:0.10.7":
-  version: 0.10.7
-  resolution: "@justeattakeaway/pie-webc@npm:0.10.7"
+"@justeattakeaway/pie-webc@npm:0.10.8":
+  version: 0.10.8
+  resolution: "@justeattakeaway/pie-webc@npm:0.10.8"
   dependencies:
     "@justeattakeaway/pie-assistive-text": 0.11.29
     "@justeattakeaway/pie-avatar": 0.4.31
     "@justeattakeaway/pie-breadcrumb": 0.8.3
     "@justeattakeaway/pie-button": 1.14.0
     "@justeattakeaway/pie-card": 0.26.23
-    "@justeattakeaway/pie-checkbox": 1.0.23
+    "@justeattakeaway/pie-checkbox": 1.1.0
     "@justeattakeaway/pie-checkbox-group": 1.0.22
     "@justeattakeaway/pie-chip": 0.15.27
     "@justeattakeaway/pie-cookie-banner": 1.7.27
@@ -2080,7 +2080,7 @@ __metadata:
     "@justeattakeaway/pie-toast-provider": 0.7.42
   bin:
     add-components: src/index.js
-  checksum: b36841c2eece59502f224215b8e977ef5dc6cb1dea7dc4ffc7b42bd614f4fc2e7f1f302ad83253d9c950aa20f043ab11db74e4a52335967996de4a206895d542
+  checksum: fa4272b66dba6ea2df7688eeb2f8c1714874d601a767906c226bbda56156fcb9f71ff16ffcee6dac69a2550d7d3ca8b9a949748c2c4de17b4ee6408a3683c55c
   languageName: node
   linkType: hard
 
@@ -13535,7 +13535,7 @@ __metadata:
     "@chromatic-com/playwright": 0.12.8
     "@justeattakeaway/pie-css": 1.1.1
     "@justeattakeaway/pie-icons-webc": 1.23.0
-    "@justeattakeaway/pie-webc": 0.10.7
+    "@justeattakeaway/pie-webc": 0.10.8
     "@lit-labs/nextjs": 0.2.3
     "@lit/react": 1.0.7
     "@types/node": 20.19.25
@@ -13562,7 +13562,7 @@ __metadata:
     "@eslint/eslintrc": 3
     "@justeattakeaway/pie-css": 1.1.1
     "@justeattakeaway/pie-icons-webc": 1.23.0
-    "@justeattakeaway/pie-webc": 0.10.7
+    "@justeattakeaway/pie-webc": 0.10.8
     "@lit-labs/nextjs": 0.2.4
     "@lit/react": 1.0.8
     "@types/node": 20.19.25
@@ -13926,7 +13926,7 @@ __metadata:
     "@chromatic-com/playwright": 0.12.8
     "@justeattakeaway/pie-css": 1.1.1
     "@justeattakeaway/pie-icons-webc": 1.23.0
-    "@justeattakeaway/pie-webc": 0.10.7
+    "@justeattakeaway/pie-webc": 0.10.8
     chromatic: 13.3.5
     deepmerge: 4.3.1
     just-kebab-case: 4.2.0
@@ -18505,7 +18505,7 @@ __metadata:
     "@chromatic-com/playwright": 0.12.8
     "@justeattakeaway/pie-css": 1.1.1
     "@justeattakeaway/pie-icons-webc": 1.23.0
-    "@justeattakeaway/pie-webc": 0.10.7
+    "@justeattakeaway/pie-webc": 0.10.8
     chromatic: 13.3.5
     deepmerge: 4.3.1
     npm-check-updates: 18.3.1
