@@ -10,6 +10,7 @@ const APPS = [
 const AWS_REGION = 'eu-west-1';
 const CUTOFF_DAYS = parseInt(process.env.AMPLIFY_CUTOFF_DAYS);
 const MAX_SUMMARY_ROWS = 200;
+// Prevents actions/github-script from interfering with our teardown logic - https://github.com/actions/toolkit/blob/main/packages/exec/src/interfaces.ts#L28
 const AWS_EXEC_OPTS = { ignoreReturnCode: true, silent: true };
 
 export async function run({ github, context, core, exec }) {
