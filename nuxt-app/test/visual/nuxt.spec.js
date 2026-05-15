@@ -1,5 +1,5 @@
 const { waitForPageTitleToBe } = require('../../../webdriver-helpers/wait-helper.js');
-const { percyScreenshot } = require('@percy/selenium-webdriver');
+const { percyScreenshot } = require('@percy/webdriverio');
 
 describe('Nuxt Aperture App', () => {
     const pages = [

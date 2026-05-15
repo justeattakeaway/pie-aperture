@@ -1,5 +1,5 @@
 import { waitForPageTitleToBe } from '../../../webdriver-helpers/wait-helper.js';
-import { percyScreenshot } from '@percy/selenium-webdriver';
+import { percyScreenshot } from '@percy/webdriverio';
 
 describe('Vanilla Aperture App', () => {
     const pages = [
