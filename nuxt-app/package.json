@@ -11,7 +11,6 @@
     "test:ssr": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts --project=ssr",
     "test:system": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts --project=system",
     "test:visual": "PERCY_TOKEN=${PERCY_TOKEN_PIE_APERTURE_NUXT} npx percy exec -- wdio run ./wdio.conf.js",
-    "test:visual:chromatic": "APP_NAME=nuxt-app npx playwright test -c ../playwright.config.ts --project=visual",
     "upgrade-pie-packages": "yarn npm-check-updates \"@justeattakeaway/pie-*\" -u"
   },
   "devDependencies": {
@@ -21,11 +20,9 @@
     "sass": "1.98.0"
   },
   "dependencies": {
-    "@chromatic-com/playwright": "0.12.8",
-    "@justeattakeaway/pie-css": "1.0.0",
-    "@justeattakeaway/pie-icons-webc": "1.21.2",
-    "@justeattakeaway/pie-webc": "0.9.10",
-    "chromatic": "13.3.5",
+    "@justeattakeaway/pie-css": "1.1.1",
+    "@justeattakeaway/pie-icons-webc": "1.23.0",
+    "@justeattakeaway/pie-webc": "0.10.8",
     "just-kebab-case": "4.2.0",
     "nuxt-ssr-lit": "1.6.27"
   },

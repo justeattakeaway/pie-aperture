@@ -43,11 +43,6 @@ export default {
         use: { ...devices['Desktop Chrome'] },
         testMatch: `${monorepoRoot}/test/ssr/**/*.spec.ts`,
     },
-    {
-      name: 'visual',
-      use: { ...devices['Desktop Chrome'] },
-      testMatch: process.env.APP_NAME ? `${monorepoRoot}/${process.env.APP_NAME}/test/visual/**/*-chromatic.spec.js` : undefined,
-    }
 ],
 
 webServer: process.env.CI ? undefined : {
