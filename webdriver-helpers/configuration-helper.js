@@ -83,6 +83,7 @@ exports.createCapability = (os, osVersion, browserName, browserVersion, deviceNa
             os,
             osVersion,
             browserVersion,
+            resolution: '1920x1080',
         },
         browserName,
     };
@@ -93,6 +94,7 @@ exports.createCapability = (os, osVersion, browserName, browserVersion, deviceNa
         // Remove unnecessary properties for mobile configuration
         delete capability['bstack:options'].os;
         delete capability['bstack:options'].browserVersion;
+        delete capability['bstack:options'].resolution;
     }
 
     return capability;
