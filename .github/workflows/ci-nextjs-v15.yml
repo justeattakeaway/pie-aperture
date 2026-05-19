@@ -27,16 +27,14 @@ env:
 
 jobs:
 
-  # Commenting this out for now as there's currently an issue with Next.
-
-  # build-next-app-windows:
-  #   name: Windows
-  #   uses: ./.github/workflows/build.yml
-  #   with:
-  #       deploy: false
-  #       os: 'windows-latest'
-  #       package-name: 'nextjs-app-v15'
-  #   secrets: inherit
+  build-next-app-windows:
+    name: Windows
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        os: 'windows-latest'
+        package-name: 'nextjs-app-v15'
+    secrets: inherit
 
 
   build-deploy-next-app-ubuntu:

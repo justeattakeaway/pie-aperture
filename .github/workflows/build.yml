@@ -32,7 +32,7 @@ on:
         type: string
       aws-role-arn:
         description: 'The AWS IAM role ARN to assume for OIDC authentication'
-        required: true
+        required: false
         type: string
       deploy:
         description: "Boolean flag on whether to deploy the application with the given node version"
@@ -140,6 +140,7 @@ jobs:
 
       # Configure AWS credentials using OIDC
       - name: Configure AWS credentials
+        if: inputs.deploy == true
         uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502 # v4.0.2
         with:
           role-to-assume: ${{ inputs.aws-role-arn }}
