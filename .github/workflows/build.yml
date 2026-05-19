@@ -10,10 +10,6 @@ on:
         required: false
         default: build
         type: string
-      node-version:
-        description: "The node version to use when building the application"
-        required: true
-        type: number
       os:
         description: "The operating system to use when building the application"
         required: true
@@ -150,11 +146,36 @@ jobs:
           role-session-name: github-actions-${{ github.run_id }}
           aws-region: ${{ env.AWS_REGION }}
 
+      # Read tool versions from .mise.toml (single source of truth)
+      - name: Read tool versions from .mise.toml
+        id: mise
+        shell: bash
+        run: |
+          node_version=$(grep -E '^node\s*=' .mise.toml | sed -E 's/.*"([^"]+)".*/\1/')
+          yarn_version=$(grep -E '^yarn\s*=' .mise.toml | sed -E 's/.*"([^"]+)".*/\1/')
+          if [ -z "$node_version" ]; then
+            echo 'Failed to read node version from .mise.toml'
+            exit 1
+          fi
+          if [ -z "$yarn_version" ]; then
+            echo 'Failed to read yarn version from .mise.toml'
+            exit 1
+          fi
+          echo "node-version=$node_version" >> "$GITHUB_OUTPUT"
+          echo "yarn-version=$yarn_version" >> "$GITHUB_OUTPUT"
+
       # Setup Node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ inputs.node-version }}
+          node-version: ${{ steps.mise.outputs.node-version }}
+
+      # Enable corepack and activate the correct Yarn version
+      - name: Enable Corepack
+        shell: bash
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ steps.mise.outputs.yarn-version }} --activate
 
       - name: Install Dependencies
         shell: bash

@@ -29,22 +29,20 @@ jobs:
 
   # Commenting this out for now as there's currently an issue with Next.
 
-  # build-next-app-windows-node20:
-  #   name: Windows - Node 20
+  # build-next-app-windows:
+  #   name: Windows
   #   uses: ./.github/workflows/build.yml
   #   with:
   #       deploy: false
-  #       node-version: 20
   #       os: 'windows-latest'
   #       package-name: 'nextjs-app-v14'
   #   secrets: inherit
 
-  build-deploy-next-app-ubuntu-node20:
-      name: Ubuntu - Node 20
+  build-deploy-next-app-ubuntu:
+      name: Ubuntu
       uses: ./.github/workflows/build.yml
       with:
           deploy: true
-          node-version: 20
           os: 'ubuntu-latest'
           amplify-app-id: 'd1xxjuy6vbm7pk'
           package-name: 'nextjs-app-v14'
@@ -55,7 +53,7 @@ jobs:
       secrets: inherit
 
   system-tests:
-    needs: 'build-deploy-next-app-ubuntu-node20'
+    needs: 'build-deploy-next-app-ubuntu'
     name: Run System Tests
     runs-on: ubuntu-latest
     steps:
@@ -64,11 +62,25 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Read tool versions from .mise.toml
+        id: mise
+        shell: bash
+        run: |
+          node_version=$(grep -E '^node\s*=' .mise.toml | sed -E 's/.*"([^"]+)".*/\1/')
+          yarn_version=$(grep -E '^yarn\s*=' .mise.toml | sed -E 's/.*"([^"]+)".*/\1/')
+          echo "node-version=$node_version" >> "$GITHUB_OUTPUT"
+          echo "yarn-version=$yarn_version" >> "$GITHUB_OUTPUT"
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: "yarn"
+          node-version: ${{ steps.mise.outputs.node-version }}
+
+      - name: Enable Corepack
+        shell: bash
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ steps.mise.outputs.yarn-version }} --activate
 
       - name: Install Dependencies
         shell: bash
@@ -96,7 +108,7 @@ jobs:
       PR_NUMBER: ${{ github.event.number }}
 
   percy-tests:
-    needs: 'build-deploy-next-app-ubuntu-node20'
+    needs: 'build-deploy-next-app-ubuntu'
     if: (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.ref == 'refs/heads/main'
     name: Run Percy Tests
     runs-on: ubuntu-latest
@@ -106,11 +118,25 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Read tool versions from .mise.toml
+        id: mise
+        shell: bash
+        run: |
+          node_version=$(grep -E '^node\s*=' .mise.toml | sed -E 's/.*"([^"]+)".*/\1/')
+          yarn_version=$(grep -E '^yarn\s*=' .mise.toml | sed -E 's/.*"([^"]+)".*/\1/')
+          echo "node-version=$node_version" >> "$GITHUB_OUTPUT"
+          echo "yarn-version=$yarn_version" >> "$GITHUB_OUTPUT"
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: "yarn"
+          node-version: ${{ steps.mise.outputs.node-version }}
+
+      - name: Enable Corepack
+        shell: bash
+        run: |
+          corepack enable
+          corepack prepare yarn@${{ steps.mise.outputs.yarn-version }} --activate
 
       - name: Install Dependencies
         shell: bash
