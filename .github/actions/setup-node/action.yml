@@ -1,0 +1,37 @@
+name: setup-node
+description: Sets up Node.js and Yarn from .mise.toml and installs dependencies
+
+runs:
+  using: composite
+  steps:
+    - name: Read tool versions from .mise.toml
+      id: mise
+      shell: bash
+      run: |
+        node_version=$(grep -E '^node\s*=' .mise.toml | sed -E 's/.*"([^"]+)".*/\1/')
+        yarn_version=$(grep -E '^yarn\s*=' .mise.toml | sed -E 's/.*"([^"]+)".*/\1/')
+        if [ -z "$node_version" ]; then
+          echo 'Failed to read node version from .mise.toml'
+          exit 1
+        fi
+        if [ -z "$yarn_version" ]; then
+          echo 'Failed to read yarn version from .mise.toml'
+          exit 1
+        fi
+        echo "node-version=$node_version" >> "$GITHUB_OUTPUT"
+        echo "yarn-version=$yarn_version" >> "$GITHUB_OUTPUT"
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ steps.mise.outputs.node-version }}
+
+    - name: Enable Corepack
+      shell: bash
+      run: |
+        corepack enable
+        corepack prepare yarn@${{ steps.mise.outputs.yarn-version }} --activate
+
+    - name: Install Dependencies
+      shell: bash
+      run: yarn
