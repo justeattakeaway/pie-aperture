@@ -22,15 +22,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Setup Node
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
-      # Install dependencies
-      - name: Install dependencies
-        run: yarn
+      - name: Setup Node and Install Dependencies
+        uses: ./.github/actions/setup-node
 
       # Update snapshots
       - name: Update snapshots

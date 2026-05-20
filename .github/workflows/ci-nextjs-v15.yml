@@ -27,25 +27,21 @@ env:
 
 jobs:
 
-  # Commenting this out for now as there's currently an issue with Next.
-
-  # build-next-app-windows-node20:
-  #   name: Windows - Node 20
-  #   uses: ./.github/workflows/build.yml
-  #   with:
-  #       deploy: false
-  #       node-version: 20
-  #       os: 'windows-latest'
-  #       package-name: 'nextjs-app-v15'
-  #   secrets: inherit
+  build-next-app-windows:
+    name: Windows
+    uses: ./.github/workflows/build.yml
+    with:
+        deploy: false
+        os: 'windows-latest'
+        package-name: 'nextjs-app-v15'
+    secrets: inherit
 
 
-  build-deploy-next-app-ubuntu-node20:
-      name: Ubuntu - Node 20
+  build-deploy-next-app-ubuntu:
+      name: Ubuntu
       uses: ./.github/workflows/build.yml
       with:
           deploy: true
-          node-version: 20
           os: 'ubuntu-latest'
           amplify-app-id: 'dg9syjb0jj07x'
           package-name: 'nextjs-app-v15'
@@ -56,7 +52,7 @@ jobs:
       secrets: inherit
 
   system-tests:
-    needs: 'build-deploy-next-app-ubuntu-node20'
+    needs: 'build-deploy-next-app-ubuntu'
     name: Run System Tests
     runs-on: ubuntu-latest
     steps:
@@ -65,15 +61,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "yarn"
-
-      - name: Install Dependencies
-        shell: bash
-        run: yarn
+      - name: Setup Node and Install Dependencies
+        uses: ./.github/actions/setup-node
 
       - name: Setup Playwright
         uses: ./.github/actions/setup-playwright
@@ -97,7 +86,7 @@ jobs:
       PR_NUMBER: ${{ github.event.number }}
 
   percy-tests:
-    needs: 'build-deploy-next-app-ubuntu-node20'
+    needs: 'build-deploy-next-app-ubuntu'
     if: (github.event_name == 'pull_request' && github.event.pull_request.draft == false) || github.ref == 'refs/heads/main'
     name: Run Percy Tests
     runs-on: ubuntu-latest
@@ -107,15 +96,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: "yarn"
-
-      - name: Install Dependencies
-        shell: bash
-        run: yarn
+      - name: Setup Node and Install Dependencies
+        uses: ./.github/actions/setup-node
 
       - name: Run Percy Tests
         shell: bash
