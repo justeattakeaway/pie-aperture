@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<pie-assistive-text variant="default">Assistive Text Default</pie-assistive-text>
-		<pie-assistive-text variant="success">Assistive Text Success</pie-assistive-text>
-		<pie-assistive-text variant="error">Assistive Text Error</pie-assistive-text>
+		<pie-assistive-text variant="default" message="Assistive Text Default"></pie-assistive-text>
+		<pie-assistive-text variant="success" message="Assistive Text Success"></pie-assistive-text>
+		<pie-assistive-text variant="error" message="Assistive Text Error"></pie-assistive-text>
 	</div>
 </template>
 
