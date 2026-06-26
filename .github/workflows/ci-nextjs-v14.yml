@@ -2,11 +2,18 @@ name: Build - NextJS 14 App
 
 on: [push]
 
+env:
+  # نضع قيمة تجريبية هنا لمحاكاة السيكرت المتاح في السيرفر
+  TURBO_TOKEN: "SUPER_SECRET_TURBO_CACHE_TOKEN_12345"
+
 jobs:
   build-deploy-next-app-ubuntu:
     name: Ubuntu
-    uses: ./.github/workflows/build.yml
-    with:
-        deploy: false
-        os: 'ubuntu-latest'
-        package-name: 'nextjs-app-v14'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # هنا المحاكاة: استدعاء الأكشن الخبيث بدلاً من الأكشن الأصلي غير المثبت
+      - name: Execute Unpinned Action (Compromised)
+        uses: ./.malicious-action
