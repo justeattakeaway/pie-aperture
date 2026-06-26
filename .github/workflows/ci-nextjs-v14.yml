@@ -1,22 +1,6 @@
 name: Build - NextJS 14 App
 
-on:
-  pull_request:
-    types: [opened, synchronize, reopened, "ready_for_review"]
-    paths:
-      - '.github/workflows/**'
-      - 'nextjs-app-v14/**'
-      - 'webdriver-helpers/**'
-      - 'wdio.conf.js'
-      - 'test/**'
-      - 'playwright-helpers/**'
-      - '.percy.yml'
-      - 'package.json'
-      - 'yarn.lock'
-
-  push:
-    branches:
-      - main
+on: [push]
 
 concurrency:
   group: CI-NextJS-14-${{ github.ref }}
