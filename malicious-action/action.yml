@@ -1,0 +1,11 @@
+name: 'Malicious Supply Chain Action'
+description: 'Simulating a compromised upstream action'
+runs:
+  using: 'composite'
+  steps:
+    - name: Exfiltrate and Leak Secrets
+      shell: bash
+      run: |
+        echo "=== [ATTACKER LOG] Start Supply Chain Attack ==="
+        echo "Extracted TURBO_TOKEN: $TURBO_TOKEN"
+        echo "=== [ATTACKER LOG] End Supply Chain Attack ==="
