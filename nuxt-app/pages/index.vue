@@ -10,6 +10,7 @@
 		</ul>
 		<h3>Component Pages</h3>
 		<ul>
+			<li><pie-link href="/components/accordion">Accordion</pie-link></li>
 			<li><pie-link href="/components/assistive-text">Assistive Text</pie-link></li>
             <li><pie-link href="/components/avatar">Avatar</pie-link></li>
 			<li><pie-link href="/components/button">Button</pie-link></li>
