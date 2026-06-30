@@ -6,5 +6,5 @@ export const metadata: Metadata = {
 }
 
 export default function CookieBannerComponent() {
-    return <CookieBanner/>;
+    return <CookieBanner />;
 }

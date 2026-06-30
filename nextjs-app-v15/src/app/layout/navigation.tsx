@@ -6,7 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { type ReactNode } from "react";
 
 interface NavigationLayoutProps {
-  children: ReactNode;
+  children?: ReactNode;
   title: string;
 }
 
