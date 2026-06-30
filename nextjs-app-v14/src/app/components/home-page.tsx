@@ -21,6 +21,7 @@ export default function HomePage() {
     </ul>
     <h2>Component Pages</h2>
     <ul>
+        <li><PieLink onClick={() => router.push('/components/accordion')} tag="button">Accordion</PieLink></li>
         <li><PieLink onClick={() => router.push('/components/assistive-text')} tag="button">Assistive Text</PieLink></li>
         <li><PieLink onClick={() => router.push('/components/avatar')} tag="button">Avatar</PieLink></li>
         <li><PieLink onClick={() => router.push('/components/button')} tag="button">Button</PieLink></li>
