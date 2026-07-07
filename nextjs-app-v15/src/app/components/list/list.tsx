@@ -16,13 +16,13 @@ export default function List() {
     return (
         <NavigationLayout title="List">
             <h2 id="plain-text-list-heading" style={{ padding: '8px 0' }}>PIE List - plain text items</h2>
-            <PieCard variant="outline">
+
                 <PieList aria-labelledby="plain-text-list-heading">
                     <PieListItem primaryText="First list item" isBold={false} isCompact={false} hasMedia={false} />
                     <PieListItem primaryText="Second list item" isBold={false} isCompact={false} hasMedia={false} />
                     <PieListItem primaryText="Third list item" isBold={false} isCompact={false} hasMedia={false} />
                 </PieList>
-            </PieCard>
+
 
             <h2 id="mixed-content-list-heading" style={{ padding: '8px 0' }}>PIE List - mixed content</h2>
             <PieCard variant="outline">
