@@ -24,6 +24,7 @@ describe('Vanilla Aperture App', () => {
         { url: '/components/icon.html', name: 'Icon' },
         { url: '/components/icon-button.html', name: 'Icon Button' },
         { url: '/components/link.html', name: 'Link' },
+        { url: '/components/list.html', name: 'List' },
         { url: '/components/lottie-player.html', name: 'Lottie Player', pauseBeforeScreenshot: true },
         { url: '/components/modal.html', name: 'Modal' },
         { url: '/components/notification.html', name: 'Notification' },
