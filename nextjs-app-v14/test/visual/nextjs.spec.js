@@ -4,6 +4,7 @@ const { percyScreenshot } = require('@percy/selenium-webdriver');
 describe('NextJS Aperture App', () => {
     const pages = [
         { url: '/', name: 'PIE Aperture' },
+        { url: '/components/accordion', name: 'Accordion' },
         { url: '/components/assistive-text', name: 'Assistive Text' },
         { url: '/components/avatar', name: 'Avatar' },
         { url: '/components/button', name: 'Button' },
