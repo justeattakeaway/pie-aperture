@@ -16,6 +16,7 @@ type componentConfiguration = {
 }
 
 const componentConfigs: componentConfiguration[] = [
+    { selector: 'accordion', page: 'accordion' },
     { selector: 'assistive-text', page: 'assistive-text' },
     { selector: 'avatar', page: 'avatar' },
     { selector: 'breadcrumb', page: 'breadcrumb' },
