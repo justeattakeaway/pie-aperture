@@ -1,4 +1,4 @@
-const { waitForPageTitleToBe } = require('../../../webdriver-helpers/wait-helper.js');
+const { waitUntilPageLoad } = require('../../../webdriver-helpers/wait-helper.js');
 const { percyScreenshot } = require('@percy/selenium-webdriver');
 
 describe('Nuxt Aperture App', () => {
@@ -44,7 +44,7 @@ describe('Nuxt Aperture App', () => {
     pages.forEach((page) => {
         it(`should navigate to the ${page.name} page.`, async () => {
             await browser.url(`${page.url}?PERCY=true`);
-            await waitForPageTitleToBe(page.name);
+            await waitUntilPageLoad();
             // Some components might require extra time to mount and load its dependencies.
             // Delaying the screenshot helps to avoid false negatives in diffs.
             if (page.pauseBeforeScreenshot) await browser.pause(5000);
