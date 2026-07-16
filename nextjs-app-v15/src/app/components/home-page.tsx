@@ -22,6 +22,7 @@ export default function HomePage() {
     <h2>Component Pages</h2>
     <ul>
     {/* To be implemented in future PR */}
+    <li><PieLink onClick={() => router.push('/components/accordion')} tag="button">Accordion</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/assistive-text')} tag="button">Assistive Text</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/avatar')} tag="button">Avatar</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/breadcrumb')} tag="button">Breadcrumb</PieLink></li>
@@ -38,6 +39,7 @@ export default function HomePage() {
     <li><PieLink onClick={() => router.push('/components/icon')} tag="button">Icon</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/icon-button')} tag="button">Icon Button</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/link')} tag="button">Link</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/list')} tag="button">List</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/lottie-player')} tag="button">Lottie Player</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/modal')} tag="button">Modal</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/notification')} tag="button">Notification</PieLink></li>

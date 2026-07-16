@@ -10,6 +10,7 @@
 		</ul>
 		<h3>Component Pages</h3>
 		<ul>
+			<li><pie-link href="/components/accordion">Accordion</pie-link></li>
 			<li><pie-link href="/components/assistive-text">Assistive Text</pie-link></li>
             <li><pie-link href="/components/avatar">Avatar</pie-link></li>
 			<li><pie-link href="/components/button">Button</pie-link></li>
@@ -27,6 +28,7 @@
             <li><pie-link href="/components/icon-button">Icon Button</pie-link></li>
             <li><pie-link href="/components/lottie-player">Lottie Player</pie-link></li>
             <li><pie-link href="/components/link">Link</pie-link></li>
+            <li><pie-link href="/components/list">List</pie-link></li>
             <li><pie-link href="/components/modal">Modal</pie-link></li>
             <li><pie-link href="/components/notification">Notification</pie-link></li>
             <li><pie-link href="/components/radio">Radio</pie-link></li>

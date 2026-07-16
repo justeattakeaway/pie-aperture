@@ -1,9 +1,10 @@
-const { waitForPageTitleToBe } = require('../../../webdriver-helpers/wait-helper.js');
+const { waitUntilPageLoad } = require('../../../webdriver-helpers/wait-helper.js');
 const { percyScreenshot } = require('@percy/selenium-webdriver');
 
 describe('Nuxt Aperture App', () => {
     const pages = [
         { url: '/', name: 'PIE Aperture' },
+        { url: '/components/accordion', name: 'Accordion' },
         { url: '/components/assistive-text', name: 'Assistive Text' },
         { url: '/components/avatar', name: 'Avatar' },
         { url: '/components/button', name: 'Button' },
@@ -24,6 +25,7 @@ describe('Nuxt Aperture App', () => {
         { url: '/components/icon', name: 'Icon' },
         { url: '/components/icon-button', name: 'Icon Button' },
         { url: '/components/link', name: 'Link' },
+        { url: '/components/list', name: 'List' },
         { url: '/components/lottie-player', name: 'Lottie Player', pauseBeforeScreenshot: true },
         { url: '/components/modal', name: 'Modal' },
         { url: '/components/notification', name: 'Notification' },
@@ -42,7 +44,7 @@ describe('Nuxt Aperture App', () => {
     pages.forEach((page) => {
         it(`should navigate to the ${page.name} page.`, async () => {
             await browser.url(`${page.url}?PERCY=true`);
-            await waitForPageTitleToBe(page.name);
+            await waitUntilPageLoad();
             // Some components might require extra time to mount and load its dependencies.
             // Delaying the screenshot helps to avoid false negatives in diffs.
             if (page.pauseBeforeScreenshot) await browser.pause(5000);
