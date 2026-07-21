@@ -121,4 +121,29 @@ test.describe('SSR - Components render with shadow dom and styles', () => {
             expect(pieComponentHtml).toMatch(styleRegex);
         });
     });
+
+    // The selectable-list pages are multi-component (a `pie-radio-group` hosting `pie-list-item`
+    // rows), so the page URL does not match a single `pie-<tag>` like the entries above. Assert
+    // directly that the `pie-list-item` server-renders with shadow DOM and styles - this is the
+    // component that carries the `@lit/context` provider/consumer whose SSR safety we care about.
+    test(`SSR: ${APP_NAME}: list-item-radio-selection`, async () => {
+        // Arrange
+        const shadowDomRegex = /<template\s+([^>]*shadowroot="open"[^>]*shadowrootmode="open"[^>]*|[^>]*shadowrootmode="open"[^>]*shadowroot="open"[^>]*)>/;
+        const styleRegex = /<style>[\s\S]*?<\/style>/;
+
+        // Act
+        const rawHtml = await fetchHtml(getComponentPageUrl('list-item-radio-selection', baseUrl));
+        const pieComponentMatch = rawHtml.match(createComponentRegex('list-item'));
+
+        if (!pieComponentMatch) {
+            console.warn('Failed to find pie-list-item in the SSR html:', rawHtml);
+        }
+
+        const pieComponentHtml = pieComponentMatch ? pieComponentMatch[0] : null;
+
+        // Assert
+        expect(pieComponentHtml).not.toBeNull();
+        expect(pieComponentHtml).toMatch(shadowDomRegex);
+        expect(pieComponentHtml).toMatch(styleRegex);
+    });
 });

@@ -21,10 +21,10 @@
   },
   "dependencies": {
     "@justeattakeaway/pie-css": "1.2.0",
-    "@justeattakeaway/pie-icons-webc": "0.0.0-snapshot-release-20260721084832",
-    "@justeattakeaway/pie-webc": "0.0.0-snapshot-release-20260721084832",
+    "@justeattakeaway/pie-icons-webc": "0.0.0-snapshot-release-20260721162956",
+    "@justeattakeaway/pie-webc": "0.0.0-snapshot-release-20260721162956",
     "just-kebab-case": "4.2.0",
-    "nuxt-ssr-lit": "1.6.27"
+    "nuxt-ssr-lit": "1.6.33"
   },
   "installConfig": {
     "hoistingLimits": "workspaces"

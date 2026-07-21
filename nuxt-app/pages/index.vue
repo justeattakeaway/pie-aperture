@@ -33,6 +33,7 @@
             <li><pie-link href="/components/notification">Notification</pie-link></li>
             <li><pie-link href="/components/radio">Radio</pie-link></li>
             <li><pie-link href="/components/radio-group">Radio Group</pie-link></li>
+            <li><pie-link href="/components/list-item-radio-selection">List Item Radio Selection</pie-link></li>
             <li><pie-link href="/components/spinner">Spinner</pie-link></li>
             <li><pie-link href="/components/switch">Switch</pie-link></li>
             <li><pie-link href="/components/select">Select</pie-link></li>
