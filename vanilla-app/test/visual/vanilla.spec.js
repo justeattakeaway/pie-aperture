@@ -47,7 +47,7 @@ describe('Vanilla Aperture App', () => {
             await waitUntilPageLoad();
             // Some components might require extra time to mount and load its dependencies.
             // Delaying the screenshot helps to avoid false negatives in diffs.
-            if (page.pauseBeforeScreenshot) await browser.pause(5000);
+            if (page.pauseBeforeScreenshot) await browser.pause(20000);
             await percyScreenshot(page.name, { fullPage: true });
         });
     });
