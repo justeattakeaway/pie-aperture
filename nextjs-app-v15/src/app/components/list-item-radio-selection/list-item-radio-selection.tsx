@@ -24,7 +24,7 @@ export default function ListItemRadioSelection() {
         <NavigationLayout title="List Item Radio Selection">
 
             <h2 id="radio-leading-heading" style={{ padding: '8px 0' }}>Radio group - leading control (pre-selected)</h2>
-            <PieRadioGroup name="deliveryLeading" value={deliveryLeading} onChange={handleDeliveryLeadingChange} variant="list">
+            <PieRadioGroup name="deliveryLeading" value={deliveryLeading} onChange={handleDeliveryLeadingChange}>
                 <PieFormLabel slot="label">Select a delivery option: {deliveryLeading}</PieFormLabel>
                 <PieListItem selectionType="radio" primaryText="Standard" secondaryText="3 to 5 days" metaText="Free">
                     <PieRadio slot="leading" value="standard" />
@@ -43,7 +43,7 @@ export default function ListItemRadioSelection() {
             <PieButton>Some focusable element after leading radio list</PieButton>
 
             <h2 id="radio-trailing-heading" style={{ padding: '8px 0' }}>Radio group - trailing control (pre-selected)</h2>
-            <PieRadioGroup name="deliveryTrailing" value={deliveryTrailing} onChange={handleDeliveryTrailingChange} variant="list">
+            <PieRadioGroup name="deliveryTrailing" value={deliveryTrailing} onChange={handleDeliveryTrailingChange}>
                 <PieFormLabel slot="label">Select a delivery option: {deliveryTrailing}</PieFormLabel>
                 <PieListItem selectionType="radio" primaryText="Standard" secondaryText="3 to 5 days">
                     <PieRadio slot="trailing" value="standard" />

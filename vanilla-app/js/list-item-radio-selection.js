@@ -9,7 +9,7 @@ import './utils/navigation.js';
 
 document.querySelector('#app').innerHTML = `
     <h2 id="radio-leading-heading" style="padding: 8px 0;">Radio group - leading control (pre-selected)</h2>
-    <pie-radio-group id="delivery-leading" name="deliveryLeading" value="express" variant="list">
+    <pie-radio-group id="delivery-leading" name="deliveryLeading" value="express">
         <pie-form-label slot="label" id="delivery-leading-label">Select a delivery option: express</pie-form-label>
         <pie-list-item selection-type="radio" primaryText="Standard" secondaryText="3 to 5 days" metaText="Free">
             <pie-radio slot="leading" value="standard"></pie-radio>
@@ -28,7 +28,7 @@ document.querySelector('#app').innerHTML = `
     <pie-button>Some focusable element after leading radio list</pie-button>
 
     <h2 id="radio-trailing-heading" style="padding: 8px 0;">Radio group - trailing control (pre-selected)</h2>
-    <pie-radio-group id="delivery-trailing" name="deliveryTrailing" value="locker" variant="list">
+    <pie-radio-group id="delivery-trailing" name="deliveryTrailing" value="locker">
         <pie-form-label slot="label" id="delivery-trailing-label">Select a delivery option: locker</pie-form-label>
         <pie-list-item selection-type="radio" primaryText="Standard" secondaryText="3 to 5 days">
             <pie-radio slot="trailing" value="standard"></pie-radio>

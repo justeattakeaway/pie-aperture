@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2 id="radio-leading-heading" style="padding: 8px 0;">Radio group - leading control (pre-selected)</h2>
-        <pie-radio-group name="deliveryLeading" :value="deliveryLeading" @change="deliveryLeading = $event.target.value" variant="list">
+        <pie-radio-group name="deliveryLeading" :value="deliveryLeading" @change="deliveryLeading = $event.target.value">
             <pie-form-label slot="label">Select a delivery option: {{ deliveryLeading }}</pie-form-label>
             <pie-list-item selection-type="radio" primaryText="Standard" secondaryText="3 to 5 days" metaText="Free">
                 <pie-radio slot="leading" value="standard"></pie-radio>
@@ -20,7 +20,7 @@
         <pie-button>Some focusable element after leading radio list</pie-button>
 
         <h2 id="radio-trailing-heading" style="padding: 8px 0;">Radio group - trailing control (pre-selected)</h2>
-        <pie-radio-group name="deliveryTrailing" :value="deliveryTrailing" @change="deliveryTrailing = $event.target.value" variant="list">
+        <pie-radio-group name="deliveryTrailing" :value="deliveryTrailing" @change="deliveryTrailing = $event.target.value">
             <pie-form-label slot="label">Select a delivery option: {{ deliveryTrailing }}</pie-form-label>
             <pie-list-item selection-type="radio" primaryText="Standard" secondaryText="3 to 5 days">
                 <pie-radio slot="trailing" value="standard"></pie-radio>
