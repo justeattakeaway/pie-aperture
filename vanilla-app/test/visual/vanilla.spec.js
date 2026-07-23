@@ -30,6 +30,7 @@ describe('Vanilla Aperture App', () => {
         { url: '/components/notification.html', name: 'Notification' },
         { url: '/components/radio.html', name: 'Radio' },
         { url: '/components/radio-group.html', name: 'Radio Group' },
+        { url: '/components/list-item-radio-selection.html', name: 'List Item Radio Selection' },
         { url: '/components/spinner.html', name: 'Spinner' },
         { url: '/components/switch.html', name: 'Switch' },
         { url: '/components/select.html', name: 'Select' },
@@ -46,7 +47,8 @@ describe('Vanilla Aperture App', () => {
             await waitUntilPageLoad();
             // Some components might require extra time to mount and load its dependencies.
             // Delaying the screenshot helps to avoid false negatives in diffs.
-            if (page.pauseBeforeScreenshot) await browser.pause(5000);
+            // The pause is longer here due to no SSR on the vanilla app. So we wait longer to mitigate rendering race conditions in Percy tests.
+            if (page.pauseBeforeScreenshot) await browser.pause(10000);
             await percyScreenshot(page.name, { fullPage: true });
         });
     });
