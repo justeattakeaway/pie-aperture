@@ -11,11 +11,13 @@ export class ListItemSelectionPage {
     async gotoRadio() {
         const url = 'components/list-item-radio-selection';
         await this.page.goto(APP_NAME === 'vanilla-app' ? `${url}.html` : url);
+        await this.page.waitForSelector('pie-list-item[v]');
     }
 
     async gotoCheckbox() {
         const url = 'components/list-item-checkbox-selection';
         await this.page.goto(APP_NAME === 'vanilla-app' ? `${url}.html` : url);
+        await this.page.waitForSelector('pie-list-item[v]');
     }
 
     listItem(primaryText: string): Locator {
