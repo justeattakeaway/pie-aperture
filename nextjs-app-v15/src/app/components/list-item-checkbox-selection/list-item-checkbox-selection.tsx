@@ -21,8 +21,8 @@ export default function ListItemCheckboxSelection() {
     const [leading, setLeading] = useState<Toppings>(initial);
     const [trailing, setTrailing] = useState<Toppings>(initial);
 
-    const handleChange = (setter: React.Dispatch<React.SetStateAction<Toppings>>) => (event: CustomEvent) => {
-        const checkbox = event.target as HTMLInputElement;
+    const handleChange = (setter: React.Dispatch<React.SetStateAction<Toppings>>) => (event: React.ChangeEvent<HTMLFieldSetElement>) => {
+        const checkbox = event.target as unknown as HTMLInputElement;
         setter((current) => ({ ...current, [checkbox.value]: checkbox.checked }));
     };
 
