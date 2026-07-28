@@ -1,8 +1,8 @@
 <template>
     <div>
         <pie-radio-group name="favouriteTakeaway" @change="favouriteTakeaway = $event.target.value">
-            <pie-form-label>
-            Your favourite takeaway is: {{ favouriteTakeaway }}
+            <pie-form-label slot="label">
+            Your favourite takeaway: {{ favouriteTakeaway }}
             </pie-form-label>
             <pie-radio
                 value="chinese">
@@ -18,9 +18,11 @@
             </pie-radio>
         </pie-radio-group>
 
-        <pie-radio-group isInline="true" name="favouriteTakeaway" @change="favouriteTakeaway = $event.target.value">
-            <pie-form-label>
-                Your favourite takeaway is: {{ favouriteTakeaway }}
+        <br/>
+
+        <pie-radio-group isInline="true" name="inlineFavouriteTakeaway" @change="favouriteTakeaway = $event.target.value">
+            <pie-form-label slot="label">
+                Your favourite takeaway - inline radio: {{ favouriteTakeaway }}
             </pie-form-label>
             <pie-radio
                 value="chinese">
@@ -35,6 +37,8 @@
                 Pizza
             </pie-radio>
         </pie-radio-group>
+
+        <br/>
 
         <pie-button>Some focusable element</pie-button>
     </div>

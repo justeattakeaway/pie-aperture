@@ -23,7 +23,18 @@ document.querySelector('#app').innerHTML = `
         <pie-radio name="favouriteTakeaway" value="shawarma">Shawarma</pie-radio>
         <pie-radio name="favouriteTakeaway" value="pizza">Pizza</pie-radio>
     </pie-radio-group>
-    
+
+    <br/>
+
+    <pie-radio-group isInline="true">
+        <pie-form-label slot="label">Your favourite takeaway - inline radio:</pie-form-label>
+        <pie-radio name="favouriteTakeaway" value="chinese">Chinese</pie-radio>
+        <pie-radio name="favouriteTakeaway" value="shawarma">Shawarma</pie-radio>
+        <pie-radio name="favouriteTakeaway" value="pizza">Pizza</pie-radio>
+    </pie-radio-group>
+
+    <br/>
+
     <pie-button>Some focusable element</pie-button>
 `;
 
