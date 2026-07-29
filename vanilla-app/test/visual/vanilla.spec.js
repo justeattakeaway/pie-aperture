@@ -32,6 +32,7 @@ describe('Vanilla Aperture App', () => {
         { url: '/components/radio-group.html', name: 'Radio Group' },
         { url: '/components/list-item-radio-selection.html', name: 'List Item Radio Selection' },
         { url: '/components/list-item-switch-selection.html', name: 'List Item Switch Selection' },
+        { url: '/components/list-item-checkbox-selection.html', name: 'List Item Checkbox Selection' },
         { url: '/components/spinner.html', name: 'Spinner' },
         { url: '/components/switch.html', name: 'Switch' },
         { url: '/components/select.html', name: 'Select' },
