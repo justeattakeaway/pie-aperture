@@ -42,4 +42,30 @@ test.describe(`List Item Selection - ${process.env.APP_NAME}`, () => {
             await expect(selectionPage.checkbox('Pepperoni')).toHaveJSProperty('checked', false);
         });
     });
+
+    test.describe('switch', () => {
+        test('clicking an off list item turns the slotted switch on', async ({ page }) => {
+            // Arrange
+            const selectionPage = new ListItemSelectionPage(page);
+            await selectionPage.gotoSwitch();
+
+            // Act: Post starts off
+            await selectionPage.listItem('Post').click();
+
+            // Assert
+            await expect(selectionPage.switchControl('Post')).toHaveJSProperty('checked', true);
+        });
+
+        test('clicking an on list item turns the slotted switch off', async ({ page }) => {
+            // Arrange
+            const selectionPage = new ListItemSelectionPage(page);
+            await selectionPage.gotoSwitch();
+
+            // Act: Email starts on
+            await selectionPage.listItem('Email').click();
+
+            // Assert
+            await expect(selectionPage.switchControl('Email')).toHaveJSProperty('checked', false);
+        });
+    });
 });
