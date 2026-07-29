@@ -32,6 +32,7 @@ describe('NextJS Aperture App', () => {
         { url: '/components/radio', name: 'Radio' },
         { url: '/components/radio-group', name: 'Radio Group' },
         { url: '/components/list-item-radio-selection', name: 'List Item Radio Selection' },
+        { url: '/components/list-item-switch-selection', name: 'List Item Switch Selection' },
         { url: '/components/select', name: 'Select' },
         { url: '/components/spinner', name: 'Spinner', pauseBeforeScreenshot: true },
         { url: '/components/switch', name: 'Switch' },
