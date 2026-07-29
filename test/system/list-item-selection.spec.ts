@@ -42,4 +42,27 @@ test.describe(`List Item Selection - ${process.env.APP_NAME}`, () => {
             await expect(selectionPage.checkbox('Pepperoni')).toHaveJSProperty('checked', false);
         });
     });
+
+    test.describe('link', () => {
+        test('names the slotted anchor from the item text', async ({ page }) => {
+            // Arrange
+            const selectionPage = new ListItemSelectionPage(page);
+            await selectionPage.gotoLink();
+
+            // Assert: the item supplies the empty anchor's accessible name from primaryText.
+            await expect(selectionPage.link('Orders')).toHaveAttribute('aria-label', 'Orders');
+        });
+
+        test('clicking anywhere on a list item follows the slotted link', async ({ page }) => {
+            // Arrange
+            const selectionPage = new ListItemSelectionPage(page);
+            await selectionPage.gotoLink();
+
+            // Act: the empty anchor is stretched over the row, so clicking the row body navigates.
+            await selectionPage.listItem('Orders').click();
+
+            // Assert
+            await expect.poll(() => new URL(page.url()).hash).toBe('#orders');
+        });
+    });
 });

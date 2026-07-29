@@ -146,4 +146,27 @@ test.describe('SSR - Components render with shadow dom and styles', () => {
         expect(pieComponentHtml).toMatch(shadowDomRegex);
         expect(pieComponentHtml).toMatch(styleRegex);
     });
+
+    // The link page hosts `pie-list-item`s with `isLink` and a slotted anchor. As with the radio
+    // page, assert directly that `pie-list-item` server-renders with shadow DOM and styles.
+    test(`SSR: ${APP_NAME}: list-item-link`, async () => {
+        // Arrange
+        const shadowDomRegex = /<template\s+([^>]*shadowroot="open"[^>]*shadowrootmode="open"[^>]*|[^>]*shadowrootmode="open"[^>]*shadowroot="open"[^>]*)>/;
+        const styleRegex = /<style>[\s\S]*?<\/style>/;
+
+        // Act
+        const rawHtml = await fetchHtml(getComponentPageUrl('list-item-link', baseUrl));
+        const pieComponentMatch = rawHtml.match(createComponentRegex('list-item'));
+
+        if (!pieComponentMatch) {
+            console.warn('Failed to find pie-list-item in the SSR html:', rawHtml);
+        }
+
+        const pieComponentHtml = pieComponentMatch ? pieComponentMatch[0] : null;
+
+        // Assert
+        expect(pieComponentHtml).not.toBeNull();
+        expect(pieComponentHtml).toMatch(shadowDomRegex);
+        expect(pieComponentHtml).toMatch(styleRegex);
+    });
 });

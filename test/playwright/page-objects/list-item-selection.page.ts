@@ -20,6 +20,12 @@ export class ListItemSelectionPage {
         await this.page.waitForSelector('pie-list-item[v]');
     }
 
+    async gotoLink() {
+        const url = 'components/list-item-link';
+        await this.page.goto(APP_NAME === 'vanilla-app' ? `${url}.html` : url);
+        await this.page.waitForSelector('pie-list-item[v]');
+    }
+
     listItem(primaryText: string): Locator {
         return this.page.locator('pie-list-item').filter({ hasText: primaryText }).first();
     }
@@ -30,5 +36,9 @@ export class ListItemSelectionPage {
 
     checkbox(primaryText: string): Locator {
         return this.listItem(primaryText).locator('pie-checkbox');
+    }
+
+    link(primaryText: string): Locator {
+        return this.listItem(primaryText).locator('a[slot="link"]');
     }
 }

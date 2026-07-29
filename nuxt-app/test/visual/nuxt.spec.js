@@ -33,6 +33,7 @@ describe('Nuxt Aperture App', () => {
         { url: '/components/radio-group', name: 'Radio Group' },
         { url: '/components/list-item-radio-selection', name: 'List Item Radio Selection' },
         { url: '/components/list-item-checkbox-selection', name: 'List Item Checkbox Selection' },
+        { url: '/components/list-item-link', name: 'List Item Link' },
         { url: '/components/spinner', name: 'Spinner' },
         { url: '/components/switch', name: 'Switch' },
         { url: '/components/select', name: 'Select' },
