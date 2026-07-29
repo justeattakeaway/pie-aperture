@@ -24,7 +24,7 @@ export default function Textarea() {
 
             <PieDivider />
 
-            <PieFormLabel trailing={`${count} / ${maxLength}`}>Label </PieFormLabel>
+            <PieFormLabel trailing={`${count} / ${maxLength}`}>Label</PieFormLabel>
             <PieTextarea
                 value={value}
                 maxlength={maxLength}

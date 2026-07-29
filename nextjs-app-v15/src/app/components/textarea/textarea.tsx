@@ -13,22 +13,22 @@ export default function Textarea() {
 
     return (
         <NavigationLayout title="Textarea">
-            <PieTextarea value="foo" />
+            <PieTextarea value="foo"/>
 
-            <PieDivider />
+            <PieDivider/>
 
             <PieTextarea
                 value="foo"
                 resize="manual"
             />
 
-            <PieDivider />
+            <PieDivider/>
 
-            <PieFormLabel trailing={`${count}/${maxLength}`}> Label  </PieFormLabel>
+            <PieFormLabel trailing={`${count} / ${maxLength}`}>Label</PieFormLabel>
             <PieTextarea
                 value={value}
                 maxlength={maxLength}
-                onInput={(e) => setValue((e.target as HTMLTextAreaElement).value)} />
+                onInput={(e) => setValue((e.target as HTMLTextAreaElement).value)}/>
 
         </NavigationLayout>
     );
