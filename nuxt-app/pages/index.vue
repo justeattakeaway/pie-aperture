@@ -34,6 +34,7 @@
             <li><pie-link href="/components/radio">Radio</pie-link></li>
             <li><pie-link href="/components/radio-group">Radio Group</pie-link></li>
             <li><pie-link href="/components/list-item-radio-selection">List Item Radio Selection</pie-link></li>
+            <li><pie-link href="/components/list-item-switch-selection">List Item Switch Selection</pie-link></li>
             <li><pie-link href="/components/list-item-checkbox-selection">List Item Checkbox Selection</pie-link></li>
             <li><pie-link href="/components/spinner">Spinner</pie-link></li>
             <li><pie-link href="/components/switch">Switch</pie-link></li>

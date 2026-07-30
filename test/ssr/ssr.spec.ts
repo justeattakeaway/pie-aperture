@@ -146,4 +146,28 @@ test.describe('SSR - Components render with shadow dom and styles', () => {
         expect(pieComponentHtml).toMatch(shadowDomRegex);
         expect(pieComponentHtml).toMatch(styleRegex);
     });
+
+    // Switches have no group, so this page is a plain `pie-list` hosting `pie-list-item` rows.
+    // As with the radio page, assert directly that the `pie-list-item` server-renders with shadow
+    // DOM and styles - it carries the `@lit/context` provider/consumer whose SSR safety we care about.
+    test(`SSR: ${APP_NAME}: list-item-switch-selection`, async () => {
+        // Arrange
+        const shadowDomRegex = /<template\s+([^>]*shadowroot="open"[^>]*shadowrootmode="open"[^>]*|[^>]*shadowrootmode="open"[^>]*shadowroot="open"[^>]*)>/;
+        const styleRegex = /<style>[\s\S]*?<\/style>/;
+
+        // Act
+        const rawHtml = await fetchHtml(getComponentPageUrl('list-item-switch-selection', baseUrl));
+        const pieComponentMatch = rawHtml.match(createComponentRegex('list-item'));
+
+        if (!pieComponentMatch) {
+            console.warn('Failed to find pie-list-item in the SSR html:', rawHtml);
+        }
+
+        const pieComponentHtml = pieComponentMatch ? pieComponentMatch[0] : null;
+
+        // Assert
+        expect(pieComponentHtml).not.toBeNull();
+        expect(pieComponentHtml).toMatch(shadowDomRegex);
+        expect(pieComponentHtml).toMatch(styleRegex);
+    });
 });
