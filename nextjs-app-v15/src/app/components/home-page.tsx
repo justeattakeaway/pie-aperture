@@ -46,6 +46,7 @@ export default function HomePage() {
     <li><PieLink onClick={() => router.push('/components/radio')} tag="button">Radio</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/radio-group')} tag="button">Radio Group</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/list-item-radio-selection')} tag="button">List Item Radio Selection</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/list-item-switch-selection')} tag="button">List Item Switch Selection</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/list-item-checkbox-selection')} tag="button">List Item Checkbox Selection</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/list-item-link')} tag="button">List Item Link</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/select')} tag="button">Select</PieLink></li>

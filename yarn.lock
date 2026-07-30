@@ -1685,14 +1685,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeat/pie-design-tokens@npm:7.14.2":
-  version: 7.14.2
-  resolution: "@justeat/pie-design-tokens@npm:7.14.2"
+"@justeat/pie-design-tokens@npm:7.14.3":
+  version: 7.14.3
+  resolution: "@justeat/pie-design-tokens@npm:7.14.3"
   dependencies:
     jsonc-parser: 3.2.0
     lodash.merge: 4.6.2
     mkdirp: 1.0.4
-  checksum: 23044309968c0dd8fe8d74f06ab16134372a58e2f2d953f90bbd944aeb68b463b9bcdeb88f61e1a7729f7801065dc564d84400f6a938bc295aaccf55539bc93c
+  checksum: 0411d651ff64002774b938a70ad348dda6ed5f8e2a1be292065e777a2dbb8103280fbe24162ca56e7f08db05d451500b1f9f23a9c2a00a89704c9aef9022fac1
   languageName: node
   linkType: hard
 
@@ -1823,12 +1823,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-css@npm:1.3.1":
-  version: 1.3.1
-  resolution: "@justeattakeaway/pie-css@npm:1.3.1"
+"@justeattakeaway/pie-css@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@justeattakeaway/pie-css@npm:1.3.2"
   dependencies:
-    "@justeat/pie-design-tokens": 7.14.2
-  checksum: 9531015a2a53bf4eb15dfaf934a4bc8a97d5c94971816a9e55e302a193105238761ca274ffbf3d31e4eccab210d76905c9a9b13455dd39da831b0773289f6851
+    "@justeat/pie-design-tokens": 7.14.3
+  checksum: 1db51840e5c99c97d7b478fe325b07a9ea27ceb88cd0aec82b3c0f58fb5606b68e96b5c32e345e3c9eef64d7c499070fd2e68037b6e35fde4526aadf7f2e9f0a
   languageName: node
   linkType: hard
 
@@ -5576,14 +5576,14 @@ __metadata:
   linkType: hard
 
 "axios@npm:^1.7.4":
-  version: 1.19.0
-  resolution: "axios@npm:1.19.0"
+  version: 1.18.1
+  resolution: "axios@npm:1.18.1"
   dependencies:
     follow-redirects: ^1.16.0
-    form-data: ^4.0.6
+    form-data: ^4.0.5
     https-proxy-agent: ^5.0.1
     proxy-from-env: ^2.1.0
-  checksum: 37ef6b3049548a384dff61ef4705011458b51bcd9fd2492b844c3a5f9210cc584c7fa855aaa86a807c4c02f0df17828eba209f461aded8748539e4d87c2fa080
+  checksum: e7a0c1f73f3d17ef5c5b09259b6aae0c1d841fe3b4ef76964ac5aca97b1cf30724cdedb9a514ccc435682dc690f4486580c5babfe897fbcbd500627bd2e86f6d
   languageName: node
   linkType: hard
 
@@ -5696,11 +5696,11 @@ __metadata:
   linkType: hard
 
 "baseline-browser-mapping@npm:^2.10.44":
-  version: 2.11.7
-  resolution: "baseline-browser-mapping@npm:2.11.7"
+  version: 2.11.6
+  resolution: "baseline-browser-mapping@npm:2.11.6"
   bin:
     baseline-browser-mapping: dist/cli.cjs
-  checksum: 5bbee2c7c599cdc1336c53b62f39fc1101b25cd34384534f339b204e684695eb87c33d5aae82371ee676e5b1fca0f2fb2bb554030e6d0203c28843955def3f4d
+  checksum: 77037d893da0165dc10113c25a90ba1f0895113e3389f7b272b88f8ef982668b1f8d27dc91a11963f96c0db7cba9ea8f0c829f04260ce6965204f93adb9b793d
   languageName: node
   linkType: hard
 
@@ -9114,7 +9114,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-data@npm:^4.0.6":
+"form-data@npm:^4.0.5":
   version: 4.0.6
   resolution: "form-data@npm:4.0.6"
   dependencies:
@@ -11995,7 +11995,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-app-v14@workspace:nextjs-app-v14"
   dependencies:
-    "@justeattakeaway/pie-css": 1.3.1
+    "@justeattakeaway/pie-css": 1.3.2
     "@justeattakeaway/pie-icons-webc": 1.27.1
     "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20260729174055
     "@lit-labs/nextjs": 0.2.3
@@ -12020,7 +12020,7 @@ __metadata:
   resolution: "nextjs-app-v15@workspace:nextjs-app-v15"
   dependencies:
     "@eslint/eslintrc": 3
-    "@justeattakeaway/pie-css": 1.3.1
+    "@justeattakeaway/pie-css": 1.3.2
     "@justeattakeaway/pie-icons-webc": 1.27.1
     "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20260729174055
     "@lit-labs/nextjs": 0.2.4
@@ -12360,7 +12360,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nuxt-app@workspace:nuxt-app"
   dependencies:
-    "@justeattakeaway/pie-css": 1.3.1
+    "@justeattakeaway/pie-css": 1.3.2
     "@justeattakeaway/pie-icons-webc": 1.27.1
     "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20260729174055
     deepmerge: 4.3.1
@@ -13492,13 +13492,13 @@ __metadata:
   linkType: hard
 
 "postcss@npm:^8.4.27, postcss@npm:^8.4.43, postcss@npm:^8.4.49, postcss@npm:^8.5.19":
-  version: 8.5.25
-  resolution: "postcss@npm:8.5.25"
+  version: 8.5.24
+  resolution: "postcss@npm:8.5.24"
   dependencies:
     nanoid: ^3.3.16
     picocolors: ^1.1.1
     source-map-js: ^1.2.1
-  checksum: 51e1fa610322a93220a461dc56a952b398d9bdb137e1f2530fed0ddebd37bf07f2729dfce31864b67b742636f30102833924ea600fa11a0f666130a66fae2a53
+  checksum: bd8ea2dfc9343a59675bad40d956508f4f5162117aa85eaaa44ce582415b40eac175e57de0fc80c5141418c9f092c0cc50f184be79115666b694673d8deb75b8
   languageName: node
   linkType: hard
 
@@ -16486,7 +16486,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vanilla-app@workspace:vanilla-app"
   dependencies:
-    "@justeattakeaway/pie-css": 1.3.1
+    "@justeattakeaway/pie-css": 1.3.2
     "@justeattakeaway/pie-icons-webc": 1.27.1
     "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20260729174055
     deepmerge: 4.3.1

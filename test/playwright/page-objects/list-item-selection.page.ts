@@ -26,6 +26,12 @@ export class ListItemSelectionPage {
         await this.page.waitForSelector('pie-list-item[v]');
     }
 
+    async gotoSwitch() {
+        const url = 'components/list-item-switch-selection';
+        await this.page.goto(APP_NAME === 'vanilla-app' ? `${url}.html` : url);
+        await this.page.waitForSelector('pie-list-item[v]');
+    }
+
     listItem(primaryText: string): Locator {
         return this.page.locator('pie-list-item').filter({ hasText: primaryText }).first();
     }
@@ -40,5 +46,9 @@ export class ListItemSelectionPage {
 
     link(primaryText: string): Locator {
         return this.listItem(primaryText).locator('a[slot="link"]');
+    }
+
+    switchControl(primaryText: string): Locator {
+        return this.listItem(primaryText).locator('pie-switch');
     }
 }
