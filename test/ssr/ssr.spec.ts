@@ -147,7 +147,7 @@ test.describe('SSR - Components render with shadow dom and styles', () => {
         expect(pieComponentHtml).toMatch(styleRegex);
     });
 
-    // The link page hosts `pie-list-item`s with `isLink` and a slotted anchor. As with the radio
+    // The link page hosts `pie-list-item`s with `interactionType="link"` and a slotted anchor. As with the radio
     // page, assert directly that `pie-list-item` server-renders with shadow DOM and styles.
     test(`SSR: ${APP_NAME}: list-item-link`, async () => {
         // Arrange

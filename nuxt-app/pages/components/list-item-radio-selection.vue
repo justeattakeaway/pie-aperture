@@ -3,16 +3,16 @@
         <h2 id="radio-leading-heading" style="padding: 8px 0;">Radio group - leading control (pre-selected)</h2>
         <pie-radio-group name="deliveryLeading" :value="deliveryLeading" @change="deliveryLeading = $event.target.value">
             <pie-form-label slot="label">Select a delivery option: {{ deliveryLeading }}</pie-form-label>
-            <pie-list-item selectionType="radio" primaryText="Standard" secondaryText="3 to 5 days" metaText="Free">
+            <pie-list-item interactionType="radio" primaryText="Standard" secondaryText="3 to 5 days" metaText="Free">
                 <pie-radio slot="leading" value="standard"></pie-radio>
             </pie-list-item>
-            <pie-list-item selectionType="radio" primaryText="Express" secondaryText="Next day" metaText="£2.99">
+            <pie-list-item interactionType="radio" primaryText="Express" secondaryText="Next day" metaText="£2.99">
                 <pie-radio slot="leading" value="express"></pie-radio>
             </pie-list-item>
-            <pie-list-item selectionType="radio" disabled primaryText="Collection" secondaryText="Pick up in store">
+            <pie-list-item interactionType="radio" disabled primaryText="Collection" secondaryText="Pick up in store">
                 <pie-radio slot="leading" value="collection" disabled></pie-radio>
             </pie-list-item>
-            <pie-list-item selectionType="radio" primaryText="Locker" secondaryText="Collect at your convenience" metaText="Free">
+            <pie-list-item interactionType="radio" primaryText="Locker" secondaryText="Collect at your convenience" metaText="Free">
                 <pie-radio slot="leading" value="locker"></pie-radio>
             </pie-list-item>
         </pie-radio-group>
@@ -22,16 +22,16 @@
         <h2 id="radio-trailing-heading" style="padding: 8px 0;">Radio group - trailing control (pre-selected)</h2>
         <pie-radio-group name="deliveryTrailing" :value="deliveryTrailing" @change="deliveryTrailing = $event.target.value">
             <pie-form-label slot="label">Select a delivery option: {{ deliveryTrailing }}</pie-form-label>
-            <pie-list-item selectionType="radio" primaryText="Standard" secondaryText="3 to 5 days">
+            <pie-list-item interactionType="radio" primaryText="Standard" secondaryText="3 to 5 days">
                 <pie-radio slot="trailing" value="standard"></pie-radio>
             </pie-list-item>
-            <pie-list-item selectionType="radio" primaryText="Express" secondaryText="Next day">
+            <pie-list-item interactionType="radio" primaryText="Express" secondaryText="Next day">
                 <pie-radio slot="trailing" value="express"></pie-radio>
             </pie-list-item>
-            <pie-list-item selectionType="radio" disabled primaryText="Collection" secondaryText="Pick up in store">
+            <pie-list-item interactionType="radio" disabled primaryText="Collection" secondaryText="Pick up in store">
                 <pie-radio slot="trailing" value="collection" disabled></pie-radio>
             </pie-list-item>
-            <pie-list-item selectionType="radio" primaryText="Locker" secondaryText="Collect at your convenience">
+            <pie-list-item interactionType="radio" primaryText="Locker" secondaryText="Collect at your convenience">
                 <pie-radio slot="trailing" value="locker"></pie-radio>
             </pie-list-item>
         </pie-radio-group>
