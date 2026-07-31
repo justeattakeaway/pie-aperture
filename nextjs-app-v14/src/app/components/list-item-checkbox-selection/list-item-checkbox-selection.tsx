@@ -32,16 +32,16 @@ export default function ListItemCheckboxSelection() {
             <h2 id="checkbox-leading-heading" style={{ padding: '8px 0' }}>Checkbox group - leading control (Pepperoni pre-selected)</h2>
             <PieCheckboxGroup onChange={handleChange(setLeading)}>
                 <PieFormLabel slot="label">Selected toppings: {selectedLabel(leading)}</PieFormLabel>
-                <PieListItem selectionType="checkbox" primaryText="Cheese" secondaryText="Extra mature" metaText="Free">
+                <PieListItem interactionType="checkbox" primaryText="Cheese" secondaryText="Extra mature" metaText="Free">
                     <PieCheckbox slot="leading" name="cheese" value="cheese" checked={leading.cheese} />
                 </PieListItem>
-                <PieListItem selectionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
+                <PieListItem interactionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
                     <PieCheckbox slot="leading" name="pepperoni" value="pepperoni" checked={leading.pepperoni} />
                 </PieListItem>
-                <PieListItem selectionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
+                <PieListItem interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
                     <PieCheckbox slot="leading" name="mushrooms" value="mushrooms" disabled checked={leading.mushrooms} />
                 </PieListItem>
-                <PieListItem selectionType="checkbox" primaryText="Olives" metaText="£0.50">
+                <PieListItem interactionType="checkbox" primaryText="Olives" metaText="£0.50">
                     <PieCheckbox slot="leading" name="olives" value="olives" checked={leading.olives} />
                 </PieListItem>
             </PieCheckboxGroup>
@@ -51,16 +51,16 @@ export default function ListItemCheckboxSelection() {
             <h2 id="checkbox-trailing-heading" style={{ padding: '8px 0' }}>Checkbox group - trailing control (Pepperoni pre-selected)</h2>
             <PieCheckboxGroup onChange={handleChange(setTrailing)}>
                 <PieFormLabel slot="label">Selected toppings: {selectedLabel(trailing)}</PieFormLabel>
-                <PieListItem selectionType="checkbox" primaryText="Cheese" secondaryText="Extra mature">
+                <PieListItem interactionType="checkbox" primaryText="Cheese" secondaryText="Extra mature">
                     <PieCheckbox slot="trailing" name="cheese" value="cheese" checked={trailing.cheese} />
                 </PieListItem>
-                <PieListItem selectionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
+                <PieListItem interactionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
                     <PieCheckbox slot="trailing" name="pepperoni" value="pepperoni" checked={trailing.pepperoni} />
                 </PieListItem>
-                <PieListItem selectionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
+                <PieListItem interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
                     <PieCheckbox slot="trailing" name="mushrooms" value="mushrooms" disabled checked={trailing.mushrooms} />
                 </PieListItem>
-                <PieListItem selectionType="checkbox" primaryText="Olives" metaText="£0.50">
+                <PieListItem interactionType="checkbox" primaryText="Olives" metaText="£0.50">
                     <PieCheckbox slot="trailing" name="olives" value="olives" checked={trailing.olives} />
                 </PieListItem>
             </PieCheckboxGroup>

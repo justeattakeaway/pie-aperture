@@ -38,6 +38,7 @@ document.querySelector('#navigation').innerHTML = `
         <li><pie-link href="/components/list-item-radio-selection.html">List Item Radio Selection</pie-link></li>
         <li><pie-link href="/components/list-item-switch-selection.html">List Item Switch Selection</pie-link></li>
         <li><pie-link href="/components/list-item-checkbox-selection.html">List Item Checkbox Selection</pie-link></li>
+        <li><pie-link href="/components/list-item-link.html">List Item Link</pie-link></li>
         <li><pie-link href="/components/spinner.html">Spinner</pie-link></li>
         <li><pie-link href="/components/switch.html">Switch</pie-link></li>
         <li><pie-link href="/components/select.html">Select</pie-link></li>
