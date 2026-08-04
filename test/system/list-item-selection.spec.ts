@@ -122,4 +122,97 @@ test.describe(`List Item Selection - ${process.env.APP_NAME}`, () => {
             await expect(selectionPage.switchControl('Email')).toHaveJSProperty('checked', false);
         });
     });
+
+    test.describe('button', () => {
+        test('clicking a button row triggers its action handler', async ({ page }) => {
+            // Arrange
+            const selectionPage = new ListItemSelectionPage(page);
+            await selectionPage.gotoButton();
+
+            // Act
+            await selectionPage.buttonListItem('Edit profile').click();
+
+            // Assert
+            await expect(selectionPage.activationStatus()).toHaveText('Last action: Edit profile');
+        });
+
+        test('pressing Enter on the focused row triggers its action handler', async ({ page }) => {
+            // Arrange
+            const selectionPage = new ListItemSelectionPage(page);
+            await selectionPage.gotoButton();
+            await selectionPage.focusButtonAction('Change password');
+
+            // Act
+            await page.keyboard.press('Enter');
+
+            // Assert
+            await expect(selectionPage.activationStatus()).toHaveText('Last action: Change password');
+        });
+
+        test('clicking a disabled button row does not trigger its action handler', async ({ page }) => {
+            // Arrange
+            const selectionPage = new ListItemSelectionPage(page);
+            await selectionPage.gotoButton();
+            await selectionPage.buttonListItem('Edit profile').click();
+            await expect(selectionPage.activationStatus()).toHaveText('Last action: Edit profile');
+
+            // Act
+            await selectionPage.buttonListItem('Sign out', 'button-list-disabled').click();
+
+            // Assert
+            await expect(selectionPage.activationStatus()).toHaveText('Last action: Edit profile');
+        });
+
+        test('pressing Space on a focused button row triggers its action handler', async ({ page }) => {
+            // Arrange
+            const selectionPage = new ListItemSelectionPage(page);
+            await selectionPage.gotoButton();
+            await selectionPage.focusButtonAction('Notification preferences');
+
+            // Act
+            await page.keyboard.press('Space');
+
+            // Assert
+            await expect(selectionPage.activationStatus()).toHaveText('Last action: Notification preferences');
+        });
+
+        test('pressing Enter on a focused disabled button row does not trigger its action handler', async ({ page }) => {
+            // Arrange
+            const selectionPage = new ListItemSelectionPage(page);
+            await selectionPage.gotoButton();
+            await selectionPage.buttonListItem('Edit profile').click();
+            await expect(selectionPage.activationStatus()).toHaveText('Last action: Edit profile');
+
+            // Act — force focus onto the disabled item's inner action element and attempt activation.
+            // A disabled item must not fire even if focus is placed on it programmatically (e.g. via
+            // assistive technology or a JS caller bypassing the tab order).
+            await page.evaluate(() => {
+                const list = document.querySelector('pie-list[data-test-id="button-list-disabled"]');
+                const item = Array.from(list?.querySelectorAll('pie-list-item') ?? []).find(
+                    (entry) => (entry as HTMLElement & { primaryText?: string }).primaryText === 'Sign out',
+                ) as HTMLElement | null;
+                (item?.shadowRoot?.querySelector('.c-listItem-action') as HTMLElement | null)?.focus();
+            });
+            await page.keyboard.press('Enter');
+
+            // Assert
+            await expect(selectionPage.activationStatus()).toHaveText('Last action: Edit profile');
+        });
+
+        test('clicking multiple button rows in sequence updates the activation status each time', async ({ page }) => {
+            // Arrange
+            const selectionPage = new ListItemSelectionPage(page);
+            await selectionPage.gotoButton();
+
+            // Act & Assert — each click must overwrite the previous state
+            await selectionPage.buttonListItem('Edit profile').click();
+            await expect(selectionPage.activationStatus()).toHaveText('Last action: Edit profile');
+
+            await selectionPage.buttonListItem('Sign out').click();
+            await expect(selectionPage.activationStatus()).toHaveText('Last action: Sign out');
+
+            await selectionPage.buttonListItem('Change password').click();
+            await expect(selectionPage.activationStatus()).toHaveText('Last action: Change password');
+        });
+    });
 });

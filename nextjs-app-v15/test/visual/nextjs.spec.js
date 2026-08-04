@@ -35,6 +35,7 @@ describe('NextJS Aperture App', () => {
         { url: '/components/list-item-switch-selection', name: 'List Item Switch Selection' },
         { url: '/components/list-item-checkbox-selection', name: 'List Item Checkbox Selection' },
         { url: '/components/list-item-link', name: 'List Item Link' },
+        { url: '/components/list-item-button', name: 'List Item Button' },
         { url: '/components/select', name: 'Select' },
         { url: '/components/spinner', name: 'Spinner', pauseBeforeScreenshot: true },
         { url: '/components/switch', name: 'Switch' },
