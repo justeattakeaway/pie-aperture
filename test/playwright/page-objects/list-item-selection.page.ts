@@ -32,6 +32,12 @@ export class ListItemSelectionPage {
         await this.page.waitForSelector('pie-list-item[v]');
     }
 
+    async gotoButton() {
+        const url = 'components/list-item-button';
+        await this.page.goto(APP_NAME === 'vanilla-app' ? `${url}.html` : url);
+        await this.page.waitForSelector('pie-list-item[v]');
+    }
+
     listItem(primaryText: string): Locator {
         return this.page.locator('pie-list-item').filter({ hasText: primaryText }).first();
     }
@@ -62,5 +68,33 @@ export class ListItemSelectionPage {
 
     switchControl(primaryText: string): Locator {
         return this.listItem(primaryText).locator('pie-switch');
+    }
+
+    buttonListItem(primaryText: string, listTestId = 'button-list'): Locator {
+        return this.page.locator(`pie-list[data-test-id="${listTestId}"]`).locator('pie-list-item').filter({ hasText: primaryText }).first();
+    }
+
+    activationStatus(): Locator {
+        return this.page.locator('[data-test-id="button-activation-status"]');
+    }
+
+    async focusButtonAction(primaryText: string, listTestId = 'button-list') {
+        await this.page.evaluate(({ itemPrimaryText, listId }) => {
+            const list = document.querySelector(`pie-list[data-test-id="${listId}"]`);
+            const item = Array.from(list?.querySelectorAll('pie-list-item') ?? []).find(
+                (entry) => (entry as HTMLElement & { primaryText?: string }).primaryText === itemPrimaryText,
+            ) as HTMLElement | null;
+
+            (item?.shadowRoot?.querySelector('.c-listItem-action') as HTMLElement | null)?.focus();
+        }, { itemPrimaryText: primaryText, listId: listTestId });
+
+        await this.page.waitForFunction(({ itemPrimaryText, listId }) => {
+            const list = document.querySelector(`pie-list[data-test-id="${listId}"]`);
+            const item = Array.from(list?.querySelectorAll('pie-list-item') ?? []).find(
+                (entry) => (entry as HTMLElement & { primaryText?: string }).primaryText === itemPrimaryText,
+            ) as HTMLElement | null;
+
+            return item?.shadowRoot?.activeElement?.classList.contains('c-listItem-action') ?? false;
+        }, { itemPrimaryText: primaryText, listId: listTestId });
     }
 }

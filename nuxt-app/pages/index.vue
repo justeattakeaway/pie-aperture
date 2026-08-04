@@ -37,6 +37,7 @@
             <li><pie-link href="/components/list-item-switch-selection">List Item Switch Selection</pie-link></li>
             <li><pie-link href="/components/list-item-checkbox-selection">List Item Checkbox Selection</pie-link></li>
             <li><pie-link href="/components/list-item-link">List Item Link</pie-link></li>
+            <li><pie-link href="/components/list-item-button">List Item Button</pie-link></li>
             <li><pie-link href="/components/spinner">Spinner</pie-link></li>
             <li><pie-link href="/components/switch">Switch</pie-link></li>
             <li><pie-link href="/components/select">Select</pie-link></li>

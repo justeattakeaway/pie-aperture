@@ -217,4 +217,27 @@ test.describe('SSR - Components render with shadow dom and styles', () => {
         expect(pieComponentHtml).toMatch(shadowDomRegex);
         expect(pieComponentHtml).toMatch(styleRegex);
     });
+
+    // Button rows render an internal native `<button>` inside `pie-list-item`; assert directly that
+    // the item server-renders with shadow DOM and styles, as with the other list-item interaction pages.
+    test(`SSR: ${APP_NAME}: list-item-button`, async () => {
+        // Arrange
+        const shadowDomRegex = /<template\s+([^>]*shadowroot="open"[^>]*shadowrootmode="open"[^>]*|[^>]*shadowrootmode="open"[^>]*shadowroot="open"[^>]*)>/;
+        const styleRegex = /<style>[\s\S]*?<\/style>/;
+
+        // Act
+        const rawHtml = await fetchHtml(getComponentPageUrl('list-item-button', baseUrl));
+        const pieComponentMatch = rawHtml.match(createComponentRegex('list-item'));
+
+        if (!pieComponentMatch) {
+            console.warn('Failed to find pie-list-item in the SSR html:', rawHtml);
+        }
+
+        const pieComponentHtml = pieComponentMatch ? pieComponentMatch[0] : null;
+
+        // Assert
+        expect(pieComponentHtml).not.toBeNull();
+        expect(pieComponentHtml).toMatch(shadowDomRegex);
+        expect(pieComponentHtml).toMatch(styleRegex);
+    });
 });
