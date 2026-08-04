@@ -8,7 +8,7 @@ document.querySelector('#app').innerHTML = `
     <div id="button-demo">
         <h2 id="button-heading" style="padding: 8px 0;">Button rows</h2>
         <p data-test-id="button-activation-status">Last action: None</p>
-        <pie-list data-test-id="button-list" aria-label="Account actions">
+        <pie-list data-test-id="button-list" aria-labelledby="button-heading">
             <pie-list-item interactionType="button" data-action="Edit profile" primaryText="Edit profile" secondaryText="Update your name and photo" metaText="New"></pie-list-item>
             <pie-list-item interactionType="button" data-action="Change password" primaryText="Change password" secondaryText="Keep your account secure"></pie-list-item>
             <pie-list-item interactionType="button" data-action="Notification preferences" primaryText="Notification preferences" secondaryText="Choose what we email you about"></pie-list-item>
@@ -16,7 +16,7 @@ document.querySelector('#app').innerHTML = `
         </pie-list>
 
         <h2 id="button-disabled-heading" style="padding: 8px 0;">Disabled button rows</h2>
-        <pie-list data-test-id="button-list-disabled" aria-label="Unavailable account actions">
+        <pie-list data-test-id="button-list-disabled" aria-labelledby="button-disabled-heading">
             <pie-list-item interactionType="button" data-action="Edit profile" disabled primaryText="Edit profile" secondaryText="Update your name and photo" metaText="New"></pie-list-item>
             <pie-list-item interactionType="button" data-action="Change password" disabled primaryText="Change password" secondaryText="Keep your account secure"></pie-list-item>
             <pie-list-item interactionType="button" data-action="Notification preferences" disabled primaryText="Notification preferences" secondaryText="Choose what we email you about"></pie-list-item>
