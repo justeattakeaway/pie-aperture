@@ -3,13 +3,13 @@
         <h2 id="checkbox-leading-heading" style="padding: 8px 0;">Checkbox group - leading control (Pepperoni pre-selected)</h2>
         <pie-checkbox-group @change="onLeadingChange">
             <pie-form-label slot="label">Selected toppings: {{ leadingSelected.join(', ') || 'none' }}</pie-form-label>
-            <pie-list-item interactionType="checkbox" primaryText="Cheese" secondaryText="Extra mature" metaText="Free">
+            <pie-list-item hasDivider interactionType="checkbox" primaryText="Cheese" secondaryText="Extra mature" metaText="Free">
                 <pie-checkbox slot="leading" name="cheese" value="cheese"></pie-checkbox>
             </pie-list-item>
-            <pie-list-item interactionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
+            <pie-list-item hasDivider interactionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
                 <pie-checkbox slot="leading" name="pepperoni" value="pepperoni" checked></pie-checkbox>
             </pie-list-item>
-            <pie-list-item interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
+            <pie-list-item hasDivider interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
                 <pie-checkbox slot="leading" name="mushrooms" value="mushrooms" disabled></pie-checkbox>
             </pie-list-item>
             <pie-list-item interactionType="checkbox" primaryText="Olives" metaText="£0.50">
@@ -22,13 +22,13 @@
         <h2 id="checkbox-trailing-heading" style="padding: 8px 0;">Checkbox group - trailing control (Pepperoni pre-selected)</h2>
         <pie-checkbox-group @change="onTrailingChange">
             <pie-form-label slot="label">Selected toppings: {{ trailingSelected.join(', ') || 'none' }}</pie-form-label>
-            <pie-list-item interactionType="checkbox" primaryText="Cheese" secondaryText="Extra mature">
+            <pie-list-item hasDivider interactionType="checkbox" primaryText="Cheese" secondaryText="Extra mature">
                 <pie-checkbox slot="trailing" name="cheese" value="cheese"></pie-checkbox>
             </pie-list-item>
-            <pie-list-item interactionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
+            <pie-list-item hasDivider interactionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
                 <pie-checkbox slot="trailing" name="pepperoni" value="pepperoni" checked></pie-checkbox>
             </pie-list-item>
-            <pie-list-item interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
+            <pie-list-item hasDivider interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
                 <pie-checkbox slot="trailing" name="mushrooms" value="mushrooms" disabled></pie-checkbox>
             </pie-list-item>
             <pie-list-item interactionType="checkbox" primaryText="Olives" metaText="£0.50">

@@ -14,13 +14,13 @@ export default function ListItemLink() {
 
             <h2 id="link-anchor-heading" style={{ padding: '8px 0' }}>Link rows (raw anchor)</h2>
             <PieList aria-label="Manage your restaurant (anchor)">
-                <PieListItem interactionType="link" primaryText="Orders" secondaryText="View and manage live orders" metaText="12 active">
+                <PieListItem hasDivider interactionType="link" primaryText="Orders" secondaryText="View and manage live orders" metaText="12 active">
                     <a slot="link" href="#orders"></a>
                 </PieListItem>
-                <PieListItem interactionType="link" primaryText="Menu" secondaryText="Edit items, prices and photos">
+                <PieListItem hasDivider interactionType="link" primaryText="Menu" secondaryText="Edit items, prices and photos">
                     <a slot="link" href="#menu"></a>
                 </PieListItem>
-                <PieListItem interactionType="link" primaryText="Opening hours" secondaryText="Set your weekly schedule">
+                <PieListItem hasDivider interactionType="link" primaryText="Opening hours" secondaryText="Set your weekly schedule">
                     <a slot="link" href="#opening-hours"></a>
                 </PieListItem>
                 <PieListItem interactionType="link" primaryText="Payouts" secondaryText="Invoices and bank details" metaText="Weekly">
@@ -30,13 +30,13 @@ export default function ListItemLink() {
 
             <h2 id="link-nextlink-heading" style={{ padding: '8px 0' }}>Link rows (Next.js Link component)</h2>
             <PieList aria-label="Manage your restaurant (Next.js Link)">
-                <PieListItem interactionType="link" primaryText="Orders" secondaryText="View and manage live orders" metaText="12 active">
+                <PieListItem hasDivider interactionType="link" primaryText="Orders" secondaryText="View and manage live orders" metaText="12 active">
                     <NextLink slot="link" href="#orders"></NextLink>
                 </PieListItem>
-                <PieListItem interactionType="link" primaryText="Menu" secondaryText="Edit items, prices and photos">
+                <PieListItem hasDivider interactionType="link" primaryText="Menu" secondaryText="Edit items, prices and photos">
                     <NextLink slot="link" href="#menu"></NextLink>
                 </PieListItem>
-                <PieListItem interactionType="link" primaryText="Opening hours" secondaryText="Set your weekly schedule">
+                <PieListItem hasDivider interactionType="link" primaryText="Opening hours" secondaryText="Set your weekly schedule">
                     <NextLink slot="link" href="#opening-hours"></NextLink>
                 </PieListItem>
                 <PieListItem interactionType="link" primaryText="Payouts" secondaryText="Invoices and bank details" metaText="Weekly">

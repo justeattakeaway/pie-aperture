@@ -3,13 +3,13 @@
         <h2 id="switch-trailing-heading" style="padding: 8px 0;">Notification settings - trailing control</h2>
         <p>Enabled: {{ summarise(trailingSettings) }}</p>
         <pie-list aria-label="Notification settings (trailing control)">
-            <pie-list-item interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts">
+            <pie-list-item hasDivider interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts">
                 <pie-switch slot="trailing" name="email" :checked="trailingSettings.email" @change="trailingSettings.email = $event.target.checked"></pie-switch>
             </pie-list-item>
-            <pie-list-item interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders">
+            <pie-list-item hasDivider interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders">
                 <pie-switch slot="trailing" name="push" :checked="trailingSettings.push" @change="trailingSettings.push = $event.target.checked"></pie-switch>
             </pie-list-item>
-            <pie-list-item interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
+            <pie-list-item hasDivider interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
                 <pie-switch slot="trailing" name="sms" :checked="trailingSettings.sms" disabled @change="trailingSettings.sms = $event.target.checked"></pie-switch>
             </pie-list-item>
             <pie-list-item interactionType="switch" primaryText="Post" secondaryText="Paper statements">
@@ -22,13 +22,13 @@
         <h2 id="switch-leading-heading" style="padding: 8px 0;">Notification settings - leading control</h2>
         <p>Enabled: {{ summarise(leadingSettings) }}</p>
         <pie-list aria-label="Notification settings (leading control)">
-            <pie-list-item interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts">
+            <pie-list-item hasDivider interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts">
                 <pie-switch slot="leading" name="email" :checked="leadingSettings.email" @change="leadingSettings.email = $event.target.checked"></pie-switch>
             </pie-list-item>
-            <pie-list-item interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders">
+            <pie-list-item hasDivider interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders">
                 <pie-switch slot="leading" name="push" :checked="leadingSettings.push" @change="leadingSettings.push = $event.target.checked"></pie-switch>
             </pie-list-item>
-            <pie-list-item interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
+            <pie-list-item hasDivider interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
                 <pie-switch slot="leading" name="sms" :checked="leadingSettings.sms" disabled @change="leadingSettings.sms = $event.target.checked"></pie-switch>
             </pie-list-item>
             <pie-list-item interactionType="switch" primaryText="Post" secondaryText="Paper statements">

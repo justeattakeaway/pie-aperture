@@ -2,13 +2,13 @@
     <div>
         <h2 id="link-anchor-heading" style="padding: 8px 0;">Link rows (raw anchor)</h2>
         <pie-list aria-label="Manage your restaurant (anchor)">
-            <pie-list-item interactionType="link" primaryText="Orders" secondaryText="View and manage live orders" metaText="12 active">
+            <pie-list-item hasDivider interactionType="link" primaryText="Orders" secondaryText="View and manage live orders" metaText="12 active">
                 <a slot="link" href="#orders"></a>
             </pie-list-item>
-            <pie-list-item interactionType="link" primaryText="Menu" secondaryText="Edit items, prices and photos">
+            <pie-list-item hasDivider interactionType="link" primaryText="Menu" secondaryText="Edit items, prices and photos">
                 <a slot="link" href="#menu"></a>
             </pie-list-item>
-            <pie-list-item interactionType="link" primaryText="Opening hours" secondaryText="Set your weekly schedule">
+            <pie-list-item hasDivider interactionType="link" primaryText="Opening hours" secondaryText="Set your weekly schedule">
                 <a slot="link" href="#opening-hours"></a>
             </pie-list-item>
             <pie-list-item interactionType="link" primaryText="Payouts" secondaryText="Invoices and bank details" metaText="Weekly">
@@ -18,13 +18,13 @@
 
         <h2 id="link-nuxtlink-heading" style="padding: 8px 0;">Link rows (NuxtLink component)</h2>
         <pie-list aria-label="Manage your restaurant (NuxtLink)">
-            <pie-list-item interactionType="link" primaryText="Orders" secondaryText="View and manage live orders" metaText="12 active">
+            <pie-list-item hasDivider interactionType="link" primaryText="Orders" secondaryText="View and manage live orders" metaText="12 active">
                 <NuxtLink slot="link" to="#orders" />
             </pie-list-item>
-            <pie-list-item interactionType="link" primaryText="Menu" secondaryText="Edit items, prices and photos">
+            <pie-list-item hasDivider interactionType="link" primaryText="Menu" secondaryText="Edit items, prices and photos">
                 <NuxtLink slot="link" to="#menu" />
             </pie-list-item>
-            <pie-list-item interactionType="link" primaryText="Opening hours" secondaryText="Set your weekly schedule">
+            <pie-list-item hasDivider interactionType="link" primaryText="Opening hours" secondaryText="Set your weekly schedule">
                 <NuxtLink slot="link" to="#opening-hours" />
             </pie-list-item>
             <pie-list-item interactionType="link" primaryText="Payouts" secondaryText="Invoices and bank details" metaText="Weekly">
