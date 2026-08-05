@@ -45,13 +45,13 @@ export default function ListItemSwitchSelection() {
             <h2 id="switch-trailing-heading" style={{ padding: '8px 0' }}>Notification settings - trailing control</h2>
             <p>Enabled: {summarise(trailingSettings)}</p>
             <PieList aria-label="Notification settings (trailing control)">
-                <PieListItem interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts">
+                <PieListItem interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts" hasDivider>
                     <PieSwitch slot="trailing" name="email" checked={trailingSettings.email} onChange={handleChange(setTrailingSettings, 'email')} />
                 </PieListItem>
-                <PieListItem interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders">
+                <PieListItem interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders" hasDivider>
                     <PieSwitch slot="trailing" name="push" checked={trailingSettings.push} onChange={handleChange(setTrailingSettings, 'push')} />
                 </PieListItem>
-                <PieListItem interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
+                <PieListItem interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable" hasDivider>
                     <PieSwitch slot="trailing" name="sms" checked={trailingSettings.sms} disabled onChange={handleChange(setTrailingSettings, 'sms')} />
                 </PieListItem>
                 <PieListItem interactionType="switch" primaryText="Post" secondaryText="Paper statements">
@@ -64,13 +64,13 @@ export default function ListItemSwitchSelection() {
             <h2 id="switch-leading-heading" style={{ padding: '8px 0' }}>Notification settings - leading control</h2>
             <p>Enabled: {summarise(leadingSettings)}</p>
             <PieList aria-label="Notification settings (leading control)">
-                <PieListItem interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts">
+                <PieListItem interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts" hasDivider>
                     <PieSwitch slot="leading" name="email" checked={leadingSettings.email} onChange={handleChange(setLeadingSettings, 'email')} />
                 </PieListItem>
-                <PieListItem interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders">
+                <PieListItem interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders" hasDivider>
                     <PieSwitch slot="leading" name="push" checked={leadingSettings.push} onChange={handleChange(setLeadingSettings, 'push')} />
                 </PieListItem>
-                <PieListItem interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
+                <PieListItem interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable" hasDivider>
                     <PieSwitch slot="leading" name="sms" checked={leadingSettings.sms} disabled onChange={handleChange(setLeadingSettings, 'sms')} />
                 </PieListItem>
                 <PieListItem interactionType="switch" primaryText="Post" secondaryText="Paper statements">

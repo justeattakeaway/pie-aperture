@@ -16,15 +16,15 @@ export default function List() {
         <NavigationLayout title="List">
             <h2 id="plain-text-list-heading" style={{ padding: '8px 0' }}>PIE List - plain text items</h2>
             <PieList aria-labelledby="plain-text-list-heading">
-                <PieListItem primaryText="First list item" isBold={false} isCompact={false} hasMedia={false} />
-                <PieListItem primaryText="Second list item" isBold={false} isCompact={false} hasMedia={false} />
+                <PieListItem primaryText="First list item" isBold={false} isCompact={false} hasMedia={false} hasDivider />
+                <PieListItem primaryText="Second list item" isBold={false} isCompact={false} hasMedia={false} hasDivider />
                 <PieListItem primaryText="Third list item" isBold={false} isCompact={false} hasMedia={false} />
             </PieList>
 
             <h2 id="mixed-content-list-heading" style={{ padding: '8px 0' }}>PIE List - mixed content</h2>
             <PieList aria-labelledby="mixed-content-list-heading">
-                <PieListItem primaryText="Delivery details" isBold isCompact={false} hasMedia={false} />
-                <PieListItem primaryText="Estimated time: 25 minutes" isBold={false} isCompact={false} hasMedia={false} />
+                <PieListItem primaryText="Delivery details" isBold isCompact={false} hasMedia={false} hasDivider />
+                <PieListItem primaryText="Estimated time: 25 minutes" isBold={false} isCompact={false} hasMedia={false} hasDivider />
                 <PieListItem primaryText="Driver is on the way" isBold={false} isCompact={false} hasMedia={false} />
             </PieList>
 
@@ -36,6 +36,7 @@ export default function List() {
                     hasMedia
                     isBold={false}
                     isCompact={false}
+                    hasDivider
                 >
                     <PieThumbnail slot="leading" size={40} />
                     <PieTag slot="trailing">Popular</PieTag>
@@ -61,6 +62,7 @@ export default function List() {
                     isBold={false}
                     isCompact={false}
                     hasMedia={false}
+                    hasDivider
                 />
                 <PieListItem
                     primaryText="Order #48198"
@@ -68,6 +70,7 @@ export default function List() {
                     isBold={false}
                     isCompact={false}
                     hasMedia={false}
+                    hasDivider
                 />
                 <PieListItem
                     primaryText="Order #48176"
@@ -84,6 +87,7 @@ export default function List() {
                     isBold={false}
                     isCompact={false}
                     hasMedia={false}
+                    hasDivider
                 />
                 <PieListItem
                     primaryText="Order summary with an unusually long title that should wrap onto several lines to test how the primary text behaves alongside secondary text and a trailing meta text value"
@@ -92,6 +96,7 @@ export default function List() {
                     isBold={false}
                     isCompact={false}
                     hasMedia={false}
+                    hasDivider
                 />
                 <PieListItem
                     primaryText="A restaurant with a very long name that keeps going and going to force the primary text to wrap next to the leading thumbnail media element"
@@ -106,14 +111,15 @@ export default function List() {
 
             <h2 id="rtl-list-heading" style={{ padding: '8px 0' }}>PIE List - right-to-left content</h2>
             <PieList dir="rtl" aria-labelledby="rtl-list-heading">
-                <PieListItem primaryText="برجر لحم مشوي" isBold={false} isCompact={false} hasMedia={false} />
-                <PieListItem primaryText="بيتزا مارغريتا" isBold={false} isCompact={false} hasMedia={false} />
+                <PieListItem primaryText="برجر لحم مشوي" isBold={false} isCompact={false} hasMedia={false} hasDivider />
+                <PieListItem primaryText="بيتزا مارغريتا" isBold={false} isCompact={false} hasMedia={false} hasDivider />
                 <PieListItem
                     primaryText="تفاصيل التوصيل"
                     secondaryText="الوقت المقدر ٢٥ دقيقة"
                     isBold={false}
                     isCompact={false}
                     hasMedia={false}
+                    hasDivider
                 />
                 <PieListItem
                     primaryText="تتبع طلبك"
@@ -129,8 +135,8 @@ export default function List() {
 
             <h2 id="padding-override-list-heading" style={{ padding: '8px 0' }}>PIE List - overridden inline padding</h2>
             <PieList aria-labelledby="padding-override-list-heading">
-                <PieListItem primaryText="First list item" isBold={false} isCompact={false} hasMedia={false} style={inlinePaddingOverride} />
-                <PieListItem primaryText="Second list item" isBold={false} isCompact={false} hasMedia={false} style={inlinePaddingOverride} />
+                <PieListItem primaryText="First list item" isBold={false} isCompact={false} hasMedia={false} style={inlinePaddingOverride} hasDivider />
+                <PieListItem primaryText="Second list item" isBold={false} isCompact={false} hasMedia={false} style={inlinePaddingOverride} hasDivider />
                 <PieListItem primaryText="Third list item" isBold={false} isCompact={false} hasMedia={false} style={inlinePaddingOverride} />
             </PieList>
         </NavigationLayout>

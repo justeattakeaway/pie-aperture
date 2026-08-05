@@ -32,13 +32,13 @@ export default function ListItemCheckboxSelection() {
             <h2 id="checkbox-leading-heading" style={{ padding: '8px 0' }}>Checkbox group - leading control (Pepperoni pre-selected)</h2>
             <PieCheckboxGroup onChange={handleChange(setLeading)}>
                 <PieFormLabel slot="label">Selected toppings: {selectedLabel(leading)}</PieFormLabel>
-                <PieListItem interactionType="checkbox" primaryText="Cheese" secondaryText="Extra mature" metaText="Free">
+                <PieListItem hasDivider interactionType="checkbox" primaryText="Cheese" secondaryText="Extra mature" metaText="Free">
                     <PieCheckbox slot="leading" name="cheese" value="cheese" checked={leading.cheese} />
                 </PieListItem>
-                <PieListItem interactionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
+                <PieListItem hasDivider interactionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
                     <PieCheckbox slot="leading" name="pepperoni" value="pepperoni" checked={leading.pepperoni} />
                 </PieListItem>
-                <PieListItem interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
+                <PieListItem hasDivider interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
                     <PieCheckbox slot="leading" name="mushrooms" value="mushrooms" disabled checked={leading.mushrooms} />
                 </PieListItem>
                 <PieListItem interactionType="checkbox" primaryText="Olives" metaText="£0.50">
@@ -51,13 +51,13 @@ export default function ListItemCheckboxSelection() {
             <h2 id="checkbox-trailing-heading" style={{ padding: '8px 0' }}>Checkbox group - trailing control (Pepperoni pre-selected)</h2>
             <PieCheckboxGroup onChange={handleChange(setTrailing)}>
                 <PieFormLabel slot="label">Selected toppings: {selectedLabel(trailing)}</PieFormLabel>
-                <PieListItem interactionType="checkbox" primaryText="Cheese" secondaryText="Extra mature">
+                <PieListItem hasDivider interactionType="checkbox" primaryText="Cheese" secondaryText="Extra mature">
                     <PieCheckbox slot="trailing" name="cheese" value="cheese" checked={trailing.cheese} />
                 </PieListItem>
-                <PieListItem interactionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
+                <PieListItem hasDivider interactionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
                     <PieCheckbox slot="trailing" name="pepperoni" value="pepperoni" checked={trailing.pepperoni} />
                 </PieListItem>
-                <PieListItem interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
+                <PieListItem hasDivider interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
                     <PieCheckbox slot="trailing" name="mushrooms" value="mushrooms" disabled checked={trailing.mushrooms} />
                 </PieListItem>
                 <PieListItem interactionType="checkbox" primaryText="Olives" metaText="£0.50">

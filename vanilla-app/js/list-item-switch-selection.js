@@ -10,13 +10,13 @@ document.querySelector('#app').innerHTML = `
     <h2 id="switch-trailing-heading" style="padding: 8px 0;">Notification settings - trailing control</h2>
     <p id="settings-trailing-summary">Enabled: Email, Push notifications</p>
     <pie-list id="settings-trailing" aria-label="Notification settings (trailing control)">
-        <pie-list-item interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts">
+        <pie-list-item hasDivider interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts">
             <pie-switch slot="trailing" name="email" checked></pie-switch>
         </pie-list-item>
-        <pie-list-item interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders">
+        <pie-list-item hasDivider interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders">
             <pie-switch slot="trailing" name="push" checked></pie-switch>
         </pie-list-item>
-        <pie-list-item interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
+        <pie-list-item hasDivider interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
             <pie-switch slot="trailing" name="sms" disabled></pie-switch>
         </pie-list-item>
         <pie-list-item interactionType="switch" primaryText="Post" secondaryText="Paper statements">
@@ -29,13 +29,13 @@ document.querySelector('#app').innerHTML = `
     <h2 id="switch-leading-heading" style="padding: 8px 0;">Notification settings - leading control</h2>
     <p id="settings-leading-summary">Enabled: Email, Push notifications</p>
     <pie-list id="settings-leading" aria-label="Notification settings (leading control)">
-        <pie-list-item interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts">
+        <pie-list-item hasDivider interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts">
             <pie-switch slot="leading" name="email" checked></pie-switch>
         </pie-list-item>
-        <pie-list-item interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders">
+        <pie-list-item hasDivider interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders">
             <pie-switch slot="leading" name="push" checked></pie-switch>
         </pie-list-item>
-        <pie-list-item interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
+        <pie-list-item hasDivider interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
             <pie-switch slot="leading" name="sms" disabled></pie-switch>
         </pie-list-item>
         <pie-list-item interactionType="switch" primaryText="Post" secondaryText="Paper statements">
