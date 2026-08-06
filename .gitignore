@@ -26,6 +26,9 @@ lerna-debug.log*
 .DS_Store
 *.pem
 
+# oh-my-claudecode operational state
+.omc/
+
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
