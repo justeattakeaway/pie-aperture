@@ -24,6 +24,7 @@ describe('NextJS Aperture App', () => {
         { url: '/components/form-label', name: 'Form Label' },
         { url: '/components/icon', name: 'Icon' },
         { url: '/components/icon-button', name: 'Icon Button' },
+        { url: '/components/icon-with-background', name: 'Icon With Background' },
         { url: '/components/link', name: 'Link' },
         { url: '/components/list', name: 'List' },
         { url: '/components/lottie-player', name: 'Lottie Player', pauseBeforeScreenshot: true },

@@ -23,6 +23,7 @@ describe('Vanilla Aperture App', () => {
         { url: '/components/form-label.html', name: 'Form Label' },
         { url: '/components/icon.html', name: 'Icon' },
         { url: '/components/icon-button.html', name: 'Icon Button' },
+        { url: '/components/icon-with-background.html', name: 'Icon With Background' },
         { url: '/components/link.html', name: 'Link' },
         { url: '/components/list.html', name: 'List' },
         { url: '/components/lottie-player.html', name: 'Lottie Player', pauseBeforeScreenshot: true },
