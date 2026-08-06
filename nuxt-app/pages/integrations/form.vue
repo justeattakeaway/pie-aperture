@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form class="form" id="testForm" @submit.prevent="handleSubmit">
+        <form class="form" id="testForm" @submit.prevent="handleSubmit" @reset="handleReset">
             <pie-form-label for="username">
                 Username:
             </pie-form-label>
@@ -94,6 +94,7 @@
             </pie-form-label>
             <pie-textarea
                 :value="description"
+                defaultValue="This is default value, not a placeholder"
                 placeholder="Write something about yourself..."
                 @input="description = $event.target.value"
                 class="form-field"
@@ -280,6 +281,10 @@ function handleFavouriteNumberInput(event: Event) {
     }
 
     favouriteNumberValidationMessage.value = validationMessage;
+}
+
+function handleReset() {
+    description.value = 'This is default value, not a placeholder';
 }
 
 function handleSubmit() {

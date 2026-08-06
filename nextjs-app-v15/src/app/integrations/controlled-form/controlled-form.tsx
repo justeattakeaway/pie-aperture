@@ -128,6 +128,10 @@ export default function ControlledForm() {
         setDescription((event.target as HTMLTextAreaElement).value);
     }
 
+    const handleFormReset = () => {
+        setDescription('This is default value, not a placeholder');
+    };
+
     const handleContactByPhone = () => {
         setContactByPhone(current => !current);
     };
@@ -169,7 +173,7 @@ export default function ControlledForm() {
 
     return (
         <NavigationLayout title="Form Test Page">
-            <form className="form" id="testForm" onSubmit={handleSubmit}>
+            <form className="form" id="testForm" onSubmit={handleSubmit} onReset={handleFormReset}>
                 <PieFormLabel for="username">
                     Username:
                 </PieFormLabel>
@@ -263,10 +267,11 @@ export default function ControlledForm() {
                     Description:
                 </PieFormLabel>
                 <PieTextarea
-                    className="form-field"
+                    className="form-field"  
                     id="description"
                     data-test-id="description"
                     name="description"
+                    defaultValue={description}
                     placeholder="Write something about yourself..."
                     value={description}
                     onInput={handleDescriptionTextarea} />

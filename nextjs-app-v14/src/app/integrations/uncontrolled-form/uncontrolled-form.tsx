@@ -154,6 +154,7 @@ export default function UnControlledForm() {
                     id="description"
                     data-test-id="description"
                     name="description"
+                    defaultValue="This is default value, not a placeholder"
                     placeholder="Write something about yourself..." />
 
                 <div className="form-controls">
