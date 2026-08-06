@@ -94,7 +94,7 @@
             </pie-form-label>
             <pie-textarea
                 :value="description"
-                defaultValue="This is default value, not a placeholder"
+                :defaultValue="descriptionDefaultValue"
                 placeholder="Write something about yourself..."
                 @input="description = $event.target.value"
                 class="form-field"
@@ -283,8 +283,10 @@ function handleFavouriteNumberInput(event: Event) {
     favouriteNumberValidationMessage.value = validationMessage;
 }
 
+const descriptionDefaultValue = 'This is default value, not a placeholder';
+
 function handleReset() {
-    description.value = 'This is default value, not a placeholder';
+    description.value = descriptionDefaultValue;
 }
 
 function handleSubmit() {

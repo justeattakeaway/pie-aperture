@@ -128,8 +128,10 @@ export default function ControlledForm() {
         setDescription((event.target as HTMLTextAreaElement).value);
     }
 
+    const descriptionDefaultValue = 'This is default value, not a placeholder';
+
     const handleFormReset = () => {
-        setDescription('This is default value, not a placeholder');
+        setDescription(descriptionDefaultValue);
     };
 
     const handleContactByPhone = () => {
@@ -271,7 +273,7 @@ export default function ControlledForm() {
                     id="description"
                     data-test-id="description"
                     name="description"
-                    defaultValue={description}
+                    defaultValue={descriptionDefaultValue}
                     placeholder="Write something about yourself..."
                     value={description}
                     onInput={handleDescriptionTextarea} />

@@ -145,8 +145,10 @@ export default function ControlledForm() {
         setFavouriteFood((event.target as HTMLSelectElement).value)
     };
 
+    const descriptionDefaultValue = 'This is default value, not a placeholder';
+
     const handleReset = (event: React.FormEvent<HTMLFormElement>) => {
-        setDescription('this is default')
+        setDescription(descriptionDefaultValue);
     }
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -273,7 +275,7 @@ export default function ControlledForm() {
                     placeholder="Write something about yourself..."
                     value={description}
                     onInput={handleDescriptionTextarea}
-                    defaultValue={description} />
+                    defaultValue={descriptionDefaultValue} />
 
                 <PieFormLabel for="favouriteFood">
                     Favourite Food:
