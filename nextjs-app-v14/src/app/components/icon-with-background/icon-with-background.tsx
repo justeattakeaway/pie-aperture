@@ -1,13 +1,14 @@
 'use client';
 
+import { type CSSProperties } from "react";
 import NavigationLayout from "@/app/layout/navigation";
 import { PieIconWithBackground } from '@justeattakeaway/pie-webc/react/icon-with-background.js';
 import { IconClose } from '@justeattakeaway/pie-icons-webc/dist/react/IconClose.js';
 
-const itemStyle: React.CSSProperties = { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 };
-const rowStyle: React.CSSProperties = { display: 'flex', gap: 16, alignItems: 'flex-end', flexWrap: 'wrap', padding: '8px 0' };
-const labelStyle: React.CSSProperties = { fontSize: 12 };
-const headingStyle: React.CSSProperties = { padding: '8px 0' };
+const itemStyle: CSSProperties = { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 };
+const rowStyle: CSSProperties = { display: 'flex', gap: 16, alignItems: 'flex-end', flexWrap: 'wrap', padding: '8px 0' };
+const labelStyle: CSSProperties = { fontSize: 12 };
+const headingStyle: CSSProperties = { padding: '8px 0' };
 
 export default function IconWithBackground() {
     return (
