@@ -103,6 +103,6 @@ jobs:
         shell: bash
         run: yarn test:visual --filter=nextjs-app-v14
     env:
-      PERCY_TOKEN_PIE_APERTURE_NEXT_14: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NEXT_14 }}
+      PERCY_TOKEN_PIE_APERTURE_NEXT_14: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NEXT_14_PLAYWRIGHT }}
       NEXT_14_AMPLIFY_ID: d1xxjuy6vbm7pk
       PR_NUMBER: ${{ github.event.number }}

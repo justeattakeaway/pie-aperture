@@ -106,6 +106,6 @@ jobs:
         shell: bash
         run: yarn test:visual --filter=nuxt-app
     env:
-      PERCY_TOKEN_PIE_APERTURE_NUXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NUXT }}
+      PERCY_TOKEN_PIE_APERTURE_NUXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NUXT_PLAYWRIGHT }}
       NUXT_AMPLIFY_ID: d36dan3bxjue8c
       PR_NUMBER: ${{ github.event.number }}
