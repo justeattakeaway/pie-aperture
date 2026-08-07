@@ -6,11 +6,9 @@ on:
     paths:
       - '.github/workflows/**'
       - 'nuxt-app/**'
-      - 'webdriver-helpers/**'
-      - 'wdio.conf.js'
+      - 'playwright.config.ts'
       - 'test/**'
       - 'playwright-helpers/**'
-      - '.percy.yml'
       - 'package.json'
       - 'yarn.lock'
 
@@ -101,12 +99,13 @@ jobs:
       - name: Setup Node and Install Dependencies
         uses: ./.github/actions/setup-node
 
+      - name: Setup Playwright
+        uses: ./.github/actions/setup-playwright
+
       - name: Run Percy Tests
         shell: bash
         run: yarn test:visual --filter=nuxt-app
     env:
-      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
       PERCY_TOKEN_PIE_APERTURE_NUXT: ${{ secrets.PERCY_TOKEN_PIE_APERTURE_NUXT }}
       NUXT_AMPLIFY_ID: d36dan3bxjue8c
       PR_NUMBER: ${{ github.event.number }}
