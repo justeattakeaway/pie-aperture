@@ -18,7 +18,7 @@ document.querySelector('#app').innerHTML = `
         ${variants.map((variant) => `
             <pie-tag
                 variant="${variant}"
-                has-leading-icon>
+                hasLeadingIcon>
                 <icon-fingerprint slot="icon"></icon-fingerprint>
                 ${variant}
             </pie-tag>
@@ -27,7 +27,7 @@ document.querySelector('#app').innerHTML = `
         ${variants.map((variant) => `
             <pie-tag
                 variant="${variant}"
-                is-icon-only>
+                isIconOnly>
                 <icon-fingerprint slot="icon"></icon-fingerprint>
             </pie-tag>
         `).join('')}
@@ -48,7 +48,7 @@ document.querySelector('#app').innerHTML = `
             <pie-tag
                 variant="${variant}"
                 isStrong
-                has-leading-icon>
+                hasLeadingIcon>
                 <icon-fingerprint slot="icon"></icon-fingerprint>
                 ${variant}
             </pie-tag>
@@ -58,7 +58,7 @@ document.querySelector('#app').innerHTML = `
             <pie-tag
                 variant="${variant}"
                 isStrong
-                is-icon-only>
+                isIconOnly>
                 <icon-fingerprint slot="icon"></icon-fingerprint>
             </pie-tag>
         `).join('')}

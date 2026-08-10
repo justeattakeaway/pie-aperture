@@ -26,16 +26,16 @@ export default function ListItemRadioSelection() {
             <h2 id="radio-leading-heading" style={{ padding: '8px 0' }}>Radio group - leading control (pre-selected)</h2>
             <PieRadioGroup name="deliveryLeading" value={deliveryLeading} onChange={handleDeliveryLeadingChange}>
                 <PieFormLabel slot="label">Select a delivery option: {deliveryLeading}</PieFormLabel>
-                <PieListItem selectionType="radio" primaryText="Standard" secondaryText="3 to 5 days" metaText="Free">
+                <PieListItem hasDivider interactionType="radio" primaryText="Standard" secondaryText="3 to 5 days" metaText="Free">
                     <PieRadio slot="leading" value="standard" />
                 </PieListItem>
-                <PieListItem selectionType="radio" primaryText="Express" secondaryText="Next day" metaText="£2.99">
+                <PieListItem hasDivider interactionType="radio" primaryText="Express" secondaryText="Next day" metaText="£2.99">
                     <PieRadio slot="leading" value="express" />
                 </PieListItem>
-                <PieListItem selectionType="radio" disabled primaryText="Collection" secondaryText="Pick up in store">
+                <PieListItem hasDivider interactionType="radio" disabled primaryText="Collection" secondaryText="Pick up in store">
                     <PieRadio slot="leading" value="collection" disabled />
                 </PieListItem>
-                <PieListItem selectionType="radio" primaryText="Locker" secondaryText="Collect at your convenience" metaText="Free">
+                <PieListItem interactionType="radio" primaryText="Locker" secondaryText="Collect at your convenience" metaText="Free">
                     <PieRadio slot="leading" value="locker" />
                 </PieListItem>
             </PieRadioGroup>
@@ -45,16 +45,16 @@ export default function ListItemRadioSelection() {
             <h2 id="radio-trailing-heading" style={{ padding: '8px 0' }}>Radio group - trailing control (pre-selected)</h2>
             <PieRadioGroup name="deliveryTrailing" value={deliveryTrailing} onChange={handleDeliveryTrailingChange}>
                 <PieFormLabel slot="label">Select a delivery option: {deliveryTrailing}</PieFormLabel>
-                <PieListItem selectionType="radio" primaryText="Standard" secondaryText="3 to 5 days">
+                <PieListItem hasDivider interactionType="radio" primaryText="Standard" secondaryText="3 to 5 days">
                     <PieRadio slot="trailing" value="standard" />
                 </PieListItem>
-                <PieListItem selectionType="radio" primaryText="Express" secondaryText="Next day">
+                <PieListItem hasDivider interactionType="radio" primaryText="Express" secondaryText="Next day">
                     <PieRadio slot="trailing" value="express" />
                 </PieListItem>
-                <PieListItem selectionType="radio" disabled primaryText="Collection" secondaryText="Pick up in store">
+                <PieListItem hasDivider interactionType="radio" disabled primaryText="Collection" secondaryText="Pick up in store">
                     <PieRadio slot="trailing" value="collection" disabled />
                 </PieListItem>
-                <PieListItem selectionType="radio" primaryText="Locker" secondaryText="Collect at your convenience">
+                <PieListItem interactionType="radio" primaryText="Locker" secondaryText="Collect at your convenience">
                     <PieRadio slot="trailing" value="locker" />
                 </PieListItem>
             </PieRadioGroup>
