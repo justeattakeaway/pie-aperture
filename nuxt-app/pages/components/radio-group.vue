@@ -20,9 +20,9 @@
 
         <br/>
 
-        <pie-radio-group isInline="true" name="inlineFavouriteTakeaway" @change="favouriteTakeaway = $event.target.value">
+        <pie-radio-group isInline="true" name="inlineFavouriteTakeaway">
             <pie-form-label slot="label">
-                Your favourite takeaway - inline radio: {{ favouriteTakeaway }}
+                Your options for takeaway - inline radio
             </pie-form-label>
             <pie-radio
                 value="chinese">

@@ -28,8 +28,8 @@ export default function RadioGroup() {
 
             <br/>
 
-            <PieRadioGroup isInline name="inlineFavouriteTakeaway" onChange={handleFavouriteTakeaway}>
-                <PieFormLabel slot="label">Your favourite takeaway - inline radio: { favouriteTakeaway }</PieFormLabel>
+            <PieRadioGroup isInline name="inlineFavouriteTakeaway">
+                <PieFormLabel slot="label">Your options for takeaway - inline radio</PieFormLabel>
                 <PieRadio value="italian">Italian</PieRadio>
                 <PieRadio value="tahi">Thai</PieRadio>
                 <PieRadio value="burgers">Burgers</PieRadio>

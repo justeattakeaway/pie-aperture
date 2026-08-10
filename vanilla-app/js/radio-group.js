@@ -9,7 +9,7 @@ import './utils/navigation.js';
 let checked = false;
 
 function handleRadioChange() {
-    const radioGroup = document.querySelector('pie-radio-group');
+    const radioGroup = document.querySelector('#favourite');
     const formLabel = document.querySelector('pie-form-label');
 
     formLabel.innerHTML = `Your favourite takeaway: ${radioGroup.value}`;
@@ -17,7 +17,7 @@ function handleRadioChange() {
 
 // Set initial HTML structure
 document.querySelector('#app').innerHTML = `
-    <pie-radio-group>
+    <pie-radio-group id="favourite">
         <pie-form-label slot="label">Your favourite takeaway:</pie-form-label>
         <pie-radio name="favouriteTakeaway" value="chinese">Chinese</pie-radio>
         <pie-radio name="favouriteTakeaway" value="shawarma">Shawarma</pie-radio>
@@ -27,7 +27,7 @@ document.querySelector('#app').innerHTML = `
     <br/>
 
     <pie-radio-group isInline="true">
-        <pie-form-label slot="label">Your favourite takeaway - inline radio:</pie-form-label>
+        <pie-form-label slot="label">Your options for takeaway - inline radio</pie-form-label>
         <pie-radio name="favouriteTakeaway" value="chinese">Chinese</pie-radio>
         <pie-radio name="favouriteTakeaway" value="shawarma">Shawarma</pie-radio>
         <pie-radio name="favouriteTakeaway" value="pizza">Pizza</pie-radio>
