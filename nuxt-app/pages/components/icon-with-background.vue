@@ -117,6 +117,26 @@
         <span style="font-size: 12px;">error isStrong</span>
       </div>
     </div>
+
+    <h2 style="padding: 8px 0;">PIE Icon With Background - isDimmed</h2>
+    <div style="display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; padding: 8px 0;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+        <pie-icon-with-background data-test-id="is-dimmed-neutral" variant="neutral" :isDimmed="true"><icon-close></icon-close></pie-icon-with-background>
+        <span style="font-size: 12px;">neutral isDimmed</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+        <pie-icon-with-background data-test-id="is-dimmed-success" variant="success" :isDimmed="true"><icon-close></icon-close></pie-icon-with-background>
+        <span style="font-size: 12px;">success isDimmed</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+        <pie-icon-with-background data-test-id="is-dimmed-error" variant="error" :isDimmed="true"><icon-close></icon-close></pie-icon-with-background>
+        <span style="font-size: 12px;">error isDimmed</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+        <pie-icon-with-background data-test-id="is-dimmed-information" variant="information" :isDimmed="true"><icon-close></icon-close></pie-icon-with-background>
+        <span style="font-size: 12px;">information isDimmed</span>
+      </div>
+    </div>
   </div>
 </template>
 

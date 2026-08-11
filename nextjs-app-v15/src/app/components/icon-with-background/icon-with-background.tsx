@@ -92,6 +92,26 @@ export default function IconWithBackground() {
                     <span style={labelStyle}>error isStrong</span>
                 </div>
             </div>
+
+            <h2 style={headingStyle}>PIE Icon With Background - isDimmed</h2>
+            <div style={rowStyle}>
+                <div style={itemStyle}>
+                    <PieIconWithBackground data-test-id="is-dimmed-neutral" variant="neutral" isDimmed><IconClose /></PieIconWithBackground>
+                    <span style={labelStyle}>neutral isDimmed</span>
+                </div>
+                <div style={itemStyle}>
+                    <PieIconWithBackground data-test-id="is-dimmed-success" variant="success" isDimmed><IconClose /></PieIconWithBackground>
+                    <span style={labelStyle}>success isDimmed</span>
+                </div>
+                <div style={itemStyle}>
+                    <PieIconWithBackground data-test-id="is-dimmed-error" variant="error" isDimmed><IconClose /></PieIconWithBackground>
+                    <span style={labelStyle}>error isDimmed</span>
+                </div>
+                <div style={itemStyle}>
+                    <PieIconWithBackground data-test-id="is-dimmed-information" variant="information" isDimmed><IconClose /></PieIconWithBackground>
+                    <span style={labelStyle}>information isDimmed</span>
+                </div>
+            </div>
         </NavigationLayout>
     );
 }
