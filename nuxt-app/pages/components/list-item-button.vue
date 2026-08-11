@@ -16,6 +16,19 @@
             <pie-list-item hasDivider interactionType="button" data-action="Notification preferences" disabled primaryText="Notification preferences" secondaryText="Choose what we email you about" @click="lastAction = 'Notification preferences'"></pie-list-item>
             <pie-list-item interactionType="button" data-action="Sign out" disabled primaryText="Sign out" secondaryText="End your session on this device" @click="lastAction = 'Sign out'"></pie-list-item>
         </pie-list>
+
+        <h2 id="button-disabled-tag-heading" style="padding: 8px 0;">Disabled button rows with tag (isDimmed set explicitly)</h2>
+        <pie-list aria-labelledby="button-disabled-tag-heading">
+            <pie-list-item hasDivider interactionType="button" disabled primaryText="Cheeseburger Deluxe" secondaryText="Downtown Burger Co." @click="lastAction = 'Cheeseburger Deluxe'">
+                <pie-tag slot="trailing" isDimmed>Popular</pie-tag>
+            </pie-list-item>
+            <pie-list-item hasDivider interactionType="button" primaryText="Margherita Pizza" secondaryText="City Pizza Co." @click="lastAction = 'Margherita Pizza'">
+                <pie-tag slot="trailing">New</pie-tag>
+            </pie-list-item>
+            <pie-list-item interactionType="button" disabled primaryText="Veggie Burger" secondaryText="Green Bites" @click="lastAction = 'Veggie Burger'">
+                <pie-tag slot="trailing" isDimmed>Deal</pie-tag>
+            </pie-list-item>
+        </pie-list>
     </div>
 </template>
 
@@ -24,6 +37,7 @@ import { ref } from 'vue';
 import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/list.js';
 import '@justeattakeaway/pie-webc/components/list-item.js';
+import '@justeattakeaway/pie-webc/components/tag.js';
 
 definePageMeta({
     title: 'List Item Button',

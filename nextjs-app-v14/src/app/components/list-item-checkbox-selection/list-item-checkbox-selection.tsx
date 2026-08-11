@@ -7,6 +7,7 @@ import { PieCheckbox } from "@justeattakeaway/pie-webc/react/checkbox.js";
 import { PieListItem } from "@justeattakeaway/pie-webc/react/list-item.js";
 import { PieFormLabel } from "@justeattakeaway/pie-webc/react/form-label.js";
 import { PieButton } from "@justeattakeaway/pie-webc/react/button.js";
+import { PieTag } from "@justeattakeaway/pie-webc/react/tag.js";
 
 type Toppings = Record<string, boolean>;
 
@@ -40,6 +41,7 @@ export default function ListItemCheckboxSelection() {
                 </PieListItem>
                 <PieListItem hasDivider interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
                     <PieCheckbox slot="leading" name="mushrooms" value="mushrooms" disabled checked={leading.mushrooms} />
+                    <PieTag slot="trailing" isDimmed>Out of stock</PieTag>
                 </PieListItem>
                 <PieListItem interactionType="checkbox" primaryText="Olives" metaText="£0.50">
                     <PieCheckbox slot="leading" name="olives" value="olives" checked={leading.olives} />
@@ -58,6 +60,7 @@ export default function ListItemCheckboxSelection() {
                     <PieCheckbox slot="trailing" name="pepperoni" value="pepperoni" checked={trailing.pepperoni} />
                 </PieListItem>
                 <PieListItem hasDivider interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
+                    <PieTag slot="leading" isDimmed>Out of stock</PieTag>
                     <PieCheckbox slot="trailing" name="mushrooms" value="mushrooms" disabled checked={trailing.mushrooms} />
                 </PieListItem>
                 <PieListItem interactionType="checkbox" primaryText="Olives" metaText="£0.50">
@@ -66,6 +69,29 @@ export default function ListItemCheckboxSelection() {
             </PieCheckboxGroup>
 
             <PieButton>Some focusable element after trailing checkbox list</PieButton>
+
+            <h2 id="checkbox-group-disabled-heading" style={{ padding: '8px 0' }}>Disabled checkbox group with tags</h2>
+            <PieCheckboxGroup disabled>
+                <PieFormLabel slot="label">Toppings (group disabled)</PieFormLabel>
+                <PieListItem hasDivider interactionType="checkbox" disabled primaryText="Cheese" secondaryText="Extra mature" metaText="Free">
+                    <PieCheckbox slot="leading" name="cheese" value="cheese" disabled />
+                    <PieTag slot="trailing" isDimmed>Available</PieTag>
+                </PieListItem>
+                <PieListItem hasDivider interactionType="checkbox" disabled primaryText="Pepperoni" secondaryText="Spicy">
+                    <PieCheckbox slot="leading" name="pepperoni" value="pepperoni" disabled />
+                    <PieTag slot="trailing" isDimmed>Popular</PieTag>
+                </PieListItem>
+                <PieListItem hasDivider interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
+                    <PieCheckbox slot="leading" name="mushrooms" value="mushrooms" disabled />
+                    <PieTag slot="trailing" isDimmed>Out of stock</PieTag>
+                </PieListItem>
+                <PieListItem interactionType="checkbox" disabled primaryText="Olives" metaText="£0.50">
+                    <PieCheckbox slot="leading" name="olives" value="olives" disabled />
+                    <PieTag slot="trailing" isDimmed>Available</PieTag>
+                </PieListItem>
+            </PieCheckboxGroup>
+
+            <PieButton>Some focusable element after group-disabled checkbox list</PieButton>
 
         </NavigationLayout>
     );

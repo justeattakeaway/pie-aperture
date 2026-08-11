@@ -1,5 +1,5 @@
 <template>
-  <pie-checkbox-group>
+  <pie-checkbox-group disabled>
     <pie-form-label slot="label">Choose the way we can contact you:</pie-form-label>
     <pie-checkbox
         id="contactByEmail"

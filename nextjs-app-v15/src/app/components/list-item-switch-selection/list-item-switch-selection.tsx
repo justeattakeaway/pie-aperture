@@ -6,6 +6,7 @@ import { PieList } from "@justeattakeaway/pie-webc/react/list.js";
 import { PieListItem } from "@justeattakeaway/pie-webc/react/list-item.js";
 import { PieSwitch } from "@justeattakeaway/pie-webc/react/switch.js";
 import { PieButton } from "@justeattakeaway/pie-webc/react/button.js";
+import { PieTag } from "@justeattakeaway/pie-webc/react/tag.js";
 
 type Settings = { email: boolean; push: boolean; sms: boolean; post: boolean };
 
@@ -52,6 +53,7 @@ export default function ListItemSwitchSelection() {
                     <PieSwitch slot="trailing" name="push" checked={trailingSettings.push} onChange={handleChange(setTrailingSettings, 'push')} />
                 </PieListItem>
                 <PieListItem interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable" hasDivider>
+                    <PieTag slot="leading" isDimmed>Unavailable</PieTag>
                     <PieSwitch slot="trailing" name="sms" checked={trailingSettings.sms} disabled onChange={handleChange(setTrailingSettings, 'sms')} />
                 </PieListItem>
                 <PieListItem interactionType="switch" primaryText="Post" secondaryText="Paper statements">
@@ -72,6 +74,7 @@ export default function ListItemSwitchSelection() {
                 </PieListItem>
                 <PieListItem interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable" hasDivider>
                     <PieSwitch slot="leading" name="sms" checked={leadingSettings.sms} disabled onChange={handleChange(setLeadingSettings, 'sms')} />
+                    <PieTag slot="trailing" isDimmed>Unavailable</PieTag>
                 </PieListItem>
                 <PieListItem interactionType="switch" primaryText="Post" secondaryText="Paper statements">
                     <PieSwitch slot="leading" name="post" checked={leadingSettings.post} onChange={handleChange(setLeadingSettings, 'post')} />

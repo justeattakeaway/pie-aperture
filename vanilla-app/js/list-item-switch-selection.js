@@ -2,6 +2,7 @@ import '@justeattakeaway/pie-webc/components/list.js';
 import '@justeattakeaway/pie-webc/components/list-item.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-webc/components/button.js';
+import '@justeattakeaway/pie-webc/components/tag.js';
 
 import './shared.js';
 import './utils/navigation.js';
@@ -17,6 +18,7 @@ document.querySelector('#app').innerHTML = `
             <pie-switch slot="trailing" name="push" checked></pie-switch>
         </pie-list-item>
         <pie-list-item hasDivider interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
+            <pie-tag slot="leading" isDimmed>Unavailable</pie-tag>
             <pie-switch slot="trailing" name="sms" disabled></pie-switch>
         </pie-list-item>
         <pie-list-item interactionType="switch" primaryText="Post" secondaryText="Paper statements">
@@ -37,6 +39,7 @@ document.querySelector('#app').innerHTML = `
         </pie-list-item>
         <pie-list-item hasDivider interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
             <pie-switch slot="leading" name="sms" disabled></pie-switch>
+            <pie-tag slot="trailing" isDimmed>Unavailable</pie-tag>
         </pie-list-item>
         <pie-list-item interactionType="switch" primaryText="Post" secondaryText="Paper statements">
             <pie-switch slot="leading" name="post"></pie-switch>

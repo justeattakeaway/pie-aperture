@@ -10,6 +10,7 @@
                 <pie-switch slot="trailing" name="push" :checked="trailingSettings.push" @change="trailingSettings.push = $event.target.checked"></pie-switch>
             </pie-list-item>
             <pie-list-item hasDivider interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
+                <pie-tag slot="leading" isDimmed>Unavailable</pie-tag>
                 <pie-switch slot="trailing" name="sms" :checked="trailingSettings.sms" disabled @change="trailingSettings.sms = $event.target.checked"></pie-switch>
             </pie-list-item>
             <pie-list-item interactionType="switch" primaryText="Post" secondaryText="Paper statements">
@@ -30,6 +31,7 @@
             </pie-list-item>
             <pie-list-item hasDivider interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
                 <pie-switch slot="leading" name="sms" :checked="leadingSettings.sms" disabled @change="leadingSettings.sms = $event.target.checked"></pie-switch>
+                <pie-tag slot="trailing" isDimmed>Unavailable</pie-tag>
             </pie-list-item>
             <pie-list-item interactionType="switch" primaryText="Post" secondaryText="Paper statements">
                 <pie-switch slot="leading" name="post" :checked="leadingSettings.post" @change="leadingSettings.post = $event.target.checked"></pie-switch>
@@ -47,6 +49,7 @@ import '@justeattakeaway/pie-webc/components/list.js';
 import '@justeattakeaway/pie-webc/components/list-item.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-webc/components/button.js';
+import '@justeattakeaway/pie-webc/components/tag.js';
 
 definePageMeta({
     title: 'List Item Switch Selection',
