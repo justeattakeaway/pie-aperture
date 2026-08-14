@@ -13,7 +13,18 @@ PIE Aperture is designed to be a testbed repo for the [PIE Web component library
 We use Playwright for automation testing in PIE Aperture — system, SSR, and visual (Percy) tests.
 
 ### Visual testing (Percy)
-Visual tests use Playwright to drive a standard desktop Chromium and the `@percy/playwright` SDK to capture each page. Percy renders the captured DOM across the desktop/mobile widths and browsers configured in the Percy **web project** dashboard
+Visual tests use Playwright to drive a standard desktop Chromium and the `@percy/playwright` SDK to capture each page. Percy renders the captured DOM across the desktop/mobile widths and browsers configured in the Percy **web project** dashboard.
+
+#### Browser and device coverage
+
+**These tests no longer run against real devices or older browser versions.**
+
+The previous setup (WebDriverIO + Percy Automate on BrowserStack) screenshotted each page on a number of real device / OS combinations. The current setup captures the DOM once from a desktop Chromium and hands that snapshot to Percy, which re-renders it in its own browsers at the configured widths. In practice, this ensures consistency with PIE, but at the expense of:
+
+- **No real devices.** Mobile widths are emulated by rendering narrower, not run on iOS or Android hardware. Device-specific behaviour — iOS Safari quirks, touch interaction, real viewport and safe-area handling — is not covered.
+- **No pinned older browser versions.** Percy renders in current browsers only, so a regression that only shows up on an older Safari, Chrome, Edge or Firefox will not be caught.
+
+If cross-browser or real-device testing is needed for a change, it has to come from somewhere other than this suite, such as a PIE consumer's own test suite, or a manual check against the deployed Aperture apps with Browserstack Live.
 
 #### Tests
 All visual tests are defined in a single spec, `test/visual/visual.spec.ts`, which is parametrised by `APP_NAME` and driven by the shared page list in `playwright-helpers/visual-pages.ts`.
