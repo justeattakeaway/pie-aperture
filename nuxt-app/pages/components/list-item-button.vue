@@ -29,6 +29,50 @@
                 <pie-tag slot="trailing" isDimmed>Deal</pie-tag>
             </pie-list-item>
         </pie-list>
+
+        <!--
+            A button row has no group to propagate from, so each slotted component must be disabled
+            explicitly: `disabled` on the thumbnail and `isDimmed` on the tag. The third row is
+            enabled for comparison.
+        -->
+        <h2 id="button-disabled-thumbnail-heading" style="padding: 8px 0;">Disabled button rows with thumbnail (disabled set explicitly)</h2>
+        <pie-list aria-labelledby="button-disabled-thumbnail-heading">
+            <pie-list-item hasDivider hasMedia interactionType="button" disabled primaryText="Cheeseburger Deluxe" secondaryText="Downtown Burger Co." @click="lastAction = 'Cheeseburger Deluxe'">
+                <pie-thumbnail slot="leading" :size="40" backgroundColor="strong" variant="outline" disabled></pie-thumbnail>
+                <pie-tag slot="trailing" isDimmed>Out of stock</pie-tag>
+            </pie-list-item>
+            <pie-list-item hasDivider hasMedia interactionType="button" disabled primaryText="Mushroom Risotto" secondaryText="Out of season" metaText="£8.50" @click="lastAction = 'Mushroom Risotto'">
+                <pie-thumbnail slot="leading" :size="40" backgroundColor="strong" variant="outline" disabled></pie-thumbnail>
+            </pie-list-item>
+            <pie-list-item hasDivider hasMedia interactionType="button" primaryText="Margherita Pizza" secondaryText="City Pizza Co." @click="lastAction = 'Margherita Pizza'">
+                <pie-thumbnail slot="leading" :size="40" backgroundColor="strong" variant="outline"></pie-thumbnail>
+                <pie-tag slot="trailing">New</pie-tag>
+            </pie-list-item>
+            <pie-list-item hasMedia interactionType="button" disabled primaryText="Veggie Burger" secondaryText="Green Bites" @click="lastAction = 'Veggie Burger'">
+                <pie-thumbnail slot="trailing" :size="40" backgroundColor="strong" variant="outline" disabled></pie-thumbnail>
+            </pie-list-item>
+        </pie-list>
+
+        <!-- Slotted icons are dimmed by the item itself when the row is disabled, so they need no explicit prop. -->
+        <h2 id="button-disabled-icon-heading" style="padding: 8px 0;">Disabled button rows with slotted icons</h2>
+        <pie-list aria-labelledby="button-disabled-icon-heading">
+            <pie-list-item hasDivider interactionType="button" disabled primaryText="Edit profile" secondaryText="Update your name and photo" @click="lastAction = 'Edit profile'">
+                <icon-placeholder slot="leading"></icon-placeholder>
+                <icon-chevron-right slot="trailing"></icon-chevron-right>
+            </pie-list-item>
+            <pie-list-item hasDivider interactionType="button" disabled primaryText="Change password" secondaryText="Keep your account secure" @click="lastAction = 'Change password'">
+                <icon-placeholder slot="leading"></icon-placeholder>
+                <icon-chevron-right slot="trailing"></icon-chevron-right>
+            </pie-list-item>
+            <pie-list-item hasDivider interactionType="button" primaryText="Notification preferences" secondaryText="Choose what we email you about" @click="lastAction = 'Notification preferences'">
+                <icon-placeholder slot="leading"></icon-placeholder>
+                <icon-chevron-right slot="trailing"></icon-chevron-right>
+            </pie-list-item>
+            <pie-list-item interactionType="button" disabled primaryText="Sign out" secondaryText="End your session on this device" @click="lastAction = 'Sign out'">
+                <icon-placeholder slot="leading"></icon-placeholder>
+                <icon-chevron-right slot="trailing"></icon-chevron-right>
+            </pie-list-item>
+        </pie-list>
     </div>
 </template>
 
@@ -38,6 +82,9 @@ import { definePageMeta } from '#imports';
 import '@justeattakeaway/pie-webc/components/list.js';
 import '@justeattakeaway/pie-webc/components/list-item.js';
 import '@justeattakeaway/pie-webc/components/tag.js';
+import '@justeattakeaway/pie-webc/components/thumbnail.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconPlaceholder.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconChevronRight.js';
 
 definePageMeta({
     title: 'List Item Button',

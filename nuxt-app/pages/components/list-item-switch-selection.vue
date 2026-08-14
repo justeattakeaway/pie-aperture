@@ -39,6 +39,34 @@
         </pie-list>
 
         <pie-button>Some focusable element after leading switch list</pie-button>
+
+        <!--
+            Switch rows have no container group to propagate a disabled state, so the disabled row sets
+            `disabled` on the item, the switch and the thumbnail, and `isDimmed` on the tag.
+        -->
+        <h2 id="switch-media-heading" style="padding: 8px 0;">Notification settings - slotted thumbnail</h2>
+        <p>Enabled: {{ summarise(mediaSettings) }}</p>
+        <pie-list aria-label="Notification settings (slotted thumbnail)">
+            <pie-list-item hasDivider hasMedia interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts">
+                <pie-thumbnail slot="leading" :size="40" backgroundColor="strong" variant="outline"></pie-thumbnail>
+                <pie-switch slot="trailing" name="email" :checked="mediaSettings.email" @change="mediaSettings.email = $event.target.checked"></pie-switch>
+            </pie-list-item>
+            <pie-list-item hasDivider hasMedia interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders">
+                <pie-thumbnail slot="leading" :size="40" backgroundColor="strong" variant="outline"></pie-thumbnail>
+                <pie-switch slot="trailing" name="push" :checked="mediaSettings.push" @change="mediaSettings.push = $event.target.checked"></pie-switch>
+            </pie-list-item>
+            <pie-list-item hasDivider hasMedia interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
+                <pie-thumbnail slot="leading" :size="40" backgroundColor="strong" variant="outline" disabled></pie-thumbnail>
+                <pie-tag slot="trailing" isDimmed>Unavailable</pie-tag>
+                <pie-switch slot="trailing" name="sms" :checked="mediaSettings.sms" disabled @change="mediaSettings.sms = $event.target.checked"></pie-switch>
+            </pie-list-item>
+            <pie-list-item hasMedia interactionType="switch" primaryText="Post" secondaryText="Paper statements">
+                <pie-thumbnail slot="leading" :size="40" backgroundColor="strong" variant="outline"></pie-thumbnail>
+                <pie-switch slot="trailing" name="post" :checked="mediaSettings.post" @change="mediaSettings.post = $event.target.checked"></pie-switch>
+            </pie-list-item>
+        </pie-list>
+
+        <pie-button>Some focusable element after slotted thumbnail switch list</pie-button>
     </div>
 </template>
 
@@ -50,6 +78,7 @@ import '@justeattakeaway/pie-webc/components/list-item.js';
 import '@justeattakeaway/pie-webc/components/switch.js';
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/tag.js';
+import '@justeattakeaway/pie-webc/components/thumbnail.js';
 
 definePageMeta({
     title: 'List Item Switch Selection',
@@ -68,6 +97,7 @@ const labels: Record<keyof Settings, string> = {
 // change event - the pattern a real consumer would use for a settings screen.
 const trailingSettings = reactive<Settings>({ email: true, push: true, sms: false, post: false });
 const leadingSettings = reactive<Settings>({ email: true, push: true, sms: false, post: false });
+const mediaSettings = reactive<Settings>({ email: true, push: true, sms: false, post: false });
 
 const summarise = (settings: Settings) => {
     const enabled = (Object.keys(labels) as (keyof Settings)[])

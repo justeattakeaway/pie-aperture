@@ -7,6 +7,7 @@ import { PieListItem } from "@justeattakeaway/pie-webc/react/list-item.js";
 import { PieSwitch } from "@justeattakeaway/pie-webc/react/switch.js";
 import { PieButton } from "@justeattakeaway/pie-webc/react/button.js";
 import { PieTag } from "@justeattakeaway/pie-webc/react/tag.js";
+import { PieThumbnail } from "@justeattakeaway/pie-webc/react/thumbnail.js";
 
 type Settings = { email: boolean; push: boolean; sms: boolean; post: boolean };
 
@@ -31,6 +32,7 @@ export default function ListItemSwitchSelection() {
     // own change event - the pattern a real consumer would use for a settings screen.
     const [trailingSettings, setTrailingSettings] = useState<Settings>(initialSettings);
     const [leadingSettings, setLeadingSettings] = useState<Settings>(initialSettings);
+    const [mediaSettings, setMediaSettings] = useState<Settings>(initialSettings);
 
     const handleChange = (
         setSettings: React.Dispatch<React.SetStateAction<Settings>>,
@@ -82,6 +84,34 @@ export default function ListItemSwitchSelection() {
             </PieList>
 
             <PieButton>Some focusable element after leading switch list</PieButton>
+
+            {/*
+              * Switch rows have no container group to propagate a disabled state, so the disabled row
+              * sets `disabled` on the item, the switch and the thumbnail, and `isDimmed` on the tag.
+              */}
+            <h2 id="switch-media-heading" style={{ padding: '8px 0' }}>Notification settings - slotted thumbnail</h2>
+            <p>Enabled: {summarise(mediaSettings)}</p>
+            <PieList aria-label="Notification settings (slotted thumbnail)">
+                <PieListItem hasDivider hasMedia interactionType="switch" primaryText="Email" secondaryText="Order updates and receipts">
+                    <PieThumbnail slot="leading" size={40} backgroundColor="strong" variant="outline" />
+                    <PieSwitch slot="trailing" name="email" checked={mediaSettings.email} onChange={handleChange(setMediaSettings, 'email')} />
+                </PieListItem>
+                <PieListItem hasDivider hasMedia interactionType="switch" primaryText="Push notifications" secondaryText="Offers and reminders">
+                    <PieThumbnail slot="leading" size={40} backgroundColor="strong" variant="outline" />
+                    <PieSwitch slot="trailing" name="push" checked={mediaSettings.push} onChange={handleChange(setMediaSettings, 'push')} />
+                </PieListItem>
+                <PieListItem hasDivider hasMedia interactionType="switch" disabled primaryText="SMS" secondaryText="Currently unavailable">
+                    <PieThumbnail slot="leading" size={40} backgroundColor="strong" variant="outline" disabled />
+                    <PieTag slot="trailing" isDimmed>Unavailable</PieTag>
+                    <PieSwitch slot="trailing" name="sms" checked={mediaSettings.sms} disabled onChange={handleChange(setMediaSettings, 'sms')} />
+                </PieListItem>
+                <PieListItem hasMedia interactionType="switch" primaryText="Post" secondaryText="Paper statements">
+                    <PieThumbnail slot="leading" size={40} backgroundColor="strong" variant="outline" />
+                    <PieSwitch slot="trailing" name="post" checked={mediaSettings.post} onChange={handleChange(setMediaSettings, 'post')} />
+                </PieListItem>
+            </PieList>
+
+            <PieButton>Some focusable element after slotted thumbnail switch list</PieButton>
 
         </NavigationLayout>
     );

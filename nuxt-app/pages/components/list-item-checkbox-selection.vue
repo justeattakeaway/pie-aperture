@@ -40,28 +40,85 @@
 
         <pie-button>Some focusable element after trailing checkbox list</pie-button>
 
-        <h2 id="checkbox-group-disabled-heading" style="padding: 8px 0;">Disabled checkbox group with tags</h2>
+        <h2 id="checkbox-media-heading" style="padding: 8px 0;">Checkbox group - slotted thumbnails</h2>
+        <pie-checkbox-group @change="onMediaChange">
+            <pie-form-label slot="label">Selected toppings: {{ mediaSelected.join(', ') || 'none' }}</pie-form-label>
+            <pie-list-item hasDivider hasMedia interactionType="checkbox" primaryText="Cheese" secondaryText="Extra mature">
+                <pie-checkbox slot="leading" name="cheese" value="cheese"></pie-checkbox>
+                <pie-thumbnail slot="trailing" :size="40" backgroundColor="strong" variant="outline"></pie-thumbnail>
+            </pie-list-item>
+            <pie-list-item hasDivider hasMedia interactionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
+                <pie-checkbox slot="leading" name="pepperoni" value="pepperoni" checked></pie-checkbox>
+                <pie-thumbnail slot="trailing" :size="40" backgroundColor="strong" variant="outline"></pie-thumbnail>
+            </pie-list-item>
+            <pie-list-item hasDivider hasMedia interactionType="checkbox" primaryText="Mushrooms" secondaryText="In season">
+                <pie-checkbox slot="leading" name="mushrooms" value="mushrooms"></pie-checkbox>
+                <pie-thumbnail slot="trailing" :size="40" backgroundColor="strong" variant="outline"></pie-thumbnail>
+            </pie-list-item>
+            <pie-list-item hasMedia interactionType="checkbox" primaryText="Olives" secondaryText="Pitted">
+                <pie-checkbox slot="leading" name="olives" value="olives"></pie-checkbox>
+                <pie-thumbnail slot="trailing" :size="40" backgroundColor="strong" variant="outline"></pie-thumbnail>
+            </pie-list-item>
+        </pie-checkbox-group>
+
+        <pie-button>Some focusable element after slotted thumbnail checkbox list</pie-button>
+
+        <!--
+            Only the group is disabled here. It propagates its disabled state to every row, its slotted
+            checkbox, and any slotted `pie-tag` or `pie-thumbnail`, so none of them set `disabled` or
+            `isDimmed` themselves.
+        -->
+        <h2 id="checkbox-group-disabled-heading" style="padding: 8px 0;">Disabled checkbox group - propagated to slotted content</h2>
         <pie-checkbox-group disabled>
             <pie-form-label slot="label">Toppings (group disabled)</pie-form-label>
+            <pie-list-item hasDivider interactionType="checkbox" primaryText="Cheese" secondaryText="Extra mature" metaText="Free">
+                <pie-checkbox slot="leading" name="cheese" value="cheese"></pie-checkbox>
+                <pie-tag slot="trailing">Available</pie-tag>
+            </pie-list-item>
+            <pie-list-item hasDivider hasMedia interactionType="checkbox" primaryText="Pepperoni" secondaryText="Spicy">
+                <pie-checkbox slot="leading" name="pepperoni" value="pepperoni"></pie-checkbox>
+                <pie-thumbnail slot="trailing" :size="40" backgroundColor="strong" variant="outline"></pie-thumbnail>
+            </pie-list-item>
+            <pie-list-item hasDivider interactionType="checkbox" primaryText="Mushrooms" secondaryText="Out of season">
+                <pie-checkbox slot="leading" name="mushrooms" value="mushrooms"></pie-checkbox>
+                <pie-tag slot="trailing">Out of stock</pie-tag>
+            </pie-list-item>
+            <pie-list-item hasMedia interactionType="checkbox" primaryText="Olives" secondaryText="Pitted">
+                <pie-checkbox slot="leading" name="olives" value="olives"></pie-checkbox>
+                <pie-thumbnail slot="trailing" :size="40" backgroundColor="strong" variant="outline"></pie-thumbnail>
+            </pie-list-item>
+        </pie-checkbox-group>
+
+        <pie-button>Some focusable element after group-disabled checkbox list</pie-button>
+
+        <!--
+            Group propagation happens at runtime through Lit context, so it is not reflected in
+            server-rendered markup. Setting `disabled` on the group, every row and every slotted
+            control, plus `disabled` on each thumbnail and `isDimmed` on each tag, gives the disabled
+            styles on first paint.
+        -->
+        <h2 id="checkbox-group-disabled-ssr-heading" style="padding: 8px 0;">Disabled checkbox group - explicit on every part (SSR safe)</h2>
+        <pie-checkbox-group disabled>
+            <pie-form-label slot="label">Toppings (group and rows disabled)</pie-form-label>
             <pie-list-item hasDivider interactionType="checkbox" disabled primaryText="Cheese" secondaryText="Extra mature" metaText="Free">
                 <pie-checkbox slot="leading" name="cheese" value="cheese" disabled></pie-checkbox>
                 <pie-tag slot="trailing" isDimmed>Available</pie-tag>
             </pie-list-item>
-            <pie-list-item hasDivider interactionType="checkbox" disabled primaryText="Pepperoni" secondaryText="Spicy">
+            <pie-list-item hasDivider hasMedia interactionType="checkbox" disabled primaryText="Pepperoni" secondaryText="Spicy">
                 <pie-checkbox slot="leading" name="pepperoni" value="pepperoni" disabled></pie-checkbox>
-                <pie-tag slot="trailing" isDimmed>Popular</pie-tag>
+                <pie-thumbnail slot="trailing" :size="40" backgroundColor="strong" variant="outline" disabled></pie-thumbnail>
             </pie-list-item>
             <pie-list-item hasDivider interactionType="checkbox" disabled primaryText="Mushrooms" secondaryText="Out of season">
                 <pie-checkbox slot="leading" name="mushrooms" value="mushrooms" disabled></pie-checkbox>
                 <pie-tag slot="trailing" isDimmed>Out of stock</pie-tag>
             </pie-list-item>
-            <pie-list-item interactionType="checkbox" disabled primaryText="Olives" metaText="£0.50">
+            <pie-list-item hasMedia interactionType="checkbox" disabled primaryText="Olives" secondaryText="Pitted">
                 <pie-checkbox slot="leading" name="olives" value="olives" disabled></pie-checkbox>
-                <pie-tag slot="trailing" isDimmed>Available</pie-tag>
+                <pie-thumbnail slot="trailing" :size="40" backgroundColor="strong" variant="outline" disabled></pie-thumbnail>
             </pie-list-item>
         </pie-checkbox-group>
 
-        <pie-button>Some focusable element after group-disabled checkbox list</pie-button>
+        <pie-button>Some focusable element after SSR-safe group-disabled checkbox list</pie-button>
     </div>
 </template>
 
@@ -74,6 +131,7 @@ import '@justeattakeaway/pie-webc/components/list-item.js';
 import '@justeattakeaway/pie-webc/components/form-label.js';
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/tag.js';
+import '@justeattakeaway/pie-webc/components/thumbnail.js';
 
 definePageMeta({
     title: 'List Item Checkbox Selection',
@@ -83,6 +141,7 @@ definePageMeta({
 // anywhere on a row (not just the checkbox) toggles it.
 const leadingSelected = ref<string[]>(['pepperoni']);
 const trailingSelected = ref<string[]>(['pepperoni']);
+const mediaSelected = ref<string[]>(['pepperoni']);
 
 const toggle = (selected: string[], event: Event) => {
     const checkbox = event.target as HTMLInputElement;
@@ -93,4 +152,5 @@ const toggle = (selected: string[], event: Event) => {
 
 const onLeadingChange = (event: Event) => { leadingSelected.value = toggle(leadingSelected.value, event); };
 const onTrailingChange = (event: Event) => { trailingSelected.value = toggle(trailingSelected.value, event); };
+const onMediaChange = (event: Event) => { mediaSelected.value = toggle(mediaSelected.value, event); };
 </script>
