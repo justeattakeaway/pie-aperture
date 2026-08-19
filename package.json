@@ -11,7 +11,7 @@
     "dev": "turbo run dev",
     "generate": "turbo run generate --token=${TURBO_TOKEN}",
     "lint": "turbo run lint --token=${TURBO_TOKEN}",
-    "test": "vitest run scripts/preview-cleanup",
+    "test": "vitest run scripts/preview-cleanup playwright-helpers",
     "test:ssr": "turbo run test:ssr --token=${TURBO_TOKEN} --continue",
     "test:system": "turbo run test:system --token=${TURBO_TOKEN} --continue",
     "playwright:show-report": "turbo run playwright:show-report",
@@ -20,7 +20,7 @@
     "upgrade-pie-packages": "turbo run upgrade-pie-packages && yarn"
   },
   "dependencies": {
-    "@justeattakeaway/pie-webc": "0.11.6",
+    "@justeattakeaway/pie-webc": "0.11.12",
     "commitizen": "4.3.1",
     "cz-customizable": "7.5.1"
   },
@@ -33,20 +33,14 @@
     }
   },
   "devDependencies": {
-    "@percy/cli": "1.31.13",
-    "@percy/selenium-webdriver": "2.2.6",
+    "@percy/cli": "1.32.6",
+    "@percy/playwright": "1.1.2",
     "@playwright/test": "1.50.1",
     "@types/follow-redirects": "1.14.4",
     "@types/node": "20.19.25",
-    "@wdio/browserstack-service": "8.40.6",
-    "@wdio/cli": "8.40.6",
-    "@wdio/local-runner": "8.40.6",
-    "@wdio/mocha-framework": "8.40.6",
-    "@wdio/spec-reporter": "8.40.6",
     "cross-env": "7.0.3",
     "follow-redirects": "1.15.11",
     "playwright-merge-html-reports": "0.2.8",
-    "selenium-webdriver": "4.27.0",
     "turbo": "2.9.6",
     "vitest": "2.1.9"
   },

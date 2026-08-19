@@ -50,7 +50,7 @@
       },
       "//#test": {
         "cache": true,
-        "inputs": ["scripts/preview-cleanup/**"]
+        "inputs": ["scripts/preview-cleanup/**", "playwright-helpers/**"]
       }
     }
 }

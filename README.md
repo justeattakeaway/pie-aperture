@@ -10,17 +10,24 @@ PIE Aperture is designed to be a testbed repo for the [PIE Web component library
 
 
 ## Automated Testing
-We utilise both Playwright and WebDriverIO to facilitate automation testing in PIE Aperture.
+We use Playwright for automation testing in PIE Aperture — system, SSR, and visual (Percy) tests.
 
-### WebDriverIO
-WebDriverIO is a widely-used testing framework that is used for executing our Percy visual tests. In contrast to the PIE monorepo, these tests aim to verify the visual accuracy of our components across various popular web frameworks.
+### Visual testing (Percy)
+Visual tests use Playwright to drive a standard desktop Chromium and the `@percy/playwright` SDK to capture each page. Percy renders the captured DOM across the desktop/mobile widths and browsers configured in the Percy **web project** dashboard.
 
-PIE Aperture leverages Percy Automate, a new feature in Percy that allows for the execution of visual tests across an array of desktop operating systems, browser versions, and mobile devices.
+#### Browser and device coverage
 
-At present, WebDriverIO is the only framework we're familiar with that offers an SDK for this capability. In future, we will look to transition to Playwright when an Automate SDK becomes available.
+**These tests no longer run against real devices or older browser versions.**
+
+The previous setup (WebDriverIO + Percy Automate on BrowserStack) screenshotted each page on a number of real device / OS combinations. The current setup captures the DOM once from a desktop Chromium and hands that snapshot to Percy, which re-renders it in its own browsers at the configured widths. In practice, this ensures consistency with PIE, but at the expense of:
+
+- **No real devices.** Mobile widths are emulated by rendering narrower, not run on iOS or Android hardware. Device-specific behaviour — iOS Safari quirks, touch interaction, real viewport and safe-area handling — is not covered.
+- **No pinned older browser versions.** Percy renders in current browsers only, so a regression that only shows up on an older Safari, Chrome, Edge or Firefox will not be caught.
+
+If cross-browser or real-device testing is needed for a change, it has to come from somewhere other than this suite, such as a PIE consumer's own test suite, or a manual check against the deployed Aperture apps with Browserstack Live.
 
 #### Tests
-All Visual tests can be found in a `test/visual` folder within the application root directory.
+All visual tests are defined in a single spec, `test/visual/visual.spec.ts`, which is parametrised by `APP_NAME` and driven by the shared page list in `playwright-helpers/visual-pages.ts`.
 
 Tests can be run by executing the following command at the root of the monorepo:
 
@@ -33,14 +40,9 @@ yarn test:visual
 yarn test:visual --filter=<app-name>
 ```
 
-#### Devices & Browsers
-A list of our tested browsers and devices can be found in the [WebDriverIO configuration](https://github.com/justeattakeaway/pie-aperture/blob/main/wdio.conf.js#L3-L15)
 
-Percy custom browser tags for this shared BrowserStack matrix are configured in the root `.percy.yml`. When the WebDriverIO capability list changes, the matching Percy platform entries should be updated in the same change.
-
-
-### Playwright
-Playwright is used to facilitate system testing. This ensures that components function as expected when integrated into web applications.
+### Playwright (system & SSR)
+Playwright also powers our system and SSR tests, ensuring components function and render correctly when integrated into web applications.
 
 Given that the goal of this repo is to ensure consistent implementation of our components, we follow an approach where a single test can be executed across our test applications. This has a number of key benefits such as reduced duplication of tests and consistent DOM structure of our implemented components.
 
