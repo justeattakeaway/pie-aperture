@@ -20,7 +20,7 @@
     "upgrade-pie-packages": "turbo run upgrade-pie-packages && yarn"
   },
   "dependencies": {
-    "@justeattakeaway/pie-webc": "0.11.6",
+    "@justeattakeaway/pie-webc": "0.0.0-snapshot-release-20260819123832",
     "commitizen": "4.3.1",
     "cz-customizable": "7.5.1"
   },
