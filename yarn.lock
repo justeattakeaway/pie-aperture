@@ -6574,10 +6574,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.5.393":
-  version: 1.5.400
-  resolution: "electron-to-chromium@npm:1.5.400"
-  checksum: 0821a8b6fb505ed54c45bcfb4f3e9e035c6192da83ee17cd9bf96e4b28ea3b73b7f88c02cc929569c3d283bf66f13be729ea4fe101a0ceb47c66cbc4ec8b38d1
+"electron-to-chromium@npm:^1.5.402":
+  version: 1.5.411
+  resolution: "electron-to-chromium@npm:1.5.411"
+  checksum: 37800153a1314a850264d43c71e7d97fe897dbeec01799da8bdb022e2c43f708bb936cd7ed3891962fd287c76774d2fd15fc310153bfa5ce3564e661b9af4006
   languageName: node
   linkType: hard
 
@@ -10225,7 +10225,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.3.16, nanoid@npm:^3.3.6":
+"nanoid@npm:^3.3.17":
+  version: 3.3.18
+  resolution: "nanoid@npm:3.3.18"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: db804317d337b41602666f23014e399d1263033d13a903955c246378256fd4e002519e87199ca40b19aff52274965ac7cc6e70c13a63e194e15c4664724602d3
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^3.3.6":
   version: 3.3.17
   resolution: "nanoid@npm:3.3.17"
   bin:
@@ -14277,9 +14286,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"update-browserslist-db@npm:^1.2.3":
-  version: 1.2.3
-  resolution: "update-browserslist-db@npm:1.2.3"
+"update-browserslist-db@npm:^1.3.0":
+  version: 1.3.1
+  resolution: "update-browserslist-db@npm:1.3.1"
   dependencies:
     escalade: ^3.2.0
     picocolors: ^1.1.1
