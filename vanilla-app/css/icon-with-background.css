@@ -1,0 +1,22 @@
+.c-icon-with-background-heading {
+    padding: var(--dt-spacing-b) 0;
+}
+
+.c-icon-with-background-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--dt-spacing-d);
+    padding: var(--dt-spacing-b) 0;
+}
+
+.c-icon-with-background-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--dt-spacing-a);
+}
+
+.c-icon-with-background-label {
+    font-size: calc(var(--dt-font-size-12) * 1px);
+}
