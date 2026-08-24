@@ -133,12 +133,64 @@ export default function List() {
                 </PieListItem>
             </PieList>
 
+            <h2 id="thumbnail-list-heading" style={{ padding: '8px 0' }}>PIE List - slotted thumbnails</h2>
+            <PieList aria-labelledby="thumbnail-list-heading">
+                <PieListItem primaryText="Cheeseburger Deluxe" secondaryText="Downtown Burger Co." hasMedia hasDivider>
+                    <PieThumbnail slot="leading" size={40} backgroundColor="strong" variant="outline" />
+                    <PieTag slot="trailing">Popular</PieTag>
+                </PieListItem>
+                <PieListItem primaryText="Margherita Pizza" hasMedia hasDivider>
+                    <PieThumbnail slot="leading" size={40} backgroundColor="strong" variant="outline" />
+                </PieListItem>
+                <PieListItem primaryText="Veggie Burger" secondaryText="Green Bites" metaText="£8.50" hasMedia hasDivider>
+                    <PieThumbnail slot="leading" size={40} backgroundColor="strong" variant="outline" />
+                </PieListItem>
+                {/* A non-interactive row has no disabled state, so the thumbnail carries `disabled` on its own here. */}
+                <PieListItem primaryText="Mushroom Risotto" secondaryText="Out of season" hasMedia>
+                    <PieThumbnail slot="trailing" size={40} backgroundColor="strong" variant="outline" disabled />
+                </PieListItem>
+            </PieList>
+
+            <h2 id="compact-list-heading" style={{ padding: '8px 0' }}>PIE List - compact items (first line alignment)</h2>
+            <PieList aria-labelledby="compact-list-heading">
+                <PieListItem
+                    isCompact
+                    primaryText="A compact row whose primary text is long enough to wrap onto more than one line, so the leading and trailing icons can be checked against its first line"
+                    hasDivider
+                >
+                    <IconPlaceholder slot="leading" />
+                    <IconChevronRight slot="trailing" />
+                </PieListItem>
+                <PieListItem
+                    isCompact
+                    primaryText="A compact row with wrapping primary text and a meta text value that should stay level with the first line"
+                    metaText="£12.00"
+                    hasDivider
+                >
+                    <IconPlaceholder slot="leading" />
+                </PieListItem>
+                <PieListItem
+                    isCompact
+                    primaryText="A compact row whose primary text wraps next to a trailing tag rather than an icon"
+                    hasDivider
+                >
+                    <PieTag slot="trailing">New</PieTag>
+                </PieListItem>
+                {/* Meta text is the taller content here, so the row grows and the primary text sits level with the meta text's first line. */}
+                <PieListItem
+                    isCompact
+                    primaryText="Short primary text"
+                    metaText="Meta text long enough to wrap onto a second line"
+                />
+            </PieList>
+
             <h2 id="padding-override-list-heading" style={{ padding: '8px 0' }}>PIE List - overridden inline padding</h2>
             <PieList aria-labelledby="padding-override-list-heading">
                 <PieListItem primaryText="First list item" isBold={false} isCompact={false} hasMedia={false} style={inlinePaddingOverride} hasDivider />
                 <PieListItem primaryText="Second list item" isBold={false} isCompact={false} hasMedia={false} style={inlinePaddingOverride} hasDivider />
                 <PieListItem primaryText="Third list item" isBold={false} isCompact={false} hasMedia={false} style={inlinePaddingOverride} />
             </PieList>
+
         </NavigationLayout>
     );
 }
