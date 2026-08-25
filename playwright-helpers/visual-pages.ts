@@ -28,6 +28,7 @@ const PAGES: PageDef[] = [
   { path: '/components/form-label', name: 'Form Label' },
   { path: '/components/icon', name: 'Icon' },
   { path: '/components/icon-button', name: 'Icon Button' },
+  { path: '/components/icon-with-background', name: 'Icon With Background' },
   { path: '/components/link', name: 'Link' },
   { path: '/components/list', name: 'List' },
   { path: '/components/list-item-button', name: 'List Item Button' },

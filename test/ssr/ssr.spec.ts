@@ -31,6 +31,7 @@ const componentConfigs: componentConfiguration[] = [
     { selector: 'form-label', page: 'form-label' },
     { selector: 'icon', page: 'icon' },
     { selector: 'icon-button', page: 'icon-button' },
+    { selector: 'icon-with-background', page: 'icon-with-background' },
     { selector: 'link', page: 'link' },
     { selector: 'list', page: 'list' },
     { selector: 'lottie-player', page: 'lottie-player' },

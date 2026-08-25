@@ -28,6 +28,7 @@ document.querySelector('#navigation').innerHTML = `
         <li><pie-link href="/components/form-label.html">Form Label</pie-link></li>
         <li><pie-link href="/components/icon.html">Icon</pie-link></li>
         <li><pie-link href="/components/icon-button.html">Icon Button</pie-link></li>
+        <li><pie-link href="/components/icon-with-background.html">Icon With Background</pie-link></li>
         <li><pie-link href="/components/link.html">Link</pie-link></li>
         <li><pie-link href="/components/list.html">List</pie-link></li>
         <li><pie-link href="/components/lottie-player.html">Lottie Player</pie-link></li>
