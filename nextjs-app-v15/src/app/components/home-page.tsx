@@ -60,6 +60,7 @@ export default function HomePage() {
     <li><PieLink onClick={() => router.push('/components/toast')} tag="button">Toast</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/toast-provider')} tag="button">Toast Provider</PieLink></li>
     <li><PieLink onClick={() => router.push('/components/thumbnail')} tag="button">Thumbnail</PieLink></li>
+    <li><PieLink onClick={() => router.push('/components/tooltip')} tag="button">Tooltip</PieLink></li>
     </ul>
     </NavigationLayout>
   );
