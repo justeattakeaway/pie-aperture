@@ -48,6 +48,7 @@
             <li><pie-link href="/components/toast">Toast</pie-link></li>
             <li><pie-link href="/components/toast-provider">Toast Provider</pie-link></li>
             <li><pie-link href="/components/thumbnail">Thumbnail</pie-link></li>
+            <li><pie-link href="/components/tooltip">Tooltip</pie-link></li>
 		</ul>
 	</div>
 </template>
