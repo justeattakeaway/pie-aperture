@@ -6,9 +6,11 @@ import { PieToastProvider } from '@justeattakeaway/pie-webc/react/toast-provider
 import { toaster } from '@justeattakeaway/pie-webc/components/toast-provider.js';
 import { PieButton } from '@justeattakeaway/pie-webc/react/button.js';
 import { PieTag } from '@justeattakeaway/pie-webc/react/tag.js';
+import { PieSwitch } from '@justeattakeaway/pie-webc/react/switch.js';
 
 export default function ToastProviderPage() {
     const [queueLength, setQueueLength] = useState(0);
+    const [isStacked, setIsStacked] = useState(false);
 
     const handleQueueUpdate = (event: CustomEvent) => {
         setQueueLength(event.detail.length);
@@ -17,6 +19,7 @@ export default function ToastProviderPage() {
     return (
         <NavigationLayout title="Toast Provider">
             <PieToastProvider
+                isStacked={isStacked}
                 options={{
                     isDismissible: true,
                     onPieToastOpen: () => console.log('Toast Opened'),
@@ -32,6 +35,15 @@ export default function ToastProviderPage() {
                 style={{ marginTop: '16px' }}>
                 Toast Queue Length: {queueLength}
             </PieTag>
+
+            <div style={{ marginTop: '16px' }}>
+                <PieSwitch
+                    data-test-id="stackToasts"
+                    label="Stack toasts (up to 3 at once)"
+                    checked={isStacked}
+                    onChange={(event: CustomEvent) => setIsStacked((event.target as HTMLInputElement).checked)}
+                />
+            </div>
 
             <div style={{ marginTop: '16px', display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
                 <PieButton

@@ -1,6 +1,7 @@
 import '@justeattakeaway/pie-webc/components/toast-provider.js';
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/tag.js';
+import '@justeattakeaway/pie-webc/components/switch.js';
 import { toaster } from '@justeattakeaway/pie-webc/components/toast-provider.js';
 
 import './utils/navigation.js';
@@ -12,6 +13,11 @@ document.querySelector('#app').innerHTML = `
     <pie-tag id="toast-queue-length" data-test-id="toast-queue-length" variant="information" style="margin-top: 16px;">
         Toast Queue Length: 0
     </pie-tag>
+
+    <div style="margin-top: 16px;">
+        <pie-switch id="toast-stacking-switch" data-test-id="stackToasts" label="Stack toasts (up to 3 at once)">
+        </pie-switch>
+    </div>
 
     <div style="margin-top: 16px; display: flex; gap: 16px; flex-wrap: wrap;">
         <pie-button id="info-toast-btn" data-test-id="info-toast-btn">
@@ -52,6 +58,14 @@ toastProvider.addEventListener('pie-toast-leading-action-click', () => {
 toastProvider.addEventListener('pie-toast-provider-queue-update', (event) => {
     queueLength = event.detail.length || 0;
     queueLengthTag.textContent = `Toast Queue Length: ${queueLength}`;
+});
+
+/**
+ * Stacking toggle - `isStacked` is a presence-based boolean attribute, so assign the
+ * property rather than using setAttribute, which would read `false` as true.
+ */
+document.getElementById('toast-stacking-switch').addEventListener('change', (event) => {
+    toastProvider.isStacked = event.target.checked;
 });
 
 /**

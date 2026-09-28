@@ -1,11 +1,27 @@
 import { test, expect } from '@playwright/test';
 import { ToastProviderPage } from '../playwright/page-objects/toast-provider.page';
 
-// The provider displays a vertical stack of up to three toasts at once. Any extra
-// toast waits in the queue, which is what the queue length tag reports.
+// With `isStacked` enabled the provider displays a vertical stack of up to three toasts at
+// once. Any extra toast waits in the queue, which is what the queue length tag reports.
 const MAX_VISIBLE_TOASTS = 3;
 
+// `isStacked` is off by default, so the provider shows one toast and queues the rest.
+const DEFAULT_VISIBLE_TOASTS = 1;
+
 test.describe(`Toast Provider Page - ${process.env.APP_NAME}`, () => {
+
+    test('should display a single toast and queue the rest when stacking is disabled', async ({ page }) => {
+        // Arrange
+        const toastProviderPage = new ToastProviderPage(page);
+
+        // Act
+        await toastProviderPage.goto();
+        await toastProviderPage.addToastsToQueue();
+
+        // Assert
+        await expect(toastProviderPage.toasts).toHaveCount(DEFAULT_VISIBLE_TOASTS);
+        await expect(toastProviderPage.toastQueueLength).toHaveText('Toast Queue Length: 2');
+    });
 
     test('should display up to three toasts at the same time', async ({ page }) => {
         // Arrange
@@ -13,6 +29,7 @@ test.describe(`Toast Provider Page - ${process.env.APP_NAME}`, () => {
 
         // Act
         await toastProviderPage.goto();
+        await toastProviderPage.enableStacking();
         await toastProviderPage.addToastsToQueue();
 
         // Assert
@@ -26,6 +43,7 @@ test.describe(`Toast Provider Page - ${process.env.APP_NAME}`, () => {
 
         // Act
         await toastProviderPage.goto();
+        await toastProviderPage.enableStacking();
         await toastProviderPage.addToastsToQueue();
         await expect(toastProviderPage.toasts).toHaveCount(MAX_VISIBLE_TOASTS);
 
@@ -44,6 +62,7 @@ test.describe(`Toast Provider Page - ${process.env.APP_NAME}`, () => {
 
         // Act
         await toastProviderPage.goto();
+        await toastProviderPage.enableStacking();
         await toastProviderPage.overflowToastQueue();
 
         // Assert
@@ -57,6 +76,7 @@ test.describe(`Toast Provider Page - ${process.env.APP_NAME}`, () => {
 
         // Act
         await toastProviderPage.goto();
+        await toastProviderPage.enableStacking();
         await toastProviderPage.overflowToastQueue();
         await toastProviderPage.clearAllToasts();
 

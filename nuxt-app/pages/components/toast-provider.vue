@@ -1,11 +1,16 @@
 <template>
   <div>
-    <pie-toast-provider :options="toastOptions"
+    <pie-toast-provider :options="toastOptions" :isStacked="isStacked"
       @pie-toast-provider-queue-update="handleQueueUpdate"></pie-toast-provider>
 
     <pie-tag data-test-id="toast-queue-length" variant="information" style="margin-top: 16px;">
       Toast Queue Length: {{ queueLength }}
     </pie-tag>
+
+    <div style="margin-top: 16px;">
+      <pie-switch data-test-id="stackToasts" label="Stack toasts (up to 3 at once)" :checked="isStacked"
+        @change="handleStackingChange"></pie-switch>
+    </div>
 
     <div style="margin-top: 16px; display: flex; gap: 16px; flex-wrap: wrap;">
       <pie-button data-test-id="info-toast-btn" @click="triggerInfoToast">Trigger Info Toast (Low Priority)</pie-button>
@@ -25,6 +30,7 @@ import { toaster } from '@justeattakeaway/pie-webc/components/toast-provider.js'
 import '@justeattakeaway/pie-webc/components/toast-provider.js';
 import '@justeattakeaway/pie-webc/components/button.js';
 import '@justeattakeaway/pie-webc/components/tag.js';
+import '@justeattakeaway/pie-webc/components/switch.js';
 
 definePageMeta({
   title: 'Toast Provider',
@@ -38,9 +44,14 @@ const toastOptions = ref({
 });
 
 const queueLength = ref(0);
+const isStacked = ref(false);
 
 const handleQueueUpdate = (event: CustomEvent) => {
   queueLength.value = event.detail.length;
+};
+
+const handleStackingChange = (event: Event) => {
+  isStacked.value = (event.target as HTMLInputElement).checked;
 };
 
 const triggerInfoToast = () => {
