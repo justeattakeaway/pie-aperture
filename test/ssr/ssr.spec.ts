@@ -47,7 +47,8 @@ const componentConfigs: componentConfiguration[] = [
     { selector: 'textarea', page: 'textarea' },
     { selector: 'thumbnail', page: 'thumbnail' },
     { selector: 'toast', page: 'toast' },
-    { selector: 'toast-provider', page: 'toast-provider' }
+    { selector: 'toast-provider', page: 'toast-provider' },
+    { selector: 'tooltip', page: 'tooltip' }
 ];
 
 const getComponentPageUrl = (component: string, baseUrl: string): string => `${baseUrl}/components/${component}`;
