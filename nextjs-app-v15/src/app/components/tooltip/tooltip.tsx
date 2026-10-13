@@ -477,6 +477,51 @@ export default function Tooltip() {
             </PieButton>
         </PieTooltip>
 
+        <PieDivider />
+
+        <h2>Always open (visual regression)</h2>
+        <p>
+            These two panels are rendered open on load for the visual regression screenshots. They are never
+            wired to close, so tooltip mode and dialog mode are captured in their open state without any
+            interaction.
+        </p>
+
+        <h3>Tooltip mode</h3>
+        <PieIconButton
+            id="open-tooltip-trigger"
+            variant="outline"
+            aria={{ label: 'Delivery times' }}
+            style={{ marginBlockEnd: '64px' }}
+        >
+            <IconInfoCircle />
+        </PieIconButton>
+        <PieTooltip id="open-tooltip-panel" trigger="open-tooltip-trigger" type="icon" position="bottom-start" isOpen>
+            <span slot="content">Orders placed before 6pm arrive today.</span>
+        </PieTooltip>
+
+        <h3>Dialog mode</h3>
+        <PieButton
+            id="open-dialog-trigger"
+            aria={{ haspopup: 'dialog', expanded: true }}
+            style={{ marginBlockEnd: '280px' }}
+        >
+            Delivery times
+        </PieButton>
+        <PieTooltip
+            id="open-dialog-panel"
+            trigger="open-dialog-trigger"
+            heading="Delivery times"
+            isOpen
+            isDismissible
+            position="bottom-start"
+            aria={{ close: 'Close' }}
+        >
+            <span slot="content">Orders placed before 6pm arrive today.</span>
+            <PieButton slot="action" size="xsmall">
+                Got it
+            </PieButton>
+        </PieTooltip>
+
         </NavigationLayout>
     );
 }

@@ -409,6 +409,55 @@
       <pie-button slot="action" size="xsmall" @click="tourPie.close">Next</pie-button>
     </pie-tooltip>
 
+    <pie-divider></pie-divider>
+
+    <h2>Always open (visual regression)</h2>
+    <p>
+      These two panels are rendered open on load for the visual regression screenshots. They are never
+      wired to close, so tooltip mode and dialog mode are captured in their open state without any
+      interaction.
+    </p>
+
+    <h3>Tooltip mode</h3>
+    <pie-icon-button
+      id="open-tooltip-trigger"
+      variant="outline"
+      :aria="{ label: 'Delivery times' }"
+      style="margin-block-end: 64px"
+    >
+      <icon-info-circle></icon-info-circle>
+    </pie-icon-button>
+    <pie-tooltip
+      id="open-tooltip-panel"
+      trigger="open-tooltip-trigger"
+      type="icon"
+      position="bottom-start"
+      isOpen
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+    </pie-tooltip>
+
+    <h3>Dialog mode</h3>
+    <pie-button
+      id="open-dialog-trigger"
+      :aria="{ haspopup: 'dialog', expanded: true }"
+      style="margin-block-end: 280px"
+    >
+      Delivery times
+    </pie-button>
+    <pie-tooltip
+      id="open-dialog-panel"
+      trigger="open-dialog-trigger"
+      heading="Delivery times"
+      position="bottom-start"
+      isOpen
+      isDismissible
+      :aria="{ close: 'Close' }"
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+      <pie-button slot="action" size="xsmall">Got it</pie-button>
+    </pie-tooltip>
+
   </div>
 </template>
 

@@ -271,6 +271,30 @@ document.querySelector('#app').innerHTML = `
     <pie-tooltip id="tour-pie-panel" trigger="tour-pie-trigger" heading="Delivery times" isDismissible>
         <span slot="content">Orders placed before 6pm arrive today.</span>
         <pie-button slot="action" size="xsmall" id="tour-pie-action">Next</pie-button>
+    </pie-tooltip>
+
+    <pie-divider></pie-divider>
+
+    <h2>Always open (visual regression)</h2>
+    <p>
+        These two panels are rendered open on load for the visual regression screenshots. They are never
+        wired to close, so tooltip mode and dialog mode are captured in their open state without any
+        interaction.
+    </p>
+
+    <h3>Tooltip mode</h3>
+    <pie-icon-button id="open-tooltip-trigger" variant="outline" style="margin-block-end: 64px;">
+        <icon-info-circle></icon-info-circle>
+    </pie-icon-button>
+    <pie-tooltip id="open-tooltip-panel" trigger="open-tooltip-trigger" type="icon" position="bottom-start">
+        <span slot="content">Orders placed before 6pm arrive today.</span>
+    </pie-tooltip>
+
+    <h3>Dialog mode</h3>
+    <pie-button id="open-dialog-trigger" style="margin-block-end: 280px;">Delivery times</pie-button>
+    <pie-tooltip id="open-dialog-panel" trigger="open-dialog-trigger" heading="Delivery times" isDismissible position="bottom-start">
+        <span slot="content">Orders placed before 6pm arrive today.</span>
+        <pie-button slot="action" size="xsmall">Got it</pie-button>
     </pie-tooltip>`;
 
 const hoverIconTrigger = document.querySelector('#hover-icon-trigger');
@@ -402,3 +426,17 @@ tourPiePanel.aria = { close: 'Close' };
 const tourPie = wireTooltipPanel({ trigger: tourPieTrigger, panel: tourPiePanel });
 tourPieTrigger.addEventListener('click', tourPie.open);
 tourPieAction.addEventListener('click', tourPie.close);
+
+// Always open - rendered open for the visual regression screenshots. No triggers and no close
+// handlers, so the panels stay open regardless of hover, focus, Escape or the close button.
+const openTooltipTrigger = document.querySelector('#open-tooltip-trigger');
+const openTooltipPanel = document.querySelector('#open-tooltip-panel');
+const openDialogTrigger = document.querySelector('#open-dialog-trigger');
+const openDialogPanel = document.querySelector('#open-dialog-panel');
+
+openTooltipTrigger.aria = { label: 'Delivery times' };
+openTooltipPanel.isOpen = true;
+
+openDialogTrigger.aria = { haspopup: 'dialog', expanded: true };
+openDialogPanel.aria = { close: 'Close' };
+openDialogPanel.isOpen = true;
