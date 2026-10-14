@@ -49,6 +49,7 @@ const PAGES: PageDef[] = [
   { path: '/components/textarea', name: 'Textarea' },
   { path: '/components/thumbnail', name: 'Thumbnail' },
   { path: '/components/toast', name: 'Toast' },
+  { path: '/components/tooltip', name: 'Tooltip' },
 
   { path: '/integrations/css-only-button', name: 'CSS Only Button' },
   { path: '/integrations/css-only-radio', name: 'CSS Only Radio' },
