@@ -28,7 +28,6 @@ export class ToastProviderPage {
         let url = 'components/toast-provider';
         const formattedUrl = APP_NAME === 'vanilla-app' ? `${url}.html` : url;
         await this.page.goto(formattedUrl);
-        await this.page.waitForSelector('pie-button[v]');
     }
 
     async enableStacking() {

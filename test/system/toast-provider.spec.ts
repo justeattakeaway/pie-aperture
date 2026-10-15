@@ -1,8 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { ToastProviderPage } from '../playwright/page-objects/toast-provider.page';
 
-// With `isStacked` enabled the provider displays a vertical stack of up to three toasts at
-// once. Any extra toast waits in the queue, which is what the queue length tag reports.
 const MAX_VISIBLE_TOASTS = 3;
 
 // `isStacked` is off by default, so the provider shows one toast and queues the rest.
