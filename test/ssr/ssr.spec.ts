@@ -37,6 +37,7 @@ const componentConfigs: componentConfiguration[] = [
     { selector: 'lottie-player', page: 'lottie-player' },
     { selector: 'modal', page: 'modal' },
     { selector: 'notification', page: 'notification' },
+    { selector: 'pagination', page: 'pagination' },
     { selector: 'radio', page: 'radio' },
     { selector: 'radio-group', page: 'radio-group' },
     { selector: 'select', page: 'select' },
