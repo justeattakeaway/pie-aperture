@@ -39,6 +39,7 @@ const PAGES: PageDef[] = [
   { path: '/components/lottie-player', name: 'Lottie Player' },
   { path: '/components/modal', name: 'Modal' },
   { path: '/components/notification', name: 'Notification' },
+  { path: '/components/pagination', name: 'Pagination' },
   { path: '/components/radio', name: 'Radio' },
   { path: '/components/radio-group', name: 'Radio Group' },
   { path: '/components/select', name: 'Select' },
