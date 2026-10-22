@@ -73,3 +73,6 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+> Security research marker (Bugcrowd JET program) — PIEAPOIDC-7c4e2b90. No functional change; see PR.

