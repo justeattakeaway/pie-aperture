@@ -32,6 +32,7 @@
             <li><pie-link href="/components/list">List</pie-link></li>
             <li><pie-link href="/components/modal">Modal</pie-link></li>
             <li><pie-link href="/components/notification">Notification</pie-link></li>
+            <li><pie-link href="/components/pagination">Pagination</pie-link></li>
             <li><pie-link href="/components/radio">Radio</pie-link></li>
             <li><pie-link href="/components/radio-group">Radio Group</pie-link></li>
             <li><pie-link href="/components/list-item-radio-selection">List Item Radio Selection</pie-link></li>
