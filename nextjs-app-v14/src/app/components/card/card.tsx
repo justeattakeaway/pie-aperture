@@ -91,6 +91,7 @@ export default function Card({ disabled = false }: { disabled?: boolean }) {
             </PieCard>
 
             <PieModal
+                data-test-id="card-details-modal"
                 isOpen={isDefaultModalOpen}
                 heading="Card details"
                 isDismissible
@@ -99,6 +100,7 @@ export default function Card({ disabled = false }: { disabled?: boolean }) {
                 <p>This modal was opened by a single interaction card, where the whole card is one click target.</p>
             </PieModal>
             <PieModal
+                data-test-id="restaurant-modal"
                 isOpen={isRestaurantModalOpen}
                 heading="Restaurant details"
                 isDismissible

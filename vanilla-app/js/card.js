@@ -57,12 +57,14 @@ document.querySelector('#app').innerHTML = `
 
     <pie-modal
         id="default-card-modal"
+        data-test-id="card-details-modal"
         heading="Card details"
         isDismissible>
         <p>This modal was opened by a single interaction card, where the whole card is one click target.</p>
     </pie-modal>
     <pie-modal
         id="restaurant-modal"
+        data-test-id="restaurant-modal"
         heading="Restaurant details"
         isDismissible>
         <p>This modal was opened by clicking the card, showing that the card's own click interaction remains independent of the slotted controls.</p>

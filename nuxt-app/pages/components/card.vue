@@ -61,6 +61,7 @@
     </pie-card>
 
     <pie-modal
+      data-test-id="card-details-modal"
       :isOpen="isDefaultModalOpen"
       heading="Card details"
       isDismissible
@@ -68,6 +69,7 @@
       <p>This modal was opened by a single interaction card, where the whole card is one click target.</p>
     </pie-modal>
     <pie-modal
+      data-test-id="restaurant-modal"
       :isOpen="isRestaurantModalOpen"
       heading="Restaurant details"
       isDismissible
