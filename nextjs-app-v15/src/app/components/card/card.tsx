@@ -7,6 +7,7 @@ import { PieLink } from '@justeattakeaway/pie-webc/react/link.js';
 import { PieModal } from '@justeattakeaway/pie-webc/react/modal.js';
 import { IconHeart } from '@justeattakeaway/pie-icons-webc/dist/react/IconHeart.js';
 import { IconHeartFilled } from '@justeattakeaway/pie-icons-webc/dist/react/IconHeartFilled.js';
+import { IconShare } from '@justeattakeaway/pie-icons-webc/dist/react/IconShare.js';
 import { useState } from 'react';
 
 const overlayStyle = { position: 'relative', zIndex: 'calc(var(--card-overlay-z-index) + 1)' } as const;
@@ -14,6 +15,7 @@ const overlayStyle = { position: 'relative', zIndex: 'calc(var(--card-overlay-z-
 export default function Card({ disabled = false }: { disabled?: boolean }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isFavourited, setIsFavourited] = useState(false);
+    const [shareCount, setShareCount] = useState(0);
 
     return (
         <NavigationLayout title="Card">
@@ -49,6 +51,15 @@ export default function Card({ disabled = false }: { disabled?: boolean }) {
                                 ? <IconHeartFilled data-test-id="icon-heart-filled" style={{ color: 'var(--dt-color-content-error)' }} />
                                 : <IconHeart data-test-id="icon-heart-outline" />}
                         </PieIconButton>
+                        <PieIconButton
+                            data-test-id="card-action-capture"
+                            variant="ghost-secondary"
+                            aria={{ label: 'Share restaurant' }}
+                            style={overlayStyle}
+                            onClickCapture={() => setShareCount((count) => count + 1)}
+                        >
+                            <IconShare data-test-id="icon-share" />
+                        </PieIconButton>
                         <PieLink
                             href="https://pie.design"
                             target="_blank"
@@ -57,6 +68,9 @@ export default function Card({ disabled = false }: { disabled?: boolean }) {
                             View menu
                         </PieLink>
                     </div>
+                    <p aria-live="polite" data-test-id="share-count" style={{ marginBottom: 0 }}>
+                        Shared {shareCount} {shareCount === 1 ? 'time' : 'times'}
+                    </p>
                 </div>
             </PieCard>
             <PieModal
