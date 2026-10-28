@@ -28,6 +28,7 @@ const PAGES: PageDef[] = [
   { path: '/components/form-label', name: 'Form Label' },
   { path: '/components/icon', name: 'Icon' },
   { path: '/components/icon-button', name: 'Icon Button' },
+  { path: '/components/icon-with-background', name: 'Icon With Background' },
   { path: '/components/link', name: 'Link' },
   { path: '/components/list', name: 'List' },
   { path: '/components/list-item-button', name: 'List Item Button' },
@@ -38,6 +39,7 @@ const PAGES: PageDef[] = [
   { path: '/components/lottie-player', name: 'Lottie Player' },
   { path: '/components/modal', name: 'Modal' },
   { path: '/components/notification', name: 'Notification' },
+  { path: '/components/pagination', name: 'Pagination' },
   { path: '/components/radio', name: 'Radio' },
   { path: '/components/radio-group', name: 'Radio Group' },
   { path: '/components/select', name: 'Select' },
@@ -48,6 +50,7 @@ const PAGES: PageDef[] = [
   { path: '/components/textarea', name: 'Textarea' },
   { path: '/components/thumbnail', name: 'Thumbnail' },
   { path: '/components/toast', name: 'Toast' },
+  { path: '/components/tooltip', name: 'Tooltip' },
 
   { path: '/integrations/css-only-button', name: 'CSS Only Button' },
   { path: '/integrations/css-only-radio', name: 'CSS Only Radio' },

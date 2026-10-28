@@ -31,11 +31,13 @@ const componentConfigs: componentConfiguration[] = [
     { selector: 'form-label', page: 'form-label' },
     { selector: 'icon', page: 'icon' },
     { selector: 'icon-button', page: 'icon-button' },
+    { selector: 'icon-with-background', page: 'icon-with-background' },
     { selector: 'link', page: 'link' },
     { selector: 'list', page: 'list' },
     { selector: 'lottie-player', page: 'lottie-player' },
     { selector: 'modal', page: 'modal' },
     { selector: 'notification', page: 'notification' },
+    { selector: 'pagination', page: 'pagination' },
     { selector: 'radio', page: 'radio' },
     { selector: 'radio-group', page: 'radio-group' },
     { selector: 'select', page: 'select' },
@@ -46,7 +48,8 @@ const componentConfigs: componentConfiguration[] = [
     { selector: 'textarea', page: 'textarea' },
     { selector: 'thumbnail', page: 'thumbnail' },
     { selector: 'toast', page: 'toast' },
-    { selector: 'toast-provider', page: 'toast-provider' }
+    { selector: 'toast-provider', page: 'toast-provider' },
+    { selector: 'tooltip', page: 'tooltip' }
 ];
 
 const getComponentPageUrl = (component: string, baseUrl: string): string => `${baseUrl}/components/${component}`;

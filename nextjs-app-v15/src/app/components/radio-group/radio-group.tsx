@@ -26,6 +26,17 @@ export default function RadioGroup() {
                 <PieRadio value="pizza">Pizza</PieRadio>
             </PieRadioGroup>
 
+            <br/>
+
+            <PieRadioGroup isInline name="inlineFavouriteTakeaway">
+                <PieFormLabel slot="label">Your options for takeaway - inline radio</PieFormLabel>
+                <PieRadio value="italian">Italian</PieRadio>
+                <PieRadio value="tahi">Thai</PieRadio>
+                <PieRadio value="burgers">Burgers</PieRadio>
+            </PieRadioGroup>
+
+            <br/>
+
             <PieButton>Some focusable element</PieButton>
         </NavigationLayout>
     );

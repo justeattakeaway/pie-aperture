@@ -474,9 +474,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/aix-ppc64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/aix-ppc64@npm:0.28.1"
+"@esbuild/aix-ppc64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/aix-ppc64@npm:0.28.2"
   conditions: os=aix & cpu=ppc64
   languageName: node
   linkType: hard
@@ -502,9 +502,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/android-arm64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/android-arm64@npm:0.28.1"
+"@esbuild/android-arm64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/android-arm64@npm:0.28.2"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
@@ -530,9 +530,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/android-arm@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/android-arm@npm:0.28.1"
+"@esbuild/android-arm@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/android-arm@npm:0.28.2"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
@@ -558,9 +558,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/android-x64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/android-x64@npm:0.28.1"
+"@esbuild/android-x64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/android-x64@npm:0.28.2"
   conditions: os=android & cpu=x64
   languageName: node
   linkType: hard
@@ -586,9 +586,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/darwin-arm64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/darwin-arm64@npm:0.28.1"
+"@esbuild/darwin-arm64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/darwin-arm64@npm:0.28.2"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
@@ -614,9 +614,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/darwin-x64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/darwin-x64@npm:0.28.1"
+"@esbuild/darwin-x64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/darwin-x64@npm:0.28.2"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -642,9 +642,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/freebsd-arm64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/freebsd-arm64@npm:0.28.1"
+"@esbuild/freebsd-arm64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/freebsd-arm64@npm:0.28.2"
   conditions: os=freebsd & cpu=arm64
   languageName: node
   linkType: hard
@@ -670,9 +670,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/freebsd-x64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/freebsd-x64@npm:0.28.1"
+"@esbuild/freebsd-x64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/freebsd-x64@npm:0.28.2"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
@@ -698,9 +698,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-arm64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/linux-arm64@npm:0.28.1"
+"@esbuild/linux-arm64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/linux-arm64@npm:0.28.2"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
@@ -726,9 +726,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-arm@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/linux-arm@npm:0.28.1"
+"@esbuild/linux-arm@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/linux-arm@npm:0.28.2"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
@@ -754,9 +754,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-ia32@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/linux-ia32@npm:0.28.1"
+"@esbuild/linux-ia32@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/linux-ia32@npm:0.28.2"
   conditions: os=linux & cpu=ia32
   languageName: node
   linkType: hard
@@ -782,9 +782,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-loong64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/linux-loong64@npm:0.28.1"
+"@esbuild/linux-loong64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/linux-loong64@npm:0.28.2"
   conditions: os=linux & cpu=loong64
   languageName: node
   linkType: hard
@@ -810,9 +810,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-mips64el@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/linux-mips64el@npm:0.28.1"
+"@esbuild/linux-mips64el@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/linux-mips64el@npm:0.28.2"
   conditions: os=linux & cpu=mips64el
   languageName: node
   linkType: hard
@@ -838,9 +838,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-ppc64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/linux-ppc64@npm:0.28.1"
+"@esbuild/linux-ppc64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/linux-ppc64@npm:0.28.2"
   conditions: os=linux & cpu=ppc64
   languageName: node
   linkType: hard
@@ -866,9 +866,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-riscv64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/linux-riscv64@npm:0.28.1"
+"@esbuild/linux-riscv64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/linux-riscv64@npm:0.28.2"
   conditions: os=linux & cpu=riscv64
   languageName: node
   linkType: hard
@@ -894,9 +894,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-s390x@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/linux-s390x@npm:0.28.1"
+"@esbuild/linux-s390x@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/linux-s390x@npm:0.28.2"
   conditions: os=linux & cpu=s390x
   languageName: node
   linkType: hard
@@ -922,9 +922,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/linux-x64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/linux-x64@npm:0.28.1"
+"@esbuild/linux-x64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/linux-x64@npm:0.28.2"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
@@ -936,9 +936,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/netbsd-arm64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/netbsd-arm64@npm:0.28.1"
+"@esbuild/netbsd-arm64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/netbsd-arm64@npm:0.28.2"
   conditions: os=netbsd & cpu=arm64
   languageName: node
   linkType: hard
@@ -964,9 +964,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/netbsd-x64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/netbsd-x64@npm:0.28.1"
+"@esbuild/netbsd-x64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/netbsd-x64@npm:0.28.2"
   conditions: os=netbsd & cpu=x64
   languageName: node
   linkType: hard
@@ -978,9 +978,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/openbsd-arm64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/openbsd-arm64@npm:0.28.1"
+"@esbuild/openbsd-arm64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/openbsd-arm64@npm:0.28.2"
   conditions: os=openbsd & cpu=arm64
   languageName: node
   linkType: hard
@@ -1006,16 +1006,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/openbsd-x64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/openbsd-x64@npm:0.28.1"
+"@esbuild/openbsd-x64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/openbsd-x64@npm:0.28.2"
   conditions: os=openbsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@esbuild/openharmony-arm64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/openharmony-arm64@npm:0.28.1"
+"@esbuild/openharmony-arm64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/openharmony-arm64@npm:0.28.2"
   conditions: os=openharmony & cpu=arm64
   languageName: node
   linkType: hard
@@ -1041,9 +1041,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/sunos-x64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/sunos-x64@npm:0.28.1"
+"@esbuild/sunos-x64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/sunos-x64@npm:0.28.2"
   conditions: os=sunos & cpu=x64
   languageName: node
   linkType: hard
@@ -1069,9 +1069,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/win32-arm64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/win32-arm64@npm:0.28.1"
+"@esbuild/win32-arm64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/win32-arm64@npm:0.28.2"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
@@ -1097,9 +1097,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/win32-ia32@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/win32-ia32@npm:0.28.1"
+"@esbuild/win32-ia32@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/win32-ia32@npm:0.28.2"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
@@ -1125,9 +1125,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild/win32-x64@npm:0.28.1":
-  version: 0.28.1
-  resolution: "@esbuild/win32-x64@npm:0.28.1"
+"@esbuild/win32-x64@npm:0.28.2":
+  version: 0.28.2
+  resolution: "@esbuild/win32-x64@npm:0.28.2"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -1660,422 +1660,468 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeat/pie-design-tokens@npm:7.14.3":
-  version: 7.14.3
-  resolution: "@justeat/pie-design-tokens@npm:7.14.3"
+"@justeat/pie-design-tokens@npm:7.15.1":
+  version: 7.15.1
+  resolution: "@justeat/pie-design-tokens@npm:7.15.1"
   dependencies:
     jsonc-parser: 3.2.0
     lodash.merge: 4.6.2
     mkdirp: 1.0.4
-  checksum: 0411d651ff64002774b938a70ad348dda6ed5f8e2a1be292065e777a2dbb8103280fbe24162ca56e7f08db05d451500b1f9f23a9c2a00a89704c9aef9022fac1
+  checksum: 1f68a5c3f42f7261cb12ae4a2b1f0b3097211c5b4f6b1fe0bc0c1d0bfcda6ec4ff2212718edc5a086b23300df4f8c9591fbf6e70749487c53f0c87901f21edba
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-accordion@npm:0.2.7":
-  version: 0.2.7
-  resolution: "@justeattakeaway/pie-accordion@npm:0.2.7"
+"@justeattakeaway/pie-accordion@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@justeattakeaway/pie-accordion@npm:1.0.1"
   dependencies:
-    "@justeattakeaway/pie-divider": 1.5.33
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: 87a2d760115c8cb1aaeeca8de3f5fb33a1357b32d5eb75f698dcce61bcb494933eb0f7c4e7e89c93c93b9f16d118fbd3ab99ee005d7f51da3a060b27caddaed4
+    "@justeattakeaway/pie-divider": 1.5.38
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: db6e6dbee4b449764dd444c91902a7790438b1c38bd4a93b38d74b2414e96e53168a82aa1d00f88bf558db9f8795d91fc394c8bac25b49106e386a0fbeae16c6
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-assistive-text@npm:1.0.10":
-  version: 1.0.10
-  resolution: "@justeattakeaway/pie-assistive-text@npm:1.0.10"
+"@justeattakeaway/pie-assistive-text@npm:1.0.16":
+  version: 1.0.16
+  resolution: "@justeattakeaway/pie-assistive-text@npm:1.0.16"
   dependencies:
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: ee50afdbc32b1a92cf00f110982148c4c4607a7c13befb82612aad61945074839a3f7bd1112f3135e1377fcd18f6c388a8160f34bf62295c42b595a15a7c7c35
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: bb1f0679102fa11cb996dd21c6b0da38025408c46c670f7474b9df4acfc46a0cb3616a13f6af4dcce06919c74b3acef53fb2a52716fd4e7bdeee7b6709237562
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-avatar@npm:0.4.48":
-  version: 0.4.48
-  resolution: "@justeattakeaway/pie-avatar@npm:0.4.48"
+"@justeattakeaway/pie-avatar@npm:0.4.54":
+  version: 0.4.54
+  resolution: "@justeattakeaway/pie-avatar@npm:0.4.54"
   dependencies:
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: 113948452bc1393707257bd0b7dbf5e8719c4aa30070b8c225f951e8e990a7f6c960baeef757545a1cc31cb260e2b84a913caa7be88b477c9f0905ac096860d9
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: dbedb18f6eb684492c9dbba40d389fc53122cbf32f3fa8143495277f0f499c578ee085f1733ed683b6f27b29dde1f573a815caaffbfe1e6a42a5d9316299ab72
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-breadcrumb@npm:1.0.11":
-  version: 1.0.11
-  resolution: "@justeattakeaway/pie-breadcrumb@npm:1.0.11"
+"@justeattakeaway/pie-breadcrumb@npm:1.0.18":
+  version: 1.0.18
+  resolution: "@justeattakeaway/pie-breadcrumb@npm:1.0.18"
   dependencies:
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-link": 1.5.2
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: 18f50618398fc24886603ef7a90e9fb72fcddf891250b1ee623ed325359c6380c3e052f9012e561902b3663d1724a28bc3f2a6636dada329b41be49ffcab04a4
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-link": 1.5.9
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: fd8766d17013bab09dffe5b46539fd4cbd1b1a3dd2435536e29bebf6905896039225126aff49418b14753774fd2c7efafbcd5bc643d5d42ac607954d395c595d
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-button@npm:1.14.13":
-  version: 1.14.13
-  resolution: "@justeattakeaway/pie-button@npm:1.14.13"
+"@justeattakeaway/pie-button@npm:1.15.1":
+  version: 1.15.1
+  resolution: "@justeattakeaway/pie-button@npm:1.15.1"
   dependencies:
-    "@justeattakeaway/pie-spinner": 1.5.6
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-spinner": 1.5.11
+    "@justeattakeaway/pie-webc-core": 22.0.1
     element-internals-polyfill: 1.3.11
-  checksum: 44b2c951d76639c44702d0e75b3d721fe8341a412ea4ab76f3adc0d421f68d0e573bd05f4bc6cb900bf0c1318ad5f29cbe01f10ddf206e1eba806362f27a6202
+  checksum: 09045b0a5d2c80909c3bd36393d6ec25999870df146f3076220f39fe8f60033260162501e9ee9a62ec7b6968380274327c5cdb3a9d0941c75d4d730c386e1b1b
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-card@npm:0.27.11":
-  version: 0.27.11
-  resolution: "@justeattakeaway/pie-card@npm:0.27.11"
+"@justeattakeaway/pie-card@npm:1.2.0":
+  version: 1.2.0
+  resolution: "@justeattakeaway/pie-card@npm:1.2.0"
   dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: 5e1380db623fa947b688e68126b9f16637b26f523061bfb51c9b5bdc7c0790701ff48ada0aad162b797d6665f77cb7e0942c793e730568485e23a1901763370e
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: 3fb9f6ce1fd58bde3e2f5b7314e736f98225cf072674b100e41a3c9c5cdfeb889fe34b1ab2d79d5f15559fe0df1bb059ba1774f2cd093928a2c629229e60ec09
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-checkbox-group@npm:1.2.6":
-  version: 1.2.6
-  resolution: "@justeattakeaway/pie-checkbox-group@npm:1.2.6"
+"@justeattakeaway/pie-checkbox-group@npm:1.2.12":
+  version: 1.2.12
+  resolution: "@justeattakeaway/pie-checkbox-group@npm:1.2.12"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 1.0.10
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-assistive-text": 1.0.16
+    "@justeattakeaway/pie-webc-core": 22.0.1
     "@lit/context": 1.1.6
-  checksum: 7c543e1b5b7f2bf640c2ce92ca379411ee2818ee3686044292973011986dfa853c62cb1ceb07a379aa4925786f73864406342bac870dae6d8685ae66eea74ff2
+  checksum: 372bdc859904637e61090995600b3130c46181cee4317cf8a4294bf5390fe7e644c771f3f231a1765a03c73e02ba8c57cd6ef75be859deb18b9be6fc232d32af
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-checkbox@npm:1.4.4":
-  version: 1.4.4
-  resolution: "@justeattakeaway/pie-checkbox@npm:1.4.4"
+"@justeattakeaway/pie-checkbox@npm:1.4.10":
+  version: 1.4.10
+  resolution: "@justeattakeaway/pie-checkbox@npm:1.4.10"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 1.0.10
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-assistive-text": 1.0.16
+    "@justeattakeaway/pie-webc-core": 22.0.1
     "@lit/context": 1.1.6
-  checksum: fb36cadd3af8399da1e802c64d840e2a2e0e49a4e7a9e0e6d250e6fd17a8244e5c3e7c5e14ae69738d08e046c968b3d9dbff092cfc516dacc75ee70a3515b007
+  checksum: 02d492fbaa2bc0f980cd8b012b8f23361a393f702edec49b730893a620624e6b9fbab19963e0a80f048a74213c07d80c744b7b1caef5a75bfdedbd296b3e83ee
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-chip@npm:1.0.11":
-  version: 1.0.11
-  resolution: "@justeattakeaway/pie-chip@npm:1.0.11"
+"@justeattakeaway/pie-chip@npm:1.0.17":
+  version: 1.0.17
+  resolution: "@justeattakeaway/pie-chip@npm:1.0.17"
   dependencies:
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-spinner": 1.5.6
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: e31ace4bf003734d042ea1b5c6485e7e9e83f424c44ae92f8507e6875ca58727b57bf4d3becb5170a282e880410adf05edbd6a068fcb5975ff260e556524768e
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-spinner": 1.5.11
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: 05628e730472c4778088188c4d2a88b6cb1e66a5cfec590cc299652ce14d4cd2ab542b4bdb89d99445b07ca47ff980910a68563c74179c2909002514949692dd
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-cookie-banner@npm:1.10.14":
-  version: 1.10.14
-  resolution: "@justeattakeaway/pie-cookie-banner@npm:1.10.14"
+"@justeattakeaway/pie-cookie-banner@npm:1.11.0":
+  version: 1.11.0
+  resolution: "@justeattakeaway/pie-cookie-banner@npm:1.11.0"
   dependencies:
-    "@justeattakeaway/pie-button": 1.14.13
-    "@justeattakeaway/pie-divider": 1.5.33
-    "@justeattakeaway/pie-icon-button": 2.7.30
-    "@justeattakeaway/pie-link": 1.5.2
-    "@justeattakeaway/pie-modal": 1.27.7
-    "@justeattakeaway/pie-switch": 2.7.1
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-button": 1.15.1
+    "@justeattakeaway/pie-divider": 1.5.38
+    "@justeattakeaway/pie-icon-button": 2.8.1
+    "@justeattakeaway/pie-link": 1.5.9
+    "@justeattakeaway/pie-modal": 1.27.15
+    "@justeattakeaway/pie-switch": 2.7.7
+    "@justeattakeaway/pie-webc-core": 22.0.1
     dompurify: 3.4.8
-  checksum: 5f62642ec42ccede1ecb1c002ecc6d30e88cd3f1f16e548067aae3b6c75931ffeeeb6100b79b7dcab862230e88268db87474bec1a435dd2b3983c2ff563dbb58
+  checksum: 774ca815ef205d63bfbc0d9d22ebc07d99b67d00ad0914cdd3bcd13112f2c52569c8ff42a9c0da45c9f5702e57d81f34f920b49aa7091cb8a07555b45b1958d0
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-css@npm:1.5.0":
-  version: 1.5.0
-  resolution: "@justeattakeaway/pie-css@npm:1.5.0"
+"@justeattakeaway/pie-css@npm:1.9.1":
+  version: 1.9.1
+  resolution: "@justeattakeaway/pie-css@npm:1.9.1"
   dependencies:
-    "@justeat/pie-design-tokens": 7.14.3
-  checksum: 1d74e97c92ebd4a1ff7fe9068a9697742d6949f91d855dc290bd0f67ffccb87fc114dc35d05201026ed6fdf5491c2bdc786fc9a5490b21ad321ef61ee49832e3
+    "@justeat/pie-design-tokens": 7.15.1
+  checksum: 1d212e47ff273494a61425b1740164f97c21f0032292ac45de207dc21116c73209476fac03c611bd39f034e427f3a9f734cecae715016311cb2ea29aeb57cf17
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-data-table@npm:0.3.28":
-  version: 0.3.28
-  resolution: "@justeattakeaway/pie-data-table@npm:0.3.28"
-  dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: 02231f560a7857332f6e39c661aa6d7c2f91c284339f51730869003aeaeb775ecef25180f15195d200db90123e073055aa049f847fe77914a98a2c88ba98b451
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-divider@npm:1.5.33":
-  version: 1.5.33
-  resolution: "@justeattakeaway/pie-divider@npm:1.5.33"
-  dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: 6da78ffbd4b29367092d77730b1fec407496848913027eb4107c940cb82cf5830b4fe5ac296f82053f7ac84950a9af7632f113cb5bd0ed427274f60eddf2f78b
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-form-label@npm:0.18.34":
-  version: 0.18.34
-  resolution: "@justeattakeaway/pie-form-label@npm:0.18.34"
-  dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: f7a85b3c0b992f287357900591b0518391c65f7b67f51efc27354644bb0c5462319be44c720fd4e08c24e138dd4fe22f0280c429ac70f86ac13d70610d5ee115
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-icon-button@npm:2.7.30":
-  version: 2.7.30
-  resolution: "@justeattakeaway/pie-icon-button@npm:2.7.30"
-  dependencies:
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-spinner": 1.5.6
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: feac907b76c0a50860d10acb287caa68943cb85d68dc7c7c1625cfaf169c6e2fa0defca149676266b901681202b7598a7a6797a359e8f5a4f9e16cf1fb2bd42d
-  languageName: node
-  linkType: hard
-
-"@justeattakeaway/pie-icon-with-background@npm:0.4.1":
+"@justeattakeaway/pie-data-table@npm:0.4.1":
   version: 0.4.1
-  resolution: "@justeattakeaway/pie-icon-with-background@npm:0.4.1"
+  resolution: "@justeattakeaway/pie-data-table@npm:0.4.1"
   dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: e7963df7c7f419ac353224fb2f2a47ff248f0bed83e5df58fb3bc7bf7d96765d868589612d56f104fd9f7fc8be02775c333a0bac48d751b1c47ba9e1d5410615
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: e891028ccd0fec8734417ac0428722d4ea2df4cf514be51637d96fa9bf862d7dbd92ab8cd9cc04146e535196c46cf2c67c0def6bce5ac3c1b9e08e9fcadc9ac6
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-icons-webc@npm:1.28.1":
-  version: 1.28.1
-  resolution: "@justeattakeaway/pie-icons-webc@npm:1.28.1"
+"@justeattakeaway/pie-divider@npm:1.5.38":
+  version: 1.5.38
+  resolution: "@justeattakeaway/pie-divider@npm:1.5.38"
   dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: 7b1450bc6628d7c2bd70e1a638d808f01bcc85269226a7c44e449594144b3215862b731e2cb3cb68b5ea024b09f4e625aa7e92a98d3a3f6529fa38ed786eda3c
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: cb0ebc32bf1550f73d94a0bd785d622a374cc4d13b2bf4079e15804ecc209e5419849d643824af52986c691ff91339748da4938ec6b200c8675785cf6e56d0a0
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-link@npm:1.5.2":
-  version: 1.5.2
-  resolution: "@justeattakeaway/pie-link@npm:1.5.2"
+"@justeattakeaway/pie-form-label@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@justeattakeaway/pie-form-label@npm:1.0.1"
   dependencies:
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: bc9849f2630defe4b2085a8ea2a0a446cb941a662b3bc4faef891833fce839f43d46077e139c793f14d74d950bbd9bb6d5a04c982e4f0f213c3af3da3fc8b990
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: 414f4f4df3ba9bc1c70f96a8236b3a44d3b8cbaf80f0d12cab4a74ac469fe6d90742eb094e49c85abbba78fccab7f2a56d8717bb2e15a1f667d30e8d29d31ed5
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-list@npm:0.7.1":
-  version: 0.7.1
-  resolution: "@justeattakeaway/pie-list@npm:0.7.1"
+"@justeattakeaway/pie-icon-button@npm:2.8.1":
+  version: 2.8.1
+  resolution: "@justeattakeaway/pie-icon-button@npm:2.8.1"
   dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-spinner": 1.5.11
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: c04686d30685dd9226c6990b8de2ac5351a64017a12a9e2f3178fe17df9427548834f6727c40f7a67e63cc19c2b52af0636eed97e67469737d4a1755ff815dee
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-icon-with-background@npm:0.4.6":
+  version: 0.4.6
+  resolution: "@justeattakeaway/pie-icon-with-background@npm:0.4.6"
+  dependencies:
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: b42b81395fd8ae9cd08fb7e8a9e345d7d6f07a3ffa8037f94425b8b93eb24678227f30c509ffc7a6199bc9921803b58d421e9d9731e9032e49103f3d22c0c63d
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-icons-webc@npm:1.29.4":
+  version: 1.29.4
+  resolution: "@justeattakeaway/pie-icons-webc@npm:1.29.4"
+  dependencies:
+    "@justeattakeaway/pie-webc-core": 22.0.0
+  checksum: d5d1f41f9e99d12fd2b4625a51fc82d3c85b41a8b785e6efdd5a19ab56ef07d4d1aa71ee038e29176fb312c32330d448a5ad3ca34a578d7496b19c2cb2495e63
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-icons-webc@npm:1.29.5":
+  version: 1.29.5
+  resolution: "@justeattakeaway/pie-icons-webc@npm:1.29.5"
+  dependencies:
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: 9faf27d514a905cb92ef8f690ea24e71c3c2159396c14b6d794ad366bbdf37f796dd217bf8ec91670f91bdb93677d3962fb9f97705e247d886ef6f487879a8c2
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-link@npm:1.5.9":
+  version: 1.5.9
+  resolution: "@justeattakeaway/pie-link@npm:1.5.9"
+  dependencies:
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: 62e91b13260e9b6a97d7abc2f1ed903f93b20dd2e7ca23e8bf134ba2dc6e0b897e44dfdb70cd966f5ba9c7d738ccfdc5336b278f6c2319040d9b11fbc34066d0
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-list@npm:0.8.1":
+  version: 0.8.1
+  resolution: "@justeattakeaway/pie-list@npm:0.8.1"
+  dependencies:
+    "@justeattakeaway/pie-webc-core": 22.0.1
     "@lit/context": 1.1.6
-  checksum: f8fa4c0909691a3cc150459d4581bef768cb2307593524aa02d8a8ef622daa707fb5e04ee0ccc8bf1a7f94f39fd531f2c07ae8c0c7885599d3438a1a0a88dd25
+  checksum: 4f3e6bd96676dc62133d7dc2e5e12ecd42cc699ebf748d3ddc2c16e1d003d0eab54f74249c8582d7b44e9992f54c1ce104af2d1d7e132b71ea387fe06825b087
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-lottie-player@npm:0.4.13":
-  version: 0.4.13
-  resolution: "@justeattakeaway/pie-lottie-player@npm:0.4.13"
+"@justeattakeaway/pie-lottie-player@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@justeattakeaway/pie-lottie-player@npm:1.0.1"
   dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-webc-core": 22.0.1
     lottie-web: 5.13.0
-  checksum: 686a8c02cb626d9d4f96aa2b0e1d3b1a332179ca4005b49b9023dd904c7f591635eed492b2e38e21c3b8ad9e0e21ee05b168b64ca38d9ecbaf9519e75c820fe8
+  checksum: 4be3df630eb63423e43037a0f3f9b52134e7ab0731d967d2dcb010226c7bb559ded1ddbdca1b87db1b1749788b5bd1075d6058212aa82452d91b2c239f7a6040
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-modal@npm:1.27.7":
-  version: 1.27.7
-  resolution: "@justeattakeaway/pie-modal@npm:1.27.7"
+"@justeattakeaway/pie-modal@npm:1.27.15":
+  version: 1.27.15
+  resolution: "@justeattakeaway/pie-modal@npm:1.27.15"
   dependencies:
-    "@justeattakeaway/pie-button": 1.14.13
-    "@justeattakeaway/pie-icon-button": 2.7.30
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-spinner": 1.5.6
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-button": 1.15.1
+    "@justeattakeaway/pie-icon-button": 2.8.1
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-spinner": 1.5.11
+    "@justeattakeaway/pie-webc-core": 22.0.1
     body-scroll-lock: 3.1.5
     dialog-polyfill: 0.5.6
-  checksum: 9275990afb57eb62d6452c90c8c70c87d32bd203b24c2bfa370a766e51aef8c25bfeba59f132cccbf1a52ff2961750866674410dfe9a292f60ef7d3cb991f261
+  checksum: bc7e30076be066cf1a683181334f3241f64cf621044032b481271e11a9e069b3ad5aeedcbe82df09f26b3c6ed09dae122428509bbb36f14d5def4bcb4e19042d
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-notification@npm:0.24.15":
-  version: 0.24.15
-  resolution: "@justeattakeaway/pie-notification@npm:0.24.15"
+"@justeattakeaway/pie-notification@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@justeattakeaway/pie-notification@npm:1.0.2"
   dependencies:
-    "@justeattakeaway/pie-icon-button": 2.7.30
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: 3166e53c920e6e6ecdf15e01383b4fad5884bacda5248e6b8f1493c23b46e82e3877e1841ff2169e6a7b8354c34422c788a81edef49db0cd8eeda35c8d2e2c16
+    "@justeattakeaway/pie-icon-button": 2.8.1
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: 75a624172794fc2215dd514ce7cf72e40dde27523fefb0953099809b73d8d14b4581ebdd98a82b50c57fda18db43b7f3e4741d672907153c5ca6fda7b4a8636e
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-radio-group@npm:1.2.7":
-  version: 1.2.7
-  resolution: "@justeattakeaway/pie-radio-group@npm:1.2.7"
+"@justeattakeaway/pie-pagination@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@justeattakeaway/pie-pagination@npm:0.1.0"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 1.0.10
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-button": 1.15.1
+    "@justeattakeaway/pie-icon-button": 2.8.1
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: 31927639fb3d2ab5a641278dc035241599cc9c753360e3ca187817ca90643816f6310154ff3dcf7e950d659369e474a29fcb8c85da8a074923419488c479f2e5
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-radio-group@npm:1.2.13":
+  version: 1.2.13
+  resolution: "@justeattakeaway/pie-radio-group@npm:1.2.13"
+  dependencies:
+    "@justeattakeaway/pie-assistive-text": 1.0.16
+    "@justeattakeaway/pie-webc-core": 22.0.1
     "@lit/context": 1.1.6
-  checksum: cbb4bcbb58cc5b45d8ea1af908ce4c1c5b781a5e1fd5910ef4180371df4096524449bf50905433fcf403db60caa4353ce7d86305e913246314cbf1b84ab4a31c
+  checksum: 93a6ba9be84d27dd5f7b0d733d2e9a26221c43c322ab7f3547877a575e7107db716cbe104c60e67fe3c75c01e5c1af466f67a3afbbf1f7cc2362cb55b1c960e3
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-radio@npm:1.2.4":
-  version: 1.2.4
-  resolution: "@justeattakeaway/pie-radio@npm:1.2.4"
+"@justeattakeaway/pie-radio@npm:1.2.9":
+  version: 1.2.9
+  resolution: "@justeattakeaway/pie-radio@npm:1.2.9"
   dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-webc-core": 22.0.1
     "@lit/context": 1.1.6
-  checksum: 190e2f48bd9e3388278e3d5b9640cf4633d8b91c7896e07c3227c00b130f6704ac25eafc74d65a68b3de9cd31bf29b0d0b70e62a1e26e1c4359c55c29c729daa
+  checksum: 9ff2d239ca6d6606f3b5ecad7c39546dc029519267cba64bb314215271c28a9782bc0b2c9ed1896f3729745579853e4cea191ca0fad932578ec92f55098d9f87
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-select@npm:0.9.10":
-  version: 0.9.10
-  resolution: "@justeattakeaway/pie-select@npm:0.9.10"
+"@justeattakeaway/pie-select@npm:0.9.16":
+  version: 0.9.16
+  resolution: "@justeattakeaway/pie-select@npm:0.9.16"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 1.0.10
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: c733f4592c86b56c460e880ad4f485d826be97738822ec79469484d695979fd6fd461503e351c2323134f4d862d1151010d7104dabe6bc5cb843fccf9cde38a0
+    "@justeattakeaway/pie-assistive-text": 1.0.16
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: f7ec14231c10c2d7f06246b11fb4c3d122c4f62269cbf1985e20805f0292c3eb1fe8c947ef6965a3a9cecfe6f8c3e7f7da9e70d14cc71c02fb86d0f6aabe3ad4
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-spinner@npm:1.5.6":
-  version: 1.5.6
-  resolution: "@justeattakeaway/pie-spinner@npm:1.5.6"
+"@justeattakeaway/pie-spinner@npm:1.5.11":
+  version: 1.5.11
+  resolution: "@justeattakeaway/pie-spinner@npm:1.5.11"
   dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: 69d6fa16d3c0c7105976a65d2ef7987aa20c1827b5f86e22b44a1280e5662f988ad42bfb48eda2c17cd048cf2f9b0f3c82ee0e02c4cf1f89e3e5d824bda16c61
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: b7f574bf634e5e40eec08cb654f35414022a1d501d20e9aa0cfb3bf7d2e602da4b076a37c3258d6d08fd44370276ae786ce202f9becf02fc1de2355643374554
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-switch@npm:2.7.1":
-  version: 2.7.1
-  resolution: "@justeattakeaway/pie-switch@npm:2.7.1"
+"@justeattakeaway/pie-switch@npm:2.7.7":
+  version: 2.7.7
+  resolution: "@justeattakeaway/pie-switch@npm:2.7.7"
   dependencies:
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-webc-core": 22.0.1
     element-internals-polyfill: 1.3.11
-  checksum: 8d142aca817073d893457cbc1870c1d67a8adb01f572e53d4ff3f4b97855aec96c6087ad97514b7460796a2a954f770c8fbd7d3da769b772bb1de9aef254b334
+  checksum: 735c30d0f61d355472a988be5ab02757d35705f3f25c9bfb7ed552fa6c230295569d20c9591accef5255f3b2d8acb6a6437901f9cfc5908f0263729f60b7cca0
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-tabs@npm:0.1.33":
-  version: 0.1.33
-  resolution: "@justeattakeaway/pie-tabs@npm:0.1.33"
+"@justeattakeaway/pie-tabs@npm:0.1.38":
+  version: 0.1.38
+  resolution: "@justeattakeaway/pie-tabs@npm:0.1.38"
   dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: 72d5f42e28a3f18e535a9da3b021d05a0eda06d2f7191da2547f8da4a7cb997ef360ccc0053d50307fb957736a4fd7302778600ced95ddcd6ac4552520bde031
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: 91dce3707f7f363a44106d65fbc7557f7c926629fc5fbbae762f860d2d4509e2dacd809700b670be58858bd44bbdbb49f793f05721dec79bc928657107edde06
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-tag@npm:1.1.1":
-  version: 1.1.1
-  resolution: "@justeattakeaway/pie-tag@npm:1.1.1"
+"@justeattakeaway/pie-tag@npm:1.1.6":
+  version: 1.1.6
+  resolution: "@justeattakeaway/pie-tag@npm:1.1.6"
   dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-webc-core": 22.0.1
     "@lit/context": 1.1.6
-  checksum: dd3c42adb2a3dc9083bc1e644c93a102f63d1f96d5b2814e995f95e2171c9d4a654f9fdfbe1c18c79b3125efc9ad84f7e92d5cd4293aba5ae4cee427d1ff720f
+  checksum: ae10b1b0030af8b0a5d9ec82a4b842d029632c909edaa6780ed9777764fd2a03ac59a693526fa56723fb3ed856294982b06006b6393ec219164d41fcfd7e2e97
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-text-input@npm:0.30.10":
-  version: 0.30.10
-  resolution: "@justeattakeaway/pie-text-input@npm:0.30.10"
+"@justeattakeaway/pie-text-input@npm:0.30.16":
+  version: 0.30.16
+  resolution: "@justeattakeaway/pie-text-input@npm:0.30.16"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 1.0.10
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-assistive-text": 1.0.16
+    "@justeattakeaway/pie-webc-core": 22.0.1
     element-internals-polyfill: 1.3.11
-  checksum: 4ed2c5a38ad165bd3d9ec2d259ebf46c3001fc9111a2e05adc7bbc5031d9d457886d0bd5c5e244f849fdcae812ecaf070ac339b549c44d01049a61772033e9d7
+  checksum: 4e3774280d1d32c22c5a5cd23d1b0dd6b4b5de396377bf3ad61f8826932f21c9eeb4afbfd256a20cd481320da26e761a7556a63be082032593de0796f0ad8069
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-textarea@npm:0.23.5":
-  version: 0.23.5
-  resolution: "@justeattakeaway/pie-textarea@npm:0.23.5"
+"@justeattakeaway/pie-textarea@npm:0.23.11":
+  version: 0.23.11
+  resolution: "@justeattakeaway/pie-textarea@npm:0.23.11"
   dependencies:
-    "@justeattakeaway/pie-assistive-text": 1.0.10
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-assistive-text": 1.0.16
+    "@justeattakeaway/pie-webc-core": 22.0.1
     lodash.throttle: 4.1.1
-  checksum: 4541f0566c84e340b5f862bc75c326aa57d47c47f58b301edd0e001d07823c255bc18e3e24da82c6991207772fd27d9f68b7e5ba2d79ac9b1c7113381c19c2ff
+  checksum: 85ff0effadc99b92590a1411bd4c287f35de60717bdb28d7a1df35e8c5d154687312e537972f920137d3d01c4563ecfecbea845299396040a0473527e4250f92
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-thumbnail@npm:0.9.1":
-  version: 0.9.1
-  resolution: "@justeattakeaway/pie-thumbnail@npm:0.9.1"
+"@justeattakeaway/pie-thumbnail@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@justeattakeaway/pie-thumbnail@npm:1.0.1"
   dependencies:
-    "@justeattakeaway/pie-webc-core": 18.1.0
+    "@justeattakeaway/pie-webc-core": 22.0.1
     "@lit/context": 1.1.6
-  checksum: 6d100ddb1b5b3efcc8c0b1271f5d10012d3a10df1fb1b73f7d7aab1c90868311399373a5e455fbea4abeef505bbde06f97a23ced9299fcbfb4d4e320bd3b7780
+  checksum: 5d1036f7fc2c83adc2dfefa095ae961d5f3c5289abcbbfbfafe6e4bc256119e4b9bedb9998e498f9013da68ad17e2f97c3d45bc410920952926c103f17728e95
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-toast-provider@npm:1.1.6":
-  version: 1.1.6
-  resolution: "@justeattakeaway/pie-toast-provider@npm:1.1.6"
+"@justeattakeaway/pie-toast-provider@npm:1.3.2":
+  version: 1.3.2
+  resolution: "@justeattakeaway/pie-toast-provider@npm:1.3.2"
   dependencies:
-    "@justeattakeaway/pie-toast": 1.1.6
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: 3c8fdccf9addf4bae9efe4439c4b8f6daf38761b786988e46cf5bcf5b4080bfefc8395b1c4047ae504da41d204bbc47bbf89994583000d14d3e07a02a3bbe1f3
+    "@justeattakeaway/pie-toast": 1.2.6
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: 9f23ffdcaf29663e69e1b53b880d64f5d6aa4d7461dc2ae82b8f6a18f2b02ff7f800a09670e0baaa962586811d9d94669ec0fa7c47523b938091a5d87ab35ae6
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-toast@npm:1.1.6":
-  version: 1.1.6
-  resolution: "@justeattakeaway/pie-toast@npm:1.1.6"
+"@justeattakeaway/pie-toast@npm:1.2.6":
+  version: 1.2.6
+  resolution: "@justeattakeaway/pie-toast@npm:1.2.6"
   dependencies:
-    "@justeattakeaway/pie-button": 1.14.13
-    "@justeattakeaway/pie-icon-button": 2.7.30
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-webc-core": 18.1.0
-  checksum: 150ad443f848e5a16a1f6860709fedcd0763420fc14e14763db5d9d4da05d3446479306b2520cabcc138afb38a9e8fae19ff97a94340e39a7ce2ee40b1446b52
+    "@justeattakeaway/pie-button": 1.15.1
+    "@justeattakeaway/pie-icon-button": 2.8.1
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: cd4657bc94bac26e1268d8f3709736ee94c25c3ce6fb7bf41d4cf5b013e229417217b62949bf951fb7e329b85d87cf537c7bc1d21a9fb63c933d165eff35b12e
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-webc-core@npm:18.1.0":
-  version: 18.1.0
-  resolution: "@justeattakeaway/pie-webc-core@npm:18.1.0"
+"@justeattakeaway/pie-tooltip@npm:0.7.0":
+  version: 0.7.0
+  resolution: "@justeattakeaway/pie-tooltip@npm:0.7.0"
+  dependencies:
+    "@justeattakeaway/pie-icon-button": 2.8.1
+    "@justeattakeaway/pie-icons-webc": 1.29.5
+    "@justeattakeaway/pie-webc-core": 22.0.1
+  checksum: b87f5d7f12a03d13d6fe54ea546d0fdff7a7e8775d998a0c438046a7112f4af64b7cd6d0ae96ad2b7f03e201ed8fc74e7c879ed186fffe013b1a38dec9384e5d
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-webc-core@npm:22.0.0":
+  version: 22.0.0
+  resolution: "@justeattakeaway/pie-webc-core@npm:22.0.0"
   dependencies:
     "@lit/context": 1.1.6
     lit: 3.3.3
   peerDependencies:
     "@justeattakeaway/pie-css": 1.x
-  checksum: 35f64857db456e3ace950a354dcf81a07e999bec34cb6625d86e07fa964e92743513248fe93272c7aa6ab1b3ff09ef4dfcc6ec898433fde1000afa59d6748a9f
+  checksum: f16c49401ad7f07867a61fa30b799a7a3a5d18576878b45d7a768bb5ed8c5dc030d08ba7aae0e8a55d40a74ef5b6679e5785801ab294f66828ab0984573619ef
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-webc@npm:0.11.12":
-  version: 0.11.12
-  resolution: "@justeattakeaway/pie-webc@npm:0.11.12"
+"@justeattakeaway/pie-webc-core@npm:22.0.1":
+  version: 22.0.1
+  resolution: "@justeattakeaway/pie-webc-core@npm:22.0.1"
   dependencies:
-    "@justeattakeaway/pie-accordion": 0.2.7
-    "@justeattakeaway/pie-assistive-text": 1.0.10
-    "@justeattakeaway/pie-avatar": 0.4.48
-    "@justeattakeaway/pie-breadcrumb": 1.0.11
-    "@justeattakeaway/pie-button": 1.14.13
-    "@justeattakeaway/pie-card": 0.27.11
-    "@justeattakeaway/pie-checkbox": 1.4.4
-    "@justeattakeaway/pie-checkbox-group": 1.2.6
-    "@justeattakeaway/pie-chip": 1.0.11
-    "@justeattakeaway/pie-cookie-banner": 1.10.14
-    "@justeattakeaway/pie-data-table": 0.3.28
-    "@justeattakeaway/pie-divider": 1.5.33
-    "@justeattakeaway/pie-form-label": 0.18.34
-    "@justeattakeaway/pie-icon-button": 2.7.30
-    "@justeattakeaway/pie-icon-with-background": 0.4.1
-    "@justeattakeaway/pie-link": 1.5.2
-    "@justeattakeaway/pie-list": 0.7.1
-    "@justeattakeaway/pie-lottie-player": 0.4.13
-    "@justeattakeaway/pie-modal": 1.27.7
-    "@justeattakeaway/pie-notification": 0.24.15
-    "@justeattakeaway/pie-radio": 1.2.4
-    "@justeattakeaway/pie-radio-group": 1.2.7
-    "@justeattakeaway/pie-select": 0.9.10
-    "@justeattakeaway/pie-spinner": 1.5.6
-    "@justeattakeaway/pie-switch": 2.7.1
-    "@justeattakeaway/pie-tabs": 0.1.33
-    "@justeattakeaway/pie-tag": 1.1.1
-    "@justeattakeaway/pie-text-input": 0.30.10
-    "@justeattakeaway/pie-textarea": 0.23.5
-    "@justeattakeaway/pie-thumbnail": 0.9.1
-    "@justeattakeaway/pie-toast": 1.1.6
-    "@justeattakeaway/pie-toast-provider": 1.1.6
-  checksum: 1e76e1ed925a9d937d82e994292d4bdbd745a48b79401ae4e5b3e6a931c8ac88781c2a8217370cf84370a0fa64ae41a832a469fc9997f0a60772572969946c19
+    "@lit/context": 1.1.6
+    lit: 3.3.3
+  peerDependencies:
+    "@justeattakeaway/pie-css": 1.x
+  checksum: 0361a7d7158754b9cc67917849bc0eb1998e20044411bef15d78c63faeabed9e0bfbfe3476a76e96994a428b663c32228358e06adba51e7bb10ff13b61573597
+  languageName: node
+  linkType: hard
+
+"@justeattakeaway/pie-webc@npm:0.12.7":
+  version: 0.12.7
+  resolution: "@justeattakeaway/pie-webc@npm:0.12.7"
+  dependencies:
+    "@justeattakeaway/pie-accordion": 1.0.1
+    "@justeattakeaway/pie-assistive-text": 1.0.16
+    "@justeattakeaway/pie-avatar": 0.4.54
+    "@justeattakeaway/pie-breadcrumb": 1.0.18
+    "@justeattakeaway/pie-button": 1.15.1
+    "@justeattakeaway/pie-card": 1.2.0
+    "@justeattakeaway/pie-checkbox": 1.4.10
+    "@justeattakeaway/pie-checkbox-group": 1.2.12
+    "@justeattakeaway/pie-chip": 1.0.17
+    "@justeattakeaway/pie-cookie-banner": 1.11.0
+    "@justeattakeaway/pie-data-table": 0.4.1
+    "@justeattakeaway/pie-divider": 1.5.38
+    "@justeattakeaway/pie-form-label": 1.0.1
+    "@justeattakeaway/pie-icon-button": 2.8.1
+    "@justeattakeaway/pie-icon-with-background": 0.4.6
+    "@justeattakeaway/pie-link": 1.5.9
+    "@justeattakeaway/pie-list": 0.8.1
+    "@justeattakeaway/pie-lottie-player": 1.0.1
+    "@justeattakeaway/pie-modal": 1.27.15
+    "@justeattakeaway/pie-notification": 1.0.2
+    "@justeattakeaway/pie-pagination": 0.1.0
+    "@justeattakeaway/pie-radio": 1.2.9
+    "@justeattakeaway/pie-radio-group": 1.2.13
+    "@justeattakeaway/pie-select": 0.9.16
+    "@justeattakeaway/pie-spinner": 1.5.11
+    "@justeattakeaway/pie-switch": 2.7.7
+    "@justeattakeaway/pie-tabs": 0.1.38
+    "@justeattakeaway/pie-tag": 1.1.6
+    "@justeattakeaway/pie-text-input": 0.30.16
+    "@justeattakeaway/pie-textarea": 0.23.11
+    "@justeattakeaway/pie-thumbnail": 1.0.1
+    "@justeattakeaway/pie-toast": 1.2.6
+    "@justeattakeaway/pie-toast-provider": 1.3.2
+    "@justeattakeaway/pie-tooltip": 0.7.0
+  checksum: b333d02c9d81dabb4c3143102d8800663b3d6e612afbf26750ce2020a8ad95b14418df41da8cf4d2b8df48081f925b2e6e5145c805876ce97969a65ef48f9346
   languageName: node
   linkType: hard
 
@@ -2569,15 +2615,15 @@ __metadata:
   linkType: hard
 
 "@nuxt/kit@npm:^3.15.0, @nuxt/kit@npm:^3.16.2":
-  version: 3.21.10
-  resolution: "@nuxt/kit@npm:3.21.10"
+  version: 3.21.11
+  resolution: "@nuxt/kit@npm:3.21.11"
   dependencies:
     c12: ^3.3.4
     consola: ^3.4.2
     defu: ^6.1.7
     destr: ^2.0.5
-    errx: ^0.1.0
-    exsolve: ^1.1.0
+    errx: ^0.1.2
+    exsolve: ^1.1.1
     ignore: ^7.0.6
     jiti: ^2.7.0
     klona: ^2.0.6
@@ -2593,7 +2639,7 @@ __metadata:
     ufo: ^1.6.4
     unctx: ^2.5.0
     untyped: ^2.0.0
-  checksum: 1f425fe8d5615c2a2a220d7a3f6e6b51199791895e71ad85b29986e75509390b2d09ad67f6120ca75a1f1dc95be303e7df7801073197432ff2730a3bf08d6ed3
+  checksum: 4af772e2101d37e96cbb9f18f07eadd2cd82c1f39f3b802a38873509cdc5c5e9f1daf0ad5d7c3b62a35f940a3c84612b255946bd950e376c4ed9f2cf82768978
   languageName: node
   linkType: hard
 
@@ -2619,15 +2665,15 @@ __metadata:
   linkType: hard
 
 "@nuxt/schema@npm:^3.15.0":
-  version: 3.21.10
-  resolution: "@nuxt/schema@npm:3.21.10"
+  version: 3.21.11
+  resolution: "@nuxt/schema@npm:3.21.11"
   dependencies:
     "@vue/shared": ^3.5.40
     defu: ^6.1.7
     pathe: ^2.0.3
     pkg-types: ^2.3.1
     std-env: ^4.2.0
-  checksum: a8a5b76cd1b53ce43004fcf5b7cf7a7471fc6018bff6d6f51909a4ea179f0786e1a33a280b90adc611b8b81776bbf4045935eefbd00dd717043864e68b4ce5b2
+  checksum: eb2e9392440f285957d2ba614572c841c78ee59ed53b4ff43af3aeda66f4018c00547fb6906e866489998677cab0ceae79ed920551dbef78d3489a56371d4c47
   languageName: node
   linkType: hard
 
@@ -3572,9 +3618,9 @@ __metadata:
   linkType: hard
 
 "@speed-highlight/core@npm:^1.2.14":
-  version: 1.2.23
-  resolution: "@speed-highlight/core@npm:1.2.23"
-  checksum: d5d5ab79b807ae14bc9d9903564500f2027ce963c8f543be78f2bbb398d2b8ad12c2d31c35c78b0cd623d56ba2e2f39038b0be19756c63cdcb005d0e3b284035
+  version: 1.2.24
+  resolution: "@speed-highlight/core@npm:1.2.24"
+  checksum: adb5914145969ff27c05508f082d5bdeaf44998e585a1c156a78334ec8003de1f3ebafa28555e83943b23460de56b5c2f89268e06d19c9b6bf7c7ba30b29d700
   languageName: node
   linkType: hard
 
@@ -3776,22 +3822,22 @@ __metadata:
   linkType: hard
 
 "@typescript-eslint/eslint-plugin@npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0":
-  version: 8.66.0
-  resolution: "@typescript-eslint/eslint-plugin@npm:8.66.0"
+  version: 8.67.0
+  resolution: "@typescript-eslint/eslint-plugin@npm:8.67.0"
   dependencies:
     "@eslint-community/regexpp": ^4.12.2
-    "@typescript-eslint/scope-manager": 8.66.0
-    "@typescript-eslint/type-utils": 8.66.0
-    "@typescript-eslint/utils": 8.66.0
-    "@typescript-eslint/visitor-keys": 8.66.0
+    "@typescript-eslint/scope-manager": 8.67.0
+    "@typescript-eslint/type-utils": 8.67.0
+    "@typescript-eslint/utils": 8.67.0
+    "@typescript-eslint/visitor-keys": 8.67.0
     ignore: ^7.0.5
     natural-compare: ^1.4.0
     ts-api-utils: ^2.5.0
   peerDependencies:
-    "@typescript-eslint/parser": ^8.66.0
+    "@typescript-eslint/parser": ^8.67.0
     eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
     typescript: ">=4.8.4 <6.1.0"
-  checksum: a23697818897907bc8e8bf7cffbd7f3a71bf3cd840864b9e9e590c3925d38d5b69ef960705be43345e5c5fcc49a0cade4c55f8c03ad45cae5d549fd06e306c3f
+  checksum: a1a782e46d7f165ded2be97cbd5fb437a4298d2ded34038dd8ec05ccaf9513b726a931f258b875f4979272ac2fec1ffc311913718921f63a7d1dc0cadb5829ce
   languageName: node
   linkType: hard
 
@@ -3814,31 +3860,31 @@ __metadata:
   linkType: hard
 
 "@typescript-eslint/parser@npm:^5.4.2 || ^6.0.0 || ^7.0.0 || ^8.0.0":
-  version: 8.66.0
-  resolution: "@typescript-eslint/parser@npm:8.66.0"
+  version: 8.67.0
+  resolution: "@typescript-eslint/parser@npm:8.67.0"
   dependencies:
-    "@typescript-eslint/scope-manager": 8.66.0
-    "@typescript-eslint/types": 8.66.0
-    "@typescript-eslint/typescript-estree": 8.66.0
-    "@typescript-eslint/visitor-keys": 8.66.0
+    "@typescript-eslint/scope-manager": 8.67.0
+    "@typescript-eslint/types": 8.67.0
+    "@typescript-eslint/typescript-estree": 8.67.0
+    "@typescript-eslint/visitor-keys": 8.67.0
     debug: ^4.4.3
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
     typescript: ">=4.8.4 <6.1.0"
-  checksum: f437b258272a5e9a02e1fa1d9265dc1c9b585463563c75e792ea375f8cb2d89b93bf2f00e612f59e66febdd93480542a67455735a988baf1e6386a468904c574
+  checksum: 897b78d7fa11db92e61c719bfeeec39cad27762141fc02e7157f5a762e30eab106d3a84539b2833e907e3a824cfbd768d7c3eb5839318eb94d936fc924db2442
   languageName: node
   linkType: hard
 
-"@typescript-eslint/project-service@npm:8.66.0":
-  version: 8.66.0
-  resolution: "@typescript-eslint/project-service@npm:8.66.0"
+"@typescript-eslint/project-service@npm:8.67.0":
+  version: 8.67.0
+  resolution: "@typescript-eslint/project-service@npm:8.67.0"
   dependencies:
-    "@typescript-eslint/tsconfig-utils": ^8.66.0
-    "@typescript-eslint/types": ^8.66.0
+    "@typescript-eslint/tsconfig-utils": ^8.67.0
+    "@typescript-eslint/types": ^8.67.0
     debug: ^4.4.3
   peerDependencies:
     typescript: ">=4.8.4 <6.1.0"
-  checksum: 469923c0e8857ae94a2fb83f38fe8c770e5d43e1bdbcab31a4fd5fe4b7d59c96403647f2de0b44806f6cb729a1b91abaf4fc31b8fc8132f467cc8679e58ab6da
+  checksum: 044e0a7add8e2807bc40c68ffd18406a0b9d448aaf0d79b9d8cfb96f914d80ff1a36d6549c843e369a1ecb0b383260300195826f878ea778f380376bc8c96bda
   languageName: node
   linkType: hard
 
@@ -3852,38 +3898,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/scope-manager@npm:8.66.0":
-  version: 8.66.0
-  resolution: "@typescript-eslint/scope-manager@npm:8.66.0"
+"@typescript-eslint/scope-manager@npm:8.67.0":
+  version: 8.67.0
+  resolution: "@typescript-eslint/scope-manager@npm:8.67.0"
   dependencies:
-    "@typescript-eslint/types": 8.66.0
-    "@typescript-eslint/visitor-keys": 8.66.0
-  checksum: 9c828c8bd58b278d3934e4ee97975afc0f1401299761e3d8c9a800c436efcda7400d8dda484c64a1a1d94d8476e21ce1928e8d511d7a29c86082bcc96dfde187
+    "@typescript-eslint/types": 8.67.0
+    "@typescript-eslint/visitor-keys": 8.67.0
+  checksum: a68fbd1c06aae2203f8721d3917a08f8519cb87b45dbfab294e22b89f1d19477f76b00da47b6d023c0260f07b7c5089f417ce6ae03d230e8cc782b89fa784658
   languageName: node
   linkType: hard
 
-"@typescript-eslint/tsconfig-utils@npm:8.66.0, @typescript-eslint/tsconfig-utils@npm:^8.66.0":
-  version: 8.66.0
-  resolution: "@typescript-eslint/tsconfig-utils@npm:8.66.0"
+"@typescript-eslint/tsconfig-utils@npm:8.67.0, @typescript-eslint/tsconfig-utils@npm:^8.67.0":
+  version: 8.67.0
+  resolution: "@typescript-eslint/tsconfig-utils@npm:8.67.0"
   peerDependencies:
     typescript: ">=4.8.4 <6.1.0"
-  checksum: e8c72831f4d68581e1f22a76cd99c993532257a4fc20b33e5a8baf612afe774bad5b21f74263527a22420249f0eee1915697e5d8dbaaffdfe58ab62fd7cb1aa0
+  checksum: dafbc9f9a88fbcd52afad11732c20944c2268c56a558031ab0720ca22201532b4ad30455b142191760b9e115cc76f21305a660d4fae6e491f442aaaedd36086d
   languageName: node
   linkType: hard
 
-"@typescript-eslint/type-utils@npm:8.66.0":
-  version: 8.66.0
-  resolution: "@typescript-eslint/type-utils@npm:8.66.0"
+"@typescript-eslint/type-utils@npm:8.67.0":
+  version: 8.67.0
+  resolution: "@typescript-eslint/type-utils@npm:8.67.0"
   dependencies:
-    "@typescript-eslint/types": 8.66.0
-    "@typescript-eslint/typescript-estree": 8.66.0
-    "@typescript-eslint/utils": 8.66.0
+    "@typescript-eslint/types": 8.67.0
+    "@typescript-eslint/typescript-estree": 8.67.0
+    "@typescript-eslint/utils": 8.67.0
     debug: ^4.4.3
     ts-api-utils: ^2.5.0
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
     typescript: ">=4.8.4 <6.1.0"
-  checksum: ecda402accbcc6474b26bc1d106ddc64e2bfe28ab737b3a2201993266cee5806200546ca90abff989c487fd2312a69e584ffb541075b401b00b442763bbc8676
+  checksum: 75b8dfe4ebfb2c7b9d14ece1dbf94eea199f6199360c687f09937927844f5592e29a10f5ae3c4c4dd81e546e32b41617479a2b5c8ee370489eae886f876f5394
   languageName: node
   linkType: hard
 
@@ -3894,10 +3940,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/types@npm:8.66.0, @typescript-eslint/types@npm:^8.66.0":
-  version: 8.66.0
-  resolution: "@typescript-eslint/types@npm:8.66.0"
-  checksum: aec75e00f4dc242fd2ef23c93fef483d1ace87c40ccc22fc79a46964b2011e707b8aef352fd5d008838e9ecacd832e2104e4015ca09d2dcab7ac77f62eba8f75
+"@typescript-eslint/types@npm:8.67.0, @typescript-eslint/types@npm:^8.67.0":
+  version: 8.67.0
+  resolution: "@typescript-eslint/types@npm:8.67.0"
+  checksum: 7c995db42fd50f789d3c9b1eb60a5cb4706c2e0b3c686676448f28cd3bb7b448609452bc600e2d6553a6cbb2126542f440b21fe07c29acbf734e6bd865a748b9
   languageName: node
   linkType: hard
 
@@ -3920,14 +3966,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/typescript-estree@npm:8.66.0":
-  version: 8.66.0
-  resolution: "@typescript-eslint/typescript-estree@npm:8.66.0"
+"@typescript-eslint/typescript-estree@npm:8.67.0":
+  version: 8.67.0
+  resolution: "@typescript-eslint/typescript-estree@npm:8.67.0"
   dependencies:
-    "@typescript-eslint/project-service": 8.66.0
-    "@typescript-eslint/tsconfig-utils": 8.66.0
-    "@typescript-eslint/types": 8.66.0
-    "@typescript-eslint/visitor-keys": 8.66.0
+    "@typescript-eslint/project-service": 8.67.0
+    "@typescript-eslint/tsconfig-utils": 8.67.0
+    "@typescript-eslint/types": 8.67.0
+    "@typescript-eslint/visitor-keys": 8.67.0
     debug: ^4.4.3
     minimatch: ^10.2.2
     semver: ^7.7.3
@@ -3935,22 +3981,22 @@ __metadata:
     ts-api-utils: ^2.5.0
   peerDependencies:
     typescript: ">=4.8.4 <6.1.0"
-  checksum: 7656ee4593ecb4e9534732cab01473ece050b86963cc7d85fe9d33535ef2d9be2223d2f83a2ec5be0031fd95f2f5460ac9eb5fac706f402f78dd60455f063f0b
+  checksum: 9d11e863c7495295ef65a0700fa4f692c42326cf5ce17ef4f099afb4acc6deb62b6ac419835db240d5726e400d1ca8ecdec6bc1ef0fe7c819a34289e799b25fa
   languageName: node
   linkType: hard
 
-"@typescript-eslint/utils@npm:8.66.0":
-  version: 8.66.0
-  resolution: "@typescript-eslint/utils@npm:8.66.0"
+"@typescript-eslint/utils@npm:8.67.0":
+  version: 8.67.0
+  resolution: "@typescript-eslint/utils@npm:8.67.0"
   dependencies:
     "@eslint-community/eslint-utils": ^4.9.1
-    "@typescript-eslint/scope-manager": 8.66.0
-    "@typescript-eslint/types": 8.66.0
-    "@typescript-eslint/typescript-estree": 8.66.0
+    "@typescript-eslint/scope-manager": 8.67.0
+    "@typescript-eslint/types": 8.67.0
+    "@typescript-eslint/typescript-estree": 8.67.0
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0 || ^10.0.0
     typescript: ">=4.8.4 <6.1.0"
-  checksum: 3dfa5ddbaeceec60e8cb6e2c4e986341e481ee09700316183725ac2716eaf2893048da669c26a8a28553ff5d5fd476777f6ed837aca0f0658263f0ff5dbe267e
+  checksum: 0a55a24839b32b7ce4e0297718e32935c1d21e761fa68b64f5a7caa4339b2f876f63c6fb406d5a762c4418408c5ee3976cf5ba41e13f2f4d382dd5a067d9280b
   languageName: node
   linkType: hard
 
@@ -3964,13 +4010,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/visitor-keys@npm:8.66.0":
-  version: 8.66.0
-  resolution: "@typescript-eslint/visitor-keys@npm:8.66.0"
+"@typescript-eslint/visitor-keys@npm:8.67.0":
+  version: 8.67.0
+  resolution: "@typescript-eslint/visitor-keys@npm:8.67.0"
   dependencies:
-    "@typescript-eslint/types": 8.66.0
+    "@typescript-eslint/types": 8.67.0
     eslint-visitor-keys: ^5.0.0
-  checksum: e96c3535de85f8c4db2c502a3863dfce697c0fec46569b3a6a948457ff83f126886ea6b80952566f5be6f4f96c617fdb7c7dd7c3d86ab4e4db918bfa31bebd93
+  checksum: e4aa5a27cd6e8ffa8d9384533922f40e76de2f3aa5bef4eef5ba1da64ec1ba6eabeb66d05b8a10e00a8a7803495e3076b57b57dae9998319090f5237fbbf88f8
   languageName: node
   linkType: hard
 
@@ -4384,53 +4430,53 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/compiler-core@npm:3.5.40, @vue/compiler-core@npm:^3.5.13":
-  version: 3.5.40
-  resolution: "@vue/compiler-core@npm:3.5.40"
+"@vue/compiler-core@npm:3.5.41, @vue/compiler-core@npm:^3.5.13":
+  version: 3.5.41
+  resolution: "@vue/compiler-core@npm:3.5.41"
   dependencies:
-    "@babel/parser": ^7.29.7
-    "@vue/shared": 3.5.40
+    "@babel/parser": ^7.29.8
+    "@vue/shared": 3.5.41
     entities: ^7.0.1
     estree-walker: ^2.0.2
     source-map-js: ^1.2.1
-  checksum: db687886034285a790eace55fedffb9bcf79d5b6f622ee4a60c19077aa36f873b95f304ab4b9819a691f8078ea1e18552bac10c9defd0de14900f961c5d71a70
+  checksum: 32d77cd45d05c89df3a4e3ab190b30250152228a0bdee6accd1874b6a1c6446410c27183a939774e311c1a44f447d227ed070143f538a4f25e7d49b6946f9fe8
   languageName: node
   linkType: hard
 
-"@vue/compiler-dom@npm:3.5.40, @vue/compiler-dom@npm:^3.3.4":
-  version: 3.5.40
-  resolution: "@vue/compiler-dom@npm:3.5.40"
+"@vue/compiler-dom@npm:3.5.41, @vue/compiler-dom@npm:^3.3.4":
+  version: 3.5.41
+  resolution: "@vue/compiler-dom@npm:3.5.41"
   dependencies:
-    "@vue/compiler-core": 3.5.40
-    "@vue/shared": 3.5.40
-  checksum: a66cdb313aafb6a63767cc10cd790f503405efa0790abb661d6ebb96801ea993a2e5ed72fd8f6ca2eb619598b02a5d6294f5fc1eff6ba8b7638d9ce922e68511
+    "@vue/compiler-core": 3.5.41
+    "@vue/shared": 3.5.41
+  checksum: 370ef2ddec6e8442b9426814b78c1bc92c8de38331cfccc370ccb557ab066f1907f56e8002f1ed6da00355f7f966e70863a7f4cf2cdf878d0af46539e5507e26
   languageName: node
   linkType: hard
 
-"@vue/compiler-sfc@npm:3.5.40, @vue/compiler-sfc@npm:^3.5.13, @vue/compiler-sfc@npm:^3.5.18":
-  version: 3.5.40
-  resolution: "@vue/compiler-sfc@npm:3.5.40"
+"@vue/compiler-sfc@npm:3.5.41, @vue/compiler-sfc@npm:^3.5.13, @vue/compiler-sfc@npm:^3.5.18":
+  version: 3.5.41
+  resolution: "@vue/compiler-sfc@npm:3.5.41"
   dependencies:
-    "@babel/parser": ^7.29.7
-    "@vue/compiler-core": 3.5.40
-    "@vue/compiler-dom": 3.5.40
-    "@vue/compiler-ssr": 3.5.40
-    "@vue/shared": 3.5.40
+    "@babel/parser": ^7.29.8
+    "@vue/compiler-core": 3.5.41
+    "@vue/compiler-dom": 3.5.41
+    "@vue/compiler-ssr": 3.5.41
+    "@vue/shared": 3.5.41
     estree-walker: ^2.0.2
     magic-string: ^0.30.21
     postcss: ^8.5.19
     source-map-js: ^1.2.1
-  checksum: 4a4a8d198c0e6b159b6ca0dc0e57e79731d9e471200070c50878df07f3b1c268a6a5d7c2b5a321fb8bca32e67649fa16716b86e6571e5a80a042c1dd1b08f787
+  checksum: 31d28aa4827c1ec1ac2d87703f690b9103f36b65d000c99bde46d524122c37146a13d7a55169b7d016aad323128ddd06988d23f7752d41693b617b214b55452b
   languageName: node
   linkType: hard
 
-"@vue/compiler-ssr@npm:3.5.40":
-  version: 3.5.40
-  resolution: "@vue/compiler-ssr@npm:3.5.40"
+"@vue/compiler-ssr@npm:3.5.41":
+  version: 3.5.41
+  resolution: "@vue/compiler-ssr@npm:3.5.41"
   dependencies:
-    "@vue/compiler-dom": 3.5.40
-    "@vue/shared": 3.5.40
-  checksum: 282319ed0e1be2bc01fdba9b1a6af9d0a08f11bdc6c1887178fa5a6ac0c8241c8457570c551148064626d2295a928026f1ba63cc71a83479351c328a5bd0db2d
+    "@vue/compiler-dom": 3.5.41
+    "@vue/shared": 3.5.41
+  checksum: bab2a83491b2b2ad5156f723d023c02ae23dcab5a59cfaf5fe7c2214900e28e51bbcf533600f1c74c16511922dab854bcc75fa24eccc62eb60b5687cc7f66837
   languageName: node
   linkType: hard
 
@@ -4496,52 +4542,52 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/reactivity@npm:3.5.40":
-  version: 3.5.40
-  resolution: "@vue/reactivity@npm:3.5.40"
+"@vue/reactivity@npm:3.5.41":
+  version: 3.5.41
+  resolution: "@vue/reactivity@npm:3.5.41"
   dependencies:
-    "@vue/shared": 3.5.40
-  checksum: 0a8c85a971e1771fe2973cb61977dce9c8df90da52f5906c931aecc2b7e457f1edd2bf44cef58094668e4a69afde12e73581998998325b8d2b6b064a5d8aeef7
+    "@vue/shared": 3.5.41
+  checksum: 73a2471b3961130a76fd9565e3a9913b391a83ceddcfb43a4e9a02b5b27f1fbdc093e59078aac21d41bf797e403242a8cbd81fb7d5c345e89bf462d13c85812c
   languageName: node
   linkType: hard
 
-"@vue/runtime-core@npm:3.5.40":
-  version: 3.5.40
-  resolution: "@vue/runtime-core@npm:3.5.40"
+"@vue/runtime-core@npm:3.5.41":
+  version: 3.5.41
+  resolution: "@vue/runtime-core@npm:3.5.41"
   dependencies:
-    "@vue/reactivity": 3.5.40
-    "@vue/shared": 3.5.40
-  checksum: 05357fd013301471a91cb3a3b5ad31d487e584bd51fd7d37f9c7c911afa26f815860122ed09f951bf087e8839ef2f486340a229e7cd61ac870e745717f912434
+    "@vue/reactivity": 3.5.41
+    "@vue/shared": 3.5.41
+  checksum: bff27a6eba7f5ce836704d4cdf440d96a84474d8400166ac510725050558c01af093a695329d84e2a93586bbc72db637efe60f41f029dcc8bd32f50490510601
   languageName: node
   linkType: hard
 
-"@vue/runtime-dom@npm:3.5.40":
-  version: 3.5.40
-  resolution: "@vue/runtime-dom@npm:3.5.40"
+"@vue/runtime-dom@npm:3.5.41":
+  version: 3.5.41
+  resolution: "@vue/runtime-dom@npm:3.5.41"
   dependencies:
-    "@vue/reactivity": 3.5.40
-    "@vue/runtime-core": 3.5.40
-    "@vue/shared": 3.5.40
+    "@vue/reactivity": 3.5.41
+    "@vue/runtime-core": 3.5.41
+    "@vue/shared": 3.5.41
     csstype: ^3.2.3
-  checksum: b347a9155cf74f63818098c03bff1b5af9c5f27d9ad034b1a2be5299953df6d3e9e5106b5ad487e24cd33270e312b53d23c0ab3419aaab66cf0f83aadbc6e302
+  checksum: 4e67ecb5e2a39fae4bc8dee789a7d27994564d1fa103f83f22c65e94967907190d43a9ee8752e734fa05064d7eea6bbfa6e20b7feb1748876819317e3f9f2ea2
   languageName: node
   linkType: hard
 
-"@vue/server-renderer@npm:3.5.40":
-  version: 3.5.40
-  resolution: "@vue/server-renderer@npm:3.5.40"
+"@vue/server-renderer@npm:3.5.41":
+  version: 3.5.41
+  resolution: "@vue/server-renderer@npm:3.5.41"
   dependencies:
-    "@vue/compiler-ssr": 3.5.40
-    "@vue/runtime-dom": 3.5.40
-    "@vue/shared": 3.5.40
-  checksum: 31def77de7e4ab16ce5bac87df8a8e3545088eed2f07c7f89a926928158bf36c0d66007c6fac7f7a254fcdc7af73568e785d87b1923bdad5d3a1cfe554780665
+    "@vue/compiler-ssr": 3.5.41
+    "@vue/runtime-dom": 3.5.41
+    "@vue/shared": 3.5.41
+  checksum: 747f85fa81f18fbfb5f08f908f9a0a42ce4142d9f927b9eb9ea6fff71f71b32fea1c46477650e474c77ec844b423e1af36ce5e65013dfcedb89381ab67f487e1
   languageName: node
   linkType: hard
 
-"@vue/shared@npm:3.5.40, @vue/shared@npm:^3.5.13, @vue/shared@npm:^3.5.18, @vue/shared@npm:^3.5.40":
-  version: 3.5.40
-  resolution: "@vue/shared@npm:3.5.40"
-  checksum: 59e23eb3d00ddc1d83b16dc53af55d7836b7640c139d62e77945f48dfd8c8f1c34e8b0f231890a9fd81269741de89ff118899eda651aed158507a6f27f607f8f
+"@vue/shared@npm:3.5.41, @vue/shared@npm:^3.5.13, @vue/shared@npm:^3.5.18, @vue/shared@npm:^3.5.40":
+  version: 3.5.41
+  resolution: "@vue/shared@npm:3.5.41"
+  checksum: 6f3978c9b678bb710fb6e67999fe6fcd843b1741801bc295fbf713cbdd287da57380913fd544c5a60d83b2eaba0ac7950ee47a066048b9c72f2b55bd51bb3c2a
   languageName: node
   linkType: hard
 
@@ -4991,9 +5037,9 @@ __metadata:
   linkType: hard
 
 "axe-core@npm:^4.10.0":
-  version: 4.12.1
-  resolution: "axe-core@npm:4.12.1"
-  checksum: 6d70292d01c71fe0be09bbd6f65b6ddde5a8875e1c480fd10575f123bd1cb14982c92aac1459a6c25494fe0090003de702482aac041ee70255b945ef55dcc8b0
+  version: 4.13.0
+  resolution: "axe-core@npm:4.13.0"
+  checksum: 7788457bf83dfe91feebfb9229705e56fee2e188df95a67b936afd4c6da7aba5be049c50f87ee789a034983c7c5d922bcbd270a8c341afbd3ddb3823935c1659
   languageName: node
   linkType: hard
 
@@ -5090,11 +5136,11 @@ __metadata:
   linkType: hard
 
 "bare-url@npm:^2.2.2":
-  version: 2.4.7
-  resolution: "bare-url@npm:2.4.7"
+  version: 2.5.2
+  resolution: "bare-url@npm:2.5.2"
   dependencies:
     bare-path: ^3.0.0
-  checksum: 39465a30171dbc488a75b9b7c63a3cf8a362c0b314c76051f8e4c74702ecfd8e5880aa64e78aa2620e257ea40fce9c3719f9e1e34c4a020272a943e4b24891e9
+  checksum: 0d6f71e71bf90009811a2b05762db572e573117904c7698bb1b64f5ab74f4a3ab6ce1f2f741a3dc724ceb63317ada4fe722bfe19b413ddbec9a8725b8b4b38e6
   languageName: node
   linkType: hard
 
@@ -5105,12 +5151,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"baseline-browser-mapping@npm:^2.10.44":
-  version: 2.11.12
-  resolution: "baseline-browser-mapping@npm:2.11.12"
+"baseline-browser-mapping@npm:^2.11.12":
+  version: 2.11.13
+  resolution: "baseline-browser-mapping@npm:2.11.13"
   bin:
     baseline-browser-mapping: dist/cli.cjs
-  checksum: e154d9b239a282018e47a059626841052ed1dd89af2d57409169cb45bffce5a3f22bba84b56a630004d59d0e71cc7460980c40ed537662415fe13b8b87bcf0cd
+  checksum: 564e2501cc37a760902e9155e1e570b83bfce98701fd869391625a7c8c45bfbdbaa3019e95e2c21a98e01c07a50b6af64daa351bdc41963482e81cdd51298ca6
   languageName: node
   linkType: hard
 
@@ -5214,17 +5260,17 @@ __metadata:
   linkType: hard
 
 "browserslist@npm:^4.0.0, browserslist@npm:^4.24.0, browserslist@npm:^4.28.1, browserslist@npm:^4.28.2, browserslist@npm:^4.28.6":
-  version: 4.28.7
-  resolution: "browserslist@npm:4.28.7"
+  version: 4.28.8
+  resolution: "browserslist@npm:4.28.8"
   dependencies:
-    baseline-browser-mapping: ^2.10.44
-    caniuse-lite: ^1.0.30001806
-    electron-to-chromium: ^1.5.393
-    node-releases: ^2.0.51
-    update-browserslist-db: ^1.2.3
+    baseline-browser-mapping: ^2.11.12
+    caniuse-lite: ^1.0.30001809
+    electron-to-chromium: ^1.5.402
+    node-releases: ^2.0.53
+    update-browserslist-db: ^1.3.0
   bin:
     browserslist: cli.js
-  checksum: 81093d27f0b0c9207e42af04655607ea870d6eb9c04b38106ffcf36e05f436747caf250604abd5471eab55b16eb2be305d8e5a7c61a5636df34a7b9397737756
+  checksum: cf6e9dd104a26ba88c2a56d319f7f659c4ee1384960f601331cfb75bb05826033245587026a25903d4745cbaac251203dcfc6e3a869e60f359686138bd551554
   languageName: node
   linkType: hard
 
@@ -5409,10 +5455,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001579, caniuse-lite@npm:^1.0.30001806":
-  version: 1.0.30001806
-  resolution: "caniuse-lite@npm:1.0.30001806"
-  checksum: 4b4a970fbd7cb7b8ee6b5068336f7afa7d9cc65ff444080630ab363dcb44205994f68897c7685dc3de4f04dd1f65ec395e50790a594d0470db4894bedf5cb379
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001579, caniuse-lite@npm:^1.0.30001806, caniuse-lite@npm:^1.0.30001809":
+  version: 1.0.30001809
+  resolution: "caniuse-lite@npm:1.0.30001809"
+  checksum: 848f2e481da9e7da0327e351bfcfdcf610058c756ceb9daa0f0a12090f84dd31962da33e62a2d8bc3774eb2ca255bdca1026431c3f47333af62f5d4e3bc71056
   languageName: node
   linkType: hard
 
@@ -6574,10 +6620,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.5.393":
-  version: 1.5.400
-  resolution: "electron-to-chromium@npm:1.5.400"
-  checksum: 0821a8b6fb505ed54c45bcfb4f3e9e035c6192da83ee17cd9bf96e4b28ea3b73b7f88c02cc929569c3d283bf66f13be729ea4fe101a0ceb47c66cbc4ec8b38d1
+"electron-to-chromium@npm:^1.5.402":
+  version: 1.5.411
+  resolution: "electron-to-chromium@npm:1.5.411"
+  checksum: 37800153a1314a850264d43c71e7d97fe897dbeec01799da8bdb022e2c43f708bb936cd7ed3891962fd287c76774d2fd15fc310153bfa5ce3564e661b9af4006
   languageName: node
   linkType: hard
 
@@ -6677,7 +6723,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"errx@npm:^0.1.0":
+"errx@npm:^0.1.0, errx@npm:^0.1.2":
   version: 0.1.2
   resolution: "errx@npm:0.1.2"
   checksum: 29769f2904aa395fbfa59941c0732cc07b407d44c749a224b125603f549aa8558185b32299e30f943488fbd112ecbdaac39e3318b6990ce1b29850b6c448e64f
@@ -7105,35 +7151,35 @@ __metadata:
   linkType: hard
 
 "esbuild@npm:^0.28.0":
-  version: 0.28.1
-  resolution: "esbuild@npm:0.28.1"
+  version: 0.28.2
+  resolution: "esbuild@npm:0.28.2"
   dependencies:
-    "@esbuild/aix-ppc64": 0.28.1
-    "@esbuild/android-arm": 0.28.1
-    "@esbuild/android-arm64": 0.28.1
-    "@esbuild/android-x64": 0.28.1
-    "@esbuild/darwin-arm64": 0.28.1
-    "@esbuild/darwin-x64": 0.28.1
-    "@esbuild/freebsd-arm64": 0.28.1
-    "@esbuild/freebsd-x64": 0.28.1
-    "@esbuild/linux-arm": 0.28.1
-    "@esbuild/linux-arm64": 0.28.1
-    "@esbuild/linux-ia32": 0.28.1
-    "@esbuild/linux-loong64": 0.28.1
-    "@esbuild/linux-mips64el": 0.28.1
-    "@esbuild/linux-ppc64": 0.28.1
-    "@esbuild/linux-riscv64": 0.28.1
-    "@esbuild/linux-s390x": 0.28.1
-    "@esbuild/linux-x64": 0.28.1
-    "@esbuild/netbsd-arm64": 0.28.1
-    "@esbuild/netbsd-x64": 0.28.1
-    "@esbuild/openbsd-arm64": 0.28.1
-    "@esbuild/openbsd-x64": 0.28.1
-    "@esbuild/openharmony-arm64": 0.28.1
-    "@esbuild/sunos-x64": 0.28.1
-    "@esbuild/win32-arm64": 0.28.1
-    "@esbuild/win32-ia32": 0.28.1
-    "@esbuild/win32-x64": 0.28.1
+    "@esbuild/aix-ppc64": 0.28.2
+    "@esbuild/android-arm": 0.28.2
+    "@esbuild/android-arm64": 0.28.2
+    "@esbuild/android-x64": 0.28.2
+    "@esbuild/darwin-arm64": 0.28.2
+    "@esbuild/darwin-x64": 0.28.2
+    "@esbuild/freebsd-arm64": 0.28.2
+    "@esbuild/freebsd-x64": 0.28.2
+    "@esbuild/linux-arm": 0.28.2
+    "@esbuild/linux-arm64": 0.28.2
+    "@esbuild/linux-ia32": 0.28.2
+    "@esbuild/linux-loong64": 0.28.2
+    "@esbuild/linux-mips64el": 0.28.2
+    "@esbuild/linux-ppc64": 0.28.2
+    "@esbuild/linux-riscv64": 0.28.2
+    "@esbuild/linux-s390x": 0.28.2
+    "@esbuild/linux-x64": 0.28.2
+    "@esbuild/netbsd-arm64": 0.28.2
+    "@esbuild/netbsd-x64": 0.28.2
+    "@esbuild/openbsd-arm64": 0.28.2
+    "@esbuild/openbsd-x64": 0.28.2
+    "@esbuild/openharmony-arm64": 0.28.2
+    "@esbuild/sunos-x64": 0.28.2
+    "@esbuild/win32-arm64": 0.28.2
+    "@esbuild/win32-ia32": 0.28.2
+    "@esbuild/win32-x64": 0.28.2
   dependenciesMeta:
     "@esbuild/aix-ppc64":
       optional: true
@@ -7189,7 +7235,7 @@ __metadata:
       optional: true
   bin:
     esbuild: bin/esbuild
-  checksum: 2ada56fe421ac0720f71968c0ceb56cb534588ae2fbbe5aef2c9dbe195f0f61773ef7838ad07d48c2141d9e8b7d3de5fd39d0bb880860f2f6f77bf67671ed235
+  checksum: 724788c38454e29cd2dc930f02e593dd9c21ef1c977bba89664b6be16c80c83494d367961b8425a65d41d5a2245d2b1b3e5d21ed41333f6e2dbe1bc83526a62b
   languageName: node
   linkType: hard
 
@@ -7745,7 +7791,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"exsolve@npm:^1.0.8, exsolve@npm:^1.1.0":
+"exsolve@npm:^1.0.8, exsolve@npm:^1.1.1":
   version: 1.1.1
   resolution: "exsolve@npm:1.1.1"
   checksum: e44235ab52e1233b36e41789b535d11725601390e9f85757f2ea07a4302c1ef7cf111882a69033feadb816de8665365e304e739fa8c3dfe5f38f3cb374cd9c2b
@@ -8431,8 +8477,8 @@ __metadata:
   linkType: hard
 
 "globby@npm:^16.2.0":
-  version: 16.2.2
-  resolution: "globby@npm:16.2.2"
+  version: 16.2.3
+  resolution: "globby@npm:16.2.3"
   dependencies:
     "@sindresorhus/merge-streams": ^4.0.0
     fast-glob: ^3.3.3
@@ -8440,7 +8486,7 @@ __metadata:
     is-path-inside: ^4.0.0
     slash: ^5.1.0
     unicorn-magic: ^0.4.0
-  checksum: 7e57252781c1657d3e04bf99d27894136f1243785a958cf16b7a9e19d7de5eb5970b0381c427da44d75e523efce293ac01876ae63a9c7f8f6e4e0fe2787083d1
+  checksum: f39992539dba6ae8f5c8ab0df407169c7259e75ca0471049ecde1e741ce8deb0ba2af89236d30a2349120249596298535a2e1fcb057705d1be063a7a39661671
   languageName: node
   linkType: hard
 
@@ -8881,9 +8927,9 @@ __metadata:
   linkType: hard
 
 "ip-address@npm:^10.1.1":
-  version: 10.4.0
-  resolution: "ip-address@npm:10.4.0"
-  checksum: 04e729990bc597bb0c86a02f71ffb8a19a47cd78e635209923079137fa06b8a27291d62fdddfeaf67b8e710ee51c46d2bbee1d1bf92f5101305e8276359c3df6
+  version: 10.5.0
+  resolution: "ip-address@npm:10.5.0"
+  checksum: ffb64aea3ab0bf975b237954f89bf3c37cb5fc9d078cf5868408e54d29636d14618ed67dafcde664b3cdfc778ee78c811286cf67e59d1243a0c198d05aa47683
   languageName: node
   linkType: hard
 
@@ -10225,7 +10271,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.3.16, nanoid@npm:^3.3.6":
+"nanoid@npm:^3.3.17":
+  version: 3.3.18
+  resolution: "nanoid@npm:3.3.18"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: db804317d337b41602666f23014e399d1263033d13a903955c246378256fd4e002519e87199ca40b19aff52274965ac7cc6e70c13a63e194e15c4664724602d3
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^3.3.6":
   version: 3.3.17
   resolution: "nanoid@npm:3.3.17"
   bin:
@@ -10401,9 +10456,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-app-v14@workspace:nextjs-app-v14"
   dependencies:
-    "@justeattakeaway/pie-css": 1.5.0
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-webc": 0.11.12
+    "@justeattakeaway/pie-css": 1.9.1
+    "@justeattakeaway/pie-icons-webc": 1.29.4
+    "@justeattakeaway/pie-webc": 0.12.7
     "@lit-labs/nextjs": 0.2.3
     "@lit/react": 1.0.7
     "@types/node": 20.19.25
@@ -10425,9 +10480,9 @@ __metadata:
   resolution: "nextjs-app-v15@workspace:nextjs-app-v15"
   dependencies:
     "@eslint/eslintrc": 3
-    "@justeattakeaway/pie-css": 1.5.0
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-webc": 0.11.12
+    "@justeattakeaway/pie-css": 1.9.1
+    "@justeattakeaway/pie-icons-webc": 1.29.4
+    "@justeattakeaway/pie-webc": 0.12.7
     "@lit-labs/nextjs": 0.2.4
     "@lit/react": 1.0.8
     "@types/node": 20.19.25
@@ -10635,10 +10690,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-releases@npm:^2.0.51":
-  version: 2.0.52
-  resolution: "node-releases@npm:2.0.52"
-  checksum: fb2bf438752078c9caf4a0d5e421320b3441f07d966028f3be4a1d8605399394a810036e225175261389210720c9ed7944c3a0df2c7e22aa80e7530f2951b2ed
+"node-releases@npm:^2.0.53":
+  version: 2.0.53
+  resolution: "node-releases@npm:2.0.53"
+  checksum: 39e306de65dbc2b95bf18b11786844bb47e2c4e73dfd6cfb679c6b427acb0f360c862680e9437325ab0866b7dd357188c65f12205a73433f2dc783cea13bb985
   languageName: node
   linkType: hard
 
@@ -10734,9 +10789,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nuxt-app@workspace:nuxt-app"
   dependencies:
-    "@justeattakeaway/pie-css": 1.5.0
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-webc": 0.11.12
+    "@justeattakeaway/pie-css": 1.9.1
+    "@justeattakeaway/pie-icons-webc": 1.29.4
+    "@justeattakeaway/pie-webc": 0.12.7
     just-kebab-case: 4.2.0
     npm-check-updates: 18.3.1
     nuxt: 3.14.1592
@@ -11370,7 +11425,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pie-aperture@workspace:."
   dependencies:
-    "@justeattakeaway/pie-webc": 0.11.12
+    "@justeattakeaway/pie-webc": 0.12.7
     "@percy/cli": 1.32.6
     "@percy/playwright": 1.1.2
     "@playwright/test": 1.50.1
@@ -11740,12 +11795,12 @@ __metadata:
   linkType: hard
 
 "postcss-selector-parser@npm:^7.0.0, postcss-selector-parser@npm:^7.1.1":
-  version: 7.1.4
-  resolution: "postcss-selector-parser@npm:7.1.4"
+  version: 7.1.5
+  resolution: "postcss-selector-parser@npm:7.1.5"
   dependencies:
     cssesc: ^3.0.0
     util-deprecate: ^1.0.2
-  checksum: 66fa9908f4239e8042e47a67272556404f71d5ef9ef4a271ae519b1a3775f999c7ae6cc9e504f7d6c2715c12ed89ca73f77b8ee23f93ea127d06a2a720854b50
+  checksum: 37aa9ade80d14a218bf63abb8b58709dc3dbf7605d99fa8ba43f3988712f31d1aa5928f1265d471d8a5ee3f2b08db6e70e637c1880ada411e80adb65af610cca
   languageName: node
   linkType: hard
 
@@ -11791,13 +11846,13 @@ __metadata:
   linkType: hard
 
 "postcss@npm:^8.4.27, postcss@npm:^8.4.43, postcss@npm:^8.4.49, postcss@npm:^8.5.19":
-  version: 8.5.25
-  resolution: "postcss@npm:8.5.25"
+  version: 8.5.26
+  resolution: "postcss@npm:8.5.26"
   dependencies:
-    nanoid: ^3.3.16
+    nanoid: ^3.3.17
     picocolors: ^1.1.1
     source-map-js: ^1.2.1
-  checksum: 51e1fa610322a93220a461dc56a952b398d9bdb137e1f2530fed0ddebd37bf07f2729dfce31864b67b742636f30102833924ea600fa11a0f666130a66fae2a53
+  checksum: 719b1acd7db117cffa1514a6ed47e71ba4159ebddd1be2616b65dc1580a6bb9289abb8a78d26e08b45ab5a03277662483a6413e4b08325df0260831f4c2bc11b
   languageName: node
   linkType: hard
 
@@ -12049,9 +12104,9 @@ __metadata:
   linkType: hard
 
 "readdirp@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "readdirp@npm:5.0.0"
-  checksum: 3c8ddf1a08fa0adf8f14685a373dd205ada0f2de980e7e77f9846026f331acbc6035040ba204d22b368a0dc8eb7bee2d737fb19f398d73c716c510ce3b2e5583
+  version: 5.1.1
+  resolution: "readdirp@npm:5.1.1"
+  checksum: 0444f42c718cb57833e91e69affe4ed376f1e2c53b20e469314e2b5b005eee022b409473de25603b7a6d5c2453bfa5db0f130ff3739213afdd17e4a312755188
   languageName: node
   linkType: hard
 
@@ -12592,9 +12647,9 @@ __metadata:
   linkType: hard
 
 "serialize-javascript@npm:^7.0.3":
-  version: 7.0.7
-  resolution: "serialize-javascript@npm:7.0.7"
-  checksum: 197edeab01b3afb93b53e0dfedf3bb686f4cd3538a498dcd678993a1420462ed0e9bce7a297f4e3dafc4dad12f471e882f3fb17f0f316371b14756df942faa48
+  version: 7.1.0
+  resolution: "serialize-javascript@npm:7.1.0"
+  checksum: 8275cd8d8639abac2850530b3aa1dc67b055301b5d2e740acc8f7dadef68a924d290aac96cff838f44de4c9b85dc87780ce2ce5dda5af648bab153731ca7153a
   languageName: node
   linkType: hard
 
@@ -13466,8 +13521,8 @@ __metadata:
   linkType: hard
 
 "terser@npm:^5.17.4":
-  version: 5.49.0
-  resolution: "terser@npm:5.49.0"
+  version: 5.49.2
+  resolution: "terser@npm:5.49.2"
   dependencies:
     "@jridgewell/source-map": ^0.3.3
     acorn: ^8.15.0
@@ -13475,7 +13530,7 @@ __metadata:
     source-map-support: ~0.5.20
   bin:
     terser: bin/terser
-  checksum: 79ca6826cc68df0be61d0eef0124ce3a59660f453db57b2488aa2d8cbeedbc2b70cd5d8bce47a3d6f33f28a427d40ef85c9b72ca5dafafa0ded26246f27421bb
+  checksum: f36861a87c6222be035c60e4234f13f36aeff25dfee178c9dd7ed762099d4452b047f4dcc8b8baf5bf88aa4a390f4c545351af1316e4d9d39cae35d8f0e7f0dd
   languageName: node
   linkType: hard
 
@@ -14277,9 +14332,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"update-browserslist-db@npm:^1.2.3":
-  version: 1.2.3
-  resolution: "update-browserslist-db@npm:1.2.3"
+"update-browserslist-db@npm:^1.3.0":
+  version: 1.3.1
+  resolution: "update-browserslist-db@npm:1.3.1"
   dependencies:
     escalade: ^3.2.0
     picocolors: ^1.1.1
@@ -14287,7 +14342,7 @@ __metadata:
     browserslist: ">= 4.21.0"
   bin:
     update-browserslist-db: cli.js
-  checksum: 6f209a97ae8eacdd3a1ef2eb365adf49d1e2a757e5b2dd4ac87dc8c99236cbe3e572d3e605a87dd7b538a11751b71d9f93edc47c7405262a293a493d155316cd
+  checksum: 24fc1471ada17371fe5ad89dd59b0c4546a4ff74a979b6168e1cd3fe38333a65ca23ae3cea0d268ad08f8ffdd8c16ccd1b365147ad24ff19a14eda735445fda4
   languageName: node
   linkType: hard
 
@@ -14327,9 +14382,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vanilla-app@workspace:vanilla-app"
   dependencies:
-    "@justeattakeaway/pie-css": 1.5.0
-    "@justeattakeaway/pie-icons-webc": 1.28.1
-    "@justeattakeaway/pie-webc": 0.11.12
+    "@justeattakeaway/pie-css": 1.9.1
+    "@justeattakeaway/pie-icons-webc": 1.29.4
+    "@justeattakeaway/pie-webc": 0.12.7
     npm-check-updates: 18.3.1
     sass: 1.98.0
     vite: 4.5.5
@@ -14655,11 +14710,11 @@ __metadata:
   linkType: hard
 
 "vue-bundle-renderer@npm:^2.1.1":
-  version: 2.3.1
-  resolution: "vue-bundle-renderer@npm:2.3.1"
+  version: 2.3.2
+  resolution: "vue-bundle-renderer@npm:2.3.2"
   dependencies:
     ufo: ^1.6.4
-  checksum: dbf56d1217ee4be23fc2d2cdc99f21a87de12430542997f48006e44e4926fe39b6ff3da86f5157f0e3f3fb439b396e86910454fe2815ffb5949a776b4a970134
+  checksum: 6c2d9a09eede401885d6cc4df636e367c323546d150afc9a0cf0b34625ef9b3919dc3ec476eee371054631176caaf4fe75c01f33bbd42fc610b1fb2c53e57f4a
   languageName: node
   linkType: hard
 
@@ -14682,20 +14737,20 @@ __metadata:
   linkType: hard
 
 "vue@npm:^3.5.13":
-  version: 3.5.40
-  resolution: "vue@npm:3.5.40"
+  version: 3.5.41
+  resolution: "vue@npm:3.5.41"
   dependencies:
-    "@vue/compiler-dom": 3.5.40
-    "@vue/compiler-sfc": 3.5.40
-    "@vue/runtime-dom": 3.5.40
-    "@vue/server-renderer": 3.5.40
-    "@vue/shared": 3.5.40
+    "@vue/compiler-dom": 3.5.41
+    "@vue/compiler-sfc": 3.5.41
+    "@vue/runtime-dom": 3.5.41
+    "@vue/server-renderer": 3.5.41
+    "@vue/shared": 3.5.41
   peerDependencies:
     typescript: "*"
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 80b5c71fa90cddf6297aa2a78702baaa016af8939f84e80f8f47bbf32fb59053fc3438a6c9d1a396ac689a33643ecc185815bbe27c3d852617dfa829e79ed643
+  checksum: b25984d8ab2bb8ff4260ec8229a627653ff477206a2a227f885f326bb7ba12de478c69fcdb4d5d854ecb8835664fdc926e14eaca612e9c947945b02482701e0b
   languageName: node
   linkType: hard
 
