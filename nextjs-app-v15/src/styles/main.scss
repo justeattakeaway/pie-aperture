@@ -22,6 +22,16 @@ body {
   max-width: 720px;
 }
 
+/*
+ * The dashboard prototype is a full-bleed layout, so it opts out of the narrow
+ * content column the component demo pages use. `.js-dashboard-page` is set on the
+ * dashboard's root element.
+ */
+body:has(.js-dashboard-page) {
+  max-width: none;
+  padding: 0;
+}
+
 pie-divider {
   display: block;
   margin-block: 2em;
