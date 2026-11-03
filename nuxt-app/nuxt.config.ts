@@ -17,6 +17,9 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+      externals: {
+          inline: ['@justeattakeaway/pie-icons-webc'],
+      },
       moduleSideEffects: [
           '@justeattakeaway/pie-icons-webc',
           '@justeattakeaway/pie-webc',
