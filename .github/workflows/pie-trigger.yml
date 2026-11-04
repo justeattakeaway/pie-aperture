@@ -17,6 +17,19 @@ jobs:
       SNAPSHOT_VERSION: ${{ github.event.client_payload.snapshot-version }}
       SNAPSHOT_PACKAGES: ${{ github.event.client_payload.snapshot-packages }}
     steps:
+      # Generated first so "Report failure to PIE PR" has a token to comment
+      # with whichever step fails.
+      - name: Generate GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ vars.GH_APP_ID }}
+          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+          owner: justeattakeaway
+          repositories: |
+            pie-aperture
+            pie
+
       - name: Checkout branch
         uses: actions/checkout@v4
         with:
@@ -28,17 +41,6 @@ jobs:
       # Update snapshots
       - name: Update snapshots
         run: npx update-snapshots "$SNAPSHOT_VERSION" $SNAPSHOT_PACKAGES
-
-      - name: Generate GitHub App token
-        id: app-token
-        uses: actions/create-github-app-token@v1
-        with:
-          app-id: ${{ vars.GH_APP_ID }}
-          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
-          owner: justeattakeaway
-          repositories: |
-            pie-aperture
-            pie
 
       - name: Fetch PIE PR head SHA
         id: pie-pr
@@ -71,8 +73,9 @@ jobs:
             This PR has been automatically generated as part of the test-aperture workflow from the PIE monorepo.
           draft: true
 
+      # Runs on every successful run, including when there was nothing to commit
+      # and so no pull request, so the PIE PR always hears back.
       - name: Comment result on PIE PR
-        if: steps.create-pr.outputs.pull-request-number
         uses: actions/github-script@v7
         env:
           APERTURE_PR_URL: ${{ steps.create-pr.outputs.pull-request-url }}
@@ -95,11 +98,18 @@ jobs:
               timeStyle: 'short',
               timeZone: 'UTC',
             }).format(new Date())} UTC`;
+            const result = process.env.APERTURE_PR_URL
+              ? [
+                `🚀 Aperture PR ${verb}: ${process.env.APERTURE_PR_URL}`,
+                '',
+                'App deployments will appear under the **Deployments** section of this PR shortly!',
+              ]
+              : [
+                '⚠️ The snapshot made no changes to Aperture, so there is no Aperture PR and nothing will be deployed. Check the workflow run for details.',
+              ];
             const body = [
               MARKER,
-              `🚀 Aperture PR ${verb}: ${process.env.APERTURE_PR_URL}`,
-              '',
-              'App deployments will appear under the **Deployments** section of this PR shortly!',
+              ...result,
               '',
               `<sub>Updated ${updatedAt} · PIE @ \`${shortSha}\` · [workflow run](${runUrl})</sub>`,
             ].join('\n');
