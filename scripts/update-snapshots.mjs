@@ -9,8 +9,6 @@ const execFileAsync = promisify(execFile);
 
 const workingDir = process.cwd();
 
-// A snapshot can take a few minutes to appear on npm after PIE publishes it,
-// so a failed yarn command is retried after each of these waits in turn.
 const RETRY_DELAYS_SECONDS = [15, 30, 60, 90, 120];
 
 function log(message) {
@@ -89,7 +87,6 @@ async function yarn(args) {
         console.log(stdout);
         return stdout;
     } catch (error) {
-        // Yarn prints its errors to stdout, so stderr on its own is usually empty.
         logError(`${command} failed (exit code ${error.code})`);
         if (error.stdout) console.error(error.stdout);
         if (error.stderr) console.error(error.stderr);
@@ -112,8 +109,6 @@ async function yarnWithRetries(args) {
     }
 }
 
-// Any failure stops the script with a non-zero exit code, so the workflow fails
-// and reports back to the PIE pull request rather than finishing green.
 async function updatePackages() {
     log('Starting the update process');
 

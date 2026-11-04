@@ -17,8 +17,6 @@ jobs:
       SNAPSHOT_VERSION: ${{ github.event.client_payload.snapshot-version }}
       SNAPSHOT_PACKAGES: ${{ github.event.client_payload.snapshot-packages }}
     steps:
-      # Generated first so "Report failure to PIE PR" has a token to comment
-      # with whichever step fails.
       - name: Generate GitHub App token
         id: app-token
         uses: actions/create-github-app-token@v1
@@ -73,8 +71,6 @@ jobs:
             This PR has been automatically generated as part of the test-aperture workflow from the PIE monorepo.
           draft: true
 
-      # Runs on every successful run, including when there was nothing to commit
-      # and so no pull request, so the PIE PR always hears back.
       - name: Comment result on PIE PR
         uses: actions/github-script@v7
         env:
