@@ -70,6 +70,10 @@ const toppingOptions: DropdownOption[] = [
 export default function Dropdown() {
     const [meal, setMeal] = useState('');
 
+    const handleMealChange = (event: CustomEvent) => {
+        setMeal((event.target as HTMLInputElement).value);
+    };
+
     return (
         <NavigationLayout title="Dropdown">
             <h2 className="c-dropdown-heading">PIE Dropdown - Single select</h2>
@@ -81,7 +85,7 @@ export default function Dropdown() {
                 assistiveText="Choose the main meal for your order"
                 options={mealOptions}
                 value={meal}
-                onChange={(event) => setMeal((event.target as HTMLInputElement).value)} />
+                onChange={handleMealChange} />
             <p className="c-dropdown-selection" data-test-id="meal-selection">Your meal: {meal || 'nothing selected yet'}</p>
 
             <h2 className="c-dropdown-heading">PIE Dropdown - Single select with option icons</h2>
