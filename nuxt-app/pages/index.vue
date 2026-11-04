@@ -33,6 +33,7 @@
             <li><pie-link href="/components/list">List</pie-link></li>
             <li><pie-link href="/components/modal">Modal</pie-link></li>
             <li><pie-link href="/components/notification">Notification</pie-link></li>
+            <li><pie-link href="/components/pagination">Pagination</pie-link></li>
             <li><pie-link href="/components/radio">Radio</pie-link></li>
             <li><pie-link href="/components/radio-group">Radio Group</pie-link></li>
             <li><pie-link href="/components/list-item-radio-selection">List Item Radio Selection</pie-link></li>
@@ -48,7 +49,8 @@
             <li><pie-link href="/components/textarea">Textarea</pie-link></li>
             <li><pie-link href="/components/toast">Toast</pie-link></li>
             <li><pie-link href="/components/toast-provider">Toast Provider</pie-link></li>
-            <li><pie-link href="/components/thumbnail">Thumbnail</pie-link></li>
+			<li><pie-link href="/components/thumbnail">Thumbnail</pie-link></li>
+			<li><pie-link href="/components/tooltip">Tooltip</pie-link></li>
 		</ul>
 	</div>
 </template>

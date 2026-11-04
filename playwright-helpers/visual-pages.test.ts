@@ -24,6 +24,12 @@ describe('getVisualPages', () => {
     }
   });
 
+  it('exposes the Pagination page across every app', () => {
+    for (const app of ['vanilla-app', 'nextjs-app-v14', 'nextjs-app-v15', 'nuxt-app'] as const) {
+      expect(getVisualPages(app).map((p) => p.name)).toContain('Pagination');
+    }
+  });
+
   it('gives vanilla/nuxt a single Form page and the React apps the controlled/uncontrolled split', () => {
     const vanilla = getVisualPages('vanilla-app').map((p) => p.name);
     expect(vanilla).toContain('Form');

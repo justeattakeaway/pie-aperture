@@ -40,6 +40,7 @@ const PAGES: PageDef[] = [
   { path: '/components/lottie-player', name: 'Lottie Player' },
   { path: '/components/modal', name: 'Modal' },
   { path: '/components/notification', name: 'Notification' },
+  { path: '/components/pagination', name: 'Pagination' },
   { path: '/components/radio', name: 'Radio' },
   { path: '/components/radio-group', name: 'Radio Group' },
   { path: '/components/select', name: 'Select' },
@@ -50,6 +51,7 @@ const PAGES: PageDef[] = [
   { path: '/components/textarea', name: 'Textarea' },
   { path: '/components/thumbnail', name: 'Thumbnail' },
   { path: '/components/toast', name: 'Toast' },
+  { path: '/components/tooltip', name: 'Tooltip' },
 
   { path: '/integrations/css-only-button', name: 'CSS Only Button' },
   { path: '/integrations/css-only-radio', name: 'CSS Only Radio' },

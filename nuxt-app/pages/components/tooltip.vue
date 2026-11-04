@@ -1,0 +1,522 @@
+<template>
+  <div>
+    <p>
+      <strong>Note:</strong> pie-tooltip is a controlled component - the consumer owns
+      <code> isOpen</code> and responds to the <code>pie-tooltip-open</code> and <code>pie-tooltip-close</code> events.
+    </p>
+
+    <h2>Testing with VoiceOver (macOS)</h2>
+    <p>
+      Turn VoiceOver on with <kbd>Cmd</kbd> + <kbd>F5</kbd> (on Macs with Touch ID, hold <kbd>Cmd</kbd> and
+      press Touch ID three times). Turn it off the same way. Below, <kbd>VO</kbd> means
+      <kbd>Control</kbd> + <kbd>Option</kbd>.
+    </p>
+    <ul :style="instructionList">
+      <li><strong>Read the next / previous item:</strong> <kbd>VO</kbd> + <kbd>Right Arrow</kbd> / <kbd>VO</kbd> + <kbd>Left Arrow</kbd>. This reads everything, including text that cannot be focused.</li>
+      <li><strong>Move focus between controls:</strong> <kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd>.</li>
+      <li><strong>Activate the focused control:</strong> <kbd>VO</kbd> + <kbd>Space</kbd>.</li>
+      <li><strong>Interact with a container such as a dialog:</strong> <kbd>VO</kbd> + <kbd>Shift</kbd> + <kbd>Down Arrow</kbd>. Stop with <kbd>VO</kbd> + <kbd>Shift</kbd> + <kbd>Up Arrow</kbd>.</li>
+      <li><strong>Escape dismisses any open panel whose <code>triggers</code> are configured</strong> (all of the sections below with an interaction), including tooltip-mode panels.</li>
+    </ul>
+    <p>
+      VoiceOver wording varies slightly between macOS versions. What matters is the name, role and state you
+      hear, not the exact phrasing. Every scenario is shown twice - with a <code>pie-icon-button</code>
+      trigger and a <code>pie-button</code> trigger - because the wiring differs per trigger type: the
+      icon-only trigger names itself, while the text button is named by its visible text.
+    </p>
+
+    <pie-divider></pie-divider>
+
+    <h2>Tooltip mode - supplementary info (hover and focus)</h2>
+    <p>
+      The panel carries short supplementary content: it is opened by hover and focus, never takes focus
+      itself, and the role &ldquo;tooltip&rdquo; is not announced on its own. Nothing is toggled, so no
+      trigger declares <code>expanded</code>. What differs per trigger is how the panel's text is
+      attached.
+    </p>
+    <p><strong>How to test:</strong></p>
+    <ol :style="instructionList">
+      <li>Turn VoiceOver on.</li>
+      <li>Press <kbd>Tab</kbd> to each of the two triggers below. Listen to the announcement, then move focus away with <kbd>Tab</kbd>.</li>
+      <li>Hover each trigger with a pointer and confirm the panel appears for pointer users too.</li>
+    </ol>
+
+    <h3>Icon button trigger</h3>
+    <p>
+      The icon-only trigger supplies its own short name via <code>aria.label</code>; the panel's text
+      rides in <code>aria.description</code>, rendered as an <code>aria-description</code> attribute on the
+      trigger's internal element. An <code>id</code> reference cannot cross the shadow boundary.
+    </p>
+    <p><strong>Expected VoiceOver output:</strong></p>
+    <ul :style="instructionList">
+      <li>On focus: &ldquo;Delivery times, button, Orders placed before 6pm arrive today.&rdquo; The name is short; the tooltip text is the accessible description.</li>
+      <li>You do <strong>not</strong> hear the word &ldquo;tooltip&rdquo; - the panel is a visual affordance, not a separate stop. Sighted keyboard users see it appear on focus.</li>
+      <li>You do <strong>not</strong> hear &ldquo;expanded&rdquo; or &ldquo;collapsed&rdquo;, because nothing is toggled.</li>
+    </ul>
+    <pie-icon-button
+      id="hover-icon-trigger"
+      variant="outline"
+      :aria="{ label: 'Delivery times', description: 'Orders placed before 6pm arrive today.' }"
+    >
+      <icon-info-circle></icon-info-circle>
+    </pie-icon-button>
+    <pie-tooltip
+      id="hover-icon-panel"
+      trigger="hover-icon-trigger"
+      type="icon"
+      :isOpen="hoverIcon.isOpen"
+      :triggers="['hover', 'focus']"
+      @pie-tooltip-open="hoverIcon.isOpen = true"
+      @pie-tooltip-close="hoverIcon.isOpen = false"
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+    </pie-tooltip>
+
+    <h3>PIE button trigger</h3>
+    <p>
+      The visible text names the button, and the panel's text travels in
+      <code>aria.description</code> the same way - a string crosses the shadow boundary where an IDREF
+      cannot.
+    </p>
+    <p><strong>Expected VoiceOver output:</strong></p>
+    <ul :style="instructionList">
+      <li>On focus: &ldquo;Delivery info, button, Orders placed before 6pm arrive today.&rdquo; The name comes from the visible text; the text of the panel is the description.</li>
+      <li>As with the icon trigger, no &ldquo;tooltip&rdquo; role and no expanded state are announced.</li>
+    </ul>
+    <pie-button
+      id="hover-pie-trigger"
+      :aria="{ description: 'Orders placed before 6pm arrive today.' }"
+    >
+      Delivery info
+    </pie-button>
+    <pie-tooltip
+      id="hover-pie-panel"
+      trigger="hover-pie-trigger"
+      :isOpen="hoverPie.isOpen"
+      :triggers="['hover', 'focus']"
+      @pie-tooltip-open="hoverPie.isOpen = true"
+      @pie-tooltip-close="hoverPie.isOpen = false"
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+    </pie-tooltip>
+
+    <pie-divider></pie-divider>
+
+    <h2>Tooltip mode - with a visual heading (hover and focus)</h2>
+    <p>
+      The <code>heading</code> attribute renders a visual heading inside the panel, but with the
+      <code>action</code> slot empty the panel is still <code>role="tooltip"</code> - the heading
+      does <strong>not</strong> name the panel or make it a dialog. The description wiring is exactly as in
+      the previous section.
+    </p>
+    <p><strong>How to test:</strong></p>
+    <ol :style="instructionList">
+      <li>With VoiceOver on, press <kbd>Tab</kbd> to each of the two triggers below. Listen to the announcement, then move focus away with <kbd>Tab</kbd>.</li>
+    </ol>
+
+    <h3>Icon button trigger</h3>
+    <p><strong>Expected VoiceOver output:</strong></p>
+    <ul :style="instructionList">
+      <li>On focus: &ldquo;Delivery times, button, Orders placed before 6pm arrive today.&rdquo; The heading is visual only, so it is <strong>not</strong> part of the description.</li>
+      <li>Reading onto the visible panel with <kbd>VO</kbd> + arrows reads the heading text and the content, but no role or level is announced for the heading.</li>
+      <li>You do <strong>not</strong> hear &ldquo;dialog&rdquo; - only the <code>action</code> slot (or <code>isDismissible</code>) promotes the panel to a dialog.</li>
+    </ul>
+    <pie-icon-button
+      id="heading-icon-trigger"
+      variant="outline"
+      :aria="{ label: 'Delivery times', description: 'Orders placed before 6pm arrive today.' }"
+    >
+      <icon-info-circle></icon-info-circle>
+    </pie-icon-button>
+    <pie-tooltip
+      id="heading-icon-panel"
+      trigger="heading-icon-trigger"
+      heading="Delivery times"
+      :isOpen="headingIcon.isOpen"
+      :triggers="['hover', 'focus']"
+      @pie-tooltip-open="headingIcon.isOpen = true"
+      @pie-tooltip-close="headingIcon.isOpen = false"
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+    </pie-tooltip>
+
+    <h3>PIE button trigger</h3>
+    <p><strong>Expected VoiceOver output:</strong></p>
+    <ul :style="instructionList">
+      <li>On focus: &ldquo;Delivery info, button, Orders placed before 6pm arrive today.&rdquo; The heading is visual only, so it is <strong>not</strong> part of the description.</li>
+      <li>Reading onto the visible panel with <kbd>VO</kbd> + arrows reads the heading text and the content, but no role or level is announced for the heading.</li>
+      <li>You do <strong>not</strong> hear &ldquo;dialog&rdquo; - only the <code>action</code> slot (or <code>isDismissible</code>) promotes the panel to a dialog.</li>
+    </ul>
+    <pie-button
+      id="heading-pie-trigger"
+      :aria="{ description: 'Orders placed before 6pm arrive today.' }"
+    >
+      Delivery info
+    </pie-button>
+    <pie-tooltip
+      id="heading-pie-panel"
+      trigger="heading-pie-trigger"
+      heading="Delivery times"
+      :isOpen="headingPie.isOpen"
+      :triggers="['hover', 'focus']"
+      @pie-tooltip-open="headingPie.isOpen = true"
+      @pie-tooltip-close="headingPie.isOpen = false"
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+    </pie-tooltip>
+
+    <pie-divider></pie-divider>
+
+    <h2>Dialog mode - click toggle with action button</h2>
+    <p>
+      Filling the <code>action</code> slot switches the panel to a non-modal <code>role="dialog"</code>,
+      which needs an accessible name - here from <code>heading</code>. The panel carries no
+      <code>aria-describedby</code>: its content is announced by the focus move on open, not by a description.
+      Every trigger declares <code>haspopup="dialog"</code> and <code>expanded</code> through the
+      <code>aria</code> object. On open,
+      <code>focusPanel()</code> moves focus to the panel's content; on close, focus returns to the
+      trigger, but only if focus was still inside the panel. Escape, the close button and the action button
+      all route through the same close handler.
+    </p>
+    <p><strong>How to test:</strong></p>
+    <ol :style="instructionList">
+      <li>With VoiceOver on, press <kbd>Tab</kbd> to each trigger and listen to the closed-state announcement.</li>
+      <li>Press <kbd>VO</kbd> + <kbd>Space</kbd> to open. Listen to the open announcement and note where focus lands.</li>
+      <li>Press <kbd>VO</kbd> + <kbd>Right Arrow</kbd> to read through the panel, then <kbd>Tab</kbd> between the two buttons inside it.</li>
+      <li>Press <kbd>Escape</kbd> (or activate &ldquo;Close&rdquo;, or &ldquo;Got it&rdquo;). Listen as the panel closes and focus returns.</li>
+    </ol>
+
+    <h3>Icon button trigger</h3>
+    <p>
+      The icon-only trigger must supply its own name via <code>aria.label</code>;
+      <code>haspopup</code> and <code>expanded</code> ride along on the same object.
+    </p>
+    <p><strong>Expected VoiceOver output:</strong></p>
+    <ul :style="instructionList">
+      <li><strong>Closed trigger:</strong> &ldquo;Delivery times, pop up button, collapsed.&rdquo; This comes from <code>aria-haspopup="dialog"</code> plus <code>aria-expanded="false"</code> on the button inside the icon button.</li>
+      <li><strong>After opening:</strong> focus moves to the panel's content, so you hear &ldquo;Orders placed before 6pm arrive today.&rdquo; followed by &ldquo;Delivery times, dialog&rdquo;. It is non-modal, so focus is not trapped.</li>
+      <li><strong>After closing:</strong> the panel is hidden, the trigger is announced again as &ldquo;Delivery times, pop up button, collapsed&rdquo;, and focus has returned to it.</li>
+    </ul>
+    <pie-icon-button
+      id="dialog-icon-trigger"
+      :ref="(el) => (dialogIcon.triggerRef = el)"
+      variant="outline"
+      :aria="{ label: 'Delivery times', haspopup: 'dialog', expanded: dialogIcon.isOpen }"
+    >
+      <icon-info-circle></icon-info-circle>
+    </pie-icon-button>
+    <pie-tooltip
+      id="dialog-icon-panel"
+      :ref="(el) => (dialogIcon.panelRef = el)"
+      trigger="dialog-icon-trigger"
+      heading="Delivery times"
+      :isOpen="dialogIcon.isOpen"
+      isDismissible
+      :aria="{ close: 'Close' }"
+      :triggers="['click']"
+      @pie-tooltip-open="dialogIcon.open"
+      @pie-tooltip-close="dialogIcon.close"
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+      <pie-button slot="action" size="xsmall" @click="dialogIcon.close">Got it</pie-button>
+    </pie-tooltip>
+
+    <h3>PIE button trigger</h3>
+    <p>
+      The visible text names the button; <code>haspopup</code> and <code>expanded</code> are set through the
+      <code>aria</code> object.
+    </p>
+    <p><strong>Expected VoiceOver output:</strong></p>
+    <ul :style="instructionList">
+      <li><strong>Closed trigger:</strong> &ldquo;Delivery times, pop up button, collapsed.&rdquo;</li>
+      <li><strong>After opening:</strong> focus moves to the panel's content, so you hear &ldquo;Orders placed before 6pm arrive today.&rdquo; followed by &ldquo;Delivery times, dialog&rdquo;.</li>
+      <li><strong>After closing:</strong> the trigger is announced again as &ldquo;Delivery times, pop up button, collapsed&rdquo;, and focus has returned to it.</li>
+    </ul>
+    <pie-button
+      id="dialog-pie-trigger"
+      :ref="(el) => (dialogPie.triggerRef = el)"
+      :aria="{ haspopup: 'dialog', expanded: dialogPie.isOpen }"
+    >
+      Delivery times
+    </pie-button>
+    <pie-tooltip
+      id="dialog-pie-panel"
+      :ref="(el) => (dialogPie.panelRef = el)"
+      trigger="dialog-pie-trigger"
+      heading="Delivery times"
+      :isOpen="dialogPie.isOpen"
+      isDismissible
+      :aria="{ close: 'Close' }"
+      :triggers="['click']"
+      @pie-tooltip-open="dialogPie.open"
+      @pie-tooltip-close="dialogPie.close"
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+      <pie-button slot="action" size="xsmall" @click="dialogPie.close">Got it</pie-button>
+    </pie-tooltip>
+
+    <pie-divider></pie-divider>
+
+    <h2>Dialog mode - dismissible, no action slot</h2>
+    <p>
+      The close button alone promotes the panel to a non-modal <code>role="dialog"</code> - no
+      <code>action</code> button is needed. The <code>heading</code> names the dialog, and the panel carries
+      no <code>aria-describedby</code>: its content is announced by the focus move on open. As above, every
+      trigger declares <code>haspopup="dialog"</code> and <code>expanded</code>, and the focus
+      contract is the same.
+    </p>
+    <p><strong>How to test:</strong></p>
+    <ol :style="instructionList">
+      <li>With VoiceOver on, press <kbd>Tab</kbd> to each trigger and listen to the closed-state announcement.</li>
+      <li>Press <kbd>VO</kbd> + <kbd>Space</kbd> to open. Listen to the open announcement and note where focus lands.</li>
+      <li>Press <kbd>Tab</kbd> - &ldquo;Close&rdquo; is the only stop inside the panel.</li>
+      <li>Press <kbd>Escape</kbd> (or activate &ldquo;Close&rdquo;). Listen as the panel closes and focus returns.</li>
+    </ol>
+
+    <h3>Icon button trigger</h3>
+    <p><strong>Expected VoiceOver output:</strong></p>
+    <ul :style="instructionList">
+      <li><strong>Closed trigger:</strong> &ldquo;Delivery times, pop up button, collapsed.&rdquo;</li>
+      <li><strong>After opening:</strong> focus moves to the panel's content - &ldquo;Orders placed before 6pm arrive today.&rdquo; followed by &ldquo;Delivery times, dialog&rdquo;.</li>
+      <li><strong>Tab inside the panel:</strong> &ldquo;Close, button.&rdquo; It is the only focusable element, so the next <kbd>Tab</kbd> leaves the panel.</li>
+      <li><strong>After closing:</strong> focus has returned to the trigger.</li>
+    </ul>
+    <pie-icon-button
+      id="dismissible-icon-trigger"
+      :ref="(el) => (dismissibleIcon.triggerRef = el)"
+      variant="outline"
+      :aria="{ label: 'Delivery times', haspopup: 'dialog', expanded: dismissibleIcon.isOpen }"
+    >
+      <icon-info-circle></icon-info-circle>
+    </pie-icon-button>
+    <pie-tooltip
+      id="dismissible-icon-panel"
+      :ref="(el) => (dismissibleIcon.panelRef = el)"
+      trigger="dismissible-icon-trigger"
+      heading="Delivery times"
+      :isOpen="dismissibleIcon.isOpen"
+      isDismissible
+      :aria="{ close: 'Close' }"
+      :triggers="['click']"
+      @pie-tooltip-open="dismissibleIcon.open"
+      @pie-tooltip-close="dismissibleIcon.close"
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+    </pie-tooltip>
+
+    <h3>PIE button trigger</h3>
+    <p><strong>Expected VoiceOver output:</strong></p>
+    <ul :style="instructionList">
+      <li><strong>Closed trigger:</strong> &ldquo;Delivery times, pop up button, collapsed.&rdquo;</li>
+      <li><strong>After opening:</strong> focus moves to the panel's content - &ldquo;Orders placed before 6pm arrive today.&rdquo; followed by &ldquo;Delivery times, dialog&rdquo;.</li>
+      <li><strong>Tab inside the panel:</strong> &ldquo;Close, button.&rdquo; It is the only focusable element, so the next <kbd>Tab</kbd> leaves the panel.</li>
+      <li><strong>After closing:</strong> focus has returned to the trigger.</li>
+    </ul>
+    <pie-button
+      id="dismissible-pie-trigger"
+      :ref="(el) => (dismissiblePie.triggerRef = el)"
+      :aria="{ haspopup: 'dialog', expanded: dismissiblePie.isOpen }"
+    >
+      Delivery times
+    </pie-button>
+    <pie-tooltip
+      id="dismissible-pie-panel"
+      :ref="(el) => (dismissiblePie.panelRef = el)"
+      trigger="dismissible-pie-trigger"
+      heading="Delivery times"
+      :isOpen="dismissiblePie.isOpen"
+      isDismissible
+      :aria="{ close: 'Close' }"
+      :triggers="['click']"
+      @pie-tooltip-open="dismissiblePie.open"
+      @pie-tooltip-close="dismissiblePie.close"
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+    </pie-tooltip>
+
+    <pie-divider></pie-divider>
+
+    <h2>Dialog mode - driven programmatically (no triggers)</h2>
+    <p>
+      With no <code>triggers</code> configured the panel is opened by another control, like a step in an
+      onboarding tour. Nothing is watched, so <strong>Escape is not wired up</strong> - use the close or
+      action button. The trigger carries no <code>haspopup</code> or <code>expanded</code>: the panel's
+      timing is not an interaction with the trigger, and <code>pie-tooltip-open</code> never fires. Focus is
+      still moved into the panel on open with <code>focusPanel()</code> and returned on close.
+    </p>
+    <p><strong>How to test:</strong></p>
+    <ol :style="instructionList">
+      <li>With VoiceOver on, press <kbd>Tab</kbd> to a &ldquo;Start tour&rdquo; trigger and press <kbd>VO</kbd> + <kbd>Space</kbd>.</li>
+      <li>Listen as focus moves to the panel's content, then press <kbd>Escape</kbd> to confirm it does <strong>not</strong> close.</li>
+      <li>Activate &ldquo;Next&rdquo; (or &ldquo;Close&rdquo;) with <kbd>VO</kbd> + <kbd>Space</kbd> and listen as focus returns to &ldquo;Start tour&rdquo;.</li>
+    </ol>
+
+    <h3>Icon button trigger</h3>
+    <p><strong>Expected VoiceOver output:</strong></p>
+    <ul :style="instructionList">
+      <li><strong>On open:</strong> focus moves to the panel's content, so you hear &ldquo;Orders placed before 6pm arrive today.&rdquo; followed by &ldquo;Delivery times, dialog&rdquo;.</li>
+      <li><strong>Escape:</strong> nothing happens - no trigger is configured, so Escape is not handled. Use &ldquo;Next&rdquo; or &ldquo;Close&rdquo;.</li>
+      <li><strong>On close:</strong> the panel hides and focus returns to the trigger: &ldquo;Start tour, button.&rdquo;</li>
+    </ul>
+    <pie-icon-button
+      id="tour-icon-trigger"
+      :ref="(el) => (tourIcon.triggerRef = el)"
+      variant="outline"
+      :aria="{ label: 'Start tour' }"
+      @click="tourIcon.open"
+    >
+      <icon-info-circle></icon-info-circle>
+    </pie-icon-button>
+    <pie-tooltip
+      id="tour-icon-panel"
+      :ref="(el) => (tourIcon.panelRef = el)"
+      trigger="tour-icon-trigger"
+      heading="Delivery times"
+      :isOpen="tourIcon.isOpen"
+      isDismissible
+      :aria="{ close: 'Close' }"
+      @pie-tooltip-close="tourIcon.close"
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+      <pie-button slot="action" size="xsmall" @click="tourIcon.close">Next</pie-button>
+    </pie-tooltip>
+
+    <h3>PIE button trigger</h3>
+    <p><strong>Expected VoiceOver output:</strong></p>
+    <ul :style="instructionList">
+      <li><strong>On open:</strong> focus moves to the panel's content, so you hear &ldquo;Orders placed before 6pm arrive today.&rdquo; followed by &ldquo;Delivery times, dialog&rdquo;.</li>
+      <li><strong>Escape:</strong> nothing happens - no trigger is configured, so Escape is not handled. Use &ldquo;Next&rdquo; or &ldquo;Close&rdquo;.</li>
+      <li><strong>On close:</strong> the panel hides and focus returns to the trigger: &ldquo;Start tour, button.&rdquo;</li>
+    </ul>
+    <pie-button
+      id="tour-pie-trigger"
+      :ref="(el) => (tourPie.triggerRef = el)"
+      @click="tourPie.open"
+    >
+      Start tour
+    </pie-button>
+    <pie-tooltip
+      id="tour-pie-panel"
+      :ref="(el) => (tourPie.panelRef = el)"
+      trigger="tour-pie-trigger"
+      heading="Delivery times"
+      :isOpen="tourPie.isOpen"
+      isDismissible
+      :aria="{ close: 'Close' }"
+      @pie-tooltip-close="tourPie.close"
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+      <pie-button slot="action" size="xsmall" @click="tourPie.close">Next</pie-button>
+    </pie-tooltip>
+
+    <pie-divider></pie-divider>
+
+    <h2>Always open (visual regression)</h2>
+    <p>
+      These two panels are rendered open on load for the visual regression screenshots. They are never
+      wired to close, so tooltip mode and dialog mode are captured in their open state without any
+      interaction.
+    </p>
+
+    <h3>Tooltip mode</h3>
+    <pie-icon-button
+      id="open-tooltip-trigger"
+      variant="outline"
+      :aria="{ label: 'Delivery times' }"
+      style="margin-block-end: 64px"
+    >
+      <icon-info-circle></icon-info-circle>
+    </pie-icon-button>
+    <pie-tooltip
+      id="open-tooltip-panel"
+      trigger="open-tooltip-trigger"
+      type="icon"
+      position="bottom-start"
+      isOpen
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+    </pie-tooltip>
+
+    <h3>Dialog mode</h3>
+    <pie-button
+      id="open-dialog-trigger"
+      :aria="{ haspopup: 'dialog', expanded: true }"
+      style="margin-block-end: 280px"
+    >
+      Delivery times
+    </pie-button>
+    <pie-tooltip
+      id="open-dialog-panel"
+      trigger="open-dialog-trigger"
+      heading="Delivery times"
+      position="bottom-start"
+      isOpen
+      isDismissible
+      :aria="{ close: 'Close' }"
+    >
+      <span slot="content">Orders placed before 6pm arrive today.</span>
+      <pie-button slot="action" size="xsmall">Got it</pie-button>
+    </pie-tooltip>
+
+  </div>
+</template>
+
+<script setup lang="ts">
+import { reactive, ref } from 'vue';
+import { definePageMeta } from '#imports';
+import '@justeattakeaway/pie-webc/components/button.js';
+import '@justeattakeaway/pie-webc/components/divider.js';
+import '@justeattakeaway/pie-webc/components/icon-button.js';
+import '@justeattakeaway/pie-webc/components/tooltip.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconInfoCircle.js';
+
+definePageMeta({
+    title: 'Tooltip',
+});
+
+// The apps reset ul list styles globally, so the instruction lists below opt back into bullets.
+const instructionList = { listStyle: 'disc', paddingInlineStart: '1.5rem' };
+
+type TooltipPanel = HTMLElement & { focusPanel: () => Promise<boolean> };
+
+// Wires the controlled-component contract: the two events, focusPanel() on open, and focus back on close only when it was still inside the panel.
+function useTooltipPanel() {
+    const isOpen = ref(false);
+    const triggerRef = ref<HTMLElement | null>(null);
+    const panelRef = ref<HTMLElement | null>(null);
+
+    function open() {
+        isOpen.value = true;
+        // focusPanel() waits for the opening update to commit, then the content is announced with the dialog's name and role.
+        (panelRef.value as TooltipPanel | null)?.focusPanel();
+    }
+
+    function close() {
+        // Only reclaim focus if it is still inside the panel.
+        const panelHadFocus = document.activeElement?.closest('pie-tooltip');
+
+        isOpen.value = false;
+
+        if (panelHadFocus) {
+            triggerRef.value?.focus({ preventScroll: true });
+        }
+    }
+
+    return reactive({ isOpen, open, close, triggerRef, panelRef });
+}
+
+const hoverIcon = useTooltipPanel();
+const hoverPie = useTooltipPanel();
+
+const headingIcon = useTooltipPanel();
+const headingPie = useTooltipPanel();
+
+const dialogIcon = useTooltipPanel();
+const dialogPie = useTooltipPanel();
+
+const dismissibleIcon = useTooltipPanel();
+const dismissiblePie = useTooltipPanel();
+
+const tourIcon = useTooltipPanel();
+const tourPie = useTooltipPanel();
+</script>

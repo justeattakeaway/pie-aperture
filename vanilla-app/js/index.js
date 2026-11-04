@@ -35,6 +35,7 @@ document.querySelector('#navigation').innerHTML = `
         <li><pie-link href="/components/lottie-player.html">Lottie Player</pie-link></li>
         <li><pie-link href="/components/modal.html">Modal</pie-link></li>
         <li><pie-link href="/components/notification.html">Notification</pie-link></li>
+        <li><pie-link href="/components/pagination.html">Pagination</pie-link></li>
         <li><pie-link href="/components/radio.html">Radio</pie-link></li>
         <li><pie-link href="/components/radio-group.html">Radio Group</pie-link></li>
         <li><pie-link href="/components/list-item-radio-selection.html">List Item Radio Selection</pie-link></li>
@@ -51,4 +52,5 @@ document.querySelector('#navigation').innerHTML = `
         <li><pie-link href="/components/toast.html">Toast</pie-link></li>
         <li><pie-link href="/components/toast-provider.html">Toast Provider</pie-link></li>
         <li><pie-link href="/components/thumbnail.html">Thumbnail</pie-link></li>
+        <li><pie-link href="/components/tooltip.html">Tooltip</pie-link></li>
     </ul>`;
