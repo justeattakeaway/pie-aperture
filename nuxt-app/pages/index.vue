@@ -23,6 +23,7 @@
             <li><pie-link href="/components/custom-tag">Custom Tag</pie-link></li>
             <li><pie-link href="/components/data-table">Data Table</pie-link></li>
             <li><pie-link href="/components/divider">Divider</pie-link></li>
+            <li><pie-link href="/components/dropdown">Dropdown</pie-link></li>
             <li><pie-link href="/components/form-label">Form Label</pie-link></li>
             <li><pie-link href="/components/icon">Icon</pie-link></li>
             <li><pie-link href="/components/icon-button">Icon Button</pie-link></li>
