@@ -25,6 +25,7 @@ const PAGES: PageDef[] = [
   { path: '/components/custom-tag', name: 'Custom Tag' },
   { path: '/components/data-table', name: 'Data Table' },
   { path: '/components/divider', name: 'Divider' },
+  { path: '/components/dropdown', name: 'Dropdown' },
   { path: '/components/form-label', name: 'Form Label' },
   { path: '/components/icon', name: 'Icon' },
   { path: '/components/icon-button', name: 'Icon Button' },

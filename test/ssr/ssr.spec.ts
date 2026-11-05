@@ -28,6 +28,7 @@ const componentConfigs: componentConfiguration[] = [
     { selector: 'cookie-banner', page: 'cookie-banner' },
     { selector: 'tag', page: 'custom-tag' },
     { selector: 'divider', page: 'divider' },
+    { selector: 'dropdown', page: 'dropdown' },
     { selector: 'form-label', page: 'form-label' },
     { selector: 'icon', page: 'icon' },
     { selector: 'icon-button', page: 'icon-button' },
