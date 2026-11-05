@@ -1,10 +1,23 @@
 #!/usr/bin/env node
 
-import { exec } from 'child_process';
+import { execFile } from 'child_process';
 import fs from 'fs';
 import path from 'path';
+import { promisify } from 'util';
+
+const execFileAsync = promisify(execFile);
 
 const workingDir = process.cwd();
+
+const RETRY_DELAYS_SECONDS = [15, 30, 60, 90, 120];
+
+function log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+}
+
+function logError(message) {
+    console.error(`[${new Date().toISOString()}] ${message}`);
+}
 
 // Function to check if the script is run from the correct directory
 function verifyRootDirectory(expectedPackageName) {
@@ -66,85 +79,61 @@ if (!packagesToUpdate.size) {
 const allDependencies = collectDependencies();
 const basePackages = new Set([...allDependencies].filter(name => packagesToUpdate.has(name)));
 
-let updateSuccessful = false;
-
-function yarnInstall(packageName) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] Attempting to update ${packageName} with version ${versionTag}`);
-    const command = `yarn up ${packageName}@${versionTag} --mode=update-lockfile`;
-    return new Promise((resolve, reject) => {
-        exec(command, { cwd: workingDir }, (error, stdout, stderr) => {
-            if (error) {
-                console.error(`[${timestamp}] Error updating ${packageName}: ${error}`);
-                console.error(`[${timestamp}] stderr: ${stderr}`);
-                reject(error);
-            } else {
-                console.log(`[${timestamp}] Successfully updated ${packageName}: ${stdout}`);
-                updateSuccessful = true;
-                resolve(stdout);
-            }
-        });
-    });
+async function yarn(args) {
+    const command = `yarn ${args.join(' ')}`;
+    try {
+        const { stdout } = await execFileAsync('yarn', args, { cwd: workingDir, maxBuffer: 20 * 1024 * 1024 });
+        log(`${command} succeeded`);
+        console.log(stdout);
+        return stdout;
+    } catch (error) {
+        logError(`${command} failed (exit code ${error.code})`);
+        if (error.stdout) console.error(error.stdout);
+        if (error.stderr) console.error(error.stderr);
+        throw error;
+    }
 }
 
-async function addPackageToSubProject(subProject, packageName, versionTag) {
-    const timestamp = new Date().toISOString();
-    const workspaceCommand = `yarn workspace ${subProject} add ${packageName}@${versionTag}`;
-    return new Promise((resolve, reject) => {
-        exec(workspaceCommand, { cwd: workingDir }, (error, stdout, stderr) => {
-            if (error) {
-                console.error(`[${timestamp}] Error adding ${packageName} to ${subProject}: ${error}`);
-                console.error(`[${timestamp}] stderr: ${stderr}`);
-                reject(error);
-            } else {
-                console.log(`[${timestamp}] Successfully added ${packageName} to ${subProject}: ${stdout}`);
-                resolve(stdout);
+async function yarnWithRetries(args) {
+    for (let attempt = 0; ; attempt += 1) {
+        try {
+            return await yarn(args);
+        } catch (error) {
+            const delay = RETRY_DELAYS_SECONDS[attempt];
+            if (delay === undefined) {
+                throw error;
             }
-        });
-    });
+            log(`Retrying in ${delay}s (retry ${attempt + 1} of ${RETRY_DELAYS_SECONDS.length})`);
+            await new Promise((resolve) => setTimeout(resolve, delay * 1000));
+        }
+    }
 }
 
-async function installPackages() {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] Starting the update process`);
+async function updatePackages() {
+    log('Starting the update process');
 
     if (!basePackages.size) {
-        console.error("Error: No matching packages found in the repository for the provided arguments.");
-        console.log(`[${timestamp}] Attempting to add specified packages to each sub-project.`);
+        log('No matching packages found in the repository, so adding the specified packages to each sub-project.');
         for (const subProject of subProjects) {
             for (const packageName of packagesToUpdate) {
-                try {
-                    await addPackageToSubProject(subProject, packageName, versionTag);
-                } catch (error) {
-                    console.error(`[${timestamp}] Failed to add ${packageName} to ${subProject}: ${error.message}`);
-                }
+                log(`Adding ${packageName}@${versionTag} to ${subProject}`);
+                await yarnWithRetries(['workspace', subProject, 'add', `${packageName}@${versionTag}`]);
             }
         }
     } else {
-        for (let packageName of basePackages) {
-            try {
-                await yarnInstall(packageName);
-            } catch (error) {
-                console.error(`[${timestamp}] Failed to update ${packageName}: ${error.message}`);
-            }
+        for (const packageName of basePackages) {
+            log(`Updating ${packageName} to ${versionTag}`);
+            await yarnWithRetries(['up', `${packageName}@${versionTag}`, '--mode=update-lockfile']);
         }
     }
 
-    if (updateSuccessful) {
-        console.log(`Updates were successful, running yarn install...`);
-        const installCommand = `yarn install`;
-        exec(installCommand, { cwd: workingDir }, (error, stdout) => {
-            if (error) {
-                console.error('Failed to complete yarn install:', error);
-            } else {
-                console.log('Yarn install completed successfully.');
-            }
-        });
-    } else {
-        console.log('No packages were updated.');
-    }
+    log('Running yarn install');
+    await yarn(['install']);
 
-    console.log(`[${timestamp}] Update process completed.`);
+    log('Update process completed.');
 }
 
-installPackages();
+updatePackages().catch((error) => {
+    logError(`Update failed: ${error.message}`);
+    process.exitCode = 1;
+});
