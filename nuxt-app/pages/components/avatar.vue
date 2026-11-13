@@ -4,6 +4,8 @@
 		<pie-avatar label="Ada Lovelace" tag="div"></pie-avatar>
 	<h1> Avatar Fallback </h1>
 		<pie-avatar tag="div"></pie-avatar>
+	<h1> Avatar with a broken image </h1>
+		<pie-avatar src="broken.jpg" label="Ada Lovelace" tag="button"></pie-avatar>
 	</div>
 </template>
 
