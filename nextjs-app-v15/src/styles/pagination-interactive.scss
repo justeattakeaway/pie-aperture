@@ -1,0 +1,16 @@
+.c-pagination-interactive {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--dt-spacing-b);
+    margin-block-end: var(--dt-spacing-e);
+}
+
+.c-pagination-interactive__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-b);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
