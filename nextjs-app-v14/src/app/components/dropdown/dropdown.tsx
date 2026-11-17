@@ -4,15 +4,10 @@ import { useState } from 'react';
 import NavigationLayout from "@/app/layout/navigation";
 import { PieDropdown, type DropdownOption } from "@justeattakeaway/pie-webc/react/dropdown.js";
 import { IconLocationPin } from '@justeattakeaway/pie-icons-webc/dist/react/IconLocationPin.js';
-import { IconPizza } from '@justeattakeaway/pie-icons-webc/dist/react/IconPizza.js';
-import { IconCurry } from '@justeattakeaway/pie-icons-webc/dist/react/IconCurry.js';
-import { IconNoodles } from '@justeattakeaway/pie-icons-webc/dist/react/IconNoodles.js';
-import { IconSalad } from '@justeattakeaway/pie-icons-webc/dist/react/IconSalad.js';
-import { IconVegan } from '@justeattakeaway/pie-icons-webc/dist/react/IconVegan.js';
-import { IconVegetarian } from '@justeattakeaway/pie-icons-webc/dist/react/IconVegetarian.js';
-import { IconNuts } from '@justeattakeaway/pie-icons-webc/dist/react/IconNuts.js';
-import { IconHalal } from '@justeattakeaway/pie-icons-webc/dist/react/IconHalal.js';
-import { IconSpicy } from '@justeattakeaway/pie-icons-webc/dist/react/IconSpicy.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconPizza.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconCurry.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconNoodles.js';
+import '@justeattakeaway/pie-icons-webc/dist/IconSalad.js';
 import '@/styles/dropdown.scss';
 
 const mealOptions: DropdownOption[] = [
@@ -25,10 +20,10 @@ const mealOptions: DropdownOption[] = [
 ];
 
 const cuisineOptions: DropdownOption[] = [
-    { value: 'pizza', primaryText: 'Pizza', secondaryText: 'Wood-fired classics' },
-    { value: 'curry', primaryText: 'Curry', secondaryText: 'Slow-cooked and aromatic' },
-    { value: 'noodles', primaryText: 'Noodles', secondaryText: 'Broths and stir-fries' },
-    { value: 'salad', primaryText: 'Salad', secondaryText: 'Fresh and seasonal' },
+    { value: 'pizza', primaryText: 'Pizza', secondaryText: 'Wood-fired classics', icon: 'icon-pizza' },
+    { value: 'curry', primaryText: 'Curry', secondaryText: 'Slow-cooked and aromatic', icon: 'icon-curry' },
+    { value: 'noodles', primaryText: 'Noodles', secondaryText: 'Broths and stir-fries', icon: 'icon-noodles' },
+    { value: 'salad', primaryText: 'Salad', secondaryText: 'Fresh and seasonal', icon: 'icon-salad' },
 ];
 
 const dietaryOptions: DropdownOption[] = [
@@ -85,6 +80,7 @@ export default function Dropdown() {
                 assistiveText="Choose the main meal for your order"
                 options={mealOptions}
                 value={meal}
+                aria={{ clearSelection: 'Clear selection' }}
                 onChange={handleMealChange} />
             <p className="c-dropdown-selection" data-test-id="meal-selection">Your meal: {meal || 'nothing selected yet'}</p>
 
@@ -95,12 +91,8 @@ export default function Dropdown() {
                 name="cuisine"
                 placeholder="Select a cuisine"
                 options={cuisineOptions}
-                value="pizza">
-                <IconPizza slot="icon-pizza" />
-                <IconCurry slot="icon-curry" />
-                <IconNoodles slot="icon-noodles" />
-                <IconSalad slot="icon-salad" />
-            </PieDropdown>
+                value="pizza"
+                aria={{ clearSelection: 'Clear selection' }} />
 
             <h2 className="c-dropdown-heading">PIE Dropdown - Multi select</h2>
             <PieDropdown
@@ -109,13 +101,8 @@ export default function Dropdown() {
                 name="dietary-requirements"
                 isMultiselect
                 selectedCountText="{count} selected"
-                options={dietaryOptions}>
-                <IconVegan slot="icon-vegan" />
-                <IconVegetarian slot="icon-vegetarian" />
-                <IconNuts slot="icon-nut-free" />
-                <IconHalal slot="icon-halal" />
-                <IconSpicy slot="icon-extra-spicy" />
-            </PieDropdown>
+                aria={{ clearAllSelections: 'Clear all {count} selections' }}
+                options={dietaryOptions} />
 
             <h2 className="c-dropdown-heading">PIE Dropdown - Single select with search</h2>
             <PieDropdown
@@ -125,6 +112,7 @@ export default function Dropdown() {
                 placeholder="Search restaurants"
                 isSearchable
                 noResultsText="No restaurants found"
+                optionsAvailableText="{count} options available"
                 options={restaurantOptions}>
                 <IconLocationPin slot="leadingIcon" />
             </PieDropdown>
@@ -137,6 +125,9 @@ export default function Dropdown() {
                 placeholder="Search toppings"
                 isMultiselect
                 isSearchable
+                selectedCountText="{count} selected"
+                optionsAvailableText="{count} options available"
+                aria={{ clearAllSelections: 'Clear all {count} selections' }}
                 options={toppingOptions}
                 value={['mozzarella']} />
         </NavigationLayout>

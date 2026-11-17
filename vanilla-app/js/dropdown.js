@@ -4,11 +4,6 @@ import '@justeattakeaway/pie-icons-webc/dist/IconPizza.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconCurry.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconNoodles.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconSalad.js';
-import '@justeattakeaway/pie-icons-webc/dist/IconVegan.js';
-import '@justeattakeaway/pie-icons-webc/dist/IconVegetarian.js';
-import '@justeattakeaway/pie-icons-webc/dist/IconNuts.js';
-import '@justeattakeaway/pie-icons-webc/dist/IconHalal.js';
-import '@justeattakeaway/pie-icons-webc/dist/IconSpicy.js';
 import './shared.js';
 import './utils/navigation.js';
 import '../css/dropdown.css';
@@ -23,10 +18,10 @@ const mealOptions = [
 ];
 
 const cuisineOptions = [
-    { value: 'pizza', primaryText: 'Pizza', secondaryText: 'Wood-fired classics' },
-    { value: 'curry', primaryText: 'Curry', secondaryText: 'Slow-cooked and aromatic' },
-    { value: 'noodles', primaryText: 'Noodles', secondaryText: 'Broths and stir-fries' },
-    { value: 'salad', primaryText: 'Salad', secondaryText: 'Fresh and seasonal' },
+    { value: 'pizza', primaryText: 'Pizza', secondaryText: 'Wood-fired classics', icon: 'icon-pizza' },
+    { value: 'curry', primaryText: 'Curry', secondaryText: 'Slow-cooked and aromatic', icon: 'icon-curry' },
+    { value: 'noodles', primaryText: 'Noodles', secondaryText: 'Broths and stir-fries', icon: 'icon-noodles' },
+    { value: 'salad', primaryText: 'Salad', secondaryText: 'Fresh and seasonal', icon: 'icon-salad' },
 ];
 
 const dietaryOptions = [
@@ -73,7 +68,8 @@ document.querySelector('#app').innerHTML = `
         label="Meal"
         name="meal"
         placeholder="Select a meal"
-        assistiveText="Choose the main meal for your order">
+        assistiveText="Choose the main meal for your order"
+        aria='{"clearSelection":"Clear selection"}'>
     </pie-dropdown>
     <p class="c-dropdown-selection" data-test-id="meal-selection">Your meal: nothing selected yet</p>
 
@@ -83,11 +79,8 @@ document.querySelector('#app').innerHTML = `
         id="cuisine-dropdown"
         label="Cuisine"
         name="cuisine"
-        placeholder="Select a cuisine">
-        <icon-pizza slot="icon-pizza"></icon-pizza>
-        <icon-curry slot="icon-curry"></icon-curry>
-        <icon-noodles slot="icon-noodles"></icon-noodles>
-        <icon-salad slot="icon-salad"></icon-salad>
+        placeholder="Select a cuisine"
+        aria='{"clearSelection":"Clear selection"}'>
     </pie-dropdown>
 
     <h2 class="c-dropdown-heading">PIE Dropdown - Multi select</h2>
@@ -97,12 +90,8 @@ document.querySelector('#app').innerHTML = `
         label="Dietary requirements"
         name="dietary-requirements"
         isMultiselect
-        selectedCountText="{count} selected">
-        <icon-vegan slot="icon-vegan"></icon-vegan>
-        <icon-vegetarian slot="icon-vegetarian"></icon-vegetarian>
-        <icon-nuts slot="icon-nut-free"></icon-nuts>
-        <icon-halal slot="icon-halal"></icon-halal>
-        <icon-spicy slot="icon-extra-spicy"></icon-spicy>
+        selectedCountText="{count} selected"
+        aria='{"clearAllSelections":"Clear all {count} selections"}'>
     </pie-dropdown>
 
     <h2 class="c-dropdown-heading">PIE Dropdown - Single select with search</h2>
@@ -113,7 +102,8 @@ document.querySelector('#app').innerHTML = `
         name="restaurant"
         placeholder="Search restaurants"
         isSearchable
-        noResultsText="No restaurants found">
+        noResultsText="No restaurants found"
+        optionsAvailableText="{count} options available">
         <icon-location-pin slot="leadingIcon"></icon-location-pin>
     </pie-dropdown>
 
@@ -125,7 +115,10 @@ document.querySelector('#app').innerHTML = `
         name="toppings"
         placeholder="Search toppings"
         isMultiselect
-        isSearchable>
+        isSearchable
+        selectedCountText="{count} selected"
+        optionsAvailableText="{count} options available"
+        aria='{"clearAllSelections":"Clear all {count} selections"}'>
     </pie-dropdown>
 `;
 

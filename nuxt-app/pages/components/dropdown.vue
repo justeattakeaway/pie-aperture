@@ -7,6 +7,7 @@
             name="meal"
             placeholder="Select a meal"
             assistiveText="Choose the main meal for your order"
+            :aria="{ clearSelection: 'Clear selection' }"
             :options="mealOptions"
             :value="meal"
             @change="handleMealChange">
@@ -19,12 +20,9 @@
             label="Cuisine"
             name="cuisine"
             placeholder="Select a cuisine"
+            :aria="{ clearSelection: 'Clear selection' }"
             :options="cuisineOptions"
             :value="selectedCuisine">
-            <icon-pizza slot="icon-pizza"></icon-pizza>
-            <icon-curry slot="icon-curry"></icon-curry>
-            <icon-noodles slot="icon-noodles"></icon-noodles>
-            <icon-salad slot="icon-salad"></icon-salad>
         </pie-dropdown>
 
         <h2 class="c-dropdown-heading">PIE Dropdown - Multi select</h2>
@@ -34,12 +32,8 @@
             name="dietary-requirements"
             isMultiselect
             selectedCountText="{count} selected"
+            :aria="{ clearAllSelections: 'Clear all {count} selections' }"
             :options="dietaryOptions">
-            <icon-vegan slot="icon-vegan"></icon-vegan>
-            <icon-vegetarian slot="icon-vegetarian"></icon-vegetarian>
-            <icon-nuts slot="icon-nut-free"></icon-nuts>
-            <icon-halal slot="icon-halal"></icon-halal>
-            <icon-spicy slot="icon-extra-spicy"></icon-spicy>
         </pie-dropdown>
 
         <h2 class="c-dropdown-heading">PIE Dropdown - Single select with search</h2>
@@ -50,6 +44,7 @@
             placeholder="Search restaurants"
             isSearchable
             noResultsText="No restaurants found"
+            optionsAvailableText="{count} options available"
             :options="restaurantOptions">
             <icon-location-pin slot="leadingIcon"></icon-location-pin>
         </pie-dropdown>
@@ -62,6 +57,9 @@
             placeholder="Search toppings"
             isMultiselect
             isSearchable
+            selectedCountText="{count} selected"
+            optionsAvailableText="{count} options available"
+            :aria="{ clearAllSelections: 'Clear all {count} selections' }"
             :options="toppingOptions"
             :value="selectedToppings">
         </pie-dropdown>
@@ -77,11 +75,6 @@ import '@justeattakeaway/pie-icons-webc/dist/IconPizza.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconCurry.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconNoodles.js';
 import '@justeattakeaway/pie-icons-webc/dist/IconSalad.js';
-import '@justeattakeaway/pie-icons-webc/dist/IconVegan.js';
-import '@justeattakeaway/pie-icons-webc/dist/IconVegetarian.js';
-import '@justeattakeaway/pie-icons-webc/dist/IconNuts.js';
-import '@justeattakeaway/pie-icons-webc/dist/IconHalal.js';
-import '@justeattakeaway/pie-icons-webc/dist/IconSpicy.js';
 
 definePageMeta({
     title: 'Dropdown',
@@ -107,10 +100,10 @@ const mealOptions = [
 ];
 
 const cuisineOptions = [
-    { value: 'pizza', primaryText: 'Pizza', secondaryText: 'Wood-fired classics' },
-    { value: 'curry', primaryText: 'Curry', secondaryText: 'Slow-cooked and aromatic' },
-    { value: 'noodles', primaryText: 'Noodles', secondaryText: 'Broths and stir-fries' },
-    { value: 'salad', primaryText: 'Salad', secondaryText: 'Fresh and seasonal' },
+    { value: 'pizza', primaryText: 'Pizza', secondaryText: 'Wood-fired classics', icon: 'icon-pizza' },
+    { value: 'curry', primaryText: 'Curry', secondaryText: 'Slow-cooked and aromatic', icon: 'icon-curry' },
+    { value: 'noodles', primaryText: 'Noodles', secondaryText: 'Broths and stir-fries', icon: 'icon-noodles' },
+    { value: 'salad', primaryText: 'Salad', secondaryText: 'Fresh and seasonal', icon: 'icon-salad' },
 ];
 
 const dietaryOptions = [
