@@ -1,0 +1,12 @@
+.c-dropdown-heading {
+    padding: var(--dt-spacing-b) 0;
+}
+
+pie-dropdown {
+    width: min(420px, 100%);
+}
+
+.c-dropdown-selection {
+    padding: var(--dt-spacing-b) 0;
+    color: var(--dt-color-content-subdued);
+}
