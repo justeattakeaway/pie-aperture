@@ -80,13 +80,6 @@ Edit `src/app/components/home-page.tsx` - insert in alphabetical order inside th
 <li><PieLink onClick={() => router.push('/components/<component-slug>')} tag="button"><Title></PieLink></li>
 ```
 
-### Add visual test entry
-Edit `test/visual/nextjs.spec.js` - insert in alphabetical order:
-
-```js
-{ url: '/components/<component-slug>', name: '<Title>' },
-```
-
 ## Step 4: Create files for Nuxt
 
 ### Page file
@@ -114,13 +107,6 @@ Edit `nuxt-app/pages/index.vue` - insert in alphabetical order:
 
 ```html
 <li><pie-link href="/components/<component-slug>"><Title></pie-link></li>
-```
-
-### Add visual test entry
-Edit `nuxt-app/test/visual/nuxt.spec.js` - insert in alphabetical order:
-
-```js
-{ url: '/components/<component-slug>', name: '<Title>' },
 ```
 
 ## Step 5: Create files for Vanilla
@@ -155,7 +141,17 @@ Edit `vanilla-app/js/index.js` - insert in alphabetical order:
 <li><pie-link href="/components/<component-slug>.html"><Title></pie-link></li>
 ```
 
-## Step 6: Register SSR test
+## Step 6: Register visual test
+
+Edit `playwright-helpers/visual-pages.ts` - add an entry to the `PAGES` array in alphabetical order:
+
+```ts
+{ path: '/components/<component-slug>', name: '<Title>' },
+```
+
+This single shared registry drives the visual tests for all four apps (each app runs `test/visual/visual.spec.ts` against its own `APP_NAME`), so there are no per-app visual spec files to edit.
+
+## Step 7: Register SSR test
 
 Edit `test/ssr/ssr.spec.ts` - insert in alphabetical order:
 
@@ -165,14 +161,14 @@ Edit `test/ssr/ssr.spec.ts` - insert in alphabetical order:
 
 Where `selector` is the web component tag name without the `pie-` prefix (e.g. `pie-accordion` → `accordion`), and `page` is the URL path segment.
 
-## Step 7: Run yarn
+## Step 8: Run yarn
 To install new package versions and update the `yarn.lock` file.
 
-## Step 8: Report completion
+## Step 9: Report completion
 
 List all files created or modified.
 
-## Step 9: Suggest one of the alternatives for the next step
+## Step 10: Suggest one of the alternatives for the next step
 
 - `cd nextjs-app-v15 && yarn dev`
 - `cd nextjs-app-v14 && yarn dev`
