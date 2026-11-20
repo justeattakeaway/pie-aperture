@@ -1692,13 +1692,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-avatar@npm:0.6.2":
-  version: 0.6.2
-  resolution: "@justeattakeaway/pie-avatar@npm:0.6.2"
+"@justeattakeaway/pie-avatar@npm:0.0.0-snapshot-release-20261120133728":
+  version: 0.0.0-snapshot-release-20261120133728
+  resolution: "@justeattakeaway/pie-avatar@npm:0.0.0-snapshot-release-20261120133728"
   dependencies:
     "@justeattakeaway/pie-icons-webc": 1.31.1
     "@justeattakeaway/pie-webc-core": 22.1.0
-  checksum: edd4e95feb1f43e9b2ba9fb49a31856da566d6bb002de0909d41940eed0fa9e4ae91cfcfaa4756bae0ab353e99a71ddbc8d28d7325f7cd9406fe8d5c0cbb1c40
+  checksum: da313043c30c6cc523b2f96364c80979780408671394e899e3bd60f8ceaf649b777c11b62f14e2a6c532a50cbf99d0686351663b76b400450b1958c7bdafdebb
   languageName: node
   linkType: hard
 
@@ -2110,13 +2110,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@justeattakeaway/pie-webc@npm:1.1.0":
-  version: 1.1.0
-  resolution: "@justeattakeaway/pie-webc@npm:1.1.0"
+"@justeattakeaway/pie-webc@npm:0.0.0-snapshot-release-20261120133728":
+  version: 0.0.0-snapshot-release-20261120133728
+  resolution: "@justeattakeaway/pie-webc@npm:0.0.0-snapshot-release-20261120133728"
   dependencies:
     "@justeattakeaway/pie-accordion": 1.0.4
     "@justeattakeaway/pie-assistive-text": 1.0.19
-    "@justeattakeaway/pie-avatar": 0.6.2
+    "@justeattakeaway/pie-avatar": 0.0.0-snapshot-release-20261120133728
     "@justeattakeaway/pie-breadcrumb": 1.0.21
     "@justeattakeaway/pie-button": 1.16.1
     "@justeattakeaway/pie-card": 2.0.1
@@ -2150,7 +2150,7 @@ __metadata:
     "@justeattakeaway/pie-toast": 1.2.9
     "@justeattakeaway/pie-toast-provider": 1.3.6
     "@justeattakeaway/pie-tooltip": 0.8.2
-  checksum: 4bac9f7c9e6555f07dda56bd602499f25d3b26ed015001dcafed4afaae9c6493afe5dcab41cd699c086c0a7fc06bcec5467f96287aa090821c17176f4092328a
+  checksum: 8156141022d6b9b50d1b3b86eef261e90c522ac1d279092f635829008cfdc87fe4ec3dee23d0c0f910bacb9f6a0306f2b5dc0b36f59449883d4a6698a032048c
   languageName: node
   linkType: hard
 
@@ -10487,7 +10487,7 @@ __metadata:
   dependencies:
     "@justeattakeaway/pie-css": 1.9.1
     "@justeattakeaway/pie-icons-webc": 1.29.4
-    "@justeattakeaway/pie-webc": 1.1.0
+    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20261120133728
     "@lit-labs/nextjs": 0.2.3
     "@lit/react": 1.0.7
     "@types/node": 20.19.25
@@ -10511,7 +10511,7 @@ __metadata:
     "@eslint/eslintrc": 3
     "@justeattakeaway/pie-css": 1.9.1
     "@justeattakeaway/pie-icons-webc": 1.29.4
-    "@justeattakeaway/pie-webc": 1.1.0
+    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20261120133728
     "@lit-labs/nextjs": 0.2.4
     "@lit/react": 1.0.8
     "@types/node": 20.19.25
@@ -10820,7 +10820,7 @@ __metadata:
   dependencies:
     "@justeattakeaway/pie-css": 1.9.1
     "@justeattakeaway/pie-icons-webc": 1.29.4
-    "@justeattakeaway/pie-webc": 1.1.0
+    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20261120133728
     just-kebab-case: 4.2.0
     npm-check-updates: 18.3.1
     nuxt: 3.14.1592
@@ -11454,7 +11454,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pie-aperture@workspace:."
   dependencies:
-    "@justeattakeaway/pie-webc": 1.1.0
+    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20261120133728
     "@percy/cli": 1.32.6
     "@percy/playwright": 1.1.2
     "@playwright/test": 1.50.1
@@ -14413,7 +14413,7 @@ __metadata:
   dependencies:
     "@justeattakeaway/pie-css": 1.9.1
     "@justeattakeaway/pie-icons-webc": 1.29.4
-    "@justeattakeaway/pie-webc": 1.1.0
+    "@justeattakeaway/pie-webc": 0.0.0-snapshot-release-20261120133728
     npm-check-updates: 18.3.1
     sass: 1.98.0
     vite: 4.5.5
