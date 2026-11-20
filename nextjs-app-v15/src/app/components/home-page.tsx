@@ -10,6 +10,10 @@ export default function HomePage() {
 
   return (
     <NavigationLayout title="Aperture">
+    <h2>Kitchen Sink</h2>
+    <ul>
+      <li><PieLink onClick={() => router.push('/dashboard')} tag="button">PIE Hub Dashboard (every component)</PieLink></li>
+    </ul>
     <h2>Demo Integrations</h2>
     <ul>
       <li><PieLink onClick={() => router.push('/integrations/css-only-button')} tag="button">CSS Only Button</PieLink></li>

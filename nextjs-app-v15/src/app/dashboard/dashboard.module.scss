@@ -1,0 +1,472 @@
+/*
+ * Only the `settings` entrypoint is imported, not the `pie-css/scss` index. The
+ * index also forwards `resets`, which emits a global `*, *:after, *:before` rule —
+ * CSS Modules rejects that as an impure selector. `settings` forwards the
+ * include-media helpers (and the PIE breakpoints) and emits no CSS of its own.
+ */
+@use '@justeattakeaway/pie-css/scss/settings' as p;
+
+/*
+ * Layout for PIE Hub, a fictional pie-bakery back-office.
+ *
+ * Every value here comes from a PIE alias design token so the page inherits the
+ * design system's spacing scale, radii, colours, elevation and motion. Typography
+ * is applied via the `u-font-*` utility classes from `pie-css` rather than font
+ * tokens, per the PIE typography guidance.
+ */
+
+.dashboard {
+    background-color: var(--dt-color-background-subtle);
+    color: var(--dt-color-content-default);
+    min-height: 100vh;
+    padding-block-end: var(--dt-spacing-h);
+
+    /*
+     * The demo pages set a global `margin-block` on `pie-divider`; inside the
+     * dashboard we control spacing at the layout level instead.
+     */
+    :global(pie-divider) {
+        margin-block: 0;
+    }
+}
+
+/* ---------------------------------------------------------------- top bar -- */
+
+.topbar {
+    background-color: var(--dt-color-container-default);
+    border-block-end: 1px solid var(--dt-color-border-subtle);
+    box-shadow: var(--dt-elevation-01);
+    position: sticky;
+    top: 0;
+    /* Keeps the sticky bar under overlays such as the modal and toasts. */
+    z-index: var(--dt-z-index-base);
+}
+
+.topbarInner {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dt-spacing-d);
+    margin-inline: auto;
+    max-width: 1240px;
+    padding: var(--dt-spacing-c) var(--dt-spacing-d);
+}
+
+.topbarIdentity {
+    align-items: center;
+    display: flex;
+    gap: var(--dt-spacing-c);
+    min-width: 0;
+}
+
+.topbarTitle {
+    margin: 0;
+}
+
+.topbarMeta {
+    color: var(--dt-color-content-subdued);
+    margin: 0;
+}
+
+.topbarSearch {
+    flex: 1 1 220px;
+    max-width: 340px;
+}
+
+.topbarActions {
+    align-items: center;
+    display: flex;
+    gap: var(--dt-spacing-b);
+    margin-inline-start: auto;
+}
+
+.topbarDivider {
+    /* A vertical `pie-divider` needs an explicit height from its container. */
+    block-size: var(--dt-spacing-e);
+}
+
+/* ----------------------------------------------------------------- shell --- */
+
+.shell {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-f);
+    margin-inline: auto;
+    max-width: 1240px;
+    padding: var(--dt-spacing-e) var(--dt-spacing-d) 0;
+}
+
+.breadcrumbRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dt-spacing-c);
+    justify-content: space-between;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-d);
+}
+
+.sectionHeader {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dt-spacing-c);
+    justify-content: space-between;
+}
+
+.sectionHeading {
+    margin: 0;
+}
+
+.sectionIntro {
+    color: var(--dt-color-content-subdued);
+    margin: 0;
+    max-width: 68ch;
+}
+
+.sectionActions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dt-spacing-b);
+}
+
+.subHeading {
+    color: var(--dt-color-content-subdued);
+    margin: 0;
+}
+
+/* Neutral surface used to group related controls inside a section. */
+.panel {
+    background-color: var(--dt-color-container-default);
+    border: 1px solid var(--dt-color-border-subtle);
+    border-radius: var(--dt-radius-rounded-c);
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-d);
+    padding: var(--dt-spacing-e);
+}
+
+.panelFlush {
+    /* Lists render their own inline padding, so the panel provides none. */
+    padding-inline: 0;
+}
+
+.panelHeader {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-a);
+    padding-inline: var(--dt-spacing-e);
+}
+
+.stackTight {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-b);
+}
+
+.row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dt-spacing-b);
+}
+
+.noticeStack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-c);
+}
+
+/* -------------------------------------------------------------- KPI cards -- */
+
+.kpiGrid {
+    display: grid;
+    gap: var(--dt-spacing-d);
+    grid-template-columns: 1fr;
+
+    @include p.media('>=sm') {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include p.media('>=lg') {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.kpiCardBody {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-b);
+    text-align: start;
+}
+
+.kpiCardTop {
+    align-items: center;
+    display: flex;
+    gap: var(--dt-spacing-c);
+    justify-content: space-between;
+}
+
+.kpiLabel {
+    color: var(--dt-color-content-subdued);
+    margin: 0;
+}
+
+.kpiValue {
+    margin: 0;
+}
+
+.kpiTrend {
+    align-items: center;
+    display: flex;
+    gap: var(--dt-spacing-a);
+    margin: 0;
+}
+
+.kpiTrendUp {
+    color: var(--dt-color-content-positive);
+}
+
+.kpiTrendDown {
+    color: var(--dt-color-content-error);
+}
+
+/* ------------------------------------------------------------------ table -- */
+
+.tableScroll {
+    overflow-x: auto;
+}
+
+.orderTableCustomer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-a-small);
+}
+
+.orderTableActions {
+    display: flex;
+    gap: var(--dt-spacing-a);
+    justify-content: flex-end;
+}
+
+.tableEmptyState {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-b);
+    padding: var(--dt-spacing-f);
+    text-align: center;
+}
+
+/* ------------------------------------------------------------ two columns -- */
+
+.splitGrid {
+    display: grid;
+    gap: var(--dt-spacing-e);
+    grid-template-columns: 1fr;
+
+    @include p.media('>=lg') {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ------------------------------------------------------------------- form -- */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-d);
+}
+
+.formGrid {
+    display: grid;
+    gap: var(--dt-spacing-d);
+    grid-template-columns: 1fr;
+
+    @include p.media('>=md') {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-a);
+}
+
+.formFieldWide {
+    @include p.media('>=md') {
+        grid-column: 1 / -1;
+    }
+}
+
+.formFooter {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dt-spacing-b);
+    justify-content: flex-end;
+}
+
+.formStatus {
+    margin-inline-end: auto;
+}
+
+.payload {
+    background-color: var(--dt-color-container-subtle);
+    border-radius: var(--dt-radius-rounded-b);
+    margin: 0;
+    overflow-x: auto;
+    padding: var(--dt-spacing-d);
+}
+
+/* ----------------------------------------------------------- menu gallery -- */
+
+.thumbnailGrid {
+    display: grid;
+    gap: var(--dt-spacing-d);
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.thumbnailCardBody {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-b);
+    text-align: start;
+}
+
+.lottieWrapper {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dt-spacing-e);
+}
+
+.lottiePlayer {
+    /* `pie-lottie-player` scales to its container, so the size is set here. */
+    block-size: 140px;
+    inline-size: 140px;
+}
+
+.accordionShell {
+    border: 1px solid var(--dt-color-border-subtle);
+    border-radius: var(--dt-radius-rounded-c);
+    overflow: hidden;
+}
+
+.spinnerRow {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dt-spacing-e);
+}
+
+/* ----------------------------------------------------------------- footer -- */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-d);
+    margin-inline: auto;
+    max-width: 1240px;
+    padding: var(--dt-spacing-f) var(--dt-spacing-d) 0;
+}
+
+.footerLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dt-spacing-e);
+}
+
+.footerNote {
+    color: var(--dt-color-content-subdued);
+    margin: 0;
+}
+
+/* ------------------------------------------------------------ orders tabs -- */
+
+/*
+ * Reserved slot for the order-status tab strip. `pie-tabs` is not implemented yet,
+ * so this frames the placeholder rather than pretending the strip works.
+ */
+.tabsPlaceholder {
+    border: 1px dashed var(--dt-color-border-strong);
+    border-radius: var(--dt-radius-rounded-b);
+    color: var(--dt-color-content-subdued);
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-a);
+    padding: var(--dt-spacing-c);
+}
+
+/* --------------------------------------------------------------- payouts -- */
+
+.fieldset {
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-b);
+    margin: 0;
+    min-inline-size: 0;
+    padding: 0;
+}
+
+.legend {
+    padding: 0;
+}
+
+.payoutDayGrid {
+    display: grid;
+    gap: var(--dt-spacing-c);
+    grid-template-columns: 1fr;
+    margin-block-start: var(--dt-spacing-a);
+
+    @include p.media('>=sm') {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/*
+ * A card-shaped radio option. This layout is why the payout picker uses the
+ * `c-radio` CSS-only export instead of `pie-radio`.
+ */
+.payoutDayCard {
+    border: 1px solid var(--dt-color-border-default);
+    border-radius: var(--dt-radius-rounded-c);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: var(--dt-spacing-a);
+    padding: var(--dt-spacing-d);
+
+    &[data-selected='true'] {
+        border-color: var(--dt-color-border-selected);
+        box-shadow: var(--dt-elevation-01);
+    }
+}
+
+.payoutDayTop {
+    align-items: center;
+    display: flex;
+    gap: var(--dt-spacing-b);
+}
+
+/* -------------------------------------------------------- guidance banner -- */
+
+.guideBanner {
+    align-items: center;
+    background-color: var(--dt-color-container-default);
+    border: 1px solid var(--dt-color-border-subtle);
+    border-radius: var(--dt-radius-rounded-c);
+    color: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dt-spacing-d);
+    justify-content: space-between;
+    padding: var(--dt-spacing-d) var(--dt-spacing-e);
+    text-decoration: none;
+}
