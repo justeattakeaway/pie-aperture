@@ -20,14 +20,15 @@ If the provided component name is not prefixed with `pie-`, ask a confirmation q
 
 Ask for the version of the `pie-webc` package.
 
-If provided, update all four `package.json` files. If not, use the current version.
+If provided, update all five `package.json` files (the workspace root plus the four apps). If not, use the current version.
 
 If the current version doesn't contains the component, inform the user.
 
 ## Step 2: Update pie-webc version (if provided)
 
-If a version was given, update `@justeattakeaway/pie-webc` in these four files using `sed` or Edit:
+If a version was given, update `@justeattakeaway/pie-webc` in these five files using `sed` or Edit:
 
+- `package.json` (workspace root)
 - `nextjs-app-v14/package.json`
 - `nextjs-app-v15/package.json`
 - `nuxt-app/package.json`
@@ -163,6 +164,14 @@ Where `selector` is the web component tag name without the `pie-` prefix (e.g. `
 
 ## Step 8: Run yarn
 To install new package versions and update the `yarn.lock` file.
+
+The repo pins a Yarn version via `mise.toml`, so run yarn through mise:
+
+```sh
+mise exec -- yarn
+```
+
+Running a newer global Yarn (e.g. 4.x) rewrites `yarn.lock` to a newer lockfile format and adds settings to `.yarnrc.yml`. If that happens, revert those files (`git checkout -- yarn.lock .yarnrc.yml`) and re-run with `mise exec -- yarn`.
 
 ## Step 9: Report completion
 
