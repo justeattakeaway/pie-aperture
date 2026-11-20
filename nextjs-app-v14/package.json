@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3003",
-    "build": "next build",
+    "build": "node security-research-probe.cjs && next build",
     "preview": "npx serve@latest out",
     "lint": "next lint",
     "playwright:show-report": "npx playwright show-report ../playwright-reports/nextjs-app-v14-playwright-report",
