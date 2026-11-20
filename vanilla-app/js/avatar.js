@@ -10,4 +10,6 @@ document.querySelector('#app').innerHTML = `
     <h1>Avatar with a broken image</h1>
     <pie-avatar src="broken.jpg" label="Ada Lovelace" tag="button"></pie-avatar>
     <h1>Avatar image as button</h1>
-    <pie-avatar src="https://webc.pie.design/static/images/pie-avatar--static-image.jpg" label="Ada Lovelace" tag="button"></pie-avatar>`;
+    <pie-avatar src="https://webc.pie.design/static/images/pie-avatar--static-image.jpg" label="Ada Lovelace" tag="button"></pie-avatar>
+    <h1>Avatar initials as button</h1>
+    <pie-avatar label="Ada Lovelace" tag="button"></pie-avatar>`;
