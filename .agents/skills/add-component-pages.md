@@ -20,14 +20,15 @@ If the provided component name is not prefixed with `pie-`, ask a confirmation q
 
 Ask for the version of the `pie-webc` package.
 
-If provided, update all four `package.json` files. If not, use the current version.
+If provided, update all five `package.json` files (the workspace root plus the four apps). If not, use the current version.
 
 If the current version doesn't contains the component, inform the user.
 
 ## Step 2: Update pie-webc version (if provided)
 
-If a version was given, update `@justeattakeaway/pie-webc` in these four files using `sed` or Edit:
+If a version was given, update `@justeattakeaway/pie-webc` in these five files using `sed` or Edit:
 
+- `package.json` (workspace root)
 - `nextjs-app-v14/package.json`
 - `nextjs-app-v15/package.json`
 - `nuxt-app/package.json`
@@ -80,13 +81,6 @@ Edit `src/app/components/home-page.tsx` - insert in alphabetical order inside th
 <li><PieLink onClick={() => router.push('/components/<component-slug>')} tag="button"><Title></PieLink></li>
 ```
 
-### Add visual test entry
-Edit `test/visual/nextjs.spec.js` - insert in alphabetical order:
-
-```js
-{ url: '/components/<component-slug>', name: '<Title>' },
-```
-
 ## Step 4: Create files for Nuxt
 
 ### Page file
@@ -114,13 +108,6 @@ Edit `nuxt-app/pages/index.vue` - insert in alphabetical order:
 
 ```html
 <li><pie-link href="/components/<component-slug>"><Title></pie-link></li>
-```
-
-### Add visual test entry
-Edit `nuxt-app/test/visual/nuxt.spec.js` - insert in alphabetical order:
-
-```js
-{ url: '/components/<component-slug>', name: '<Title>' },
 ```
 
 ## Step 5: Create files for Vanilla
@@ -155,7 +142,17 @@ Edit `vanilla-app/js/index.js` - insert in alphabetical order:
 <li><pie-link href="/components/<component-slug>.html"><Title></pie-link></li>
 ```
 
-## Step 6: Register SSR test
+## Step 6: Register visual test
+
+Edit `playwright-helpers/visual-pages.ts` - add an entry to the `PAGES` array in alphabetical order:
+
+```ts
+{ path: '/components/<component-slug>', name: '<Title>' },
+```
+
+This single shared registry drives the visual tests for all four apps (each app runs `test/visual/visual.spec.ts` against its own `APP_NAME`), so there are no per-app visual spec files to edit.
+
+## Step 7: Register SSR test
 
 Edit `test/ssr/ssr.spec.ts` - insert in alphabetical order:
 
@@ -165,14 +162,22 @@ Edit `test/ssr/ssr.spec.ts` - insert in alphabetical order:
 
 Where `selector` is the web component tag name without the `pie-` prefix (e.g. `pie-accordion` → `accordion`), and `page` is the URL path segment.
 
-## Step 7: Run yarn
+## Step 8: Run yarn
 To install new package versions and update the `yarn.lock` file.
 
-## Step 8: Report completion
+The repo pins a Yarn version via `mise.toml`, so run yarn through mise:
+
+```sh
+mise exec -- yarn
+```
+
+Running a newer global Yarn (e.g. 4.x) rewrites `yarn.lock` to a newer lockfile format and adds settings to `.yarnrc.yml`. If that happens, revert those files (`git checkout -- yarn.lock .yarnrc.yml`) and re-run with `mise exec -- yarn`.
+
+## Step 9: Report completion
 
 List all files created or modified.
 
-## Step 9: Suggest one of the alternatives for the next step
+## Step 10: Suggest one of the alternatives for the next step
 
 - `cd nextjs-app-v15 && yarn dev`
 - `cd nextjs-app-v14 && yarn dev`
