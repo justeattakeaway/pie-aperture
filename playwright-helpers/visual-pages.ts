@@ -44,6 +44,7 @@ const PAGES: PageDef[] = [
   { path: '/components/radio', name: 'Radio' },
   { path: '/components/radio-group', name: 'Radio Group' },
   { path: '/components/select', name: 'Select' },
+  { path: '/components/skeleton', name: 'Skeleton' },
   { path: '/components/spinner', name: 'Spinner' },
   { path: '/components/switch', name: 'Switch' },
   { path: '/components/tag', name: 'Tag' },

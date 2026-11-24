@@ -42,6 +42,7 @@ const componentConfigs: componentConfiguration[] = [
     { selector: 'radio', page: 'radio' },
     { selector: 'radio-group', page: 'radio-group' },
     { selector: 'select', page: 'select' },
+    { selector: 'skeleton', page: 'skeleton' },
     { selector: 'spinner', page: 'spinner' },
     { selector: 'switch', page: 'switch' },
     { selector: 'tag', page: 'tag' },
