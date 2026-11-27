@@ -25,6 +25,7 @@ document.querySelector('#navigation').innerHTML = `
         <li><pie-link href="/components/custom-tag.html">Custom Tag</pie-link></li>
         <li><pie-link href="/components/data-table.html">Data Table</pie-link></li>
         <li><pie-link href="/components/divider.html">Divider</pie-link></li>
+        <li><pie-link href="/components/dropdown.html">Dropdown</pie-link></li>
         <li><pie-link href="/components/form-label.html">Form Label</pie-link></li>
         <li><pie-link href="/components/icon.html">Icon</pie-link></li>
         <li><pie-link href="/components/icon-button.html">Icon Button</pie-link></li>
